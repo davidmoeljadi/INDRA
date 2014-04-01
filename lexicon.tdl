@@ -1,0 +1,150 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Nouns
+
+kue := common-noun-lex &
+  [ STEM < "kue" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kue_n_rel" ].
+
+buku := common-noun-lex &
+  [ STEM < "buku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_buku_n_rel" ].
+
+kucing := common-noun-lex &
+  [ STEM < "kucing" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kucing_n_rel" ].
+
+anjing := common-noun-lex &
+  [ STEM < "anjing" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_anjing_n_rel" ].
+
+tempat := common-noun-lex &
+  [ STEM < "tempat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tempat_n_rel" ].
+
+taman := common-noun-lex &
+  [ STEM < "taman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_taman_n_rel" ].
+
+mobil := common-noun-lex &
+  [ STEM < "mobil" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mobil_n_rel" ].
+
+saya := pronoun-noun-lex &
+  [ STEM < "saya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_saya_n_rel" ].
+
+aku := pronoun-noun-lex &
+  [ STEM < "aku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_aku_n_rel" ].
+
+kamu := pronoun-noun-lex &
+  [ STEM < "kamu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kamu_n_rel" ].
+
+Anda := pronoun-noun-lex &
+  [ STEM < "Anda" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Anda_n_rel" ].
+
+dia := pronoun-noun-lex &
+  [ STEM < "dia" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dia_n_rel" ].
+
+kami := pronoun-noun-lex &
+  [ STEM < "kami" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kami_n_rel" ].
+
+kita := pronoun-noun-lex &
+  [ STEM < "kita" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kita_n_rel" ].
+
+kalian := pronoun-noun-lex &
+  [ STEM < "kalian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kalian_n_rel" ].
+
+mereka := pronoun-noun-lex &
+  [ STEM < "mereka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mereka_n_rel" ].
+
+ini_1 := demonstrative-noun-lex &
+  [ STEM < "ini" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ini_n_rel" ].
+
+itu_1 := demonstrative-noun-lex &
+  [ STEM < "itu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_itu_n_rel" ].
+
+ini%20semua := demonstrative-noun-lex &
+  [ STEM < "ini",
+           "semua" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ini semua_n_rel" ].
+
+itu%20semua := demonstrative-noun-lex &
+  [ STEM < "itu",
+           "semua" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_itu semua_n_rel" ].
+
+;;; Verbs
+
+jatuh := intr-verb-lex &
+  [ STEM < "jatuh" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jatuh_v_rel" ].
+
+tidur := intr-verb-lex &
+  [ STEM < "tidur" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tidur_v_rel" ].
+
+bunuh := tr-verb-lex &
+  [ STEM < "bunuh" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bunuh_v_rel" ].
+
+tanya := tr-verb-lex &
+  [ STEM < "tanya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel" ].
+
+bukan := tr-verb-lex &
+  [ STEM < "bukan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bukan_v_rel" ].
+
+makan := opt-tr-verb-lex &
+  [ STEM < "makan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_makan_v_rel" ].
+
+tahu := opt-tr-verb-lex &
+  [ STEM < "tahu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel" ].
+
+;;; Auxiliaries
+
+sudah := aspect_perf-aux-lex &
+  [ STEM < "sudah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sudah_aspect_rel" ].
+
+tidak := neg-aux-lex &
+  [ STEM < "tidak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tidak_neg_rel" ].
+
+sedang := aspect_prog-aux-lex &
+  [ STEM < "sedang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sedang_aspect_rel" ].
+
+akan := aspect_fut-aux-lex &
+  [ STEM < "akan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_akan_aspect_rel" ].
+
+;;; Determiners
+
+ini_2 := determinative-determiner-lex &
+  [ STEM < "ini" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ini_q_rel" ].
+
+itu_2 := determinative-determiner-lex &
+  [ STEM < "itu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_itu_q_rel" ].
+
+apakah := qpart-lex-item &
+  [ STEM < "apakah" > ].
+
+dan := conj-lex &
+  [ STEM < "dan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "1" ].
