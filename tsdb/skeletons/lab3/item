@@ -1,0 +1,106 @@
+1@author@@@1@{wo}@Saya makan kue@@@@1@3@'I eat cake(s).'@David Moeljadi@2014-03-03
+2@author@@@1@{wo}@Saya kue makan@@@@0@3@'I eat cake(s).'@David Moeljadi@2014-03-03
+3@author@@@1@{wo,info}@Kue saya makan@@@@1@3@'Cake(s) is eaten by me.'@David Moeljadi@2014-03-03
+4@author@@@1@{wo}@Makan saya kue@@@@0@3@'I eat cake(s).'@David Moeljadi@2014-03-03
+5@author@@@1@{wo,imp}@Makan kue saya@@@@1@3@'(you) eat my cake!'@David Moeljadi@2014-03-03
+6@author@@@1@{wo}@Kue makan saya@@@@1@3@'Cake(s) eats me.'@David Moeljadi@2014-03-03
+7@author@@@1@{wo}@Saya tidur@@@@1@2@'I sleep.'@David Moeljadi@2014-03-03
+8@author@@@1@{wo}@Tidur saya@@@@0@2@'I sleep.'@David Moeljadi@2014-03-03
+9@author@@@1@{pn}@Saya bunuh kamu@@@@1@3@'I kill you.'@David Moeljadi@2014-03-03
+10@author@@@1@{wo}@Bunuh kamu saya@@@@0@3@'I kill you.'@David Moeljadi@2014-03-03
+11@author@@@1@{wo}@Bunuh saya kamu@@@@0@3@'You kill me.'@David Moeljadi@2014-03-03
+12@author@@@1@{wo,info}@Kamu saya bunuh@@@@1@3@'You are killed by me.'@David Moeljadi@2014-03-03
+13@author@@@1@{wo,info}@Saya kamu bunuh@@@@1@3@'I am killed by you.'@David Moeljadi@2014-03-03
+14@author@@@1@{pn}@Kamu bunuh saya@@@@1@3@'You kill me.'@David Moeljadi@2014-03-03
+15@author@@@1@{pn}@Dia bunuh saya@@@@1@3@'He/She kills me.'@David Moeljadi@2014-03-03
+16@author@@@1@{pn}@Dia bunuh kamu@@@@1@3@'He/She kills you.'@David Moeljadi@2014-03-03
+17@author@@@1@{pn}@Saya bunuh dia@@@@1@3@'I kill him/her.'@David Moeljadi@2014-03-03
+18@author@@@1@{pn}@Kamu bunuh dia@@@@1@3@'You kill him/her.'@David Moeljadi@2014-03-03
+19@author@@@1@{pn}@Kami bunuh kalian@@@@1@3@'We kill you.'@David Moeljadi@2014-03-03
+20@author@@@1@{pn}@Kami bunuh mereka@@@@1@3@'We kill them.'@David Moeljadi@2014-03-03
+21@author@@@1@{pn}@Kita bunuh kalian@@@@0@3@'We kill you.'@David Moeljadi@2014-03-03
+22@author@@@1@{pn}@Kita bunuh mereka@@@@1@3@'We kill you.'@David Moeljadi@2014-03-03
+23@author@@@1@{pn}@Kalian bunuh kami@@@@1@3@'You kill us.'@David Moeljadi@2014-03-03
+24@author@@@1@{pn}@Kalian bunuh kita@@@@0@3@'You kill us.'@David Moeljadi@2014-03-03
+25@author@@@1@{pn}@Mereka bunuh kami@@@@1@3@'They kill us.'@David Moeljadi@2014-03-03
+26@author@@@1@{pn}@Mereka bunuh kita@@@@1@3@'They kill us.'@David Moeljadi@2014-03-03
+27@author@@@1@{pn}@Mereka bunuh kalian@@@@1@3@'They kill you.'@David Moeljadi@2014-03-03
+28@author@@@1@{pn}@Kalian bunuh mereka@@@@1@3@'You kill them.'@David Moeljadi@2014-03-03
+29@author@@@1@{det}@Bukunya jatuh@@@@1@2@'The book falls.'@David Moeljadi@2014-03-03
+30@author@@@1@{det}@Buku jatuh@@@@0@2@'The book falls.'@David Moeljadi@2014-03-03
+31@author@@@1@{numcl}@Sebuah buku jatuh@@@@1@3@'A book falls.'@David Moeljadi@2014-03-03
+32@author@@@1@{tam}@Saya sudah makan kue@@@@1@4@'I have eaten cake(s)'@David Moeljadi@2014-03-03
+33@author@@@1@{tam}@Saya sudah tidur@@@@1@3@'I have slept'@David Moeljadi@2014-03-03
+34@author@@@1@{tam,neg}@Saya belum makan kue@@@@1@4@'I have not eaten cake(s) yet'@David Moeljadi@2014-03-03
+35@author@@@1@{tam,neg}@Saya belum tidur@@@@1@3@'I have not slept yet'@David Moeljadi@2014-03-03
+36@author@@@1@{tam}@Saya sedang makan kue@@@@1@4@'I am eating cake(s)'@David Moeljadi@2014-03-03
+37@author@@@1@{tam}@Saya sedang tidur@@@@1@3@'I am sleeping'@David Moeljadi@2014-03-03
+38@author@@@1@{tam,neg}@Saya tidak sedang makan kue@@@@1@5@'I am not eating cake(s)'@David Moeljadi@2014-03-03
+39@author@@@1@{tam,neg}@Saya tidak sedang tidur@@@@1@4@'I am not sleeping'@David Moeljadi@2014-03-03
+40@author@@@1@{tam}@Saya akan makan kue@@@@1@4@'I will eat cake(s)'@David Moeljadi@2014-03-03
+41@author@@@1@{tam}@Saya akan tidur@@@@1@3@'I will sleep'@David Moeljadi@2014-03-03
+42@author@@@1@{tam,neg}@Saya tidak akan makan kue@@@@1@5@'I will not eat cake(s)'@David Moeljadi@2014-03-03
+43@author@@@1@{tam,neg}@Saya tidak akan tidur@@@@1@4@'I will not sleep'@David Moeljadi@2014-03-03
+44@author@@@1@{wo,neg}@Saya tidak makan kue@@@@1@4@'I do not eat cake(s).'@David Moeljadi@2014-03-03
+45@author@@@1@{wo,neg}@Tidak saya makan kue@@@@0@4@'I do not eat cake(s).'@David Moeljadi@2014-03-03
+46@author@@@1@{wo,neg}@Saya makan tidak kue@@@@0@4@'I do not eat cake(s).'@David Moeljadi@2014-03-03
+47@author@@@1@{wo,neg}@Saya makan kue tidak@@@@0@4@'I do not eat cake(s).'@David Moeljadi@2014-03-03
+48@author@@@1@{wo,neg}@Saya tidak tidur@@@@1@3@'I do not sleep.'@David Moeljadi@2014-03-03
+49@author@@@1@{wo,neg}@Tidak saya tidur@@@@0@3@'I do not sleep.'@David Moeljadi@2014-03-03
+50@author@@@1@{wo,neg}@Saya tidur tidak@@@@0@3@'I do not sleep.'@David Moeljadi@2014-03-03
+51@author@@@1@{cogst}@Ini kue@@@@1@2@'This is cake(s).'@David Moeljadi@2014-03-03
+52@author@@@1@{cogst}@Itu kue@@@@1@2@'That is cake(s).'@David Moeljadi@2014-03-03
+53@author@@@1@{cogst,wo}@Kue ini@@@@0@2@'This is cake(s).'@David Moeljadi@2014-03-03
+54@author@@@1@{cogst,wo}@Kue itu@@@@0@2@'That is cake(s).'@David Moeljadi@2014-03-03
+55@author@@@1@{cogst,neg}@Ini bukan kue@@@@1@3@'This is not cake(s).'@David Moeljadi@2014-03-03
+56@author@@@1@{cogst,neg}@Itu bukan kue@@@@1@3@'That is not cake(s).'@David Moeljadi@2014-03-03
+57@author@@@1@{cogst,neg}@Ini tidak kue@@@@0@3@'This is not cake(s).'@David Moeljadi@2014-03-03
+58@author@@@1@{cogst,neg}@Itu tidak kue@@@@0@3@'That is not cake(s).'@David Moeljadi@2014-03-03
+59@author@@@1@{cogst,neg,wo}@Bukan ini kue@@@@0@3@'This is not cake(s).'@David Moeljadi@2014-03-03
+60@author@@@1@{cogst,neg,wo}@Ini kue bukan@@@@0@3@'This is not cake(s).'@David Moeljadi@2014-03-03
+61@author@@@1@{cogst}@Saya makan kue ini@@@@1@4@'I eat this cake.'@David Moeljadi@2014-03-03
+62@author@@@1@{cogst}@Saya makan kue itu@@@@1@4@'I eat that cake.'@David Moeljadi@2014-03-03
+63@author@@@1@{cogst}@Saya makan ini kue@@@@0@4@'I eat this cake.'@David Moeljadi@2014-03-03
+64@author@@@1@{cogst}@Saya makan itu kue@@@@0@4@'I eat that cake.'@David Moeljadi@2014-03-03
+65@author@@@1@{cogst}@Saya tidur di sini@@@@1@4@'I sleep here.'@David Moeljadi@2014-03-03
+66@author@@@1@{cop}@Saya kucing@@@@1@2@'I am a cat.'@David Moeljadi@2014-03-03
+67@author@@@1@{cop}@Mobil ini baru@@@@1@3@'This car is new.'@David Moeljadi@2014-03-03
+68@author@@@1@{cop}@Kucing itu di taman@@@@1@4@'That cat is at a park.'@David Moeljadi@2014-03-03
+69@author@@@1@{adv,wo}@Jarang dia makan kue@@@@0@4@'He/She seldom eats cakes.'@David Moeljadi@2014-03-03
+70@author@@@1@{adv,wo}@Dia jarang makan kue@@@@1@4@'He/She seldom eats cakes.'@David Moeljadi@2014-03-03
+71@author@@@1@{adv,wo}@Dia makan jarang kue@@@@0@4@'He/She seldom eats cakes.'@David Moeljadi@2014-03-03
+72@author@@@1@{adv,wo}@Dia makan kue jarang@@@@0@4@'He/She seldom eats cakes.'@David Moeljadi@2014-03-03
+73@author@@@1@{adv,wo}@Besok kamu makan kue@@@@1@4@'You eat cakes tomorrow.'@David Moeljadi@2014-03-03
+74@author@@@1@{adv,wo}@Kamu besok makan kue@@@@1@4@'You eat cakes tomorrow.'@David Moeljadi@2014-03-03
+75@author@@@1@{adv,wo}@Kamu makan besok kue@@@@0@4@'You eat cakes tomorrow.'@David Moeljadi@2014-03-03
+76@author@@@1@{adv,wo}@Kamu makan kue besok@@@@1@4@'You eat cakes tomorrow.'@David Moeljadi@2014-03-03
+77@author@@@1@{adj,wo}@Buku baru itu jatuh@@@@1@4@'That new book fell down.'@David Moeljadi@2014-03-03
+78@author@@@1@{adj,wo}@Baru buku itu jatuh@@@@0@4@'That new book fell down.'@David Moeljadi@2014-03-03
+79@author@@@1@{adj,wo}@Itu baru buku jatuh@@@@0@4@'That new book fell down.'@David Moeljadi@2014-03-03
+80@author@@@1@{adj,wo}@Buku itu baru jatuh@@@@0@4@'That new book fell down.'@David Moeljadi@2014-03-03
+81@author@@@1@{crd}@Buku dan kue jatuh@@@@1@4@'Books and cakes fell down.'@David Moeljadi@2014-03-03
+82@author@@@1@{crd}@Aku, kamu, dan dia tidur@@@@1@5@'I, you, and he/she sleep.'@David Moeljadi@2014-03-03
+83@author@@@1@{crd}@Aku, dan kamu, dia tidur@@@@0@5@'I, you, and he/she sleep.'@David Moeljadi@2014-03-03
+84@author@@@1@{crd}@Aku, kamu, dan dia tidur dan makan@@@@1@7@'I, you, and he/she sleep and eat.'@David Moeljadi@2014-03-03
+85@author@@@1@{crd,neg}@Aku, kamu, dan dia tidak tidur dan makan@@@@1@8@'I, you, and he/she do not sleep and eat.'@David Moeljadi@2014-03-03
+86@author@@@1@{crd}@Aku makan kue, kamu tidur, dan dia jatuh@@@@1@8@'I eat cakes, you sleep, and he/she falls.'@David Moeljadi@2014-03-03
+87@author@@@1@{m,wo}@Bisa dia makan kue@@@@0@4@'He/She can eat cakes.'@David Moeljadi@2014-03-03
+88@author@@@1@{m,wo}@Dia bisa makan kue@@@@1@4@'He/She can eat cakes.'@David Moeljadi@2014-03-03
+89@author@@@1@{m,wo}@Dia makan bisa kue@@@@0@4@'He/She can eat cakes.'@David Moeljadi@2014-03-03
+90@author@@@1@{m,wo}@Dia makan kue bisa@@@@0@4@'He/She can eat cakes.'@David Moeljadi@2014-03-03
+91@author@@@1@{m,neg,wo}@Bisa dia tidak makan kue@@@@0@5@'He/She cannot eat cakes.'@David Moeljadi@2014-03-03
+92@author@@@1@{m,neg,wo}@Dia bisa tidak makan kue@@@@1@5@'He/She is able not to eat cakes.'@David Moeljadi@2014-03-03
+93@author@@@1@{m,neg,wo}@Dia tidak bisa makan kue@@@@1@5@'He/She cannot eat cakes.'@David Moeljadi@2014-03-03
+94@author@@@1@{m,neg,wo}@Dia makan tidak bisa kue@@@@0@5@'He/She cannot eat cakes.'@David Moeljadi@2014-03-03
+95@author@@@1@{m,neg,wo}@Dia makan tidak kue bisa@@@@0@5@'He/She cannot eat cakes.'@David Moeljadi@2014-03-03
+96@author@@@1@{emb-d}@Dia mengira bahwa kamu makan kue@@@@1@6@'He/She thinks that you eat cakes.'@David Moeljadi@2014-03-03
+97@author@@@1@{emb-d,neg}@Dia mengira bahwa kamu tidak makan kue@@@@1@7@'He/She thinks that you do not eat cakes.'@David Moeljadi@2014-03-03
+98@author@@@1@{emb-d}@Dia mengira apakah kamu makan kue@@@@0@6@'He/She thinks that you eat cakes.'@David Moeljadi@2014-03-03
+99@author@@@1@{emb-q}@Dia tanya apakah kamu makan kue@@@@1@6@'He/She asks whether you eat cakes.'@David Moeljadi@2014-03-03
+100@author@@@1@{emb-q,neg}@Dia tanya apakah kamu tidak makan kue@@@@1@7@'He/She asks whether you do not eat cakes.'@David Moeljadi@2014-03-03
+101@author@@@1@{emb-q}@Dia tanya bahwa kamu makan kue@@@@0@6@'He/She asks whether you eat cakes.'@David Moeljadi@2014-03-03
+102@author@@@1@{q}@Apakah kamu bunuh dia?@@@@1@4@'Did you kill him/her?'@David Moeljadi@2014-03-03
+103@author@@@1@{q,neg}@Apakah kamu tidak bunuh dia?@@@@1@5@'Did you not kill him/her?'@David Moeljadi@2014-03-03
+104@author@@@1@{q,wo}@Kamu apakah bunuh dia?@@@@0@4@'Did you kill him/her?'@David Moeljadi@2014-03-03
+105@author@@@1@{q,wo}@Kamu bunuh apakah dia?@@@@0@4@'Did you kill him/her?'@David Moeljadi@2014-03-03
+106@author@@@1@{q,wo}@Kamu bunuh dia apakah?@@@@0@4@'Did you kill him/her?'@David Moeljadi@2014-03-03

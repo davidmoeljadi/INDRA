@@ -73,16 +73,6 @@ itu_1 := demonstrative-noun-lex &
   [ STEM < "itu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_itu_n_rel" ].
 
-ini%20semua := demonstrative-noun-lex &
-  [ STEM < "ini",
-           "semua" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ini semua_n_rel" ].
-
-itu%20semua := demonstrative-noun-lex &
-  [ STEM < "itu",
-           "semua" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_itu semua_n_rel" ].
-
 ;;; Verbs
 
 jatuh := intr-verb-lex &
@@ -97,7 +87,11 @@ bunuh := tr-verb-lex &
   [ STEM < "bunuh" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bunuh_v_rel" ].
 
-tanya := tr-verb-lex &
+;tanya := tr-verb-lex &
+;  [ STEM < "tanya" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel" ].
+
+tanya_1 := tr-verb-lex &
   [ STEM < "tanya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel" ].
 
@@ -109,9 +103,33 @@ makan := opt-tr-verb-lex &
   [ STEM < "makan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_makan_v_rel" ].
 
-tahu := opt-tr-verb-lex &
+;tahu := opt-tr-verb-lex &
+;  [ STEM < "tahu" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel" ].
+
+tahu_1 := opt-tr-verb-lex &
   [ STEM < "tahu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel" ].
+
+mengira := prop-comp-verb-lex &
+  [ STEM < "mengira" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mengira_v_rel" ].
+
+tanya_2 := ques-comp-verb-lex &
+  [ STEM < "tanya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel" ].
+
+tahu_2 := ques-comp-verb-lex &
+  [ STEM < "tahu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel" ].
+
+tahu_3 := prop-comp-verb-lex &
+  [ STEM < "tahu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel" ].
+
+ada := locative-verb-lex &
+  [ STEM < "ada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel" ].
 
 ;;; Auxiliaries
 
@@ -131,6 +149,15 @@ akan := aspect_fut-aux-lex &
   [ STEM < "akan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_akan_aspect_rel" ].
 
+;belum := n+asp-lex &
+;  [ STEM < "belum" >,
+;    SYNSEM.LKEYS [KEYREL.PRED "_tidak_neg_rel",
+;		  ALTKEYREL.PRED "_sudah_aspect_rel" ]].
+
+bisa := can-aux &
+  [ STEM < "bisa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bisa_v_rel" ].
+
 ;;; Determiners
 
 ini_2 := determinative-determiner-lex &
@@ -141,10 +168,77 @@ itu_2 := determinative-determiner-lex &
   [ STEM < "itu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_itu_q_rel" ].
 
+;;; Prepositions
+
+di := adposition-lex &
+  [ STEM < "di" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_di_p_rel" ].
+
+;;; Question particles
+
 apakah := qpart-lex-item &
   [ STEM < "apakah" > ].
+
+;;; Conjunctions
 
 dan := conj-lex &
   [ STEM < "dan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
+
+atau := conj-lex &
+  [ STEM < "atau" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "1" ].
+
+;;; Complementizers
+
+bahwa := propcomp-lex-item &
+  [ STEM < "bahwa" > ].
+
+;;; Adjectives
+
+lapar := adjective-lex &
+  [ STEM < "lapar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lapar_a_rel" ].
+
+baru := adjective-lex &
+  [ STEM < "baru" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_baru_a_rel" ].
+
+;;; Adverbs of frequency
+
+sering := adverb-lex &
+  [ STEM < "sering" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sering_a_rel" ].
+
+jarang := adverb-lex &
+  [ STEM < "jarang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jarang_a_rel" ].
+
+;;;; Adverbs of time
+
+besok := adverb-time-lex &
+  [ STEM < "besok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_besok_a_rel" ].
+
+kemarin := adverb-time-lex &
+  [ STEM < "kemarin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemarin_a_rel" ].
+
+sekarang := adverb-time-lex &
+  [ STEM < "sekarang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sekarang_a_rel" ].
+
+;;;; Adverbs of place
+
+sini := n+det-lex &
+  [ STEM < "sini" >,
+    SYNSEM.LKEYS [KEYREL.PRED "_tempat_n_rel",
+		  ALTKEYREL.PRED "_ini_q_rel" ]].
+
+situ := n+det-lex &
+  [ STEM < "situ" >,
+    SYNSEM.LKEYS [KEYREL.PRED "_tempat_n_rel",
+		  ALTKEYREL.PRED "_itu_q_rel" ]].
+

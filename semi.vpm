@@ -52,14 +52,14 @@ PNG.PERNUM : PNG.PERNUM
 PNG.GEND : PNG.GEND
   * <> *
 
-E.TENSE : E.TENSE
+E.TENSE : TENSE
   * <> *
 
-E.ASPECT : E.ASPECT
+E.ASPECT : ASPECT
   perf <> perf
   prog <> prog
   fut <> fut
   * <> *
 
-E.MOOD : E.MOOD
+E.MOOD : MOOD
   * <> *

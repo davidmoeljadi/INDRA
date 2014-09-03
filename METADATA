@@ -24,20 +24,20 @@
 
 ## Grammar maintainers and contributors
 
-MAINTAINER=""
-CONTRIBUTORS=""
-CONTACT_EMAIL=""
+MAINTAINER="DavidMoeljadi"
+CONTRIBUTORS="DavidMoeljadi; FrancisBond"
+CONTACT_EMAIL="davidmoeljadi@gmail.com"
 
 ## Grammar name and web presence
 ## Note: if SHORT_GRAMMAR_NAME is not defined, the directory name is used.
 
-GRAMMAR_NAME=""
-SHORT_GRAMMAR_NAME=""
+GRAMMAR_NAME="Indonesian Grammar"
+SHORT_GRAMMAR_NAME="Ind"
 WEBSITE=""
 DEMO_WEBSITE=""
 DOCUMENTATION_URL=""
 ISSUE_TRACKER=""
-LICENSE=""
+LICENSE="MIT"
 
 ## You may optionally specify a release date for the grammar. If unspecified,
 ## the grammar catalogue script will attempt to extract a date from the
@@ -49,7 +49,7 @@ LATEST_RELEASE=""
 ## will be used in the Grammar Catalogue
 BIB_URL=""
 PDF_URL=""
-CITE=""
+CITE="Moeljadi, David 2014"
 
 ## Version Control
 ## If this is not provided, it is automatically extracted from the
@@ -84,14 +84,14 @@ ASSOCIATED_RESOURCES=""
 #GRAMMAR_TYPE="Resource grammar"
 #GRAMMAR_TYPE="Treebank trained grammar"
 #GRAMMAR_TYPE="Medium-sized linguistic grammar"
-#GRAMMAR_TYPE="Experimental grammar"
+GRAMMAR_TYPE="Experimental grammar"
 
 
 ## Language identification
 ## Iso-codes can be looked up at http://www.sil.org/iso639-3/codes.asp
 
-LANGUAGE_NAME=""
-ISO_CODE=""
+LANGUAGE_NAME="Indonesian"
+ISO_CODE="ind"
 
 ## File locations of LKB script file and .grm file read by cheap
 ## Paths relative to top of grammar directory

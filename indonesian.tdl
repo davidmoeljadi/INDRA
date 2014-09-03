@@ -190,23 +190,23 @@ determinative-determiner-lex := determiner-lex & no-icons-lex-item.
 ; We treat question particles as complementizers.
 ; Here is the lexical type for complementizers.
 
-complementizer-lex-item := raise-sem-lex-item & basic-one-arg &
-  [ SYNSEM.LOCAL.CAT [ HEAD comp &
-                            [ MOD < > ],
-                       VAL [ SPR < >,
-                             SUBJ < >,
-                             COMPS < #comp > ] ],
-    ARG-ST < #comp &
-             [ LOCAL.CAT [ MC +,
-                           HEAD verb,
-                           VAL [ SUBJ < >,
-                                 COMPS < > ] ] ] > ].
+;complementizer-lex-item := raise-sem-lex-item & basic-one-arg &
+;  [ SYNSEM.LOCAL.CAT [ HEAD comp &
+;                            [ MOD < > ],
+;                       VAL [ SPR < >,
+;                             SUBJ < >,
+;                             COMPS < #comp > ] ],
+;    ARG-ST < #comp &
+;             [ LOCAL.CAT [ MC +,
+;                           HEAD verb,
+;                           VAL [ SUBJ < >,
+;                                 COMPS < > ] ] ] > ].
 
 ; Subtype for question particles. Constrains SF to ques.
 
-qpart-lex-item := complementizer-lex-item &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF ques,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
+;qpart-lex-item := complementizer-lex-item &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF ques,
+;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
@@ -310,3 +310,165 @@ s1-mid-coord-rule := basic-s-mid-coord-rule & monopoly-mid-coord-rule &
 
 s1-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+;:begin :instance.
+;:include "indonesian_add2".
+;:end :instance.
+
+;;; Verbs
+
+clausal-comp-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps & 
+				 [ LOCAL.CAT [ HEAD +vc & [ FORM finite ],
+					       VAL [ SUBJ < >,
+						     COMPS < > ]]] >,
+    ARG-ST.REST.FIRST #comps ].
+
+prop-comp-verb-lex := clausal-comp-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.SF prop ].
+
+
+ques-comp-verb-lex := clausal-comp-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD comp,
+					     CONT.HOOK.INDEX.SF ques ]].
+
+locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-1 &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD adp ] ] > ].
+
+;;; Complementizers
+
+complementizer-lex-item := raise-sem-lex-item & basic-one-arg &
+  [ SYNSEM.LOCAL.CAT [ HEAD comp,
+		       VAL [ SUBJ < >,
+			     SPR < >,
+			     COMPS < #comps &
+				     [ LOCAL.CAT [ HEAD verb,
+						   VAL.SUBJ < > ]] > ]],
+    ARG-ST < #comps > ].
+
+propcomp-lex-item := complementizer-lex-item &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.SF prop ].
+
+qpart-lex-item := complementizer-lex-item &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF ques,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
+
+noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
+ [ SYNSEM [LOCAL [ CAT [ HEAD noun,
+			 VAL [ SPR < >,
+			       COMPS < >,
+			       SUBJ < >,
+			       SPEC < > ]],
+		   CONT [RELS <! relation &
+			       [LBL #nh,
+				ARG0 #s ],
+			       quant-relation & #det &
+			       [ARG0 #s,
+				RSTR #h ]!>,
+			 HCONS <! qeq &
+				[HARG #h,
+				 LARG #nh ]!> ]],
+	   LKEYS [ KEYREL relation,
+		   ALTKEYREL #det ]]].
+
+n+det-lex := noun+det-lex-item.
+
+;neg+aspect-lex-item := norm-hook-lex-item & subj-aux- &
+; [ SYNSEM [LOCAL [ CAT [ HEAD verb,
+;			 VAL [ SPR < >,
+;			       COMPS < >,
+;			       SUBJ < >,
+;			       SPEC < > ]],
+;		   CONT [RELS <! relation &
+;			       [LBL #nh, ************neg
+;				ARG0 #s ],
+;			       quant-relation & #verb &
+;			       [ARG0 #s, ************asp
+;				RSTR #h ]!>,
+;			 HCONS <! qeq &
+;				[HARG #h,
+;				 LARG #nh ]!> ]],
+;	   LKEYS [ KEYREL relation,
+;		   ALTKEYREL #verb ]]].
+
+;n+asp-lex := neg+aspect-lex-item.
+
+;;; Adjectives
+
+adjective-lex := basic-adjective-lex & intersective-mod-lex &
+	      norm-ltop-lex-item &
+[ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+                                                    VAL.SPR cons ]]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ],
+			   POSTHEAD + ]]]].
+
+;;; Adverbs
+
+adverb-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ cons,
+							  COMPS < > ],
+						    HEAD verb ] ]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ],
+			   POSTHEAD - ]]]].
+
+adverb-time-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ COMPS < > ],
+						    HEAD verb ] ]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ]]]]].
+
+;;; Adpositions
+
+adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+			    ARG1 #xarg,
+			    ARG2 #ind ],
+	     LOCAL [ CONT.HOOK [ XARG #xarg,
+				 INDEX #arg0 ],
+		     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD verb ],
+						CONT.HOOK.INDEX #xarg ]] >,
+			   VAL [ SPR < >,
+			     COMPS < [ OPT -,
+				       LOCAL [ CAT [ HEAD noun,
+						     VAL.SPR < > ],
+					       CONT.HOOK.INDEX #ind ]] >,
+				 SUBJ < > ]]]]].
+
+can-aux := basic-verb-lex & trans-first-arg-raising-lex-item-1 & non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT [ VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                       HEAD verb &
+                            [ AUX + ] ],
+    ARG-ST < #subj &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SUBJ < [  ] >,
+                                 COMPS < > ],
+                           HEAD verb &
+                               [ AUX -] ] ] > ] .
+
+
