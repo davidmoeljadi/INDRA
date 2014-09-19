@@ -160,20 +160,22 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
 
 subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
 
-aspect_perf-aux-lex := subj-raise-aux-with-pred &
+subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item & no-icons-lex-item.
+
+aspect_perf-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
+
+aspect_prog-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prog,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
+
+aspect_fut-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT fut,
                    CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
 
 neg-aux-lex := subj-raise-aux-with-pred &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ].
-
-aspect_prog-aux-lex := subj-raise-aux-with-pred &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prog,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
-
-aspect_fut-aux-lex := subj-raise-aux-with-pred &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT fut,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
 
 ;;; Others
 

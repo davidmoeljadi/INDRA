@@ -83,6 +83,10 @@ tidur := intr-verb-lex &
   [ STEM < "tidur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tidur_v_rel" ].
 
+menggonggong := intr-verb-lex &
+  [ STEM < "menggonggong" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_menggonggong_v_rel" ].
+
 bunuh := tr-verb-lex &
   [ STEM < "bunuh" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bunuh_v_rel" ].
@@ -133,21 +137,18 @@ ada := locative-verb-lex &
 
 ;;; Auxiliaries
 
-sudah := aspect_perf-aux-lex &
-  [ STEM < "sudah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sudah_aspect_rel" ].
-
 tidak := neg-aux-lex &
   [ STEM < "tidak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tidak_neg_rel" ].
 
+sudah := aspect_perf-aux-lex &
+  [ STEM < "sudah" > ].
+
 sedang := aspect_prog-aux-lex &
-  [ STEM < "sedang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sedang_aspect_rel" ].
+  [ STEM < "sedang" > ].
 
 akan := aspect_fut-aux-lex &
-  [ STEM < "akan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_akan_aspect_rel" ].
+  [ STEM < "akan" > ].
 
 ;belum := n+asp-lex &
 ;  [ STEM < "belum" >,

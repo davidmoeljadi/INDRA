@@ -4,3 +4,17 @@
 apakah_gr := generator_rule &
   [ CONTEXT.RELS <! [ ARG0.SF ques ] !>,
     FLAGS.TRIGGER "apakah" ].
+
+sudah_gr := arg0e_gtr &
+[ CONTEXT.RELS <! [ ARG0.E.ASPECT perf ] !>,
+  FLAGS.TRIGGER "sudah" ]. 
+
+sedang_gr := arg0e_gtr &
+[ CONTEXT.RELS <! [ ARG0.E.ASPECT prog ] !>,
+  FLAGS.TRIGGER "sedang" ]. 
+
+akan_gr := arg0e_gtr &
+[ CONTEXT.RELS <! [ ARG0.E.ASPECT fut ] !>,
+  FLAGS.TRIGGER "akan" ]. 
+
+
