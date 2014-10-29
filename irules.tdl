@@ -1,1 +1,40 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+nya-suffix-1 :=
+%suffix (* nya)
+nya-lex-rule & 
+ [ DTR.SYNSEM.LOCAL [ CONT.HOOK [ INDEX #index,
+				  LTOP #larg ] ],
+   C-CONT [ HOOK [ INDEX #index,
+		   LTOP #ltop ],
+	    HCONS <! qeq & [ HARG #harg,
+			     LARG #larg ] !>,
+	    RELS <! quant-relation & [ PRED the_q_rel,
+				       LBL #ltop,
+				       ARG0 #index,
+				       RSTR #harg ] !> ] ].
+
+nya-suffix-2 :=
+%suffix (* nya)
+nya-lex-rule & 
+ [ DTR.SYNSEM.LOCAL [ CONT.HOOK [ INDEX #index,
+				  LTOP #larg ] ],
+   C-CONT [ HOOK [ INDEX #index ],
+	    HCONS <! qeq & [ HARG #harg,
+			     LARG #larg ],
+		   qeq & [ HARG #harg2,
+			   LARG #larg2 ] !>,
+	    RELS <! quant-relation & [ PRED def_q_rel,
+				       ARG0 #index,
+				       RSTR #harg ],
+		    arg12-relation & [ PRED poss_rel,
+				       LBL #larg,
+				       ARG0 event,
+				       ARG1 #index,
+				       ARG2 #arg2 ],
+		    quant-relation & [ PRED pronoun_q_rel,
+				       ARG0 #arg2,
+				       RSTR #harg2 ],
+  		    arg0-relation & [ PRED pron_rel,
+				      LBL #larg2,
+				      ARG0 #arg2 ] !> ] ].
+

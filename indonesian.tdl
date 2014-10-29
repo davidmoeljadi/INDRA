@@ -14,6 +14,14 @@
 non-mod-lex-item := lex-item &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < > ].
 
+quant_rel := predsort.
+def_q_rel := quant_rel.
+the_q_rel := def_q_rel.
+exist_q_rel := quant_rel.
+poss_rel := quant_rel.
+pronoun_q_rel := quant_rel.
+pron_rel := predsort.
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Matrix Type Addenda
 ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -216,6 +224,26 @@ determinative-determiner-lex := determiner-lex & no-icons-lex-item.
 
 ;;; Lexical rule types
 
+n-enclitic-lex-rule-super := same-non-local-lex-rule &
+			     same-modified-lex-rule &
+			     same-light-lex-rule &
+			     same-ctxt-lex-rule &
+			     same-cont-lex-rule &
+			     same-agr-lex-rule &
+			     same-head-lex-rule &
+			     same-hc-light-lex-rule &
+			     same-posthead-lex-rule &
+			     same-mc-lex-rule &
+			     infl-lex-rule & 
+			     no-icons-rule &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR <>,
+			   SUBJ <>,
+			   COMPS <>,
+			   SPEC <> ],
+    DTR common-noun-lex ].
+
+nya-lex-rule := n-enclitic-lex-rule-super.
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
 ;;;;;;;;;;;;;;;;;;;
@@ -263,7 +291,7 @@ infostr-filler-head-phrase := basic-head-filler-phrase & infostr-dislocated-phra
 ; introduced to match the semantic effect of bare NPs in your language.
 
 bare-np-phrase := basic-bare-np-phrase &
-  [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
+  [ C-CONT.RELS <! [ PRED exist_q_rel ] !> ].
 
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination

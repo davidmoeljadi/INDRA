@@ -64,7 +64,7 @@
 
 (defparameter *chart-limit* 100)
 
-(defparameter *maximum-number-of-edges* 4000)
+(defparameter *maximum-number-of-edges* 10000)
 
 (defparameter *mother-feature* NIL
   "The feature giving the mother in a grammar rule")
