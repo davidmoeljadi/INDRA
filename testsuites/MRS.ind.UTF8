@@ -1,650 +1,854 @@
-﻿Id: 11           
-Source: MRS           
-Vetted: t           
-Judgment: g            
-Phenom: tam  
-      
+Language: Indonesian
+Language code: ind
+Lines: orth translit gloss translat
+Author: David Moeljadi
+Date: 2014-10-30
+
+Id: 11
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
 Hujan turun.
 hujan turun
-rain descend 
-It rained.           
-           
-Id: 12           
-Source: MRS           
-Vetted: t           
-Judgment: g            
-Phenom: tam  
-      
+rain descend
+It rained.
+
+Id: 12
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
 Turun hujan.
 turun hujan
-descend rain 
-It rained. 
-		   
-Id: 21           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+descend rain
+It rained.
+
+Id: 21
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
-Budi menggonggong.
-Budi meN-gonggong         
-Budi AT-bark         
-Budi barked.           
-           
-Id: 31           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi menggonggong.
+Adi meN-gonggong
+Adi AT-bark
+Adi barked.
+
+Id: 31
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
 Jendela terbuka.
-jendela ter-buka         
-window TER-open          
-The window opened.           
-           
-Id: 41           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+jendela ter-buka
+window TER-open
+The window opened.
+
+Id: 41
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
-Budi mengejar Adi.
-Budi meN-kejar Adi        
-Budi AT-chase Adi        
-Budi chased Adi.           
-           
-Id: 51           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi mengejar Budi.
+Adi meN-kejar Budi
+Adi AT-chase Budi
+Adi chased Budi.
+
+Id: 51
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: comps / dat
 
-Budi memberi Adi rokok.
-Budi meN-beri Adi rokok       
-Budi AT-give Adi cigarette       
-Budi handed Adi the cigarette.           
-           
-Id: 61           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi memberi Budi rokok.
+Adi meN-beri Budi rokok
+Adi AT-give Budi cigarette
+Adi handed Budi the cigarette.
+
+Id: 61
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: comps / dat
 
-Budi memberi rokok kepada Adi.
-Budi meN-beri rokok kepada Adi    
-Budi AT-give cigarette to Adi     
-Budi handed the cigarette to Adi.           
-           
-Id: 71           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi memberi rokok kepada Budi.
+Adi meN-beri rokok kepada Budi
+Adi AT-give cigarette to Budi
+Adi handed the cigarette to Budi.
+
+Id: 71
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: comps
+Comment: we need sudah because otherwise it can have a future or present meaning
 
-Budi bertaruh rokok dengan Adi bahwa hujan sudah turun.
-Budi ber-taruh rokok dengan Adi bahwa hujan sudah turun 
-Budi BER-bet cigarette with Adi that rain SUDAH descend 
-Budi bet Adi a cigarette that it rained.           
-           
-Id: 81           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi bertaruh rokok dengan Budi bahwa hujan sudah turun.
+Adi ber-taruh rokok dengan Budi bahwa hujan sudah turun
+Adi BER-bet cigarette with Budi that rain SUDAH descend
+Adi bet Budi a cigarette that it rained.
+
+Id: 72
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: comps
+Comment: this is ambiguous, can have a past, future, or present meaning
+
+Adi bertaruh rokok dengan Budi bahwa hujan turun.
+Adi ber-taruh rokok dengan Budi bahwa hujan turun
+Adi BER-bet cigarette with Budi that rain descend
+Adi bet Budi a cigarette that it rained.
+
+Id: 81
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: emb-d
+Comment: we need sudah because otherwise it can have a future or present meaning
+
+Adi tahu bahwa hujan sudah turun.
+Adi tahu bahwa hujan sudah turun
+Adi know that rain SUDAH descend
+Adi knew that it rained.
+
+Id: 82
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: emb-d
+Comment: this is ambiguous, can have a past, future, or present meaning
+
+Adi tahu bahwa hujan turun.
+Adi tahu bahwa hujan turun
+Adi know that rain descend
+Adi knew that it rained.
+
+Id: 91
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Budi tahu bahwa hujan sudah turun.
-Budi tahu bahwa hujan sudah turun       
-Budi know that rain SUDAH descend       
-Budi knew that it rained.           
-           
-Id: 91           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: emb-d   
+Adi berniat menggonggong.
+Adi ber-niat meN-gonggong
+Adi BER-intention AT-bark
+Adi intended to bark.
 
-Budi berniat menggonggong.
-Budi ber-niat meN-gonggong         
-Budi BER-intention AT-bark         
-Budi intended to bark.           
-           
-Id: 101           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: emb-d   
-Comment: original sentence unacceptable
+Id: 101
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: emb-d
 
-Budi berniat membuat Adi menggonggong.        
-Budi ber-niat meN-buat Adi meN-gonggong        
-Budi BER-intention AT-make Adi AT-bark        
-Budi intended Adi to bark.           
-           
-Id: 111           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: Quant 
-Comment: original sentence unacceptable
+Adi berniat membuat Budi menggonggong.
+Adi ber-niat meN-buat Budi meN-gonggong
+Adi BER-intention AT-make Budi AT-bark
+Adi intended Budi to bark.
+
+Id: 111
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: Quant
 
 Setiap kucing menggonggong.
 Se-tiap kucing meN-gonggong
 one-each cat AT-bark
-Every cat barked.           
-           
-Id: 121           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Every cat barked.
+
+Id: 121
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: Quant
 
 Setiap kucing mengejar satu anjing.
-Se-tiap kucing meN-kejar satu anjing  
-one-each cat AT-chase one dog  
-Every cat chased some dog.         
-           
-Id: 131           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Se-tiap kucing meN-kejar satu anjing
+one-each cat AT-chase one dog
+Every cat chased some dog.
+
+Id: 131
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: GEN
 
 Kucingku menggonggong.
 kucing=ku meN-gonggong
 cat=1sg AT-bark
-My cat barked.           
-           
-Id: 141           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: Gender        
+My cat barked.
+
+Id: 141
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: Gender
 
 Itu menggonggong.
-itu meN-gonggong        
-that AT-bark      
+itu meN-gonggong
+that AT-bark
 It barked.
-           
-Id: 151           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: gender 
 
-Kucing mengejar itu.        
-kucing meN-kejar itu        
-cat AT-chase that        
-The cat chased it.           
-           
-Id: 161           
-Source: MRS           
-Vetted: t         
-Judgment: g        
-Phenom: refl 
-       
-Kucing mengejar dirinya sendiri.       
-kucing meN-kejar diri=nya sendiri       
-cat AT-chase self=3sg alone       
+Id: 151
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: gender
+
+Kucing mengejar itu.
+kucing meN-kejar itu
+cat AT-chase that
+The cat chased it.
+
+Id: 161
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: refl
+
+Kucing mengejar dirinya sendiri.
+kucing meN-kejar diri=nya sendiri
+cat AT-chase self=3sg alone
 The cat chased itself.
-           
-Id: 171           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: pn  
-          
+
+Id: 162
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: refl
+
+Kucing itu mengejar dirinya sendiri.
+kucing itu meN-kejar diri=nya sendiri
+cat that AT-chase self=3sg alone
+The cat chased itself.
+
+Id: 171
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: pn
+
 Kucing mengejar satu ekor.
 kucing meN-kejar satu ekor
 cat AT-chase one CL
 The cat chased one.
-           
-Id: 181           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+
+Id: 172
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: pn
+
+Kucingnya mengejar satu ekor.
+kucing=nya meN-kejar satu ekor
+cat=3sg AT-chase one CL
+The cat chased one.
+
+Id: 181
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: gen
 
 Punyaku menggonggong.
 punya=ku meN-gonggong
 belonging=1sg AT-bark
 Mine barked.
-           
-Id: 191           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: pn 
+
+Id: 191
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: pn
 
 Itu terbuka.
-itu ter-buka       
-that TER-open        
-That opened.           
-           
-Id: 201       
-Source: MRS           
-Vetted: t           
-Judgment: g           
+itu ter-buka
+that TER-open
+That opened.
+
+Id: 201
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: agr
- 
-Kucing menggonggong.
-kucing meN-gonggong          
-cat AT-bark          
+
+Kucing-kucing menggonggong.
+kucing-kucing meN-gonggong
+cat-cat AT-bark
 Cats bark.
-           
-Id: 211           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+
+Id: 211
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: agr
 
 Rokok sudah sampai.
-rokok sudah sampai         
-tobacco SUDAH arrive        
-Tobacco arrived.           
-           
-Id: 221           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+rokok sudah sampai
+tobacco SUDAH arrive
+Tobacco arrived.
+
+Id: 221
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: pn
 
 Beberapa menggonggong.
-beberapa meN-gonggong 
-some AT-bark         
+beberapa meN-gonggong
+some AT-bark
 Some bark.
 
-Id: 222           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Id: 222
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: pn
 
 Beberapa ekor menggonggong.
-beberapa ekor meN-gonggong 
-some CL AT-bark         
+beberapa ekor meN-gonggong
+some CL AT-bark
 Some bark.
-           
-Id: 231           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+
+Id: 231
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: pn
 
 Beberapa kucing menggonggong.
-beberapa kucing meN-gonggong        
-some cat AT-bark        
+beberapa kucing meN-gonggong
+some cat AT-bark
 Some of the cats bark.
 
-Id: 232           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Id: 232
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: pn
 
 Beberapa ekor kucing menggonggong.
-beberapa ekor kucing meN-gonggong        
-some CL cat AT-bark        
+beberapa ekor kucing meN-gonggong
+some CL cat AT-bark
 Some of the cats bark.
-           
-Id: 241           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: pn      
-     
-Tidak ada kucing menggonggong.
-tidak ada kucing meN-gonggong      
-NEG exist cat AT-bark      
-No cat barked.           
-           
-Id: 242           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: pn      
-     
-Tidak ada kucing yang menggonggong.
-tidak ada kucing yang meN-gonggong      
-NEG exist cat REL AT-bark      
-No cat barked.      
 
-Id: 243           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: pn      
-     
+Id: 241
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: pn
+
+Tidak ada kucing menggonggong.
+tidak ada kucing meN-gonggong
+NEG exist cat AT-bark
+No cat barked.
+
+Id: 242
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: pn
+
+Tidak ada kucing yang menggonggong.
+tidak ada kucing yang meN-gonggong
+NEG exist cat REL AT-bark
+No cat barked.
+
+Id: 243
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: pn
+
 Tidak ada seekor pun kucing yang menggonggong.
-tidak ada se-ekor pun kucing yang meN-gonggong      
-NEG exist one-CL even cat REL AT-bark      
-No cat barked.      
-		   
-Id: 251           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+tidak ada se-ekor pun kucing yang meN-gonggong
+NEG exist one-CL even cat REL AT-bark
+No cat barked.
+
+Id: 251
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: q
 
 Apakah anjingnya menggonggong?
-apa-kah anjing=nya meN-gonggong?        
-what-QP dog=3sg AT-bark?        
-Did the dog bark?           
-           
-Id: 261           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+apa-kah anjing=nya meN-gonggong?
+what-QP dog=3sg AT-bark?
+Did the dog bark?
+
+Id: 261
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: q
 
 Anjing mana yang menggonggong?
-anjing mana yang meN-gonggong?      
-dog which REL AT-bark?      
-Which dog barked?           
-           
-Id: 271           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing mana yang meN-gonggong?
+dog which REL AT-bark?
+Which dog barked?
+
+Id: 262
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: q
+
+Anjing yang mana yang menggonggong?
+anjing yang mana yang meN-gonggong?
+dog REL which REL AT-bark?
+Which dog barked?
+
+Id: 271
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: q
 
 Anjing siapa yang menggonggong?
-anjing siapa yang meN-gonggong?      
-dog who REL AT-bark?       
-Whose dog barked?           
-           
-Id: 281           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing siapa yang meN-gonggong?
+dog who REL AT-bark?
+Whose dog barked?
+
+Id: 281
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: imp
 
-Kejar Adi!
-kejar Adi!         
-chase Adi!         
-Chase Adi!           
+Kejar Budi!
+kejar Budi!
+chase Budi!
+Chase Budi!
 
-Id: 282           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Id: 282
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: imp
 
-Kejarlah Adi!
-kejar-lah Adi!         
-chase-EP Adi!         
-Chase Adi!       
-           
-Id: 291           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Kejarlah Budi!
+kejar-lah Budi!
+chase-EP Budi!
+Chase Budi!
+
+Id: 291
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: imp
 
-Budi bertanya-tanya anjing mana yang menggonggong.
-Budi ber-tanya-tanya anjing mana yang meN-gonggong
-Budi BER-ask-ask dog which REL AT-bark
-Budi wondered which dog barked.
+Adi bertanya-tanya anjing mana yang menggonggong.
+Adi ber-tanya-tanya anjing mana yang meN-gonggong
+Adi BER-ask-ask dog which REL AT-bark
+Adi wondered which dog barked.
 
-Id: 292           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Id: 292
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: imp
 
-Budi bertanya-tanya anjing yang mana yang menggonggong.
-Budi ber-tanya-tanya anjing yang mana yang meN-gonggong
-Budi BER-ask-ask dog REL which REL AT-bark
-Budi wondered which dog barked.
-           
-Id: 301           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi bertanya-tanya anjing yang mana yang menggonggong.
+Adi ber-tanya-tanya anjing yang mana yang meN-gonggong
+Adi BER-ask-ask dog REL which REL AT-bark
+Adi wondered which dog barked.
+
+Id: 301
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Budi bertanya-tanya apakah Adi menggonggong.     
-Budi ber-tanya-tanya apa-kah Adi meN-gonggong     
-Budi BER-ask-ask what-QP Adi AT-bark     
-Budi wondered whether Adi barked.
-           
-Id: 311           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi bertanya-tanya apakah Budi menggonggong.
+Adi ber-tanya-tanya apa-kah Budi meN-gonggong
+Adi BER-ask-ask what-QP Budi AT-bark
+Adi wondered whether Budi barked.
+
+Id: 311
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: Pass
 
-Anjing yang dikejar Adi menggonggong.
-anjing yang di-kejar Adi meN-gonggong   
-dog REL PT-chase Adi AT-bark   
-The dog that Adi chased barked.           
+Anjing yang dikejar Budi menggonggong.
+anjing yang di-kejar Budi meN-gonggong
+dog REL PT-chase Budi AT-bark
+The dog that Budi chased barked.
 
-Id: 312           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Id: 312
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: Pass
 
-Anjing yang dikejar oleh Adi menggonggong.
-anjing yang di-kejar oleh Adi meN-gonggong   
-dog REL PT-chase by Adi AT-bark   
-The dog that Adi chased barked.
-           
-Id: 321           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Anjing yang dikejar oleh Budi menggonggong.
+anjing yang di-kejar oleh Budi meN-gonggong
+dog REL PT-chase by Budi AT-bark
+The dog that Budi chased barked.
+
+Id: 321
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: Pass
-Comment: not faithful translation          
+Comment: not faithful translation
 
 Anjing yang akan dikejar sedang menggonggong.
-anjing yang akan di-kejar sedang meN-gonggong  
+anjing yang akan di-kejar sedang meN-gonggong
 dog REL will PT-chase PROG AT-bark
-The dog to chase is barking.           
-           
-Id: 331           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+The dog to chase is barking.
+
+Id: 331
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: Pass
 
-Anjingnya dikejar Adi.
-anjing=nya di-kejar Adi      
-dog=3sg PT-chase Adi      
-The dog was chased by Adi.           
+Anjingnya dikejar Budi.
+anjing=nya di-kejar Budi
+dog=3sg PT-chase Budi
+The dog was chased by Budi.
 
-Id: 332           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Id: 332
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: Pass
 
-Anjingnya dikejar oleh Adi.
-anjing=nya di-kejar oleh Adi      
-dog=3sg PT-chase by Adi      
-The dog was chased by Adi. 
-           
-Id: 341           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Anjingnya dikejar oleh Budi.
+anjing=nya di-kejar oleh Budi
+dog=3sg PT-chase by Budi
+The dog was chased by Budi.
+
+Id: 341
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: Pass
 
-Anjing yang dikejar Adi menggonggong.
-anjing yang di-kejar Adi meN-gonggong   
-dog REL PT-chase Adi AT-bark   
-The dog chased by Adi barked.           
+Anjing yang dikejar Budi menggonggong.
+anjing yang di-kejar Budi meN-gonggong
+dog REL PT-chase Budi AT-bark
+The dog chased by Budi barked.
 
-Id: 342           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Id: 342
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: Pass
 
-Anjing yang dikejar oleh Adi menggonggong.
-anjing yang di-kejar oleh Adi meN-gonggong   
-dog REL PT-chase by Adi AT-bark   
-The dog chased by Adi barked.   
-           
-Id: 351           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Anjing yang dikejar oleh Budi menggonggong.
+anjing yang di-kejar oleh Budi meN-gonggong
+dog REL PT-chase by Budi AT-bark
+The dog chased by Budi barked.
+
+Id: 351
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
 Anjing sedang menggonggong.
-anjing sedang meN-gonggong         
-dog PROG AT-bark         
-The dog is barking.     
-           
-Id: 361           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing sedang meN-gonggong
+dog PROG AT-bark
+The dog is barking.
+
+Id: 352
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
+
+Anjingnya sedang menggonggong.
+anjing=nya sedang meN-gonggong
+dog=3sg PROG AT-bark
+The dog is barking.
+
+Id: 361
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
 Anjing sudah menggonggong.
-anjing sudah meN-gonggong         
-dog SUDAH AT-bark         
-The dog has barked.           
-           
-Id: 371           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing sudah meN-gonggong
+dog SUDAH AT-bark
+The dog has barked.
+
+Id: 362
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
+
+Anjingnya sudah menggonggong.
+anjing=nya sudah meN-gonggong
+dog=3sg SUDAH AT-bark
+The dog has barked.
+
+Id: 371
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
 Anjing sudah menggonggong.
-anjing sudah meN-gonggong         
-dog SUDAH AT-bark     
-The dog has been barking.    
-           
-Id: 381           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: tam     
-Comment: tricky to faithfully translate the past perfect
-     
+anjing sudah meN-gonggong
+dog SUDAH AT-bark
+The dog has been barking.
+
+Id: 372
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
+
+Anjingnya sudah menggonggong.
+anjing=nya sudah meN-gonggong
+dog=3sg SUDAH AT-bark
+The dog has been barking.
+
+Id: 381
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
+
 Anjing sudah menggonggong.
-anjing sudah meN-gonggong         
-dog SUDAH AT-bark 
-The dog had been barking.           
-           
-Id: 391           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing sudah meN-gonggong
+dog SUDAH AT-bark
+The dog had been barking.
+
+Id: 382
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
+
+Anjingnya sudah menggonggong.
+anjing=nya sudah meN-gonggong
+dog=3sg SUDAH AT-bark
+The dog had been barking.
+
+Id: 391
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
 Anjing akan menggonggong.
-anjing akan meN-gonggong         
-dog will AT-bark         
-The dog will bark.           
-           
-Id: 401           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing akan meN-gonggong
+dog will AT-bark
+The dog will bark.
+
+Id: 392
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
+
+Anjingnya akan menggonggong.
+anjing=nya akan meN-gonggong
+dog=3sg will AT-bark
+The dog will bark.
+
+Id: 401
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
 Anjing sudah akan menggonggong.
-anjing sudah akan meN-gonggong         
-dog SUDAH will AT-bark         
-The dog is going to bark.           
-           
-Id: 411           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing sudah akan meN-gonggong
+dog SUDAH will AT-bark
+The dog is going to bark.
+
+Id: 402
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
+
+Anjingnya sudah akan menggonggong.
+anjing=nya sudah akan meN-gonggong
+dog=3sg SUDAH will AT-bark
+The dog is going to bark.
+
+Id: 411
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: infin
 
 Anjing bisa menggonggong.
-anjing bisa meN-gonggong        
-dog can AT-bark        
-The dog could bark.           
-           
-Id: 421           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing bisa meN-gonggong
+dog can AT-bark
+The dog could bark.
+
+Id: 412
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: infin
+
+Anjingnya bisa menggonggong.
+anjing=nya bisa meN-gonggong
+dog=3sg can AT-bark
+The dog could bark.
+
+Id: 421
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: infin
 
 Anjing tidak bisa menggonggong.
-anjing tidak bisa meN-gonggong       
-dog NEG can AT-bark       
-The dog couldn’t bark.           
-           
-Id: 431           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing tidak bisa meN-gonggong
+dog NEG can AT-bark
+The dog couldn’t bark.
+
+Id: 422
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: infin
+
+Anjingnya tidak bisa menggonggong.
+anjing=nya tidak bisa meN-gonggong
+dog=3sg NEG can AT-bark
+The dog couldn’t bark.
+
+Id: 431
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adj
 
 Anjing tua menggonggong.
-anjing tua meN-gonggong       
-dog old AT-bark        
-The old dog barked.           
-           
-Id: 441           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing tua meN-gonggong
+dog old AT-bark
+The old dog barked.
+
+Id: 432
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: adj
+
+Anjing tua itu menggonggong.
+anjing tua itu meN-gonggong
+dog old that AT-bark
+The old dog barked.
+
+Id: 441
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adv
 
-Anjing menggonggong dengan pelan.     
-anjing meN-gonggong dengan pelan      
+Anjing menggonggong dengan pelan.
+anjing meN-gonggong dengan pelan
 dog AT-bark with slow
-The dog barked softly.           
-           
-Id: 451           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+The dog barked softly.
+
+Id: 442
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: adv
+
+Anjingnya menggonggong dengan pelan.
+anjing=nya meN-gonggong dengan pelan
+dog=3sg AT-bark with slow
+The dog barked softly.
+
+Id: 451
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adv
 
 Anjingnya mungkin menggonggong.
-anjing=nya mungkin meN-gonggong 
-dog=3sg perhaps AT-bark        
-The dog probably barked.           
-           
-Id: 461           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing=nya mungkin meN-gonggong
+dog=3sg perhaps AT-bark
+The dog probably barked.
+
+Id: 461
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: loc
 
 Anjing menggonggong di taman.
 anjing meN-gonggong di taman
 dog AT-bark in garden
-The dog barked in the garden.            
-           
-Id: 471           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+The dog barked in the garden.
+
+Id: 462
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: loc
+
+Anjingnya menggonggong di taman.
+anjing=nya meN-gonggong di taman
+dog=3sg AT-bark in garden
+The dog barked in the garden.
+
+Id: 471
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
 Anjing menggonggong sekarang.
 anjing meN-gonggong sekarang
 dog AT-bark now
-The dog barks now.  
-           
-Id: 481           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+The dog barks now.
+
+Id: 472
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
+
+Anjingnya menggonggong sekarang.
+anjing=nya meN-gonggong sekarang
+dog=3sg AT-bark now
+The dog barks now.
+
+Id: 481
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: cpd
 Comment: for compound
 
-Anjing taman menggonggong.      
-anjing taman meN-gonggong     
-dog garden AT-bark      
-The garden dog barked.           
-           
-Id: 491           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Anjing taman menggonggong.
+anjing taman meN-gonggong
+dog garden AT-bark
+The garden dog barked.
+
+Id: 482
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: cpd
+Comment: for compound
+
+Anjing tamannya menggonggong.
+anjing taman=nya meN-gonggong
+dog garden=3sg AT-bark
+The garden dog barked.
+
+Id: 491
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: ppmod
 Comment: for prepositional modifier
 
@@ -652,655 +856,711 @@ Anjing taman tembakau menggonggong.
 anjing taman tembakau meN-gonggong
 dog garden tobacco AT-bark
 The tobacco garden dog barked.
-           
-Id: 501           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+
+Id: 492
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: ppmod
+Comment: for prepositional modifier
+
+Anjing taman tembakaunya menggonggong.
+anjing taman tembakau=nya meN-gonggong
+dog garden tobacco=3sg AT-bark
+The tobacco garden dog barked.
+
+Id: 501
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adj
 
 Kucingnya tua.
 kucing=nya tua
 cat=3sg old
-The cat is old.           
-           
-Id: 511           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+The cat is old.
+
+Id: 511
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: prd
 Comment: for predicative
 
-Kucingnya di taman.       
-kucing=nya di taman       
-cat=3sg in garden       
+Kucingnya di taman.
+kucing=nya di taman
+cat=3sg in garden
 The cat is in the garden.
 
-Id: 512           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Id: 512
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: prd
 Comment: for predicative
 
-Kucingnya ada di taman.       
-kucing=nya ada di taman       
-cat=3sg exist in garden       
+Kucingnya ada di taman.
+kucing=nya ada di taman
+cat=3sg exist in garden
 The cat is in the garden.
-           
-Id: 521           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+
+Id: 521
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: det, adj
 
-Anjing yang sedang menggonggong mengejar Adi.
-anjing yang sedang meN-gonggong meN-kejar Adi     
-dog REL PROG AT-bark AT-chase Adi     
-The barking dog chased Zhangsan.
-           
-Id: 531           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: det, pass 
+Anjing yang sedang menggonggong mengejar Budi.
+anjing yang sedang meN-gonggong meN-kejar Budi
+dog REL PROG AT-bark AT-chase Budi
+The barking dog chased Budi.
+
+Id: 531
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: det, pass
 
 Anjing-anjing yang dikejar menggonggong.
-anjing-anjing yang di-kejar meN-gonggong       
-dog-dog REL PT-chase AT-bark       
-Chased dogs bark.           
-           
-Id: 541           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing-anjing yang di-kejar meN-gonggong
+dog-dog REL PT-chase AT-bark
+Chased dogs bark.
+
+Id: 541
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adj
 
 Perbuatan mengejar kucing adalah kuno.
-per-buat-an meN-kejar kucing adalah kuno        
-NOM-make-NOM AT-chase cat COP old        
-Chasing the cat is old.           
-           
-Id: 551           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+per-buat-an meN-kejar kucing adalah kuno
+NOM-make-NOM AT-chase cat COP old
+Chasing the cat is old.
+
+Id: 551
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Bahwa kucing mengejar Adi adalah kuno.
-bahwa kucing meN-kejar Adi adalah kuno     
-that cat AT-chase Adi COP old
-That the cat chases Adi is old.           
-           
-Id: 561           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Bahwa kucing mengejar Budi adalah kuno.
+bahwa kucing meN-kejar Budi adalah kuno
+that cat AT-chase Budi COP old
+That the cat chases Budi is old.
+
+Id: 561
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: indef
 
-Anjing-anjing mengejar apa pun yang menggonggong     
-anjing-anjing meN-kejar apa pun yang meN-gonggong     
-dog-dog AT-chase what even REL AT-bark     
+Anjing-anjing mengejar apa pun yang menggonggong
+anjing-anjing meN-kejar apa pun yang meN-gonggong
+dog-dog AT-chase what even REL AT-bark
 Dogs chase whatever barks.
-           
-Id: 571           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+
+Id: 571
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: quant
 
-Anjing menggonggong setiap hari      
-anjing meN-gonggong se-tiap hari      
-dog AT-bark one-each day      
-The dog barked every day.           
-           
-Id: 581           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Anjing menggonggong setiap hari
+anjing meN-gonggong se-tiap hari
+dog AT-bark one-each day
+The dog barked every day.
+
+Id: 572
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: quant
+
+Anjingnya menggonggong setiap hari
+anjing=nya meN-gonggong se-tiap hari
+dog=3sg AT-bark one-each day
+The dog barked every day.
+
+Id: 581
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: q
 
 Kapan anjingnya menggonggong?
-kapan anjing=nya meN-gonggong ?       
-when dog=3sg AT-bark ?       
-When did the dog bark?           
-           
-Id: 591           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+kapan anjing=nya meN-gonggong ?
+when dog=3sg AT-bark ?
+When did the dog bark?
+
+Id: 591
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: det
 
 Tiga dari anjing-anjing itu menggonggong.
-tiga dari anjing-anjing itu meN-gonggong     
-three from dog-dog that AT-bark     
-Three of the dogs bark.           
-           
-Id: 601           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+tiga dari anjing-anjing itu meN-gonggong
+three from dog-dog that AT-bark
+Three of the dogs bark.
+
+Id: 601
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: numcl
 
 Tiga ekor menggonggong.
-tiga ekor meN-gonggong        
-three CL AT-bark        
-Three bark.           
-           
-Id: 611           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+tiga ekor meN-gonggong
+three CL AT-bark
+Three bark.
+
+Id: 611
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: det
 
-Anjing Adi menggonggong.
-anjing Adi meN-gonggong        
-dog Adi AT-bark        
-Adi’s dog barks.           
-           
-Id: 621           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Anjing Budi menggonggong.
+anjing Budi meN-gonggong
+dog Budi AT-bark
+Budi’s dog barks.
+
+Id: 621
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: det
 
-Punya Adi menggonggong.
-punya Adi meN-gonggong         
-belonging Adi AT-bark         
-Adi's barks.           
-           
-Id: 631           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Punya Budi menggonggong.
+punya Budi meN-gonggong
+belonging Budi AT-bark
+Budi's barks.
+
+Id: 631
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: numcl
 
 Dua puluh tiga anjing menggonggong.
 dua puluh tiga anjing meN-gonggong
-two tens three dog AT-bark               
+two tens three dog AT-bark
 Twenty three dogs bark.
-           
-Id: 641           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+
+Id: 641
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: numcl
 
 Dua ratus dua puluh anjing menggonggong.
-dua ratus dua puluh anjing meN-gonggong       
-two hundred two tens dog AT-bark       
-Two hundred twenty dogs bark.           
-           
-Id: 651           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+dua ratus dua puluh anjing meN-gonggong
+two hundred two tens dog AT-bark
+Two hundred twenty dogs bark.
+
+Id: 651
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: pro-d
 
-Budi datang dengan mobil.
-Budi datang dengan mobil
-Budi arrive with car
-Budi arrived by car.
-           
-Id: 661           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi datang dengan mobil.
+Adi datang dengan mobil
+Adi arrive with car
+Adi arrived by car.
+
+Id: 652
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: pro-d
+
+Adi datang naik mobil.
+Adi datang naik mobil
+Adi arrive ascend car
+Adi arrived by car.
+
+Id: 661
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adv
 
-Budi tetap menggonggong.
-Budi tetap meN-gonggong        
-Budi still AT-bark        
-Budi kept barking.
-           
-Id: 671           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: pro-d
- 
-Adi meremas kucing masuk.
-Adi meN-remas kucing masuk       
-Adi AT-squeeze cat enter         
-Zhangsan squeezed the cat in.           
-           
-Id: 681           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi tetap menggonggong.
+Adi tetap meN-gonggong
+Adi still AT-bark
+Adi kept barking.
+
+Id: 671
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: pro-d
 
-Adi meremas masuk kucing.
-Adi meN-remas masuk kucing       
-Adi AT-squeeze enter cat        
-Zhangsan squeezed in the cat.           
-           
-Id: 691           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Budi meremas kucing masuk.
+Budi meN-remas kucing masuk
+Budi AT-squeeze cat enter
+Budi squeezed the cat in.
+
+Id: 681
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: pro-d
+
+Budi meremas masuk kucing.
+Budi meN-remas masuk kucing
+Budi AT-squeeze enter cat
+Budi squeezed in the cat.
+
+Id: 691
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: det
 
-Gambar Budi sampai.       
-gambar Budi sampai       
-picture Budi arrive       
-The picture of Budi arrived.           
-           
-Id: 701           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Gambar Adi sampai.
+gambar Adi sampai
+picture Adi arrive
+The picture of Adi arrived.
+
+Id: 692
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: det
+
+Gambar Adi sudah sampai.
+gambar Adi sudah sampai
+picture Adi SUDAH arrive
+The picture of Adi arrived.
+
+Id: 701
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: res
 Comment: for resultative
 
-Budi mengelap bersih meja.
-Budi meN-lap bersih meja   
-Budi AT-wiper clean table
-Budi wiped the table clean.           
-           
-Id: 711           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi mengelap bersih meja.
+Adi meN-lap bersih meja
+Adi AT-wiper clean table
+Adi wiped the table clean.
+
+Id: 711
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: pro-d
 
-Budi menaruh Adi di taman.
-Budi meN-taruh Adi di taman
-Budi AT-put Adi in garden     
-Budi put Adi in the garden.
-           
-Id: 721           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: tam 
+Adi menaruh Budi di taman.
+Adi meN-taruh Budi di taman
+Adi AT-put Budi in garden
+Adi put Budi in the garden.
 
-Anjing akan menggonggong jika Adi datang.
-anjing akan meN-gonggong jika Adi datang   
-dog will AT-bark if Adi arrive   
-The dog will bark if Adi arrives.           
-           
-Id: 731           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Id: 721
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
+
+Anjing akan menggonggong jika Budi datang.
+anjing akan meN-gonggong jika Budi datang
+dog will AT-bark if Budi arrive
+The dog will bark if Budi arrives.
+
+Id: 731
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: crd
 
-Budi dan Adi datang.
-Budi dan Adi datang      
-Budi and Adi arrive      
-Budi and Adi arrived.           
-           
-Id: 741           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi dan Budi datang.
+Adi dan Budi datang
+Adi and Budi arrive
+Adi and Budi arrived.
+
+Id: 741
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: crd
 
-Budi, Adi, dan anjing datang.
-Budi, Adi, dan anjing datang
-Budi, Adi, and dog arrive
-Budi, Adi and the dog arrived.          
-           
-Id: 751           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi, Budi, dan anjing datang.
+Adi, Budi, dan anjing datang
+Adi, Budi, and dog arrive
+Adi, Budi and the dog arrived.
+
+Id: 751
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: crd
 
 Anjing datang dan menggonggong.
-anjing datang dan meN-gonggong     
-dog arrive and AT-bark     
-The dog arrived and barked.        
-           
-Id: 761           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+anjing datang dan meN-gonggong
+dog arrive and AT-bark
+The dog arrived and barked.
+
+Id: 761
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: crd
 
-Anjing datang dan Adi menggonggong.
-anjing datang dan Adi meN-gonggong
-dog arrive and Adi AT-bark    
-The dog arrived and Adi barked.           
-           
-Id: 771           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Anjing datang dan Budi menggonggong.
+anjing datang dan Budi meN-gonggong
+dog arrive and Budi AT-bark
+The dog arrived and Budi barked.
+
+Id: 771
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: q
 
-Anjingnya menggonggong, kan? 
-anjing=nya meN-gonggong, kan?    
-dog=3sg AT-bark, QT?     
-The dog barked, didn't it?          
-           
-Id: 781           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Anjingnya menggonggong, kan?
+anjing=nya meN-gonggong, kan?
+dog=3sg AT-bark, QT?
+The dog barked, didn't it?
+
+Id: 781
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
 Jelas bahwa anjingnya menggonggong.
-jelas bahwa anjing=nya meN-gonggong       
-obvious that dog=3sg AT-bark       
-It is obvious that the dog barked.           
-           
-Id: 791           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+jelas bahwa anjing=nya meN-gonggong
+obvious that dog=3sg AT-bark
+It is obvious that the dog barked.
+
+Id: 791
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Budi berjanji kepada Adi untuk menggonggong.
-Budi ber-janji kepada Adi untuk meN-gonggong     
-Budi BER-promise to Adi for AT-bark     
-Budi promised Adi to bark.           
-           
-Id: 801           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi berjanji kepada Budi untuk menggonggong.
+Adi ber-janji kepada Budi untuk meN-gonggong
+Adi BER-promise to Budi for AT-bark
+Adi promised Budi to bark.
+
+Id: 801
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Budi kelihatannya menggonggong.
-Budi ke-lihat-an=nya meN-gonggong       
-Budi KE-see-AN=3sg AT-bark       
-Zhangsan seems to bark.           
-           
-Id: 811           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi kelihatannya menggonggong.
+Adi ke-lihat-an=nya meN-gonggong
+Adi KE-see-AN=3sg AT-bark
+Adi seems to bark.
+
+Id: 811
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Budi percaya Adi sedang menggonggong.
-Budi percaya Adi sedang meN-gonggong       
-Budi believe Adi PROG AT-bark       
-Budi believes Adi to be barking.           
-           
-Id: 821           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi percaya Budi sedang menggonggong.
+Adi percaya Budi sedang meN-gonggong
+Adi believe Budi PROG AT-bark
+Adi believes Budi to be barking.
+
+Id: 821
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Budi terganggu karena Adi menggonggong.
-Budi ter-ganggu karena Adi meN-gonggong      
-Budi TER-bother because Adi AT-bark      
-It bothered Budi that Adi barked.           
-           
-Id: 831           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi terganggu karena Budi menggonggong.
+Adi ter-ganggu karena Budi meN-gonggong
+Adi TER-bother because Budi AT-bark
+It bothered Adi that Budi barked.
+
+Id: 831
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Budi membutuhkan waktu sepuluh menit untuk datang.
-Budi meN-butuh-kan waktu se-puluh menit untuk datang       
-Budi AT-need-APP time one-tens minute for arrive       
-It took Budi ten minutes to arrive.           
-           
-Id: 841           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi membutuhkan waktu sepuluh menit untuk datang.
+Adi meN-butuh-kan waktu se-puluh menit untuk datang
+Adi AT-need-APP time one-tens minute for arrive
+It took Adi ten minutes to arrive.
+
+Id: 841
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Budi membiarkan Adi menggonggong.
-Budi meN-biar-kan Adi meN-gonggong
-Budi AT-let-APP Adi AT-bark
-Budi left it to Adi to bark.     
-           
-Id: 851           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi membiarkan Budi menggonggong.
+Adi meN-biar-kan Budi meN-gonggong
+Adi AT-let-APP Budi AT-bark
+Adi left it to Budi to bark.
+
+Id: 851
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Budi merasa Adi kelihatan tua.
-Budi meN-rasa Adi ke-lihat-an tua
-Budi AT-feel Adi KE-see-AN old  
-Budi strikes Adi as old.
-           
-Id: 861           
-Source: MRS           
-Vetted: t           
-Judgment: g           
-Phenom: emb-d 
+Adi merasa Budi kelihatan tua.
+Adi meN-rasa Budi ke-lihat-an tua
+Adi AT-feel Budi KE-see-AN old
+Adi strikes Budi as old.
 
-Adi menganggap Budi tua.
-Adi meN-anggap Budi tua
-Adi AT-consider Budi old
-Adi considers Budi old.
-           
-Id: 871           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Id: 861
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Budi menyukai ide bahwa Adi bisa menggonggong.
-Budi meN-suka-i ide bahwa Adi bisa meN-gonggong    
-Budi AT-like-APP idea that Adi can AT-bark     
-Budi liked the idea that Adi could bark.
-           
-Id: 881           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Budi menganggap Adi tua.
+Budi meN-anggap Adi tua
+Budi AT-consider Adi old
+Budi considers Adi old.
+
+Id: 871
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: emb-d
+
+Adi menyukai ide bahwa Budi bisa menggonggong.
+Adi meN-suka-i ide bahwa Budi bisa meN-gonggong
+Adi AT-like-APP idea that Budi can AT-bark
+Adi liked the idea that Budi could bark.
+
+Id: 881
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: prep
 
-Budi menggonggong dari jam sepuluh sampai jam tiga.
-Budi meN-gonggong dari jam se-puluh sampai jam tiga    
-Budi AT-bark from hour one-tens until hour three    
-Budi barked from 10 to 3.           
-           
-Id: 891           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi menggonggong dari jam sepuluh sampai jam tiga.
+Adi meN-gonggong dari jam se-puluh sampai jam tiga
+Adi AT-bark from hour one-tens until hour three
+Adi barked from 10 to 3.
+
+Id: 891
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adj
 
-Budi sangat tua.
-Budi sangat tua       
-Budi very old       
-Budi was very old.           
-           
-Id: 901           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi sangat tua.
+Adi sangat tua
+Adi very old
+Adi was very old.
+
+Id: 901
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adv
 
 Hampir setiap anjing menggonggong.
 hampir se-tiap anjing meN-gonggong
 Almost one-every dog AT-bark
-Nearly every dog barked.           
-           
-Id: 911           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Nearly every dog barked.
+
+Id: 911
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adv
 
-Budi menggonggong sangat pelan.
-Budi meN-gonggong sangat pelan        
-Budi AT-bark very slow        
-Budi barked very softly.
-           
-Id: 921           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi menggonggong sangat pelan.
+Adi meN-gonggong sangat pelan
+Adi AT-bark very slow
+Adi barked very softly.
+
+Id: 921
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Perbuatan Adi mengejar kucing-kucing mengganggu Budi.   
-per-buat-an Adi meN-kejar kucing-kucing meN-ganggu Budi  
-NOM-make-NOM Adi AT-chase cat-cat AT-bother Budi    
-Adi's chasing of cats botherd Budi.          
-           
-Id: 931           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Perbuatan Budi mengejar kucing-kucing mengganggu Adi.
+per-buat-an Budi meN-kejar kucing-kucing meN-ganggu Adi
+NOM-make-NOM Budi AT-chase cat-cat AT-bother Adi
+Budi's chasing of cats botherd Adi.
+
+Id: 931
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: emb-d
 
-Adi terganggu karena Budi mengejar kucing-kucing.      
-Adi ter-ganggu karena Budi meN-kejar kucing-kucing     
-Adi TER-bother because Budi AT-chase cat-cat      
-It bothered Adi that Budi chased cats.           
-           
-Id: 941           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Budi terganggu karena Adi mengejar kucing-kucing.
+Budi ter-ganggu karena Adi meN-kejar kucing-kucing
+Budi TER-bother because Adi AT-chase cat-cat
+It bothered Budi that Adi chased cats.
+
+Id: 941
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adv
 
 Tanggal tiga Juni datang.
 tanggal tiga Juni datang
-date three June arrive                 
-June 3rd arrived.           
-           
-Id: 951           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+date three June arrive
+June 3rd arrived.
+
+Id: 951
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adv
 
-Budi datang pada jam tiga lewat dua puluh.
-Budi datang pada jam tiga lewat dua puluh
-Budi arrive at hour three pass two tens
-Budi arrived at three twenty.           
-           
-Id: 961           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi datang pada jam tiga lewat dua puluh.
+Adi datang pada jam tiga lewat dua puluh
+Adi arrive at hour three pass two tens
+Adi arrived at three twenty.
+
+Id: 961
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adv
 
-Adi datang pada hari Selasa pagi.
-Adi datang pada hari Selasa pagi      
-Adi arrive at day Tuesday morning
-Adi arrived on Tuesday morning.           
-           
-Id: 971           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Budi datang pada hari Selasa pagi.
+Budi datang pada hari Selasa pagi
+Budi arrive at day Tuesday morning
+Budi arrived on Tuesday morning.
+
+Id: 971
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: det
 
 Kucing-kucing menemukan cara menggonggong.
-kucing-kucing meN-temu-kan cara meN-gonggong     
-cat-cat AT-find-APP way AT-bark     
-The cats found a way to bark.    
-           
-Id: 981           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+kucing-kucing meN-temu-kan cara meN-gonggong
+cat-cat AT-find-APP way AT-bark
+The cats found a way to bark.
+
+Id: 981
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adv
 
-Anjing yang lebih bahagia mengejar Adi.
-anjing yang lebih bahagia meN-kejar Adi   
-dog REL more happy AT-chase Adi   
-The happier dog chased Adi.
-           
-Id: 991           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Anjing yang lebih bahagia mengejar Budi.
+anjing yang lebih bahagia meN-kejar Budi
+dog REL more happy AT-chase Budi
+The happier dog chased Budi.
+
+Id: 991
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
-Ada kucing-kucing di taman.       
-ada kucing-kucing di taman       
-exist cat-cat in garden       
+Ada kucing-kucing di taman.
+ada kucing-kucing di taman
+exist cat-cat in garden
 There were cats in the garden.
-           
-Id: 1001           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+
+Id: 1001
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: det
 
-Anjing itu mengejar Adi.
-anjing itu meN-kejar Adi      
-dog that AT-chase Adi      
-That dog chased Adi.           
-           
-Id: 1011           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Anjing itu mengejar Budi.
+anjing itu meN-kejar Budi
+dog that AT-chase Budi
+That dog chased Budi.
+
+Id: 1011
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: det
 
-Seseorang mengejar Budi.
-se-seorang meN-kejar Budi       
-one-someone AT-chase Budi       
-Somebody chased Budi.
-           
-Id: 1021           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Seseorang mengejar Adi.
+se-seorang meN-kejar Adi
+one-someone AT-chase Adi
+Somebody chased Adi.
+
+Id: 1021
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: q
 
-Seberapa bahagia Budi?
-se-berapa bahagia Budi       
-one-how.much happy Budi       
-How happy was Budi?           
-           
-Id: 1031           
-Source: MRS           
-Vetted: t           
+Seberapa bahagia Adi?
+se-berapa bahagia Adi
+one-how.much happy Adi
+How happy was Adi?
+
+Id: 1031
+Source: MRS
+Vetted: t
 Judgment: g
 Phenom: tam, agency
 
-Nomor lima mengganggu Adi.
-nomor lima meN-ganggu Adi       
-number five AT-bother Adi        
-The number five bothers Adi.
-           
-Id: 1041           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Nomor lima mengganggu Budi.
+nomor lima meN-ganggu Budi
+number five AT-bother Budi
+The number five bothers Budi.
+
+Id: 1041
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
-Budi bisa.
-Budi bisa          
-Budi can           
-Budi could.
-           
-Id: 1051           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi bisa.
+Adi bisa
+Adi can
+Adi could.
+
+Id: 1042
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
-Adi mencoba.
-Adi meN-coba        
-Adi AT-try         
-Adi tried.           
-           
-Id: 1061           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+Adi dahulu bisa.
+Adi dahulu bisa
+Adi formerly can
+Adi could.
+
+Id: 1051
+Source: MRS
+Vetted: t
+Judgment: g
+Phenom: tam
+
+Budi mencoba.
+Budi meN-coba
+Budi AT-try
+Budi tried.
+
+Id: 1061
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: tam
 
 Jangan menggonggong!
-jangan meN-gonggong          
-do.not AT-bark          
-Don’t bark!           
-           
-Id: 1071           
-Source: MRS           
-Vetted: t           
-Judgment: g           
+jangan meN-gonggong
+do.not AT-bark
+Don’t bark!
+
+Id: 1071
+Source: MRS
+Vetted: t
+Judgment: g
 Phenom: adv
 
 Anjing datang menggonggong.
-anjing datang meN-gonggong      
-dog arrive AT-bark      
+anjing datang meN-gonggong
+dog arrive AT-bark
 The dog arrived barking.
