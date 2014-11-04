@@ -27,6 +27,7 @@ pron_rel := predsort.
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 head :+ [ AUX bool,
+	  HON luk,
     FORM form ].
 
 topic-comment :+ [ SYNSEM.L-PERIPH +, NON-HEAD-DTR.SYNSEM.L-PERIPH + ].
@@ -46,15 +47,24 @@ basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
 ;;; Pernum
 
 pernum := *top*.
-1pl := pernum.
+pl := pernum.
 1st := pernum.
 2nd := pernum.
 3rd := pernum.
-11pl := 1st & 1pl.
-11pl_incl := 11pl.
-11pl_excl := 11pl.
-21pl := 2nd & 1pl.
-31pl := 3rd & 1pl.
+1pl := 1st & pl.
+1pl_incl := 1pl.
+1pl_excl := 1pl.
+2pl := 2nd & pl.
+3pl := 3rd & pl.
+sg := pernum.
+indet := pernum.
+1sg := 1st & sg.
+2sg := 2nd & sg.
+3sg := 3rd & sg.
+1indet := 1st & indet.
+2indet := 2nd & indet.
+3indet := 3rd & indet.
+
 
 ;;; Form
 
@@ -97,7 +107,43 @@ head-spec-phrase := basic-head-spec-phrase & head-initial &
 
 common-noun-lex := noun-lex.
 
-pronoun-noun-lex := noun-lex.
+hon-lex := lex-item &
+  [ SYNSEM.LOCAL.CAT.HEAD.HON + ].
+
+basic-pronoun-lex :=  basic-one-arg & 
+  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+               VAL [ COMPS < >,
+                 SUBJ < >,
+                 SPR < > ] ],
+             CONT [ RELS.LIST.FIRST #rel ] ],
+         LKEYS.KEYREL noun-relation & #rel & [ PRED "pronoun_n_rel" ] ] ].
+
+pronoun-lex := basic-pronoun-lex & no-hcons-lex-item & 
+               norm-hook-lex-item & basic-icons-lex-item &
+  [ SYNSEM.LOCAL.CONT.RELS <! relation !> ].
+
+1sg-pronoun-lex := pronoun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
+
+2sg-pronoun-lex := pronoun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
+
+2sg-pronoun-hon-lex := 2sg-pronoun-lex & hon-lex.
+
+3sg-pronoun-lex := pronoun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ].
+
+1pl-pronoun-incl-lex := pronoun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl & 1pl_incl ].
+ 
+1pl-pronoun-excl-lex := pronoun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl & 1pl_excl ].
+
+2pl-pronoun-lex := pronoun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
+
+3pl-pronoun-lex := pronoun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
 
 demonstrative-noun-lex := no-spr-noun-lex.
 
@@ -168,19 +214,24 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
 
 subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
 
-subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item & no-icons-lex-item.
+subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item & no-icons-lex-item & 
+  [ ARG-ST < [ ], [ LOCAL.CAT.HEAD.AUX - ] > ].
 
-aspect_perf-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
+aspect_perf-aux-lex := subj-raise-aux-no-pred & 
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
+		       VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf,
+					       CAT.HEAD.FORM form ] ] ].
 
 aspect_prog-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prog,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
+		       VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prog,
+					       CAT.HEAD.FORM form ] ] ].
 
 aspect_fut-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT fut,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
+		       VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.ASPECT fut,
+					       CAT.HEAD.FORM form ] ] ].
+
 
 neg-aux-lex := subj-raise-aux-with-pred &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ].
@@ -501,4 +552,34 @@ can-aux := basic-verb-lex & trans-first-arg-raising-lex-item-1 & non-mod-lex-ite
                            HEAD verb &
                                [ AUX -] ] ] > ] .
 
+;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
+;; full-forest treebanking.  The strategy is to pump each normal edge in the
+;; chart to a "bridge head" edge via the unary rule, and then combine two
+;; adjacent such bridge-head edges using the binary rule.  This strategy,
+;; proposed by Woodley Packard, results in a mere doubling of the number of
+;; edges in each cell of the chart, rather than the square of the number of
+;; normal edges that resulted from trying just a binary bridging rule that
+;; accepted either bridge or normal edges.
+;;
+bridge-head := head.
 
+bridge-binary-phrase := basic-binary-phrase &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD bridge-head & [ MOD < > ],
+			   VAL [ SUBJ < >,
+				 SPR < >,
+				 COMPS < > ] ] ],
+	     NON-LOCAL non-local-none ],
+    C-CONT [ RELS <! !>,
+	     HCONS <! !> ],
+    ARGS < [ SYNSEM.LOCAL.CAT.HEAD bridge-head],
+	   [ SYNSEM.LOCAL.CAT.HEAD bridge-head ] > ].
+
+bridge-unary-phrase := basic-unary-phrase &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD bridge-head & [ MOD < > ],
+			   VAL [ SUBJ < >,
+				 SPR < >,
+				 COMPS < > ] ] ],
+	     NON-LOCAL non-local-none ],
+    C-CONT [ RELS <! !>,
+	     HCONS <! !> ],
+    ARGS < [ SYNSEM.LOCAL.CAT.HEAD +nvjrpcdo ] > ].
