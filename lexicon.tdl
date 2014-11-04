@@ -29,41 +29,54 @@ mobil := common-noun-lex &
   [ STEM < "mobil" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mobil_n_rel" ].
 
-saya := pronoun-noun-lex &
-  [ STEM < "saya" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_saya_n_rel" ].
+hujan := common-noun-lex &
+  [ STEM < "hujan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hujan_n_rel" ].
 
-aku := pronoun-noun-lex &
-  [ STEM < "aku" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_aku_n_rel" ].
+rokok := common-noun-lex &
+  [ STEM < "rokok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rokok_n_rel" ].
 
-kamu := pronoun-noun-lex &
-  [ STEM < "kamu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kamu_n_rel" ].
+;;; Personal names
 
-Anda := pronoun-noun-lex &
-  [ STEM < "Anda" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_Anda_n_rel" ].
+adi := common-noun-lex &
+  [ STEM < "Adi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_adi_n_rel" ].
 
-dia := pronoun-noun-lex &
-  [ STEM < "dia" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_dia_n_rel" ].
+budi := common-noun-lex &
+  [ STEM < "Budi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_budi_n_rel" ].
 
-kami := pronoun-noun-lex &
-  [ STEM < "kami" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kami_n_rel" ].
+;;; Pronouns
 
-kita := pronoun-noun-lex &
-  [ STEM < "kita" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kita_n_rel" ].
+saya := 1sg-pronoun-lex &
+  [ STEM < "saya" > ].
 
-kalian := pronoun-noun-lex &
-  [ STEM < "kalian" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kalian_n_rel" ].
+aku := 1sg-pronoun-lex &
+  [ STEM < "aku" > ].
 
-mereka := pronoun-noun-lex &
-  [ STEM < "mereka" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_mereka_n_rel" ].
+kamu := 2sg-pronoun-lex &
+  [ STEM < "kamu" > ].
+
+Anda := 2sg-pronoun-hon-lex &
+  [ STEM < "Anda" > ].
+
+dia := 3sg-pronoun-lex &
+  [ STEM < "dia" > ].
+
+kami := 1pl-pronoun-excl-lex &
+  [ STEM < "kami" > ].
+
+kita := 1pl-pronoun-incl-lex &
+  [ STEM < "kita" > ].
+
+kalian := 2pl-pronoun-lex &
+  [ STEM < "kalian" > ].
+
+mereka := 3pl-pronoun-lex &
+  [ STEM < "mereka" > ].
+
+;;; Demonstratives
 
 ini_1 := demonstrative-noun-lex &
   [ STEM < "ini" >,
@@ -79,9 +92,25 @@ jatuh := intr-verb-lex &
   [ STEM < "jatuh" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jatuh_v_rel" ].
 
+turun := intr-verb-lex &
+  [ STEM < "turun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_turun_v_rel" ].
+
 tidur := intr-verb-lex &
   [ STEM < "tidur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tidur_v_rel" ].
+
+datang := intr-verb-lex &
+  [ STEM < "datang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_datang_v_rel" ].
+
+sampai := intr-verb-lex &
+  [ STEM < "sampai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sampai_v_rel" ].
+
+ada := intr-verb-lex &
+  [ STEM < "ada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel" ].
 
 menggonggong := intr-verb-lex &
   [ STEM < "menggonggong" >,
@@ -90,6 +119,10 @@ menggonggong := intr-verb-lex &
 bunuh := tr-verb-lex &
   [ STEM < "bunuh" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bunuh_v_rel" ].
+
+mengejar := tr-verb-lex &
+  [ STEM < "mengejar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mengejar_v_rel" ].
 
 ;tanya := tr-verb-lex &
 ;  [ STEM < "tanya" >,
@@ -106,6 +139,10 @@ bukan := tr-verb-lex &
 makan := opt-tr-verb-lex &
   [ STEM < "makan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_makan_v_rel" ].
+
+mencoba := opt-tr-verb-lex &
+  [ STEM < "mencoba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mencoba_v_rel" ].
 
 ;tahu := opt-tr-verb-lex &
 ;  [ STEM < "tahu" >,
@@ -206,6 +243,18 @@ lapar := adjective-lex &
 baru := adjective-lex &
   [ STEM < "baru" >,
     SYNSEM.LKEYS.KEYREL.PRED "_baru_a_rel" ].
+
+tua := adjective-lex &
+  [ STEM < "tua" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tua_a_rel" ].
+
+kuno := adjective-lex &
+  [ STEM < "kuno" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kuno_a_rel" ].
+
+jelas := adjective-lex &
+  [ STEM < "jelas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jelas_a_rel" ].
 
 ;;; Adverbs of frequency
 
