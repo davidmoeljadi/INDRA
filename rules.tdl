@@ -40,3 +40,7 @@ s1-bottom-coord := s1-bottom-coord-rule.
 ;head-adj-int := head-adj-int-phrase.
 
 ;adj-head-int := adj-head-int-phrase.
+
+;; Also need to add to rules.tdl:
+xp-xp-bridge-c := bridge-binary-phrase.
+xp-bridge-c := bridge-unary-phrase.

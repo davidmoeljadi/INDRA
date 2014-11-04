@@ -228,3 +228,12 @@ nump-label := label &
 				  VAL [ COMPS < >,
 					SPR < > ]],
 	       LABEL-NAME "NUMP" ].
+
+;; Also add node labels for parse tree display
+bridge-binary := label &
+  [ SYNSEM.LOCAL.CAT.HEAD bridge-head,
+    LABEL-NAME "BP" ].
+
+bridge-unary := label &
+  [ SYNSEM [ LOCAL.CAT.HEAD bridge-head],
+    LABEL-NAME "BX" ].

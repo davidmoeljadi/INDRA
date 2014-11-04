@@ -18,3 +18,7 @@ root := phrase &
 ; utterances.  This can be useful for grammar debugging purposes.
 
 lex-root := word-or-lexrule.
+
+;; Also need to add root constraint for bridged phrases
+root-bridge := phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD bridge-head].
