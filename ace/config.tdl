@@ -50,4 +50,6 @@ mrs-icons-list := ICONS LIST.
 icons-left := CLAUSE.
 icons-right := TARGET.
 
-
+;; Also need to add root-bridge to parsing-roots in ace/config.tdl ()
+; e.g. 
+parsing-roots             := root root-bridge.
