@@ -1,0 +1,895 @@
+1@11@token [ +FROM "0" +TO "5" +FORM "Hujan" ]@0@0@0@1@@@@
+2@11@token [ +FROM "6" +TO "11" +FORM "turun" ]@0@0@1@2@@@@
+1@21@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@21@token [ +FROM "4" +TO "16" +FORM "menggonggong" ]@0@0@1@2@@@@
+1@31@token [ +FROM "0" +TO "7" +FORM "Jendela" ]@0@0@0@1@@@@
+2@31@token [ +FROM "8" +TO "15" +FORM "terbuka" ]@0@0@1@2@@@@
+1@41@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@41@token [ +FROM "4" +TO "12" +FORM "mengejar" ]@0@0@1@2@@@@
+3@41@token [ +FROM "13" +TO "17" +FORM "Budi" ]@0@0@2@3@@@@
+1@51@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@51@token [ +FROM "4" +TO "11" +FORM "memberi" ]@0@0@1@2@@@@
+3@51@token [ +FROM "12" +TO "16" +FORM "Budi" ]@0@0@2@3@@@@
+4@51@token [ +FROM "17" +TO "22" +FORM "rokok" ]@0@0@3@4@@@@
+1@61@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@61@token [ +FROM "4" +TO "11" +FORM "memberi" ]@0@0@1@2@@@@
+3@61@token [ +FROM "12" +TO "17" +FORM "rokok" ]@0@0@2@3@@@@
+4@61@token [ +FROM "18" +TO "24" +FORM "kepada" ]@0@0@3@4@@@@
+5@61@token [ +FROM "25" +TO "29" +FORM "Budi" ]@0@0@4@5@@@@
+1@71@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@71@token [ +FROM "4" +TO "12" +FORM "bertaruh" ]@0@0@1@2@@@@
+3@71@token [ +FROM "13" +TO "18" +FORM "rokok" ]@0@0@2@3@@@@
+4@71@token [ +FROM "19" +TO "25" +FORM "dengan" ]@0@0@3@4@@@@
+5@71@token [ +FROM "26" +TO "30" +FORM "Budi" ]@0@0@4@5@@@@
+6@71@token [ +FROM "31" +TO "36" +FORM "bahwa" ]@0@0@5@6@@@@
+7@71@token [ +FROM "37" +TO "42" +FORM "hujan" ]@0@0@6@7@@@@
+8@71@token [ +FROM "43" +TO "48" +FORM "sudah" ]@0@0@7@8@@@@
+9@71@token [ +FROM "49" +TO "54" +FORM "turun" ]@0@0@8@9@@@@
+1@72@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@72@token [ +FROM "4" +TO "12" +FORM "bertaruh" ]@0@0@1@2@@@@
+3@72@token [ +FROM "13" +TO "18" +FORM "rokok" ]@0@0@2@3@@@@
+4@72@token [ +FROM "19" +TO "25" +FORM "dengan" ]@0@0@3@4@@@@
+5@72@token [ +FROM "26" +TO "30" +FORM "Budi" ]@0@0@4@5@@@@
+6@72@token [ +FROM "31" +TO "36" +FORM "bahwa" ]@0@0@5@6@@@@
+7@72@token [ +FROM "37" +TO "42" +FORM "hujan" ]@0@0@6@7@@@@
+8@72@token [ +FROM "43" +TO "48" +FORM "turun" ]@0@0@7@8@@@@
+1@81@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@81@token [ +FROM "4" +TO "8" +FORM "tahu" ]@0@0@1@2@@@@
+3@81@token [ +FROM "9" +TO "14" +FORM "bahwa" ]@0@0@2@3@@@@
+4@81@token [ +FROM "15" +TO "20" +FORM "hujan" ]@0@0@3@4@@@@
+5@81@token [ +FROM "21" +TO "26" +FORM "sudah" ]@0@0@4@5@@@@
+6@81@token [ +FROM "27" +TO "32" +FORM "turun" ]@0@0@5@6@@@@
+1@82@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@82@token [ +FROM "4" +TO "8" +FORM "tahu" ]@0@0@1@2@@@@
+3@82@token [ +FROM "9" +TO "14" +FORM "bahwa" ]@0@0@2@3@@@@
+4@82@token [ +FROM "15" +TO "20" +FORM "hujan" ]@0@0@3@4@@@@
+5@82@token [ +FROM "21" +TO "26" +FORM "turun" ]@0@0@4@5@@@@
+1@91@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@91@token [ +FROM "4" +TO "11" +FORM "berniat" ]@0@0@1@2@@@@
+3@91@token [ +FROM "12" +TO "24" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@101@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@101@token [ +FROM "4" +TO "11" +FORM "berniat" ]@0@0@1@2@@@@
+3@101@token [ +FROM "12" +TO "19" +FORM "membuat" ]@0@0@2@3@@@@
+4@101@token [ +FROM "20" +TO "24" +FORM "Budi" ]@0@0@3@4@@@@
+5@101@token [ +FROM "25" +TO "37" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@111@token [ +FROM "0" +TO "6" +FORM "Setiap" ]@0@0@0@1@@@@
+2@111@token [ +FROM "7" +TO "13" +FORM "kucing" ]@0@0@1@2@@@@
+3@111@token [ +FROM "14" +TO "26" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@121@token [ +FROM "0" +TO "6" +FORM "Setiap" ]@0@0@0@1@@@@
+2@121@token [ +FROM "7" +TO "13" +FORM "kucing" ]@0@0@1@2@@@@
+3@121@token [ +FROM "14" +TO "22" +FORM "mengejar" ]@0@0@2@3@@@@
+4@121@token [ +FROM "23" +TO "27" +FORM "satu" ]@0@0@3@4@@@@
+5@121@token [ +FROM "28" +TO "34" +FORM "anjing" ]@0@0@4@5@@@@
+1@131@token [ +FROM "0" +TO "8" +FORM "Kucingku" ]@0@0@0@1@@@@
+2@131@token [ +FROM "9" +TO "21" +FORM "menggonggong" ]@0@0@1@2@@@@
+1@132@token [ +FROM "0" +TO "6" +FORM "Kucing" ]@0@0@0@1@@@@
+2@132@token [ +FROM "7" +TO "11" +FORM "saya" ]@0@0@1@2@@@@
+3@132@token [ +FROM "12" +TO "24" +FORM "menggonggong" ]@0@0@2@3@@@@
+42@141@root@4@1@0@2@@(41)@@
+41@141@subj-head@3@1@0@2@@(31 5)@@
+31@141@bare-np@3@1@0@1@@(3)@@
+3@141@itu_1@1@1@0@1@@(1)@@
+5@141@menggonggong@1@1@1@2@@(2)@@
+1@141@token [ +FROM "0" +TO "3" +FORM "Itu" ]@0@0@0@1@@@@
+2@141@token [ +FROM "4" +TO "16" +FORM "menggonggong" ]@0@0@1@2@@@@
+33@142@root@4@1@0@2@@(32)@@
+32@142@subj-head@3@1@0@2@@(3 4)@@
+3@142@dia@1@1@0@1@@(1)@@
+4@142@menggonggong@1@1@1@2@@(2)@@
+1@142@token [ +FROM "0" +TO "3" +FORM "Dia" ]@0@0@0@1@@@@
+2@142@token [ +FROM "4" +TO "16" +FORM "menggonggong" ]@0@0@1@2@@@@
+1@151@token [ +FROM "0" +TO "6" +FORM "Kucing" ]@0@0@0@1@@@@
+2@151@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@151@token [ +FROM "11" +TO "22" +FORM "mengejarnya" ]@0@0@2@3@@@@
+1@161@token [ +FROM "0" +TO "6" +FORM "Kucing" ]@0@0@0@1@@@@
+2@161@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@161@token [ +FROM "11" +TO "19" +FORM "mengejar" ]@0@0@2@3@@@@
+4@161@token [ +FROM "20" +TO "27" +FORM "dirinya" ]@0@0@3@4@@@@
+5@161@token [ +FROM "28" +TO "35" +FORM "sendiri" ]@0@0@4@5@@@@
+1@171@token [ +FROM "0" +TO "6" +FORM "Kucing" ]@0@0@0@1@@@@
+2@171@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@171@token [ +FROM "11" +TO "19" +FORM "mengejar" ]@0@0@2@3@@@@
+4@171@token [ +FROM "20" +TO "24" +FORM "satu" ]@0@0@3@4@@@@
+5@171@token [ +FROM "25" +TO "29" +FORM "ekor" ]@0@0@4@5@@@@
+1@172@token [ +FROM "0" +TO "9" +FORM "Kucingnya" ]@0@0@0@1@@@@
+2@172@token [ +FROM "10" +TO "18" +FORM "mengejar" ]@0@0@1@2@@@@
+3@172@token [ +FROM "19" +TO "23" +FORM "satu" ]@0@0@2@3@@@@
+4@172@token [ +FROM "24" +TO "28" +FORM "ekor" ]@0@0@3@4@@@@
+1@181@token [ +FROM "0" +TO "7" +FORM "Punyaku" ]@0@0@0@1@@@@
+2@181@token [ +FROM "8" +TO "20" +FORM "menggonggong" ]@0@0@1@2@@@@
+1@182@token [ +FROM "0" +TO "7" +FORM "Milikku" ]@0@0@0@1@@@@
+2@182@token [ +FROM "8" +TO "20" +FORM "menggonggong" ]@0@0@1@2@@@@
+1@183@token [ +FROM "0" +TO "5" +FORM "Punya" ]@0@0@0@1@@@@
+2@183@token [ +FROM "6" +TO "10" +FORM "saya" ]@0@0@1@2@@@@
+3@183@token [ +FROM "11" +TO "23" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@184@token [ +FROM "0" +TO "5" +FORM "Milik" ]@0@0@0@1@@@@
+2@184@token [ +FROM "6" +TO "10" +FORM "saya" ]@0@0@1@2@@@@
+3@184@token [ +FROM "11" +TO "23" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@191@token [ +FROM "0" +TO "3" +FORM "Itu" ]@0@0@0@1@@@@
+2@191@token [ +FROM "4" +TO "11" +FORM "terbuka" ]@0@0@1@2@@@@
+1@201@token [ +FROM "0" +TO "13" +FORM "Kucing-kucing" ]@0@0@0@1@@@@
+2@201@token [ +FROM "14" +TO "26" +FORM "menggonggong" ]@0@0@1@2@@@@
+1@211@token [ +FROM "0" +TO "5" +FORM "Rokok" ]@0@0@0@1@@@@
+2@211@token [ +FROM "6" +TO "11" +FORM "sudah" ]@0@0@1@2@@@@
+3@211@token [ +FROM "12" +TO "18" +FORM "sampai" ]@0@0@2@3@@@@
+1@221@token [ +FROM "0" +TO "8" +FORM "Beberapa" ]@0@0@0@1@@@@
+2@221@token [ +FROM "9" +TO "21" +FORM "menggonggong" ]@0@0@1@2@@@@
+1@222@token [ +FROM "0" +TO "8" +FORM "Beberapa" ]@0@0@0@1@@@@
+2@222@token [ +FROM "9" +TO "13" +FORM "ekor" ]@0@0@1@2@@@@
+3@222@token [ +FROM "14" +TO "26" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@231@token [ +FROM "0" +TO "8" +FORM "Beberapa" ]@0@0@0@1@@@@
+2@231@token [ +FROM "9" +TO "15" +FORM "kucing" ]@0@0@1@2@@@@
+3@231@token [ +FROM "16" +TO "28" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@232@token [ +FROM "0" +TO "8" +FORM "Beberapa" ]@0@0@0@1@@@@
+2@232@token [ +FROM "9" +TO "13" +FORM "ekor" ]@0@0@1@2@@@@
+3@232@token [ +FROM "14" +TO "20" +FORM "kucing" ]@0@0@2@3@@@@
+4@232@token [ +FROM "21" +TO "33" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@241@token [ +FROM "0" +TO "5" +FORM "Tidak" ]@0@0@0@1@@@@
+2@241@token [ +FROM "6" +TO "9" +FORM "ada" ]@0@0@1@2@@@@
+3@241@token [ +FROM "10" +TO "16" +FORM "kucing" ]@0@0@2@3@@@@
+4@241@token [ +FROM "17" +TO "21" +FORM "yang" ]@0@0@3@4@@@@
+5@241@token [ +FROM "22" +TO "34" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@242@token [ +FROM "0" +TO "5" +FORM "Tidak" ]@0@0@0@1@@@@
+2@242@token [ +FROM "6" +TO "9" +FORM "ada" ]@0@0@1@2@@@@
+3@242@token [ +FROM "10" +TO "16" +FORM "seekor" ]@0@0@2@3@@@@
+4@242@token [ +FROM "17" +TO "23" +FORM "kucing" ]@0@0@3@4@@@@
+5@242@token [ +FROM "24" +TO "27" +FORM "pun" ]@0@0@4@5@@@@
+6@242@token [ +FROM "28" +TO "32" +FORM "yang" ]@0@0@5@6@@@@
+7@242@token [ +FROM "33" +TO "45" +FORM "menggonggong" ]@0@0@6@7@@@@
+1@243@token [ +FROM "0" +TO "5" +FORM "Tidak" ]@0@0@0@1@@@@
+2@243@token [ +FROM "6" +TO "9" +FORM "ada" ]@0@0@1@2@@@@
+3@243@token [ +FROM "10" +TO "16" +FORM "seekor" ]@0@0@2@3@@@@
+4@243@token [ +FROM "17" +TO "20" +FORM "pun" ]@0@0@3@4@@@@
+5@243@token [ +FROM "21" +TO "27" +FORM "kucing" ]@0@0@4@5@@@@
+6@243@token [ +FROM "28" +TO "32" +FORM "yang" ]@0@0@5@6@@@@
+7@243@token [ +FROM "33" +TO "45" +FORM "menggonggong" ]@0@0@6@7@@@@
+65@251@root@4@1@0@3@@(64)@@
+64@251@head-comp@3@1@0@3@@(4 63)@@
+4@251@apakah@1@1@0@1@@(1)@@
+63@251@subj-head@3@1@1@3@@(10 6)@@(62)
+62@251@subj-head@3@5@1@3@@(9 6)@@
+9@251@nya-suffix-1@2@1@1@2@@(5)@@
+5@251@anjing@1@1@1@2@@(2)@@
+6@251@menggonggong@1@1@2@3@@(3)@@
+10@251@nya-suffix-2@2@1@1@2@@(5)@@
+1@251@token [ +FROM "0" +TO "6" +FORM "Apakah" ]@0@0@0@1@@@@
+2@251@token [ +FROM "7" +TO "16" +FORM "anjingnya" ]@0@0@1@2@@@@
+3@251@token [ +FROM "17" +TO "29" +FORM "menggonggong" ]@0@0@2@3@@@@
+106@252@root@4@1@0@4@@(105)@@
+105@252@head-comp@3@1@0@4@@(5 104)@@
+5@252@apakah@1@1@0@1@@(1)@@
+104@252@subj-head@3@1@1@4@@(92 9)@@
+92@252@head-spec@3@1@1@3@@(6 8)@@
+6@252@anjing@1@1@1@2@@(2)@@
+8@252@itu_2@1@1@2@3@@(3)@@
+9@252@menggonggong@1@1@3@4@@(4)@@
+1@252@token [ +FROM "0" +TO "6" +FORM "Apakah" ]@0@0@0@1@@@@
+2@252@token [ +FROM "7" +TO "13" +FORM "anjing" ]@0@0@1@2@@@@
+3@252@token [ +FROM "14" +TO "17" +FORM "itu" ]@0@0@2@3@@@@
+4@252@token [ +FROM "18" +TO "30" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@261@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@261@token [ +FROM "7" +TO "11" +FORM "mana" ]@0@0@1@2@@@@
+3@261@token [ +FROM "12" +TO "16" +FORM "yang" ]@0@0@2@3@@@@
+4@261@token [ +FROM "17" +TO "29" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@262@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@262@token [ +FROM "7" +TO "11" +FORM "yang" ]@0@0@1@2@@@@
+3@262@token [ +FROM "12" +TO "16" +FORM "mana" ]@0@0@2@3@@@@
+4@262@token [ +FROM "17" +TO "21" +FORM "yang" ]@0@0@3@4@@@@
+5@262@token [ +FROM "22" +TO "34" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@271@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@271@token [ +FROM "7" +TO "12" +FORM "siapa" ]@0@0@1@2@@@@
+3@271@token [ +FROM "13" +TO "17" +FORM "yang" ]@0@0@2@3@@@@
+4@271@token [ +FROM "18" +TO "30" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@281@token [ +FROM "0" +TO "5" +FORM "Kejar" ]@0@0@0@1@@@@
+2@281@token [ +FROM "6" +TO "10" +FORM "Budi" ]@0@0@1@2@@@@
+1@282@token [ +FROM "0" +TO "8" +FORM "Kejarlah" ]@0@0@0@1@@@@
+2@282@token [ +FROM "9" +TO "13" +FORM "Budi" ]@0@0@1@2@@@@
+1@291@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@291@token [ +FROM "4" +TO "18" +FORM "bertanya-tanya" ]@0@0@1@2@@@@
+3@291@token [ +FROM "19" +TO "25" +FORM "anjing" ]@0@0@2@3@@@@
+4@291@token [ +FROM "26" +TO "30" +FORM "mana" ]@0@0@3@4@@@@
+5@291@token [ +FROM "31" +TO "35" +FORM "yang" ]@0@0@4@5@@@@
+6@291@token [ +FROM "36" +TO "48" +FORM "menggonggong" ]@0@0@5@6@@@@
+1@292@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@292@token [ +FROM "4" +TO "18" +FORM "bertanya-tanya" ]@0@0@1@2@@@@
+3@292@token [ +FROM "19" +TO "25" +FORM "anjing" ]@0@0@2@3@@@@
+4@292@token [ +FROM "26" +TO "30" +FORM "yang" ]@0@0@3@4@@@@
+5@292@token [ +FROM "31" +TO "35" +FORM "mana" ]@0@0@4@5@@@@
+6@292@token [ +FROM "36" +TO "40" +FORM "yang" ]@0@0@5@6@@@@
+7@292@token [ +FROM "41" +TO "53" +FORM "menggonggong" ]@0@0@6@7@@@@
+1@301@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@301@token [ +FROM "4" +TO "18" +FORM "bertanya-tanya" ]@0@0@1@2@@@@
+3@301@token [ +FROM "19" +TO "25" +FORM "apakah" ]@0@0@2@3@@@@
+4@301@token [ +FROM "26" +TO "30" +FORM "Budi" ]@0@0@3@4@@@@
+5@301@token [ +FROM "31" +TO "43" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@311@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@311@token [ +FROM "7" +TO "11" +FORM "yang" ]@0@0@1@2@@@@
+3@311@token [ +FROM "12" +TO "19" +FORM "dikejar" ]@0@0@2@3@@@@
+4@311@token [ +FROM "20" +TO "24" +FORM "Budi" ]@0@0@3@4@@@@
+5@311@token [ +FROM "25" +TO "37" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@312@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@312@token [ +FROM "7" +TO "11" +FORM "yang" ]@0@0@1@2@@@@
+3@312@token [ +FROM "12" +TO "19" +FORM "dikejar" ]@0@0@2@3@@@@
+4@312@token [ +FROM "20" +TO "24" +FORM "oleh" ]@0@0@3@4@@@@
+5@312@token [ +FROM "25" +TO "29" +FORM "Budi" ]@0@0@4@5@@@@
+6@312@token [ +FROM "30" +TO "42" +FORM "menggonggong" ]@0@0@5@6@@@@
+1@321@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@321@token [ +FROM "7" +TO "11" +FORM "yang" ]@0@0@1@2@@@@
+3@321@token [ +FROM "12" +TO "16" +FORM "akan" ]@0@0@2@3@@@@
+4@321@token [ +FROM "17" +TO "24" +FORM "dikejar" ]@0@0@3@4@@@@
+5@321@token [ +FROM "25" +TO "31" +FORM "sedang" ]@0@0@4@5@@@@
+6@321@token [ +FROM "32" +TO "44" +FORM "menggonggong" ]@0@0@5@6@@@@
+1@331@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@331@token [ +FROM "10" +TO "17" +FORM "dikejar" ]@0@0@1@2@@@@
+3@331@token [ +FROM "18" +TO "22" +FORM "Budi" ]@0@0@2@3@@@@
+1@332@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@332@token [ +FROM "10" +TO "17" +FORM "dikejar" ]@0@0@1@2@@@@
+3@332@token [ +FROM "18" +TO "22" +FORM "oleh" ]@0@0@2@3@@@@
+4@332@token [ +FROM "23" +TO "27" +FORM "Budi" ]@0@0@3@4@@@@
+1@341@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@341@token [ +FROM "7" +TO "11" +FORM "yang" ]@0@0@1@2@@@@
+3@341@token [ +FROM "12" +TO "19" +FORM "dikejar" ]@0@0@2@3@@@@
+4@341@token [ +FROM "20" +TO "24" +FORM "Budi" ]@0@0@3@4@@@@
+5@341@token [ +FROM "25" +TO "37" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@342@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@342@token [ +FROM "7" +TO "11" +FORM "yang" ]@0@0@1@2@@@@
+3@342@token [ +FROM "12" +TO "19" +FORM "dikejar" ]@0@0@2@3@@@@
+4@342@token [ +FROM "20" +TO "24" +FORM "oleh" ]@0@0@3@4@@@@
+5@342@token [ +FROM "25" +TO "29" +FORM "Budi" ]@0@0@4@5@@@@
+6@342@token [ +FROM "30" +TO "42" +FORM "menggonggong" ]@0@0@5@6@@@@
+114@351@root@4@1@0@4@@(111)@@
+111@351@subj-head@3@1@0@4@@(94 100)@@
+94@351@head-spec@3@1@0@2@@(5 7)@@
+5@351@anjing@1@1@0@1@@(1)@@
+7@351@itu_2@1@1@1@2@@(2)@@
+100@351@head-comp@3@1@2@4@@(8 9)@@
+8@351@sedang@1@1@2@3@@(3)@@
+9@351@menggonggong@1@1@3@4@@(4)@@
+1@351@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@351@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@351@token [ +FROM "11" +TO "17" +FORM "sedang" ]@0@0@2@3@@@@
+4@351@token [ +FROM "18" +TO "30" +FORM "menggonggong" ]@0@0@3@4@@@@
+71@352@root@4@1@0@3@@(70)@@
+70@352@subj-head@3@1@0@3@@(10 64)@@(69)
+69@352@subj-head@3@5@0@3@@(9 64)@@
+9@352@nya-suffix-1@2@1@0@1@@(4)@@
+4@352@anjing@1@1@0@1@@(1)@@
+64@352@head-comp@3@1@1@3@@(5 6)@@
+5@352@sedang@1@1@1@2@@(2)@@
+6@352@menggonggong@1@1@2@3@@(3)@@
+10@352@nya-suffix-2@2@1@0@1@@(4)@@
+1@352@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@352@token [ +FROM "10" +TO "16" +FORM "sedang" ]@0@0@1@2@@@@
+3@352@token [ +FROM "17" +TO "29" +FORM "menggonggong" ]@0@0@2@3@@@@
+114@361@root@4@1@0@4@@(111)@@
+111@361@subj-head@3@1@0@4@@(94 100)@@
+94@361@head-spec@3@1@0@2@@(5 7)@@
+5@361@anjing@1@1@0@1@@(1)@@
+7@361@itu_2@1@1@1@2@@(2)@@
+100@361@head-comp@3@1@2@4@@(8 9)@@
+8@361@sudah@1@1@2@3@@(3)@@
+9@361@menggonggong@1@1@3@4@@(4)@@
+1@361@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@361@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@361@token [ +FROM "11" +TO "16" +FORM "sudah" ]@0@0@2@3@@@@
+4@361@token [ +FROM "17" +TO "29" +FORM "menggonggong" ]@0@0@3@4@@@@
+71@362@root@4@1@0@3@@(70)@@
+70@362@subj-head@3@1@0@3@@(10 64)@@(69)
+69@362@subj-head@3@5@0@3@@(9 64)@@
+9@362@nya-suffix-1@2@1@0@1@@(4)@@
+4@362@anjing@1@1@0@1@@(1)@@
+64@362@head-comp@3@1@1@3@@(5 6)@@
+5@362@sudah@1@1@1@2@@(2)@@
+6@362@menggonggong@1@1@2@3@@(3)@@
+10@362@nya-suffix-2@2@1@0@1@@(4)@@
+1@362@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@362@token [ +FROM "10" +TO "15" +FORM "sudah" ]@0@0@1@2@@@@
+3@362@token [ +FROM "16" +TO "28" +FORM "menggonggong" ]@0@0@2@3@@@@
+114@371@root@4@1@0@4@@(111)@@
+111@371@subj-head@3@1@0@4@@(94 100)@@
+94@371@head-spec@3@1@0@2@@(5 7)@@
+5@371@anjing@1@1@0@1@@(1)@@
+7@371@itu_2@1@1@1@2@@(2)@@
+100@371@head-comp@3@1@2@4@@(8 9)@@
+8@371@sudah@1@1@2@3@@(3)@@
+9@371@menggonggong@1@1@3@4@@(4)@@
+1@371@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@371@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@371@token [ +FROM "11" +TO "16" +FORM "sudah" ]@0@0@2@3@@@@
+4@371@token [ +FROM "17" +TO "29" +FORM "menggonggong" ]@0@0@3@4@@@@
+71@372@root@4@1@0@3@@(70)@@
+70@372@subj-head@3@1@0@3@@(10 64)@@(69)
+69@372@subj-head@3@5@0@3@@(9 64)@@
+9@372@nya-suffix-1@2@1@0@1@@(4)@@
+4@372@anjing@1@1@0@1@@(1)@@
+64@372@head-comp@3@1@1@3@@(5 6)@@
+5@372@sudah@1@1@1@2@@(2)@@
+6@372@menggonggong@1@1@2@3@@(3)@@
+10@372@nya-suffix-2@2@1@0@1@@(4)@@
+1@372@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@372@token [ +FROM "10" +TO "15" +FORM "sudah" ]@0@0@1@2@@@@
+3@372@token [ +FROM "16" +TO "28" +FORM "menggonggong" ]@0@0@2@3@@@@
+114@381@root@4@1@0@4@@(111)@@
+111@381@subj-head@3@1@0@4@@(94 100)@@
+94@381@head-spec@3@1@0@2@@(5 7)@@
+5@381@anjing@1@1@0@1@@(1)@@
+7@381@itu_2@1@1@1@2@@(2)@@
+100@381@head-comp@3@1@2@4@@(8 9)@@
+8@381@sudah@1@1@2@3@@(3)@@
+9@381@menggonggong@1@1@3@4@@(4)@@
+1@381@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@381@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@381@token [ +FROM "11" +TO "16" +FORM "sudah" ]@0@0@2@3@@@@
+4@381@token [ +FROM "17" +TO "29" +FORM "menggonggong" ]@0@0@3@4@@@@
+71@382@root@4@1@0@3@@(70)@@
+70@382@subj-head@3@1@0@3@@(10 64)@@(69)
+69@382@subj-head@3@5@0@3@@(9 64)@@
+9@382@nya-suffix-1@2@1@0@1@@(4)@@
+4@382@anjing@1@1@0@1@@(1)@@
+64@382@head-comp@3@1@1@3@@(5 6)@@
+5@382@sudah@1@1@1@2@@(2)@@
+6@382@menggonggong@1@1@2@3@@(3)@@
+10@382@nya-suffix-2@2@1@0@1@@(4)@@
+1@382@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@382@token [ +FROM "10" +TO "15" +FORM "sudah" ]@0@0@1@2@@@@
+3@382@token [ +FROM "16" +TO "28" +FORM "menggonggong" ]@0@0@2@3@@@@
+114@391@root@4@1@0@4@@(111)@@
+111@391@subj-head@3@1@0@4@@(94 100)@@
+94@391@head-spec@3@1@0@2@@(5 7)@@
+5@391@anjing@1@1@0@1@@(1)@@
+7@391@itu_2@1@1@1@2@@(2)@@
+100@391@head-comp@3@1@2@4@@(8 9)@@
+8@391@akan@1@1@2@3@@(3)@@
+9@391@menggonggong@1@1@3@4@@(4)@@
+1@391@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@391@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@391@token [ +FROM "11" +TO "15" +FORM "akan" ]@0@0@2@3@@@@
+4@391@token [ +FROM "16" +TO "28" +FORM "menggonggong" ]@0@0@3@4@@@@
+71@392@root@4@1@0@3@@(70)@@
+70@392@subj-head@3@1@0@3@@(10 64)@@(69)
+69@392@subj-head@3@5@0@3@@(9 64)@@
+9@392@nya-suffix-1@2@1@0@1@@(4)@@
+4@392@anjing@1@1@0@1@@(1)@@
+64@392@head-comp@3@1@1@3@@(5 6)@@
+5@392@akan@1@1@1@2@@(2)@@
+6@392@menggonggong@1@1@2@3@@(3)@@
+10@392@nya-suffix-2@2@1@0@1@@(4)@@
+1@392@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@392@token [ +FROM "10" +TO "14" +FORM "akan" ]@0@0@1@2@@@@
+3@392@token [ +FROM "15" +TO "27" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@401@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@401@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@401@token [ +FROM "11" +TO "16" +FORM "sudah" ]@0@0@2@3@@@@
+4@401@token [ +FROM "17" +TO "21" +FORM "akan" ]@0@0@3@4@@@@
+5@401@token [ +FROM "22" +TO "34" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@402@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@402@token [ +FROM "10" +TO "15" +FORM "sudah" ]@0@0@1@2@@@@
+3@402@token [ +FROM "16" +TO "20" +FORM "akan" ]@0@0@2@3@@@@
+4@402@token [ +FROM "21" +TO "33" +FORM "menggonggong" ]@0@0@3@4@@@@
+129@411@root@4@1@0@4@@(122)@@
+122@411@subj-head@3@1@0@4@@(95 101)@@
+95@411@head-spec@3@1@0@2@@(5 7)@@
+5@411@anjing@1@1@0@1@@(1)@@
+7@411@itu_2@1@1@1@2@@(2)@@
+101@411@head-comp@3@1@2@4@@(8 9)@@
+8@411@bisa@1@1@2@3@@(3)@@
+9@411@menggonggong@1@1@3@4@@(4)@@
+1@411@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@411@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@411@token [ +FROM "11" +TO "15" +FORM "bisa" ]@0@0@2@3@@@@
+4@411@token [ +FROM "16" +TO "28" +FORM "menggonggong" ]@0@0@3@4@@@@
+82@412@root@4@1@0@3@@(81)@@
+81@412@subj-head@3@1@0@3@@(10 65)@@(80)
+80@412@subj-head@3@5@0@3@@(9 65)@@
+9@412@nya-suffix-1@2@1@0@1@@(4)@@
+4@412@anjing@1@1@0@1@@(1)@@
+65@412@head-comp@3@1@1@3@@(5 6)@@
+5@412@bisa@1@1@1@2@@(2)@@
+6@412@menggonggong@1@1@2@3@@(3)@@
+10@412@nya-suffix-2@2@1@0@1@@(4)@@
+1@412@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@412@token [ +FROM "10" +TO "14" +FORM "bisa" ]@0@0@1@2@@@@
+3@412@token [ +FROM "15" +TO "27" +FORM "menggonggong" ]@0@0@2@3@@@@
+176@421@root@4@1@0@5@@(166)@@
+166@421@subj-head@3@1@0@5@@(122 151)@@
+122@421@head-spec@3@1@0@2@@(6 8)@@
+6@421@anjing@1@1@0@1@@(1)@@
+8@421@itu_2@1@1@1@2@@(2)@@
+151@421@head-comp@3@1@2@5@@(9 132)@@
+9@421@tidak@1@1@2@3@@(3)@@
+132@421@head-comp@3@1@3@5@@(10 11)@@
+10@421@bisa@1@1@3@4@@(4)@@
+11@421@menggonggong@1@1@4@5@@(5)@@
+1@421@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@421@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@421@token [ +FROM "11" +TO "16" +FORM "tidak" ]@0@0@2@3@@@@
+4@421@token [ +FROM "17" +TO "21" +FORM "bisa" ]@0@0@3@4@@@@
+5@421@token [ +FROM "22" +TO "34" +FORM "menggonggong" ]@0@0@4@5@@@@
+125@422@root@4@1@0@4@@(120)@@
+120@422@subj-head@3@1@0@4@@(12 118)@@(119)
+119@422@subj-head@3@5@0@4@@(11 118)@@
+11@422@nya-suffix-1@2@1@0@1@@(5)@@
+5@422@anjing@1@1@0@1@@(1)@@
+118@422@head-comp@3@1@1@4@@(6 96)@@
+6@422@tidak@1@1@1@2@@(2)@@
+96@422@head-comp@3@1@2@4@@(7 8)@@
+7@422@bisa@1@1@2@3@@(3)@@
+8@422@menggonggong@1@1@3@4@@(4)@@
+12@422@nya-suffix-2@2@1@0@1@@(5)@@
+1@422@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@422@token [ +FROM "10" +TO "15" +FORM "tidak" ]@0@0@1@2@@@@
+3@422@token [ +FROM "16" +TO "20" +FORM "bisa" ]@0@0@2@3@@@@
+4@422@token [ +FROM "21" +TO "33" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@431@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@431@token [ +FROM "7" +TO "10" +FORM "tua" ]@0@0@1@2@@@@
+3@431@token [ +FROM "11" +TO "14" +FORM "itu" ]@0@0@2@3@@@@
+4@431@token [ +FROM "15" +TO "27" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@432@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@432@token [ +FROM "7" +TO "13" +FORM "tuanya" ]@0@0@1@2@@@@
+3@432@token [ +FROM "14" +TO "26" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@441@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@441@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@441@token [ +FROM "11" +TO "23" +FORM "menggonggong" ]@0@0@2@3@@@@
+4@441@token [ +FROM "24" +TO "30" +FORM "dengan" ]@0@0@3@4@@@@
+5@441@token [ +FROM "31" +TO "36" +FORM "pelan" ]@0@0@4@5@@@@
+1@442@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@442@token [ +FROM "10" +TO "22" +FORM "menggonggong" ]@0@0@1@2@@@@
+3@442@token [ +FROM "23" +TO "29" +FORM "dengan" ]@0@0@2@3@@@@
+4@442@token [ +FROM "30" +TO "35" +FORM "pelan" ]@0@0@3@4@@@@
+1@451@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@451@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@451@token [ +FROM "11" +TO "18" +FORM "mungkin" ]@0@0@2@3@@@@
+4@451@token [ +FROM "19" +TO "31" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@452@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@452@token [ +FROM "10" +TO "17" +FORM "mungkin" ]@0@0@1@2@@@@
+3@452@token [ +FROM "18" +TO "30" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@461@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@461@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@461@token [ +FROM "11" +TO "23" +FORM "menggonggong" ]@0@0@2@3@@@@
+4@461@token [ +FROM "24" +TO "26" +FORM "di" ]@0@0@3@4@@@@
+5@461@token [ +FROM "27" +TO "32" +FORM "taman" ]@0@0@4@5@@@@
+1@462@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@462@token [ +FROM "10" +TO "22" +FORM "menggonggong" ]@0@0@1@2@@@@
+3@462@token [ +FROM "23" +TO "25" +FORM "di" ]@0@0@2@3@@@@
+4@462@token [ +FROM "26" +TO "31" +FORM "taman" ]@0@0@3@4@@@@
+1@471@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@471@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@471@token [ +FROM "11" +TO "23" +FORM "menggonggong" ]@0@0@2@3@@@@
+4@471@token [ +FROM "24" +TO "32" +FORM "sekarang" ]@0@0@3@4@@@@
+1@472@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@472@token [ +FROM "10" +TO "22" +FORM "menggonggong" ]@0@0@1@2@@@@
+3@472@token [ +FROM "23" +TO "31" +FORM "sekarang" ]@0@0@2@3@@@@
+1@481@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@481@token [ +FROM "7" +TO "12" +FORM "taman" ]@0@0@1@2@@@@
+3@481@token [ +FROM "13" +TO "16" +FORM "itu" ]@0@0@2@3@@@@
+4@481@token [ +FROM "17" +TO "29" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@482@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@482@token [ +FROM "7" +TO "15" +FORM "tamannya" ]@0@0@1@2@@@@
+3@482@token [ +FROM "16" +TO "28" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@491@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@491@token [ +FROM "7" +TO "12" +FORM "taman" ]@0@0@1@2@@@@
+3@491@token [ +FROM "13" +TO "21" +FORM "tembakau" ]@0@0@2@3@@@@
+4@491@token [ +FROM "22" +TO "25" +FORM "itu" ]@0@0@3@4@@@@
+5@491@token [ +FROM "26" +TO "38" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@492@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@492@token [ +FROM "7" +TO "12" +FORM "taman" ]@0@0@1@2@@@@
+3@492@token [ +FROM "13" +TO "24" +FORM "tembakaunya" ]@0@0@2@3@@@@
+4@492@token [ +FROM "25" +TO "37" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@501@token [ +FROM "0" +TO "6" +FORM "Kucing" ]@0@0@0@1@@@@
+2@501@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@501@token [ +FROM "11" +TO "14" +FORM "tua" ]@0@0@2@3@@@@
+1@502@token [ +FROM "0" +TO "9" +FORM "Kucingnya" ]@0@0@0@1@@@@
+2@502@token [ +FROM "10" +TO "13" +FORM "tua" ]@0@0@1@2@@@@
+1@511@token [ +FROM "0" +TO "9" +FORM "Kucingnya" ]@0@0@0@1@@@@
+2@511@token [ +FROM "10" +TO "12" +FORM "di" ]@0@0@1@2@@@@
+3@511@token [ +FROM "13" +TO "18" +FORM "taman" ]@0@0@2@3@@@@
+106@512@root@4@1@0@4@@(105)@@
+105@512@subj-head@3@1@0@4@@(12 103)@@(104)
+104@512@subj-head@3@5@0@4@@(11 103)@@
+11@512@nya-suffix-1@2@1@0@1@@(5)@@
+5@512@kucing@1@1@0@1@@(1)@@
+103@512@head-comp@3@1@1@4@@(6 92)@@
+6@512@ada@1@1@1@2@@(2)@@
+92@512@head-comp@3@1@2@4@@(7 79)@@
+7@512@di@1@1@2@3@@(3)@@
+79@512@bare-np@3@1@3@4@@(8)@@
+8@512@taman@1@1@3@4@@(4)@@
+12@512@nya-suffix-2@2@1@0@1@@(5)@@
+1@512@token [ +FROM "0" +TO "9" +FORM "Kucingnya" ]@0@0@0@1@@@@
+2@512@token [ +FROM "10" +TO "13" +FORM "ada" ]@0@0@1@2@@@@
+3@512@token [ +FROM "14" +TO "16" +FORM "di" ]@0@0@2@3@@@@
+4@512@token [ +FROM "17" +TO "22" +FORM "taman" ]@0@0@3@4@@@@
+1@521@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@521@token [ +FROM "7" +TO "11" +FORM "yang" ]@0@0@1@2@@@@
+3@521@token [ +FROM "12" +TO "18" +FORM "sedang" ]@0@0@2@3@@@@
+4@521@token [ +FROM "19" +TO "31" +FORM "menggonggong" ]@0@0@3@4@@@@
+5@521@token [ +FROM "32" +TO "40" +FORM "mengejar" ]@0@0@4@5@@@@
+6@521@token [ +FROM "41" +TO "45" +FORM "Budi" ]@0@0@5@6@@@@
+1@531@token [ +FROM "0" +TO "13" +FORM "Anjing-anjing" ]@0@0@0@1@@@@
+2@531@token [ +FROM "14" +TO "18" +FORM "yang" ]@0@0@1@2@@@@
+3@531@token [ +FROM "19" +TO "26" +FORM "dikejar" ]@0@0@2@3@@@@
+4@531@token [ +FROM "27" +TO "39" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@541@token [ +FROM "0" +TO "8" +FORM "Tindakan" ]@0@0@0@1@@@@
+2@541@token [ +FROM "9" +TO "17" +FORM "mengejar" ]@0@0@1@2@@@@
+3@541@token [ +FROM "18" +TO "24" +FORM "kucing" ]@0@0@2@3@@@@
+4@541@token [ +FROM "25" +TO "28" +FORM "itu" ]@0@0@3@4@@@@
+5@541@token [ +FROM "29" +TO "35" +FORM "adalah" ]@0@0@4@5@@@@
+6@541@token [ +FROM "36" +TO "40" +FORM "kuno" ]@0@0@5@6@@@@
+1@542@token [ +FROM "0" +TO "8" +FORM "Tindakan" ]@0@0@0@1@@@@
+2@542@token [ +FROM "9" +TO "17" +FORM "mengejar" ]@0@0@1@2@@@@
+3@542@token [ +FROM "18" +TO "24" +FORM "kucing" ]@0@0@2@3@@@@
+4@542@token [ +FROM "25" +TO "28" +FORM "itu" ]@0@0@3@4@@@@
+5@542@token [ +FROM "29" +TO "33" +FORM "kuno" ]@0@0@4@5@@@@
+1@551@token [ +FROM "0" +TO "5" +FORM "Bahwa" ]@0@0@0@1@@@@
+2@551@token [ +FROM "6" +TO "12" +FORM "kucing" ]@0@0@1@2@@@@
+3@551@token [ +FROM "13" +TO "16" +FORM "itu" ]@0@0@2@3@@@@
+4@551@token [ +FROM "17" +TO "25" +FORM "mengejar" ]@0@0@3@4@@@@
+5@551@token [ +FROM "26" +TO "30" +FORM "Budi" ]@0@0@4@5@@@@
+6@551@token [ +FROM "31" +TO "37" +FORM "adalah" ]@0@0@5@6@@@@
+7@551@token [ +FROM "38" +TO "42" +FORM "kuno" ]@0@0@6@7@@@@
+1@561@token [ +FROM "0" +TO "13" +FORM "Anjing-anjing" ]@0@0@0@1@@@@
+2@561@token [ +FROM "14" +TO "22" +FORM "mengejar" ]@0@0@1@2@@@@
+3@561@token [ +FROM "23" +TO "26" +FORM "apa" ]@0@0@2@3@@@@
+4@561@token [ +FROM "27" +TO "30" +FORM "pun" ]@0@0@3@4@@@@
+5@561@token [ +FROM "31" +TO "35" +FORM "yang" ]@0@0@4@5@@@@
+6@561@token [ +FROM "36" +TO "48" +FORM "menggonggong" ]@0@0@5@6@@@@
+1@562@token [ +FROM "0" +TO "13" +FORM "Anjing-anjing" ]@0@0@0@1@@@@
+2@562@token [ +FROM "14" +TO "22" +FORM "mengejar" ]@0@0@1@2@@@@
+3@562@token [ +FROM "23" +TO "26" +FORM "apa" ]@0@0@2@3@@@@
+4@562@token [ +FROM "27" +TO "31" +FORM "saja" ]@0@0@3@4@@@@
+5@562@token [ +FROM "32" +TO "36" +FORM "yang" ]@0@0@4@5@@@@
+6@562@token [ +FROM "37" +TO "49" +FORM "menggonggong" ]@0@0@5@6@@@@
+1@571@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@571@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@571@token [ +FROM "11" +TO "23" +FORM "menggonggong" ]@0@0@2@3@@@@
+4@571@token [ +FROM "24" +TO "30" +FORM "setiap" ]@0@0@3@4@@@@
+5@571@token [ +FROM "31" +TO "35" +FORM "hari" ]@0@0@4@5@@@@
+1@572@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@572@token [ +FROM "10" +TO "22" +FORM "menggonggong" ]@0@0@1@2@@@@
+3@572@token [ +FROM "23" +TO "29" +FORM "setiap" ]@0@0@2@3@@@@
+4@572@token [ +FROM "30" +TO "34" +FORM "hari" ]@0@0@3@4@@@@
+1@581@token [ +FROM "0" +TO "5" +FORM "Kapan" ]@0@0@0@1@@@@
+2@581@token [ +FROM "6" +TO "12" +FORM "anjing" ]@0@0@1@2@@@@
+3@581@token [ +FROM "13" +TO "16" +FORM "itu" ]@0@0@2@3@@@@
+4@581@token [ +FROM "17" +TO "29" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@582@token [ +FROM "0" +TO "5" +FORM "Kapan" ]@0@0@0@1@@@@
+2@582@token [ +FROM "6" +TO "15" +FORM "anjingnya" ]@0@0@1@2@@@@
+3@582@token [ +FROM "16" +TO "28" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@591@token [ +FROM "0" +TO "4" +FORM "Tiga" ]@0@0@0@1@@@@
+2@591@token [ +FROM "5" +TO "9" +FORM "dari" ]@0@0@1@2@@@@
+3@591@token [ +FROM "10" +TO "23" +FORM "anjing-anjing" ]@0@0@2@3@@@@
+4@591@token [ +FROM "24" +TO "27" +FORM "itu" ]@0@0@3@4@@@@
+5@591@token [ +FROM "28" +TO "40" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@592@token [ +FROM "0" +TO "4" +FORM "Tiga" ]@0@0@0@1@@@@
+2@592@token [ +FROM "5" +TO "9" +FORM "ekor" ]@0@0@1@2@@@@
+3@592@token [ +FROM "10" +TO "14" +FORM "dari" ]@0@0@2@3@@@@
+4@592@token [ +FROM "15" +TO "28" +FORM "anjing-anjing" ]@0@0@3@4@@@@
+5@592@token [ +FROM "29" +TO "32" +FORM "itu" ]@0@0@4@5@@@@
+6@592@token [ +FROM "33" +TO "45" +FORM "menggonggong" ]@0@0@5@6@@@@
+1@601@token [ +FROM "0" +TO "4" +FORM "Tiga" ]@0@0@0@1@@@@
+2@601@token [ +FROM "5" +TO "9" +FORM "ekor" ]@0@0@1@2@@@@
+3@601@token [ +FROM "10" +TO "22" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@611@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@611@token [ +FROM "7" +TO "11" +FORM "Budi" ]@0@0@1@2@@@@
+3@611@token [ +FROM "12" +TO "24" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@621@token [ +FROM "0" +TO "5" +FORM "Punya" ]@0@0@0@1@@@@
+2@621@token [ +FROM "6" +TO "10" +FORM "Budi" ]@0@0@1@2@@@@
+3@621@token [ +FROM "11" +TO "23" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@622@token [ +FROM "0" +TO "5" +FORM "Milik" ]@0@0@0@1@@@@
+2@622@token [ +FROM "6" +TO "10" +FORM "Budi" ]@0@0@1@2@@@@
+3@622@token [ +FROM "11" +TO "23" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@631@token [ +FROM "0" +TO "3" +FORM "Dua" ]@0@0@0@1@@@@
+2@631@token [ +FROM "4" +TO "9" +FORM "puluh" ]@0@0@1@2@@@@
+3@631@token [ +FROM "10" +TO "14" +FORM "tiga" ]@0@0@2@3@@@@
+4@631@token [ +FROM "15" +TO "21" +FORM "anjing" ]@0@0@3@4@@@@
+5@631@token [ +FROM "22" +TO "34" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@632@token [ +FROM "0" +TO "3" +FORM "Dua" ]@0@0@0@1@@@@
+2@632@token [ +FROM "4" +TO "9" +FORM "puluh" ]@0@0@1@2@@@@
+3@632@token [ +FROM "10" +TO "14" +FORM "tiga" ]@0@0@2@3@@@@
+4@632@token [ +FROM "15" +TO "19" +FORM "ekor" ]@0@0@3@4@@@@
+5@632@token [ +FROM "20" +TO "26" +FORM "anjing" ]@0@0@4@5@@@@
+6@632@token [ +FROM "27" +TO "39" +FORM "menggonggong" ]@0@0@5@6@@@@
+1@641@token [ +FROM "0" +TO "3" +FORM "Dua" ]@0@0@0@1@@@@
+2@641@token [ +FROM "4" +TO "9" +FORM "ratus" ]@0@0@1@2@@@@
+3@641@token [ +FROM "10" +TO "13" +FORM "dua" ]@0@0@2@3@@@@
+4@641@token [ +FROM "14" +TO "19" +FORM "puluh" ]@0@0@3@4@@@@
+5@641@token [ +FROM "20" +TO "26" +FORM "anjing" ]@0@0@4@5@@@@
+6@641@token [ +FROM "27" +TO "39" +FORM "menggonggong" ]@0@0@5@6@@@@
+1@642@token [ +FROM "0" +TO "3" +FORM "Dua" ]@0@0@0@1@@@@
+2@642@token [ +FROM "4" +TO "9" +FORM "ratus" ]@0@0@1@2@@@@
+3@642@token [ +FROM "10" +TO "13" +FORM "dua" ]@0@0@2@3@@@@
+4@642@token [ +FROM "14" +TO "19" +FORM "puluh" ]@0@0@3@4@@@@
+5@642@token [ +FROM "20" +TO "24" +FORM "ekor" ]@0@0@4@5@@@@
+6@642@token [ +FROM "25" +TO "31" +FORM "anjing" ]@0@0@5@6@@@@
+7@642@token [ +FROM "32" +TO "44" +FORM "menggonggong" ]@0@0@6@7@@@@
+1@651@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@651@token [ +FROM "4" +TO "10" +FORM "datang" ]@0@0@1@2@@@@
+3@651@token [ +FROM "11" +TO "17" +FORM "dengan" ]@0@0@2@3@@@@
+4@651@token [ +FROM "18" +TO "23" +FORM "mobil" ]@0@0@3@4@@@@
+1@652@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@652@token [ +FROM "4" +TO "10" +FORM "datang" ]@0@0@1@2@@@@
+3@652@token [ +FROM "11" +TO "15" +FORM "naik" ]@0@0@2@3@@@@
+4@652@token [ +FROM "16" +TO "21" +FORM "mobil" ]@0@0@3@4@@@@
+1@661@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@661@token [ +FROM "4" +TO "9" +FORM "tetap" ]@0@0@1@2@@@@
+3@661@token [ +FROM "10" +TO "22" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@671@token [ +FROM "0" +TO "4" +FORM "Budi" ]@0@0@0@1@@@@
+2@671@token [ +FROM "5" +TO "12" +FORM "meremas" ]@0@0@1@2@@@@
+3@671@token [ +FROM "13" +TO "19" +FORM "kucing" ]@0@0@2@3@@@@
+4@671@token [ +FROM "20" +TO "23" +FORM "itu" ]@0@0@3@4@@@@
+5@671@token [ +FROM "24" +TO "29" +FORM "masuk" ]@0@0@4@5@@@@
+1@672@token [ +FROM "0" +TO "4" +FORM "Budi" ]@0@0@0@1@@@@
+2@672@token [ +FROM "5" +TO "12" +FORM "meremas" ]@0@0@1@2@@@@
+3@672@token [ +FROM "13" +TO "22" +FORM "kucingnya" ]@0@0@2@3@@@@
+4@672@token [ +FROM "23" +TO "28" +FORM "masuk" ]@0@0@3@4@@@@
+1@681@token [ +FROM "0" +TO "4" +FORM "Budi" ]@0@0@0@1@@@@
+2@681@token [ +FROM "5" +TO "12" +FORM "meremas" ]@0@0@1@2@@@@
+3@681@token [ +FROM "13" +TO "18" +FORM "masuk" ]@0@0@2@3@@@@
+4@681@token [ +FROM "19" +TO "25" +FORM "kucing" ]@0@0@3@4@@@@
+5@681@token [ +FROM "26" +TO "29" +FORM "itu" ]@0@0@4@5@@@@
+1@682@token [ +FROM "0" +TO "4" +FORM "Budi" ]@0@0@0@1@@@@
+2@682@token [ +FROM "5" +TO "12" +FORM "meremas" ]@0@0@1@2@@@@
+3@682@token [ +FROM "13" +TO "18" +FORM "masuk" ]@0@0@2@3@@@@
+4@682@token [ +FROM "19" +TO "28" +FORM "kucingnya" ]@0@0@3@4@@@@
+1@691@token [ +FROM "0" +TO "6" +FORM "Gambar" ]@0@0@0@1@@@@
+2@691@token [ +FROM "7" +TO "10" +FORM "Adi" ]@0@0@1@2@@@@
+3@691@token [ +FROM "11" +TO "17" +FORM "sampai" ]@0@0@2@3@@@@
+1@692@token [ +FROM "0" +TO "6" +FORM "Gambar" ]@0@0@0@1@@@@
+2@692@token [ +FROM "7" +TO "10" +FORM "Adi" ]@0@0@1@2@@@@
+3@692@token [ +FROM "11" +TO "16" +FORM "sudah" ]@0@0@2@3@@@@
+4@692@token [ +FROM "17" +TO "23" +FORM "sampai" ]@0@0@3@4@@@@
+1@701@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@701@token [ +FROM "4" +TO "12" +FORM "mengelap" ]@0@0@1@2@@@@
+3@701@token [ +FROM "13" +TO "19" +FORM "bersih" ]@0@0@2@3@@@@
+4@701@token [ +FROM "20" +TO "24" +FORM "meja" ]@0@0@3@4@@@@
+5@701@token [ +FROM "25" +TO "28" +FORM "itu" ]@0@0@4@5@@@@
+1@702@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@702@token [ +FROM "4" +TO "12" +FORM "mengelap" ]@0@0@1@2@@@@
+3@702@token [ +FROM "13" +TO "19" +FORM "bersih" ]@0@0@2@3@@@@
+4@702@token [ +FROM "20" +TO "27" +FORM "mejanya" ]@0@0@3@4@@@@
+1@711@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@711@token [ +FROM "4" +TO "11" +FORM "menaruh" ]@0@0@1@2@@@@
+3@711@token [ +FROM "12" +TO "16" +FORM "Budi" ]@0@0@2@3@@@@
+4@711@token [ +FROM "17" +TO "19" +FORM "di" ]@0@0@3@4@@@@
+5@711@token [ +FROM "20" +TO "25" +FORM "taman" ]@0@0@4@5@@@@
+6@711@token [ +FROM "26" +TO "29" +FORM "itu" ]@0@0@5@6@@@@
+1@721@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@721@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@721@token [ +FROM "11" +TO "15" +FORM "akan" ]@0@0@2@3@@@@
+4@721@token [ +FROM "16" +TO "28" +FORM "menggonggong" ]@0@0@3@4@@@@
+5@721@token [ +FROM "29" +TO "33" +FORM "jika" ]@0@0@4@5@@@@
+6@721@token [ +FROM "34" +TO "38" +FORM "Budi" ]@0@0@5@6@@@@
+7@721@token [ +FROM "39" +TO "45" +FORM "datang" ]@0@0@6@7@@@@
+1@722@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@722@token [ +FROM "10" +TO "14" +FORM "akan" ]@0@0@1@2@@@@
+3@722@token [ +FROM "15" +TO "27" +FORM "menggonggong" ]@0@0@2@3@@@@
+4@722@token [ +FROM "28" +TO "32" +FORM "jika" ]@0@0@3@4@@@@
+5@722@token [ +FROM "33" +TO "37" +FORM "Budi" ]@0@0@4@5@@@@
+6@722@token [ +FROM "38" +TO "44" +FORM "datang" ]@0@0@5@6@@@@
+1@731@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@731@token [ +FROM "4" +TO "7" +FORM "dan" ]@0@0@1@2@@@@
+3@731@token [ +FROM "8" +TO "12" +FORM "Budi" ]@0@0@2@3@@@@
+4@731@token [ +FROM "13" +TO "19" +FORM "datang" ]@0@0@3@4@@@@
+1@741@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@741@token [ +FROM "5" +TO "9" +FORM "Budi" ]@0@0@1@2@@@@
+3@741@token [ +FROM "11" +TO "14" +FORM "dan" ]@0@0@2@3@@@@
+4@741@token [ +FROM "15" +TO "21" +FORM "anjing" ]@0@0@3@4@@@@
+5@741@token [ +FROM "22" +TO "25" +FORM "itu" ]@0@0@4@5@@@@
+6@741@token [ +FROM "26" +TO "32" +FORM "datang" ]@0@0@5@6@@@@
+1@742@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@742@token [ +FROM "5" +TO "9" +FORM "Budi" ]@0@0@1@2@@@@
+3@742@token [ +FROM "11" +TO "14" +FORM "dan" ]@0@0@2@3@@@@
+4@742@token [ +FROM "15" +TO "24" +FORM "anjingnya" ]@0@0@3@4@@@@
+5@742@token [ +FROM "25" +TO "31" +FORM "datang" ]@0@0@4@5@@@@
+1@751@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@751@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@751@token [ +FROM "11" +TO "17" +FORM "datang" ]@0@0@2@3@@@@
+4@751@token [ +FROM "18" +TO "21" +FORM "dan" ]@0@0@3@4@@@@
+5@751@token [ +FROM "22" +TO "34" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@752@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@752@token [ +FROM "10" +TO "16" +FORM "datang" ]@0@0@1@2@@@@
+3@752@token [ +FROM "17" +TO "20" +FORM "dan" ]@0@0@2@3@@@@
+4@752@token [ +FROM "21" +TO "33" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@761@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@761@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@761@token [ +FROM "11" +TO "17" +FORM "datang" ]@0@0@2@3@@@@
+4@761@token [ +FROM "18" +TO "21" +FORM "dan" ]@0@0@3@4@@@@
+5@761@token [ +FROM "22" +TO "26" +FORM "Budi" ]@0@0@4@5@@@@
+6@761@token [ +FROM "27" +TO "39" +FORM "menggonggong" ]@0@0@5@6@@@@
+1@762@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@762@token [ +FROM "10" +TO "16" +FORM "datang" ]@0@0@1@2@@@@
+3@762@token [ +FROM "17" +TO "20" +FORM "dan" ]@0@0@2@3@@@@
+4@762@token [ +FROM "21" +TO "25" +FORM "Budi" ]@0@0@3@4@@@@
+5@762@token [ +FROM "26" +TO "38" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@771@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@771@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@771@token [ +FROM "11" +TO "23" +FORM "menggonggong" ]@0@0@2@3@@@@
+4@771@token [ +FROM "25" +TO "28" +FORM "kan" ]@0@0@3@4@@@@
+1@772@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@772@token [ +FROM "10" +TO "22" +FORM "menggonggong" ]@0@0@1@2@@@@
+3@772@token [ +FROM "24" +TO "27" +FORM "kan" ]@0@0@2@3@@@@
+1@781@token [ +FROM "0" +TO "5" +FORM "Jelas" ]@0@0@0@1@@@@
+2@781@token [ +FROM "6" +TO "11" +FORM "bahwa" ]@0@0@1@2@@@@
+3@781@token [ +FROM "12" +TO "18" +FORM "anjing" ]@0@0@2@3@@@@
+4@781@token [ +FROM "19" +TO "22" +FORM "itu" ]@0@0@3@4@@@@
+5@781@token [ +FROM "23" +TO "35" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@782@token [ +FROM "0" +TO "5" +FORM "Jelas" ]@0@0@0@1@@@@
+2@782@token [ +FROM "6" +TO "11" +FORM "bahwa" ]@0@0@1@2@@@@
+3@782@token [ +FROM "12" +TO "21" +FORM "anjingnya" ]@0@0@2@3@@@@
+4@782@token [ +FROM "22" +TO "34" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@783@token [ +FROM "0" +TO "6" +FORM "Adalah" ]@0@0@0@1@@@@
+2@783@token [ +FROM "7" +TO "12" +FORM "jelas" ]@0@0@1@2@@@@
+3@783@token [ +FROM "13" +TO "18" +FORM "bahwa" ]@0@0@2@3@@@@
+4@783@token [ +FROM "19" +TO "25" +FORM "anjing" ]@0@0@3@4@@@@
+5@783@token [ +FROM "26" +TO "29" +FORM "itu" ]@0@0@4@5@@@@
+6@783@token [ +FROM "30" +TO "42" +FORM "menggonggong" ]@0@0@5@6@@@@
+1@784@token [ +FROM "0" +TO "6" +FORM "Adalah" ]@0@0@0@1@@@@
+2@784@token [ +FROM "7" +TO "12" +FORM "jelas" ]@0@0@1@2@@@@
+3@784@token [ +FROM "13" +TO "18" +FORM "bahwa" ]@0@0@2@3@@@@
+4@784@token [ +FROM "19" +TO "28" +FORM "anjingnya" ]@0@0@3@4@@@@
+5@784@token [ +FROM "29" +TO "41" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@791@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@791@token [ +FROM "4" +TO "12" +FORM "berjanji" ]@0@0@1@2@@@@
+3@791@token [ +FROM "13" +TO "19" +FORM "kepada" ]@0@0@2@3@@@@
+4@791@token [ +FROM "20" +TO "24" +FORM "Budi" ]@0@0@3@4@@@@
+5@791@token [ +FROM "25" +TO "30" +FORM "untuk" ]@0@0@4@5@@@@
+6@791@token [ +FROM "31" +TO "43" +FORM "menggonggong" ]@0@0@5@6@@@@
+1@801@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@801@token [ +FROM "4" +TO "16" +FORM "kelihatannya" ]@0@0@1@2@@@@
+3@801@token [ +FROM "17" +TO "29" +FORM "menggonggong" ]@0@0@2@3@@@@
+1@811@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@811@token [ +FROM "4" +TO "11" +FORM "percaya" ]@0@0@1@2@@@@
+3@811@token [ +FROM "12" +TO "16" +FORM "Budi" ]@0@0@2@3@@@@
+4@811@token [ +FROM "17" +TO "23" +FORM "sedang" ]@0@0@3@4@@@@
+5@811@token [ +FROM "24" +TO "36" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@821@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@821@token [ +FROM "4" +TO "13" +FORM "terganggu" ]@0@0@1@2@@@@
+3@821@token [ +FROM "14" +TO "20" +FORM "karena" ]@0@0@2@3@@@@
+4@821@token [ +FROM "21" +TO "25" +FORM "Budi" ]@0@0@3@4@@@@
+5@821@token [ +FROM "26" +TO "38" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@822@token [ +FROM "0" +TO "5" +FORM "Bahwa" ]@0@0@0@1@@@@
+2@822@token [ +FROM "6" +TO "10" +FORM "Budi" ]@0@0@1@2@@@@
+3@822@token [ +FROM "11" +TO "23" +FORM "menggonggong" ]@0@0@2@3@@@@
+4@822@token [ +FROM "24" +TO "34" +FORM "mengganggu" ]@0@0@3@4@@@@
+5@822@token [ +FROM "35" +TO "38" +FORM "Adi" ]@0@0@4@5@@@@
+1@831@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@831@token [ +FROM "4" +TO "15" +FORM "membutuhkan" ]@0@0@1@2@@@@
+3@831@token [ +FROM "16" +TO "21" +FORM "waktu" ]@0@0@2@3@@@@
+4@831@token [ +FROM "22" +TO "29" +FORM "sepuluh" ]@0@0@3@4@@@@
+5@831@token [ +FROM "30" +TO "35" +FORM "menit" ]@0@0@4@5@@@@
+6@831@token [ +FROM "36" +TO "41" +FORM "untuk" ]@0@0@5@6@@@@
+7@831@token [ +FROM "42" +TO "48" +FORM "datang" ]@0@0@6@7@@@@
+1@841@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@841@token [ +FROM "4" +TO "14" +FORM "membiarkan" ]@0@0@1@2@@@@
+3@841@token [ +FROM "15" +TO "19" +FORM "Budi" ]@0@0@2@3@@@@
+4@841@token [ +FROM "20" +TO "32" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@851@token [ +FROM "0" +TO "4" +FORM "Budi" ]@0@0@0@1@@@@
+2@851@token [ +FROM "5" +TO "13" +FORM "terkejut" ]@0@0@1@2@@@@
+3@851@token [ +FROM "14" +TO "21" +FORM "melihat" ]@0@0@2@3@@@@
+4@851@token [ +FROM "22" +TO "25" +FORM "Adi" ]@0@0@3@4@@@@
+5@851@token [ +FROM "26" +TO "29" +FORM "tua" ]@0@0@4@5@@@@
+1@861@token [ +FROM "0" +TO "4" +FORM "Budi" ]@0@0@0@1@@@@
+2@861@token [ +FROM "5" +TO "15" +FORM "menganggap" ]@0@0@1@2@@@@
+3@861@token [ +FROM "16" +TO "19" +FORM "Adi" ]@0@0@2@3@@@@
+4@861@token [ +FROM "20" +TO "23" +FORM "tua" ]@0@0@3@4@@@@
+1@871@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@871@token [ +FROM "4" +TO "12" +FORM "menyukai" ]@0@0@1@2@@@@
+3@871@token [ +FROM "13" +TO "16" +FORM "ide" ]@0@0@2@3@@@@
+4@871@token [ +FROM "17" +TO "22" +FORM "bahwa" ]@0@0@3@4@@@@
+5@871@token [ +FROM "23" +TO "27" +FORM "Budi" ]@0@0@4@5@@@@
+6@871@token [ +FROM "28" +TO "32" +FORM "bisa" ]@0@0@5@6@@@@
+7@871@token [ +FROM "33" +TO "45" +FORM "menggonggong" ]@0@0@6@7@@@@
+1@881@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@881@token [ +FROM "4" +TO "16" +FORM "menggonggong" ]@0@0@1@2@@@@
+3@881@token [ +FROM "17" +TO "21" +FORM "dari" ]@0@0@2@3@@@@
+4@881@token [ +FROM "22" +TO "25" +FORM "jam" ]@0@0@3@4@@@@
+5@881@token [ +FROM "26" +TO "33" +FORM "sepuluh" ]@0@0@4@5@@@@
+6@881@token [ +FROM "34" +TO "40" +FORM "sampai" ]@0@0@5@6@@@@
+7@881@token [ +FROM "41" +TO "44" +FORM "jam" ]@0@0@6@7@@@@
+8@881@token [ +FROM "45" +TO "49" +FORM "tiga" ]@0@0@7@8@@@@
+1@891@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@891@token [ +FROM "4" +TO "10" +FORM "sangat" ]@0@0@1@2@@@@
+3@891@token [ +FROM "11" +TO "14" +FORM "tua" ]@0@0@2@3@@@@
+1@901@token [ +FROM "0" +TO "6" +FORM "Hampir" ]@0@0@0@1@@@@
+2@901@token [ +FROM "7" +TO "13" +FORM "setiap" ]@0@0@1@2@@@@
+3@901@token [ +FROM "14" +TO "20" +FORM "anjing" ]@0@0@2@3@@@@
+4@901@token [ +FROM "21" +TO "33" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@911@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@911@token [ +FROM "4" +TO "16" +FORM "menggonggong" ]@0@0@1@2@@@@
+3@911@token [ +FROM "17" +TO "23" +FORM "dengan" ]@0@0@2@3@@@@
+4@911@token [ +FROM "24" +TO "30" +FORM "sangat" ]@0@0@3@4@@@@
+5@911@token [ +FROM "31" +TO "36" +FORM "pelan" ]@0@0@4@5@@@@
+1@912@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@912@token [ +FROM "4" +TO "16" +FORM "menggonggong" ]@0@0@1@2@@@@
+3@912@token [ +FROM "17" +TO "23" +FORM "sangat" ]@0@0@2@3@@@@
+4@912@token [ +FROM "24" +TO "29" +FORM "pelan" ]@0@0@3@4@@@@
+1@921@token [ +FROM "0" +TO "8" +FORM "Tindakan" ]@0@0@0@1@@@@
+2@921@token [ +FROM "9" +TO "13" +FORM "Budi" ]@0@0@1@2@@@@
+3@921@token [ +FROM "14" +TO "22" +FORM "mengejar" ]@0@0@2@3@@@@
+4@921@token [ +FROM "23" +TO "36" +FORM "kucing-kucing" ]@0@0@3@4@@@@
+5@921@token [ +FROM "37" +TO "47" +FORM "mengganggu" ]@0@0@4@5@@@@
+6@921@token [ +FROM "48" +TO "51" +FORM "Adi" ]@0@0@5@6@@@@
+1@931@token [ +FROM "0" +TO "4" +FORM "Budi" ]@0@0@0@1@@@@
+2@931@token [ +FROM "5" +TO "14" +FORM "terganggu" ]@0@0@1@2@@@@
+3@931@token [ +FROM "15" +TO "21" +FORM "karena" ]@0@0@2@3@@@@
+4@931@token [ +FROM "22" +TO "25" +FORM "Adi" ]@0@0@3@4@@@@
+5@931@token [ +FROM "26" +TO "34" +FORM "mengejar" ]@0@0@4@5@@@@
+6@931@token [ +FROM "35" +TO "48" +FORM "kucing-kucing" ]@0@0@5@6@@@@
+1@932@token [ +FROM "0" +TO "5" +FORM "Bahwa" ]@0@0@0@1@@@@
+2@932@token [ +FROM "6" +TO "9" +FORM "Adi" ]@0@0@1@2@@@@
+3@932@token [ +FROM "10" +TO "18" +FORM "mengejar" ]@0@0@2@3@@@@
+4@932@token [ +FROM "19" +TO "32" +FORM "kucing-kucing" ]@0@0@3@4@@@@
+5@932@token [ +FROM "33" +TO "43" +FORM "mengganggu" ]@0@0@4@5@@@@
+6@932@token [ +FROM "44" +TO "48" +FORM "Budi" ]@0@0@5@6@@@@
+1@941@token [ +FROM "0" +TO "7" +FORM "Tanggal" ]@0@0@0@1@@@@
+2@941@token [ +FROM "8" +TO "12" +FORM "tiga" ]@0@0@1@2@@@@
+3@941@token [ +FROM "13" +TO "17" +FORM "Juni" ]@0@0@2@3@@@@
+4@941@token [ +FROM "18" +TO "24" +FORM "datang" ]@0@0@3@4@@@@
+1@951@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@951@token [ +FROM "4" +TO "10" +FORM "datang" ]@0@0@1@2@@@@
+3@951@token [ +FROM "11" +TO "15" +FORM "pada" ]@0@0@2@3@@@@
+4@951@token [ +FROM "16" +TO "19" +FORM "jam" ]@0@0@3@4@@@@
+5@951@token [ +FROM "20" +TO "24" +FORM "tiga" ]@0@0@4@5@@@@
+6@951@token [ +FROM "25" +TO "30" +FORM "lewat" ]@0@0@5@6@@@@
+7@951@token [ +FROM "31" +TO "34" +FORM "dua" ]@0@0@6@7@@@@
+8@951@token [ +FROM "35" +TO "40" +FORM "puluh" ]@0@0@7@8@@@@
+1@961@token [ +FROM "0" +TO "4" +FORM "Budi" ]@0@0@0@1@@@@
+2@961@token [ +FROM "5" +TO "11" +FORM "datang" ]@0@0@1@2@@@@
+3@961@token [ +FROM "12" +TO "16" +FORM "pada" ]@0@0@2@3@@@@
+4@961@token [ +FROM "17" +TO "21" +FORM "hari" ]@0@0@3@4@@@@
+5@961@token [ +FROM "22" +TO "28" +FORM "Selasa" ]@0@0@4@5@@@@
+6@961@token [ +FROM "29" +TO "33" +FORM "pagi" ]@0@0@5@6@@@@
+1@971@token [ +FROM "0" +TO "13" +FORM "Kucing-kucing" ]@0@0@0@1@@@@
+2@971@token [ +FROM "14" +TO "17" +FORM "itu" ]@0@0@1@2@@@@
+3@971@token [ +FROM "18" +TO "27" +FORM "menemukan" ]@0@0@2@3@@@@
+4@971@token [ +FROM "28" +TO "32" +FORM "cara" ]@0@0@3@4@@@@
+5@971@token [ +FROM "33" +TO "45" +FORM "menggonggong" ]@0@0@4@5@@@@
+1@972@token [ +FROM "0" +TO "16" +FORM "Kucing-kucingnya" ]@0@0@0@1@@@@
+2@972@token [ +FROM "17" +TO "26" +FORM "menemukan" ]@0@0@1@2@@@@
+3@972@token [ +FROM "27" +TO "31" +FORM "cara" ]@0@0@2@3@@@@
+4@972@token [ +FROM "32" +TO "44" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@981@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@981@token [ +FROM "7" +TO "11" +FORM "yang" ]@0@0@1@2@@@@
+3@981@token [ +FROM "12" +TO "17" +FORM "lebih" ]@0@0@2@3@@@@
+4@981@token [ +FROM "18" +TO "25" +FORM "bahagia" ]@0@0@3@4@@@@
+5@981@token [ +FROM "26" +TO "34" +FORM "mengejar" ]@0@0@4@5@@@@
+6@981@token [ +FROM "35" +TO "39" +FORM "Budi" ]@0@0@5@6@@@@
+1@991@token [ +FROM "0" +TO "3" +FORM "Ada" ]@0@0@0@1@@@@
+2@991@token [ +FROM "4" +TO "17" +FORM "kucing-kucing" ]@0@0@1@2@@@@
+3@991@token [ +FROM "18" +TO "20" +FORM "di" ]@0@0@2@3@@@@
+4@991@token [ +FROM "21" +TO "26" +FORM "taman" ]@0@0@3@4@@@@
+1@1001@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@1001@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@1001@token [ +FROM "11" +TO "19" +FORM "mengejar" ]@0@0@2@3@@@@
+4@1001@token [ +FROM "20" +TO "24" +FORM "Budi" ]@0@0@3@4@@@@
+1@1002@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@1002@token [ +FROM "10" +TO "18" +FORM "mengejar" ]@0@0@1@2@@@@
+3@1002@token [ +FROM "19" +TO "23" +FORM "Budi" ]@0@0@2@3@@@@
+1@1011@token [ +FROM "0" +TO "9" +FORM "Seseorang" ]@0@0@0@1@@@@
+2@1011@token [ +FROM "10" +TO "18" +FORM "mengejar" ]@0@0@1@2@@@@
+3@1011@token [ +FROM "19" +TO "22" +FORM "Adi" ]@0@0@2@3@@@@
+1@1021@token [ +FROM "0" +TO "8" +FORM "Seberapa" ]@0@0@0@1@@@@
+2@1021@token [ +FROM "9" +TO "16" +FORM "bahagia" ]@0@0@1@2@@@@
+3@1021@token [ +FROM "17" +TO "20" +FORM "Adi" ]@0@0@2@3@@@@
+1@1031@token [ +FROM "0" +TO "5" +FORM "Nomor" ]@0@0@0@1@@@@
+2@1031@token [ +FROM "6" +TO "10" +FORM "lima" ]@0@0@1@2@@@@
+3@1031@token [ +FROM "11" +TO "21" +FORM "mengganggu" ]@0@0@2@3@@@@
+4@1031@token [ +FROM "22" +TO "26" +FORM "Budi" ]@0@0@3@4@@@@
+1@1041@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@1041@token [ +FROM "4" +TO "8" +FORM "bisa" ]@0@0@1@2@@@@
+1@1042@token [ +FROM "0" +TO "3" +FORM "Adi" ]@0@0@0@1@@@@
+2@1042@token [ +FROM "4" +TO "10" +FORM "dahulu" ]@0@0@1@2@@@@
+3@1042@token [ +FROM "11" +TO "15" +FORM "bisa" ]@0@0@2@3@@@@
+1@1051@token [ +FROM "0" +TO "4" +FORM "Budi" ]@0@0@0@1@@@@
+2@1051@token [ +FROM "5" +TO "12" +FORM "mencoba" ]@0@0@1@2@@@@
+1@1061@token [ +FROM "0" +TO "6" +FORM "Jangan" ]@0@0@0@1@@@@
+2@1061@token [ +FROM "7" +TO "19" +FORM "menggonggong" ]@0@0@1@2@@@@
+1@1062@token [ +FROM "0" +TO "9" +FORM "Janganlah" ]@0@0@0@1@@@@
+2@1062@token [ +FROM "10" +TO "22" +FORM "menggonggong" ]@0@0@1@2@@@@
+1@1071@token [ +FROM "0" +TO "6" +FORM "Anjing" ]@0@0@0@1@@@@
+2@1071@token [ +FROM "7" +TO "10" +FORM "itu" ]@0@0@1@2@@@@
+3@1071@token [ +FROM "11" +TO "17" +FORM "datang" ]@0@0@2@3@@@@
+4@1071@token [ +FROM "18" +TO "30" +FORM "menggonggong" ]@0@0@3@4@@@@
+1@1072@token [ +FROM "0" +TO "9" +FORM "Anjingnya" ]@0@0@0@1@@@@
+2@1072@token [ +FROM "10" +TO "16" +FORM "datang" ]@0@0@1@2@@@@
+3@1072@token [ +FROM "17" +TO "29" +FORM "menggonggong" ]@0@0@2@3@@@@
