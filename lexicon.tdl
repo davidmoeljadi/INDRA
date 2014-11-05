@@ -108,10 +108,6 @@ sampai := intr-verb-lex &
   [ STEM < "sampai" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sampai_v_rel" ].
 
-ada := intr-verb-lex &
-  [ STEM < "ada" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel" ].
-
 menggonggong := intr-verb-lex &
   [ STEM < "menggonggong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_menggonggong_v_rel" ].
