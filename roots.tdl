@@ -21,4 +21,4 @@ lex-root := word-or-lexrule.
 
 ;; Also need to add root constraint for bridged phrases
 root-bridge := phrase &
-  [ SYNSEM.LOCAL.CAT.HEAD bridge-head].
+  [ SYNSEM.LOCAL.CAT.HEAD bridge-head & [ BRIDGED + ] ].

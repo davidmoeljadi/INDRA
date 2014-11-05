@@ -143,8 +143,3 @@
 ; (setf *bypass-equality-check* t)
 
 (setf *translate-grid* '(:ind :en))
-
-;; Also need to add root-bridge to start symbols in grammar/lkb/globals.lsp (no cmma, just with a space)
-; e.g. 
-(setf *start-symbol* 
-  '(root root-bridge))

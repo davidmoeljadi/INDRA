@@ -33,9 +33,9 @@ diff-list-type            := diff-list.
 
 deleted-daughters := ARGS HEAD-DTR NON-HEAD-DTR DTR.
 
-parsing-packing-restrictor := STEM RELS HCONS RNAME.
+parsing-packing-restrictor := STEM RELS HCONS RULE-NAME.
 
-generation-packing-restrictor := STEM RELS HCONS RNAME.
+generation-packing-restrictor := STEM RELS HCONS RULE-NAME.
 
 mrs-deleted-roles := 
   IDIOMP LNK CFROM CTO --PSV WLINK PARAMS.
