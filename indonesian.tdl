@@ -500,23 +500,28 @@ adjective-lex := basic-adjective-lex & intersective-mod-lex &
 
 ;;; Adverbs
 
-adverb-lex := basic-adverb-lex & intersective-mod-lex &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ cons,
+adverb-lex := basic-int-adverb-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < [ ], ... >,
 							  COMPS < > ],
 						    HEAD verb ] ]>,
 			   VAL [ SPR < >,
 				 SUBJ < >,
 				 COMPS < >,
-				 SPEC < > ],
-			   POSTHEAD - ]]]].
+				 SPEC < > ] ]]]].
 
-adverb-time-lex := basic-adverb-lex & intersective-mod-lex &
+adverb-post-lex := adverb-lex &
+  [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
+
+adverb-pre-lex := adverb-lex &
+  [ SYNSEM.LOCAL.CAT.POSTHEAD - ].
+
+adverb-time-lex := basic-int-adverb-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ COMPS < > ],
 						    HEAD verb ] ]>,
 			   VAL [ SPR < >,
 				 SUBJ < >,
 				 COMPS < >,
-				 SPEC < > ]]]]].
+				 SPEC < > ] ]]]].
 
 ;;; Adpositions
 
