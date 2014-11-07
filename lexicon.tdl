@@ -37,6 +37,18 @@ rokok := common-noun-lex &
   [ STEM < "rokok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rokok_n_rel" ].
 
+nasi := common-noun-lex &
+  [ STEM < "nasi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_nasi_n_rel" ].
+
+gajah := common-noun-lex &
+  [ STEM < "gajah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_gajah_n_rel" ].
+
+hidung := common-noun-lex &
+  [ STEM < "hidung" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hidung_n_rel" ].
+
 ;;; Personal names
 
 adi := common-noun-lex &
@@ -252,15 +264,33 @@ jelas := adjective-lex &
   [ STEM < "jelas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jelas_a_rel" ].
 
+pelan := adjective-lex &
+  [ STEM < "pelan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pelan_a_rel" ].
+
+panjang := adjective-lex &
+  [ STEM < "panjang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_panjang_a_rel" ].
+
 ;;; Adverbs of frequency
 
-sering := adverb-lex &
+sering := adverb-pre-lex &
   [ STEM < "sering" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sering_a_rel" ].
 
-jarang := adverb-lex &
+jarang := adverb-pre-lex &
   [ STEM < "jarang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jarang_a_rel" ].
+
+kadang-kadang := adverb-pre-lex &
+  [ STEM < "kadang-kadang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kadang-kadang_a_rel" ].
+
+;;; Adverbs of manner
+
+pelan := adverb-post-lex &
+  [ STEM < "pelan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pelan_a_rel" ].
 
 ;;;; Adverbs of time
 
