@@ -16,5 +16,5 @@
 (defparameter LKB::*SHOW-LEX-RULES* 'T)
 (defparameter LKB::*SHOW-MORPHOLOGY* 'T)
 (defparameter LKB::*SHOW-SPELLING-RULES* 'T)
-(defparameter LKB::*START-SYMBOL* '(LKB::ROOT LKB::ROOT-BRIDGE))
+(defparameter LKB::*START-SYMBOL* '(LKB::ROOT))
 (defparameter LKB::*TYPE-TREE-FONT-SIZE* '12)
