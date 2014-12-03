@@ -49,13 +49,17 @@ hidung := common-noun-lex &
   [ STEM < "hidung" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hidung_n_rel" ].
 
+hal := common-noun-lex &
+  [ STEM < "hal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hal_n_rel" ].
+
 ;;; Personal names
 
-adi := common-noun-lex &
+Adi := common-noun-lex &
   [ STEM < "Adi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_adi_n_rel" ].
 
-budi := common-noun-lex &
+Budi := common-noun-lex &
   [ STEM < "Budi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_budi_n_rel" ].
 
@@ -132,6 +136,10 @@ mengejar := tr-verb-lex &
   [ STEM < "mengejar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mengejar_v_rel" ].
 
+melakukan := tr-verb-lex &
+  [ STEM < "melakukan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_melakukan_v_rel" ].
+
 ;tanya := tr-verb-lex &
 ;  [ STEM < "tanya" >,
 ;    SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel" ].
@@ -139,10 +147,6 @@ mengejar := tr-verb-lex &
 tanya_1 := tr-verb-lex &
   [ STEM < "tanya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel" ].
-
-bukan := tr-verb-lex &
-  [ STEM < "bukan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_bukan_v_rel" ].
 
 makan := opt-tr-verb-lex &
   [ STEM < "makan" >,
@@ -179,6 +183,34 @@ tahu_3 := prop-comp-verb-lex &
 ada := locative-verb-lex &
   [ STEM < "ada" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel" ].
+
+tampak := trans-first-arg-raising-verb &
+  [ STEM < "tampak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tampak_v_rel" ].
+
+mengharapkan := distrans-second-arg-raising-verb &
+  [ STEM < "mengharapkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mengharapkan_v_rel" ].
+
+mencoba := trans-first-arg-control-verb &
+  [ STEM < "mencoba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mencoba_v_rel" ].
+
+berharap := trans-first-arg-control-verb &
+  [ STEM < "berharap" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_berharap_v_rel" ].
+
+ingin := trans-first-arg-control-verb &
+  [ STEM < "ingin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ingin_v_rel" ].
+
+menyuruh := ditrans-second-arg-control-verb &
+  [ STEM < "menyuruh" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_menyuruh_v_rel" ].
+
+berjanji := ditrans-first-arg-control-verb &
+  [ STEM < "berjanji" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_berjanji_v_rel" ].
 
 ;;; Auxiliaries
 
@@ -219,6 +251,10 @@ itu_2 := determinative-determiner-lex &
 di := adposition-lex &
   [ STEM < "di" >,
     SYNSEM.LKEYS.KEYREL.PRED "_di_p_rel" ].
+
+ke := adposition-lex &
+  [ STEM < "ke" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ke_p_rel" ].
 
 ;;; Question particles
 
@@ -305,6 +341,10 @@ kemarin := adverb-time-lex &
 sekarang := adverb-time-lex &
   [ STEM < "sekarang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sekarang_a_rel" ].
+
+segera := adverb-time-lex &
+  [ STEM < "segera" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_segera_a_rel" ].
 
 ;;;; Adverbs of place
 

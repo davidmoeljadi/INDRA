@@ -286,11 +286,11 @@ n-enclitic-lex-rule-super := same-non-local-lex-rule &
 			     same-posthead-lex-rule &
 			     same-mc-lex-rule &
 			     infl-lex-rule & 
-			     no-icons-rule &
   [ SYNSEM.LOCAL.CAT.VAL [ SPR <>,
 			   SUBJ <>,
 			   COMPS <>,
 			   SPEC <> ],
+    C-CONT.ICONS <! !>,
     DTR common-noun-lex ].
 
 nya-lex-rule := n-enclitic-lex-rule-super.
@@ -314,12 +314,13 @@ subj-head-nmc-phrase := basic-head-subj-nmc-phrase & head-final &
   [ SYNSEM.LOCAL.CAT.MC -,
     HEAD-DTR.SYNSEM.NON-LOCAL.SLASH.LIST < [ CONT.HOOK.ICONS-KEY focus-or-topic ] > ].
 
-infostr-dislocated-phrase := no-rels-hcons-rule & narrow-focus &
+infostr-dislocated-phrase := narrow-focus &
   [ SYNSEM.LOCAL.CAT [ MC +,
                        VAL.SUBJ < > ],
-    C-CONT.ICONS <! info-str & #icons &
-                    [ TARGET #index,
-                      CLAUSE #clause ] !>,
+    C-CONT [ RELS <! !>, HCONS <! !>,
+	     ICONS <! info-str & #icons &
+                    [ IARG2 #index,
+                      IARG1 #clause ] !> ],
     HEAD-DTR.SYNSEM.LOCAL [ CAT [ MC -,
                                   HEAD verb ],
                             CONT.HOOK [ INDEX #clause,
@@ -427,6 +428,131 @@ locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-1 &
              #comps &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
                            HEAD adp ] ] > ].
+
+
+trans-first-arg-raising-verb := main-verb-lex & trans-first-arg-raising-lex-item & no-hcons-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL arg1-relation & [ ARG1 #arg1 ],
+		LOCAL [ CAT.VAL [ SPR < >,
+                            SPEC < >,
+                            COMPS < #comps >,
+                            SUBJ < #subj > ],
+                  CONT.HOOK.XARG #xarg ] ],
+    ARG-ST < #subj &
+            [ LOCAL [ CAT [ HEAD noun,
+                            VAL [ SUBJ < >,
+                                  SPR < >,
+                                  SPEC < >,
+                                  COMPS < > ] ],
+                      CONT.HOOK.INDEX #xarg ] ],
+            #comps &
+            [ LOCAL [ CONT.HOOK.INDEX #arg1,
+			CAT [ HEAD verb &
+                                [ AUX - ],
+                          VAL [ COMPS < >,
+                                SPR < >,
+                                SPEC < >,
+                                SUBJ < [ ] > ] ] ] ] > ].
+
+trans-first-arg-control-verb := main-verb-lex & trans-first-arg-control-lex-item & 
+  [ SYNSEM [ 
+		LOCAL [ CAT.VAL [ SPR < >,
+                            SPEC < >,
+                            COMPS < #comps >,
+                            SUBJ < #subj > ] ] ],
+    ARG-ST < #subj &
+            [ LOCAL [ CAT [ HEAD noun,
+                            VAL [ SUBJ < >,
+                                  SPR < >,
+                                  SPEC < >,
+                                  COMPS < > ] ] ] ],
+            #comps &
+            [ LOCAL [ 
+			CAT [ HEAD verb &
+                                [ AUX - ],
+                          VAL [ COMPS < >,
+                                SPR < >,
+                                SPEC < >,
+                                SUBJ < [ ] > ] ] ] ] > ].
+
+
+ditrans-first-arg-control-verb := main-verb-lex & basic-three-arg & basic-icons-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG1 #ind1,
+                            ARG2 #ind2,
+                            ARG3 #harg ],
+	     LOCAL [ CONT [ HOOK.CLAUSE-KEY #clause,
+			   HCONS <! qeq & [ HARG #harg,
+					    LARG #larg ] !> ],
+                     CAT.VAL [ SPR < >,
+                            SPEC < >,
+                            COMPS < #comp1, #comp2 >,
+                            SUBJ < #subj > ] ] ],
+    ARG-ST < #subj &
+            [ LOCAL [ CONT.HOOK [ INDEX ref-ind & #ind1,
+				  ICONS-KEY.IARG1 #clause,
+				  CLAUSE-KEY #clause ],
+		      CAT [ HEAD noun,
+                            VAL [ SUBJ < >,
+                                  SPR < >,
+                                  SPEC < >,
+                                  COMPS < > ] ] ] ],
+	    #comp1 & [ LOCAL.CONT.HOOK [ INDEX #ind2,
+				  ICONS-KEY.IARG1 #clause,
+				  CLAUSE-KEY #clause ] ],
+            #comp2 &
+            [ LOCAL [ CONT.HOOK [ XARG #ind1,
+				  LTOP #larg,
+				  ICONS-KEY.IARG1 #clause,
+				  CLAUSE-KEY #clause ],
+			CAT [ HEAD verb &
+                                [ AUX - ],
+                          VAL [ COMPS < >,
+                                SPR < >,
+                                SPEC < >,
+                                SUBJ < [ ] > ] ] ] ] > ].
+
+ditrans-second-arg-control-verb := main-verb-lex & ditrans-second-arg-control-lex-item & 
+  [ SYNSEM [ 
+		LOCAL [ CAT.VAL [ SPR < >,
+                            SPEC < >,
+                            COMPS < #comp1, #comp2 >,
+                            SUBJ < #subj > ] ] ],
+    ARG-ST < #subj &
+            [ LOCAL [ CAT [ HEAD noun,
+                            VAL [ SUBJ < >,
+                                  SPR < >,
+                                  SPEC < >,
+                                  COMPS < > ] ] ] ],
+	    #comp1 & [],
+            #comp2 &
+            [ LOCAL [ 
+			CAT [ HEAD verb &
+                                [ AUX - ],
+                          VAL [ COMPS < >,
+                                SPR < >,
+                                SPEC < >,
+                                SUBJ < [ ] > ] ] ] ] > ].
+
+distrans-second-arg-raising-verb := main-verb-lex & distrans-second-arg-raising-lex-item & 
+  [ SYNSEM [ 
+		LOCAL [ CAT.VAL [ SPR < >,
+                            SPEC < >,
+                            COMPS < #comp1, #comp2 >,
+                            SUBJ < #subj > ] ] ],
+    ARG-ST < #subj &
+            [ LOCAL [ CAT [ HEAD noun,
+                            VAL [ SUBJ < >,
+                                  SPR < >,
+                                  SPEC < >,
+                                  COMPS < > ] ] ] ],
+	    #comp1 & [],
+            #comp2 &
+            [ LOCAL [ 
+			CAT [ HEAD verb &
+                                [ AUX - ],
+                          VAL [ COMPS < >,
+                                SPR < >,
+                                SPEC < >,
+                                SUBJ < [ ] > ] ] ] ] > ].
 
 ;;; Complementizers
 

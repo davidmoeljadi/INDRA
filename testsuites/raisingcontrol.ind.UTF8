@@ -1,0 +1,106 @@
+Language: Indonesian
+Language code: ind
+Lines: orth translit gloss translat
+Author: David Moeljadi
+Date: 2014-12-2
+Source a: I Wayan Arka (2000) Control and argument structure: explaining control into subject in Indonesian. Paper presented at the fourth International Symposium on Malay/Indonesian Linguistics, Jakarta, 26 July 2000.
+
+Id: 1
+Source: a:1 modified
+Vetted: t
+Judgment: g
+Phenom: subject control
+Mereka sudah mencoba makan nasi.
+mereka sudah meN-coba makan nasi
+3PL already AV-try eat rice
+They have tried to eat rice.
+
+Id: 2
+Source: a:1 modified
+Vetted: t
+Judgment: g
+Phenom: subject control, passive
+Makan nasi sudah mereka coba.
+makan nasi sudah mereka coba
+eat rice already 3PL OV-try
+To eat rice was tried by them.
+
+Id: 3
+Source: a:5 modified
+Vetted: t
+Judgment: g
+Phenom: object control
+Adi menyuruh Budi segera melakukan hal itu.
+Adi meN-suruh Budi segera meN-laku-kan hal itu
+Adi AV-ask Budi soon AV-do-APP thing that
+Adi asked Budi to do that thing soon.
+
+Id: 4
+Source: a:5 modified
+Vetted: t
+Judgment: g
+Phenom: object control, passive
+Budi disuruh Adi segera melakukan hal itu.
+Budi di-suruh Adi segera meN-laku-kan hal itu
+Budi PASS-ask Adi soon AV-do-APP thing that
+Budi was asked by Adi to do that thing soon.
+
+Id: 5
+Source: a:6 modified
+Vetted: t
+Judgment: u
+Phenom: subject control
+Adi mencoba dia makan nasi.
+Adi meN-coba dia makan nasi
+Adi AV-try 3SG eat rice
+(lit.) Adi tried him to eat rice.
+
+Id: 6
+Source: a:15 modified
+Vetted: t
+Judgment: g
+Phenom: subject raising
+Tampak Budi lapar
+tampak Budi lapar
+appear Budi hungry
+It seemed that Budi was hungry.
+
+Id: 7
+Source: a:15 modified
+Vetted: t
+Judgment: g
+Phenom: subject raising
+Budi tampak lapar.
+Budi tampak lapar
+Budi appear hungry
+Budi looked hungry.
+
+Id: 8
+Source: a:15 modified
+Vetted: t
+Judgment: u
+Phenom: subject raising
+Budi lapar tampak.
+Budi lapar tampak
+Budi hungry appear
+Budi looked hungry.
+
+Id: 9
+Source: a:17 modified
+Vetted: t
+Judgment: g
+Phenom: object raising
+Dia mengharapkan anjingnya menggonggong.
+dia meN-harap-kan anjing=nya meN-gonggong
+3SG AV-hope-APP dog=3SG AV-bark
+He expected his dog to bark.
+
+Id: 10
+Source: a:17 modified
+Vetted: t
+Judgment: g
+Phenom: object raising, passive
+Anjingnya dia harapkan menggonggong.
+anjing=nya dia harap-kan meN-gonggong
+dog=3SG 3SG hope-APP AV-bark
+His dog was expected by him to bark.
