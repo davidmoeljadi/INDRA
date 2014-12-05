@@ -21,6 +21,10 @@ tempat := common-noun-lex &
   [ STEM < "tempat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tempat_n_rel" ].
 
+waktu := common-noun-lex &
+  [ STEM < "waktu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_waktu_n_rel" ].
+
 taman := common-noun-lex &
   [ STEM < "taman" >,
     SYNSEM.LKEYS.KEYREL.PRED "_taman_n_rel" ].
@@ -52,6 +56,10 @@ hidung := common-noun-lex &
 hal := common-noun-lex &
   [ STEM < "hal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hal_n_rel" ].
+
+kenyataan := common-noun-lex &
+  [ STEM < "kenyataan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kenyataan_n_rel" ].
 
 ;;; Personal names
 
@@ -103,6 +111,10 @@ itu_1 := demonstrative-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_itu_n_rel" ].
 
 ;;; Verbs
+
+berjalan := intr-verb-lex &
+  [ STEM < "berjalan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_berjalan_v_rel" ].
 
 jatuh := intr-verb-lex &
   [ STEM < "jatuh" >,
@@ -230,7 +242,7 @@ akan := aspect_fut-aux-lex &
 ;belum := n+asp-lex &
 ;  [ STEM < "belum" >,
 ;    SYNSEM.LKEYS [KEYREL.PRED "_tidak_neg_rel",
-;		  ALTKEYREL.PRED "_sudah_aspect_rel" ]].
+;		  ALTKEYREL.PRED "sudah" ]].
 
 bisa := can-aux &
   [ STEM < "bisa" >,
@@ -255,6 +267,10 @@ di := adposition-lex &
 ke := adposition-lex &
   [ STEM < "ke" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ke_p_rel" ].
+
+pada := adposition-lex &
+  [ STEM < "pada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pada_p_rel" ].
 
 ;;; Question particles
 
@@ -300,7 +316,7 @@ jelas := adjective-lex &
   [ STEM < "jelas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jelas_a_rel" ].
 
-pelan := adjective-lex &
+pelan_1 := adjective-lex &
   [ STEM < "pelan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pelan_a_rel" ].
 
@@ -324,9 +340,13 @@ kadang-kadang := adverb-pre-lex &
 
 ;;; Adverbs of manner
 
-pelan := adverb-post-lex &
+pelan_2 := adverb-post-lex &
   [ STEM < "pelan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pelan_a_rel" ].
+
+pelan-pelan := adverb-post-lex &
+  [ STEM < "pelan-pelan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pelan-pelan_a_rel" ].
 
 ;;;; Adverbs of time
 

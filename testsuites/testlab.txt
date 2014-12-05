@@ -1,0 +1,1430 @@
+Language: Indonesian
+Language code: ind
+Author: David Moeljadi
+Date: 2014-12-05
+
+#1
+#word order, transitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {wo}
+Saya makan kue
+saya makan kue
+1sg eat cake
+'I eat cake(s).'
+
+#2
+#word order, transitive
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {wo}
+Saya kue makan
+Saya kue makan
+1sg cake eat
+'I eat cake(s).'
+#ungrammatical because the word order is SOV
+
+#3
+#word order, transitive, information structure (passive)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {wo, info}
+Kue saya makan
+kue saya makan
+cake 1sg eat
+'Cake(s) is eaten by me.'
+#passive if the word order is OSV and S is a personal pronoun
+
+#4
+#word order, transitive
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {wo}
+Makan saya kue
+makan saya kue
+eat 1sg cake
+'I eat cake(s).'
+#ungrammatical because the word order is VSO
+
+#5
+#word order, transitive, imperative
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {wo, imp}
+Makan kue saya
+makan kue saya
+eat cake 1sg
+'(you) eat my cake!'
+#the word order is VOS, but here "kue saya" becomes a NP, and is regarded as an Object.
+
+#6
+#word order, transitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {wo}
+Kue makan saya
+kue makan saya
+cake eat 1sg
+'Cake(s) eats me.'
+#syntactically grammatical
+
+#7
+#word order, intransitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {wo}
+Saya tidur
+saya tidur
+1sg sleep
+'I sleep.'
+
+#8
+#word order, intransitive
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {wo}
+Tidur saya
+tidur saya
+sleep 1sg
+'I sleep.'
+#ungrammatical because the word order is VS
+
+#9
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Saya bunuh kamu
+saya bunuh kamu
+1sg kill 2sg
+'I kill you.'
+
+#10
+#word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {wo}
+Bunuh kamu saya
+bunuh kamu saya
+kill 2sg 1sg
+'I kill you.'
+#ungrammatical because the word order is VOS
+
+#11
+#word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {wo}
+Bunuh saya kamu
+bunuh saya kamu
+kill 1sg 2sg
+'You kill me.'
+#ungrammatical because the word order is VOS
+
+#12
+#word order, information structure (passive)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {wo, info}
+Kamu saya bunuh
+kamu saya bunuh
+2sg 1sg kill
+'You are killed by me.'
+#passive, the word order is S(Patient)-(Agent)-V and the Agent is a personal pronoun
+
+#13
+#word order, information structure (passive)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {wo, info}
+Saya kamu bunuh
+saya kamu bunuh
+1sg 2sg kill
+'I am killed by you.'
+#passive, the word order is S(Patient)-(Agent)-V and the Agent is a personal pronoun
+
+#14
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Kamu bunuh saya
+Kamu bunuh saya
+2sg kill 1sg
+'You kill me.'
+
+#15
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Dia bunuh saya
+dia bunuh saya
+3sg kill 1sg
+'He/She kills me.'
+
+#16
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Dia bunuh kamu
+dia bunuh kamu
+3sg kill 2sg
+'He/She kills you.'
+
+#17
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Saya bunuh dia
+saya bunuh dia
+1sg kill 3sg
+'I kill him/her.'
+
+#18
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Kamu bunuh dia
+kamu bunuh dia
+2sg kill 3sg
+'You kill him/her.'
+
+#19
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Kami bunuh kalian
+kami bunuh kalian
+1pl.ec kill 2pl
+'We kill you.'
+
+#20
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Kami bunuh mereka
+kami bunuh mereka
+1pl.ec kill 3pl
+'We kill them.'
+
+#21
+#pronouns
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {pn}
+Kita bunuh kalian
+kita bunuh kalian
+1pl.ic kill 2pl
+'We kill you.'
+#ungrammatical because kita is inclusive
+
+#22
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Kita bunuh mereka
+kita bunuh mereka
+1pl.ic kill 3pl
+'We kill you.'
+
+#23
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Kalian bunuh kami
+kalian bunuh kami
+2pl kill 1pl.ec
+'You kill us.'
+
+#24
+#pronouns
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {pn}
+Kalian bunuh kita
+kalian bunuh kita
+2pl kill 1pl.ic
+'You kill us.'
+#ungrammatical because kita is inclusive
+
+#25
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Mereka bunuh kami
+mereka bunuh kami
+3pl kill 1pl.ec
+'They kill us.'
+
+#26
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Mereka bunuh kita
+mereka bunuh kita
+3pl kill 1pl.ic
+'They kill us.'
+
+#27
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Mereka bunuh kalian
+mereka bunuh kalian
+3pl kill 2pl
+'They kill you.'
+
+#28
+#pronouns
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+Kalian bunuh mereka
+kalian bunuh mereka
+2pl kill 3pl
+'You kill them.'
+
+#29
+#determiners, definite
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {det}
+Bukunya jatuh
+buku=nya jatuh
+book=det fall
+'The book falls.'
+#=nya is a clitic and is a definite marker
+
+#30
+#determiners, definite
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {det}
+Buku jatuh
+buku jatuh
+book fall
+'The book falls.'
+#ungrammatical because the subject is neither definite nor indefinite
+
+#31
+#numeral classifiers, indefinite
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {numcl}
+Sebuah buku jatuh
+se-buah buku jatuh
+one-cl book fall
+'A book falls.'
+#indefinite noun with a numeral classifier
+
+#32
+#aspect, perfect, transitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam}
+Saya sudah makan kue
+saya sudah makan kue
+1sg perf eat cake
+'I have eaten cake(s)'
+
+#33
+#aspect, perfect, intransitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam}
+Saya sudah tidur
+saya sudah tidur
+1sg perf sleep
+'I have slept'
+
+#34
+#aspect, perfect, negation, transitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam, neg}
+Saya belum makan kue
+saya belum makan kue
+1sg not.yet eat cake
+'I have not eaten cake(s) yet'
+
+#35
+#aspect, perfect, negation, intransitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam, neg}
+Saya belum tidur
+saya belum tidur
+1sg not.yet sleep
+'I have not slept yet'
+
+#36
+#aspect, progressive, transitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam}
+Saya sedang makan kue
+saya sedang makan kue
+1sg prog eat cake
+'I am eating cake(s)'
+
+#37
+#aspect, progressive, intransitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam}
+Saya sedang tidur
+saya sedang tidur
+1sg prog sleep
+'I am sleeping'
+
+#38
+#aspect, progressive, negation, transitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam, neg}
+Saya tidak sedang makan kue
+saya tidak sedang makan kue
+1sg neg prog eat cake
+'I am not eating cake(s)'
+
+#39
+#aspect, progressive, negation, intransitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam, neg}
+Saya tidak sedang tidur
+saya tidak sedang tidur
+1sg neg prog sleep
+'I am not sleeping'
+
+#40
+#aspect, future, transitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam}
+Saya akan makan kue
+saya akan makan kue
+1sg fut eat cake
+'I will eat cake(s)'
+
+#41
+#aspect, future, intransitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam}
+Saya akan tidur
+saya akan tidur
+1sg fut sleep
+'I will sleep'
+
+#42
+#aspect, future, negation, transitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam, neg}
+Saya tidak akan makan kue
+saya tidak akan makan kue
+1sg neg fut eat cake
+'I will not eat cake(s)'
+
+#43
+#aspect, future, negation, intransitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tam, neg}
+Saya tidak akan tidur
+saya tidak akan tidur
+1sg neg fut sleep
+'I will not sleep'
+
+#44
+#word order, negation, transitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {wo, neg}
+Saya tidak makan kue
+saya tidak makan kue
+1sg neg eat cake
+'I do not eat cake(s).'
+
+#45
+#word order, negation, transitive
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {wo, neg}
+Tidak saya makan kue
+tidak saya makan kue
+neg 1sg eat cake
+'I do not eat cake(s).'
+#ungrammatical because the negative marker "tidak" should be before a verb
+
+#46
+#word order, negation, transitive
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {wo, neg}
+Saya makan tidak kue
+saya makan tidak kue
+1sg eat neg cake
+'I do not eat cake(s).'
+#ungrammatical because the negative marker "tidak" should be before a verb
+
+#47
+#word order, negation, transitive
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {wo, neg}
+Saya makan kue tidak
+saya makan kue tidak
+1sg eat cake neg
+'I do not eat cake(s).'
+#ungrammatical because the negative marker "tidak" should be before a verb
+
+#48
+#word order, negation, intransitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {wo, neg}
+Saya tidak tidur
+saya tidak tidur
+1sg neg sleep
+'I do not sleep.'
+
+#49
+#word order, negation, intransitive
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {wo, neg}
+Tidak saya tidur
+tidak saya tidur
+neg 1sg sleep
+'I do not sleep.'
+#ungrammatical because the negative marker "tidak" should be before a verb
+
+#50
+#word order, negation, intransitive
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {wo, neg}
+Saya tidur tidak
+saya tidur tidak
+1sg sleep neg
+'I do not sleep.'
+#ungrammatical because the negative marker "tidak" should be before a verb
+
+#51
+#cognitive status (demonstratives, proximal)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cogst}
+Ini kue
+ini kue
+this cake
+'This is cake(s).'
+
+#52
+#cognitive status (demonstratives, distal)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cogst}
+Itu kue
+itu kue
+that cake
+'That is cake(s).'
+
+#53
+#cognitive status (demonstratives, proximal), word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cogst, wo}
+Kue ini
+kue ini
+cake this
+'This is cake(s).'
+#"kue ini" is a NP, means "this cake(s)"
+
+#54
+#cognitive status (demonstratives, distal), word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cogst, wo}
+Kue itu
+kue itu
+cake that
+'That is cake(s).'
+#"kue itu" is a NP, means "that cake(s)"
+
+#55
+#cognitive status (demonstratives, proximal), negation
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cogst, neg}
+Ini bukan kue
+ini bukan kue
+this neg cake
+'This is not cake(s).'
+#"bukan" is a negation marker for NP
+
+#56
+#cognitive status (demonstratives, distal), negation
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cogst, neg}
+Itu bukan kue
+itu bukan kue
+that neg cake
+'That is not cake(s).'
+#"bukan" is a negation marker for NP
+
+#57
+#cognitive status (demonstratives, proximal), negation
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cogst, neg}
+Ini tidak kue
+ini tidak kue
+this neg cake
+'This is not cake(s).'
+#"tidak" is a negation marker for VP and Adj
+
+#58
+#cognitive status (demonstratives, distal), negation
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cogst, neg}
+Itu tidak kue
+itu tidak kue
+that neg cake
+'That is not cake(s).'
+#"tidak" is a negation marker for VP and Adj
+
+#59
+#cognitive status (demonstratives, proximal), negation, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cogst, neg, wo}
+Bukan ini kue
+bukan ini kue
+neg this cake
+'This is not cake(s).'
+#"bukan" should be before NP
+
+#60
+#cognitive status (demonstratives, proximal), negation, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cogst, neg, wo}
+Ini kue bukan
+ini kue bukan
+this cake neg
+'This is not cake(s).'
+#"bukan" should be before NP
+
+#61
+#cognitive status (demonstratives, proximal)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cogst}
+Saya makan kue ini
+saya makan kue ini
+1sg eat cake this
+'I eat this cake.'
+
+#62
+#cognitive status (demonstratives, distal)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cogst}
+Saya makan kue itu
+saya makan kue itu
+1sg eat cake that
+'I eat that cake.'
+
+#63
+#cognitive status (demonstratives, proximal)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cogst}
+Saya makan ini kue
+saya makan ini kue
+1sg eat this cake
+'I eat this cake.'
+
+#64
+#cognitive status (demonstratives, distal)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cogst}
+Saya makan itu kue
+saya makan itu kue
+1sg eat that cake
+'I eat that cake.'
+
+#65
+#semantic decomposition
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cogst}
+Saya tidur di sini
+saya tidur di sini
+1sg sleep at here
+'I sleep here.'
+#sini 'here' is decomposed into tempat 'place' and ini 'this'
+
+#66
+#non-verbal predicates
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cop}
+Saya kucing
+saya kucing
+1sg cat
+'I am a cat.'
+
+#67
+#non-verbal predicates
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cop}
+Mobil ini baru
+mobil ini baru
+car this new
+'This car is new.'
+
+#68
+#non-verbal predicates
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cop}
+Kucing itu di taman
+kucing itu di taman
+cat that at park
+'That cat is at a park.'
+
+#69
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo}
+Jarang dia makan kue
+jarang dia makan kue
+seldom 3sg eat cake
+'He/She seldom eats cakes.'
+
+#70
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo}
+Dia jarang makan kue
+dia jarang makan kue
+3sg seldom eat cake
+'He/She seldom eats cakes.'
+
+#71
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adv, wo}
+Dia makan jarang kue
+dia makan jarang kue
+3sg eat seldom cake
+'He/She seldom eats cakes.'
+
+#72
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adv, wo}
+Dia makan kue jarang
+dia makan kue jarang
+3sg eat cake seldom
+'He/She seldom eats cakes.'
+
+#73
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo}
+Besok kamu makan kue
+besok kamu makan kue
+tomorrow 2sg eat cake
+'You eat cakes tomorrow.'
+
+#74
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo}
+Kamu besok makan kue
+kamu besok makan kue
+2sg tomorrow eat cake
+'You eat cakes tomorrow.'
+
+#75
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adv, wo}
+Kamu makan besok kue
+kamu makan besok kue
+2sg tomorrow eat cake
+'You eat cakes tomorrow.'
+
+#76
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo}
+Kamu makan kue besok
+kamu makan kue besok
+2sg eat cake tomorrow
+'You eat cakes tomorrow.'
+
+#77
+#attributive adjectives, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adj, wo}
+Buku baru itu jatuh
+buku baru itu jatuh
+book new that fall
+'That new book fell down.'
+
+#78
+#attributive adjectives, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adj, wo}
+Baru buku itu jatuh
+baru buku itu jatuh
+new book that fall
+'That new book fell down.'
+
+#79
+#attributive adjectives, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adj, wo}
+Itu baru buku jatuh
+itu baru buku jatuh
+that new book fall
+'That new book fell down.'
+
+#80
+#attributive adjectives, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adj, wo}
+Buku itu baru jatuh
+buku itu baru jatuh
+book that new fall
+'That new book fell down.'
+
+#81
+#coordination
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {crd}
+Buku dan kue jatuh
+buku dan kue jatuh
+book and cake fall
+'Books and cakes fell down.'
+
+#82
+#coordination
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {crd}
+Aku, kamu, dan dia tidur
+aku, kamu, dan dia tidur
+1sg 2sg and 3sg sleep
+'I, you, and he/she sleep.'
+
+#83
+#coordination
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {crd}
+Aku, dan kamu, dia tidur
+aku, dan kamu, dia tidur
+1sg and 2sg 3sg sleep
+'I, you, and he/she sleep.'
+
+#84
+#coordination
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {crd}
+Aku, kamu, dan dia tidur dan makan
+aku, kamu, dan dia tidur dan makan
+1sg 2sg and 3sg sleep and eat
+'I, you, and he/she sleep and eat.'
+
+#85
+#coordination, negation
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {crd, neg}
+Aku, kamu, dan dia tidak tidur dan makan
+aku, kamu, dan dia tidak tidur dan makan
+1sg 2sg and 3sg neg sleep and eat
+'I, you, and he/she do not sleep and eat.'
+
+#86
+#coordination
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {crd}
+Aku makan kue, kamu tidur, dan dia jatuh
+aku makan kue, kamu tidur, dan dia jatuh
+1sg eat cake 2sg sleep and 3sg fall
+'I eat cakes, you sleep, and he/she falls.'
+
+#87
+#modals, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {m, wo}
+Bisa dia makan kue
+bisa dia makan kue
+can 3sg eat cake
+'He/She can eat cakes.'
+
+#88
+#modals, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {m, wo}
+Dia bisa makan kue
+dia bisa makan kue
+3sg can eat cake
+'He/She can eat cakes.'
+
+#89
+#modals, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {m, wo}
+Dia makan bisa kue
+dia makan bisa kue
+3sg eat can cake
+'He/She can eat cakes.'
+
+#90
+#modals, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {m, wo}
+Dia makan kue bisa
+dia makan kue bisa
+3sg eat cake can
+'He/She can eat cakes.'
+
+#91
+#modals, negation, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {m, neg, wo}
+Bisa dia tidak makan kue
+bisa dia tidak makan kue
+can 3sg neg eat can
+'He/She cannot eat cakes.'
+
+#92
+#modals, negation, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {m, neg, wo}
+Dia bisa tidak makan kue
+dia bisa tidak makan kue
+3sg can neg eat can
+'He/She is able not to eat cakes.'
+
+#93
+#modals, negation, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {m, neg, wo}
+Dia tidak bisa makan kue
+dia tidak bisa makan kue
+3sg neg can eat can
+'He/She cannot eat cakes.'
+
+#94
+#modals, negation, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {m, neg, wo}
+Dia makan tidak bisa kue
+dia makan tidak bisa kue
+3sg eat neg can cake
+'He/She cannot eat cakes.'
+
+#95
+#modals, negation, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {m, neg, wo}
+Dia makan tidak kue bisa
+dia makan tidak kue bisa
+3sg eat neg cake can
+'He/She cannot eat cakes.'
+
+#96
+#embedded clauses declaratives
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {emb-d}
+Dia mengira bahwa kamu makan kue
+dia mengira bahwa kamu makan kue
+3sg think that 2sg eat cake
+'He/She thinks that you eat cakes.'
+
+#97
+#embedded clauses declaratives, negation
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {emb-d, neg}
+Dia mengira bahwa kamu tidak makan kue
+dia mengira bahwa kamu tidak makan kue
+3sg think that 2sg neg eat cake
+'He/She thinks that you do not eat cakes.'
+
+#98
+#embedded clauses declaratives
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {emb-d}
+Dia mengira apakah kamu makan kue
+dia mengira apakah kamu makan kue
+3sg think qp 2sg eat cake
+'He/She thinks that you eat cakes.'
+
+#99
+#embedded clauses questions
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {emb-q}
+Dia tanya apakah kamu makan kue
+dia tanya apakah kamu makan kue
+3sg ask qp 2sg eat cake
+'He/She asks whether you eat cakes.'
+
+#100
+#embedded clauses questions, negation
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {emb-q, neg}
+Dia tanya apakah kamu tidak makan kue
+dia tanya apakah kamu tidak makan kue
+3sg ask qp 2sg neg eat cake
+'He/She asks whether you do not eat cakes.'
+
+#101
+#embedded clauses questions
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {emb-q}
+Dia tanya bahwa kamu makan kue
+dia tanya bahwa kamu makan kue
+3sg ask that 2sg eat cake
+'He/She asks whether you eat cakes.'
+
+#102
+#matrix yes-no questions
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {q}
+Apakah kamu bunuh dia?
+apakah kamu bunuh dia
+qp 2sg kill 3sg
+'Did you kill him/her?'
+
+#103
+#matrix yes-no questions, negation
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {q, neg}
+Apakah kamu tidak bunuh dia?
+apakah kamu tidak bunuh dia
+qp 2sg neg kill 3sg
+'Did you not kill him/her?'
+
+#104
+#matrix yes-no questions, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {q, wo}
+Kamu apakah bunuh dia?
+kamu apakah bunuh dia
+2sg qp kill 3sg
+'Did you kill him/her?'
+
+#105
+#matrix yes-no questions, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {q, wo}
+Kamu bunuh apakah dia?
+kamu bunuh apakah dia
+2sg kill qp 3sg
+'Did you kill him/her?'
+
+#106
+#matrix yes-no questions, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {q, wo}
+Kamu bunuh dia apakah?
+kamu bunuh dia apakah
+2sg kill 3sg qp
+'Did you kill him/her?'
+
+#107
+#coordination
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {crd}
+Aku dan dia tidak tidur dan makan
+aku dan dia tidak tidur dan makan
+1sg and 3sg neg sleep and eat
+'I and he/she did not sleep and eat.'
+
+#108
+#transitive
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {wo}
+Saya mengejar dia
+saya mengejar dia
+1sg chase 3sg
+'I chased him/her.'
+
+#109
+#object raising
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {obj-rai}
+Adi mengharapkan Budi tidur
+Adi mengharapkan Budi tidur
+Adi expect Budi sleep
+'Adi expected Budi to sleep.'
+
+#110
+#modals, negation
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {m, neg}
+Dia tidak bisa tidak makan kue
+dia tidak bisa tidak makan kue
+3sg neg can neg eat cake
+'He/She is not able not to eat cakes.'
+
+#111
+#aspect, recent past
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {tam}
+Buku itu sudah baru jatuh
+buku itu sudah baru jatuh
+book that perf just-now fall
+'That book has just fallen down.'
+
+#112
+#aspect, recent past
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {tam}
+Buku itu baru sudah jatuh
+buku itu baru sudah jatuh
+book that just-now perf fall
+'That book has just fallen down.'
+
+#113
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adv, wo}
+Jarang dia jarang makan kue jarang
+jarang dia jarang makan kue jarang
+seldom 3sg seldom eat cake seldom
+'He/She seldom eats cakes.'
+
+#114
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo}
+Pelan-pelan dia makan kue itu
+pelan-pelan dia makan kue itu
+slow-slow 3sg eat cake that
+'Slowly he/she ate that cakes.'
+
+#115
+#adverbs, word order, negation
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo, neg}
+Mereka berjalan tidak pelan.
+mereka berjalan tidak pelan
+3pl walk neg slow
+'They walked not slowly.'
+
+#116
+#adverbs, word order, negation
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adv, wo, neg}
+Mereka berjalan pelan tidak.
+mereka berjalan pelan tidak
+3pl walk slow neg
+'They walked not slowly.'
+
+#117
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo}
+Sekarang Adi sering berjalan pelan-pelan
+sekarang Adi sering berjalan pelan-pelan
+now Adi often walk slow-slow
+'Now Adi often walks slowly.'
+
+#118
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adv, wo}
+Sekarang Adi pelan-pelan sering berjalan
+sekarang Adi pelan-pelan sering berjalan
+now Adi slow-slow often walk
+'Now Adi often walks slowly.'
+
+#119
+#adverbs, word order, negation
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo, neg}
+Hujan tidak turun kemarin
+hujan tidak turun kemarin
+rain neg fall yesterday
+'Rain did not fall yesterday.'
+
+#120
+#adverbs, word order, negation
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adv, wo, neg}
+Hujan tidak kemarin turun
+hujan tidak kemarin turun
+rain neg yesterday fall
+'Rain did not fall yesterday.'
+
+#121
+#adverbs, word order, negation
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo, neg}
+Hujan tidak segera turun
+hujan tidak segera turun
+rain neg soon fall
+'Rain will not soon fall.'
+
+#122
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo}
+Budi segera akan makan nasi
+Budi segera akan makan nasi
+Budi soon fut eat rice
+'Budi soon will eat rice.'
+
+#123
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo}
+Budi akan segera makan nasi
+Budi akan segera makan nasi
+Budi fut soon eat rice
+'Budi will soon eat rice.'
+
+#124
+#adverbs, word order
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adv, wo}
+Budi akan makan segera nasi
+Budi akan makan segera nasi
+Budi fut eat soon rice
+'Budi will soon eat rice.'
+
+#125
+#adverbs, word order, aspects, modals
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo, tam, m}
+Adi sudah akan bisa tahu hal itu besok
+Adi sudah akan bisa tahu hal itu besok
+Adi perf fut can know matter that tomorrow
+'Adi would have been able to know that matter tomorrow.'
+
+#126
+#adverbs, word order, aspects, modals
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adv, wo, tam, m}
+Adi besok sudah akan bisa tahu hal itu
+Adi besok sudah akan bisa tahu hal itu
+Adi tomorrow perf fut can know matter that
+'Adi tomorrow would have been able to know that matter.'
+
+#127
+#adverbs, word order, aspects, modals
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adv, wo, tam, m}
+Adi sudah akan besok bisa tahu hal itu
+Adi sudah akan besok bisa tahu hal itu
+Adi perf fut tomorrow can know matter that
+'Adi tomorrow would have been able to know that matter.'
