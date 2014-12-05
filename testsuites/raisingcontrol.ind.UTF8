@@ -4,6 +4,7 @@ Lines: orth translit gloss translat
 Author: David Moeljadi
 Date: 2014-12-2
 Source a: I Wayan Arka (2000) Control and argument structure: explaining control into subject in Indonesian. Paper presented at the fourth International Symposium on Malay/Indonesian Linguistics, Jakarta, 26 July 2000.
+Source b: Sanghoun grammar engineering
 
 Id: 1
 Source: a:1 modified
@@ -29,23 +30,33 @@ Id: 3
 Source: a:5 modified
 Vetted: t
 Judgment: g
-Phenom: object control
-Adi menyuruh Budi segera melakukan hal itu.
-Adi meN-suruh Budi segera meN-laku-kan hal itu
-Adi AV-ask Budi soon AV-do-APP thing that
-Adi asked Budi to do that thing soon.
+Phenom: object (argument 2) control
+Adi menyuruh Budi makan nasi.
+Adi meN-suruh Budi makan nasi
+Adi AV-ask Budi eat rice
+Adi asked Budi to eat rice.
 
 Id: 4
 Source: a:5 modified
 Vetted: t
 Judgment: g
-Phenom: object control, passive
-Budi disuruh Adi segera melakukan hal itu.
-Budi di-suruh Adi segera meN-laku-kan hal itu
-Budi PASS-ask Adi soon AV-do-APP thing that
-Budi was asked by Adi to do that thing soon.
+Phenom: object (argument 2) control, passive
+Budi disuruh Adi makan nasi.
+Budi di-suruh Adi makan nasi
+Budi PASS-ask Adi eat rice
+Budi was asked by Adi to eat rice.
 
 Id: 5
+Source: b
+Vetted: t
+Judgment: g
+Phenom: object (argument 1) control
+Adi berjanji ke Budi makan nasi.
+Adi ber-janji ke Budi makan nasi
+Adi promise to Budi eat rice
+Adi promised Budi to eat rice.
+
+Id: 6
 Source: a:6 modified
 Vetted: t
 Judgment: u
@@ -53,9 +64,9 @@ Phenom: subject control
 Adi mencoba dia makan nasi.
 Adi meN-coba dia makan nasi
 Adi AV-try 3SG eat rice
-(lit.) Adi tried him to eat rice.
+(lit.) Adi tried himself to eat rice.
 
-Id: 6
+Id: 7
 Source: a:15 modified
 Vetted: t
 Judgment: g
@@ -65,7 +76,7 @@ tampak Budi lapar
 appear Budi hungry
 It seemed that Budi was hungry.
 
-Id: 7
+Id: 8
 Source: a:15 modified
 Vetted: t
 Judgment: g
@@ -75,7 +86,7 @@ Budi tampak lapar
 Budi appear hungry
 Budi looked hungry.
 
-Id: 8
+Id: 9
 Source: a:15 modified
 Vetted: t
 Judgment: u
@@ -83,9 +94,9 @@ Phenom: subject raising
 Budi lapar tampak.
 Budi lapar tampak
 Budi hungry appear
-Budi looked hungry.
+(lit.) Budi looked hungry.
 
-Id: 9
+Id: 10
 Source: a:17 modified
 Vetted: t
 Judgment: g
@@ -95,7 +106,7 @@ dia meN-harap-kan anjing=nya meN-gonggong
 3SG AV-hope-APP dog=3SG AV-bark
 He expected his dog to bark.
 
-Id: 10
+Id: 11
 Source: a:17 modified
 Vetted: t
 Judgment: g
