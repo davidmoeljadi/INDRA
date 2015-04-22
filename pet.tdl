@@ -12,9 +12,19 @@
 :include "head-types".
 :include "matrix".
 :include "mtr".
+:include "tmt".
 
 
 :end :type.
+
+
+:begin :instance :status token-mapping-rule.
+:include "../../tmr/prelude".
+:include "../../tmr/pos".
+:include "../../tmr/pos-ipa".
+:include "../../tmr/finis".
+:end :instance.
+
 
 ;;
 ;; lexicon entries (instances of status lex-entry or generic-lex-entry)
@@ -22,6 +32,10 @@
 
 :begin :instance :status lex-entry.
 :include "lexicon".
+:end :instance.
+
+:begin :instance :status generic-lex-entry.
+:include "gle".
 :end :instance.
 
 ;;
