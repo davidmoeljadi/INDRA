@@ -1,0 +1,226 @@
+9067  bytes	relations
+17435 bytes	item
+reading results for               11	1 results
+reading results for               21	1 results
+reading results for               31	0 results
+reading results for               41	1 results
+reading results for               51	0 results
+reading results for               61	0 results
+reading results for               71	0 results
+reading results for               72	0 results
+reading results for               91	0 results
+reading results for              101	0 results
+reading results for              111	0 results
+reading results for              121	0 results
+reading results for              131	0 results
+reading results for              132	0 results
+reading results for              141	1 results
+reading results for              142	1 results
+reading results for              151	0 results
+reading results for              161	0 results
+reading results for              171	0 results
+reading results for              172	0 results
+reading results for              181	0 results
+reading results for              182	0 results
+reading results for              183	0 results
+reading results for              184	0 results
+reading results for              191	0 results
+reading results for              201	0 results
+reading results for              211	1 results
+reading results for              221	0 results
+reading results for              222	0 results
+reading results for              231	0 results
+reading results for              232	0 results
+reading results for              241	0 results
+reading results for              242	0 results
+reading results for              243	0 results
+reading results for              251	2 results
+reading results for              252	1 results
+reading results for              261	0 results
+reading results for              262	0 results
+reading results for              271	0 results
+reading results for              281	0 results
+reading results for              282	0 results
+reading results for              291	0 results
+reading results for              292	0 results
+reading results for              301	0 results
+reading results for              311	0 results
+reading results for              312	0 results
+reading results for              321	0 results
+reading results for              331	0 results
+reading results for              332	0 results
+reading results for              341	0 results
+reading results for              342	0 results
+reading results for              351	1 results
+reading results for              352	2 results
+reading results for              361	1 results
+reading results for              362	2 results
+reading results for              371	1 results
+reading results for              372	2 results
+reading results for              381	1 results
+reading results for              382	2 results
+reading results for              391	1 results
+reading results for              392	2 results
+reading results for              401	0 results
+reading results for              402	0 results
+reading results for              411	1 results
+reading results for              412	2 results
+reading results for              421	1 results
+reading results for              422	2 results
+reading results for              431	1 results
+reading results for              432	0 results
+reading results for              441	0 results
+reading results for              442	0 results
+reading results for              451	0 results
+reading results for              452	0 results
+reading results for              462	4 results
+reading results for              472	4 results
+reading results for              481	0 results
+reading results for              482	0 results
+reading results for              491	0 results
+reading results for              492	0 results
+reading results for              501	0 results
+reading results for              502	0 results
+reading results for              511	0 results
+reading results for              521	0 results
+reading results for              531	0 results
+reading results for              541	0 results
+reading results for              542	0 results
+reading results for              551	0 results
+reading results for              561	0 results
+reading results for              562	0 results
+reading results for              571	0 results
+reading results for              572	0 results
+reading results for              581	0 results
+reading results for              582	0 results
+reading results for              591	0 results
+reading results for              592	0 results
+reading results for              601	0 results
+reading results for              611	0 results
+reading results for              621	0 results
+reading results for              622	0 results
+reading results for              631	0 results
+reading results for              632	0 results
+reading results for              641	0 results
+reading results for              642	0 results
+reading results for              651	0 results
+reading results for              652	0 results
+reading results for              661	0 results
+reading results for              671	0 results
+reading results for              672	0 results
+reading results for              681	0 results
+reading results for              682	0 results
+reading results for              691	0 results
+reading results for              692	0 results
+reading results for              701	0 results
+reading results for              702	0 results
+reading results for              711	0 results
+reading results for              721	0 results
+reading results for              722	0 results
+reading results for              731	2 results
+reading results for              741	2 results
+reading results for              742	2 results
+reading results for              751	1 results
+reading results for              752	2 results
+reading results for              761	2 results
+reading results for              762	2 results
+reading results for              771	0 results
+reading results for              772	0 results
+reading results for              781	0 results
+reading results for              782	0 results
+reading results for              783	0 results
+reading results for              784	0 results
+reading results for              791	0 results
+reading results for              801	0 results
+reading results for              811	0 results
+reading results for              821	0 results
+reading results for              822	0 results
+reading results for              831	0 results
+reading results for              841	0 results
+reading results for              851	0 results
+reading results for              861	0 results
+reading results for              871	0 results
+reading results for              881	0 results
+reading results for              891	0 results
+reading results for              901	0 results
+reading results for              911	0 results
+reading results for              912	0 results
+reading results for              921	0 results
+reading results for              931	0 results
+reading results for              932	0 results
+reading results for              941	0 results
+reading results for              951	0 results
+reading results for              961	0 results
+reading results for              971	0 results
+reading results for              972	0 results
+reading results for              981	0 results
+reading results for              991	0 results
+reading results for             1001	1 results
+reading results for             1002	2 results
+reading results for             1011	0 results
+reading results for             1021	0 results
+reading results for             1031	0 results
+reading results for             1042	0 results
+reading results for             1061	0 results
+reading results for             1062	0 results
+reading results for             1071	0 results
+reading results for             1072	0 results
+Preparing profile: /home/david/grammar/ind/tsdb/skeletons/mrs
+Completed running mkprof. Output at ../tsdb/gtest/comparison/mrs
+Parsing profile: /home/david/grammar/ind/tsdb/gtest/comparison/mrs
+Completed running art. Output at ../tsdb/gtest/comparison/mrs
+Comparing output (../tsdb/gtest/comparison/mrs) to gold (../tsdb/gold/mrs)
+11	<0,1,0>
+21	<0,1,0>
+41	<0,1,0>
+82	<0,0,1>
+132	<0,0,1>
+141	<0,1,0>
+142	<0,1,0>
+211	<0,1,0>
+251	<1,1,0>
+252	<0,1,0>
+351	<0,1,0>
+352	<1,1,0>
+361	<0,1,0>
+362	<1,1,0>
+371	<0,1,0>
+372	<1,1,0>
+381	<0,1,0>
+382	<1,1,0>
+391	<0,1,0>
+392	<1,1,0>
+401	<0,0,1>
+402	<0,0,1>
+411	<0,1,0>
+412	<1,1,0>
+421	<0,1,0>
+422	<1,1,0>
+431	<1,0,1>
+461	<0,0,1>
+462	<4,0,1>
+471	<0,0,1>
+472	<4,0,1>
+481	<0,0,1>
+482	<0,0,1>
+501	<0,0,1>
+502	<0,0,1>
+511	<0,0,1>
+512	<0,0,1>
+611	<0,0,1>
+731	<1,1,0>
+741	<1,1,0>
+742	<1,1,0>
+751	<0,1,0>
+752	<1,1,0>
+761	<1,1,0>
+762	<1,1,0>
+781	<0,0,1>
+782	<0,0,1>
+1001	<0,1,0>
+1002	<1,1,0>
+1041	<0,0,1>
+1051	<0,0,1>
+1071	<0,0,1>
+1072	<0,0,1>
+Completed comparison. Test failed.
