@@ -9,6 +9,16 @@
 ;;; 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; SSH 2014-10-24: for chart mapping
+;; MATRIX REDEFINITION
+;; make STEM of type orthog(raphy) to pass up from/to/form
+sign-min := avm &
+  [ STEM orthog ].
+
+orthog := cons &
+  [ FROM string,
+    TO string ].
+
 ; Type assigning empty mod list. Added to basic types for nouns, verbs and determiners.
 
 non-mod-lex-item := lex-item &
@@ -107,11 +117,30 @@ head-spec-phrase := basic-head-spec-phrase & head-initial &
 
 common-noun-lex := noun-lex.
 
+proper-name-lex := basic-one-arg & basic-icons-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+			   VAL [ COMPS < >,
+				 SUBJ < >,
+				 SPR < > ] ],
+		     CONT [ HOOK.INDEX #index,
+			    RELS <! relation & #keyrel & 
+				  [ LBL #larg,
+				    ARG0 #index ],
+				  quant-relation &
+				  [ PRED "proper_q_rel",
+				    ARG0 #index,
+				    RSTR #harg ] !>,
+			    HCONS <! qeq & 
+				   [ HARG #harg,
+				     LARG #larg ] !> ] ],
+	     NON-LOCAL.SLASH 0-dlist,
+	     LKEYS.KEYREL #keyrel & named-relation ] ].
+
 hon-lex := lex-item &
   [ SYNSEM.LOCAL.CAT.HEAD.HON + ].
 
 basic-pronoun-lex :=  basic-one-arg & 
-  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+  [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [ MOD <> ],
                VAL [ COMPS < >,
                  SUBJ < >,
                  SPR < > ] ],

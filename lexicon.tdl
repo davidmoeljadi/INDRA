@@ -3,241 +3,306 @@
 
 kue := common-noun-lex &
   [ STEM < "kue" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kue_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_kue_n_rel",
+    TRAITS native_token_list ].
 
 buku := common-noun-lex &
   [ STEM < "buku" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_buku_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_buku_n_rel",
+    TRAITS native_token_list ].
 
 kucing := common-noun-lex &
   [ STEM < "kucing" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kucing_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_kucing_n_rel",
+    TRAITS native_token_list ].
 
 anjing := common-noun-lex &
   [ STEM < "anjing" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_anjing_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_anjing_n_rel",
+    TRAITS native_token_list ].
 
 tempat := common-noun-lex &
   [ STEM < "tempat" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tempat_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_tempat_n_rel",
+    TRAITS native_token_list ].
 
 waktu := common-noun-lex &
   [ STEM < "waktu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_waktu_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_waktu_n_rel",
+    TRAITS native_token_list ].
 
 taman := common-noun-lex &
   [ STEM < "taman" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_taman_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_taman_n_rel",
+    TRAITS native_token_list ].
 
 mobil := common-noun-lex &
   [ STEM < "mobil" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_mobil_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_mobil_n_rel",
+    TRAITS native_token_list ].
 
 hujan := common-noun-lex &
   [ STEM < "hujan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_hujan_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_hujan_n_rel",
+    TRAITS native_token_list ].
 
 rokok := common-noun-lex &
   [ STEM < "rokok" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_rokok_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_rokok_n_rel",
+    TRAITS native_token_list ].
 
 nasi := common-noun-lex &
   [ STEM < "nasi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_nasi_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_nasi_n_rel",
+    TRAITS native_token_list ].
 
 gajah := common-noun-lex &
   [ STEM < "gajah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_gajah_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_gajah_n_rel",
+    TRAITS native_token_list ].
 
 hidung := common-noun-lex &
   [ STEM < "hidung" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_hidung_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_hidung_n_rel",
+    TRAITS native_token_list ].
 
 hal := common-noun-lex &
   [ STEM < "hal" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_hal_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_hal_n_rel",
+    TRAITS native_token_list ].
 
 kenyataan := common-noun-lex &
   [ STEM < "kenyataan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kenyataan_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_kenyataan_n_rel",
+    TRAITS native_token_list ].
 
 ;;; Personal names
 
-Adi := common-noun-lex &
+Adi := proper-name-lex &
   [ STEM < "Adi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_adi_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.CARG "Adi",
+    TRAITS native_token_list ].
 
-Budi := common-noun-lex &
+Budi := proper-name-lex &
   [ STEM < "Budi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_budi_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.CARG "Budi",
+    TRAITS native_token_list ].
 
 ;;; Pronouns
 
 saya := 1sg-pronoun-lex &
-  [ STEM < "saya" > ].
+  [ STEM < "saya" >,
+    TRAITS native_token_list ].
 
 aku := 1sg-pronoun-lex &
-  [ STEM < "aku" > ].
+  [ STEM < "aku" >,
+    TRAITS native_token_list ].
 
 kamu := 2sg-pronoun-lex &
-  [ STEM < "kamu" > ].
+  [ STEM < "kamu" >,
+    TRAITS native_token_list ].
 
 Anda := 2sg-pronoun-hon-lex &
-  [ STEM < "Anda" > ].
+  [ STEM < "Anda" >,
+    TRAITS native_token_list ].
 
 dia := 3sg-pronoun-lex &
-  [ STEM < "dia" > ].
+  [ STEM < "dia" >,
+    TRAITS native_token_list ].
 
 kami := 1pl-pronoun-excl-lex &
-  [ STEM < "kami" > ].
+  [ STEM < "kami" >,
+    TRAITS native_token_list ].
 
 kita := 1pl-pronoun-incl-lex &
-  [ STEM < "kita" > ].
+  [ STEM < "kita" >,
+    TRAITS native_token_list ].
 
 kalian := 2pl-pronoun-lex &
-  [ STEM < "kalian" > ].
+  [ STEM < "kalian" >,
+    TRAITS native_token_list ].
 
 mereka := 3pl-pronoun-lex &
-  [ STEM < "mereka" > ].
+  [ STEM < "mereka" >,
+    TRAITS native_token_list ].
 
 ;;; Demonstratives
 
 ini_1 := demonstrative-noun-lex &
   [ STEM < "ini" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ini_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_ini_n_rel",
+    TRAITS native_token_list ].
 
 itu_1 := demonstrative-noun-lex &
   [ STEM < "itu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_itu_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_itu_n_rel",
+    TRAITS native_token_list ].
 
 ;;; Verbs
 
 berjalan := intr-verb-lex &
   [ STEM < "berjalan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_berjalan_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_berjalan_v_rel",
+    TRAITS native_token_list ].
 
 jatuh := intr-verb-lex &
   [ STEM < "jatuh" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_jatuh_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_jatuh_v_rel",
+    TRAITS native_token_list ].
 
 turun := intr-verb-lex &
   [ STEM < "turun" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_turun_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_turun_v_rel",
+    TRAITS native_token_list ].
 
 tidur := intr-verb-lex &
   [ STEM < "tidur" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tidur_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_tidur_v_rel",
+    TRAITS native_token_list ].
 
 datang := intr-verb-lex &
   [ STEM < "datang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_datang_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_datang_v_rel",
+    TRAITS native_token_list ].
 
 sampai := intr-verb-lex &
   [ STEM < "sampai" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sampai_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_sampai_v_rel",
+    TRAITS native_token_list ].
 
 menggonggong := intr-verb-lex &
   [ STEM < "menggonggong" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_menggonggong_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_menggonggong_v_rel",
+    TRAITS native_token_list ].
 
 bunuh := tr-verb-lex &
   [ STEM < "bunuh" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_bunuh_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_bunuh_v_rel",
+    TRAITS native_token_list ].
+
+suka := tr-verb-lex &
+  [ STEM < "suka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_suka_v_rel",
+    TRAITS native_token_list ].
 
 mengejar := tr-verb-lex &
   [ STEM < "mengejar" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_mengejar_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_mengejar_v_rel",
+    TRAITS native_token_list ].
 
 melakukan := tr-verb-lex &
   [ STEM < "melakukan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_melakukan_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_melakukan_v_rel",
+    TRAITS native_token_list ].
 
 ;tanya := tr-verb-lex &
 ;  [ STEM < "tanya" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel" ].
+;    SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel",
+;    TRAITS native_token_list ].
 
 tanya_1 := tr-verb-lex &
   [ STEM < "tanya" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel",
+    TRAITS native_token_list ].
 
 makan := opt-tr-verb-lex &
   [ STEM < "makan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_makan_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_makan_v_rel",
+    TRAITS native_token_list ].
 
-mencoba := opt-tr-verb-lex &
+mencoba_1 := opt-tr-verb-lex &
   [ STEM < "mencoba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_mencoba_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_mencoba_v_rel",
+    TRAITS native_token_list ].
 
 ;tahu := opt-tr-verb-lex &
 ;  [ STEM < "tahu" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel" ].
+;    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel",
+;    TRAITS native_token_list ].
 
 tahu_1 := opt-tr-verb-lex &
   [ STEM < "tahu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel",
+    TRAITS native_token_list ].
 
 mengira := prop-comp-verb-lex &
   [ STEM < "mengira" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_mengira_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_mengira_v_rel",
+    TRAITS native_token_list ].
 
 tanya_2 := ques-comp-verb-lex &
   [ STEM < "tanya" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel",
+    TRAITS native_token_list ].
 
 tahu_2 := ques-comp-verb-lex &
   [ STEM < "tahu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel",
+    TRAITS native_token_list ].
 
 tahu_3 := prop-comp-verb-lex &
   [ STEM < "tahu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel",
+    TRAITS native_token_list ].
 
 ada := locative-verb-lex &
   [ STEM < "ada" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel",
+    TRAITS native_token_list ].
 
 tampak := trans-first-arg-raising-verb &
   [ STEM < "tampak" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tampak_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_tampak_v_rel",
+    TRAITS native_token_list ].
 
 mengharapkan := distrans-second-arg-raising-verb &
   [ STEM < "mengharapkan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_mengharapkan_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_mengharapkan_v_rel",
+    TRAITS native_token_list ].
 
-mencoba := trans-first-arg-control-verb &
+mencoba_2 := trans-first-arg-control-verb &
   [ STEM < "mencoba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_mencoba_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_mencoba_v_rel",
+    TRAITS native_token_list ].
 
 berharap := trans-first-arg-control-verb &
   [ STEM < "berharap" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_berharap_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_berharap_v_rel",
+    TRAITS native_token_list ].
 
 ingin := trans-first-arg-control-verb &
   [ STEM < "ingin" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ingin_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_ingin_v_rel",
+    TRAITS native_token_list ].
 
 menyuruh := ditrans-second-arg-control-verb &
   [ STEM < "menyuruh" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_menyuruh_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_menyuruh_v_rel",
+    TRAITS native_token_list ].
 
 berjanji := ditrans-first-arg-control-verb &
   [ STEM < "berjanji" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_berjanji_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_berjanji_v_rel",
+    TRAITS native_token_list ].
 
 ;;; Auxiliaries
 
 tidak := neg-aux-lex &
   [ STEM < "tidak" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tidak_neg_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_tidak_neg_rel",
+    TRAITS native_token_list ].
 
 sudah := aspect_perf-aux-lex &
-  [ STEM < "sudah" > ].
+  [ STEM < "sudah" >,
+    TRAITS native_token_list ].
 
 sedang := aspect_prog-aux-lex &
-  [ STEM < "sedang" > ].
+  [ STEM < "sedang" >,
+    TRAITS native_token_list ].
 
 akan := aspect_fut-aux-lex &
-  [ STEM < "akan" > ].
+  [ STEM < "akan" >,
+    TRAITS native_token_list ].
 
 ;belum := n+asp-lex &
 ;  [ STEM < "belum" >,
@@ -246,135 +311,163 @@ akan := aspect_fut-aux-lex &
 
 bisa := can-aux &
   [ STEM < "bisa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_bisa_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_bisa_v_rel",
+    TRAITS native_token_list ].
 
 ;;; Determiners
 
 ini_2 := determinative-determiner-lex &
   [ STEM < "ini" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ini_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_ini_q_rel",
+    TRAITS native_token_list ].
 
 itu_2 := determinative-determiner-lex &
   [ STEM < "itu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_itu_q_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_itu_q_rel",
+    TRAITS native_token_list ].
 
 ;;; Prepositions
 
 di := adposition-lex &
   [ STEM < "di" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_di_p_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_di_p_rel",
+    TRAITS native_token_list ].
 
 ke := adposition-lex &
   [ STEM < "ke" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ke_p_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_ke_p_rel",
+    TRAITS native_token_list ].
 
 pada := adposition-lex &
   [ STEM < "pada" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pada_p_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pada_p_rel",
+    TRAITS native_token_list ].
 
 ;;; Question particles
 
 apakah := qpart-lex-item &
-  [ STEM < "apakah" > ].
+  [ STEM < "apakah" >,
+    TRAITS native_token_list ].
 
 ;;; Conjunctions
 
 dan := conj-lex &
   [ STEM < "dan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
-    CFORM "1" ].
+    CFORM "1",
+    TRAITS native_token_list ].
 
 atau := conj-lex &
   [ STEM < "atau" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
-    CFORM "1" ].
+    CFORM "1",
+    TRAITS native_token_list ].
 
 ;;; Complementizers
 
 bahwa := propcomp-lex-item &
-  [ STEM < "bahwa" > ].
+  [ STEM < "bahwa" >,
+    TRAITS native_token_list ].
 
 ;;; Adjectives
 
 lapar := adjective-lex &
   [ STEM < "lapar" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_lapar_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_lapar_a_rel",
+    TRAITS native_token_list ].
 
 baru := adjective-lex &
   [ STEM < "baru" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_baru_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_baru_a_rel",
+    TRAITS native_token_list ].
 
 tua := adjective-lex &
   [ STEM < "tua" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tua_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_tua_a_rel",
+    TRAITS native_token_list ].
 
 kuno := adjective-lex &
   [ STEM < "kuno" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kuno_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_kuno_a_rel",
+    TRAITS native_token_list ].
 
 jelas := adjective-lex &
   [ STEM < "jelas" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_jelas_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_jelas_a_rel",
+    TRAITS native_token_list ].
 
 pelan_1 := adjective-lex &
   [ STEM < "pelan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pelan_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pelan_a_rel",
+    TRAITS native_token_list ].
 
 panjang := adjective-lex &
   [ STEM < "panjang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_panjang_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_panjang_a_rel",
+    TRAITS native_token_list ].
 
 ;;; Adverbs of frequency
 
 sering := adverb-pre-lex &
   [ STEM < "sering" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sering_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_sering_a_rel",
+    TRAITS native_token_list ].
 
 jarang := adverb-pre-lex &
   [ STEM < "jarang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_jarang_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_jarang_a_rel",
+    TRAITS native_token_list ].
 
 kadang-kadang := adverb-pre-lex &
   [ STEM < "kadang-kadang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kadang-kadang_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_kadang-kadang_a_rel",
+    TRAITS native_token_list ].
 
 ;;; Adverbs of manner
 
 pelan_2 := adverb-post-lex &
   [ STEM < "pelan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pelan_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pelan_a_rel",
+    TRAITS native_token_list ].
 
 pelan-pelan := adverb-post-lex &
   [ STEM < "pelan-pelan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pelan-pelan_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pelan-pelan_a_rel",
+    TRAITS native_token_list ].
 
 ;;;; Adverbs of time
 
 besok := adverb-time-lex &
   [ STEM < "besok" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_besok_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_besok_a_rel",
+    TRAITS native_token_list ].
 
 kemarin := adverb-time-lex &
   [ STEM < "kemarin" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kemarin_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_kemarin_a_rel",
+    TRAITS native_token_list ].
 
 sekarang := adverb-time-lex &
   [ STEM < "sekarang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sekarang_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_sekarang_a_rel",
+    TRAITS native_token_list ].
 
 segera := adverb-time-lex &
   [ STEM < "segera" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_segera_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_segera_a_rel",
+    TRAITS native_token_list ].
 
 ;;;; Adverbs of place
 
 sini := n+det-lex &
   [ STEM < "sini" >,
     SYNSEM.LKEYS [KEYREL.PRED "_tempat_n_rel",
-		  ALTKEYREL.PRED "_ini_q_rel" ]].
+		  ALTKEYREL.PRED "_ini_q_rel" ],
+    TRAITS native_token_list].
 
 situ := n+det-lex &
   [ STEM < "situ" >,
     SYNSEM.LKEYS [KEYREL.PRED "_tempat_n_rel",
-		  ALTKEYREL.PRED "_itu_q_rel" ]].
+		  ALTKEYREL.PRED "_itu_q_rel" ],
+    TRAITS native_token_list].
 
