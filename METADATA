@@ -25,14 +25,14 @@
 ## Grammar maintainers and contributors
 
 MAINTAINER="DavidMoeljadi"
-CONTRIBUTORS="DavidMoeljadi; FrancisBond"
+CONTRIBUTORS="DavidMoeljadi; FrancisBond; Sanghoun Song; Michael Goodman; Dan Flickinger"
 CONTACT_EMAIL="davidmoeljadi@gmail.com"
 
 ## Grammar name and web presence
 ## Note: if SHORT_GRAMMAR_NAME is not defined, the directory name is used.
 
-GRAMMAR_NAME="Indonesian Grammar"
-SHORT_GRAMMAR_NAME="Ind"
+GRAMMAR_NAME="Indonesian Resource Grammar"
+SHORT_GRAMMAR_NAME="INDRA"
 WEBSITE=""
 DEMO_WEBSITE=""
 DOCUMENTATION_URL=""

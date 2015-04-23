@@ -14,7 +14,7 @@ sedang_gr := arg0e_gtr &
   FLAGS.TRIGGER "sedang" ]. 
 
 akan_gr := arg0e_gtr &
-[ CONTEXT.RELS <! [ ARG0.E.ASPECT fut ] !>,
+[ CONTEXT.RELS <! [ ARG0.E.TENSE future ] !>,
   FLAGS.TRIGGER "akan" ]. 
 
 

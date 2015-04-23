@@ -11,7 +11,7 @@ root := phrase &
                    CAT [ VAL [ SUBJ < >,
                                COMPS < > ],
                          MC +,
-                         HEAD +vc &
+                         HEAD +vjc &
                               [ FORM finite ] ] ] ].
 
 ; This start symbol allows you to parse single words as stand-alone

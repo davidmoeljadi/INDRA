@@ -37,29 +37,42 @@ COG-ST : COG-ST
   * <> *
 
 
+PNG.ANIMACY : PNG.ANIMACY
+  human <> human
+  non-human <> non-human
+  animate <> animate
+  inanimate <> inanimate
+  * <> *
+
 PNG.PERNUM : PNG.PERNUM
-  31pl <> 31pl
-  21pl <> 21pl
-  11pl_excl <> 11pl_excl
-  11pl_incl <> 11pl_incl
-  11pl <> 11pl
+  3pl <> 3pl
+  2pl <> 2pl
+  1pl_excl <> 1pl_excl
+  1pl_incl <> 1pl_incl
+  1pl <> 1pl
+  3sg <> 3sg
+  2sg <> 2sg
+  1sg <> 1sg
   3rd <> 3rd
   2nd <> 2nd
   1st <> 1st
-  1pl <> 1pl
+  pl <> pl
+  sg <> sg
   * <> *
 
 PNG.GEND : PNG.GEND
   * <> *
 
-E.TENSE : TENSE
+E.TENSE : E.TENSE
+  future <> future
   * <> *
 
-E.ASPECT : ASPECT
+E.ASPECT : E.ASPECT
+  perf-and-prog <> perf-and-prog
   perf <> perf
+  perf-and-prog <> perf-and-prog
   prog <> prog
-  fut <> fut
   * <> *
 
-E.MOOD : MOOD
+E.MOOD : E.MOOD
   * <> *

@@ -1,9 +1,16 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
-subj-head-nmc := subj-head-nmc-phrase.
-
-flr-head := infostr-filler-head-phrase.
+;flr-head := infostr-filler-head-phrase.
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.
+
+adj-head-scop := adj-head-scop-phrase.
+
+; Rule instances for head-modifier structures. Corresponding types
+; are defined in matrix.tdl.  The matrix customization script did
+; not need to add any further constraints, so no corresponding types
+; appear in indonesian.tdl
+
+head-adj-scop := head-adj-scop-phrase.
 
 head-comp := head-comp-phrase.
 
@@ -39,7 +46,7 @@ s1-bottom-coord := s1-bottom-coord-rule.
 
 head-adj-int := head-adj-int-phrase.
 
-adj-head-int := adj-head-int-phrase.
+;adj-head-int := adj-head-int-phrase.
 
 ;; Also need to add to rules.tdl:
 ;xp-xp-bridge-c := bridge-binary-phrase.

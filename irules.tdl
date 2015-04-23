@@ -1,4 +1,5 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Inflecting Lexical Rule Instances
 nya-suffix-1 :=
 %suffix (* nya)
 nya-lex-rule & 
@@ -38,3 +39,16 @@ nya-lex-rule &
 				      LBL #larg2,
 				      ARG0 #arg2 ] !> ] ].
 
+; <type val="act-prefix">
+; <description>Active voice with |me-| prefix
+; <ex>menunggu
+; <nex>
+; <todo>
+; </type>
+act-prefix :=
+%prefix (p mem) (pr mempr) (b memb) (m mem) (f memf) (w mew) (t men) (tr mentr) (d mend) (n men) (v memv) (r mer) (s meny) (sy mensy) (sw mensw) (z menz) (l mel) (c menc) (j menj) (ny meny) (y mey) (k meng) (kh mengkh) (kl mengkl) (g mengg) (ng meng) (q mengq) (h mengh) (a menga) (i mengi) (u mengu) (e menge) (o mengo)
+act-lex-rule.
+
+pas-prefix :=
+%prefix (* di)
+pas-lex-rule.
