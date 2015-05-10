@@ -47,8 +47,8 @@ ortho-max-rules := 20.
 
 enable-icons := yes.
 mrs-icons-list := ICONS LIST.
-icons-left := CLAUSE.
-icons-right := TARGET.
+icons-left := IARG1.
+icons-right := IARG2.
 
 ;; Also need to add root-bridge to parsing-roots in ace/config.tdl ()
 ; e.g. 
