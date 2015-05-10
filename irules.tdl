@@ -31,7 +31,7 @@ nya-lex-rule &
 				       LBL #larg,
 				       ARG0 event,
 				       ARG1 #index,
-				       ARG2 #arg2 ],
+				       ARG2 #arg2 & [ PNG.PERNUM 3sg ] ],
 		    quant-relation & [ PRED pronoun_q_rel,
 				       ARG0 #arg2,
 				       RSTR #harg2 ],
@@ -46,9 +46,15 @@ nya-lex-rule &
 ; <todo>
 ; </type>
 act-prefix :=
-%prefix (p mem) (pr mempr) (b memb) (m mem) (f memf) (w mew) (t men) (tr mentr) (d mend) (n men) (v memv) (r mer) (s meny) (sy mensy) (sw mensw) (z menz) (l mel) (c menc) (j menj) (ny meny) (y mey) (k meng) (kh mengkh) (kl mengkl) (g mengg) (ng meng) (q mengq) (h mengh) (a menga) (i mengi) (u mengu) (e menge) (o mengo)
-act-lex-rule.
+%prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt) (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem) (f memf) (v memv) (w mew) (t men) (tr mentr) (ts ments) (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) (sp mensp) (sm mensm) (sn mensn) (sk mensk) (sy mensy) (syair menyair) (sw mensw) (st menst) (z menz) (l mel) (c menc) (cek mengecek) (cekah mencekah) (j menj) (ny meny) (y mey) (k meng) (kh mengkh) (kl mengkl) (kr mengkr) (g mengg) (ng meng) (q mengq) (h mengh) (a menga) (i mengi) (u mengu) (e menge) (o mengo)
+act-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
 pas-prefix :=
 %prefix (* di)
-pas-lex-rule.
+pas-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS cons ].
+
+;adj-superlative-prefix :=
+;%prefix (* ter)
+;adj-superlative-lex-rule.
