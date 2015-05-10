@@ -1,172 +1,172 @@
-11@MRS@@@1@tam@Hujan turun.@@@@1@2@It rained.@David Moeljadi@2014-11-4
-21@MRS@@@1@tam@Adi menggonggong.@@@@1@2@Adi barked.@David Moeljadi@2014-11-4
-31@MRS@@@1@tam@Jendela terbuka.@@@@1@2@The window opened.@David Moeljadi@2014-11-4
-41@MRS@@@1@tam@Adi mengejar Budi.@@@@1@3@Adi chased Budi.@David Moeljadi@2014-11-4
-51@MRS@@@1@comps/dat@Adi memberi Budi rokok.@@@@1@4@Adi handed Budi the cigarette.@David Moeljadi@2014-11-4
-61@MRS@@@1@comps/dat@Adi memberi rokok kepada Budi.@@@@1@5@Adi handed the cigarette to Budi.@David Moeljadi@2014-11-4
-71@MRS@@@1@comps@Adi bertaruh rokok dengan Budi bahwa hujan sudah turun.@@@@1@9@Adi bet Budi a cigarette that it rained.@David Moeljadi@2014-11-4
-72@MRS@@@1@comps@Adi bertaruh rokok dengan Budi bahwa hujan turun.@@@@1@8@Adi bet Budi a cigarette that it rained.@David Moeljadi@2014-11-4
-81@MRS@@@1@emb-d@Adi tahu bahwa hujan sudah turun.@@@@1@6@Adi knew that it rained.@David Moeljadi@2014-11-4
-82@MRS@@@1@emb-d@Adi tahu bahwa hujan turun.@@@@1@5@Adi knew that it rained.@David Moeljadi@2014-11-4
-91@MRS@@@1@emb-d@Adi berniat menggonggong.@@@@1@3@Adi intended to bark.@David Moeljadi@2014-11-4
-101@MRS@@@1@emb-d@Adi berniat membuat Budi menggonggong.@@@@1@5@Adi intended Budi to bark.@David Moeljadi@2014-11-4
-111@MRS@@@1@Quant@Setiap kucing menggonggong.@@@@1@3@Every cat barked.@David Moeljadi@2014-11-4
-121@MRS@@@1@Quant@Setiap kucing mengejar satu anjing.@@@@1@5@Every cat chased some dog.@David Moeljadi@2014-11-4
-131@MRS@@@1@GEN@Kucingku menggonggong.@@@@1@2@My cat barked.@David Moeljadi@2014-11-4
-132@MRS@@@1@GEN@Kucing saya menggonggong.@@@@1@3@My cat barked.@David Moeljadi@2014-11-4
-141@MRS@@@1@Gender@Itu menggonggong.@@@@1@2@It barked.@David Moeljadi@2014-11-4
-142@MRS@@@1@Gender@Dia menggonggong.@@@@1@2@It barked.@David Moeljadi@2014-11-4
-151@MRS@@@1@gender@Kucing itu mengejarnya.@@@@1@3@The cat chased it.@David Moeljadi@2014-11-4
-161@MRS@@@1@refl@Kucing itu mengejar dirinya sendiri.@@@@1@5@The cat chased itself.@David Moeljadi@2014-11-4
-171@MRS@@@1@pn@Kucing itu mengejar satu ekor.@@@@1@5@The cat chased one.@David Moeljadi@2014-11-4
-172@MRS@@@1@pn@Kucingnya mengejar satu ekor.@@@@1@4@The cat chased one.@David Moeljadi@2014-11-4
-181@MRS@@@1@gen@Punyaku menggonggong.@@@@1@2@Mine barked.@David Moeljadi@2014-11-4
-182@MRS@@@1@gen@Milikku menggonggong.@@@@1@2@Mine barked.@David Moeljadi@2014-11-4
-183@MRS@@@1@gen@Punya saya menggonggong.@@@@1@3@Mine barked.@David Moeljadi@2014-11-4
-184@MRS@@@1@gen@Milik saya menggonggong.@@@@1@3@Mine barked.@David Moeljadi@2014-11-4
-191@MRS@@@1@pn@Itu terbuka.@@@@1@2@That opened.@David Moeljadi@2014-11-4
-201@MRS@@@1@agr@Kucing-kucing menggonggong.@@@@1@2@Cats bark.@David Moeljadi@2014-11-4
-211@MRS@@@1@agr@Rokok sudah sampai.@@@@1@3@Tobacco arrived.@David Moeljadi@2014-11-4
-221@MRS@@@1@pn@Beberapa menggonggong.@@@@1@2@Some bark.@David Moeljadi@2014-11-4
-222@MRS@@@1@pn@Beberapa ekor menggonggong.@@@@1@3@Some bark.@David Moeljadi@2014-11-4
-231@MRS@@@1@pn@Beberapa kucing menggonggong.@@@@1@3@Some of the cats bark.@David Moeljadi@2014-11-4
-232@MRS@@@1@pn@Beberapa ekor kucing menggonggong.@@@@1@4@Some of the cats bark.@David Moeljadi@2014-11-4
-241@MRS@@@1@pn@Tidak ada kucing yang menggonggong.@@@@1@5@No cat barked.@David Moeljadi@2014-11-4
-242@MRS@@@1@pn@Tidak ada seekor kucing pun yang menggonggong.@@@@1@7@No cat barked.@David Moeljadi@2014-11-4
-243@MRS@@@1@pn@Tidak ada seekor pun kucing yang menggonggong.@@@@1@7@No cat barked.@David Moeljadi@2014-11-4
-251@MRS@@@1@q@Apakah anjingnya menggonggong?@@@@1@3@Did the dog bark?@David Moeljadi@2014-11-4
-252@MRS@@@1@q@Apakah anjing itu menggonggong?@@@@1@4@Did the dog bark?@David Moeljadi@2014-11-4
-261@MRS@@@1@q@Anjing mana yang menggonggong?@@@@1@4@Which dog barked?@David Moeljadi@2014-11-4
-262@MRS@@@1@q@Anjing yang mana yang menggonggong?@@@@1@5@Which dog barked?@David Moeljadi@2014-11-4
-271@MRS@@@1@q@Anjing siapa yang menggonggong?@@@@1@4@Whose dog barked?@David Moeljadi@2014-11-4
-281@MRS@@@1@imp@Kejar Budi!@@@@1@2@Chase Budi!@David Moeljadi@2014-11-4
-282@MRS@@@1@imp@Kejarlah Budi!@@@@1@2@Chase Budi!@David Moeljadi@2014-11-4
-291@MRS@@@1@imp@Adi bertanya-tanya anjing mana yang menggonggong.@@@@1@6@Adi wondered which dog barked.@David Moeljadi@2014-11-4
-292@MRS@@@1@imp@Adi bertanya-tanya anjing yang mana yang menggonggong.@@@@1@7@Adi wondered which dog barked.@David Moeljadi@2014-11-4
-301@MRS@@@1@emb-d@Adi bertanya-tanya apakah Budi menggonggong.@@@@1@5@Adi wondered whether Budi barked.@David Moeljadi@2014-11-4
-311@MRS@@@1@Pass@Anjing yang dikejar Budi menggonggong.@@@@1@5@The dog that Budi chased barked.@David Moeljadi@2014-11-4
-312@MRS@@@1@Pass@Anjing yang dikejar oleh Budi menggonggong.@@@@1@6@The dog that Budi chased barked.@David Moeljadi@2014-11-4
-321@MRS@@@1@Pass@Anjing yang akan dikejar sedang menggonggong.@@@@1@6@The dog to chase is barking.@David Moeljadi@2014-11-4
-331@MRS@@@1@Pass@Anjingnya dikejar Budi.@@@@1@3@The dog was chased by Budi.@David Moeljadi@2014-11-4
-332@MRS@@@1@Pass@Anjingnya dikejar oleh Budi.@@@@1@4@The dog was chased by Budi.@David Moeljadi@2014-11-4
-341@MRS@@@1@Pass@Anjing yang dikejar Budi menggonggong.@@@@1@5@The dog chased by Budi barked.@David Moeljadi@2014-11-4
-342@MRS@@@1@Pass@Anjing yang dikejar oleh Budi menggonggong.@@@@1@6@The dog chased by Budi barked.@David Moeljadi@2014-11-4
-351@MRS@@@1@tam@Anjing itu sedang menggonggong.@@@@1@4@The dog is barking.@David Moeljadi@2014-11-4
-352@MRS@@@1@tam@Anjingnya sedang menggonggong.@@@@1@3@The dog is barking.@David Moeljadi@2014-11-4
-361@MRS@@@1@tam@Anjing itu sudah menggonggong.@@@@1@4@The dog has barked.@David Moeljadi@2014-11-4
-362@MRS@@@1@tam@Anjingnya sudah menggonggong.@@@@1@3@The dog has barked.@David Moeljadi@2014-11-4
-371@MRS@@@1@tam@Anjing itu sudah menggonggong.@@@@1@4@The dog has been barking.@David Moeljadi@2014-11-4
-372@MRS@@@1@tam@Anjingnya sudah menggonggong.@@@@1@3@The dog has been barking.@David Moeljadi@2014-11-4
-381@MRS@@@1@tam@Anjing itu sudah menggonggong.@@@@1@4@The dog had been barking.@David Moeljadi@2014-11-4
-382@MRS@@@1@tam@Anjingnya sudah menggonggong.@@@@1@3@The dog had been barking.@David Moeljadi@2014-11-4
-391@MRS@@@1@tam@Anjing itu akan menggonggong.@@@@1@4@The dog will bark.@David Moeljadi@2014-11-4
-392@MRS@@@1@tam@Anjingnya akan menggonggong.@@@@1@3@The dog will bark.@David Moeljadi@2014-11-4
-401@MRS@@@1@tam@Anjing itu sudah akan menggonggong.@@@@1@5@The dog is going to bark.@David Moeljadi@2014-11-4
-402@MRS@@@1@tam@Anjingnya sudah akan menggonggong.@@@@1@4@The dog is going to bark.@David Moeljadi@2014-11-4
-411@MRS@@@1@infin@Anjing itu bisa menggonggong.@@@@1@4@The dog could bark.@David Moeljadi@2014-11-4
-412@MRS@@@1@infin@Anjingnya bisa menggonggong.@@@@1@3@The dog could bark.@David Moeljadi@2014-11-4
-421@MRS@@@1@infin@Anjing itu tidak bisa menggonggong.@@@@1@5@The dog couldn’t bark.@David Moeljadi@2014-11-4
-422@MRS@@@1@infin@Anjingnya tidak bisa menggonggong.@@@@1@4@The dog couldn’t bark.@David Moeljadi@2014-11-4
-431@MRS@@@1@adj@Anjing tua itu menggonggong.@@@@1@4@The old dog barked.@David Moeljadi@2014-11-4
-432@MRS@@@1@adj@Anjing tuanya menggonggong.@@@@1@3@The old dog barked.@David Moeljadi@2014-11-4
-441@MRS@@@1@adv@Anjing itu menggonggong dengan pelan.@@@@1@5@The dog barked softly.@David Moeljadi@2014-11-4
-442@MRS@@@1@adv@Anjingnya menggonggong dengan pelan.@@@@1@4@The dog barked softly.@David Moeljadi@2014-11-4
-451@MRS@@@1@adv@Anjing itu mungkin menggonggong.@@@@1@4@The dog probably barked.@David Moeljadi@2014-11-4
-452@MRS@@@1@adv@Anjingnya mungkin menggonggong.@@@@1@3@The dog probably barked.@David Moeljadi@2014-11-4
-461@MRS@@@1@loc@Anjing itu menggonggong di taman.@@@@1@5@The dog barked in the garden.@David Moeljadi@2014-11-4
-462@MRS@@@1@loc@Anjingnya menggonggong di taman.@@@@1@4@The dog barked in the garden.@David Moeljadi@2014-11-4
-471@MRS@@@1@tam@Anjing itu menggonggong sekarang.@@@@1@4@The dog barks now.@David Moeljadi@2014-11-4
-472@MRS@@@1@tam@Anjingnya menggonggong sekarang.@@@@1@3@The dog barks now.@David Moeljadi@2014-11-4
-481@MRS@@@1@cpd@Anjing taman itu menggonggong.@@@@1@4@The garden dog barked.@David Moeljadi@2014-11-4
-482@MRS@@@1@cpd@Anjing tamannya menggonggong.@@@@1@3@The garden dog barked.@David Moeljadi@2014-11-4
-491@MRS@@@1@ppmod@Anjing taman tembakau itu menggonggong.@@@@1@5@The tobacco garden dog barked.@David Moeljadi@2014-11-4
-492@MRS@@@1@ppmod@Anjing taman tembakaunya menggonggong.@@@@1@4@The tobacco garden dog barked.@David Moeljadi@2014-11-4
-501@MRS@@@1@adj@Kucing itu tua.@@@@1@3@The cat is old.@David Moeljadi@2014-11-4
-502@MRS@@@1@adj@Kucingnya tua.@@@@1@2@The cat is old.@David Moeljadi@2014-11-4
-511@MRS@@@1@prd@Kucingnya di taman.@@@@1@3@The cat is in the garden.@David Moeljadi@2014-11-4
-512@MRS@@@1@prd@Kucingnya ada di taman.@@@@1@4@The cat is in the garden.@David Moeljadi@2014-11-4
-521@MRS@@@1@det,adj@Anjing yang sedang menggonggong mengejar Budi.@@@@1@6@The barking dog chased Budi.@David Moeljadi@2014-11-4
-531@MRS@@@1@det,pass@Anjing-anjing yang dikejar menggonggong.@@@@1@4@Chased dogs bark.@David Moeljadi@2014-11-4
-541@MRS@@@1@adj@Tindakan mengejar kucing itu adalah kuno.@@@@1@6@Chasing the cat is old.@David Moeljadi@2014-11-4
-542@MRS@@@1@adj@Tindakan mengejar kucing itu kuno.@@@@1@5@Chasing the cat is old.@David Moeljadi@2014-11-4
-551@MRS@@@1@emb-d@Bahwa kucing itu mengejar Budi adalah kuno.@@@@1@7@That the cat chases Budi is old.@David Moeljadi@2014-11-4
-561@MRS@@@1@indef@Anjing-anjing mengejar apa pun yang menggonggong.@@@@1@6@Dogs chase whatever barks.@David Moeljadi@2014-11-4
-562@MRS@@@1@indef@Anjing-anjing mengejar apa saja yang menggonggong.@@@@1@6@Dogs chase whatever barks.@David Moeljadi@2014-11-4
-571@MRS@@@1@quant@Anjing itu menggonggong setiap hari.@@@@1@5@The dog barked every day.@David Moeljadi@2014-11-4
-572@MRS@@@1@quant@Anjingnya menggonggong setiap hari.@@@@1@4@The dog barked every day.@David Moeljadi@2014-11-4
-581@MRS@@@1@q@Kapan anjing itu menggonggong?@@@@1@4@When did the dog bark?@David Moeljadi@2014-11-4
-582@MRS@@@1@q@Kapan anjingnya menggonggong?@@@@1@3@When did the dog bark?@David Moeljadi@2014-11-4
-591@MRS@@@1@det@Tiga dari anjing-anjing itu menggonggong.@@@@1@5@Three of the dogs bark.@David Moeljadi@2014-11-4
-592@MRS@@@1@det@Tiga ekor dari anjing-anjing itu menggonggong.@@@@1@6@Three of the dogs bark.@David Moeljadi@2014-11-4
-601@MRS@@@1@numcl@Tiga ekor menggonggong.@@@@1@3@Three bark.@David Moeljadi@2014-11-4
-611@MRS@@@1@det@Anjing Budi menggonggong.@@@@1@3@Budi’s dog barks.@David Moeljadi@2014-11-4
-621@MRS@@@1@det@Punya Budi menggonggong.@@@@1@3@Budi's barks.@David Moeljadi@2014-11-4
-622@MRS@@@1@det@Milik Budi menggonggong.@@@@1@3@Budi's barks.@David Moeljadi@2014-11-4
-631@MRS@@@1@numcl@Dua puluh tiga anjing menggonggong.@@@@1@5@Twenty three dogs bark.@David Moeljadi@2014-11-4
-632@MRS@@@1@numcl@Dua puluh tiga ekor anjing menggonggong.@@@@1@6@Twenty three dogs bark.@David Moeljadi@2014-11-4
-641@MRS@@@1@numcl@Dua ratus dua puluh anjing menggonggong.@@@@1@6@Two hundred twenty dogs bark.@David Moeljadi@2014-11-4
-642@MRS@@@1@numcl@Dua ratus dua puluh ekor anjing menggonggong.@@@@1@7@Two hundred twenty dogs bark.@David Moeljadi@2014-11-4
-651@MRS@@@1@pro-d@Adi datang dengan mobil.@@@@1@4@Adi arrived by car.@David Moeljadi@2014-11-4
-652@MRS@@@1@pro-d@Adi datang naik mobil.@@@@1@4@Adi arrived by car.@David Moeljadi@2014-11-4
-661@MRS@@@1@adv@Adi tetap menggonggong.@@@@1@3@Adi kept barking.@David Moeljadi@2014-11-4
-671@MRS@@@1@pro-d@Budi meremas kucing itu masuk.@@@@1@5@Budi squeezed the cat in.@David Moeljadi@2014-11-4
-672@MRS@@@1@pro-d@Budi meremas kucingnya masuk.@@@@1@4@Budi squeezed the cat in.@David Moeljadi@2014-11-4
-681@MRS@@@1@pro-d@Budi meremas masuk kucing itu.@@@@1@5@Budi squeezed in the cat.@David Moeljadi@2014-11-4
-682@MRS@@@1@pro-d@Budi meremas masuk kucingnya.@@@@1@4@Budi squeezed in the cat.@David Moeljadi@2014-11-4
-691@MRS@@@1@det@Gambar Adi sampai.@@@@1@3@The picture of Adi arrived.@David Moeljadi@2014-11-4
-692@MRS@@@1@det@Gambar Adi sudah sampai.@@@@1@4@The picture of Adi arrived.@David Moeljadi@2014-11-4
-701@MRS@@@1@res@Adi mengelap bersih meja itu.@@@@1@5@Adi wiped the table clean.@David Moeljadi@2014-11-4
-702@MRS@@@1@res@Adi mengelap bersih mejanya.@@@@1@4@Adi wiped the table clean.@David Moeljadi@2014-11-4
-711@MRS@@@1@pro-d@Adi menaruh Budi di taman itu.@@@@1@6@Adi put Budi in the garden.@David Moeljadi@2014-11-4
-721@MRS@@@1@tam@Anjing itu akan menggonggong jika Budi datang.@@@@1@7@The dog will bark if Budi arrives.@David Moeljadi@2014-11-4
-722@MRS@@@1@tam@Anjingnya akan menggonggong jika Budi datang.@@@@1@6@The dog will bark if Budi arrives.@David Moeljadi@2014-11-4
-731@MRS@@@1@crd@Adi dan Budi datang.@@@@1@4@Adi and Budi arrived.@David Moeljadi@2014-11-4
-741@MRS@@@1@crd@Adi, Budi, dan anjing itu datang.@@@@1@6@Adi, Budi and the dog arrived.@David Moeljadi@2014-11-4
-742@MRS@@@1@crd@Adi, Budi, dan anjingnya datang.@@@@1@5@Adi, Budi and the dog arrived.@David Moeljadi@2014-11-4
-751@MRS@@@1@crd@Anjing itu datang dan menggonggong.@@@@1@5@The dog arrived and barked.@David Moeljadi@2014-11-4
-752@MRS@@@1@crd@Anjingnya datang dan menggonggong.@@@@1@4@The dog arrived and barked.@David Moeljadi@2014-11-4
-761@MRS@@@1@crd@Anjing itu datang dan Budi menggonggong.@@@@1@6@The dog arrived and Budi barked.@David Moeljadi@2014-11-4
-762@MRS@@@1@crd@Anjingnya datang dan Budi menggonggong.@@@@1@5@The dog arrived and Budi barked.@David Moeljadi@2014-11-4
-771@MRS@@@1@q@Anjing itu menggonggong, kan?@@@@1@4@The dog barked, didn't it?@David Moeljadi@2014-11-4
-772@MRS@@@1@q@Anjingnya menggonggong, kan?@@@@1@3@The dog barked, didn't it?@David Moeljadi@2014-11-4
-781@MRS@@@1@emb-d@Jelas bahwa anjing itu menggonggong.@@@@1@5@It is obvious that the dog barked.@David Moeljadi@2014-11-4
-782@MRS@@@1@emb-d@Jelas bahwa anjingnya menggonggong.@@@@1@4@It is obvious that the dog barked.@David Moeljadi@2014-11-4
-783@MRS@@@1@emb-d@Adalah jelas bahwa anjing itu menggonggong.@@@@1@6@It is obvious that the dog barked.@David Moeljadi@2014-11-4
-784@MRS@@@1@emb-d@Adalah jelas bahwa anjingnya menggonggong.@@@@1@5@It is obvious that the dog barked.@David Moeljadi@2014-11-4
-791@MRS@@@1@emb-d@Adi berjanji kepada Budi untuk menggonggong.@@@@1@6@Adi promised Budi to bark.@David Moeljadi@2014-11-4
-801@MRS@@@1@emb-d@Adi kelihatannya menggonggong.@@@@1@3@Adi seems to bark.@David Moeljadi@2014-11-4
-811@MRS@@@1@emb-d@Adi percaya Budi sedang menggonggong.@@@@1@5@Adi believes Budi to be barking.@David Moeljadi@2014-11-4
-821@MRS@@@1@emb-d@Adi terganggu karena Budi menggonggong.@@@@1@5@It bothered Adi that Budi barked.@David Moeljadi@2014-11-4
-822@MRS@@@1@emb-d@Bahwa Budi menggonggong mengganggu Adi.@@@@1@5@It bothered Adi that Budi barked.@David Moeljadi@2014-11-4
-831@MRS@@@1@emb-d@Adi membutuhkan waktu sepuluh menit untuk datang.@@@@1@7@It took Adi ten minutes to arrive.@David Moeljadi@2014-11-4
-841@MRS@@@1@emb-d@Adi membiarkan Budi menggonggong.@@@@1@4@Adi left it to Budi to bark.@David Moeljadi@2014-11-4
-851@MRS@@@1@emb-d@Budi terkejut melihat Adi tua.@@@@1@5@Adi strikes Budi as old.@David Moeljadi@2014-11-4
-861@MRS@@@1@emb-d@Budi menganggap Adi tua.@@@@1@4@Budi considers Adi old.@David Moeljadi@2014-11-4
-871@MRS@@@1@emb-d@Adi menyukai ide bahwa Budi bisa menggonggong.@@@@1@7@Adi liked the idea that Budi could bark.@David Moeljadi@2014-11-4
-881@MRS@@@1@prep@Adi menggonggong dari jam sepuluh sampai jam tiga.@@@@1@8@Adi barked from 10 to 3.@David Moeljadi@2014-11-4
-891@MRS@@@1@adj@Adi sangat tua.@@@@1@3@Adi was very old.@David Moeljadi@2014-11-4
-901@MRS@@@1@adv@Hampir setiap anjing menggonggong.@@@@1@4@Nearly every dog barked.@David Moeljadi@2014-11-4
-911@MRS@@@1@adv@Adi menggonggong dengan sangat pelan.@@@@1@5@Adi barked very softly.@David Moeljadi@2014-11-4
-912@MRS@@@1@adv@Adi menggonggong sangat pelan.@@@@1@4@Adi barked very softly.@David Moeljadi@2014-11-4
-921@MRS@@@1@emb-d@Tindakan Budi mengejar kucing-kucing mengganggu Adi.@@@@1@6@Budi's chasing of cats botherd Adi.@David Moeljadi@2014-11-4
-931@MRS@@@1@emb-d@Budi terganggu karena Adi mengejar kucing-kucing.@@@@1@6@It bothered Budi that Adi chased cats.@David Moeljadi@2014-11-4
-932@MRS@@@1@emb-d@Bahwa Adi mengejar kucing-kucing mengganggu Budi.@@@@1@6@It bothered Budi that Adi chased cats.@David Moeljadi@2014-11-4
-941@MRS@@@1@adv@Tanggal tiga Juni datang.@@@@1@4@June 3rd arrived.@David Moeljadi@2014-11-4
-951@MRS@@@1@adv@Adi datang pada jam tiga lewat dua puluh.@@@@1@8@Adi arrived at three twenty.@David Moeljadi@2014-11-4
-961@MRS@@@1@adv@Budi datang pada hari Selasa pagi.@@@@1@6@Budi arrived on Tuesday morning.@David Moeljadi@2014-11-4
-971@MRS@@@1@det@Kucing-kucing itu menemukan cara menggonggong.@@@@1@5@The cats found a way to bark.@David Moeljadi@2014-11-4
-972@MRS@@@1@det@Kucing-kucingnya menemukan cara menggonggong.@@@@1@4@The cats found a way to bark.@David Moeljadi@2014-11-4
-981@MRS@@@1@adv@Anjing yang lebih bahagia mengejar Budi.@@@@1@6@The happier dog chased Budi.@David Moeljadi@2014-11-4
-991@MRS@@@1@tam@Ada kucing-kucing di taman.@@@@1@4@There were cats in the garden.@David Moeljadi@2014-11-4
-1001@MRS@@@1@det@Anjing itu mengejar Budi.@@@@1@4@That dog chased Budi.@David Moeljadi@2014-11-4
-1002@MRS@@@1@det@Anjingnya mengejar Budi.@@@@1@3@That dog chased Budi.@David Moeljadi@2014-11-4
-1011@MRS@@@1@det@Seseorang mengejar Adi.@@@@1@3@Somebody chased Adi.@David Moeljadi@2014-11-4
-1021@MRS@@@1@q@Seberapa bahagia Adi?@@@@1@3@How happy was Adi?@David Moeljadi@2014-11-4
-1031@MRS@@@1@tam,agency@Nomor lima mengganggu Budi.@@@@1@4@The number five bothers Budi.@David Moeljadi@2014-11-4
-1041@MRS@@@1@tam@Adi bisa.@@@@1@2@Adi could.@David Moeljadi@2014-11-4
-1042@MRS@@@1@tam@Adi dahulu bisa.@@@@1@3@Adi could.@David Moeljadi@2014-11-4
-1051@MRS@@@1@tam@Budi mencoba.@@@@1@2@Budi tried.@David Moeljadi@2014-11-4
-1061@MRS@@@1@tam@Jangan menggonggong!@@@@1@2@Don’t bark!@David Moeljadi@2014-11-4
-1062@MRS@@@1@tam@Janganlah menggonggong!@@@@1@2@Don’t bark!@David Moeljadi@2014-11-4
-1071@MRS@@@1@adv@Anjing itu datang menggonggong.@@@@1@4@The dog arrived barking.@David Moeljadi@2014-11-4
-1072@MRS@@@1@adv@Anjingnya datang menggonggong.@@@@1@3@The dog arrived barking.@David Moeljadi@2014-11-4
+11@MRS@@@1@tam@Hujan turun.@@@@1@2@Id: 21@David Moeljadi@2014-11-4
+12@MRS@@@1@tam@Adi menggonggong.@@@@1@2@Id: 31@David Moeljadi@2014-11-4
+13@MRS@@@1@tam@Jendela terbuka.@@@@1@2@Id: 41@David Moeljadi@2014-11-4
+14@MRS@@@1@tam@Adi mengejar Budi.@@@@1@3@Id: 51@David Moeljadi@2014-11-4
+15@MRS@@@1@comps/dat@Adi memberi Budi rokok.@@@@1@4@Id: 61@David Moeljadi@2014-11-4
+16@MRS@@@1@comps/dat@Adi memberi rokok kepada Budi.@@@@1@5@Id: 71@David Moeljadi@2014-11-4
+17@MRS@@@1@comps@Adi bertaruh rokok dengan Budi bahwa hujan sudah turun.@@@@1@9@Id: 72@David Moeljadi@2014-11-4
+18@MRS@@@1@comps@Adi bertaruh rokok dengan Budi bahwa hujan turun.@@@@1@8@Id: 81@David Moeljadi@2014-11-4
+19@MRS@@@1@emb-d@Adi tahu bahwa hujan sudah turun.@@@@1@6@Id: 82@David Moeljadi@2014-11-4
+20@MRS@@@1@emb-d@Adi tahu bahwa hujan turun.@@@@1@5@Id: 91@David Moeljadi@2014-11-4
+21@MRS@@@1@emb-d@Adi berniat menggonggong.@@@@1@3@Id: 101@David Moeljadi@2014-11-4
+22@MRS@@@1@emb-d@Adi berniat membuat Budi menggonggong.@@@@1@5@Id: 111@David Moeljadi@2014-11-4
+23@MRS@@@1@Quant@Setiap kucing menggonggong.@@@@1@3@Id: 121@David Moeljadi@2014-11-4
+24@MRS@@@1@Quant@Setiap kucing mengejar satu anjing.@@@@1@5@Id: 131@David Moeljadi@2014-11-4
+25@MRS@@@1@GEN@Kucingku menggonggong.@@@@1@2@Id: 132@David Moeljadi@2014-11-4
+26@MRS@@@1@GEN@Kucing saya menggonggong.@@@@1@3@Id: 141@David Moeljadi@2014-11-4
+27@MRS@@@1@Gender@Itu menggonggong.@@@@1@2@Id: 142@David Moeljadi@2014-11-4
+28@MRS@@@1@Gender@Dia menggonggong.@@@@1@2@Id: 151@David Moeljadi@2014-11-4
+29@MRS@@@1@gender@Kucing itu mengejarnya.@@@@1@3@Id: 161@David Moeljadi@2014-11-4
+30@MRS@@@1@refl@Kucing itu mengejar dirinya sendiri.@@@@1@5@Id: 171@David Moeljadi@2014-11-4
+31@MRS@@@1@pn@Kucing itu mengejar satu ekor.@@@@1@5@Id: 172@David Moeljadi@2014-11-4
+32@MRS@@@1@pn@Kucingnya mengejar satu ekor.@@@@1@4@Id: 181@David Moeljadi@2014-11-4
+33@MRS@@@1@gen@Punyaku menggonggong.@@@@1@2@Id: 182@David Moeljadi@2014-11-4
+34@MRS@@@1@gen@Milikku menggonggong.@@@@1@2@Id: 183@David Moeljadi@2014-11-4
+35@MRS@@@1@gen@Punya saya menggonggong.@@@@1@3@Id: 184@David Moeljadi@2014-11-4
+36@MRS@@@1@gen@Milik saya menggonggong.@@@@1@3@Id: 191@David Moeljadi@2014-11-4
+37@MRS@@@1@pn@Itu terbuka.@@@@1@2@Id: 201@David Moeljadi@2014-11-4
+38@MRS@@@1@agr@Kucing-kucing menggonggong.@@@@1@2@Id: 211@David Moeljadi@2014-11-4
+39@MRS@@@1@agr@Rokok sudah sampai.@@@@1@3@Id: 221@David Moeljadi@2014-11-4
+40@MRS@@@1@pn@Beberapa menggonggong.@@@@1@2@Id: 222@David Moeljadi@2014-11-4
+41@MRS@@@1@pn@Beberapa ekor menggonggong.@@@@1@3@Id: 231@David Moeljadi@2014-11-4
+42@MRS@@@1@pn@Beberapa kucing menggonggong.@@@@1@3@Id: 232@David Moeljadi@2014-11-4
+43@MRS@@@1@pn@Beberapa ekor kucing menggonggong.@@@@1@4@Id: 241@David Moeljadi@2014-11-4
+44@MRS@@@1@pn@Tidak ada kucing yang menggonggong.@@@@1@5@Id: 242@David Moeljadi@2014-11-4
+45@MRS@@@1@pn@Tidak ada seekor kucing pun yang menggonggong.@@@@1@7@Id: 243@David Moeljadi@2014-11-4
+46@MRS@@@1@pn@Tidak ada seekor pun kucing yang menggonggong.@@@@1@7@Id: 251@David Moeljadi@2014-11-4
+47@MRS@@@1@q@Apakah anjingnya menggonggong?@@@@1@3@Id: 252@David Moeljadi@2014-11-4
+48@MRS@@@1@q@Apakah anjing itu menggonggong?@@@@1@4@Id: 261@David Moeljadi@2014-11-4
+49@MRS@@@1@q@Anjing mana yang menggonggong?@@@@1@4@Id: 262@David Moeljadi@2014-11-4
+50@MRS@@@1@q@Anjing yang mana yang menggonggong?@@@@1@5@Id: 271@David Moeljadi@2014-11-4
+51@MRS@@@1@q@Anjing siapa yang menggonggong?@@@@1@4@Id: 281@David Moeljadi@2014-11-4
+52@MRS@@@1@imp@Kejar Budi!@@@@1@2@Id: 282@David Moeljadi@2014-11-4
+53@MRS@@@1@imp@Kejarlah Budi!@@@@1@2@Id: 291@David Moeljadi@2014-11-4
+54@MRS@@@1@imp@Adi bertanya-tanya anjing mana yang menggonggong.@@@@1@6@Id: 292@David Moeljadi@2014-11-4
+55@MRS@@@1@imp@Adi bertanya-tanya anjing yang mana yang menggonggong.@@@@1@7@Id: 301@David Moeljadi@2014-11-4
+56@MRS@@@1@emb-d@Adi bertanya-tanya apakah Budi menggonggong.@@@@1@5@Id: 311@David Moeljadi@2014-11-4
+57@MRS@@@1@Pass@Anjing yang dikejar Budi menggonggong.@@@@1@5@Id: 312@David Moeljadi@2014-11-4
+58@MRS@@@1@Pass@Anjing yang dikejar oleh Budi menggonggong.@@@@1@6@Id: 321@David Moeljadi@2014-11-4
+59@MRS@@@1@Pass@Anjing yang akan dikejar sedang menggonggong.@@@@1@6@Id: 331@David Moeljadi@2014-11-4
+60@MRS@@@1@Pass@Anjingnya dikejar Budi.@@@@1@3@Id: 332@David Moeljadi@2014-11-4
+61@MRS@@@1@Pass@Anjingnya dikejar oleh Budi.@@@@1@4@Id: 341@David Moeljadi@2014-11-4
+62@MRS@@@1@Pass@Anjing yang dikejar Budi menggonggong.@@@@1@5@Id: 342@David Moeljadi@2014-11-4
+63@MRS@@@1@Pass@Anjing yang dikejar oleh Budi menggonggong.@@@@1@6@Id: 351@David Moeljadi@2014-11-4
+64@MRS@@@1@tam@Anjing itu sedang menggonggong.@@@@1@4@Id: 352@David Moeljadi@2014-11-4
+65@MRS@@@1@tam@Anjingnya sedang menggonggong.@@@@1@3@Id: 361@David Moeljadi@2014-11-4
+66@MRS@@@1@tam@Anjing itu sudah menggonggong.@@@@1@4@Id: 362@David Moeljadi@2014-11-4
+67@MRS@@@1@tam@Anjingnya sudah menggonggong.@@@@1@3@Id: 371@David Moeljadi@2014-11-4
+68@MRS@@@1@tam@Anjing itu sudah menggonggong.@@@@1@4@Id: 372@David Moeljadi@2014-11-4
+69@MRS@@@1@tam@Anjingnya sudah menggonggong.@@@@1@3@Id: 381@David Moeljadi@2014-11-4
+70@MRS@@@1@tam@Anjing itu sudah menggonggong.@@@@1@4@Id: 382@David Moeljadi@2014-11-4
+71@MRS@@@1@tam@Anjingnya sudah menggonggong.@@@@1@3@Id: 391@David Moeljadi@2014-11-4
+72@MRS@@@1@tam@Anjing itu akan menggonggong.@@@@1@4@Id: 392@David Moeljadi@2014-11-4
+73@MRS@@@1@tam@Anjingnya akan menggonggong.@@@@1@3@Id: 401@David Moeljadi@2014-11-4
+74@MRS@@@1@tam@Anjing itu sudah akan menggonggong.@@@@1@5@Id: 402@David Moeljadi@2014-11-4
+75@MRS@@@1@tam@Anjingnya sudah akan menggonggong.@@@@1@4@Id: 411@David Moeljadi@2014-11-4
+76@MRS@@@1@infin@Anjing itu bisa menggonggong.@@@@1@4@Id: 412@David Moeljadi@2014-11-4
+77@MRS@@@1@infin@Anjingnya bisa menggonggong.@@@@1@3@Id: 421@David Moeljadi@2014-11-4
+78@MRS@@@1@infin@Anjing itu tidak bisa menggonggong.@@@@1@5@Id: 422@David Moeljadi@2014-11-4
+79@MRS@@@1@infin@Anjingnya tidak bisa menggonggong.@@@@1@4@Id: 431@David Moeljadi@2014-11-4
+80@MRS@@@1@adj@Anjing tua itu menggonggong.@@@@1@4@Id: 432@David Moeljadi@2014-11-4
+81@MRS@@@1@adj@Anjing tuanya menggonggong.@@@@1@3@Id: 441@David Moeljadi@2014-11-4
+82@MRS@@@1@adv@Anjing itu menggonggong dengan pelan.@@@@1@5@Id: 442@David Moeljadi@2014-11-4
+83@MRS@@@1@adv@Anjingnya menggonggong dengan pelan.@@@@1@4@Id: 451@David Moeljadi@2014-11-4
+84@MRS@@@1@adv@Anjing itu mungkin menggonggong.@@@@1@4@Id: 452@David Moeljadi@2014-11-4
+85@MRS@@@1@adv@Anjingnya mungkin menggonggong.@@@@1@3@Id: 461@David Moeljadi@2014-11-4
+86@MRS@@@1@loc@Anjing itu menggonggong di taman.@@@@1@5@Id: 462@David Moeljadi@2014-11-4
+87@MRS@@@1@loc@Anjingnya menggonggong di taman.@@@@1@4@Id: 471@David Moeljadi@2014-11-4
+88@MRS@@@1@tam@Anjing itu menggonggong sekarang.@@@@1@4@Id: 472@David Moeljadi@2014-11-4
+89@MRS@@@1@tam@Anjingnya menggonggong sekarang.@@@@1@3@Id: 481@David Moeljadi@2014-11-4
+90@MRS@@@1@cpd@Anjing taman itu menggonggong.@@@@1@4@Id: 482@David Moeljadi@2014-11-4
+91@MRS@@@1@cpd@Anjing tamannya menggonggong.@@@@1@3@Id: 491@David Moeljadi@2014-11-4
+92@MRS@@@1@ppmod@Anjing taman tembakau itu menggonggong.@@@@1@5@Id: 492@David Moeljadi@2014-11-4
+93@MRS@@@1@ppmod@Anjing taman tembakaunya menggonggong.@@@@1@4@Id: 501@David Moeljadi@2014-11-4
+94@MRS@@@1@adj@Kucing itu tua.@@@@1@3@Id: 502@David Moeljadi@2014-11-4
+95@MRS@@@1@adj@Kucingnya tua.@@@@1@2@Id: 511@David Moeljadi@2014-11-4
+96@MRS@@@1@prd@Kucingnya di taman.@@@@1@3@Id: 512@David Moeljadi@2014-11-4
+97@MRS@@@1@prd@Kucingnya ada di taman.@@@@1@4@Id: 521@David Moeljadi@2014-11-4
+98@MRS@@@1@det,adj@Anjing yang sedang menggonggong mengejar Budi.@@@@1@6@Id: 531@David Moeljadi@2014-11-4
+99@MRS@@@1@det,pass@Anjing-anjing yang dikejar menggonggong.@@@@1@4@Id: 541@David Moeljadi@2014-11-4
+100@MRS@@@1@adj@Tindakan mengejar kucing itu adalah kuno.@@@@1@6@Id: 542@David Moeljadi@2014-11-4
+101@MRS@@@1@adj@Tindakan mengejar kucing itu kuno.@@@@1@5@Id: 551@David Moeljadi@2014-11-4
+102@MRS@@@1@emb-d@Bahwa kucing itu mengejar Budi adalah kuno.@@@@1@7@Id: 561@David Moeljadi@2014-11-4
+103@MRS@@@1@indef@Anjing-anjing mengejar apa pun yang menggonggong.@@@@1@6@Id: 562@David Moeljadi@2014-11-4
+104@MRS@@@1@indef@Anjing-anjing mengejar apa saja yang menggonggong.@@@@1@6@Id: 571@David Moeljadi@2014-11-4
+105@MRS@@@1@quant@Anjing itu menggonggong setiap hari.@@@@1@5@Id: 572@David Moeljadi@2014-11-4
+106@MRS@@@1@quant@Anjingnya menggonggong setiap hari.@@@@1@4@Id: 581@David Moeljadi@2014-11-4
+107@MRS@@@1@q@Kapan anjing itu menggonggong?@@@@1@4@Id: 582@David Moeljadi@2014-11-4
+108@MRS@@@1@q@Kapan anjingnya menggonggong?@@@@1@3@Id: 591@David Moeljadi@2014-11-4
+109@MRS@@@1@det@Tiga dari anjing-anjing itu menggonggong.@@@@1@5@Id: 592@David Moeljadi@2014-11-4
+110@MRS@@@1@det@Tiga ekor dari anjing-anjing itu menggonggong.@@@@1@6@Id: 601@David Moeljadi@2014-11-4
+111@MRS@@@1@numcl@Tiga ekor menggonggong.@@@@1@3@Id: 611@David Moeljadi@2014-11-4
+112@MRS@@@1@det@Anjing Budi menggonggong.@@@@1@3@Id: 621@David Moeljadi@2014-11-4
+113@MRS@@@1@det@Punya Budi menggonggong.@@@@1@3@Id: 622@David Moeljadi@2014-11-4
+114@MRS@@@1@det@Milik Budi menggonggong.@@@@1@3@Id: 631@David Moeljadi@2014-11-4
+115@MRS@@@1@numcl@Dua puluh tiga anjing menggonggong.@@@@1@5@Id: 632@David Moeljadi@2014-11-4
+116@MRS@@@1@numcl@Dua puluh tiga ekor anjing menggonggong.@@@@1@6@Id: 641@David Moeljadi@2014-11-4
+117@MRS@@@1@numcl@Dua ratus dua puluh anjing menggonggong.@@@@1@6@Id: 642@David Moeljadi@2014-11-4
+118@MRS@@@1@numcl@Dua ratus dua puluh ekor anjing menggonggong.@@@@1@7@Id: 651@David Moeljadi@2014-11-4
+119@MRS@@@1@pro-d@Adi datang dengan mobil.@@@@1@4@Id: 652@David Moeljadi@2014-11-4
+120@MRS@@@1@pro-d@Adi datang naik mobil.@@@@1@4@Id: 661@David Moeljadi@2014-11-4
+121@MRS@@@1@adv@Adi tetap menggonggong.@@@@1@3@Id: 671@David Moeljadi@2014-11-4
+122@MRS@@@1@pro-d@Budi meremas kucing itu masuk.@@@@1@5@Id: 672@David Moeljadi@2014-11-4
+123@MRS@@@1@pro-d@Budi meremas kucingnya masuk.@@@@1@4@Id: 681@David Moeljadi@2014-11-4
+124@MRS@@@1@pro-d@Budi meremas masuk kucing itu.@@@@1@5@Id: 682@David Moeljadi@2014-11-4
+125@MRS@@@1@pro-d@Budi meremas masuk kucingnya.@@@@1@4@Id: 691@David Moeljadi@2014-11-4
+126@MRS@@@1@det@Gambar Adi sampai.@@@@1@3@Id: 692@David Moeljadi@2014-11-4
+127@MRS@@@1@det@Gambar Adi sudah sampai.@@@@1@4@Id: 701@David Moeljadi@2014-11-4
+128@MRS@@@1@res@Adi mengelap bersih meja itu.@@@@1@5@Id: 702@David Moeljadi@2014-11-4
+129@MRS@@@1@res@Adi mengelap bersih mejanya.@@@@1@4@Id: 711@David Moeljadi@2014-11-4
+130@MRS@@@1@pro-d@Adi menaruh Budi di taman itu.@@@@1@6@Id: 721@David Moeljadi@2014-11-4
+131@MRS@@@1@tam@Anjing itu akan menggonggong jika Budi datang.@@@@1@7@Id: 722@David Moeljadi@2014-11-4
+132@MRS@@@1@tam@Anjingnya akan menggonggong jika Budi datang.@@@@1@6@Id: 731@David Moeljadi@2014-11-4
+133@MRS@@@1@crd@Adi dan Budi datang.@@@@1@4@Id: 741@David Moeljadi@2014-11-4
+134@MRS@@@1@crd@Adi, Budi, dan anjing itu datang.@@@@1@6@Id: 742@David Moeljadi@2014-11-4
+135@MRS@@@1@crd@Adi, Budi, dan anjingnya datang.@@@@1@5@Id: 751@David Moeljadi@2014-11-4
+136@MRS@@@1@crd@Anjing itu datang dan menggonggong.@@@@1@5@Id: 752@David Moeljadi@2014-11-4
+137@MRS@@@1@crd@Anjingnya datang dan menggonggong.@@@@1@4@Id: 761@David Moeljadi@2014-11-4
+138@MRS@@@1@crd@Anjing itu datang dan Budi menggonggong.@@@@1@6@Id: 762@David Moeljadi@2014-11-4
+139@MRS@@@1@crd@Anjingnya datang dan Budi menggonggong.@@@@1@5@Id: 771@David Moeljadi@2014-11-4
+140@MRS@@@1@q@Anjing itu menggonggong, kan?@@@@1@4@Id: 772@David Moeljadi@2014-11-4
+141@MRS@@@1@q@Anjingnya menggonggong, kan?@@@@1@3@Id: 781@David Moeljadi@2014-11-4
+142@MRS@@@1@emb-d@Jelas bahwa anjing itu menggonggong.@@@@1@5@Id: 782@David Moeljadi@2014-11-4
+143@MRS@@@1@emb-d@Jelas bahwa anjingnya menggonggong.@@@@1@4@Id: 783@David Moeljadi@2014-11-4
+144@MRS@@@1@emb-d@Adalah jelas bahwa anjing itu menggonggong.@@@@1@6@Id: 784@David Moeljadi@2014-11-4
+145@MRS@@@1@emb-d@Adalah jelas bahwa anjingnya menggonggong.@@@@1@5@Id: 791@David Moeljadi@2014-11-4
+146@MRS@@@1@emb-d@Adi berjanji kepada Budi untuk menggonggong.@@@@1@6@Id: 801@David Moeljadi@2014-11-4
+147@MRS@@@1@emb-d@Adi kelihatannya menggonggong.@@@@1@3@Id: 811@David Moeljadi@2014-11-4
+148@MRS@@@1@emb-d@Adi percaya Budi sedang menggonggong.@@@@1@5@Id: 821@David Moeljadi@2014-11-4
+149@MRS@@@1@emb-d@Adi terganggu karena Budi menggonggong.@@@@1@5@Id: 822@David Moeljadi@2014-11-4
+150@MRS@@@1@emb-d@Bahwa Budi menggonggong mengganggu Adi.@@@@1@5@Id: 831@David Moeljadi@2014-11-4
+151@MRS@@@1@emb-d@Adi membutuhkan waktu sepuluh menit untuk datang.@@@@1@7@Id: 841@David Moeljadi@2014-11-4
+152@MRS@@@1@emb-d@Adi membiarkan Budi menggonggong.@@@@1@4@Id: 851@David Moeljadi@2014-11-4
+153@MRS@@@1@emb-d@Budi terkejut melihat Adi tua.@@@@1@5@Id: 861@David Moeljadi@2014-11-4
+154@MRS@@@1@emb-d@Budi menganggap Adi tua.@@@@1@4@Id: 871@David Moeljadi@2014-11-4
+155@MRS@@@1@emb-d@Adi menyukai ide bahwa Budi bisa menggonggong.@@@@1@7@Id: 881@David Moeljadi@2014-11-4
+156@MRS@@@1@prep@Adi menggonggong dari jam sepuluh sampai jam tiga.@@@@1@8@Id: 891@David Moeljadi@2014-11-4
+157@MRS@@@1@adj@Adi sangat tua.@@@@1@3@Id: 901@David Moeljadi@2014-11-4
+158@MRS@@@1@adv@Hampir setiap anjing menggonggong.@@@@1@4@Id: 911@David Moeljadi@2014-11-4
+159@MRS@@@1@adv@Adi menggonggong dengan sangat pelan.@@@@1@5@Id: 912@David Moeljadi@2014-11-4
+160@MRS@@@1@adv@Adi menggonggong sangat pelan.@@@@1@4@Id: 921@David Moeljadi@2014-11-4
+161@MRS@@@1@emb-d@Tindakan Budi mengejar kucing-kucing mengganggu Adi.@@@@1@6@Id: 931@David Moeljadi@2014-11-4
+162@MRS@@@1@emb-d@Budi terganggu karena Adi mengejar kucing-kucing.@@@@1@6@Id: 932@David Moeljadi@2014-11-4
+163@MRS@@@1@emb-d@Bahwa Adi mengejar kucing-kucing mengganggu Budi.@@@@1@6@Id: 941@David Moeljadi@2014-11-4
+164@MRS@@@1@adv@Tanggal tiga Juni datang.@@@@1@4@Id: 951@David Moeljadi@2014-11-4
+165@MRS@@@1@adv@Adi datang pada jam tiga lewat dua puluh.@@@@1@8@Id: 961@David Moeljadi@2014-11-4
+166@MRS@@@1@adv@Budi datang pada hari Selasa pagi.@@@@1@6@Id: 971@David Moeljadi@2014-11-4
+167@MRS@@@1@det@Kucing-kucing itu menemukan cara menggonggong.@@@@1@5@Id: 972@David Moeljadi@2014-11-4
+168@MRS@@@1@det@Kucing-kucingnya menemukan cara menggonggong.@@@@1@4@Id: 981@David Moeljadi@2014-11-4
+169@MRS@@@1@adv@Anjing yang lebih bahagia mengejar Budi.@@@@1@6@Id: 991@David Moeljadi@2014-11-4
+170@MRS@@@1@tam@Ada kucing-kucing di taman.@@@@1@4@Id: 1001@David Moeljadi@2014-11-4
+171@MRS@@@1@det@Anjing itu mengejar Budi.@@@@1@4@Id: 1002@David Moeljadi@2014-11-4
+172@MRS@@@1@det@Anjingnya mengejar Budi.@@@@1@3@Id: 1011@David Moeljadi@2014-11-4
+173@MRS@@@1@det@Seseorang mengejar Adi.@@@@1@3@Id: 1021@David Moeljadi@2014-11-4
+174@MRS@@@1@q@Seberapa bahagia Adi?@@@@1@3@Id: 1031@David Moeljadi@2014-11-4
+175@MRS@@@1@tam,agency@Nomor lima mengganggu Budi.@@@@1@4@Id: 1041@David Moeljadi@2014-11-4
+176@MRS@@@1@tam@Adi bisa.@@@@1@2@Id: 1042@David Moeljadi@2014-11-4
+177@MRS@@@1@tam@Adi dahulu bisa.@@@@1@3@Id: 1051@David Moeljadi@2014-11-4
+178@MRS@@@1@tam@Budi mencoba.@@@@1@2@Id: 1061@David Moeljadi@2014-11-4
+179@MRS@@@1@tam@Jangan menggonggong!@@@@1@2@Id: 1062@David Moeljadi@2014-11-4
+180@MRS@@@1@tam@Janganlah menggonggong!@@@@1@2@Id: 1071@David Moeljadi@2014-11-4
+181@MRS@@@1@adv@Anjing itu datang menggonggong.@@@@1@4@Id: 1072@David Moeljadi@2014-11-4
+182@MRS@@@1@adv@Anjingnya datang menggonggong.@@@@1@3@@David Moeljadi@2014-11-4
