@@ -3021,6 +3021,12 @@ no-mod-lex := no-hcons-lex-item &
 ;  [ SYNSEM [ LOCAL.CAT.HEAD adj,
 ;	     LKEYS.KEYREL event-relation ]].
 
+;; 090515: added to cope with previous INDRA version
+
+basic-adj-lex := single-rel-lex-item &
+  [ SYNSEM [ LOCAL.CAT.HEAD adj,
+	     LKEYS.KEYREL event-relation ]].
+
 ; ERB 2007-02-26 New type raise-index-mod-lex-item to get the
 ; INDEX value right on modifiers.  Attributive adjectives should
 ; inherit from this one, predicatives from norm-hook-lex-item.
