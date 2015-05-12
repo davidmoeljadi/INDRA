@@ -32,7 +32,7 @@ poss_rel := quant_rel.
 pronoun_q_rel := quant_rel.
 pron_rel := predsort.
 
-;; 090515: added pumping rule
+;; 090515: added decomposed words
 demon_q_rel := quant_rel.
 proximal_q_rel := demon_q_rel.
 dist_q_rel := demon_q_rel.
@@ -579,6 +579,10 @@ n-enclitic-lex-rule-super := same-non-local-lex-rule &
 
 nya-lex-rule := n-enclitic-lex-rule-super.
 
+ku-lex-rule := n-enclitic-lex-rule-super.
+
+mu-lex-rule := n-enclitic-lex-rule-super.
+
 voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED.VOICE-FLAG +,
     DTR tr-verb-lex ].
@@ -908,8 +912,13 @@ v_np_ntr_le := transitive-verb-lex &
 ; <nex>
 ; <todo>
 ; </type>
-v_pp*_dir_le := transitive-verb-lex  & 
-  [ SYNSEM.LOCAL.CAT [ VAL.COMPS < [ OPT + ] > ] ].
+v_pp*_dir_le := main-verb-lex & transitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD adp ] ] > ].
 
 ; Temporary patch for e.g. 'take' which has an optional ARG3 role, which
 ; needs to be present so generator won't spuriously fill it.
@@ -919,9 +928,29 @@ v_pp*_dir_le := transitive-verb-lex  &
 ; <nex>
 ; <todo>
 ; </type>
-v_np_noarg3_le := ditransitive-lex-item & 
-  [ SYNSEM [ LOCAL.CAT [ VAL.COMPS < [ OPT - ] > ],
-             LKEYS.KEYREL.ARG3 semarg ] ].
+v_np_noarg3_le := main-verb-lex & ditransitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comp1, #comp2 >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #comp1 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun ] ],
+             #comp2 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun ] ] > ].
+
+ditransitive-verb-lex := main-verb-lex & ditransitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comp1, #comp2 >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #comp1 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun ] ],
+             #comp2 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD adp ] ] > ].
 
 ;; takes dir_state_modable_rel oblique complement.
 ;; put (takes variety of PP complements, so avoid chart dependency filter)
@@ -931,7 +960,7 @@ v_np_noarg3_le := ditransitive-lex-item &
 ; <nex>
 ; <todo>
 ; </type>
-v_np-pp_prop_le := ditransitive-lex-item.
+v_np-pp_prop_le := ditransitive-verb-lex.
 
 ; <type val="v_np-pp_e_le">
 ; <description>Cmps NP(obl),PP(sel.obl)         
@@ -939,7 +968,7 @@ v_np-pp_prop_le := ditransitive-lex-item.
 ; <nex>
 ; <todo>
 ; </type>
-v_np-pp_e_le := ditransitive-lex-item & 
+v_np-pp_e_le := ditransitive-verb-lex & 
   [ SYNSEM [ LOCAL.CAT [ VAL.COMPS < [ OPT - ], [ OPT - ] > ] ] ].
 
 ; <type val="v_cp_prop_le">

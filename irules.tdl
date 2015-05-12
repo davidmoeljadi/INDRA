@@ -39,6 +39,56 @@ nya-lex-rule &
 				      LBL #larg2,
 				      ARG0 #arg2 ] !> ] ].
 
+ku-suffix-1 :=
+%suffix (* ku)
+ku-lex-rule & 
+ [ DTR.SYNSEM.LOCAL [ CONT.HOOK [ INDEX #index,
+				  LTOP #larg ] ],
+   C-CONT [ HOOK [ INDEX #index ],
+	    HCONS <! qeq & [ HARG #harg,
+			     LARG #larg ],
+		   qeq & [ HARG #harg2,
+			   LARG #larg2 ] !>,
+	    RELS <! quant-relation & [ PRED def_q_rel,
+				       ARG0 #index,
+				       RSTR #harg ],
+		    arg12-relation & [ PRED poss_rel,
+				       LBL #larg,
+				       ARG0 event,
+				       ARG1 #index,
+				       ARG2 #arg2 & [ PNG.PERNUM 1sg ] ],
+		    quant-relation & [ PRED pronoun_q_rel,
+				       ARG0 #arg2,
+				       RSTR #harg2 ],
+  		    arg0-relation & [ PRED pron_rel,
+				      LBL #larg2,
+				      ARG0 #arg2 ] !> ] ].
+
+mu-suffix-1 :=
+%suffix (* mu)
+mu-lex-rule & 
+ [ DTR.SYNSEM.LOCAL [ CONT.HOOK [ INDEX #index,
+				  LTOP #larg ] ],
+   C-CONT [ HOOK [ INDEX #index ],
+	    HCONS <! qeq & [ HARG #harg,
+			     LARG #larg ],
+		   qeq & [ HARG #harg2,
+			   LARG #larg2 ] !>,
+	    RELS <! quant-relation & [ PRED def_q_rel,
+				       ARG0 #index,
+				       RSTR #harg ],
+		    arg12-relation & [ PRED poss_rel,
+				       LBL #larg,
+				       ARG0 event,
+				       ARG1 #index,
+				       ARG2 #arg2 & [ PNG.PERNUM 2sg ] ],
+		    quant-relation & [ PRED pronoun_q_rel,
+				       ARG0 #arg2,
+				       RSTR #harg2 ],
+  		    arg0-relation & [ PRED pron_rel,
+				      LBL #larg2,
+				      ARG0 #arg2 ] !> ] ].
+
 ; <type val="act-prefix">
 ; <description>Active voice with |me-| prefix
 ; <ex>menunggu
@@ -46,7 +96,7 @@ nya-lex-rule &
 ; <todo>
 ; </type>
 act-prefix :=
-%prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt) (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem) (f memf) (v memv) (w mew) (t men) (tr mentr) (ts ments) (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) (sp mensp) (sm mensm) (sn mensn) (sk mensk) (sy mensy) (syair menyair) (sw mensw) (st menst) (z menz) (l mel) (c menc) (cek mengecek) (cekah mencekah) (j menj) (ny meny) (y mey) (k meng) (kh mengkh) (kl mengkl) (kr mengkr) (g mengg) (ng meng) (q mengq) (h mengh) (a menga) (i mengi) (u mengu) (e menge) (o mengo)
+%prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt) (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem) (f memf) (v memv) (w mew) (t men) (tr mentr) (ts ments) (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) (sp mensp) (sm mensm) (sn mensn) (sk mensk) (sy mensy) (syairkan menyairkan) (sw mensw) (st menst) (z menz) (l mel) (c menc) (cek mengecek) (cekah mencekah) (j menj) (ny meny) (y mey) (k meng) (kh mengkh) (kl mengkl) (kr mengkr) (g mengg) (ng meng) (q mengq) (h mengh) (bel mengebel) (bom mengebom) (bon mengebon) (bor mengebor) (buk mengebuk) (cas mengecas) (cat mengecat) (cor mengecor) (dab mengedab) (dep mengedep) (dor mengedor) (dot mengedot) (drel mengedrel) (dril mengedril) (drop mengedrop) (dub mengedub) (dup mengedup) (kir mengekir) (kol mengekol) (kop mengekop) (lap mengelap) (las mengelas) (lem mengelem) (pak mengepak) (pas mengepas) (pel mengepel) (poskan mengeposkan) (pres mengepres) (rem mengerem) (sahkan mengesahkan) (set mengeset) (sir mengesir) (sol mengesol) (som mengesom) (sun mengesun) (tap mengetap) (tem mengetem) (tes mengetes) (tik mengetik) (tim mengetim) (tip mengetip) (top mengetop) (tos mengetos) (trek mengetrek) (tum mengetum) (a menga) (i mengi) (u mengu) (e menge) (o mengo)
 act-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
