@@ -1,0 +1,149 @@
+9746  bytes	relations
+10340 bytes	item
+reading results for                1	1 results
+reading results for                2	0 results
+reading results for                3	0 results
+reading results for                4	0 results
+reading results for                5	0 results
+reading results for                6	1 results
+reading results for                7	1 results
+reading results for                8	0 results
+reading results for                9	0 results
+reading results for               10	0 results
+reading results for               11	0 results
+reading results for               12	0 results
+reading results for               13	0 results
+reading results for               14	0 results
+reading results for               15	0 results
+reading results for               16	0 results
+reading results for               17	0 results
+reading results for               18	0 results
+reading results for               19	0 results
+reading results for               20	0 results
+reading results for               21	0 results
+reading results for               22	0 results
+reading results for               23	0 results
+reading results for               24	0 results
+reading results for               25	0 results
+reading results for               26	0 results
+reading results for               27	0 results
+reading results for               28	0 results
+reading results for               29	2 results
+reading results for               30	1 results
+reading results for               31	0 results
+reading results for               32	1 results
+reading results for               33	1 results
+reading results for               34	0 results
+reading results for               35	0 results
+reading results for               36	1 results
+reading results for               37	1 results
+reading results for               38	1 results
+reading results for               39	1 results
+reading results for               40	1 results
+reading results for               41	1 results
+reading results for               42	1 results
+reading results for               43	1 results
+reading results for               44	1 results
+reading results for               45	0 results
+reading results for               46	0 results
+reading results for               47	0 results
+reading results for               48	1 results
+reading results for               49	0 results
+reading results for               50	0 results
+reading results for               51	0 results
+reading results for               52	0 results
+reading results for               53	0 results
+reading results for               54	0 results
+reading results for               55	0 results
+reading results for               56	0 results
+reading results for               57	0 results
+reading results for               58	0 results
+reading results for               59	0 results
+reading results for               60	0 results
+reading results for               61	1 results
+reading results for               62	1 results
+reading results for               63	0 results
+reading results for               64	0 results
+reading results for               65	1 results
+reading results for               66	0 results
+reading results for               67	1 results
+reading results for               68	0 results
+reading results for               69	0 results
+reading results for               70	0 results
+reading results for               71	0 results
+reading results for               72	0 results
+reading results for               73	0 results
+reading results for               74	0 results
+reading results for               75	0 results
+reading results for               76	1 results
+reading results for               77	1 results
+reading results for               78	0 results
+reading results for               79	0 results
+reading results for               80	0 results
+reading results for               81	2 results
+reading results for               82	2 results
+reading results for               83	0 results
+reading results for               84	2 results
+reading results for               85	4 results
+reading results for               86	1 results
+reading results for               87	0 results
+reading results for               88	1 results
+reading results for               89	0 results
+reading results for               90	0 results
+reading results for               91	0 results
+reading results for               92	1 results
+reading results for               93	1 results
+reading results for               94	0 results
+reading results for               95	0 results
+reading results for               96	1 results
+reading results for               97	1 results
+reading results for               98	0 results
+reading results for               99	1 results
+reading results for              100	1 results
+reading results for              101	0 results
+reading results for              102	0 results
+reading results for              103	0 results
+reading results for              104	0 results
+reading results for              105	0 results
+reading results for              106	0 results
+Preparing profile: /home/david/grammar/ind/tsdb/skeletons/lab3
+Completed running mkprof. Output at ../tsdb/gtest/comparison/lab3
+Parsing profile: /home/david/grammar/ind/tsdb/gtest/comparison/lab3
+Completed running art. Output at ../tsdb/gtest/comparison/lab3
+Comparing output (../tsdb/gtest/comparison/lab3) to gold (../tsdb/gold/lab3)
+1	<0,1,0>
+6	<0,1,0>
+7	<0,1,0>
+29	<1,1,0>
+30	<0,1,0>
+32	<0,1,0>
+33	<0,1,0>
+36	<0,1,0>
+37	<0,1,0>
+38	<0,1,0>
+39	<0,1,0>
+40	<0,1,0>
+41	<0,1,0>
+42	<0,1,0>
+43	<0,1,0>
+44	<0,1,0>
+48	<0,1,0>
+61	<0,1,0>
+62	<0,1,0>
+65	<0,1,0>
+67	<0,1,0>
+76	<0,1,0>
+77	<0,1,0>
+81	<1,1,0>
+82	<1,1,0>
+84	<1,1,0>
+85	<3,1,0>
+86	<0,1,0>
+88	<0,1,0>
+92	<0,1,0>
+93	<0,1,0>
+96	<0,1,0>
+97	<0,1,0>
+99	<0,1,0>
+100	<0,1,0>
+Completed comparison. Test failed.

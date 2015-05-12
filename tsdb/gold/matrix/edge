@@ -1,0 +1,21 @@
+48@1@root@4@1@0@2@@(47)@@
+47@1@subj-head@3@1@0@2@@(38 8)@@
+38@1@bare-np@3@1@0@1@@(7)@@
+7@1@saya@1@1@0@1@@(5)@@
+8@1@tidur@1@1@1@2@@(6)@@
+5@1@token [ +FORM "Saya" +FROM "0" +TO "4" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Saya" ]@0@0@0@1@@@@
+6@1@token [ +FORM "tidur" +FROM "5" +TO "10" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "tidur" ]@0@0@1@2@@@@
+7@3@token [ +FORM "Makan" +FROM "0" +TO "5" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Makan" ]@0@0@0@1@@@@
+8@3@token [ +FORM "saya" +FROM "6" +TO "10" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "saya" ]@0@0@1@2@@@@
+9@3@token [ +FORM "kue" +FROM "11" +TO "14" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "kue" ]@0@0@2@3@@@@
+93@2@root@4@1@0@3@@(92)@@
+92@2@subj-head@3@1@0@3@@(63 85)@@
+63@2@bare-np@3@1@0@1@@(10)@@
+10@2@saya@1@1@0@1@@(7)@@
+85@2@head-comp@3@1@1@3@@(12 74)@@
+12@2@makan_2@1@1@1@2@@(8)@@
+74@2@bare-np@3@1@2@3@@(13)@@
+13@2@kue@1@1@2@3@@(9)@@
+7@2@token [ +FORM "Saya" +FROM "0" +TO "4" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Saya" ]@0@0@0@1@@@@
+8@2@token [ +FORM "makan" +FROM "5" +TO "10" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "makan" ]@0@0@1@2@@@@
+9@2@token [ +FORM "kue" +FROM "11" +TO "14" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "kue" ]@0@0@2@3@@@@

@@ -1,0 +1,13 @@
+9746  bytes	relations
+214   bytes	item
+reading results for                1	1 results
+reading results for                2	1 results
+reading results for                3	0 results
+Preparing profile: /home/david/grammar/ind/tsdb/skeletons/matrix
+Completed running mkprof. Output at ../tsdb/gtest/comparison/matrix
+Parsing profile: /home/david/grammar/ind/tsdb/gtest/comparison/matrix
+Completed running art. Output at ../tsdb/gtest/comparison/matrix
+Comparing output (../tsdb/gtest/comparison/matrix) to gold (../tsdb/gold/matrix)
+1	<0,1,0>
+2	<0,1,0>
+Completed comparison. Test succeeded.

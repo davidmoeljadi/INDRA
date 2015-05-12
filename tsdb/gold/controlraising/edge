@@ -1,0 +1,85 @@
+11@2@token [ +FORM "Makan" +FROM "0" +TO "5" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Makan" ]@0@0@0@1@@@@
+12@2@token [ +FORM "nasi" +FROM "6" +TO "10" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "nasi" ]@0@0@1@2@@@@
+13@2@token [ +FORM "sudah" +FROM "11" +TO "16" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "sudah" ]@0@0@2@3@@@@
+14@2@token [ +FORM "mereka" +FROM "17" +TO "23" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "mereka" ]@0@0@3@4@@@@
+15@2@token [ +FORM "coba" +FROM "24" +TO "28" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "coba" ]@0@0@4@5@@@@
+15@4@token [ +FORM "Budi" +FROM "0" +TO "4" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Budi" ]@0@0@0@1@@@@
+16@4@token [ +FORM "disuruh" +FROM "5" +TO "12" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "disuruh" ]@0@0@1@2@@@@
+17@4@token [ +FORM "Adi" +FROM "13" +TO "16" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Adi" ]@0@0@2@3@@@@
+18@4@token [ +FORM "segera" +FROM "17" +TO "23" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "segera" ]@0@0@3@4@@@@
+19@4@token [ +FORM "melakukan" +FROM "24" +TO "33" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "melakukan" ]@0@0@4@5@@@@
+20@4@token [ +FORM "hal" +FROM "34" +TO "37" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "hal" ]@0@0@5@6@@@@
+21@4@token [ +FORM "itu" +FROM "38" +TO "41" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "itu" ]@0@0@6@7@@@@
+13@8@token [ +FORM "Budi" +FROM "0" +TO "4" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Budi" ]@0@0@0@1@@@@
+14@8@token [ +FORM "lapar" +FROM "5" +TO "10" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "lapar" ]@0@0@1@2@@@@
+15@8@token [ +FORM "dan" +FROM "11" +TO "14" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "dan" ]@0@0@2@3@@@@
+16@8@token [ +FORM "ingin" +FROM "15" +TO "20" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "ingin" ]@0@0@3@4@@@@
+17@8@token [ +FORM "makan" +FROM "21" +TO "26" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "makan" ]@0@0@4@5@@@@
+18@8@token [ +FORM "tampak" +FROM "27" +TO "33" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "tampak" ]@0@0@5@6@@@@
+13@6@token [ +FORM "Tampak" +FROM "0" +TO "6" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Tampak" ]@0@0@0@1@@@@
+14@6@token [ +FORM "Budi" +FROM "7" +TO "11" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Budi" ]@0@0@1@2@@@@
+15@6@token [ +FORM "lapar" +FROM "12" +TO "17" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "lapar" ]@0@0@2@3@@@@
+16@6@token [ +FORM "dan" +FROM "18" +TO "21" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "dan" ]@0@0@3@4@@@@
+17@6@token [ +FORM "ingin" +FROM "22" +TO "27" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "ingin" ]@0@0@4@5@@@@
+18@6@token [ +FORM "makan" +FROM "28" +TO "33" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "makan" ]@0@0@5@6@@@@
+11@5@token [ +FORM "Adi" +FROM "0" +TO "3" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Adi" ]@0@0@0@1@@@@
+12@5@token [ +FORM "mencoba" +FROM "4" +TO "11" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "mencoba" ]@0@0@1@2@@@@
+13@5@token [ +FORM "dia" +FROM "12" +TO "15" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "dia" ]@0@0@2@3@@@@
+14@5@token [ +FORM "makan" +FROM "16" +TO "21" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "makan" ]@0@0@3@4@@@@
+15@5@token [ +FORM "nasi" +FROM "22" +TO "26" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "nasi" ]@0@0@4@5@@@@
+15@3@token [ +FORM "Adi" +FROM "0" +TO "3" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Adi" ]@0@0@0@1@@@@
+16@3@token [ +FORM "menyuruh" +FROM "4" +TO "12" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "menyuruh" ]@0@0@1@2@@@@
+17@3@token [ +FORM "Budi" +FROM "13" +TO "17" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Budi" ]@0@0@2@3@@@@
+18@3@token [ +FORM "segera" +FROM "18" +TO "24" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "segera" ]@0@0@3@4@@@@
+19@3@token [ +FORM "melakukan" +FROM "25" +TO "34" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "melakukan" ]@0@0@4@5@@@@
+20@3@token [ +FORM "hal" +FROM "35" +TO "38" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "hal" ]@0@0@5@6@@@@
+21@3@token [ +FORM "itu" +FROM "39" +TO "42" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "itu" ]@0@0@6@7@@@@
+198@1@root@4@1@0@5@@(192)@@
+192@1@subj-head@3@1@0@5@@(112 191)@@
+112@1@bare-np@3@1@0@1@@(16)@@
+16@1@mereka@1@1@0@1@@(11)@@
+191@1@head-comp@3@1@1@5@@(17 167)@@
+17@1@sudah@1@1@1@2@@(12)@@
+167@1@head-comp@3@1@2@5@@(19 160)@@
+19@1@mencoba_2@1@1@2@3@@(13)@@
+160@1@head-comp@3@1@3@5@@(21 137)@@
+21@1@makan_2@1@1@3@4@@(14)@@
+137@1@bare-np@3@1@4@5@@(22)@@
+22@1@nasi@1@1@4@5@@(15)@@
+11@1@token [ +FORM "Mereka" +FROM "0" +TO "6" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Mereka" ]@0@0@0@1@@@@
+12@1@token [ +FORM "sudah" +FROM "7" +TO "12" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "sudah" ]@0@0@1@2@@@@
+13@1@token [ +FORM "mencoba" +FROM "13" +TO "20" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "mencoba" ]@0@0@2@3@@@@
+14@1@token [ +FORM "makan" +FROM "21" +TO "26" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "makan" ]@0@0@3@4@@@@
+15@1@token [ +FORM "nasi" +FROM "27" +TO "31" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "nasi" ]@0@0@4@5@@@@
+13@7@token [ +FORM "Budi" +FROM "0" +TO "4" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Budi" ]@0@0@0@1@@@@
+14@7@token [ +FORM "tampak" +FROM "5" +TO "11" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "tampak" ]@0@0@1@2@@@@
+15@7@token [ +FORM "lapar" +FROM "12" +TO "17" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "lapar" ]@0@0@2@3@@@@
+16@7@token [ +FORM "dan" +FROM "18" +TO "21" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "dan" ]@0@0@3@4@@@@
+17@7@token [ +FORM "ingin" +FROM "22" +TO "27" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "ingin" ]@0@0@4@5@@@@
+18@7@token [ +FORM "makan" +FROM "28" +TO "33" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "makan" ]@0@0@5@6@@@@
+9@10@token [ +FORM "Anjingnya" +FROM "0" +TO "9" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Anjingnya" ]@0@0@0@1@@@@
+10@10@token [ +FORM "dia" +FROM "10" +TO "13" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "dia" ]@0@0@1@2@@@@
+11@10@token [ +FORM "harapkan" +FROM "14" +TO "22" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "harapkan" ]@0@0@2@3@@@@
+12@10@token [ +FORM "menggonggong" +FROM "23" +TO "35" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "menggonggong" ]@0@0@3@4@@@@
+159@9@root@4@1@0@4@@(158)@@
+158@9@subj-head@3@1@0@4@@(88 157)@@
+88@9@bare-np@3@1@0@1@@(13)@@
+13@9@dia@1@1@0@1@@(9)@@
+157@9@basic-head-opt-comp@3@1@1@4@@(136)@@
+136@9@head-comp@3@1@1@4@@(14 124)@@
+14@9@mengharapkan@1@1@1@2@@(10)@@
+124@9@subj-head@3@1@2@4@@(22 16)@@(123)
+123@9@subj-head@3@5@2@4@@(21 16)@@
+21@9@nya-suffix-1@2@1@2@3@@(15)@@
+15@9@anjing@1@1@2@3@@(11)@@
+16@9@menggonggong@1@1@3@4@@(12)@@
+22@9@nya-suffix-2@2@1@2@3@@(15)@@
+160@9@root@4@1@0@4@@(151)@@
+151@9@subj-head@3@1@0@4@@(88 150)@@
+150@9@head-comp@3@1@1@4@@(115 16)@@
+115@9@head-comp@3@1@1@3@@(14 22)@@(114)
+114@9@head-comp@3@5@1@3@@(14 21)@@
+9@9@token [ +FORM "Dia" +FROM "0" +TO "3" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "Dia" ]@0@0@0@1@@@@
+10@9@token [ +FORM "mengharapkan" +FROM "4" +TO "16" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "mengharapkan" ]@0@0@1@2@@@@
+11@9@token [ +FORM "anjingnya" +FROM "17" +TO "26" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "anjingnya" ]@0@0@2@3@@@@
+12@9@token [ +FORM "menggonggong" +FROM "27" +TO "39" +ID diff-list [ LIST list LAST list ] +POS pos [ +TAGS null +PRBS null ] +CLASS non_ne [ +INITIAL luk ] +TRAIT token_trait +PRED predsort +CARG "menggonggong" ]@0@0@3@4@@@@

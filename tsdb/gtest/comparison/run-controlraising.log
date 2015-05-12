@@ -1,0 +1,20 @@
+9746  bytes	relations
+3463  bytes	item
+reading results for                1	1 results
+reading results for                2	0 results
+reading results for                3	0 results
+reading results for                4	0 results
+reading results for                5	0 results
+reading results for                6	0 results
+reading results for                7	0 results
+reading results for                8	0 results
+reading results for                9	4 results
+reading results for               10	0 results
+Preparing profile: /home/david/grammar/ind/tsdb/skeletons/controlraising
+Completed running mkprof. Output at ../tsdb/gtest/comparison/controlraising
+Parsing profile: /home/david/grammar/ind/tsdb/gtest/comparison/controlraising
+Completed running art. Output at ../tsdb/gtest/comparison/controlraising
+Comparing output (../tsdb/gtest/comparison/controlraising) to gold (../tsdb/gold/controlraising)
+1	<0,1,0>
+9	<3,1,0>
+Completed comparison. Test failed.
