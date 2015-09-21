@@ -1,16 +1,29 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Inflecting Lexical Rule Instances
+;;; 120815: change "the_q_rel" to "def_q_rel"
+;nya-suffix-1 :=
+;%suffix (* nya)
+;nya-lex-rule & 
+; [ DTR.SYNSEM.LOCAL [ CONT.HOOK [ INDEX #index,
+;				  LTOP #larg ] ],
+;   C-CONT [ HOOK [ INDEX #index,
+;		   LTOP #ltop ],
+;	    HCONS <! qeq & [ HARG #harg,
+;			     LARG #larg ] !>,
+;	    RELS <! quant-relation & [ PRED def_q_rel,
+;				       LBL #ltop,
+;				       ARG0 #index,
+;				       RSTR #harg ] !> ] ].
+
 nya-suffix-1 :=
 %suffix (* nya)
 nya-lex-rule & 
  [ DTR.SYNSEM.LOCAL [ CONT.HOOK [ INDEX #index,
 				  LTOP #larg ] ],
-   C-CONT [ HOOK [ INDEX #index,
-		   LTOP #ltop ],
+   C-CONT [ HOOK [ INDEX #index ],
 	    HCONS <! qeq & [ HARG #harg,
 			     LARG #larg ] !>,
-	    RELS <! quant-relation & [ PRED the_q_rel,
-				       LBL #ltop,
+	    RELS <! quant-relation & [ PRED def_q_rel,
 				       ARG0 #index,
 				       RSTR #harg ] !> ] ].
 
@@ -96,7 +109,7 @@ mu-lex-rule &
 ; <todo>
 ; </type>
 act-prefix :=
-%prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt) (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem) (f memf) (v memv) (w mew) (t men) (tr mentr) (ts ments) (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) (sp mensp) (sm mensm) (sn mensn) (sk mensk) (sy mensy) (syairkan menyairkan) (sw mensw) (st menst) (z menz) (l mel) (c menc) (cek mengecek) (cekah mencekah) (j menj) (ny meny) (y mey) (k meng) (kh mengkh) (kl mengkl) (kr mengkr) (g mengg) (ng meng) (q mengq) (h mengh) (bel mengebel) (bom mengebom) (bon mengebon) (bor mengebor) (buk mengebuk) (cas mengecas) (cat mengecat) (cor mengecor) (dab mengedab) (dep mengedep) (dor mengedor) (dot mengedot) (drel mengedrel) (dril mengedril) (drop mengedrop) (dub mengedub) (dup mengedup) (kir mengekir) (kol mengekol) (kop mengekop) (lap mengelap) (las mengelas) (lem mengelem) (pak mengepak) (pas mengepas) (pel mengepel) (poskan mengeposkan) (pres mengepres) (rem mengerem) (sahkan mengesahkan) (set mengeset) (sir mengesir) (sol mengesol) (som mengesom) (sun mengesun) (tap mengetap) (tem mengetem) (tes mengetes) (tik mengetik) (tim mengetim) (tip mengetip) (top mengetop) (tos mengetos) (trek mengetrek) (tum mengetum) (a menga) (i mengi) (u mengu) (e menge) (o mengo)
+%prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt) (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem) (f memf) (v memv) (w mew) (t men) (tr mentr) (ts ments) (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) (sp mensp) (sm mensm) (sn mensn) (sk mensk) (sy mensy) (syairkan menyairkan) (sw mensw) (st menst) (z menz) (l mel) (c menc) (j menj) (ny meny) (y mey) (k meng) (kh mengkh) (kl mengkl) (kr mengkr) (g mengg) (ng meng) (q mengq) (h mengh) (a menga) (i mengi) (u mengu) (e menge) (o mengo) (poskan mengeposkan) (sahkan mengesahkan)
 act-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
