@@ -24,15 +24,20 @@ orthog := cons &
 non-mod-lex-item := lex-item &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < > ].
 
+;; DVM 2015-08-18: added mrs
+hook :+ 
+ [ SPEAKER-KEY ref-ind,
+   HEARER-KEY ref-ind ].
+
 quant_rel := predsort.
+pron_rel := predsort.
 def_q_rel := quant_rel.
 the_q_rel := def_q_rel.
 exist_q_rel := quant_rel.
 poss_rel := quant_rel.
 pronoun_q_rel := quant_rel.
-pron_rel := predsort.
 
-;; 090515: added decomposed words
+;; DVM 2015-05-09: added decomposed words
 demon_q_rel := quant_rel.
 proximal_q_rel := demon_q_rel.
 dist_q_rel := demon_q_rel.
@@ -51,6 +56,22 @@ place_n_rel  := generic_n_rel.
 reason_n_rel := generic_n_rel.
 ; how
 manner_n_rel := generic_n_rel.
+
+;; DVM 2015-08-18: added from zhong.tdl
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; SSH 2015-05-24
+;; CTXT (Honorification)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+dialogue := icons.
+addressor := dialogue.
+addressee := dialogue.
+rank := icons.
+higher-or-equal := rank.
+lower-or-equal := rank.
+higher := higher-or-equal.
+lower := lower-or-equal.
+equal :=  higher-or-equal & lower-or-equal.
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Matrix Type Addenda
@@ -184,7 +205,7 @@ proper-name-lex := basic-one-arg & basic-icons-lex-item &
 ;hon-lex := lex-item &
 ;  [ SYNSEM.LOCAL.CAT.HEAD.HON + ].
 
-basic-pronoun-lex :=  basic-one-arg & 
+basic-pronoun-lex :=  basic-one-arg & norm-hook-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [ MOD <> ],
                            VAL [ COMPS < >,
                                  SUBJ < >,
@@ -196,7 +217,31 @@ pronoun-lex := basic-pronoun-lex & no-hcons-lex-item &
                norm-hook-lex-item & basic-icons-lex-item &
   [ SYNSEM.LOCAL.CONT.RELS <! relation !> ].
 
-pronoun-noun-lex := noun-lex.
+;; DVM 2015-08-18: added from zhong-lextypes.tdl
+;; from here
+personal-pronoun-lex := basic-pronoun-lex &
+  [ SYNSEM.LOCAL.CONT [ RELS <! relation & [ARG0 #x, LBL #h], 
+			    [ PRED pronoun_q_rel,
+				ARG0 #x, RSTR #h2 ] !> ,
+                        HCONS <! qeq & [ LARG #h, HARG #h2 ] !>  ] ].
+
+speaker-lex-item := basic-icons-lex-item &
+  [ SYNSEM.LOCAL.CONT.HOOK [ INDEX #index,
+			     SPEAKER-KEY #index ] ].
+
+non-honorific-hearer-lex-item := basic-icons-lex-item & 
+  [ SYNSEM.LOCAL.CONT.HOOK [ INDEX #index,
+			     HEARER-KEY #index ] ].
+
+honorific-hearer-lex-item := lex-item & 
+  [ SYNSEM.LOCAL.CONT [ HOOK [ INDEX #index,
+			       SPEAKER-KEY #skey,
+			       HEARER-KEY #index ],
+			ICONS <! higher & [ IARG1 #skey,
+					    IARG2 #index ] !> ] ].
+;; until here
+
+;pronoun-noun-lex := noun-lex.
 
 inanimate-noun-noun-lex := common-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY inanimate ].
@@ -219,50 +264,81 @@ human-noun-noun-lex := animate-noun-noun-lex &
 human-plural-noun-lex := human-noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
 
-proper-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
+;proper-noun-lex := noun-lex &
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
 
-;; 090515: pronoun-noun-lex is changed to pronoun-lex
-;; 090515: pronouns cannot be modified by adjectives
+;; DVM 2015-05-09: pronoun-noun-lex is changed to pronoun-lex
+;; DVM 2015-05-09: pronouns cannot be modified by adjectives
+;; DVM 2015-08-18: made some modifications, based on zhong-letypes.tdl
 
-pronoun-1st-sg-nohon-noun-lex := pronoun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1sg,
-                   CAT.HEAD.HONORIFIC - ] ].
+;pronoun-1st-sg-nohon-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+;                   CAT.HEAD.HONORIFIC - ] ].
 
-pronoun-1st-sg-hon-noun-lex := pronoun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1sg,
-                   CAT.HEAD.HONORIFIC + ] ].
+pronoun-1st-sg-nohon-noun-lex := personal-pronoun-lex & speaker-lex-item & 
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
 
-pronoun-1st-pl-incl-noun-lex := pronoun-lex &
+;pronoun-1st-sg-hon-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+;                   CAT.HEAD.HONORIFIC + ] ].
+
+pronoun-1st-sg-hon-noun-lex := personal-pronoun-lex & speaker-lex-item & 
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
+
+;pronoun-1st-pl-incl-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ].
+
+pronoun-1st-pl-incl-noun-lex := personal-pronoun-lex & basic-icons-lex-item &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ].
 
-pronoun-1st-pl-excl-noun-lex := pronoun-lex &
+;pronoun-1st-pl-excl-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ].
+
+pronoun-1st-pl-excl-noun-lex :=  personal-pronoun-lex & basic-icons-lex-item &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ].
 
-pronoun-2nd-sg-nohon-noun-lex := pronoun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2sg,
-                   CAT.HEAD.HONORIFIC - ] ].
+;pronoun-2nd-sg-nohon-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2sg,
+;                   CAT.HEAD.HONORIFIC - ] ].
 
-pronoun-2nd-sg-hon-noun-lex := pronoun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2sg,
-                   CAT.HEAD.HONORIFIC + ] ].
+pronoun-2nd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item & 
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
 
-pronoun-3rd-sg-nohon-noun-lex := pronoun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 3sg,
-                   CAT.HEAD.HONORIFIC - ] ].
+;pronoun-2nd-sg-hon-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2sg,
+;                   CAT.HEAD.HONORIFIC + ] ].
 
-pronoun-3rd-sg-hon-noun-lex := pronoun-lex &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 3sg,
-                   CAT.HEAD.HONORIFIC + ] ].
+pronoun-2nd-sg-hon-noun-lex := personal-pronoun-lex & honorific-hearer-lex-item &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
 
-pronoun-2nd-pl-noun-lex := pronoun-lex &
+;pronoun-3rd-sg-nohon-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+;                   CAT.HEAD.HONORIFIC - ] ].
+
+pronoun-3rd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ].
+
+;pronoun-3rd-sg-hon-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+;                   CAT.HEAD.HONORIFIC + ] ].
+
+pronoun-3rd-sg-hon-noun-lex := personal-pronoun-lex & honorific-hearer-lex-item &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ].
+
+;pronoun-2nd-pl-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
+
+pronoun-2nd-pl-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item & 
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
 
-pronoun-3rd-pl-noun-lex := pronoun-lex &
+;pronoun-3rd-pl-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
+
+pronoun-3rd-pl-noun-lex := personal-pronoun-lex & basic-icons-lex-item &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
 
-;; 090515: demonstratives
-;; 090515: pronoun-noun-lex is changed to no-spr-noun-lex
+;; DVM 2015-05-09: demonstratives
+;; DVM 2015-05-09: pronoun-noun-lex is changed to no-spr-noun-lex
 ;; demonstratives cannot be modified by adjectives
 ;; ini tua "old this" is considered not grammatical
 
@@ -281,7 +357,7 @@ verb-lex := non-mod-lex-item &
   [ SYNSEM.LOCAL.CAT [ HEAD verb,
                        HC-LIGHT - ] ].
 
-main-verb-lex := verb-lex & basic-verb-lex &
+indonesian-verb-lex := verb-lex & 
   [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
                          VAL [ SPR < >,
                                SPEC < >,
@@ -291,6 +367,8 @@ main-verb-lex := verb-lex & basic-verb-lex &
                  [ LOCAL [ CAT.VAL [ SPR < >,
                                      COMPS < > ],
                            CONT.HOOK.INDEX #xarg ] ] ].
+
+main-verb-lex := indonesian-verb-lex & basic-verb-lex.
 
 aux-lex := verb-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.AUX + ].
@@ -357,28 +435,13 @@ aspect_prog-aux-lex := subj-raise-aux-no-pred &
 		       VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prog,
 					       CAT.HEAD.FORM form ] ] ].
 
-;neg+aspect-lex-item := norm-hook-lex-item & non-mod-lex-item &
-; [ SYNSEM [LOCAL [ CAT [ HEAD adv,
-;			 VAL [ SPR < >,
-;			       COMPS < >,
-;			       SUBJ < >,
-;			       SPEC < > ] ],
-;		   CONT [RELS <! relation &
-;			       [LBL #nh,
-;				ARG0 #s ],
-;			       quant-relation & #aux &
-;			       [ARG0 #s,
-;				RSTR #h ]!>,
-;			 HCONS <! qeq &
-;				[HARG #h,
-;				 LARG #nh ]!> ]],
-;	   LKEYS [ KEYREL relation,
-;		   ALTKEYREL #aux ]]].
+modal_fut-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
+		       VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.TENSE future,
+					       CAT.HEAD.FORM form ] ] ].
 
-;n+asp-lex := neg+aspect-lex-item.
-
-;; 090515: subj-raise-aux-with-pred is commented out
-;; 090515: saya sedang "I am in the process of" is considered ungrammatical
+;; DVM 2015-05-09: subj-raise-aux-with-pred is commented out
+;; DVM 2015-05-09: saya sedang "I am in the process of" is considered ungrammatical
 
 ;aspect_perf-aux-lex := subj-raise-aux-with-pred &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf,
@@ -391,18 +454,22 @@ aspect_prog-aux-lex := subj-raise-aux-no-pred &
 modal-aux-lex := subj-raise-aux-with-pred &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ].
 
-modal-future-aux-lex := subj-raise-aux-with-pred &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE future,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
+;modal-future-aux-lex := subj-raise-aux-with-pred &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE future,
+;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
 
 ;;; Adjectives
-;; 090515: got from new grammar matrix in April 2015
+;; DVM 2015-05-09: got from new grammar matrix in April 2015
 
-adj-lex := basic-intersective-adjective-lex.
+adj-lex := basic-int-mod-adj-lex.
 
+;; DVM 2015-08-18: we do not use PRD because it was deleted in matrix.tdl
 adj-adj-lex := attr-adj-lex & stative-pred-adj-lex &
-  [ SYNSEM.LOCAL.CAT [ POSTHEAD +,
-                       HEAD.PRD - ] ].
+  [ SYNSEM.LOCAL.CAT [ POSTHEAD + ] ].
+
+;adj-adj-lex := attr-adj-lex & stative-pred-adj-lex &
+;  [ SYNSEM.LOCAL.CAT [ POSTHEAD +,
+;                       HEAD.PRD - ] ].
 
 ; Basic attributive adjective definition
 
@@ -420,9 +487,9 @@ stative-pred-adj-lex := adj-lex &
                    CONT.HOOK.XARG #xarg ] ].
 
 ;;; Adjectives
-;; 090515: from the previous version of INDRA
+;; DVM 2015-05-09: from the previous version of INDRA
 
-adjective-lex := basic-adj-lex & intersective-mod-lex & norm-ltop-lex-item &
+adjective-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                                     VAL.SPR cons ]]>,
 			   VAL [ SPR < >,
@@ -432,7 +499,7 @@ adjective-lex := basic-adj-lex & intersective-mod-lex & norm-ltop-lex-item &
 			   POSTHEAD + ]]]].
 
 ;;; Numbers
-;; 090515: from Zhong
+;; DVM 2015-05-09: from Zhong
 
 ;num :+ 
 ; [ CARDINAL bool ].
@@ -459,7 +526,7 @@ adjective-lex := basic-adj-lex & intersective-mod-lex & norm-ltop-lex-item &
 ;a_-_num_le := num-adj-lex.
 
 ;;; Classifiers
-;; 090515: from Zhong
+;; DVM 2015-05-09: from Zhong
 
 ;classifier := +jd.
 
@@ -521,9 +588,12 @@ neg-adv-lex := basic-scopal-adverb-lex &
                                                 VAL [ SUBJ cons,
                                                       COMPS null ] ] ] > ] ].
 
-;; 090515: added to negate adverb of manners
-;; 090515: e.g. mereka berjalan tidak cepat (lit. they walk not fast)
+;; DVM 2015-09-18: "belum" is the same as negative adverb "tidak" with perfect aspect "sudah"
+n+asp-lex := neg-adv-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT perf ].
 
+;; DVM 2015-05-09: added to negate adverb of manners
+;; DVM 2015-05-09: e.g. mereka berjalan tidak cepat (lit. they walk not fast)
 neg-adv-adv-lex := basic-scopal-adverb-lex &
   [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
                              COMPS < >,
@@ -610,7 +680,7 @@ head-comp-phrase := basic-head-1st-comp-phrase & head-initial.
 subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
-;;; 090515: from zhong
+;;; DVM 2015-05-09: from zhong
 ;; begin
 
 ;head-spec-h-sem-phrase := basic-head-spec-phrase & head-final &
@@ -619,6 +689,24 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
 ;    C-CONT.HOOK #hook ].
 
 ;head-spec-hs := head-spec-h-sem-phrase.
+
+;;; DVM 2015-08-11: from compling grammar engineering page
+; verb-lex-supertype := main-verb-lex & transitive-lex-item.
+
+copula-verb-lex := indonesian-verb-lex & trans-first-arg-raising-lex-item-2 &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD +jp ] ] > ].
 
 cop-verb-lex :=  transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT - ] > ].
@@ -749,22 +837,22 @@ clausal-comp-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
 prop-comp-verb-lex := clausal-comp-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.SF prop ].
 
-
 ques-comp-verb-lex := clausal-comp-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CAT.HEAD comp,
 					     CONT.HOOK.INDEX.SF ques ]].
 
-locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-1 &
+;; DVM 2015-09-21: trans-first-arg-raising-lex-item-1 is changed to trans-first-arg-raising-lex-item-2 
+locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 &
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
                              SPR < >,
                              SPEC < > ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST < #subj &
-             [ LOCAL [ CONT.HOOK.INDEX #xarg,
-                       CAT [ VAL [ SPR < >,
-                                   COMPS < > ],
-                             HEAD noun ] ] ],
+             [ LOCAL [ CAT [ HEAD noun,
+                             VAL [ SPR < >,
+                                   COMPS < > ] ],
+                       CONT.HOOK.INDEX #xarg ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
                            HEAD adp ] ] > ].
@@ -903,8 +991,13 @@ ditrans-second-arg-raising-verb := main-verb-lex & ditrans-second-arg-raising-le
 ; <nex>
 ; <todo>
 ; </type>
-v_np_ntr_le := transitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT [ VAL.COMPS < [ OPT - ] > ] ].
+v_np_ntr_le := main-verb-lex & transitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps & [ OPT - ] >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun ] ] > ].
 
 ; <type val="v_pp*_dir_le">
 ; <description>Cmps PP(opt,dir)                 
@@ -1021,8 +1114,32 @@ noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
 
 n+det-lex := noun+det-lex-item.
 
+;; DVM 2015-09-21: added "kini", decomposable to "pada saat ini" (at this time)
+adp+noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
+ [ SYNSEM [LOCAL [ CAT [ HEAD adp,
+			 VAL [ SPR < >,
+			       COMPS < >,
+			       SUBJ < >,
+			       SPEC < > ]],
+		   CONT [RELS <! relation &
+			       [ARG2 #s ],
+			       quant-relation & #noun &
+			       [LBL #nh,
+				ARG0 #s ],
+			       quant-relation & #det &
+			       [ARG0 #s,
+				RSTR #h ]!>,
+			 HCONS <! qeq &
+				[HARG #h,
+				 LARG #nh ]!> ]],
+	   LKEYS [ KEYREL relation,
+		   ALTKEYREL #noun,
+		   ALTKEYREL #det ]]].
+
+adp+n+det-lex := adp+noun+det-lex-item.
+
 ;;; Adverbs
-;; 090515: basic-int-adverb-lex is changed to basic-scopal-adverb-lex because of updates in matrix.tdl
+;; DVM 2015-05-09: basic-int-adverb-lex is changed to basic-scopal-adverb-lex because of updates in matrix.tdl
 
 adverb-lex := basic-scopal-adverb-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < [ ], ... >,

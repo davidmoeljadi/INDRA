@@ -763,8 +763,8 @@ teman-teman := human-plural-noun-lex &
     TRAITS native_token_list ].
 
 ;;; Personal names
-;; 090515: changed from proper-noun-lex to proper-name-lex
-;; 090515: cannot be modified by adjectives
+;; DVM 2015-05-09: changed from proper-noun-lex to proper-name-lex
+;; DVM 2015-05-09: cannot be modified by adjectives
 
 Adi := proper-name-lex &
   [ STEM < "Adi" >,
@@ -811,14 +811,14 @@ Tono := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Tono",
     TRAITS native_token_list ].
 
-;;; 090515: Numbers added from zhong
+;;; DVM 2015-05-09: Numbers added from zhong
 
 ;satu := a_-_num_le &
 ;  [ STEM < "satu" >,
 ;    SYNSEM.LKEYS.KEYREL.CARG "satu",
 ;    TRAITS native_token_list ].
 
-;;; 090515: Classifiers added from zhong
+;;; DVM 2015-05-09: Classifiers added from zhong
 
 ;buah := c_-_le &
 ;  [ STEM < "buah" >,
@@ -826,9 +826,9 @@ Tono := proper-name-lex &
 ;    TRAITS native_token_list ].
 
 ;;; Pronouns
-;; 090515: SYNSEM.LKEYS.KEYREL.PRED "_nameoflexeme_n_rel", was deleted
-;; 090515: cannot be modified by adjectives
-;; 090515: saya kaya "rich I" is considered ungrammatical
+;; DVM 2015-05-09: SYNSEM.LKEYS.KEYREL.PRED "_nameoflexeme_n_rel", was deleted
+;; DVM 2015-05-09: cannot be modified by adjectives
+;; DVM 2015-05-09: saya kaya "rich I" is considered ungrammatical
 
 aku := pronoun-1st-sg-nohon-noun-lex &
   [ STEM < "aku" >,
@@ -953,10 +953,16 @@ tidur := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; Transitive verbs
+;; DVM 2015-09-21: one syllable verb root in irregs.tab is all regarded as tr-verb
 
 adakan := tr-verb-lex &
   [ STEM < "adakan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_adakan_v_rel",
+    TRAITS native_token_list ].
+
+bel := tr-verb-lex &
+  [ STEM < "bel" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bel_v_rel",
     TRAITS native_token_list ].
 
 beli := tr-verb-lex &
@@ -969,9 +975,24 @@ binasakan := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_binasakan_v_rel",
     TRAITS native_token_list ].
 
+bom := tr-verb-lex &
+  [ STEM < "bom" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bom_v_rel",
+    TRAITS native_token_list ].
+
 bunuh := tr-verb-lex &
   [ STEM < "bunuh" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bunuh_v_rel",
+    TRAITS native_token_list ].
+
+cat := tr-verb-lex &
+  [ STEM < "cat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_v_rel",
+    TRAITS native_token_list ].
+
+cek := tr-verb-lex &
+  [ STEM < "cek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cek_v_rel",
     TRAITS native_token_list ].
 
 ceritakan := tr-verb-lex &
@@ -1089,9 +1110,19 @@ pakai := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_pakai_v_rel",
     TRAITS native_token_list ].
 
+pel := tr-verb-lex &
+  [ STEM < "pel" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pel_v_rel",
+    TRAITS native_token_list ].
+
 perlukan := tr-verb-lex &
   [ STEM < "perlukan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_perlukan_v_rel",
+    TRAITS native_token_list ].
+
+poskan := tr-verb-lex &
+  [ STEM < "poskan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poskan_v_rel",
     TRAITS native_token_list ].
 
 proklamasikan := tr-verb-lex &
@@ -1112,6 +1143,11 @@ qada := tr-verb-lex &
 rebut := tr-verb-lex &
   [ STEM < "rebut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rebut_v_rel",
+    TRAITS native_token_list ].
+
+sahkan := tr-verb-lex &
+  [ STEM < "sahkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sahkan_v_rel",
     TRAITS native_token_list ].
 
 sebutkan := tr-verb-lex &
@@ -1147,6 +1183,11 @@ tanyai := tr-verb-lex &
 temukan := tr-verb-lex &
   [ STEM < "temukan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_temukan_v_rel",
+    TRAITS native_token_list ].
+
+tes := tr-verb-lex &
+  [ STEM < "tes" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tes_v_rel",
     TRAITS native_token_list ].
 
 usir := tr-verb-lex &
@@ -1242,7 +1283,7 @@ tanya_2 := ques-comp-verb-lex &
 
 ;;; Locative verb ada
 
-ada_1 := locative-verb-lex &
+ada := locative-verb-lex &
   [ STEM < "ada" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel",
     TRAITS native_token_list ].
@@ -1311,10 +1352,10 @@ berjanji := ditrans-first-arg-control-verb &
 
 ;;; Special Verbs
 
-;adalah := v_np_cop_le &
-;  [ STEM < "adalah" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "_adalah_v_cop_rel",
-;    TRAITS native_token_list ].
+adalah := copula-verb-lex &
+  [ STEM < "adalah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_adalah_v_cop_rel",
+    TRAITS native_token_list ].
 
 ;ialah := v_np_cop_le &
 ;  [ STEM < "ialah" >,
@@ -1329,8 +1370,13 @@ berjanji := ditrans-first-arg-control-verb &
 ;;; Auxiliaries
 
 ;;; Aspect auxiliaries
-;; 090515: SYNSEM.LKEYS.KEYREL.PRED "_lexicalitem_aspect_rel", is deleted
-;; 090515: saya sedang "I am in the process of" is considered ungrammatical
+;; DVM 2015-05-09: SYNSEM.LKEYS.KEYREL.PRED "_lexicalitem_aspect_rel", is deleted
+;; DVM 2015-05-09: saya sedang "I am in the process of" is considered ungrammatical
+;; DVM 2015-09-21: added "telah", "tengah", and "lagi"
+
+telah := aspect_perf-aux-lex &
+  [ STEM < "telah" >,
+    TRAITS native_token_list ].
 
 sudah := aspect_perf-aux-lex &
   [ STEM < "sudah" >,
@@ -1340,17 +1386,29 @@ sedang := aspect_prog-aux-lex &
   [ STEM < "sedang" >,
     TRAITS native_token_list ].
 
-;belum := n+asp-lex &
-;  [ STEM < "belum" >,
-;    SYNSEM.LKEYS [KEYREL.PRED "neg_rel",
-;		  ALTKEYREL.PRED "sudah" ],
-;    TRAITS native_token_list ].
+tengah := aspect_prog-aux-lex &
+  [ STEM < "tengah" >,
+    TRAITS native_token_list ].
+
+lagi := aspect_prog-aux-lex &
+  [ STEM < "lagi" >,
+    TRAITS native_token_list ].
+
+belum := n+asp-lex &
+  [ STEM < "belum" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel",
+    TRAITS native_token_list ].
 
 ;;; Modal auxiliaries
 
-akan := modal-future-aux-lex &
+;akan := modal-future-aux-lex &
+;  [ STEM < "akan" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_akan_v_rel",
+;    TRAITS native_token_list ].
+
+;; DVM 2015-09-18: future tense modal, changed from modal-future-aux-lex
+akan := modal_fut-aux-lex &
   [ STEM < "akan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_akan_v_rel",
     TRAITS native_token_list ].
 
 bisa := modal-aux-lex &
@@ -1476,8 +1534,8 @@ bahwa := propcomp-lex-item &
     TRAITS native_token_list ].
 
 ;;; Adjectives
-;; 090515: changed from adjective-lex to adjective-lex
-;; 090515: adjective-lex provides ungrammatical sentence such as saya bagus "good I"
+;; DVM 2015-05-09: changed from adjective-lex to adjective-lex
+;; DVM 2015-05-09: adjective-lex provides ungrammatical sentence such as saya bagus "good I"
 
 bagus := adjective-lex &
   [ STEM < "bagus" >,
@@ -1612,6 +1670,12 @@ cepat-cepat := adverb-post-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_cepat-cepat_a_rel",
     TRAITS native_token_list ].
 
+;; DVM 2015-09-21: lagi which means again or anymore
+lagi := adverb-post-lex &
+  [ STEM < "lagi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lagi_a_rel",
+    TRAITS native_token_list ].
+
 pelan_2 := adverb-post-lex &
   [ STEM < "pelan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pelan_a_rel",
@@ -1648,6 +1712,14 @@ sekarang := adverb-lex &
   [ STEM < "sekarang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sekarang_a_rel",
     TRAITS native_token_list ].
+
+;; DVM 2015-09-21: added "kini"
+kini := adp+n+det-lex &
+  [ STEM < "kini" >,
+    SYNSEM.LKEYS [KEYREL.PRED "_pada_p_rel",
+		  ALTKEYREL.PRED "time_n_rel",
+		  ALTKEYREL.PRED "proximal_q_rel" ],
+    TRAITS native_token_list].
 
 ;;;; Adverbs of place
 
@@ -1687,11 +1759,6 @@ tinggal := adverb-pre-lex &
     TRAITS native_token_list ].
 
 ;;;; Verbs from ERG via Wordnet Bahasa
-
-ada_2 := v_np_ntr_le &
-  [ STEM < "ada" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel",
-    TRAITS native_token_list ].
 
 ambrol := intr-verb-lex &
   [ STEM < "ambrol" >,
@@ -2533,12 +2600,7 @@ berkarat := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_berkarat_v_rel",
     TRAITS native_token_list ].
 
-berkata_1 := v_cp_prop_le &
-  [ STEM < "berkata" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_berkata_v_rel",
-    TRAITS native_token_list ].
-
-berkata_2 := prop-comp-verb-lex &
+berkata := prop-comp-verb-lex &
   [ STEM < "berkata" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berkata_v_rel",
     TRAITS native_token_list ].
@@ -3624,11 +3686,6 @@ ingat := trans-first-arg-control-verb &
     TRAITS native_token_list ].
 
 ingin_1 := v_np_ntr_le &
-  [ STEM < "ingin" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ingin_v_rel",
-    TRAITS native_token_list ].
-
-ingin_2 := trans-first-arg-control-verb &
   [ STEM < "ingin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ingin_v_rel",
     TRAITS native_token_list ].
@@ -4726,11 +4783,6 @@ menciut := intr-verb-lex &
 mencoang := intr-verb-lex &
   [ STEM < "mencoang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mencoang_v_rel",
-    TRAITS native_token_list ].
-
-mencoba := trans-first-arg-control-verb &
-  [ STEM < "mencoba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_mencoba_v_rel",
     TRAITS native_token_list ].
 
 mencocokkan := v_np-pp_e_le &
