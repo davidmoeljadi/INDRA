@@ -73,6 +73,11 @@ emas := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_emas_n_rel",
     TRAITS native_token_list ].
 
+es+krim := inanimate-noun-noun-lex &
+  [ STEM < "es", "krim" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_es+krim_n_rel",
+    TRAITS native_token_list ].
+
 gambar := inanimate-noun-noun-lex &
   [ STEM < "gambar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_gambar_n_rel",
@@ -146,6 +151,16 @@ lagu := inanimate-noun-noun-lex &
 makanan := inanimate-noun-noun-lex &
   [ STEM < "makanan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_makanan_n_rel",
+    TRAITS native_token_list ].
+
+mata := inanimate-noun-noun-lex &
+  [ STEM < "mata" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mata_n_rel",
+    TRAITS native_token_list ].
+
+mata-mata := inanimate-noun-noun-lex &
+  [ STEM < "mata²" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mata-mata_n_rel",
     TRAITS native_token_list ].
 
 matahari := inanimate-noun-noun-lex &
@@ -263,267 +278,11 @@ warna := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_warna_n_rel",
     TRAITS native_token_list ].
 
-;; Inanimate plural nouns
-
-acara-acara := inanimate-plural-noun-lex &
-  [ STEM < "acara-acara" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_acara-acara_n_rel",
-    TRAITS native_token_list ].
-
-air-air := inanimate-plural-noun-lex &
-  [ STEM < "air-air" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_air-air_n_rel",
-    TRAITS native_token_list ].
-
-bahasa-bahasa := inanimate-plural-noun-lex &
-  [ STEM < "bahasa-bahasa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_bahasa-bahasa_n_rel",
-    TRAITS native_token_list ].
-
-barang-barang := inanimate-plural-noun-lex &
-  [ STEM < "barang-barang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_barang-barang_n_rel",
-    TRAITS native_token_list ].
-
-batu-batu := inanimate-plural-noun-lex &
-  [ STEM < "batu-batu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_batu-batu_n_rel",
-    TRAITS native_token_list ].
-
-benda-benda := inanimate-plural-noun-lex &
-  [ STEM < "benda-benda" >,
-    SYNSEM.LKEYS.KEYREL.PRED "benda-benda_n_rel",
-    TRAITS native_token_list ].
-
-bintang-bintang := inanimate-plural-noun-lex &
-  [ STEM < "bintang-bintang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_bintang-bintang_n_rel",
-    TRAITS native_token_list ].
-
-buku-buku := inanimate-plural-noun-lex &
-  [ STEM < "buku-buku" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_buku-buku_n_rel",
-    TRAITS native_token_list ].
-
-bulan-bulan := inanimate-plural-noun-lex &
-  [ STEM < "bulan-bulan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_bulan-bulan_n_rel",
-    TRAITS native_token_list ].
-
-cara-cara := inanimate-plural-noun-lex &
-  [ STEM < "cara-cara" >,
-    SYNSEM.LKEYS.KEYREL.PRED "manner_n_rel",
-    TRAITS native_token_list ].
-
-cerita-cerita := inanimate-plural-noun-lex &
-  [ STEM < "cerita-cerita" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cerita-cerita_n_rel",
-    TRAITS native_token_list ].
-
-daging-daging := inanimate-plural-noun-lex &
-  [ STEM < "daging-daging" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_daging-daging_n_rel",
-    TRAITS native_token_list ].
-
-darah-darah := inanimate-plural-noun-lex &
-  [ STEM < "darah-darah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_darah-darah_n_rel",
-    TRAITS native_token_list ].
-
-emas-emas := inanimate-plural-noun-lex &
-  [ STEM < "emas-emas" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_emas-emas_n_rel",
-    TRAITS native_token_list ].
-
-gambar-gambar := inanimate-plural-noun-lex &
-  [ STEM < "gambar-gambar" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_gambar-gambar_n_rel",
-    TRAITS native_token_list ].
-
-hal-hal := inanimate-plural-noun-lex &
-  [ STEM < "hal-hal" >,
-    SYNSEM.LKEYS.KEYREL.PRED "hal-hal_n_rel",
-    TRAITS native_token_list ].
-
-hari-hari := inanimate-plural-noun-lex &
-  [ STEM < "hari-hari" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_hari-hari_n_rel",
-    TRAITS native_token_list ].
-
-hidung-hidung := inanimate-plural-noun-lex &
-  [ STEM < "hidung-hidung" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_hidung-hidung_n_rel",
-    TRAITS native_token_list ].
-
-hujan-hujan := inanimate-plural-noun-lex &
-  [ STEM < "hujan-hujan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_hujan-hujan_n_rel",
-    TRAITS native_token_list ].
-
-ide-ide := inanimate-plural-noun-lex &
-  [ STEM < "ide-ide" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ide-ide_n_rel",
-    TRAITS native_token_list ].
-
-jendela-jendela := inanimate-plural-noun-lex &
-  [ STEM < "jendela-jendela" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_jendela-jendela_n_rel",
-    TRAITS native_token_list ].
-
-kenyataan-kenyataan := inanimate-plural-noun-lex &
-  [ STEM < "kenyataan-kenyataan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kenyataan-kenyataan_n_rel",
-    TRAITS native_token_list ].
-
-komputer-komputer := inanimate-plural-noun-lex &
-  [ STEM < "komputer-komputer" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_komputer-komputer_n_rel",
-    TRAITS native_token_list ].
-
-koper-koper := inanimate-plural-noun-lex &
-  [ STEM < "koper-koper" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_koper-koper_n_rel",
-    TRAITS native_token_list ].
-
-kotak-kotak := inanimate-plural-noun-lex &
-  [ STEM < "kotak-kotak" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kotak-kotak_n_rel",
-    TRAITS native_token_list ].
-
-kue-kue := inanimate-plural-noun-lex &
-  [ STEM < "kue-kue" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kue-kue_n_rel",
-    TRAITS native_token_list ].
-
-kursi-kursi := inanimate-plural-noun-lex &
-  [ STEM < "kursi-kursi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kursi-kursi_n_rel",
-    TRAITS native_token_list ].
-
-lagu-lagu := inanimate-plural-noun-lex &
-  [ STEM < "lagu-lagu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_lagu-lagu_n_rel",
-    TRAITS native_token_list ].
-
-makanan-makanan := inanimate-plural-noun-lex &
-  [ STEM < "makanan-makanan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_makanan-makanan_n_rel",
-    TRAITS native_token_list ].
-
-matahari-matahari := inanimate-plural-noun-lex &
-  [ STEM < "matahari-matahari" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_matahari-matahari_n_rel",
-    TRAITS native_token_list ].
-
-meja-meja := inanimate-plural-noun-lex &
-  [ STEM < "meja-meja" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_meja-meja_n_rel",
-    TRAITS native_token_list ].
-
-minggu-minggu := inanimate-plural-noun-lex &
-  [ STEM < "minggu-minggu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_minggu-minggu_n_rel",
-    TRAITS native_token_list ].
-
-minuman-minuman := inanimate-plural-noun-lex &
-  [ STEM < "minuman-minuman" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_minuman-minuman_n_rel",
-    TRAITS native_token_list ].
-
-mobil-mobil := inanimate-plural-noun-lex &
-  [ STEM < "mobil-mobil" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_mobil-mobil_n_rel",
-    TRAITS native_token_list ].
-
-musik-musik := inanimate-plural-noun-lex &
-  [ STEM < "musik-musik" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_musik-musik_n_rel",
-    TRAITS native_token_list ].
-
-nasi-nasi := inanimate-plural-noun-lex &
-  [ STEM < "nasi-nasi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_nasi-nasi_n_rel",
-    TRAITS native_token_list ].
-
-pakaian-pakaian := inanimate-plural-noun-lex &
-  [ STEM < "pakaian-pakaian" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pakaian-pakaian_n_rel",
-    TRAITS native_token_list ].
-
-pasar-pasar := inanimate-plural-noun-lex &
-  [ STEM < "pasar-pasar" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pasar-pasar_n_rel",
-    TRAITS native_token_list ].
-
-pintu-pintu := inanimate-plural-noun-lex &
-  [ STEM < "pintu-pintu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pintu-pintu_n_rel",
-    TRAITS native_token_list ].
-
-rokok-rokok := inanimate-plural-noun-lex &
-  [ STEM < "rokok-rokok" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_rokok-rokok_n_rel",
-    TRAITS native_token_list ].
-
-rumah-rumah := inanimate-plural-noun-lex &
-  [ STEM < "rumah-rumah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_rumah-rumah_n_rel",
-    TRAITS native_token_list ].
-
-saat-saat := inanimate-plural-noun-lex &
-  [ STEM < "saat-saat" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_saat-saat_n_rel",
-    TRAITS native_token_list ].
-
-sekolah-sekolah := inanimate-plural-noun-lex &
-  [ STEM < "sekolah-sekolah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sekolah-sekolah_n_rel",
-    TRAITS native_token_list ].
-
-seni-seni := inanimate-plural-noun-lex &
-  [ STEM < "seni-seni" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_seni-seni_n_rel",
-    TRAITS native_token_list ].
-
-tahun-tahun := inanimate-plural-noun-lex &
-  [ STEM < "tahun-tahun" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tahun-tahun_n_rel",
-    TRAITS native_token_list ].
-
-taman-taman := inanimate-plural-noun-lex &
-  [ STEM < "taman-taman" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_taman-taman_n_rel",
-    TRAITS native_token_list ].
-
-televisi-televisi := inanimate-plural-noun-lex &
-  [ STEM < "televisi-televisi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_televisi-televisi_n_rel",
-    TRAITS native_token_list ].
-
-tembakau-tembakau := inanimate-plural-noun-lex &
-  [ STEM < "tembakau-tembakau" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tembakau-tembakau_n_rel",
-    TRAITS native_token_list ].
-
-tempat-tempat := inanimate-plural-noun-lex &
-  [ STEM < "tempat-tempat" >,
-    SYNSEM.LKEYS.KEYREL.PRED "place_n_rel",
-    TRAITS native_token_list ].
-
-tulang-tulang := inanimate-plural-noun-lex &
-  [ STEM < "tulang-tulang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tulang-tulang_n_rel",
-    TRAITS native_token_list ].
-
-waktu-waktu := inanimate-plural-noun-lex &
-  [ STEM < "waktu-waktu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "time_n_rel",
-    TRAITS native_token_list ].
-
-warna-warna := inanimate-plural-noun-lex &
-  [ STEM < "warna-warna" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_warna-warna_n_rel",
-    TRAITS native_token_list ].
+;; DVM 2015-09-23: "Inanimate plural nouns" was deleted because Francis and I added redup-noun-lex-rule.
+;acara-acara := inanimate-plural-noun-lex &
+;  [ STEM < "acara-acara" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_acara-acara_n_rel",
+;    TRAITS native_token_list ].
 
 ;;; Animate non-human nouns
 
@@ -597,77 +356,11 @@ singa := nonhuman-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_singa_n_rel",
     TRAITS native_token_list ].
 
-;; Animate non-human plural nouns
-
-anjing-anjing := nonhuman-plural-noun-lex &
-  [ STEM < "anjing-anjing" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_anjing-anjing_n_rel",
-    TRAITS native_token_list ].
-
-ayam-ayam := nonhuman-plural-noun-lex &
-  [ STEM < "ayam-ayam" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ayam-ayam_n_rel",
-    TRAITS native_token_list ].
-
-babi-babi := nonhuman-plural-noun-lex &
-  [ STEM < "babi-babi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_babi-babi_n_rel",
-    TRAITS native_token_list ].
-
-binatang-binatang := nonhuman-plural-noun-lex &
-  [ STEM < "binatang-binatang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_binatang-binatang_n_rel",
-    TRAITS native_token_list ].
-
-burung-burung := nonhuman-plural-noun-lex &
-  [ STEM < "burung-burung" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_burung-burung_n_rel",
-    TRAITS native_token_list ].
-
-cacing-cacing := nonhuman-plural-noun-lex &
-  [ STEM < "cacing-cacing" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cacing-cacing_n_rel",
-    TRAITS native_token_list ].
-
-domba-domba := nonhuman-plural-noun-lex &
-  [ STEM < "domba-domba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_domba-domba_n_rel",
-    TRAITS native_token_list ].
-
-gajah-gajah := nonhuman-plural-noun-lex &
-  [ STEM < "gajah-gajah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_gajah-gajah_n_rel",
-    TRAITS native_token_list ].
-
-hewan-hewan := nonhuman-plural-noun-lex &
-  [ STEM < "hewan-hewan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_hewan-hewan_n_rel",
-    TRAITS native_token_list ].
-
-kucing-kucing := nonhuman-plural-noun-lex &
-  [ STEM < "kucing-kucing" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kucing-kucing_n_rel",
-    TRAITS native_token_list ].
-
-kuda-kuda := nonhuman-plural-noun-lex &
-  [ STEM < "kuda-kuda" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kuda-kuda_n_rel",
-    TRAITS native_token_list ].
-
-sapi-sapi := nonhuman-plural-noun-lex &
-  [ STEM < "sapi-sapi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sapi-sapi_n_rel",
-    TRAITS native_token_list ].
-
-semut-semut := nonhuman-plural-noun-lex &
-  [ STEM < "semut-semut" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_semut-semut_n_rel",
-    TRAITS native_token_list ].
-
-singa-singa := nonhuman-plural-noun-lex &
-  [ STEM < "singa-singa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_singa-singa_n_rel",
-    TRAITS native_token_list ].
+;; DVM 2015-09-23: "Animate non-human plural nouns" was deleted because Francis and I added redup-noun-lex-rule.
+;anjing-anjing := nonhuman-plural-noun-lex &
+;  [ STEM < "anjing-anjing" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_anjing-anjing_n_rel",
+;    TRAITS native_token_list ].
 
 ;;; Animate human nouns
 
@@ -716,51 +409,11 @@ teman := human-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_teman_n_rel",
     TRAITS native_token_list ].
 
-;; Animate human plural nouns
-anak-anak := human-plural-noun-lex &
-  [ STEM < "anak-anak" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_anak-anak_n_rel",
-    TRAITS native_token_list ].
-
-ayah-ayah := human-plural-noun-lex &
-  [ STEM < "ayah-ayah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ayah-ayah_n_rel",
-    TRAITS native_token_list ].
-
-ibu-ibu := human-plural-noun-lex &
-  [ STEM < "ibu-ibu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ibu-ibu_n_rel",
-    TRAITS native_token_list ].
-
-insan-insan := human-plural-noun-lex &
-  [ STEM < "insan-insan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_insan-insan_n_rel",
-    TRAITS native_token_list ].
-
-kakek-kakek := human-plural-noun-lex &
-  [ STEM < "kakek-kakek" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kakek-kakek_n_rel",
-    TRAITS native_token_list ].
-
-manusia-manusia := human-plural-noun-lex &
-  [ STEM < "manusia-manusia" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_manusia-manusia_n_rel",
-    TRAITS native_token_list ].
-
-nenek-nenek := human-plural-noun-lex &
-  [ STEM < "nenek-nenek" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_nenek-nenek_n_rel",
-    TRAITS native_token_list ].
-
-orang-orang := human-plural-noun-lex &
-  [ STEM < "orang-orang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_orang-orang_n_rel",
-    TRAITS native_token_list ].
-
-teman-teman := human-plural-noun-lex &
-  [ STEM < "teman-teman" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_teman-teman_n_rel",
-    TRAITS native_token_list ].
+;; DVM 2015-09-23: "Animate human plural nouns" was deleted because Francis and I added redup-noun-lex-rule.
+;anak-anak := human-plural-noun-lex &
+;  [ STEM < "anak-anak" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_anak-anak_n_rel",
+;    TRAITS native_token_list ].
 
 ;;; Personal names
 ;; DVM 2015-05-09: changed from proper-noun-lex to proper-name-lex
@@ -794,6 +447,11 @@ Inggris := proper-name-lex &
 Jepang := proper-name-lex &
   [ STEM < "Jepang" >,
     SYNSEM.LKEYS.KEYREL.CARG "Jepang",
+    TRAITS native_token_list ].
+
+Singapura := proper-name-lex &
+  [ STEM < "Singapura" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Singapura",
     TRAITS native_token_list ].
 
 Susi := proper-name-lex &
@@ -875,9 +533,9 @@ mereka := pronoun-3rd-pl-noun-lex &
     TRAITS native_token_list ].
 
 ;;; Demonstratives
-;; ini and itu are unspecified for singular and plural numbers
-;; 090515: pumping rules applied for ini: benda/hal+ini = ini
-;; 090515: pumping rules applied for itu: benda/hal+itu = itu
+;; DVM 2015-05-09: ini and itu are underspecified for singular and plural numbers
+;; DVM 2015-05-09: pumping rules applied for ini: benda/hal+ini = ini
+;; DVM 2015-05-09: pumping rules applied for itu: benda/hal+itu = itu
 
 ini_1 := n+det-lex &
   [ STEM < "ini" >,
