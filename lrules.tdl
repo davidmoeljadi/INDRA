@@ -1,1 +1,6 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+
+;; DVM 2015-09-23: added reduplication rule for nouns with Francis
+redup-noun-suffix :=
+%suffix (* ²)
+redup-noun-lex-rule.

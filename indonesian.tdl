@@ -579,14 +579,18 @@ determiner-pl-determiner-lex := determiner-lex & no-icons-lex-item &
 ; This adverb should go through a specialized phrase structure rule
 ;        included with this grammar.
 
+
+;; DVM 2015-09-23: added CONT.HOOK.XARG #xarg to connect the ARG1 of the verb with ARG0 of the subj
 neg-adv-lex := basic-scopal-adverb-lex &
-  [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
-                             COMPS < >,
-                             SUBJ < > ],
+  [ SYNSEM.LOCAL [ CONT.HOOK.XARG #xarg,
+		   CAT [ VAL [ SPR < >,
+                               COMPS < >,
+                               SUBJ < > ],
                        POSTHEAD -,
-                       HEAD.MOD < [ LOCAL.CAT [ HEAD verb,
-                                                VAL [ SUBJ cons,
-                                                      COMPS null ] ] ] > ] ].
+                       HEAD.MOD < [ LOCAL [ CONT.HOOK.XARG #xarg,
+					    CAT [ HEAD verb,
+                                                  VAL [ SUBJ cons,
+                                                        COMPS null ] ] ] ] > ] ] ].
 
 ;; DVM 2015-09-18: "belum" is the same as negative adverb "tidak" with perfect aspect "sudah"
 n+asp-lex := neg-adv-lex &
@@ -659,7 +663,7 @@ voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 act-lex-rule := voice-lex-rule-super.
 
-pas-lex-rule := voice-lex-rule-super.
+;pas-lex-rule := voice-lex-rule-super.
 
 ;adj-superlative-lex-rule :=
 
@@ -1198,6 +1202,29 @@ can-aux := basic-verb-lex & trans-first-arg-raising-lex-item-1 & non-mod-lex-ite
                                  COMPS < > ],
                            HEAD verb &
                                [ AUX -] ] ] > ] .
+
+;; DVM 2015-09-23: added redup-lex-rule from zhong-lextypes.tdl
+;; DVM 2015-09-23: deleted things which are not relevant in INDRA, added common-noun-lex to make reduplicated nouns compatible with enclitics =nya etc.
+redup-noun-lex-rule :=  same-non-local-lex-rule & common-noun-lex &
+		   same-modified-lex-rule &
+		   same-light-lex-rule &
+		   same-ctxt-lex-rule &
+		   same-cont-lex-rule &
+		   same-agr-lex-rule & 
+                   infl-lex-rule & 
+ [ SYNSEM [ LOCAL [ CAT [ MC luk,
+			  HEAD #head, 
+			  VAL #val, 
+			  POSTHEAD #posthead ],
+		    CONT.HOOK.INDEX.PNG.PERNUM pl ] ],
+   DTR word-or-lexrule & [ SYNSEM [ LOCAL [ CAT [ HEAD #head, 
+					        VAL #val,
+					        POSTHEAD #posthead ],
+                                          CONT.HOOK [ LTOP #ltop,
+                                                      INDEX #index ] ] ] ],
+   C-CONT [ HCONS <! !>, 
+            ICONS <! !>,
+            RELS <! !> ] ].
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the

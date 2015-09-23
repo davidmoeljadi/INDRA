@@ -7,3 +7,7 @@
 !^(.+)$								 \1 
 !\t								 
 !  +								 
+;; DVM 2015-09-23: added regular expression for reduplication with Francis
+;; DVM 2015-09-23: input is A-A, output is A²
+!(.+)-\1								\1²
+								 
