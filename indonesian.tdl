@@ -1118,29 +1118,8 @@ noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
 
 n+det-lex := noun+det-lex-item.
 
-;; DVM 2015-09-21: added "kini", decomposable to "pada saat ini" (at this time)
-adp+noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
- [ SYNSEM [LOCAL [ CAT [ HEAD adp,
-			 VAL [ SPR < >,
-			       COMPS < >,
-			       SUBJ < >,
-			       SPEC < > ]],
-		   CONT [RELS <! relation &
-			       [ARG2 #s ],
-			       quant-relation & #noun &
-			       [LBL #nh,
-				ARG0 #s ],
-			       quant-relation & #det &
-			       [ARG0 #s,
-				RSTR #h ]!>,
-			 HCONS <! qeq &
-				[HARG #h,
-				 LARG #nh ]!> ]],
-	   LKEYS [ KEYREL relation,
-		   ALTKEYREL #noun,
-		   ALTKEYREL #det ]]].
-
-adp+n+det-lex := adp+noun+det-lex-item.
+;; DVM 2015-10-16: "kini" is decomposable to "saat ini" (this time), an adverbial time NP
+; n+det-lex+adv := noun+det-lex-item & adverb-lex.
 
 ;;; Adverbs
 ;; DVM 2015-05-09: basic-int-adverb-lex is changed to basic-scopal-adverb-lex because of updates in matrix.tdl
@@ -1225,6 +1204,51 @@ redup-noun-lex-rule :=  same-non-local-lex-rule & common-noun-lex &
    C-CONT [ HCONS <! !>, 
             ICONS <! !>,
             RELS <! !> ] ].
+
+;; DVM 2015-10-21: reduplicated nouns with -an.
+;redup-noun-lex-rule :=  same-non-local-lex-rule & common-noun-lex &
+;		   same-modified-lex-rule &
+;		   same-light-lex-rule &
+;		   same-ctxt-lex-rule &
+;		   same-cont-lex-rule &
+;		   same-agr-lex-rule & 
+;                   infl-lex-rule & 
+; [ SYNSEM [ LOCAL [ CAT [ MC luk,
+;			  HEAD #head, 
+;			  VAL #val, 
+;			  POSTHEAD #posthead ] ] ],
+;   DTR word-or-lexrule & [ SYNSEM [ LOCAL [ CAT [ HEAD #head, 
+;					        VAL #val,
+;					        POSTHEAD #posthead ],
+;                                          CONT.HOOK [ LTOP #ltop,
+;                                                      INDEX #index ] ] ] ],
+;   C-CONT [ HCONS <! !>, 
+;            ICONS <! !>,
+;            RELS <! [ PRED "fake_rel",
+;		      ARG0 #x, 
+;		      LABEL #ltop,
+;		      INDEX #index ] !> ] ].
+
+;; DVM 2015-10-21: added redup-adj-lex-rule, reduplicated adjectives should unite with plural nouns
+redup-adj-lex-rule := same-non-local-lex-rule & adjective-lex &
+		   same-modified-lex-rule &
+		   same-light-lex-rule &
+		   same-ctxt-lex-rule &
+		   same-cont-lex-rule &
+		   same-agr-lex-rule & 
+                   infl-lex-rule & 
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ] > ,
+    DTR.SYNSEM.LOCAL.CAT.HEAD adj ].
+
+;; DVM 2015-10-21: added redup-adv-lex-rule
+redup-adv-lex-rule := same-non-local-lex-rule & adverb-post-lex &
+		   same-modified-lex-rule &
+		   same-light-lex-rule &
+		   same-ctxt-lex-rule &
+		   same-cont-lex-rule &
+		   same-agr-lex-rule & 
+                   infl-lex-rule & 
+		   same-head-lex-rule.
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the

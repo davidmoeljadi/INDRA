@@ -4,3 +4,18 @@
 redup-noun-suffix :=
 %suffix (* ²)
 redup-noun-lex-rule.
+
+;; DVM 2015-10-21: added reduplication rule for nouns with -an
+;redup-noun-an-suffix :=
+;%suffix (* ²an)
+;redup-noun-an-lex-rule.
+
+;; DVM 2015-10-21: added reduplication rule for adjectives for plural head nouns
+redup-adj-suffix :=
+%suffix (* ²)
+redup-adj-lex-rule.
+
+;; DVM 2015-10-21: added reduplication rule for adverbs
+redup-adv-suffix :=
+%suffix (* ²)
+redup-adv-lex-rule.
