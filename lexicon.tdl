@@ -1048,7 +1048,7 @@ tengah := aspect_prog-aux-lex &
   [ STEM < "tengah" >,
     TRAITS native_token_list ].
 
-lagi := aspect_prog-aux-lex &
+lagi_1 := aspect_prog-aux-lex &
   [ STEM < "lagi" >,
     TRAITS native_token_list ].
 
@@ -1323,13 +1323,8 @@ cepat_2 := adverb-post-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_cepat_a_rel",
     TRAITS native_token_list ].
 
-cepat-cepat := adverb-post-lex &
-  [ STEM < "cepat-cepat" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cepat-cepat_a_rel",
-    TRAITS native_token_list ].
-
 ;; DVM 2015-09-21: lagi which means again or anymore
-lagi := adverb-post-lex &
+lagi_2 := adverb-post-lex &
   [ STEM < "lagi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lagi_a_rel",
     TRAITS native_token_list ].
@@ -1337,11 +1332,6 @@ lagi := adverb-post-lex &
 pelan_2 := adverb-post-lex &
   [ STEM < "pelan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pelan_a_rel",
-    TRAITS native_token_list ].
-
-pelan-pelan := adverb-post-lex &
-  [ STEM < "pelan-pelan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pelan-pelan_a_rel",
     TRAITS native_token_list ].
 
 ;;;; Adverbs of time
@@ -1372,12 +1362,12 @@ sekarang := adverb-lex &
     TRAITS native_token_list ].
 
 ;; DVM 2015-09-21: added "kini"
-kini := adp+n+det-lex &
-  [ STEM < "kini" >,
-    SYNSEM.LKEYS [KEYREL.PRED "_pada_p_rel",
-		  ALTKEYREL.PRED "time_n_rel",
-		  ALTKEYREL.PRED "proximal_q_rel" ],
-    TRAITS native_token_list].
+;; DVM 2015-10-16: kini as an NP denoting adverbial time "saat ini" (this time)
+;kini := n+det-lex+adv &
+;  [ STEM < "kini" >,
+;    SYNSEM.LKEYS [KEYREL.PRED "time_n_rel",
+;		  ALTKEYREL.PRED "proximal_q_rel" ],
+;    TRAITS native_token_list].
 
 ;;;; Adverbs of place
 
