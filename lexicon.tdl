@@ -939,13 +939,6 @@ tanya_2 := ques-comp-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel",
     TRAITS native_token_list ].
 
-;;; Locative verb ada
-
-ada := locative-verb-lex &
-  [ STEM < "ada" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel",
-    TRAITS native_token_list ].
-
 ;;; Raising
 
 ;;; Transitive Raising
@@ -1008,22 +1001,54 @@ berjanji := ditrans-first-arg-control-verb &
     SYNSEM.LKEYS.KEYREL.PRED "_berjanji_v_rel",
     TRAITS native_token_list ].
 
-;;; Special Verbs
+;;; Copula Verbs
+;; FCB & DVM 2015-10-28: we divided copula verbs into two groups
+;; FCB & DVM 2015-10-28: one is for NP complement because noun only has ARG0, does not have ARG1
+;; FCB & DVM 2015-10-28: the other one is for Adj and PP complement/locative because adj and prep have ARG1
 
-adalah := copula-verb-lex &
+;; FCB & DVM 2015-10-28: Copula verbs with NP complement: adalah, ialah, merupakan, menjadi
+adalah_1 := v_np_cop_noasp_le &
+  [ STEM < "adalah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_copula_v_rel",
+    TRAITS native_token_list ].
+
+ialah := v_np_cop_3_le &
+  [ STEM < "ialah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_copula_v_rel",
+    TRAITS native_token_list ].
+
+;bukan := n+cop-lex &
+;  [ STEM < "bukan" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "neg_rel",
+;    TRAITS native_token_list ].
+
+merupakan := v_np_cop_le &
+  [ STEM < "merupakan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_copula_v_rel",
+    TRAITS native_token_list ].
+
+menjadi := v_np_cop_le &
+  [ STEM < "menjadi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_copula_v_rel",
+    TRAITS native_token_list ].
+
+;; FCB & DVM 2015-10-28: Copula verbs with AdjP complement: adalah, menjadi
+adalah_2 := copula-verb-lex &
   [ STEM < "adalah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_adalah_v_cop_rel",
     TRAITS native_token_list ].
 
-;ialah := v_np_cop_le &
-;  [ STEM < "ialah" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "_ialah_v_cop_rel",
-;    TRAITS native_token_list ].
+;;; Locative verb ada and berada
 
-;merupakan := v_np_cop_le &
-;  [ STEM < "merupakan" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "_merupakan_v_cop_rel",
-;    TRAITS native_token_list ].
+;; FCB & DVM 2015-10-28: trans-first-arg-raising-lex-item-2 does not need SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel",
+;; FCB & DVM 2015-10-28: we deleted SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel"
+ada := locative-verb-lex &
+  [ STEM < "ada" >,
+    TRAITS native_token_list ].
+
+berada := locative-verb-lex &
+  [ STEM < "berada" >,
+    TRAITS native_token_list ].
 
 ;;; Auxiliaries
 
@@ -1350,6 +1375,12 @@ kemarin := adverb-lex &
   [ STEM < "kemarin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kemarin_a_rel",
     TRAITS native_token_list ].
+
+;kemarin := noun_adverb-time_lex &
+;  [ STEM < "kemarin" >,
+;    SYNSEM.LKEYS [KEYREL.PRED "time_n_rel",
+;		  ALTKEYREL.PRED "_yesterday_a_rel" ],
+;    TRAITS native_token_list].
 
 segera := adverb-lex &
   [ STEM < "segera" >,

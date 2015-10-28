@@ -144,14 +144,18 @@ nonfinite := form.
 finite := form.
 
 ;;; Tense
+;; FCB & DVM 2015-10-28: added nonfuture for copula constructions
 
 future := tense.
+nonfuture := tense.
 
 ;;; Aspect
+;; FCB & DVM 2015-10-28: added nonaspect for copula constructions
 
 perf := aspect.
 prog := aspect.
 perf-and-prog := perf & prog.
+nonaspect := aspect.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -696,7 +700,6 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
 
 ;;; DVM 2015-08-11: from compling grammar engineering page
 ; verb-lex-supertype := main-verb-lex & transitive-lex-item.
-
 copula-verb-lex := indonesian-verb-lex & trans-first-arg-raising-lex-item-2 &
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
@@ -710,14 +713,24 @@ copula-verb-lex := indonesian-verb-lex & trans-first-arg-raising-lex-item-2 &
                              HEAD noun ] ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
-                           HEAD +jp ] ] > ].
+                           HEAD adj ] ] > ].
 
 cop-verb-lex :=  transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT - ] > ].
 
 v_np_cop_le := cop-verb-lex.
 
-;; end
+;; FCB & DVM 2015-10-28: "adalah" and "ialah" cannot take aspect markers and cannot be in future tense
+v_np_cop_noasp_le := cop-verb-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E [ ASPECT nonaspect ,
+				     TENSE nonfuture ] ].
+
+;; FCB & DVM 2015-10-28: "ialah" can only appear with 3rd person subject
+v_np_cop_3_le := v_np_cop_noasp_le &
+  [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.PERNUM 3rd ].
+
+;; DVM 2015-10-28: "bukan" is the same as negative adverb "tidak" with copula "adalah" or "ialah"
+;n+cop-lex := neg-adv-lex & v_np_cop_noasp_le.
 
 ; SSH 2014-09-26: Only phrases can be the subjects (phr-synsem)
 ;subj-head-phrase := decl-head-subj-phrase & head-final &
@@ -1241,6 +1254,7 @@ redup-adj-lex-rule := same-non-local-lex-rule & adjective-lex &
     DTR.SYNSEM.LOCAL.CAT.HEAD adj ].
 
 ;; DVM 2015-10-21: added redup-adv-lex-rule
+#|
 redup-adv-lex-rule := same-non-local-lex-rule & adverb-post-lex &
 		   same-modified-lex-rule &
 		   same-light-lex-rule &
@@ -1249,6 +1263,7 @@ redup-adv-lex-rule := same-non-local-lex-rule & adverb-post-lex &
 		   same-agr-lex-rule & 
                    infl-lex-rule & 
 		   same-head-lex-rule.
+|#
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the
