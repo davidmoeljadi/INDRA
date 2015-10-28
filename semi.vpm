@@ -53,7 +53,10 @@ PNG.PERNUM : PNG.PERNUM
   3sg <> 3sg
   2sg <> 2sg
   1sg <> 1sg
-  3rd <> 3rd
+;  3rd <> 3rd
+  3rd << 3rd
+; FCB & DVM 2015-10-28: generate unspecified 3rd as 3sg
+  3rd >> 3sg
   2nd <> 2nd
   1st <> 1st
   pl <> pl
