@@ -16,6 +16,6 @@ redup-adj-suffix :=
 redup-adj-lex-rule.
 
 ;; DVM 2015-10-21: added reduplication rule for adverbs
-redup-adv-suffix :=
-%suffix (* ²)
-redup-adv-lex-rule.
+;redup-adv-suffix :=
+;%suffix (* ²)
+;redup-adv-lex-rule.
