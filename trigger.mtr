@@ -17,4 +17,18 @@ akan_gr := arg0e_gtr &
 [ CONTEXT.RELS <! [ ARG0.E.TENSE future ] !>,
   FLAGS.TRIGGER "akan" ]. 
 
+;; FCB & DVM 2015-10-28: if INDRA finds "ada", treat it having something_p_ as the head
+;; FCB & DVM 2015-10-28: ~(tilde) is for regular expression, see http://moin.delph-in.net/LkbGeneration
+;; FCB & DVM 2015-10-28: arg0e_gtr is defined in mtr.tdl
+ada_prep_gr := arg0e_gtr &
+[ CONTEXT.RELS <! [ PRED "~._p_" ] !>,
+  FLAGS.TRIGGER "ada" ]. 
 
+;; DVM 2015-10-28: same thing for "berada"
+berada_prep_gr := arg0e_gtr &
+[ CONTEXT.RELS <! [ PRED "~._p_" ] !>,
+  FLAGS.TRIGGER "berada" ]. 
+
+adalah_adj_gr := arg0e_gtr &
+[ CONTEXT.RELS <! [ PRED "~._a_" ] !>,
+  FLAGS.TRIGGER "adalah" ]. 
