@@ -374,6 +374,11 @@ ayah := human-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_ayah_n_rel",
     TRAITS native_token_list ].
 
+guru := human-noun-noun-lex &
+  [ STEM < "guru" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_guru_n_rel",
+    TRAITS native_token_list ].
+
 ibu := human-noun-noun-lex &
   [ STEM < "ibu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ibu_n_rel",
@@ -738,11 +743,6 @@ masukkan := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_masukkan_v_rel",
     TRAITS native_token_list ].
 
-miliki := tr-verb-lex &
-  [ STEM < "miliki" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_miliki_v_rel",
-    TRAITS native_token_list ].
-
 minum_1 := tr-verb-lex &
   [ STEM < "minum" >,
     SYNSEM.LKEYS.KEYREL.PRED "_minum_v_rel",
@@ -786,11 +786,6 @@ poskan := tr-verb-lex &
 proklamasikan := tr-verb-lex &
   [ STEM < "proklamasikan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_proklamasikan_v_rel",
-    TRAITS native_token_list ].
-
-punyai := tr-verb-lex &
-  [ STEM < "punyai" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_punyai_v_rel",
     TRAITS native_token_list ].
 
 qada := tr-verb-lex &
@@ -905,11 +900,6 @@ minum_2 := opt-tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_minum_v_rel",
     TRAITS native_token_list ].
 
-suka_1 := opt-tr-verb-lex &
-  [ STEM < "suka" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_suka_v_rel",
-    TRAITS native_token_list ].
-
 tahu_1 := opt-tr-verb-lex &
   [ STEM < "tahu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel",
@@ -984,11 +974,6 @@ ingin := trans-first-arg-control-verb &
     SYNSEM.LKEYS.KEYREL.PRED "_ingin_v_rel",
     TRAITS native_token_list ].
 
-suka_2 := trans-first-arg-control-verb &
-  [ STEM < "suka" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_suka_v_rel",
-    TRAITS native_token_list ].
-
 ;;; Ditransitive Control
 
 menyuruh := ditrans-second-arg-control-verb &
@@ -1035,19 +1020,49 @@ menjadi := v_np_cop_le &
 ;; FCB & DVM 2015-10-28: Copula verbs with AdjP complement: adalah, menjadi
 adalah_2 := copula-verb-lex &
   [ STEM < "adalah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_adalah_v_cop_rel",
     TRAITS native_token_list ].
 
 ;;; Locative verb ada and berada
 
 ;; FCB & DVM 2015-10-28: trans-first-arg-raising-lex-item-2 does not need SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel",
 ;; FCB & DVM 2015-10-28: we deleted SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel"
-ada := locative-verb-lex &
+ada_loc := locative-verb-lex &
   [ STEM < "ada" >,
     TRAITS native_token_list ].
 
 berada := locative-verb-lex &
   [ STEM < "berada" >,
+    TRAITS native_token_list ].
+
+;;; Existential ada
+
+;; DVM 2015-11-09: added existential ada as an intransitive verb
+ada_exist := intr-verb-lex &
+  [ STEM < "ada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel",
+    TRAITS native_token_list ].
+
+;;; Possessive verbs memiliki, mempunyai, punya, ada
+
+;; DVM 2015-11-09: punya and ada should be made separate as transitive verbs but do not have meN-
+miliki := tr-verb-lex &
+  [ STEM < "miliki" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_possess_v_rel",
+    TRAITS native_token_list ].
+
+punyai := tr-verb-lex &
+  [ STEM < "punyai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_possess_v_rel",
+    TRAITS native_token_list ].
+
+punya := tr-verb-lex &
+  [ STEM < "punya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_possess_v_rel",
+    TRAITS native_token_list ].
+
+ada_poss := tr-verb-lex &
+  [ STEM < "ada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_possess_v_rel",
     TRAITS native_token_list ].
 
 ;;; Auxiliaries
@@ -1280,7 +1295,17 @@ lapar := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_lapar_a_rel",
     TRAITS native_token_list ].
 
-muda := adjective-lex &
+manis := adjective-lex &
+  [ STEM < "manis" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_manis_a_rel",
+    TRAITS native_token_list ].
+
+;muda := adjective-lex &
+;  [ STEM < "muda" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_muda_a_rel",
+;    TRAITS native_token_list ].
+
+muda_p := adj-pred-lex &
   [ STEM < "muda" >,
     SYNSEM.LKEYS.KEYREL.PRED "_muda_a_rel",
     TRAITS native_token_list ].

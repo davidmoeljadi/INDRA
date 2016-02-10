@@ -19,3 +19,6 @@ redup-adj-lex-rule.
 ;redup-adv-suffix :=
 ;%suffix (* ²)
 ;redup-adv-lex-rule.
+
+adjective-attr-rule :=
+adj-to-attr-rule.
