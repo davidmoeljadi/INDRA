@@ -79,7 +79,8 @@ equal :=  higher-or-equal & lower-or-equal.
 
 head :+ [ HONORIFIC luk,
     AUX bool,
-    FORM form ].
+    FORM form,
+    EMPTY bool ].
 
 ; This grammar includes head-modifier rules.  To keep
 ; out extraneous parses, constrain the value of MOD on
@@ -161,7 +162,7 @@ nonaspect := aspect.
 ;;; Lexical Types
 ;;;;;;;;;;;;;;;;;;;
 
-;;; Nouns
+;;; Noun
 
 noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
@@ -463,13 +464,17 @@ modal-aux-lex := subj-raise-aux-with-pred &
 ;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM form ] ].
 
 ;;; Adjectives
+
+basic-adjective-lex :+
+ [ SYNSEM.LOCAL.CAT.VAL.SPR < [ LOCAL.CAT.HEAD adv ] > ].
+
 ;; DVM 2015-05-09: got from new grammar matrix in April 2015
 
 adj-lex := basic-int-mod-adj-lex.
 
 ;; DVM 2015-08-18: we do not use PRD because it was deleted in matrix.tdl
-adj-adj-lex := attr-adj-lex & stative-pred-adj-lex &
-  [ SYNSEM.LOCAL.CAT [ POSTHEAD + ] ].
+;adj-adj-lex := attr-adj-lex & adjective-pred-lex &
+;  [ SYNSEM.LOCAL.CAT [ POSTHEAD + ] ].
 
 ;adj-adj-lex := attr-adj-lex & stative-pred-adj-lex &
 ;  [ SYNSEM.LOCAL.CAT [ POSTHEAD +,
@@ -477,17 +482,18 @@ adj-adj-lex := attr-adj-lex & stative-pred-adj-lex &
 
 ; Basic attributive adjective definition
 
-attr-adj-lex := adj-lex & intersective-mod-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
-                                              VAL.SPR cons ] ] > ].
+;attr-adj-lex := adj-lex & intersective-mod-lex &
+;  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+;                                              VAL.SPR cons ] ] > ].
 
 ; Stative predicate adjective definition
 
-stative-pred-adj-lex := adj-lex &
-  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
+adj-pred-lex := basic-nomod-adj-lex & intransitive-lex-item &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
                                             CAT [ VAL [ SPR < >,
                                                         COMPS < > ],
                                                   HEAD noun ] ] ] >,
+			      COMPS < > ],
                    CONT.HOOK.XARG #xarg ] ].
 
 ;;; Adjectives
@@ -496,11 +502,30 @@ stative-pred-adj-lex := adj-lex &
 adjective-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                                     VAL.SPR cons ]]>,
-			   VAL [ SPR < >,
-			         SUBJ < >,
+			   VAL [ SUBJ < >,
 			         COMPS < >,
 			         SPEC < > ],
 			   POSTHEAD + ]]]].
+
+; const-lex-rule copies the stems up
+
+
+adj-to-attr-rule := const-lex-rule &
+		    same-cont-lex-rule & 
+		    same-ctxt-lex-rule &
+		    same-agr-lex-rule &
+		    adjective-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ],
+    DTR adj-pred-lex &
+    [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ] ] ] ].
+
+|#
+adj-to-attr-rule := const-lex-rule &
+		    adjective-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < #arg1 > ] ] ],
+    DTR 
+    [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < #arg1 > ] ] ] ] ] ].
+#|
 
 ;;; Numbers
 ;; DVM 2015-05-09: from Zhong
@@ -1112,7 +1137,8 @@ propcomp-lex-item := complementizer-lex-item &
 ;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
 
 noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
- [ SYNSEM [LOCAL [ CAT [ HEAD noun,
+ [ SYNSEM [LOCAL [ CAT [ HEAD noun &
+			      [ EMPTY + ],
 			 VAL [ SPR < >,
 			       COMPS < >,
 			       SUBJ < >,
@@ -1243,15 +1269,15 @@ redup-noun-lex-rule :=  same-non-local-lex-rule & common-noun-lex &
 ;		      INDEX #index ] !> ] ].
 
 ;; DVM 2015-10-21: added redup-adj-lex-rule, reduplicated adjectives should unite with plural nouns
-redup-adj-lex-rule := same-non-local-lex-rule & adjective-lex &
+redup-adj-lex-rule := same-non-local-lex-rule & adj-pred-lex &
 		   same-modified-lex-rule &
 		   same-light-lex-rule &
 		   same-ctxt-lex-rule &
 		   same-cont-lex-rule &
 		   same-agr-lex-rule & 
                    infl-lex-rule & 
-  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ] > ,
-    DTR.SYNSEM.LOCAL.CAT.HEAD adj ].
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ] > ,
+    DTR adj-pred-lex ].
 
 ;; DVM 2015-10-21: added redup-adv-lex-rule
 #|
@@ -1263,6 +1289,47 @@ redup-adv-lex-rule := same-non-local-lex-rule & adverb-post-lex &
 		   same-agr-lex-rule & 
                    infl-lex-rule & 
 		   same-head-lex-rule.
+|#
+
+
+zero-cop-rule := unary-phrase &
+ [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0,
+                                LTOP #vl,
+                                XARG #x1 ] ],
+                  CAT [ HEAD verb &
+			     [ EMPTY + ],
+                        VAL [ COMPS < >,
+                              SPR < >,
+                              SPEC < >,
+                              SUBJ < [ LOCAL [ CAT [ HEAD noun,
+						     VAL [ SPR < >,
+                                     			   COMPS < > ] ],
+                           		CONT.HOOK.INDEX #x1 ] ] > ] ] ] ,
+   ARGS.FIRST [ SYNSEM.LOCAL [ CAT [ HEAD noun &
+					  [ EMPTY - ],
+                                     VAL [ SPR < >,
+                                           COMPS < > ] ],
+                               CONT.HOOK.INDEX #x2 ] ],
+   C-CONT [ RELS <! [ LBL #vl,
+                      PRED "copula_v_zero_rel",
+                      ARG0 #v0,
+                      ARG1 #x1,
+                      ARG2 #x2 ] !> ] ].
+
+
+#|
+zero-cop-rule := unary-phrase &
+ [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0,
+                                LTOP #vl,
+                                XARG #v1 ] ],
+                  CAT.HEAD verb ],
+   ARGS.FIRST.SYNSEM.LOCAL [ CAT.HEAD noun,
+                             CONT.HOOK.INDEX #v2 ],
+   C-CONT [ RELS <! [ LBL #vl,
+                      PRED "zero_cop",
+                      ARG0 #v0,
+                      ARG1 #v1,
+                      ARG2 #v2 ] !> ] ].
 |#
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
