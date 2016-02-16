@@ -20,5 +20,6 @@ redup-adj-lex-rule.
 ;%suffix (* ²)
 ;redup-adv-lex-rule.
 
+;; FCB & DVM 2016-02-10: rule for attributive adjective
 adjective-attr-rule :=
 adj-to-attr-rule.

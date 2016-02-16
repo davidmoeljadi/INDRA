@@ -1007,7 +1007,7 @@ ialah := v_np_cop_3_le &
 ;    SYNSEM.LKEYS.KEYREL.PRED "neg_rel",
 ;    TRAITS native_token_list ].
 
-merupakan := v_np_cop_le &
+merupakan := v_np_cop_common_le &
   [ STEM < "merupakan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_copula_v_rel",
     TRAITS native_token_list ].
@@ -1300,15 +1300,15 @@ manis := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_manis_a_rel",
     TRAITS native_token_list ].
 
-;muda := adjective-lex &
-;  [ STEM < "muda" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "_muda_a_rel",
-;    TRAITS native_token_list ].
-
-muda_p := adj-pred-lex &
+muda := adjective-lex &
   [ STEM < "muda" >,
     SYNSEM.LKEYS.KEYREL.PRED "_muda_a_rel",
     TRAITS native_token_list ].
+
+;muda_p := adj-pred-lex &
+;  [ STEM < "muda" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_muda_a_rel",
+;    TRAITS native_token_list ].
 
 panjang := adjective-lex &
   [ STEM < "panjang" >,

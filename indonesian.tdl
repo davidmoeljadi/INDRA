@@ -158,6 +158,13 @@ prog := aspect.
 perf-and-prog := perf & prog.
 nonaspect := aspect.
 
+;;; Noun
+;; DVM 2016-02-13: separate proper names and pronouns from other nouns for copula verb "merupakan"
+
+commonnoun := noun.
+propername := noun.
+pronoun := noun.
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
 ;;;;;;;;;;;;;;;;;;;
@@ -188,12 +195,15 @@ head-spec-phrase := basic-head-spec-phrase & head-initial &
 common-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
 
+;; DVM 2016-02-13: change the HEAD from "noun" to "propername"
+;; DVM 2016-02-16: added the information of PERNUM sg
 proper-name-lex := basic-one-arg & basic-icons-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+  [ SYNSEM [ LOCAL [ CAT [ HEAD propername,
 			   VAL [ COMPS < >,
 				 SUBJ < >,
 				 SPR < > ] ],
-		     CONT [ HOOK.INDEX #index,
+		     CONT [ HOOK.INDEX #index &
+					[ PNG.PERNUM sg ],
 			    RELS <! relation & #keyrel & 
 				  [ LBL #larg,
 				    ARG0 #index ],
@@ -211,7 +221,7 @@ proper-name-lex := basic-one-arg & basic-icons-lex-item &
 ;  [ SYNSEM.LOCAL.CAT.HEAD.HON + ].
 
 basic-pronoun-lex :=  basic-one-arg & norm-hook-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [ MOD <> ],
+  [ SYNSEM [ LOCAL [ CAT [ HEAD pronoun & [ MOD <> ],
                            VAL [ COMPS < >,
                                  SUBJ < >,
                                  SPR < > ] ],
@@ -469,37 +479,21 @@ basic-adjective-lex :+
  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ LOCAL.CAT.HEAD adv ] > ].
 
 ;; DVM 2015-05-09: got from new grammar matrix in April 2015
-
-adj-lex := basic-int-mod-adj-lex.
-
-;; DVM 2015-08-18: we do not use PRD because it was deleted in matrix.tdl
-;adj-adj-lex := attr-adj-lex & adjective-pred-lex &
-;  [ SYNSEM.LOCAL.CAT [ POSTHEAD + ] ].
-
-;adj-adj-lex := attr-adj-lex & stative-pred-adj-lex &
-;  [ SYNSEM.LOCAL.CAT [ POSTHEAD +,
-;                       HEAD.PRD - ] ].
-
-; Basic attributive adjective definition
-
-;attr-adj-lex := adj-lex & intersective-mod-lex &
-;  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
-;                                              VAL.SPR cons ] ] > ].
+;adj-lex := basic-int-mod-adj-lex.
 
 ; Stative predicate adjective definition
-
-adj-pred-lex := basic-nomod-adj-lex & intransitive-lex-item &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
-                                            CAT [ VAL [ SPR < >,
-                                                        COMPS < > ],
-                                                  HEAD noun ] ] ] >,
+;; FCB & DVM 2016-02-10 : the predicative adjective was made as the default
+adjective-lex := basic-nomod-adj-lex & intransitive-lex-item &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #x1,
+                                              CAT [ VAL [ SPR < >,
+                                                          COMPS < > ],
+                                                    HEAD noun ] ] ] >,
 			      COMPS < > ],
-                   CONT.HOOK.XARG #xarg ] ].
+                   CONT.HOOK.XARG #x1 ] ].
 
-;;; Adjectives
 ;; DVM 2015-05-09: from the previous version of INDRA
-
-adjective-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
+;; FCB & DVM 2016-02-10 : adjective-lex was changed to adj-mod-lex
+adj-mod-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                                     VAL.SPR cons ]]>,
 			   VAL [ SUBJ < >,
@@ -507,25 +501,16 @@ adjective-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item
 			         SPEC < > ],
 			   POSTHEAD + ]]]].
 
-; const-lex-rule copies the stems up
-
-
+;; FCB & DVM 2016-02-10 : const-lex-rule copies the stems up
+;; FCB & DVM 2016-02-10 : a rule which changes predicative adjective to attributive adjective
 adj-to-attr-rule := const-lex-rule &
 		    same-cont-lex-rule & 
 		    same-ctxt-lex-rule &
 		    same-agr-lex-rule &
-		    adjective-lex &
+		    adj-mod-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ],
-    DTR adj-pred-lex &
+    DTR adjective-lex &
     [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ] ] ] ].
-
-|#
-adj-to-attr-rule := const-lex-rule &
-		    adjective-lex &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < #arg1 > ] ] ],
-    DTR 
-    [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < #arg1 > ] ] ] ] ] ].
-#|
 
 ;;; Numbers
 ;; DVM 2015-05-09: from Zhong
@@ -714,8 +699,6 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 ;;; DVM 2015-05-09: from zhong
-;; begin
-
 ;head-spec-h-sem-phrase := basic-head-spec-phrase & head-final &
 ;  [ HEAD-DTR.SYNSEM.LOCAL [ CAT.HEAD noun,
 ;                            CONT.HOOK #hook ],
@@ -753,6 +736,10 @@ v_np_cop_noasp_le := cop-verb-lex &
 ;; FCB & DVM 2015-10-28: "ialah" can only appear with 3rd person subject
 v_np_cop_3_le := v_np_cop_noasp_le &
   [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.PERNUM 3rd ].
+
+;; DVM 2016-02-13: "merupakan" cannot appear with proper names, demonstratives, or pronouns as complement
+v_np_cop_common_le := v_np_cop_noasp_le &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL.CAT.HEAD commonnoun ] > ].
 
 ;; DVM 2015-10-28: "bukan" is the same as negative adverb "tidak" with copula "adalah" or "ialah"
 ;n+cop-lex := neg-adv-lex & v_np_cop_noasp_le.
@@ -1136,8 +1123,9 @@ propcomp-lex-item := complementizer-lex-item &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF ques,
 ;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
 
+;; DVM 2016-02-13: the HEAD was changed from noun to pronoun to accommodate restrictions on "merupakan"
 noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
- [ SYNSEM [LOCAL [ CAT [ HEAD noun &
+ [ SYNSEM [LOCAL [ CAT [ HEAD pronoun &
 			      [ EMPTY + ],
 			 VAL [ SPR < >,
 			       COMPS < >,
@@ -1269,7 +1257,8 @@ redup-noun-lex-rule :=  same-non-local-lex-rule & common-noun-lex &
 ;		      INDEX #index ] !> ] ].
 
 ;; DVM 2015-10-21: added redup-adj-lex-rule, reduplicated adjectives should unite with plural nouns
-redup-adj-lex-rule := same-non-local-lex-rule & adj-pred-lex &
+;; DVM 2016-02-15: "adj-pred-lex" was changed to "adjective-lex"
+redup-adj-lex-rule := same-non-local-lex-rule & adjective-lex &
 		   same-modified-lex-rule &
 		   same-light-lex-rule &
 		   same-ctxt-lex-rule &
@@ -1277,7 +1266,7 @@ redup-adj-lex-rule := same-non-local-lex-rule & adj-pred-lex &
 		   same-agr-lex-rule & 
                    infl-lex-rule & 
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ] > ,
-    DTR adj-pred-lex ].
+    DTR adjective-lex ].
 
 ;; DVM 2015-10-21: added redup-adv-lex-rule
 #|
@@ -1291,9 +1280,12 @@ redup-adv-lex-rule := same-non-local-lex-rule & adverb-post-lex &
 		   same-head-lex-rule.
 |#
 
-
+;; DVM 2016-02-16 : added information of ASPECT nonaspect and TENSE nonfuture
+;; so that *Budi sudah/sedang/akan guru cannot be parsed.
 zero-cop-rule := unary-phrase &
- [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0,
+ [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0 &
+				      [ E [ ASPECT nonaspect ,
+					    TENSE nonfuture ] ],
                                 LTOP #vl,
                                 XARG #x1 ] ],
                   CAT [ HEAD verb &
@@ -1304,7 +1296,7 @@ zero-cop-rule := unary-phrase &
                               SUBJ < [ LOCAL [ CAT [ HEAD noun,
 						     VAL [ SPR < >,
                                      			   COMPS < > ] ],
-                           		CONT.HOOK.INDEX #x1 ] ] > ] ] ] ,
+                           		       CONT.HOOK.INDEX #x1 ] ] > ] ] ] ,
    ARGS.FIRST [ SYNSEM.LOCAL [ CAT [ HEAD noun &
 					  [ EMPTY - ],
                                      VAL [ SPR < >,
@@ -1315,22 +1307,6 @@ zero-cop-rule := unary-phrase &
                       ARG0 #v0,
                       ARG1 #x1,
                       ARG2 #x2 ] !> ] ].
-
-
-#|
-zero-cop-rule := unary-phrase &
- [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0,
-                                LTOP #vl,
-                                XARG #v1 ] ],
-                  CAT.HEAD verb ],
-   ARGS.FIRST.SYNSEM.LOCAL [ CAT.HEAD noun,
-                             CONT.HOOK.INDEX #v2 ],
-   C-CONT [ RELS <! [ LBL #vl,
-                      PRED "zero_cop",
-                      ARG0 #v0,
-                      ARG1 #v1,
-                      ARG2 #v2 ] !> ] ].
-|#
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the
