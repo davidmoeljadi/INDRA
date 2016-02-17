@@ -57,6 +57,14 @@ reason_n_rel := generic_n_rel.
 ; how
 manner_n_rel := generic_n_rel.
 
+;; FCB & DVM 2016-02-17 : semantic hierarchy for copulas
+copula_v_rel := predsort.
+cop_v_zero_rel := copula_v_rel.
+_cop_v_ialah_rel := copula_v_rel.
+_cop_v_adalah_rel := copula_v_rel.
+_cop_v_merupakan_rel := copula_v_rel.
+_cop_v_menjadi_rel := copula_v_rel.
+
 ;; DVM 2015-08-18: added from zhong.tdl
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; SSH 2015-05-24
@@ -433,7 +441,7 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
                                  COMPS < >,
                                  SPR < >,
                                  SPEC < > ],
-                           HEAD verb ] ] > ].
+                           HEAD +vj ] ] > ].
 
 subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
 
@@ -482,14 +490,17 @@ basic-adjective-lex :+
 ;adj-lex := basic-int-mod-adj-lex.
 
 ; Stative predicate adjective definition
-;; FCB & DVM 2016-02-10 : the predicative adjective was made as the default
+;; FCB & DVM 2016-02-10 : the predicative adjective was made as the basic
+;; SSH & DVM 2016-02-17 : connect the argument one of adj complement with the noun subject
 adjective-lex := basic-nomod-adj-lex & intransitive-lex-item &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #x1,
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj & 
+				    [ LOCAL [ CONT.HOOK.INDEX #x1,
                                               CAT [ VAL [ SPR < >,
                                                           COMPS < > ],
                                                     HEAD noun ] ] ] >,
 			      COMPS < > ],
-                   CONT.HOOK.XARG #x1 ] ].
+                   CONT.HOOK.XARG #x1 ],
+    ARG-ST.FIRST #subj ].
 
 ;; DVM 2015-05-09: from the previous version of INDRA
 ;; FCB & DVM 2016-02-10 : adjective-lex was changed to adj-mod-lex
@@ -501,7 +512,7 @@ adj-mod-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item &
 			         SPEC < > ],
 			   POSTHEAD + ]]]].
 
-;; FCB & DVM 2016-02-10 : const-lex-rule copies the stems up
+;; FCB & DVM 2016-02-10 : const-lex-rule copies the stems up, not changing the stem
 ;; FCB & DVM 2016-02-10 : a rule which changes predicative adjective to attributive adjective
 adj-to-attr-rule := const-lex-rule &
 		    same-cont-lex-rule & 
@@ -592,7 +603,6 @@ determiner-pl-determiner-lex := determiner-lex & no-icons-lex-item &
 ; 
 ; This adverb should go through a specialized phrase structure rule
 ;        included with this grammar.
-
 
 ;; DVM 2015-09-23: added CONT.HOOK.XARG #xarg to connect the ARG1 of the verb with ARG0 of the subj
 neg-adv-lex := basic-scopal-adverb-lex &
@@ -708,6 +718,7 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
 
 ;;; DVM 2015-08-11: from compling grammar engineering page
 ; verb-lex-supertype := main-verb-lex & transitive-lex-item.
+#|
 copula-verb-lex := indonesian-verb-lex & trans-first-arg-raising-lex-item-2 &
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
@@ -722,10 +733,38 @@ copula-verb-lex := indonesian-verb-lex & trans-first-arg-raising-lex-item-2 &
              #comps &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
                            HEAD adj ] ] > ].
+|#
 
+;; SSH & DVM 2016-02-17 : added rule for copula verbs "adalah" and "ialah"
+;; with PP complement
+cop-pp-lex := non-mod-lex-item & trans-first-arg-raising-lex-item-2 &
+  [ SYNSEM.LOCAL [ CAT [ HEAD verb & 
+			      [ AUX + ],
+                   	VAL [ SUBJ < #subj >,
+                   	      COMPS < #comps >,
+                   	      SPR < >,
+                   	      SPEC < > ] ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+               	       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD adp ] ] > ].
+
+cop-adalah-pp-lex := cop-pp-lex.
+
+;; SSH & DVM 2016-02-17 : "ialah" can only appear with 3rd person subject
+cop-ialah-pp-lex := cop-pp-lex &
+ [ SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ] > ]].
+
+;; FCB & DVM 2015-10-28: copula verbs with NP complement, inherit from transitive verbs
 cop-verb-lex :=  transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT - ] > ].
 
+;; "menjadi"
 v_np_cop_le := cop-verb-lex.
 
 ;; FCB & DVM 2015-10-28: "adalah" and "ialah" cannot take aspect markers and cannot be in future tense
@@ -885,7 +924,6 @@ locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 &
              #comps &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
                            HEAD adp ] ] > ].
-
 
 trans-first-arg-raising-verb := main-verb-lex & trans-first-arg-raising-lex-item & no-hcons-lex-item &
   [ SYNSEM [ LKEYS.KEYREL arg1-relation & [ ARG1 #arg1 ],
@@ -1297,16 +1335,40 @@ zero-cop-rule := unary-phrase &
 						     VAL [ SPR < >,
                                      			   COMPS < > ] ],
                            		       CONT.HOOK.INDEX #x1 ] ] > ] ] ] ,
-   ARGS.FIRST [ SYNSEM.LOCAL [ CAT [ HEAD noun &
-					  [ EMPTY - ],
-                                     VAL [ SPR < >,
-                                           COMPS < > ] ],
-                               CONT.HOOK.INDEX #x2 ] ],
+   ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun &
+				      [ EMPTY - ],
+                                 VAL [ SPR < >,
+                                       COMPS < > ] ],
+                               CONT.HOOK.INDEX #x2 ] ] > ,
    C-CONT [ RELS <! [ LBL #vl,
-                      PRED "copula_v_zero_rel",
+                      PRED cop_v_zero_rel,
                       ARG0 #v0,
                       ARG1 #x1,
                       ARG2 #x2 ] !> ] ].
+
+;; SSH & DVM 2016-02-17 : a new rule for zero copula with pp locative complement
+zero-cop-pp-rule := unary-phrase &
+ [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0,
+                                LTOP #vl,
+                                XARG #x1 ] ],
+                  CAT [ HEAD verb &
+			     [ EMPTY + ],
+                        VAL [ COMPS < >,
+                              SPR < >,
+                              SPEC < >,
+                              SUBJ < [ LOCAL [ CAT [ HEAD noun,
+						     VAL [ SPR < >,
+                                     			   COMPS < > ] ],
+                           		       CONT.HOOK.INDEX #x1 ] ] > ] ] ] ,
+   ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD adp &
+				      [ EMPTY - ],
+                           	 VAL [ SPR < >,
+                                       COMPS < > ] ],
+                           CONT.HOOK #hook ] ] > ,
+   C-CONT [ HOOK #hook,
+	    RELS <! !>, 
+	    HCONS <! !>, 
+	    ICONS <! !> ] ].
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the

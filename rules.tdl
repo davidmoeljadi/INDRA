@@ -50,6 +50,7 @@ head-adj-int := head-adj-int-phrase.
 
 ;; this is the rule for zero copula, e.g. Saya orang.
 zero-cop := zero-cop-rule.
+zero-cop-pp := zero-cop-pp-rule.
 
 ;; Also need to add to rules.tdl:
 ;xp-xp-bridge-c := bridge-binary-phrase.

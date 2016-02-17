@@ -990,16 +990,25 @@ berjanji := ditrans-first-arg-control-verb &
 ;; FCB & DVM 2015-10-28: we divided copula verbs into two groups
 ;; FCB & DVM 2015-10-28: one is for NP complement because noun only has ARG0, does not have ARG1
 ;; FCB & DVM 2015-10-28: the other one is for Adj and PP complement/locative because adj and prep have ARG1
-
 ;; FCB & DVM 2015-10-28: Copula verbs with NP complement: adalah, ialah, merupakan, menjadi
-adalah_1 := v_np_cop_noasp_le &
+adalah := v_np_cop_noasp_le &
   [ STEM < "adalah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_copula_v_rel",
+    SYNSEM.LKEYS.KEYREL.PRED _cop_v_adalah_rel,
+    TRAITS native_token_list ].
+
+;; SSH & DVM 2016-02-17 : "adalah" with PP complement
+adalah_pp := cop-adalah-pp-lex &
+  [ STEM < "adalah" > ,
     TRAITS native_token_list ].
 
 ialah := v_np_cop_3_le &
   [ STEM < "ialah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_copula_v_rel",
+    SYNSEM.LKEYS.KEYREL.PRED _cop_v_ialah_rel,
+    TRAITS native_token_list ].
+
+;; SSH & DVM 2016-02-17 : "ialah" with PP complement
+ialah_pp := cop-ialah-pp-lex &
+  [ STEM < "ialah" > ,
     TRAITS native_token_list ].
 
 ;bukan := n+cop-lex &
@@ -1009,17 +1018,12 @@ ialah := v_np_cop_3_le &
 
 merupakan := v_np_cop_common_le &
   [ STEM < "merupakan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_copula_v_rel",
+    SYNSEM.LKEYS.KEYREL.PRED _cop_v_merupakan_rel,
     TRAITS native_token_list ].
 
 menjadi := v_np_cop_le &
   [ STEM < "menjadi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_copula_v_rel",
-    TRAITS native_token_list ].
-
-;; FCB & DVM 2015-10-28: Copula verbs with AdjP complement: adalah, menjadi
-adalah_2 := copula-verb-lex &
-  [ STEM < "adalah" >,
+    SYNSEM.LKEYS.KEYREL.PRED _cop_v_menjadi_rel,
     TRAITS native_token_list ].
 
 ;;; Locative verb ada and berada

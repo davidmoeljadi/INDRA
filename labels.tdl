@@ -131,10 +131,7 @@ s-bottom-label := label &
                             COORD + ],
              LABEL-NAME "S-B"].
 
-
-
-
-
+;; FCB & DVM 2016-02-10: the HEAD was changed from verb to +vj so that adjectives can be the head of S.
 s-label := label &
            [ SYNSEM.LOCAL [ CAT [ HEAD +vj &
 					[ MOD < > ],
