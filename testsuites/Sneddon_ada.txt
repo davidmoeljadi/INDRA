@@ -1,0 +1,216 @@
+Language: Indonesian
+Language code: ind
+Lines: orth translit gloss translat
+Author: David Moeljadi
+Date: 2016-4-20
+Source: James Neil Sneddon, Alexander Adelaar, Dwi Noverini Djenar, and Michael C. Ewing 2010. Indonesian Reference Grammar. Allen & Unwin, New South Wales, 2nd edition.
+
+Id: 1
+Source: 272
+Vetted: t
+Judgment: g
+Phenom: presentational
+Ada koran.
+ada koran
+exist newspaper
+There is a newpaper.
+
+Id: 2
+Source: 272
+Vetted: t
+Judgment: g
+Phenom: presentational
+Ada orang di kantor.
+ada orang di kantor
+exist person in office
+There is someone (/there are people) in the office.
+
+Id: 3
+Source: 272
+Vetted: t
+Judgment: g
+Phenom: presentational
+O ya, masih ada tetangga: mereka juga perlu diundang!
+o ya masih ada tetangga mereka juga perlu di-undang
+o yes still exist neighbour 3PL also need PASS-invite
+‘O yes, and then there are the neighbours: they too should be invited!’
+
+Id: 4
+Source: 272
+Vetted: t
+Judgment: g
+Phenom: presentational, negative
+Di Indonesia tidak ada kanguru.
+di Indonesia tidak ada kanguru
+in Indonesia NEG exist kangaroo
+In Indonesia there are no kangaroos.
+
+Id: 5
+Source: 272
+Vetted: t
+Judgment: g
+Phenom: presentational, tense
+Akan ada orang yang berdemonstrasi di luar kantornya.
+akan ada orang yang berdemonstrasi di luar kantor-nya
+FUT exist person REL demonstrate in outer office-3SG
+There will be people demonstrating outside his office.
+
+Id: 6
+Source: 273
+Vetted: t
+Judgment: g
+Phenom: presentational, quantity
+Tidak ada banyak mobil di jalan hari ini.
+tidak ada banyak mobil di jalan hari ini
+NEG exist many car in road day this
+There aren’t many cars on the road today.
+
+Id: 7
+Source: 273
+Vetted: t
+Judgment: g
+Phenom: presentational, relativizer
+Ada yang besar, ada yang kecil.
+ada yang besar, ada yang kecil
+exist REL big exist REL small
+Some are big, some are small.
+
+Id: 8
+Source: 273
+Vetted: t
+Judgment: g
+Phenom: locational
+Koran itu ada.
+koran itu ada
+newspaper that exist
+The newspaper is there/available.
+
+Id: 9
+Source: 273
+Vetted: t
+Judgment: g
+Phenom: locational
+Ibu ada?
+ibu ada
+mother exist
+Is Mum there?
+
+Id: 10
+Source: 273
+Vetted: t
+Judgment: g
+Phenom: locational
+Uangnya ada!
+uang-nya ada
+money-DEF exist
+The money is there!
+
+Id: 11
+Source: 273
+Vetted: t
+Judgment: g
+Phenom: locational
+Ayah di kantor.
+ayah di kantor
+father in office
+Father is in the office.
+
+Id: 12
+Source: 273
+Vetted: t
+Judgment: g
+Phenom: locational
+Ayah ada di kantor.
+ayah ada di kantor
+father exist in office
+Father is in the office.
+
+Id: 13
+Source: 273
+Vetted: t
+Judgment: g
+Phenom: locational
+Sekarang kita berada di sebuah desa di Jawa Tengah.
+sekarang kita berada di se-buah desa di Jawa tengah
+now 1PL.INCL exist in one-CL village in Java center
+Now we are in a village in Central Java.
+
+Id: 14
+Source: 273
+Vetted: t
+Judgment: g
+Phenom: locational
+Sekarang kita ada di sebuah desa di Jawa Tengah.
+sekarang kita ada di se-buah desa di Jawa tengah
+now 1PL.INCL exist in one-CL village in Java center
+Now we are in a village in Central Java.
+
+Id: 15
+Source: 274
+Vetted: t
+Judgment: g
+Phenom: locational, negation
+Ayah tidak ada di kantor.
+ayah tidak ada di kantor
+father NEG exist in office
+Father is not in the office.
+
+Id: 16
+Source: 274
+Vetted: t
+Judgment: g
+Phenom: locational, negation
+Ayah tidak di kantor.
+ayah tidak di kantor
+father NEG in office
+Father is not in the office.
+
+Id: 17
+Source: 274
+Vetted: t
+Judgment: g
+Phenom: locational
+Tuhan ada.
+Tuhan ada
+God exist
+God is there./God exists.
+
+Id: 18
+Source: 274
+Vetted: t
+Judgment: g
+Phenom: possessive
+Abang saya ada tiga anak.
+abang saya ada tiga anak
+elder.brother 1SG have three child
+My (older) brother has three kids.
+
+Id: 19
+Source: 274
+Vetted: t
+Judgment: g
+Phenom: possessive
+Saya tidak ada uang kecil.
+saya tidak ada uang kecil
+1SG NEG have money small
+I don’t have any small change.
+
+Id: 20
+Source: 274
+Vetted: t
+Judgment: g
+Phenom: locational
+Buku Ali ada pada saya.
+buku Ali ada pada saya
+book Ali exist at 1SG
+Ali’s book is with me/I’ve got Ali’s book.
+
+Id: 21
+Source: 274
+Vetted: t
+Judgment: g
+Phenom: intensifier
+Ia ada menerima surat itu.
+ia ada meN-terima surat itu
+3SG do AV-receive letter that
+He did receive the letter.
