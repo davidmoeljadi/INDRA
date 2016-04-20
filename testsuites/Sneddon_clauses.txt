@@ -1,0 +1,596 @@
+Language: Indonesian
+Language code: ind
+Lines: orth translit gloss translat
+Author: David Moeljadi
+Date: 2016-4-20
+Source: James Neil Sneddon, Alexander Adelaar, Dwi Noverini Djenar, and Michael C. Ewing 2010. Indonesian Reference Grammar. Allen & Unwin, New South Wales, 2nd edition.
+
+Id: 1
+Source: 241
+Vetted: t
+Judgment: g
+Phenom: subject
+Anak-anak itu bermain di pantai.
+anak-anak itu bermain di pantai
+child-REDUP that play in beach
+The children were playing on that beach.
+
+Id: 2
+Source: 241
+Vetted: t
+Judgment: g
+Phenom: subject
+Mereka menyelenggarakan penelitian di Aceh.
+mereka meN-selenggarakan penelitian di Aceh
+3PL AV-undertake research in Aceh
+They undertook research in Aceh.
+
+Id: 3
+Source: 241
+Vetted: t
+Judgment: g
+Phenom: subject
+Mencari pekerjaan di kota tidak begitu mudah.
+meN-cari pekerjaan di kota tidak begitu mudah
+AV-find work in city NEG so easy
+Finding work in the city isn’t very easy.
+
+Id: 4
+Source: 241
+Vetted: t
+Judgment: g
+Phenom: subject
+Bahwa dia suka pada Siti bukan rahasia lagi.
+bahwa dia suka pada Siti bukan rahasia lagi
+COMP 3SG like at Siti NEG secret again
+That he likes Siti isn’t a secret any more.
+
+Id: 5
+Source: 242
+Vetted: t
+Judgment: g
+Phenom: noun clause
+Ini keputusan saya.
+ini keputusan saya
+this decision 1SG
+This is my decision.
+
+Id: 6
+Source: 242
+Vetted: t
+Judgment: g
+Phenom: noun clause
+Dia guru.
+dia guru
+3SG teacher
+She is a teacher.
+
+Id: 7
+Source: 242
+Vetted: t
+Judgment: g
+Phenom: noun clause, negation
+Dia bukan guru.
+dia bukan guru
+2SG NEG teacher
+She isn’t a teacher.
+
+Id: 8
+Source: 242
+Vetted: t
+Judgment: g
+Phenom: noun clause
+Pekerjaannya tiap hari ialah memasak di dapur.
+pekerjaan-nya tiap hari ialah meN-masak di dapur
+work-3SG every day COP AV-cook in kitchen
+Her work every day is to cook in the kitchen.
+
+Id: 9
+Source: 242
+Vetted: t
+Judgment: g
+Phenom: noun clause
+Kesukaannya bukan membaca novel.
+kesukaan-nya bukan meN-baca novel
+pastime-3SG NEG AV-read novel
+His pastime is not reading novels.
+
+Id: 10
+Source: 243
+Vetted: t
+Judgment: g
+Phenom: noun clause
+Hakikatnya ialah bahwa saya benar.
+hakikat-nya ialah bahwa saya benar
+truth-DEF COP COMP 1SG correct
+The truth is that I am correct.
+
+Id: 11
+Source: 243
+Vetted: t
+Judgment: g
+Phenom: noun clause
+Maksudnya adalah untuk mendidik rakyat Australia.
+maksud-nya adalah untuk meN-didik rakyat Australia
+purpose-3SG COP to AV-educate people Australia
+His purpose is to educate the Australian people.
+
+Id: 12
+Source: 243
+Vetted: t
+Judgment: g
+Phenom: verb clause, negation
+Anak saya tidak sekolah di Rawamangun.
+anak saya tidak sekolah di Rawamangun
+child 1SG NEG school in Rawamangun
+My children do not go to school in Rawamangun.
+
+Id: 13
+Source: 243
+Vetted: t
+Judgment: g
+Phenom: verb clause, negation
+Jika yang tidak kuliah saja bisa sukses, apalagi anak kuliahan.
+jika yang tidak kuliah saja bisa sukses, apalagi anak kuliah-an
+if REL NEG lecture only can successful, even.less child lecture-an
+If those who have not studied at university can be successful, then university students can be even more so.
+
+Id: 14
+Source: 243
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Anaknya lima.
+anak-nya lima
+child-3SG five
+He has five children. (literally: ‘His children are five.’)
+
+Id: 15
+Source: 243
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Kucing saya dua.
+kucing saya dua
+cat 1SG two
+I have two cats.
+
+Id: 16
+Source: 243
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Uangnya banyak.
+uang-nya banyak
+money-3SG many
+He has a lot of money. (literally: ‘His money is a lot.’)
+
+Id: 17
+Source: 243
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Uangnya sedikit.
+uang-nya sedikit
+money-3SG little
+He has little money. (literally: ‘His money is a little.’)
+
+Id: 18
+Source: 243
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Ternak Pak Harun ini beratus-ratus.
+ternak pak Harun ini ber-ratus-ratus
+livestock mister Harun this ber-hundred-REDUP
+Mr Harun has hundreds of animals. (literally: ‘Mr Harun’s livestock are hundreds.’)
+
+Id: 19
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Anggota panitia itu sepuluh orang.
+anggota panitia itu sepuluh orang
+member committee that ten CL
+That committee has ten members. (literally: ‘The members of that committee are ten + classifier.’)
+
+Id: 20
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Jumlah wesel yang dikirim sembilan ribu tujuh ratus lembar.
+jumlah wesel yang di-kirim sembilan ribu tujuh ratus lembar
+amount money.order REL PASS-send nine thousand seven hundred CL 
+The number of money orders sent was nine thousand seven hundred.
+
+Id: 21
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Kue di meja lima potong.
+kue di meja lima potong
+cake in table five slice
+There are five slices of cake on the table. (literally: ‘The cake on the table is five pieces.’)
+
+Id: 22
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Tanahnya berhektar-hektar.
+tanah-nya ber-hektar-hektar
+land-3SG ber-hectare-REDUP
+He has (many) hectares of land.
+
+Id: 23
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Beratnya tujuh puluh kilo.
+berat-nya tujuh puluh kilo
+weight-3SG seven tens kilo
+His weight is seventy kilos.
+
+Id: 24
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Tinggi saya seratus tujuh puluh delapan sentimeter.
+tinggi saya se-ratus tujuh puluh delapan sentimeter
+height 1SG one-hundred seven tens eight centimetre
+My height is one hundred and seventy-eight centimetres.
+
+Id: 25
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Tinggi saya seratus tujuh puluh delapan.
+tinggi saya se-ratus tujuh puluh delapan
+height 1SG one-hundred seven tens eight
+My height is one hundred and seventy-eight.
+
+Id: 26
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: quantity clause
+Panjang sisinya lima belas meter.
+panjang sisi-nya lima belas meter
+length side-3SG five teens metre
+The length of its sides is 15 metres.
+
+Id: 27
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: quantity clause, negation
+Anaknya tidak banyak.
+anak-nya tidak banyak
+child-3PL NEG many
+They don’t have many children.
+
+Id: 28
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: quantity clause, negation
+Penggemarnya bukan satu dua orang melainkan ribuan.
+penggemar-nya bukan satu dua orang melainkan ribu-an
+fan-3SG NEG one two CL but thousand-s
+Her fans are not only one or two but thousands.
+
+Id: 29
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Risikonya akan berat sekali.
+risiko-nya akan berat sekali
+risk-DEF FUT heavy very
+The risk will be very great.
+
+Id: 30
+Source: 244
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Minuman itu harus dingin.
+minuman itu harus dingin
+drink that must cold
+The drinks must be cold.
+
+Id: 31
+Source: 245
+Vetted: t
+Judgment: g
+Phenom: adjective clause, negation
+Mencari pekerjaan di kota tidak begitu mudah.
+meN-cari pekerjaan di kota tidak begitu mudah
+AV-find work in city NEG so easy
+Looking for work in the city isn’t very easy.
+
+Id: 32
+Source: 245
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Sulit bagi kita mencari pekerjaan di kota.
+sulit bagi kita meN-cari pekerjaan di kota
+difficult for 1PL.INCL AV-find work in city
+It is difficult for us getting work in the city.
+
+Id: 33
+Source: 245
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Sukar bagi kami untuk menerima kenyataan ini.
+sukar bagi kami untuk meN-terima kenyataan ini
+difficult for 1PL.EXCL to AV-accept fact this
+It is difficult for us to accept this fact./Accepting this fact is difficult for us.
+
+Id: 34
+Source: 245
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Kenyataan ini sukar untuk kami terima.
+kenyataan ini sukar untuk kami terima
+fact this difficult to 1PL.EXCL accept 
+This fact is difficult for us to accept.
+
+Id: 35
+Source: 245
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Kenyataan ini sukar kami terima.
+kenyataan ini sukar kami terima
+fact this difficult 1PL.EXCL accept 
+This fact is difficult for us to accept.
+
+Id: 36
+Source: 246
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Kalung ini untuk ibu.
+kalung ini untuk ibu
+necklace this for mother 
+This necklace is for mother.
+
+Id: 37
+Source: 246
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Tidak semua perusahaan seperti ini.
+tidak semua perusahaan seperti ini
+NEG all company like this
+Not all companies are like this.
+
+Id: 38
+Source: 246
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Dia dengan pacarnya sekarang.
+dia dengan pacar-nya sekarang
+3SG with sweetheart-3SG now
+He’s with his girlfriend now.
+
+Id: 39
+Source: 246
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Mereka di Jakarta sekarang.
+mereka di Jakarta sekarang
+3PL in Jakarta now
+They are in Jakarta now.
+
+Id: 40
+Source: 246
+Vetted: t
+Judgment: g
+Phenom: prepositional clause, negation
+Kehidupan mereka tidak tanpa harapan.
+kehidupan mereka tidak tanpa harapan
+life 3PL NEG without hope
+Their lives aren’t without hope.
+
+Id: 41
+Source: 246
+Vetted: t
+Judgment: g
+Phenom: prepositional clause, negation
+Penyakitnya bukan karena itu.
+penyakit-nya bukan karena itu
+disease-3SG NEG because that
+His illness is not because of that.
+
+Id: 42
+Source: 246
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Enam tambah dua sama dengan delapan.
+enam tambah dua sama dengan delapan
+six plus two same with eight
+Six plus two equals eight.
+
+Id: 43
+Source: 246
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Sepuluh kurang lima sama dengan lima.
+sepuluh kurang lima sama dengan lima
+ten minus five same with five
+Ten minus five equals five.
+
+Id: 44
+Source: 247
+Vetted: t
+Judgment: g
+Phenom: copula, noun clause
+Ayah guru.
+ayah guru
+father teacher
+Father is a teacher.
+
+Id: 45
+Source: 247
+Vetted: t
+Judgment: g
+Phenom: copula, noun clause
+Ayah Tomo adalah pegawai Bank Indonesia.
+ayah Tomo adalah pegawai bank Indonesia
+father Tomo COP employee bank Indonesia
+Tomo’s father is an employee of the Bank of Indonesia.
+
+Id: 46
+Source: 247
+Vetted: t
+Judgment: g
+Phenom: copula, noun clause
+Kain kebaya ialah pakaian wanita Jawa.
+kain kebaya ialah pakaian wanita Jawa
+cloth kebaya COP clothing woman Java
+The kain kebaya is the clothing of Javanese women.
+
+Id: 47
+Source: 247
+Vetted: t
+Judgment: g
+Phenom: copula, adjective clause
+Setiap calon pembeli adalah penting.
+setiap calon pembeli adalah penting
+every candidate buyer COP important
+Each prospective purchaser is important.
+
+Id: 48
+Source: 247
+Vetted: t
+Judgment: g
+Phenom: copula, prepositional clause
+Satu-satunya air yang ada adalah dari telaga.
+satu-satu-nya air yang ada adalah dari telaga
+one-REDUP-DEF water REL exist COP from lake
+The only water there is is from the lake.
+
+Id: 49
+Source: 247
+Vetted: t
+Judgment: g
+Phenom: copula, negative
+Bahasa Indonesia adalah bukan bahasa yang penampil subyek.
+bahasa Indonesia adalah bukan bahasa yang penampil subyek
+language Indonesia COP NEG language REL viewer subject
+Indonesian is not a subject-prominent language.
+
+Id: 50
+Source: 247
+Vetted: t
+Judgment: g
+Phenom: copula, negative
+Pernyataan ketua koperasi itu adalah tidak benar.
+pernyataan ketua koperasi itu adalah tidak benar
+statement leader cooperative that COP NEG correct
+The statement by the chairman of the cooperative is not correct.
+
+Id: 51
+Source: 316
+Vetted: t
+Judgment: g
+Phenom: gerund (verbal noun), adjective clause
+Berenang sangat baik untuk kesehatan.
+berenang sangat baik untuk kesehatan
+swim very good for health
+Swimming is very good for the health.
+
+Id: 52
+Source: 316
+Vetted: t
+Judgment: g
+Phenom: gerund (verbal noun), copula, noun clause
+Mengarang ialah seni.
+meN-karang ialah seni
+AV-compose COP art
+Writing is an art.
+
+Id: 53
+Source: 316
+Vetted: t
+Judgment: g
+Phenom: gerund (verbal noun), copula, noun clause
+Mengumpulkan perangko adalah kesukaannya.
+meN-kumpulkan perangko adalah kesukaan-nya
+AV-collect stamp COP pastime-3SG
+Collecting stamps is his hobby.
+
+Id: 54
+Source: 316
+Vetted: t
+Judgment: g
+Phenom: gerund (verbal noun), verb clause
+Membersihkan rumah tidak boleh dilalaikan.
+meN-bersihkan rumah tidak boleh di-lalaikan
+AV-clean house NEG may PASS-neglect
+Cleaning the house cannot be neglected.
+
+Id: 55
+Source: 316
+Vetted: t
+Judgment: g
+Phenom: gerund (verbal noun), adjective clause
+Menangkap pencuri itu tidak begitu mudah.
+meN-tangkap pencuri itu tidak begitu mudah
+AV-catch thief that NEG so easy
+Catching that thief is not going to be so easy.
+
+Id: 56
+Source: 316
+Vetted: t
+Judgment: g
+Phenom: gerund (verbal noun), adjective clause
+Lari itu sehat.
+lari itu sehat
+run that healthy
+Running is healthy.
+
+Id: 57
+Source: 317
+Vetted: t
+Judgment: g
+Phenom: gerund (verbal noun), copula, noun clause
+Tugas saya adalah menjual koran.
+tugas saya adalah meN-jual koran
+task 1SG COP AV-sell newspaper
+My task is selling newspapers.
+
+Id: 58
+Source: 317
+Vetted: t
+Judgment: g
+Phenom: gerund (verbal noun), copula, noun clause
+Kesenangan kami ialah bermain sepak bola.
+kesenangan kami ialah bermain sepak bola
+pastime 1PL.EXCL COP play kick ball
+Our favourite pastime is playing soccer.
+
+Id: 59
+Source: 317
+Vetted: t
+Judgment: g
+Phenom: gerund (verbal noun), negation, noun clause
+Kegemaran saya bukan memelihara binatang.
+kegemaran saya bukan meN-pelihara binatang
+hobby 1SG NEG AV-look.after animal
+My hobby is not looking after animals.
