@@ -1,0 +1,436 @@
+Language: Indonesian
+Language code: ind
+Lines: orth translit gloss translat
+Author: David Moeljadi
+Date: 2016-4-20
+Source: Hasan Alwi, Soenjono Dardjowidjojo, Hans Lapoliwa, and Anton M. Moeliono. 2014. Tata Bahasa Baku Bahasa Indonesia. Balai Pustaka, Jakarta, 3 edition.
+
+Id: 1
+Source: 357
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Ayahnya sakit.
+ayah-nya sakit
+father-3SG sick
+His father is sick.
+
+Id: 2
+Source: 357
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Pernyataan orang itu benar.
+pernyataan orang itu benar
+statement person that correct
+That person's statement is correct.
+
+Id: 3
+Source: 357
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Alasan para pengunjuk rasa agak aneh.
+alasan para pengunjuk rasa agak aneh
+reason PL protester rather strange
+The reason of the protesters is rather strange.
+
+Id: 4
+Source: 357
+Vetted: t
+Judgment: g
+Phenom: adjective clause, negation
+Pernyataan Ketua Gabungan Koperasi itu adalah tidak benar.
+pernyataan ketua gabungan koperasi itu adalah tidak benar
+statement leader association cooperative that COP NEG correct 
+The statement by the chairman of the cooperative association is not correct.
+
+Id: 5
+Source: 357
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Gerakan badannya pada tarian yang pertama adalah anggun dan memesona.
+gerakan badan-nya pada tarian yang pertama adalah anggun dan memesona
+movement body-3SG at dance REL first COP elegant and charming
+Her body movement at the first dance was elegant and charming.
+
+Id: 6
+Source: 357
+Vetted: t
+Judgment: g
+Phenom: adjective clause, negation
+Tindakan main hakim sendiri oleh penduduk desa itu adalah tidak sesuai dengan rasa kemanusiaan kita.
+tindakan main hakim sendiri oleh penduduk desa itu adalah tidak sesuai dengan rasa kemanusiaan kita
+act vigilantism by inhabitant village that COP NEG suitable with feeling humanity 1PL.INCL
+The vigilantism act by that villagers is not suitable with our humanity.
+
+Id: 7
+Source: 357
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Ayah saya sakit perut.
+ayah saya sakit perut
+father 1SG sick stomach
+My father is having a stomachache.
+
+Id: 8
+Source: 357
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Warna bajunya biru laut.
+warna baju-nya biru laut
+color shirt-3SG blue sea
+His shirt color is navy blue.
+
+Id: 9
+Source: 357
+Vetted: t
+Judgment: g
+Phenom: adjective clause, topic-comment construction
+Orang itu memang tebal kepercayaannya.
+orang itu memang tebal kepercayaan-nya
+person that indeed thick belief-3SG
+That person's belief is strong, indeed.
+
+Id: 10
+Source: 357
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Dia berani melawan gurunya.
+dia berani meN-lawan guru-nya
+3SG brave AV-oppose teacher-3SG
+He is brave opposing his teacher.
+
+Id: 11
+Source: 357
+Vetted: t
+Judgment: g
+Phenom: adjective clause
+Saya takut akan kekuasaan Tuhan.
+saya takut akan kekuasaan Tuhan
+1SG afraid of power God
+I am afraid of God's power.
+
+Id: 12
+Source: 358
+Vetted: t
+Judgment: g
+Phenom: noun clause, negation
+Pak Irwan bukan guru saya.
+pak Irwan bukan guru saya
+mister Irwan NEG teacher 1SG
+Mr. Irwan is not my teacher.
+
+Id: 13
+Source: 358
+Vetted: t
+Judgment: g
+Phenom: adjective clause, negation
+Pak Irwan tidak sakit.
+pak Irwan tidak sakit
+mister Irwan NEG sick
+Mr. Irwan is not sick.
+
+Id: 14
+Source: 358
+Vetted: t
+Judgment: g
+Phenom: adjective clause, negation
+Ahmad bukan sakit, dia malas.
+Ahmad bukan sakit dia malas
+Ahmad NEG sick 3SG lazy
+Ahmad is not sick, he is lazy.
+
+Id: 15
+Source: 358
+Vetted: t
+Judgment: g
+Phenom: noun clause
+Buku itu cetakan Bandung.
+buku itu cetakan Bandung
+book that printing Bandung
+That book was printed in Bandung.
+
+Id: 16
+Source: 359
+Vetted: t
+Judgment: g
+Phenom: noun clause
+Dia guru saya.
+dia guru saya
+3SG teacher 1SG
+He is my teacher.
+
+Id: 17
+Source: 359
+Vetted: t
+Judgment: g
+Phenom: noun clause
+Dialah guru saya.
+dia-lah guru saya
+3SG-FOC teacher 1SG
+He is my teacher.
+
+Id: 18
+Source: 359
+Vetted: t
+Judgment: g
+Phenom: noun clause
+Orang itu pencurinya.
+orang itu pencuri-nya
+person that thief-DEF
+That person is the thief.
+
+Id: 19
+Source: 359
+Vetted: t
+Judgment: g
+Phenom: noun clause
+Orang itulah pencurinya.
+orang itu-lah pencuri-nya
+person that-FOC thief-DEF
+That person is the thief.
+
+Id: 20
+Source: 359
+Vetted: t
+Judgment: g
+Phenom: noun clause, copula
+Pemberhentian seorang karyawan adalah masalah biasa.
+pemberhentian se-orang karyawan adalah masalah biasa
+discharge one-CL employee COP problem common
+The discharge of an employee is a common problem.
+
+Id: 21
+Source: 359
+Vetted: t
+Judgment: g
+Phenom: noun clause, copula
+Ini adalah masalah keluarga mereka sendiri.
+ini adalah masalah keluarga mereka sendiri
+this COP problem family 3PL own
+This is their own family problem.
+
+Id: 22
+Source: 359
+Vetted: t
+Judgment: g
+Phenom: noun clause, copula
+Pernyataan menteri luar negeri itu adalah pernyataan untuk konsumsi luar.
+pernyataan menteri luar negeri itu adalah pernyataan untuk konsumsi luar
+statement minister outer country that COP statement for consumption outer
+That minister of foreign affair's statement is a statement for external consumption.
+
+Id: 23
+Source: 359
+Vetted: t
+Judgment: g
+Phenom: noun clause, copula
+Adalah masalah biasa pemberhentian seorang karyawan itu.
+adalah masalah biasa pemberhentian se-orang karyawan itu
+COP problem common discharge one-CL employee that
+The discharge of an employee is a common problem.
+
+Id: 24
+Source: 359
+Vetted: t
+Judgment: u
+Phenom: noun clause, copula
+Ialah masalah biasa pemberhentian seorang karyawan itu.
+ialah masalah biasa pemberhentian se-orang karyawan itu
+COP problem common discharge one-CL employee that
+(intended meaning) The discharge of an employee is a common problem.
+
+Id: 25
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: numeral clause
+Anaknya banyak.
+anak-nya banyak
+child-3SG many
+His children are a lot.
+
+Id: 26
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: numeral clause
+Uangnya hanya sedikit.
+uang-nya hanya sedikit
+money-3SG only little
+His money is only little.
+
+Id: 27
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: numeral clause
+Istrinya dua.
+istri-nya dua
+wife-3SG two
+His wives are two.
+
+Id: 28
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: numeral clause
+Istrinya dua orang.
+istri-nya dua orang
+wife-3SG two CL
+His wives are two.
+
+Id: 29
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: numeral clause
+Lebar sungai itu lebih dari dua ratus meter.
+lebar sungai itu lebih dari dua ratus meter
+width river that more than two hundred meter
+The width of that river is more than two hundred meters.
+
+Id: 30
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Ibu sedang ke pasar.
+ibu sedang ke pasar
+mother PROG to market
+Mother is going to a market.
+
+Id: 31
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Mereka ke rumah kemarin.
+mereka ke rumah kemarin
+3PL to house yesterday
+They went to house yesterday.
+
+Id: 32
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Ayah di dalam kamar.
+ayah di dalam kamar
+father in interior room
+Father is in his room.
+
+Id: 33
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Anak itu sedang di sekolah.
+anak itu sedang di sekolah
+child that PROG in school
+That child is at school.
+
+Id: 34
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Gelang itu untuk Rita.
+gelang itu untuk Rita
+bracelet that for Rita
+That bracelet is for Rita.
+
+Id: 35
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Surat ini untuk saya.
+surat ini untuk saya
+letter this for 1SG
+This letter is for me.
+
+Id: 36
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Ayahnya dari Jawa.
+ayah-nya dari Jawa
+father-3SG from Java
+His father is from Java.
+
+Id: 37
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Ibunya dari Sunda.
+ibu-nya dari Sunda
+mother-3SG from Sunda
+His mother is from Sunda.
+
+Id: 38
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Cirebon di antara Jakarta dan Semarang.
+Cirebon di antara Jakarta dan Semarang
+Cirebon in between Jakarta and Semarang
+Cirebon is between Jakarta and Semarang.
+
+Id: 39
+Source: 360
+Vetted: t
+Judgment: g
+Phenom: prepositional clause
+Rumah saya di antara rumah Pak Ali dan Pak Rahman.
+rumah saya di antara rumah pak Ali dan pak Rahman
+house 1SG in between house mister Ali and mister Rahman
+My house is between Mr. Ali and Mr. Rahman's house.
+
+Id: 40
+Source: 360
+Vetted: t
+Judgment: u
+Phenom: prepositional clause
+Ia dengan ibunya.
+ia dengan ibu-nya
+3SG with mother-3SG
+(intended meaning) He is with his mother.
+
+Id: 41
+Source: 360
+Vetted: t
+Judgment: u
+Phenom: prepositional clause
+Rumah makan sepanjang malam.
+rumah makan sepanjang malam
+house eat throughout night
+(intended meaning) The restaurants are open all night.
+
+Id: 42
+Source: 360
+Vetted: t
+Judgment: u
+Phenom: prepositional clause
+Pembicaraan mengenai reformasi.
+pembicaraan mengenai reformasi
+talk about reformation
+(intended meaning) The talk is about reformation.
+
+Id: 43
+Source: 360
+Vetted: t
+Judgment: u
+Phenom: prepositional clause
+Buku itu kepada saya.
+buku itu kepada saya
+book that to 1SG
+(intended meaning) That book is for me.
