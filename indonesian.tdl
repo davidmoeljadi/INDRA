@@ -767,6 +767,11 @@ cop-verb-lex :=  transitive-verb-lex &
 ;; "menjadi"
 v_np_cop_le := cop-verb-lex.
 
+;; DVM 2016-02-13: "merupakan" cannot appear with proper names, demonstratives, or pronouns as complement
+;; DVM 2016-02-21: "merupakan" can occur with sudah, sedang, and akan
+v_np_cop_common_le := cop-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL.CAT.HEAD commonnoun ] > ].
+
 ;; FCB & DVM 2015-10-28: "adalah" and "ialah" cannot take aspect markers and cannot be in future tense
 v_np_cop_noasp_le := cop-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E [ ASPECT nonaspect ,
@@ -775,10 +780,6 @@ v_np_cop_noasp_le := cop-verb-lex &
 ;; FCB & DVM 2015-10-28: "ialah" can only appear with 3rd person subject
 v_np_cop_3_le := v_np_cop_noasp_le &
   [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.PERNUM 3rd ].
-
-;; DVM 2016-02-13: "merupakan" cannot appear with proper names, demonstratives, or pronouns as complement
-v_np_cop_common_le := v_np_cop_noasp_le &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL.CAT.HEAD commonnoun ] > ].
 
 ;; DVM 2015-10-28: "bukan" is the same as negative adverb "tidak" with copula "adalah" or "ialah"
 ;n+cop-lex := neg-adv-lex & v_np_cop_noasp_le.
@@ -836,7 +837,8 @@ v_np_cop_common_le := v_np_cop_noasp_le &
 ; introduced to match the semantic effect of bare NPs in your language.
 
 bare-np-phrase := basic-bare-np-phrase &
-  [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
+  [ SYNSEM.LOCAL.COORD -,
+    C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
 
 ;bare-np-phrase := basic-bare-np-phrase &
 ;  [ C-CONT.RELS <! [ PRED exist_q_rel ] !> ].
@@ -868,6 +870,12 @@ np1-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 ;;; Coordination Strategy 1
+
+vp-coord-phrase :+  [ LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY bool,
+    		      RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY - ].
+
+vp-bottom-coord-phrase :+  [ CONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY -,
+    		      	     NONCONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY - ].
 
 vp1-top-coord-rule := basic-vp-top-coord-rule & monopoly-top-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
@@ -1326,6 +1334,7 @@ zero-cop-rule := unary-phrase &
 					    TENSE nonfuture ] ],
                                 LTOP #vl,
                                 XARG #x1 ] ],
+		  COORD -,
                   CAT [ HEAD verb &
 			     [ EMPTY + ],
                         VAL [ COMPS < >,
@@ -1339,7 +1348,8 @@ zero-cop-rule := unary-phrase &
 				      [ EMPTY - ],
                                  VAL [ SPR < >,
                                        COMPS < > ] ],
-                               CONT.HOOK.INDEX #x2 ] ] > ,
+                           CONT.HOOK.INDEX #x2,
+			   COORD - ] ] > ,
    C-CONT [ RELS <! [ LBL #vl,
                       PRED cop_v_zero_rel,
                       ARG0 #v0,
