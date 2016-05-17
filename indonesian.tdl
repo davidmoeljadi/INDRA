@@ -65,6 +65,9 @@ _cop_v_adalah_rel := copula_v_rel.
 _cop_v_merupakan_rel := copula_v_rel.
 _cop_v_menjadi_rel := copula_v_rel.
 
+;; DVM 2016-05-17: make "neg_rel" as a type
+neg_rel := predsort.
+
 ;; DVM 2015-08-18: added from zhong.tdl
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; SSH 2015-05-24
@@ -605,13 +608,16 @@ determiner-pl-determiner-lex := determiner-lex & no-icons-lex-item &
 ;        included with this grammar.
 
 ;; DVM 2015-09-23: added CONT.HOOK.XARG #xarg to connect the ARG1 of the verb with ARG0 of the subj
+;; DVM & FCB 2016-05-17: add INDEX.E.ASPECT perf-and-prog so that "tidak adalah" cannot be parsed
+;; because "adalah" and "ialah" have ASPECT nonaspect.
 neg-adv-lex := basic-scopal-adverb-lex &
   [ SYNSEM.LOCAL [ CONT.HOOK.XARG #xarg,
 		   CAT [ VAL [ SPR < >,
                                COMPS < >,
                                SUBJ < > ],
                        POSTHEAD -,
-                       HEAD.MOD < [ LOCAL [ CONT.HOOK.XARG #xarg,
+                       HEAD.MOD < [ LOCAL [ CONT.HOOK [ XARG #xarg,
+							INDEX.E.ASPECT perf-and-prog ],
 					    CAT [ HEAD verb,
                                                   VAL [ SUBJ cons,
                                                         COMPS null ] ] ] ] > ] ] ].
@@ -781,9 +787,6 @@ v_np_cop_noasp_le := cop-verb-lex &
 v_np_cop_3_le := v_np_cop_noasp_le &
   [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.PERNUM 3rd ].
 
-;; DVM 2015-10-28: "bukan" is the same as negative adverb "tidak" with copula "adalah" or "ialah"
-;n+cop-lex := neg-adv-lex & v_np_cop_noasp_le.
-
 ; SSH 2014-09-26: Only phrases can be the subjects (phr-synsem)
 ;subj-head-phrase := decl-head-subj-phrase & head-final &
 ;  [ SYNSEM.LOCAL.CAT.MC #mc,
@@ -836,6 +839,7 @@ v_np_cop_3_le := v_np_cop_noasp_le &
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.
 
+;; FCB, DVM & LMC 2016-05-06 : add COORD - so that bare-np-phrase cannot combine with zero-cop-rule
 bare-np-phrase := basic-bare-np-phrase &
   [ SYNSEM.LOCAL.COORD -,
     C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
@@ -870,6 +874,7 @@ np1-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 ;;; Coordination Strategy 1
+;; FCB, DVM & LMC 2016-05-06: added EMPTY - so that verbs cannot combine with zero-cop-rule
 
 vp-coord-phrase :+  [ LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY bool,
     		      RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY - ].
@@ -956,6 +961,11 @@ trans-first-arg-raising-verb := main-verb-lex & trans-first-arg-raising-lex-item
                                 SPEC < >,
                                 SUBJ < [ ] > ] ] ] ] > ].
 
+;; DVM 2016-05-17: add ASPECT perf-and-prog so that the control verb cannot take copulas as the complement
+;; such as "saya mau adalah ..." cannot be parsed
+;; copulas "adalah" and "ialah" have ASPECT nonaspect
+;; control verbs need the ASPECT to be perf-and-prog
+;; so copulas "adalah", "ialah" cannot be the complement of any control verbs
 trans-first-arg-control-verb := main-verb-lex & trans-first-arg-control-lex-item & 
   [ SYNSEM [ 
 		LOCAL [ CAT.VAL [ SPR < >,
@@ -969,14 +979,13 @@ trans-first-arg-control-verb := main-verb-lex & trans-first-arg-control-lex-item
                                   SPEC < >,
                                   COMPS < > ] ] ] ],
             #comps &
-            [ LOCAL [ 
+            [ LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf-and-prog,
 			CAT [ HEAD verb &
                                 [ AUX - ],
                           VAL [ COMPS < >,
                                 SPR < >,
                                 SPEC < >,
                                 SUBJ < [ ] > ] ] ] ] > ].
-
 
 ditrans-first-arg-control-verb := main-verb-lex & basic-three-arg & basic-icons-lex-item &
   [ SYNSEM [ LKEYS.KEYREL [ ARG1 #ind1,
@@ -1191,7 +1200,47 @@ noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
 
 n+det-lex := noun+det-lex-item.
 
-;; DVM 2015-10-16: "kini" is decomposable to "saat ini" (this time), an adverbial time NP
+;; DVM 2015-10-28: "bukan" is the same as negative adverb "tidak" with copula "adalah" or "ialah"
+;; FCB & DVM 2016-05-17: treat "bukan" as a (copula) verb 
+;; the head is a copula (KEYREL) and the daughter is neg_rel (ALTKEYREL) 
+;; which has an event-relation to make the ARG0 event (see matrix.tdl: event-relation)
+;; the subject is a noun and the complement is a noun too.
+neg+cop-lex-item := verb-lex &
+ [ SYNSEM [LOCAL [ CAT [ HEAD.AUX -,
+                         VAL [ SPR < >,
+                               SPEC < >,
+                               SUBJ < #subj >,
+			       COMPS < #comp > ] ],
+		   CONT [ HOOK [ LTOP #nh,
+				 INDEX #s,
+				 XARG #xarg ],
+			  RELS <! #cop &
+				[ LBL #h,
+				  ARG0 #s,
+				  ARG1 #xarg,
+				  ARG2 #compindex ],
+				#neg & event-relation &
+				[ LBL #nh,
+				  ARG1 #scopehandle ] !>,
+			  HCONS <! qeq &
+				 [ HARG #scopehandle,
+				   LARG #h ] !> ]],
+	   LKEYS [ KEYREL #cop,
+		   ALTKEYREL #neg ]],
+   ARG-ST < #subj &
+	    [ LOCAL [ CAT [ HEAD noun ,
+			    VAL [ SPR < >,
+				  COMPS < > ] ],
+		      CONT.HOOK.INDEX #xarg ] ],
+	    #comp &
+	    [ LOCAL [ CAT [ HEAD noun ,
+			    VAL [ SPR < >,
+				  COMPS < > ] ],
+		      CONT.HOOK.INDEX #compindex ] ] > ].
+
+n+cop-lex := neg+cop-lex-item.
+
+;; DVM 2015-10-16: "kini" is decomposable to "saat ini" (this time)
 ; n+det-lex+adv := noun+det-lex-item & adverb-lex.
 
 ;;; Adverbs
@@ -1328,6 +1377,7 @@ redup-adv-lex-rule := same-non-local-lex-rule & adverb-post-lex &
 
 ;; DVM 2016-02-16 : added information of ASPECT nonaspect and TENSE nonfuture
 ;; so that *Budi sudah/sedang/akan guru cannot be parsed.
+;; FCB, DVM & LMC 2016-05-06 : add COORD - so that "nasi" in "Adi makan nasi" cannot have "zero copula"
 zero-cop-rule := unary-phrase &
  [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0 &
 				      [ E [ ASPECT nonaspect ,
@@ -1357,10 +1407,12 @@ zero-cop-rule := unary-phrase &
                       ARG2 #x2 ] !> ] ].
 
 ;; SSH & DVM 2016-02-17 : a new rule for zero copula with pp locative complement
+;; DVM 2016-05-06: add COORD - based on zero-cop-rule for noun
 zero-cop-pp-rule := unary-phrase &
  [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0,
                                 LTOP #vl,
                                 XARG #x1 ] ],
+		  COORD -,
                   CAT [ HEAD verb &
 			     [ EMPTY + ],
                         VAL [ COMPS < >,
@@ -1374,11 +1426,48 @@ zero-cop-pp-rule := unary-phrase &
 				      [ EMPTY - ],
                            	 VAL [ SPR < >,
                                        COMPS < > ] ],
-                           CONT.HOOK #hook ] ] > ,
+                           CONT.HOOK #hook,
+			   COORD - ] ] > ,
    C-CONT [ HOOK #hook,
 	    RELS <! !>, 
 	    HCONS <! !>, 
 	    ICONS <! !> ] ].
+
+;; Existential ada
+;; DVM 2016-05-16: add a rule for existential verb "ada" based on the one in Zhong
+;; The head is a verb "ada" and takes 2 arguments: a noun and a verb
+;; FCB & DVM 2016-05-17: add OPT - for the first obligatory argument
+;; also add EMPTY - to get rid of zero copula rule
+;; zero copula rule with HEAD EMPTY + cannot combine with HEAD EMPTY -
+v_exist-lex := basic-two-arg & verb-lex & basic-verb-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD verb,
+			   VAL [ SUBJ < >,
+                     	         COMPS #comps ] ],
+             	     CONT [ HOOK [ LTOP #lbl,
+                    		   INDEX #event ],
+                    	    RELS <! #keyrel !>,
+                    	    HCONS <! qeq & [ HARG #arg2,
+                         	     	     LARG #vltop ] !> ] ],
+             LKEYS.KEYREL #keyrel &
+                  	 [ LBL #lbl,
+                	   ARG0 #event,
+                	   ARG1 #arg1,
+                	   ARG2 #arg2 ] ],
+    ARG-ST #comps &
+         < [ LOCAL [ CAT [ VAL [ SPR < >,
+                   		 COMPS < > ],
+                     	   HEAD noun ],
+               	     CONT.HOOK.INDEX #arg1 ],
+	     OPT - ],
+           [ LOCAL [ CAT [ VAL [ SUBJ < [ ] >,
+                     		 SPR < >,
+                     		 COMPS < > ],
+                     	   HEAD verb &
+			     [ EMPTY - ] ],
+                     CONT.HOOK [ LTOP #vltop,
+       				 XARG #arg1 ] ] ] > ].
+
+v_np_ada_lex := v_exist-lex.
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the

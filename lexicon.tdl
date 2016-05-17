@@ -1011,10 +1011,12 @@ ialah_pp := cop-ialah-pp-lex &
   [ STEM < "ialah" > ,
     TRAITS native_token_list ].
 
-;bukan := n+cop-lex &
-;  [ STEM < "bukan" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "neg_rel",
-;    TRAITS native_token_list ].
+;; the head of "bukan" is a copula and the daughter is negation
+bukan := n+cop-lex &
+  [ STEM < "bukan" >,
+    SYNSEM.LKEYS [KEYREL.PRED copula_v_rel,
+		  ALTKEYREL.PRED neg_rel ],
+    TRAITS native_token_list].
 
 merupakan := v_np_cop_common_le &
   [ STEM < "merupakan" >,
@@ -1041,9 +1043,14 @@ berada := locative-verb-lex &
 ;;; Existential ada
 
 ;; DVM 2015-11-09: added existential ada as an intransitive verb
-ada_exist := intr-verb-lex &
+;ada_exist := intr-verb-lex &
+;  [ STEM < "ada" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel",
+;    TRAITS native_token_list ].
+
+ada_exist := v_np_ada_lex &
   [ STEM < "ada" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel",
+    SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel",
     TRAITS native_token_list ].
 
 ;;; Possessive verbs memiliki, mempunyai, punya, ada
@@ -1098,7 +1105,7 @@ lagi_1 := aspect_prog-aux-lex &
 
 belum := n+asp-lex &
   [ STEM < "belum" >,
-    SYNSEM.LKEYS.KEYREL.PRED "neg_rel",
+    SYNSEM.LKEYS.KEYREL.PRED neg_rel,
     TRAITS native_token_list ].
 
 ;;; Modal auxiliaries
@@ -1343,15 +1350,17 @@ tua := adjective-lex &
 
 ;;; Negation
 
-tidak_1 := neg-adv-lex &
+;; DVM & FCB 2016-05-17: remove "..." from "neg_rel"
+;; neg_rel should be a type, too.
+tidak_v := neg-adv-lex &
   [ STEM < "tidak" >,
-    SYNSEM.LKEYS.KEYREL.PRED "neg_rel",
+    SYNSEM.LKEYS.KEYREL.PRED neg_rel,
     TRAITS native_token_list ].
 
-;tidak_2 := neg-adv-adv-lex &
-;  [ STEM < "tidak" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "neg_rel",
-;    TRAITS native_token_list ].
+tidak_adv := neg-adv-adv-lex &
+  [ STEM < "tidak" >,
+    SYNSEM.LKEYS.KEYREL.PRED neg_rel,
+    TRAITS native_token_list ].
 
 ;;; Adverbs of frequency
 
@@ -4413,21 +4422,6 @@ menandakan := v_cp_prop_le &
     SYNSEM.LKEYS.KEYREL.PRED "_menandakan_v_rel",
     TRAITS native_token_list ].
 
-menarik_langkah := v_pp*_dir_le &
-  [ STEM < "menarik", "langkah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_menarik+langkah_v_rel",
-    TRAITS native_token_list ].
-
-menarik_langkah_seribu := v_pp*_dir_le &
-  [ STEM < "menarik", "langkah", "seribu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_menarik+langkah+seribu_v_rel",
-    TRAITS native_token_list ].
-
-menarik_napas_penghabisan := intr-verb-lex &
-  [ STEM < "menarik", "napas", "penghabisan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_menarik+napas+penghabisan_v_rel",
-    TRAITS native_token_list ].
-
 menaruh := v_np-pp_prop_le &
   [ STEM < "menaruh" >,
     SYNSEM.LKEYS.KEYREL.PRED "_menaruh_v_rel",
@@ -5733,11 +5727,6 @@ pulang := v_pp*_dir_le &
     SYNSEM.LKEYS.KEYREL.PRED "_pulang_v_rel",
     TRAITS native_token_list ].
 
-pulang_ke_rahmatullah := intr-verb-lex &
-  [ STEM < "pulang", "ke", "rahmatullah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pulang+ke+rahmatullah_v_rel",
-    TRAITS native_token_list ].
-
 pulih := intr-verb-lex &
   [ STEM < "pulih" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pulih_v_rel",
@@ -5826,11 +5815,6 @@ takut := trans-first-arg-control-verb &
 tamat := intr-verb-lex &
   [ STEM < "tamat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tamat_v_rel",
-    TRAITS native_token_list ].
-
-tamat_riwayatnya := intr-verb-lex &
-  [ STEM < "tamat", "riwayatnya" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_tamat+riwayatnya_v_rel",
     TRAITS native_token_list ].
 
 tenggelam_1 := intr-verb-lex &
