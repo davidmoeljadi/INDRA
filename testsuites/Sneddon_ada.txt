@@ -79,7 +79,7 @@ Id: 8
 Source: 273
 Vetted: t
 Judgment: g
-Phenom: locational
+Phenom: presentational
 Koran itu ada.
 koran itu ada
 newspaper that exist
@@ -89,7 +89,7 @@ Id: 9
 Source: 273
 Vetted: t
 Judgment: g
-Phenom: locational
+Phenom: presentational
 Ibu ada?
 ibu ada
 mother exist
@@ -99,7 +99,7 @@ Id: 10
 Source: 273
 Vetted: t
 Judgment: g
-Phenom: locational
+Phenom: presentational
 Uangnya ada!
 uang-nya ada
 money-DEF exist
@@ -169,7 +169,7 @@ Id: 17
 Source: 274
 Vetted: t
 Judgment: g
-Phenom: locational
+Phenom: presentational
 Tuhan ada.
 Tuhan ada
 God exist
