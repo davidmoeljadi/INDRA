@@ -68,6 +68,10 @@ _cop_v_menjadi_rel := copula_v_rel.
 ;; DVM 2016-05-17: make "neg_rel" as a type
 neg_rel := predsort.
 
+;; DVM 2016-05-17: added from zhong.tdl for noun-noun compound (cpd)
+cpd := icons.
+noun-noun := cpd.
+
 ;; DVM 2015-08-18: added from zhong.tdl
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; SSH 2015-05-24
@@ -1468,6 +1472,45 @@ v_exist-lex := basic-two-arg & verb-lex & basic-verb-lex &
        				 XARG #arg1 ] ] ] > ].
 
 v_np_ada_lex := v_exist-lex.
+
+;; negative imperative "jangan" from zhong
+imperative-aux-lex := subj-raise-aux-with-pred &
+  [ SYNSEM.LOCAL [ CAT.VAL.COMPS.FIRST [ LOCAL.CAT.HEAD.FORM finite,
+                                         OPT - ],
+                   CONT.HOOK.INDEX.SF comm ],
+    ARG-ST.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2nd ].
+
+neg-adv-imp-lex := imperative-aux-lex.
+
+;; DVM 2016-05-17: added noun-noun compound from zhong
+;; should add [CLASSIFIED na-or--] to prevent [satu ekor kucing] as in zhong
+;; from being analyzed as a compound
+noun-noun-compound-phrase := head-initial &
+  [ SYNSEM [ LOCAL.CAT #cat,
+             NON-LOCAL #nonloc ],
+    HEAD-DTR.SYNSEM lex-synsem &
+                [ LOCAL [ CAT #cat & 
+                              [ HEAD noun,
+                                VAL [ SPR < synsem >,
+                                      COMPS < > ] ],
+                          CONT.HOOK [ LTOP #ltop,
+                                      INDEX #hind ] ],
+                  NON-LOCAL #nonloc ],
+    NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD noun,
+                                      VAL [ SPR < synsem >,
+                                            COMPS < > ],
+                                      POSTHEAD - ],
+                                CONT.HOOK [ LTOP #larg,
+                                            INDEX #nhind ] ],
+    C-CONT [ HOOK [ LTOP #ltop,
+            INDEX #hind ],
+	     RELS <! quant-relation & [ PRED exist_q_rel,
+					ARG0 #nhind,
+					RSTR #harg ] !>,
+             HCONS <! qeq & [ HARG #harg,
+                              LARG #larg ] !>,
+             ICONS <! noun-noun & [ IARG1 #hind, 
+				    IARG2 #nhind ] !> ] ].
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the
