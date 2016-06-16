@@ -148,7 +148,7 @@ mata := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_mata_n_rel",
     TRAITS native_token_list ].
 
-mata-mata := inanimate-noun-noun-lex &
+mata-mata := human-noun-noun-lex &
   [ STEM < "mata²" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mata-mata_n_rel",
     TRAITS native_token_list ].
@@ -10267,7 +10267,7 @@ salinan := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_salinan_n_rel",
     TRAITS native_token_list ].
 
-dekorasi := inanimate-noun-noun-lex &
+dekorasi_inanim := inanimate-noun-noun-lex &
   [ STEM < "dekorasi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dekorasi_n_rel",
     TRAITS native_token_list ].
@@ -19554,7 +19554,7 @@ dekor := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_dekor_v_rel",
     TRAITS native_token_list ].
 
-dekorasi := tr-verb-lex &
+dekorasi_v_tr := tr-verb-lex &
   [ STEM < "dekorasi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dekorasi_v_rel",
     TRAITS native_token_list ].
