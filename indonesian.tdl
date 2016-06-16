@@ -1512,6 +1512,22 @@ noun-noun-compound-phrase := head-initial &
              ICONS <! noun-noun & [ IARG1 #hind, 
 				    IARG2 #nhind ] !> ] ].
 
+;; month names, need to be further constrained
+n_-_month-lex := proper-name-lex.
+n_-_day-lex := proper-name-lex.
+
+;; for morning, night, hour, day, year
+n_-_temp-lex := inanimate-noun-noun-lex.
+
+;; for depan, belakang, etc.
+relational-n-lex := inanimate-noun-noun-lex.
+
+;; for cm, ha, m, kg, etc.
+n_-_measure-lex := inanimate-noun-noun-lex.
+
+;; for colors
+adjective-color-lex := adjective-lex.
+
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the
 ;; chart to a "bridge head" edge via the unary rule, and then combine two

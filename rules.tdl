@@ -52,6 +52,9 @@ head-adj-int := head-adj-int-phrase.
 zero-cop := zero-cop-rule.
 zero-cop-pp := zero-cop-pp-rule.
 
+;; this is the rule for noun noun compound
+n-n-compound := noun-noun-compound-phrase.
+
 ;; Also need to add to rules.tdl:
 ;xp-xp-bridge-c := bridge-binary-phrase.
 ;xp-bridge-c := bridge-unary-phrase.
