@@ -986,6 +986,11 @@ adalah_adj := cop-adalah-adj-lex &
   [ STEM < "adalah" > ,
     TRAITS native_token_list ].
 
+;; DVM 2016-07-14 : "ada" with Adj quant complement
+ada_adj := cop-ada-adj-lex &
+  [ STEM < "ada" > ,
+    TRAITS native_token_list ].
+
 ialah := v_np_cop_3_le &
   [ STEM < "ialah" >,
     SYNSEM.LKEYS.KEYREL.PRED _cop_v_ialah_rel,

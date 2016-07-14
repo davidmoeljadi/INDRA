@@ -548,7 +548,7 @@ adjective-quant-lex := basic-nomod-adj-lex & intransitive-lex-item &
 
 adj-mod-quant-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
-                                                    VAL.SPR cons ]]>,
+                                                    VAL.COMPS cons ]]>,
 			   VAL [ SUBJ < >,
 			         COMPS < >,
 			         SPEC < > ],
@@ -825,6 +825,8 @@ cop-adj-lex := non-mod-lex-item & trans-first-arg-raising-lex-item-2 &
                            HEAD adj ] ] > ].
 
 cop-adalah-adj-lex := cop-adj-lex.
+
+cop-ada-adj-lex := cop-adj-lex.
 
 ;; FCB & DVM 2015-10-28: copula verbs with NP complement, inherit from transitive verbs
 cop-verb-lex :=  transitive-verb-lex &
