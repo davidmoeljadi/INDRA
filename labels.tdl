@@ -132,8 +132,9 @@ s-bottom-label := label &
              LABEL-NAME "S-B"].
 
 ;; FCB & DVM 2016-02-10: the HEAD was changed from verb to +vj so that adjectives can be the head of S.
+;; DVM 2016-07-09: added p to HEAD so that prepositions can be the head of S, as in "Budi di rumah".
 s-label := label &
-           [ SYNSEM.LOCAL [ CAT [ HEAD +vj &
+           [ SYNSEM.LOCAL [ CAT [ HEAD +vjp &
 					[ MOD < > ],
                                   VAL [ COMPS < >,
                                         SUBJ < > ] ],

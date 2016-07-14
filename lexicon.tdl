@@ -981,6 +981,11 @@ adalah_pp := cop-adalah-pp-lex &
   [ STEM < "adalah" > ,
     TRAITS native_token_list ].
 
+;; DVM 2016-07-09 : "adalah" with Adj complement
+adalah_adj := cop-adalah-adj-lex &
+  [ STEM < "adalah" > ,
+    TRAITS native_token_list ].
+
 ialah := v_np_cop_3_le &
   [ STEM < "ialah" >,
     SYNSEM.LKEYS.KEYREL.PRED _cop_v_ialah_rel,
@@ -1023,14 +1028,14 @@ berada := locative-verb-lex &
 ;;; Existential ada
 
 ;; DVM 2015-11-09: added existential ada as an intransitive verb
-;ada_exist := intr-verb-lex &
-;  [ STEM < "ada" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel",
-;    TRAITS native_token_list ].
-
-ada_exist := v_np_ada_lex &
+np_ada_exist := v_np_ada_lex &
   [ STEM < "ada" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ada_v_rel",
+    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel",
+    TRAITS native_token_list ].
+
+ada_np_exist := v_ada_np_lex &
+  [ STEM < "ada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exist_v_rel",
     TRAITS native_token_list ].
 
 ;;; Possessive verbs memiliki, mempunyai, punya, ada
@@ -1363,10 +1368,10 @@ tidak_adv := neg-adv-adv-lex &
     TRAITS native_token_list ].
 
 ;; from Zhong
-jangan_adv := neg-adv-imp-lex &
-  [ STEM < "jangan" >,
-    SYNSEM.LKEYS.KEYREL.PRED neg_rel,
-    TRAITS native_token_list ].
+;jangan_adv := neg-adv-imp-lex &
+;  [ STEM < "jangan" >,
+;    SYNSEM.LKEYS.KEYREL.PRED neg_rel,
+;    TRAITS native_token_list ].
 
 ;;; Adverbs of frequency
 
@@ -1415,7 +1420,7 @@ esok := adverb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_esok_a_rel",
     TRAITS native_token_list ].
 
-besok := adverb-lex &
+besok := adverb-time-lex &
   [ STEM < "besok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_besok_a_rel",
     TRAITS native_token_list ].
@@ -18544,7 +18549,7 @@ bangkrut := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_bangkrut_a_rel",
     TRAITS native_token_list ].
 
-banyak := adjective-lex &
+banyak := adjective-quant-lex &
   [ STEM < "banyak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_banyak_a_rel",
     TRAITS native_token_list ].

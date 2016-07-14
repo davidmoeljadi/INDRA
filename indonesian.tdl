@@ -448,7 +448,7 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
                                  COMPS < >,
                                  SPR < >,
                                  SPEC < > ],
-                           HEAD +vj ] ] > ].
+                           HEAD +vjp ] ] > ].
 
 subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
 
@@ -499,7 +499,7 @@ basic-adjective-lex :+
 ; Stative predicate adjective definition
 ;; FCB & DVM 2016-02-10 : the predicative adjective was made as the basic
 ;; SSH & DVM 2016-02-17 : connect the argument one of adj complement with the noun subject
-adjective-lex := basic-nomod-adj-lex & intransitive-lex-item &
+adj-adp-pred-lex := intransitive-lex-item &
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj & 
 				    [ LOCAL [ CONT.HOOK.INDEX #x1,
                                               CAT [ VAL [ SPR < >,
@@ -509,15 +509,19 @@ adjective-lex := basic-nomod-adj-lex & intransitive-lex-item &
                    CONT.HOOK.XARG #x1 ],
     ARG-ST.FIRST #subj ].
 
+adjective-lex := adj-adp-pred-lex & basic-nomod-adj-lex.
+
 ;; DVM 2015-05-09: from the previous version of INDRA
 ;; FCB & DVM 2016-02-10 : adjective-lex was changed to adj-mod-lex
-adj-mod-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
+mod-attr-lex := intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                                     VAL.SPR cons ]]>,
 			   VAL [ SUBJ < >,
 			         COMPS < >,
 			         SPEC < > ],
 			   POSTHEAD + ]]]].
+
+adj-mod-lex := basic-adjective-lex & mod-attr-lex.
 
 ;; FCB & DVM 2016-02-10 : const-lex-rule copies the stems up, not changing the stem
 ;; FCB & DVM 2016-02-10 : a rule which changes predicative adjective to attributive adjective
@@ -529,6 +533,37 @@ adj-to-attr-rule := const-lex-rule &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ],
     DTR adjective-lex &
     [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ] ] ] ].
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+adjective-quant-lex := basic-nomod-adj-lex & intransitive-lex-item &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj & 
+				    [ LOCAL [ CONT.HOOK.INDEX #x1,
+                                              CAT [ VAL [ SPR < >,
+                                                          COMPS < > ],
+                                                    HEAD noun ] ] ] >,
+			      COMPS < > ],
+                   CONT.HOOK.XARG #x1 ],
+    ARG-ST.FIRST #subj ].
+
+adj-mod-quant-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+                                                    VAL.SPR cons ]]>,
+			   VAL [ SUBJ < >,
+			         COMPS < >,
+			         SPEC < > ],
+			   POSTHEAD - ]]]].
+
+adj-to-attr-quant-rule := const-lex-rule &
+		    same-cont-lex-rule & 
+		    same-ctxt-lex-rule &
+		    same-agr-lex-rule &
+		    adj-mod-quant-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ],
+    DTR adjective-quant-lex &
+    [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ] ] ] ].
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; Numbers
 ;; DVM 2015-05-09: from Zhong
@@ -769,6 +804,27 @@ cop-adalah-pp-lex := cop-pp-lex.
 ;; SSH & DVM 2016-02-17 : "ialah" can only appear with 3rd person subject
 cop-ialah-pp-lex := cop-pp-lex &
  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ] > ]].
+
+;; DVM 2016-07-09 : added rule for copula verbs "adalah" with adjective complement
+cop-adj-lex := non-mod-lex-item & trans-first-arg-raising-lex-item-2 &
+  [ SYNSEM.LOCAL [ CAT [ HEAD verb & 
+			      [ AUX + ],
+                   	VAL [ SUBJ < #subj >,
+                   	      COMPS < #comps >,
+                   	      SPR < >,
+                   	      SPEC < > ] ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+               	       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SUBJ < #subj >,
+				 COMPS < > ],
+                           HEAD adj ] ] > ].
+
+cop-adalah-adj-lex := cop-adj-lex.
 
 ;; FCB & DVM 2015-10-28: copula verbs with NP complement, inherit from transitive verbs
 cop-verb-lex :=  transitive-verb-lex &
@@ -1274,6 +1330,39 @@ adverb-time-lex := basic-scopal-adverb-lex &
 				 SPEC < > ] ]]]].
 
 ;;; Adpositions
+;; DVM 2016-07-09 : add information in SUBJ, connect ARG1 #xarg to INDEX in SUBJ, add ARG-ST.FIRST #subj
+;; DVM 2016-07-09 : in order to parse "Budi di rumah"
+;; DVM 2016-07-09 : "intransitive-lex-item" no need to be added, otherwise "Budi tidur di rumah" (PP as adv) cannot be parsed
+;; DVM 2016-07-09 : in roots.tdl, add +p to the HEAD of root, meaning that preposition can be the head of a clause
+#|
+basic-nomod-adp-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item & 
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+			    ARG1 #xarg,
+			    ARG2 #ind ],
+	     LOCAL [ CONT.HOOK [ XARG #xarg,
+				 INDEX #arg0 ],
+		     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD verb,
+						      VAL.SUBJ cons ],
+						CONT.HOOK.INDEX #xarg ]] >,
+			   VAL [ SPR < >,
+			     COMPS < [ OPT -,
+				       LOCAL [ CAT [ HEAD noun,
+						     VAL.SPR < > ],
+					       CONT.HOOK.INDEX #ind ]] >,
+				 SUBJ < > ]]]]].
+
+adposition-lex := basic-nomod-adposition-lex &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj & 
+				    [ LOCAL [ CONT.HOOK.INDEX #x1,
+                                              CAT [ VAL [ SPR < >,
+                                                          COMPS < > ],
+                                                    HEAD noun ] ] ] >,
+			      COMPS < [ OPT -,
+				       LOCAL [ CAT [ HEAD noun,
+						     VAL.SPR < > ],
+					       CONT.HOOK.INDEX #ind ]] > ],
+                   CONT.HOOK.XARG #x1 ],
+    ARG-ST.FIRST #subj ].
 
 adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
   [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
@@ -1290,6 +1379,61 @@ adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-it
 						     VAL.SPR < > ],
 					       CONT.HOOK.INDEX #ind ]] >,
 				 SUBJ < > ]]]]].
+|#
+
+adposition-nomod-lex := basic-nomod-adposition-lex & transitive-lex-item &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+			     SPEC < >,
+			     SUBJ < #subj >,
+                             COMPS < #comps > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CAT [ HEAD noun,
+                             VAL [ SPR < >,
+                                   COMPS < > ] ],
+                       CONT.HOOK.INDEX #xarg ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+				 COMPS < > ],
+                           HEAD noun ] ] > ].
+
+adposition-lex := adposition-nomod-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+
+#|
+adposition-mod-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+			    ARG1 #xarg,
+			    ARG2 #ind ],
+	     LOCAL [ CONT.HOOK [ XARG #xarg,
+				 INDEX #arg0 ],
+		     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD +nv,
+						      VAL.SUBJ cons ],
+						CONT.HOOK.INDEX #xarg ]] >,
+			   VAL [ SPR < >,
+			     COMPS < [ OPT -,
+				       LOCAL [ CAT [ HEAD noun,
+						     VAL.SPR < > ],
+					       CONT.HOOK.INDEX #ind ]] >,
+				 SUBJ < > ]]]]].
+
+
+adposition-mod-lex := intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD +nv,
+                                                    VAL.SPR cons ]]>,
+			   POSTHEAD + ]]]].
+
+adp-to-attr-rule := const-lex-rule &
+		    same-cont-lex-rule & 
+		    same-ctxt-lex-rule &
+		    same-agr-lex-rule &
+		    adposition-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ],
+    DTR adposition-lex &
+    [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ] ] ] ].
+|#
+
+;;;;;;;;;;;;;;;;;;;;
 
 can-aux := basic-verb-lex & trans-first-arg-raising-lex-item-1 & non-mod-lex-item &
   [ SYNSEM.LOCAL.CAT [ VAL [ SUBJ < #subj >,
@@ -1412,6 +1556,8 @@ zero-cop-rule := unary-phrase &
 
 ;; SSH & DVM 2016-02-17 : a new rule for zero copula with pp locative complement
 ;; DVM 2016-05-06: add COORD - based on zero-cop-rule for noun
+
+#|
 zero-cop-pp-rule := unary-phrase &
  [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0,
                                 LTOP #vl,
@@ -1436,42 +1582,57 @@ zero-cop-pp-rule := unary-phrase &
 	    RELS <! !>, 
 	    HCONS <! !>, 
 	    ICONS <! !> ] ].
+|#
 
 ;; Existential ada
-;; DVM 2016-05-16: add a rule for existential verb "ada" based on the one in Zhong
-;; The head is a verb "ada" and takes 2 arguments: a noun and a verb
+;; DVM 2016-05-16 : add a rule for existential verb "ada" based on the one in Zhong
+;; DVM 2016-07-09 : The head is a verb "ada" and takes 1 argument: a noun
 ;; FCB & DVM 2016-05-17: add OPT - for the first obligatory argument
-;; also add EMPTY - to get rid of zero copula rule
-;; zero copula rule with HEAD EMPTY + cannot combine with HEAD EMPTY -
-v_exist-lex := basic-two-arg & verb-lex & basic-verb-lex &
+;; also add EMPTY - to get rid of zero copula rule -> for previous ARG2
+;; zero copula rule with HEAD EMPTY + cannot combine with HEAD EMPTY - -> for previous ARG2
+v_exist-lex := basic-one-arg-no-hcons & verb-lex & basic-verb-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD verb,
 			   VAL [ SUBJ < >,
                      	         COMPS #comps ] ],
              	     CONT [ HOOK [ LTOP #lbl,
                     		   INDEX #event ],
-                    	    RELS <! #keyrel !>,
-                    	    HCONS <! qeq & [ HARG #arg2,
-                         	     	     LARG #vltop ] !> ] ],
+                    	    RELS <! #keyrel !> ] ],
              LKEYS.KEYREL #keyrel &
                   	 [ LBL #lbl,
                 	   ARG0 #event,
-                	   ARG1 #arg1,
-                	   ARG2 #arg2 ] ],
+                	   ARG1 #arg1 ] ],
     ARG-ST #comps &
          < [ LOCAL [ CAT [ VAL [ SPR < >,
                    		 COMPS < > ],
                      	   HEAD noun ],
                	     CONT.HOOK.INDEX #arg1 ],
-	     OPT - ],
-           [ LOCAL [ CAT [ VAL [ SUBJ < [ ] >,
-                     		 SPR < >,
-                     		 COMPS < > ],
-                     	   HEAD verb &
-			     [ EMPTY - ] ],
-                     CONT.HOOK [ LTOP #vltop,
-       				 XARG #arg1 ] ] ] > ].
+	     OPT - ] > ].
 
-v_np_ada_lex := v_exist-lex.
+v_ada_np_lex := v_exist-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < > ]]]].
+
+#|
+proper-name-lex := basic-one-arg & basic-icons-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD propername,
+			   VAL [ COMPS < >,
+				 SUBJ < >,
+				 SPR < > ] ],
+		     CONT [ HOOK.INDEX #index &
+					[ PNG.PERNUM sg ],
+			    RELS <! relation & #keyrel & 
+				  [ LBL #larg,
+				    ARG0 #index ],
+				  quant-relation &
+				  [ PRED "proper_q_rel",
+				    ARG0 #index,
+				    RSTR #harg ] !>,
+			    HCONS <! qeq & 
+				   [ HARG #harg,
+				     LARG #larg ] !> ] ],
+|#
+
+v_np_ada_lex := intr-verb-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < > ]]]].
 
 ;; negative imperative "jangan" from zhong
 imperative-aux-lex := subj-raise-aux-with-pred &
