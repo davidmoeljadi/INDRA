@@ -244,7 +244,7 @@ basic-pronoun-lex :=  basic-one-arg & norm-hook-lex-item &
              LKEYS.KEYREL noun-relation & #rel & [ PRED "pronoun_n_rel" ] ] ].
 
 pronoun-lex := basic-pronoun-lex & no-hcons-lex-item & 
-               norm-hook-lex-item & basic-icons-lex-item &
+               basic-icons-lex-item &
   [ SYNSEM.LOCAL.CONT.RELS <! relation !> ].
 
 ;; DVM 2015-08-18: added from zhong-lextypes.tdl
@@ -1470,9 +1470,7 @@ redup-noun-lex-rule :=  same-non-local-lex-rule & common-noun-lex &
 		    CONT.HOOK.INDEX.PNG.PERNUM pl ] ],
    DTR word-or-lexrule & [ SYNSEM [ LOCAL [ CAT [ HEAD #head, 
 					        VAL #val,
-					        POSTHEAD #posthead ],
-                                          CONT.HOOK [ LTOP #ltop,
-                                                      INDEX #index ] ] ] ],
+					        POSTHEAD #posthead ] ] ] ],
    C-CONT [ HCONS <! !>, 
             ICONS <! !>,
             RELS <! !> ] ].

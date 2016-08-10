@@ -44,6 +44,7 @@
 (lkb-pathname (parent-directory) "head-types.tdl")
    (lkb-pathname (parent-directory) "indonesian.tdl")
 (lkb-pathname (parent-directory) "mtr.tdl")
+(lkb-pathname (parent-directory) "tmt.tdl")
 ))
 
 ;;;
