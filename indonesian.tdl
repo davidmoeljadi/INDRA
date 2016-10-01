@@ -180,6 +180,9 @@ commonnoun := noun.
 propername := noun.
 pronoun := noun.
 
+prep_rel := predsort.
+compound_p_rel := prep_rel.
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
 ;;;;;;;;;;;;;;;;;;;
@@ -649,6 +652,7 @@ determiner-pl-determiner-lex := determiner-lex & no-icons-lex-item &
 ;; DVM 2015-09-23: added CONT.HOOK.XARG #xarg to connect the ARG1 of the verb with ARG0 of the subj
 ;; DVM & FCB 2016-05-17: add INDEX.E.ASPECT perf-and-prog so that "tidak adalah" cannot be parsed
 ;; because "adalah" and "ialah" have ASPECT nonaspect.
+;; DVM 2016-09-30: HEAD.MOD < LOCAL.CAT.HEAD is changed from verb to +vjp so that "tidak" can negate AdjP and PP
 neg-adv-lex := basic-scopal-adverb-lex &
   [ SYNSEM.LOCAL [ CONT.HOOK.XARG #xarg,
 		   CAT [ VAL [ SPR < >,
@@ -657,7 +661,7 @@ neg-adv-lex := basic-scopal-adverb-lex &
                        POSTHEAD -,
                        HEAD.MOD < [ LOCAL [ CONT.HOOK [ XARG #xarg,
 							INDEX.E.ASPECT perf-and-prog ],
-					    CAT [ HEAD verb,
+					    CAT [ HEAD +vjp,
                                                   VAL [ SUBJ cons,
                                                         COMPS null ] ] ] ] > ] ] ].
 
@@ -1267,6 +1271,7 @@ n+det-lex := noun+det-lex-item.
 ;; the head is a copula (KEYREL) and the daughter is neg_rel (ALTKEYREL) 
 ;; which has an event-relation to make the ARG0 event (see matrix.tdl: event-relation)
 ;; the subject is a noun and the complement is a noun too.
+;; DVM 2016-09-30: head of the complement is NP or PP
 neg+cop-lex-item := verb-lex &
  [ SYNSEM [LOCAL [ CAT [ HEAD.AUX -,
                          VAL [ SPR < >,
@@ -1295,7 +1300,7 @@ neg+cop-lex-item := verb-lex &
 				  COMPS < > ] ],
 		      CONT.HOOK.INDEX #xarg ] ],
 	    #comp &
-	    [ LOCAL [ CAT [ HEAD noun ,
+	    [ LOCAL [ CAT [ HEAD +np ,
 			    VAL [ SPR < >,
 				  COMPS < > ] ],
 		      CONT.HOOK.INDEX #compindex ] ] > ].
@@ -1688,6 +1693,43 @@ n_-_measure-lex := inanimate-noun-noun-lex.
 
 ;; for colors
 adjective-color-lex := adjective-lex.
+
+;; compound noun rule type
+; #spr for "anjing kucing ini", "ini" modifies the head daughter "anjing"
+; the specifier of NP is det for noun-head-daughter (see basic noun lex)
+; C-CONT for semantics contribution
+; we inherit from basic-binary-phrase in matrix.tdl
+; empty lists: first equals last
+; CONT.HOOK.INDEX to grab the index of the head noun
+; about semantics: "cat dog is not a cat", cf. "red dog is red" cf "fake dog" is doglike, "cat dog" is "catlike"
+; ARG0 was taken away bec we have "arg12-ev-relation" so the ARG0 is "event"
+; compound_p_rel , p here is preposition, similar to "of" or "dari"
+; we should be able to paraphrase "X Y" "X dari Y"
+; exist_q_rel should be added later in RELS and HCONS
+; if sth modifies sth else, the label should be the same but not sure what it means in the semantics to group everything with the same handle ex. 'red angry' dog
+; "motte iku" has the same LBL
+; if yes, LBL of compound should be the same as LBL in the head daughter
+; bec it is a headed rule, we need #head
+; In "I probably go", the syntactic head is "go", the semantic head is "probably"
+; binary-headed-phrase
+compound-noun-phrase := head-initial &
+ [ SYNSEM.LOCAL [ CAT.VAL [ SPR < #spr >,
+                            COMPS < > ] ,
+                  CONT.HOOK #head ],
+   HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD noun,
+                                 VAL [ SPR < #spr > ,
+                                       COMPS < > ]] ,
+                           CONT [ HOOK #head &
+                                       [INDEX #externalargument,
+                                        LTOP #lbl ]]],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD noun,
+                                     VAL [ SPR < [LOCAL.CAT.HEAD det] > ]],
+                               CONT.HOOK.INDEX #internalargument ],
+   C-CONT [ RELS <! arg12-ev-relation & 
+                  [PRED compound_p_rel,
+                   LBL #lbl,
+                   ARG1 #externalargument,
+                   ARG2 #internalargument] !>, HCONS <! !> ] ].
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the
