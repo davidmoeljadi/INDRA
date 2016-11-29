@@ -433,6 +433,7 @@ obj-drop-verb-lex := transitive-verb-lex.
 
 ;;; Auxiliaries
 
+;; Question to Francis: Budi sudah pandai/di sini cannot be parsed
 subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
   [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
                              SPEC < >,
@@ -449,7 +450,7 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
              #comps &
              [ LOCAL.CAT [ VAL [ SUBJ < [ ] >,
                                  COMPS < >,
-                                 SPR < >,
+                                 SPR 0-1-list,
                                  SPEC < > ],
                            HEAD +vjp ] ] > ].
 
@@ -460,8 +461,9 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item & no-icons-lex-ite
 
 aspect_perf-aux-lex := subj-raise-aux-no-pred & 
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
-		       VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf,
-					       CAT.HEAD.FORM form ] ] ].
+		       VAL [ SPR < >,
+			     COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf,
+					         CAT.HEAD.FORM form ] ] ] ].
 
 aspect_prog-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
@@ -1341,53 +1343,8 @@ adverb-time-lex := basic-scopal-adverb-lex &
 ;; DVM 2016-07-09 : in order to parse "Budi di rumah"
 ;; DVM 2016-07-09 : "intransitive-lex-item" no need to be added, otherwise "Budi tidur di rumah" (PP as adv) cannot be parsed
 ;; DVM 2016-07-09 : in roots.tdl, add +p to the HEAD of root, meaning that preposition can be the head of a clause
-#|
-basic-nomod-adp-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item & 
-  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
-			    ARG1 #xarg,
-			    ARG2 #ind ],
-	     LOCAL [ CONT.HOOK [ XARG #xarg,
-				 INDEX #arg0 ],
-		     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD verb,
-						      VAL.SUBJ cons ],
-						CONT.HOOK.INDEX #xarg ]] >,
-			   VAL [ SPR < >,
-			     COMPS < [ OPT -,
-				       LOCAL [ CAT [ HEAD noun,
-						     VAL.SPR < > ],
-					       CONT.HOOK.INDEX #ind ]] >,
-				 SUBJ < > ]]]]].
 
-adposition-lex := basic-nomod-adposition-lex &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj & 
-				    [ LOCAL [ CONT.HOOK.INDEX #x1,
-                                              CAT [ VAL [ SPR < >,
-                                                          COMPS < > ],
-                                                    HEAD noun ] ] ] >,
-			      COMPS < [ OPT -,
-				       LOCAL [ CAT [ HEAD noun,
-						     VAL.SPR < > ],
-					       CONT.HOOK.INDEX #ind ]] > ],
-                   CONT.HOOK.XARG #x1 ],
-    ARG-ST.FIRST #subj ].
-
-adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
-  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
-			    ARG1 #xarg,
-			    ARG2 #ind ],
-	     LOCAL [ CONT.HOOK [ XARG #xarg,
-				 INDEX #arg0 ],
-		     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD verb,
-						      VAL.SUBJ cons ],
-						CONT.HOOK.INDEX #xarg ]] >,
-			   VAL [ SPR < >,
-			     COMPS < [ OPT -,
-				       LOCAL [ CAT [ HEAD noun,
-						     VAL.SPR < > ],
-					       CONT.HOOK.INDEX #ind ]] >,
-				 SUBJ < > ]]]]].
-|#
-
+;; Question to Francis: how to change adp-nomod to adp-mod?
 adposition-nomod-lex := basic-nomod-adposition-lex & transitive-lex-item &
   [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
 			     SPEC < >,
@@ -1407,24 +1364,6 @@ adposition-nomod-lex := basic-nomod-adposition-lex & transitive-lex-item &
 adposition-lex := adposition-nomod-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
-#|
-adposition-mod-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
-  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
-			    ARG1 #xarg,
-			    ARG2 #ind ],
-	     LOCAL [ CONT.HOOK [ XARG #xarg,
-				 INDEX #arg0 ],
-		     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD +nv,
-						      VAL.SUBJ cons ],
-						CONT.HOOK.INDEX #xarg ]] >,
-			   VAL [ SPR < >,
-			     COMPS < [ OPT -,
-				       LOCAL [ CAT [ HEAD noun,
-						     VAL.SPR < > ],
-					       CONT.HOOK.INDEX #ind ]] >,
-				 SUBJ < > ]]]]].
-
-
 adposition-mod-lex := intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD +nv,
                                                     VAL.SPR cons ]]>,
@@ -1438,7 +1377,6 @@ adp-to-attr-rule := const-lex-rule &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ],
     DTR adposition-lex &
     [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ] ] ] ].
-|#
 
 ;;;;;;;;;;;;;;;;;;;;
 
