@@ -72,12 +72,12 @@ generic_name-lex := proper-name-lex &
 			    < [ +POS.+TAGS < "NNP" >,
 				+CARG #carg ] > ].
 
-;generic_card := num-adj-lex &
-; [ SYNSEM.LKEYS.KEYREL.CARG #carg,
-;   STEM < "_generic_card_ne_" >,
-;   TOKENS.+LIST generic_token_list &
-;			    < [ +POS.+TAGS < "CD" >,
-;				+CARG #carg ] > ].
+generic_card := a_-_num_le &
+ [ SYNSEM.LKEYS.KEYREL.CARG #carg,
+   STEM < "_generic_card_ne_" >,
+   TOKENS.+LIST generic_token_list &
+			    < [ +POS.+TAGS < "CD" >,
+				+CARG #carg ] > ].
 
 
 generic_nn := common-noun-lex & 
@@ -101,6 +101,84 @@ generic_vv := opt-tr-verb-lex &
 ; generic_adverb := av_-_i-unk_le &
 ;   [ ORTH < "_generic_rb_" >,
 ;     TOKENS.+LIST < [ +TNT.+TAGS.FIRST "RB" ] > ].
+
+; DVM 2017-02-08: added from Zhong
+
+generic_num_ne := a_-_num_le & 
+  [ SYNSEM.LKEYS.KEYREL.CARG #carg,
+    STEM < "_generic_num_ne_" >,
+    TOKENS.+LIST generic_token_list & < [ +POS.+TAGS null,
+					  +CARG #carg,
+					  +CLASS card_ne ] > ]. 
+
+;generic_year_ne := time-noun-lex & nonque-item &
+;  [ SYNSEM.LKEYS.KEYREL.CARG #carg,
+;    STEM < "_generic_year_ne_" >,
+;    TOKENS.+LIST generic_token_list & < [ +POS.+TAGS null,
+;					  +CARG #carg,
+;					  +CLASS year_ne ] > ]. 
+
+;generic_month_ne := time-noun-lex & nonque-item &
+;  [ SYNSEM.LKEYS.KEYREL [ PRED month_n_rel,
+;                          CARG #carg ],
+;    STEM < "_generic_month_ne_" >,
+;    TOKENS.+LIST generic_token_list & < [ +POS.+TAGS null,
+;					  +CARG #carg,
+;					  +CLASS month_ne ] > ]. 
+
+;generic_day_ne := time-noun-lex & nonque-item &
+;  [ SYNSEM.LKEYS.KEYREL [ PRED day_n_rel,
+;                          CARG #carg ],
+;    STEM < "_generic_day_ne_" >,
+;    TOKENS.+LIST generic_token_list & < [ +POS.+TAGS null,
+;					  +CARG #carg,
+;					  +CLASS day_ne ] > ]. 
+
+;generic_date_ne := time-noun-lex & nonque-item &
+;  [ SYNSEM.LKEYS.KEYREL [ PRED date_n_rel,
+;                          CARG #carg ],
+;    STEM < "_generic_date_ne_" >,
+;    TOKENS.+LIST generic_token_list & < [ +POS.+TAGS null,
+;					  +CARG #carg,
+;					  +CLASS date_ne ] > ]. 
+
+;generic_time_noun_ne := time-noun-lex & nonque-item &
+;  [ SYNSEM.LKEYS.KEYREL [ PRED time_n_rel,
+;                          CARG #carg ],
+;    STEM < "_generic_time_ne_" >,
+;    TOKENS.+LIST generic_token_list & < [ +POS.+TAGS null,
+;					  +CARG #carg,
+;					  +CLASS time_ne ] > ]. 
+
+#|not working
+generic_email_noun_ne := proper-name-lex & nonque-item &
+  [ SYNSEM.LKEYS.KEYREL [ PRED named_rel,
+                          CARG #carg ],
+    STEM < "_generic_email_ne_" >,
+    TOKENS.+LIST generic_token_list & < [ +POS.+TAGS null,
+					  +CARG #carg,
+					  +CLASS email_ne ] > ].
+|#
+
+;;for numeral phrases like "五号", treating as proper noun temporarily
+;generic_meas_noun_ne := proper-name-lex & nonque-item &
+;  [ SYNSEM.LKEYS.KEYREL [ PRED named_rel,
+;                          CARG #carg ],
+;    STEM < "_generic_meas_ne_" >,
+;    TOKENS.+LIST generic_token_list & < [ +POS.+TAGS null,
+;					  +CARG #carg,
+;					  +CLASS meas_ne ] > ].
+
+;;DVM 2017-02-08: now INDRA parses ABC12DE, 11-a, 22b as a proper name
+;;see ne1.tdl
+generic_proper_ne := proper-name-lex & 
+;nonque-item &
+  [ SYNSEM.LKEYS.KEYREL [ PRED named_rel,
+                          CARG #carg ],
+    STEM < "_generic_name_ne_" >,
+    TOKENS.+LIST generic_token_list & < [ +POS.+TAGS null,
+					  +CARG #carg,
+					  +CLASS proper_ne ] > ].
 
 
 ; generic_trans_verb_bse := v_np*_bse-unk_le &

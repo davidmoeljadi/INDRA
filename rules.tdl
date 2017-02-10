@@ -3,7 +3,8 @@
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.
 
-adj-head-scop := adj-head-scop-phrase.
+;DVM 2017-02-10: deactivate this for numbers+noun
+;adj-head-scop := adj-head-scop-phrase.
 
 ; Rule instances for head-modifier structures. Corresponding types
 ; are defined in matrix.tdl.  The matrix customization script did
@@ -46,15 +47,29 @@ s1-bottom-coord := s1-bottom-coord-rule.
 
 head-adj-int := head-adj-int-phrase.
 
-;adj-head-int := adj-head-int-phrase.
+;DVM 2017-02-10: activate this for numbers+noun
+adj-head-int := adj-head-int-phrase.
+
+head-spec-cl := head-spec-h-sem-phrase &
+  [ HEAD-DTR.SYNSEM [ LOCAL [ CAT.HEAD classifier,
+			      CONT.HOOK.INDEX.COG-ST cog-st ] ] ].
 
 ;; this is the rule for zero copula, e.g. Saya orang.
 zero-cop := zero-cop-rule.
 ;zero-cop-pp := zero-cop-pp-rule.
 
 ;; this is the rule for noun noun compound
-;n-n-compound := noun-noun-compound-phrase.
+n-n-compound := compound-noun-phrase.
 
 ;; Also need to add to rules.tdl:
 ;xp-xp-bridge-c := bridge-binary-phrase.
 ;xp-bridge-c := bridge-unary-phrase.
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; DVM 2017-01-09: Fragments
+;;;
+
+frg-np := frag-np-rule.
+
+frag-vmod := frag-vmod-rule.

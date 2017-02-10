@@ -458,15 +458,15 @@ Tono := proper-name-lex &
 
 ;satu := a_-_num_le &
 ;  [ STEM < "satu" >,
-;    SYNSEM.LKEYS.KEYREL.CARG "satu",
+;    SYNSEM.LKEYS.KEYREL.CARG "1",
 ;    TRAITS native_token_list ].
 
 ;;; DVM 2015-05-09: Classifiers added from zhong
 
-;buah := c_-_le &
-;  [ STEM < "buah" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "_buah_x_rel",
-;    TRAITS native_token_list ].
+buah := c_-_le &
+  [ STEM < "buah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_buah_x_rel",
+    TRAITS native_token_list ].
 
 ;;; Pronouns
 ;; DVM 2015-05-09: SYNSEM.LKEYS.KEYREL.PRED "_nameoflexeme_n_rel", was deleted

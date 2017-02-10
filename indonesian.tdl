@@ -95,6 +95,7 @@ equal :=  higher-or-equal & lower-or-equal.
 head :+ [ HONORIFIC luk,
     AUX bool,
     FORM form,
+    MODIFIABLE bool,
     EMPTY bool ].
 
 ; This grammar includes head-modifier rules.  To keep
@@ -418,6 +419,10 @@ transitive-verb-lex := main-verb-lex & transitive-lex-item &
                                  COMPS < > ],
                            HEAD noun ] ] > ].
 
+;indonesian-passive-verb-lex :=
+
+;transitive-pass-verb-lex :=
+
 intr-verb-lex := intransitive-verb-lex.
 
 tr-verb-lex := transitive-verb-lex &
@@ -573,62 +578,112 @@ adj-to-attr-quant-rule := const-lex-rule &
 ;;; Numbers
 ;; DVM 2015-05-09: from Zhong
 
-;num :+ 
-; [ CARDINAL bool ].
+num :+ [ CARDINAL bool ].
 
 ;card_rel := named_rel.
 
 ;card-relation := named-relation & arg1-relation &
 ;  [ PRED card_rel ].
 
-;num-adj-lex := single-rel-lex-item & basic-icons-lex-item &
-;  [ SYNSEM [ LOCAL [ CAT [ VAL [ COMPS < >,
-;				 SUBJ < >,
-;				 SPR < > ],
-;			   HEAD num & [ CARDINAL +,
-;					MOD < > ] ],
-;		     CONT [ HOOK [ LTOP #lbl, 
-;				   INDEX #index ],
-;			    RELS <! #rel !>,
-;			    HCONS <! !> ] ],
-;	     NON-LOCAL.SLASH 0-dlist,
-;	     LKEYS.KEYREL card-relation & #rel & [ LBL #lbl,
-;						   ARG1 #index ] ] ].
+#|
+num-adj-lex := single-rel-lex-item & basic-icons-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ VAL [ COMPS < >,
+				 SUBJ < >,
+				 SPR < > ],
+			   HEAD num & [ CARDINAL +,
+					MOD < > ] ],
+		     CONT [ HOOK [ LTOP #lbl, 
+				   INDEX #index ],
+			    RELS <! #rel !>,
+			    HCONS <! !> ] ],
+	     NON-LOCAL.SLASH 0-dlist,
+	     LKEYS.KEYREL card-relation & #rel & [ LBL #lbl,
+						   ARG1 #index ] ] ].
+|#
 
-;a_-_num_le := num-adj-lex.
+head-min := avm & [ CARDIN bool ].
+
+card_rel := named_rel.
+
+card-relation := arg1-relation & named-relation &
+  [ PRED card_rel ].
+
+; DVM 2017-02-10 VAL.SPR < > not cons, if cons, there will be two parses for "dua apel merah"
+; [[dua apel] merah] and [dua [apel merah]]
+; if < >, only [dua [apel merah]] is parsed
+a_-_num_le := single-rel-lex-item & basic-icons-lex-item & 
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adj & [ MOD < [ LOCAL [ CAT [ HEAD noun,
+              	                                              VAL.SPR cons ] ] ] > ],
+                           VAL [ COMPS < >,
+                                 SPR < >,
+                                 SPEC < >,
+				 SUBJ < > ],
+	                   POSTHEAD - ],
+		     CONT [ HOOK [ LTOP #lbl, 
+				   INDEX #index ],
+			    RELS <! #rel !>,
+			    HCONS <! !> ] ],
+	     NON-LOCAL.SLASH 0-dlist,
+	     LKEYS.KEYREL card-relation & #rel & [ LBL #lbl,
+						   ARG1 #index ] ] ].
+
+#|
+num-adj-lex := single-rel-lex-item & basic-icons-lex-item &
+  [ SYNSEM [ PAREN -,
+             PUNCTUATED -,
+	     LOCAL [ CAT [ VAL [ COMPS < >,
+				 SUBJ < >,
+				 SPR < > ],
+			   HEAD num & [ CARDINAL +,
+					MOD < > ] ],
+		     CONT [ HOOK [ LTOP #lbl, 
+				   INDEX #index ],
+			    RELS <! #rel !>,
+			    HCONS <! !> ] ],
+	     NON-LOCAL.SLASH 0-dlist,
+	     LKEYS.KEYREL card-relation & #rel & [ LBL #lbl,
+						   ARG1 #index ] ] ].
+|#
+
+head-spec-h-sem-phrase := basic-head-spec-phrase & head-final &
+  [ SYNSEM.LOCAL.CAT.HEAD.MODIFIABLE +,
+    HEAD-DTR.SYNSEM.LOCAL [ CAT.HEAD +jrpd & [ MODIFIABLE + ],
+                            CONT.HOOK #hook ],
+    C-CONT.HOOK #hook ].
+
 
 ;;; Classifiers
 ;; DVM 2015-05-09: from Zhong
 
-;classifier := +jd.
+classifier := +jd.
 
-;basic-classifier-lex := norm-ltop-lex-item & single-rel-lex-item & 
-;                        intersective-mod-lex & no-icons-lex-item &
-;  [ SYNSEM [ LOCAL [ CAT [ HEAD classifier & 
-;				[ KEYS.KEY #sense,
-;				  MOD < [ LOCAL [ CONT.HOOK [ INDEX #index,
-;							      LTOP #ltop ],
-;						  CAT [ HEAD noun & [ KEYS.KEY #sense ],
-;							VAL.SPR < [] > ] ] ] > ], 
-;			   VAL [ SPR < [ LOCAL [ CAT [ VAL [ COMPS < >,
-;							     SUBJ < > ],
-;						       HEAD num & 
-;							   [ MOD < > ] ],
-;						 CONT.HOOK [ LTOP #ltop,
-;							     INDEX #index ]]]>,
-;				 SUBJ < >,
-;				 COMPS < > ],
-;			   POSTHEAD - ],
-;		     CONT.HOOK [ INDEX #index & ref-ind,
-;				 LTOP #ltop ] ],          
-;	     NON-LOCAL.SLASH 0-dlist,
-;	     LKEYS.KEYREL [ PRED #sense,
-;			    ARG1 #index ] ] ].
+basic-classifier-lex := norm-ltop-lex-item & single-rel-lex-item & 
+                        intersective-mod-lex & no-icons-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD classifier & 
+				[ KEYS.KEY #sense,
+				  MOD < [ LOCAL [ CONT.HOOK [ INDEX #index,
+							      LTOP #ltop ],
+						  CAT [ HEAD noun & [ KEYS.KEY #sense ],
+							VAL.SPR < [] > ] ] ] > ], 
+			   VAL [ SPR < [ LOCAL [ CAT [ VAL [ COMPS < >,
+							     SUBJ < > ],
+						       HEAD num & 
+							   [ MOD < > ] ],
+						 CONT.HOOK [ LTOP #ltop,
+							     INDEX #index ]]]>,
+				 SUBJ < >,
+				 COMPS < > ],
+			   POSTHEAD - ],
+		     CONT.HOOK [ INDEX #index & ref-ind,
+				 LTOP #ltop ] ],          
+	     NON-LOCAL.SLASH 0-dlist,
+	     LKEYS.KEYREL [ PRED #sense,
+			    ARG1 #index ] ] ].
 
-;classifier-lex := basic-classifier-lex &
-;  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
+classifier-lex := basic-classifier-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT - ] > ].
 
-;c_-_le := classifier-lex.
+c_-_le := classifier-lex.
 
 ;;; Others
 
@@ -738,7 +793,7 @@ voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 act-lex-rule := voice-lex-rule-super.
 
-;pas-lex-rule := voice-lex-rule-super.
+pas-lex-rule := voice-lex-rule-super.
 
 ;adj-superlative-lex-rule :=
 
@@ -760,6 +815,8 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 ;;; DVM 2015-05-09: from zhong
+;;; NUM + CL is being joined by head-spec-hs
+;;; CLphrase + N is being joined by adj-int
 ;head-spec-h-sem-phrase := basic-head-spec-phrase & head-final &
 ;  [ HEAD-DTR.SYNSEM.LOCAL [ CAT.HEAD noun,
 ;                            CONT.HOOK #hook ],
@@ -1315,7 +1372,21 @@ n+cop-lex := neg+cop-lex-item.
 ;;; Adverbs
 ;; DVM 2015-05-09: basic-int-adverb-lex is changed to basic-scopal-adverb-lex because of updates in matrix.tdl
 
-adverb-lex := basic-scopal-adverb-lex &
+;;redefining the types in matrix.tdl. Taken out raise-index-mod-lex-item from basic-adverb-lex and put it in basic-scopal-adverb-lex. 
+basic-adv-lex :=  single-rel-lex-item & basic-icons-lex-item &
+  [ SYNSEM [ LOCAL.CAT.HEAD adv,
+	     LKEYS.KEYREL event-relation ]].
+
+;;add in norm-hook-lex-item, so that it's keyrel.arg0 is its hook.index
+;;Its ARG1 refers to what it modifies, through XARG. CONT.HOOK.XARG #ind
+basic-int-adv-lex := basic-adv-lex & intersective-mod-lex & norm-hook-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX #ind ] >,
+                           VAL.SUBJ < > ], 
+                     CONT.HOOK.XARG #ind ],
+	     NON-LOCAL.SLASH 0-dlist,
+             LKEYS.KEYREL.ARG1 #ind ] ].
+
+adverb-lex := basic-int-adv-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < [ ], ... >,
 							  COMPS < > ],
 						    HEAD verb ] ]>,
@@ -1324,6 +1395,14 @@ adverb-lex := basic-scopal-adverb-lex &
 				 COMPS < >,
 				 SPEC < > ] ]]]].
 
+adverb-scop-lex:= basic-scopal-adverb-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < [ ], ... >,
+							  COMPS < > ],
+						    HEAD verb ] ]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ] ]]]].
 adverb-post-lex := adverb-lex &
   [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
 
@@ -1707,3 +1786,82 @@ bridge-unary-phrase := basic-unary-phrase &
 	     HCONS <! !> ],
     ARGS < [ SYNSEM.LOCAL [ CAT.HEAD head,
 			    CONT.HOOK #hook ] ] > ].
+
+;;;
+;;; DVM 2017-01-09: added from Zhong, Rules for fragments
+;;;
+
+fragment_head := head.
+
+;;; used in fragments
+;;;
+;;; do we need subtypes for different numbers of arguments
+unknown_v_rel := predsort.
+
+; For fragments (DPF FCB 2005-08-22) expect to appear in the Matrix any moment now
+arg-ev-relation := event-relation &
+ [ ARG semarg ].
+unknown-v-relation := arg-ev-relation & 
+ [ PRED unknown_v_rel ].
+
+;;; (DPF and FCB 2009-02) Allow saturated valences to include zero pronouns
+;;; maybe SPR is also olist?
+saturated := valence & 
+	     [SUBJ olist,
+	      COMPS olist,
+	      SPR null].
+super-saturated := saturated & 
+	     [SUBJ null,
+	      COMPS null,
+	      SPR null].
+
+;;; The super type creates a proposition with an non-specified relation
+;;; CHECKME: why should it be lexrule?  Isn't it just phrase?
+;;;
+super-frag-rule := phrase-or-lexrule & c-cont-1 &
+  [ INFLECTED infl-satisfied,
+    SYNSEM [ LOCAL [ CAT [ HEAD fragment_head &
+				[ MOD < > ],
+                           VAL super-saturated & 
+	     [SUBJ null,
+	      COMPS null,
+	      SPR null]] ],
+	     NON-LOCAL [REL <! !>,
+			QUE <! !>,
+			SLASH  <! !>]],
+    C-CONT [ HOOK [ LTOP #lbl,
+		    INDEX #ind],
+	     RELS  <! relation &
+		    [ LBL #lbl,
+		      ARG0 #ind ] !>,
+	     HCONS <!  !> ], 
+    ARGS.FIRST [INFLECTED infl-satisfied,
+		SYNSEM [NON-LOCAL [REL <! !>,
+				   QUE <! !>,
+				   SLASH  <! !>]]]].
+
+;; The basic type creates a proposition with an unknown_v_rel and and an ARG 
+
+basic-frag-rule := super-frag-rule  &
+ [ C-CONT [ RELS  <! unknown-v-relation !>]].
+
+unary-frag-rule := basic-frag-rule & unary-phrase.
+
+frag-np-rule := unary-frag-rule &
+ [ ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD  noun & 
+				       [EMPTY -],
+				 VAL saturated],
+			   CONT.HOOK.INDEX #ind]] >,
+C-CONT.RELS.LIST.FIRST.ARG #ind ].
+
+; "stand alone intersective adverb or pp"
+frag-vmod-rule := unary-frag-rule &
+"stand alone intersective adverb or pp"
+ [  ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD +rp &
+				       [MOD < synsem &
+					      [ LOCAL intersective-mod  ] >],
+				  VAL saturated],
+			    CONT.HOOK [ LTOP #lbl,
+					XARG #arg ] ] ] >,
+    C-CONT.RELS <! [ LBL #lbl,
+		     ARG0 #arg ] !> ].

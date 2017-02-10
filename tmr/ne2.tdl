@@ -40,8 +40,9 @@ card_or_year_ne_tmr := ne_tmt &
 ;; accept measure phrases like |900-pound|, where at this point |900-| is one
 ;; token, allow an optional trailing hyphen.
 ;;
+;DVM 2017-02-08: changed [2-9] to [1-9]
 card_ne_1_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[-+±~]?([2-9]|[1-9][0-9][0-9]*)(\.|-)?$ ] >,
+[ +INPUT < [ +FORM ^[-+±~]?([1-9]|[1-9][0-9][0-9]*)(\.|-)?$ ] >,
   +OUTPUT < [ +CLASS card_ne ] > ].
 
 ;;
@@ -78,6 +79,24 @@ card_ne_7_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[０-９]+[．\.][０-９]+$ ] >,
   +OUTPUT < [ +CLASS card_ne ] > ].
 
+;;DVM 2017-02-08: added for Indonesian numbers
+card_ne_8_tmr := ne_tmt &
+[ +INPUT < [ +FORM ^(satu|dua|tiga|empat|lima|enam|tujuh|delapan|sembilan|sepuluh)$ ] >,
+  +OUTPUT < [ +CLASS card_ne ] > ].
+
+;;for numeral phrases (number+cls), which can be noun itself
+num_ne_8_tmr := ne_tmt &
+[ +INPUT < [ +FORM ^[零〇０一壹二贰三叁四五六七八九十百千万亿兆][零〇０一壹二贰三叁四五六七八九十百千万亿兆]*号$ ] >,
+  +OUTPUT < [ +CLASS meas_ne ] > ].
+
+percent_ne_1_tmr := ne_tmt &
+[ +INPUT < [ +FORM ^[０-９]+．[０-９]+％$ ] >,
+  +OUTPUT < [ +CLASS percent_ne ] > ].
+
+percent_ne_2_tmr := ne_tmt &
+[ +INPUT < [ +FORM ^[0-9]+\.[0-9]+％$ ] >,
+  +OUTPUT < [ +CLASS percent_ne ] > ].
+
 year_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[１-９][０-９]+年$ ] >,
   +OUTPUT < [ +CLASS year_ne ] > ].
@@ -86,12 +105,16 @@ year_ne_2_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[一壹二贰三叁四五六七八九十百千][零〇０一壹二贰三叁四五六七八九十百千]+年$ ] >,
   +OUTPUT < [ +CLASS year_ne ] > ].
 
+date_ne_3_tmr := ne_tmt &
+[ +INPUT < [ +FORM ^(十[一壹二贰]|[一壹二贰三叁四五六七八九十])月([二三]?十|(([二三]?十)?[一二三四五六七八九]))日$ ] >,
+  +OUTPUT < [ +CLASS date_ne ] > ].
+
 month_ne_1_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[１-９][０-９]+月$ ] >,
+[ +INPUT < [ +FORM ^(１[０-２]|[１-９])月$ ] >,
   +OUTPUT < [ +CLASS month_ne ] > ].
 
 month_ne_2_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[一壹二贰三叁四五六七八九十][零〇０一壹二贰三叁四五六七八九十]+月$ ] >,
+[ +INPUT < [ +FORM ^(十[一壹二贰]|[一壹二贰三叁四五六七八九十])月$ ] >,
   +OUTPUT < [ +CLASS month_ne ] > ].
 
 day_ne_1_tmr := ne_tmt &
@@ -99,7 +122,7 @@ day_ne_1_tmr := ne_tmt &
   +OUTPUT < [ +CLASS day_ne ] > ].
 
 day_ne_2_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[一壹二贰三叁四五六七八九十百千][零〇０一壹二贰三叁四五六七八九十百千]+日$ ] >,
+[ +INPUT < [ +FORM ^[一壹二贰三叁四五六七八九十百千][零〇０一壹二贰三叁四五六七八九十百千]*日$ ] >,
   +OUTPUT < [ +CLASS day_ne ] > ].
 
 
