@@ -79,10 +79,10 @@ card_ne_7_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[０-９]+[．\.][０-９]+$ ] >,
   +OUTPUT < [ +CLASS card_ne ] > ].
 
-;;DVM 2017-02-08: added for Indonesian numbers
-card_ne_8_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^(satu|dua|tiga|empat|lima|enam|tujuh|delapan|sembilan|sepuluh)$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] > ].
+;;DVM 2017-02-08: added Indonesian numbers
+;card_ne_8_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^(satu|dua|tiga|empat|lima|enam|tujuh|delapan|sembilan|sepuluh)$ ] >,
+;  +OUTPUT < [ +CLASS card_ne ] > ].
 
 ;;for numeral phrases (number+cls), which can be noun itself
 num_ne_8_tmr := ne_tmt &
