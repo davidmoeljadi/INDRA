@@ -17,7 +17,8 @@ head-comp := head-comp-phrase.
 
 subj-head := subj-head-phrase.
 
-head-spec := head-spec-phrase.
+;DVM 2017-02-21: deactivate this so that INDRA won't parse [ada dua buku] merah.
+;head-spec := head-spec-phrase.
 
 bare-np := bare-np-phrase.
 
