@@ -93,10 +93,10 @@ equal :=  higher-or-equal & lower-or-equal.
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 head :+ [ HONORIFIC luk,
-    AUX bool,
-    FORM form,
-    MODIFIABLE bool,
-    EMPTY bool ].
+          AUX bool,
+          FORM form,
+          MODIFIABLE bool,
+          EMPTY bool ].
 
 ; This grammar includes head-modifier rules.  To keep
 ; out extraneous parses, constrain the value of MOD on
@@ -113,13 +113,13 @@ inflected :+ [ VOICE-FLAG luk ].
 infl-satisfied :+ [ VOICE-FLAG na-or-+ ].
 
 png :+ [ PERNUM pernum,
-    ANIMACY animacy ].
+         ANIMACY animacy ].
 
 basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+                            HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
 basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
-    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+                                  NON-HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
 ;;;;;;;;;;;;;;
 ;;; Features
@@ -438,7 +438,6 @@ obj-drop-verb-lex := transitive-verb-lex.
 
 ;;; Auxiliaries
 
-;; Question to Francis: Budi sudah pandai/di sini cannot be parsed
 subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
   [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
                              SPEC < >,
@@ -578,29 +577,7 @@ adj-to-attr-quant-rule := const-lex-rule &
 ;;; Numbers
 ;; DVM 2015-05-09: from Zhong
 
-num :+ [ CARDINAL bool ].
-
-;card_rel := named_rel.
-
-;card-relation := named-relation & arg1-relation &
-;  [ PRED card_rel ].
-
-#|
-num-adj-lex := single-rel-lex-item & basic-icons-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ VAL [ COMPS < >,
-				 SUBJ < >,
-				 SPR < > ],
-			   HEAD num & [ CARDINAL +,
-					MOD < > ] ],
-		     CONT [ HOOK [ LTOP #lbl, 
-				   INDEX #index ],
-			    RELS <! #rel !>,
-			    HCONS <! !> ] ],
-	     NON-LOCAL.SLASH 0-dlist,
-	     LKEYS.KEYREL card-relation & #rel & [ LBL #lbl,
-						   ARG1 #index ] ] ].
-|#
-
+;adj :+ [ CARDINAL bool ].
 head-min := avm & [ CARDIN bool ].
 
 card_rel := named_rel.
@@ -608,42 +585,35 @@ card_rel := named_rel.
 card-relation := arg1-relation & named-relation &
   [ PRED card_rel ].
 
+;adj-head-int-phrase :+
+;  [ SYNSEM.LOCAL.CAT.HEAD.CARDIN + ].
+
 ; DVM 2017-02-10 VAL.SPR < > not cons, if cons, there will be two parses for "dua apel merah"
 ; [[dua apel] merah] and [dua [apel merah]]
 ; if < >, only [dua [apel merah]] is parsed
+; DVM 2017-02-21 added XARG and #xarg
 a_-_num_le := single-rel-lex-item & basic-icons-lex-item & 
-  [ SYNSEM [ LOCAL [ CAT [ HEAD adj & [ MOD < [ LOCAL [ CAT [ HEAD noun,
-              	                                              VAL.SPR cons ] ] ] > ],
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adj & [ CARDIN +,
+                                        MOD < [ LOCAL [ CAT [ HEAD noun & [ CARDIN - ],
+              	                                              VAL.SPR cons ],
+                                                        CONT.HOOK.INDEX #xarg ] ] > ],
                            VAL [ COMPS < >,
                                  SPR < >,
-                                 SPEC < >,
 				 SUBJ < > ],
 	                   POSTHEAD - ],
-		     CONT [ HOOK [ LTOP #lbl, 
-				   INDEX #index ],
+		     CONT [ HOOK [ LTOP #lbl,
+                                   XARG #xarg ],
 			    RELS <! #rel !>,
 			    HCONS <! !> ] ],
 	     NON-LOCAL.SLASH 0-dlist,
 	     LKEYS.KEYREL card-relation & #rel & [ LBL #lbl,
-						   ARG1 #index ] ] ].
+						   ARG1 #xarg ] ] ].
 
-#|
-num-adj-lex := single-rel-lex-item & basic-icons-lex-item &
-  [ SYNSEM [ PAREN -,
-             PUNCTUATED -,
-	     LOCAL [ CAT [ VAL [ COMPS < >,
-				 SUBJ < >,
-				 SPR < > ],
-			   HEAD num & [ CARDINAL +,
-					MOD < > ] ],
-		     CONT [ HOOK [ LTOP #lbl, 
-				   INDEX #index ],
-			    RELS <! #rel !>,
-			    HCONS <! !> ] ],
-	     NON-LOCAL.SLASH 0-dlist,
-	     LKEYS.KEYREL card-relation & #rel & [ LBL #lbl,
-						   ARG1 #index ] ] ].
-|#
+a_-_num-sg_le := a_-_num_le &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM sg ].
+
+a_-_num-pl_le := a_-_num_le &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
 
 head-spec-h-sem-phrase := basic-head-spec-phrase & head-final &
   [ SYNSEM.LOCAL.CAT.HEAD.MODIFIABLE +,
@@ -1478,6 +1448,7 @@ can-aux := basic-verb-lex & trans-first-arg-raising-lex-item-1 & non-mod-lex-ite
 
 ;; DVM 2015-09-23: added redup-lex-rule from zhong-lextypes.tdl
 ;; DVM 2015-09-23: deleted things which are not relevant in INDRA, added common-noun-lex to make reduplicated nouns compatible with enclitics =nya etc.
+;; DVM 2017-02-21: added [ CARDIN + ] so that "ada dua buku-buku" cannot be parsed
 redup-noun-lex-rule :=  same-non-local-lex-rule & common-noun-lex &
 		   same-modified-lex-rule &
 		   same-light-lex-rule &
@@ -1486,7 +1457,7 @@ redup-noun-lex-rule :=  same-non-local-lex-rule & common-noun-lex &
 		   same-agr-lex-rule & 
                    infl-lex-rule & 
  [ SYNSEM [ LOCAL [ CAT [ MC luk,
-			  HEAD #head, 
+			  HEAD #head & [ CARDIN + ], 
 			  VAL #val, 
 			  POSTHEAD #posthead ],
 		    CONT.HOOK.INDEX.PNG.PERNUM pl ] ],
@@ -1817,8 +1788,9 @@ super-saturated := saturated &
 
 ;;; The super type creates a proposition with an non-specified relation
 ;;; CHECKME: why should it be lexrule?  Isn't it just phrase?
+;;; DVM 2017-02-21: "phrase-or-lexrule  & c-cont-1 &" was changed to "c-cont-1 &" because LKB had an error message "phrase-or-lexrule" is redundant, it is an ancestor of "c-cont-1"
 ;;;
-super-frag-rule := phrase-or-lexrule & c-cont-1 &
+super-frag-rule := c-cont-1 &
   [ INFLECTED infl-satisfied,
     SYNSEM [ LOCAL [ CAT [ HEAD fragment_head &
 				[ MOD < > ],

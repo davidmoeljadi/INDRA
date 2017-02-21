@@ -103,8 +103,8 @@ generic_vv := opt-tr-verb-lex &
 ;     TOKENS.+LIST < [ +TNT.+TAGS.FIRST "RB" ] > ].
 
 ; DVM 2017-02-08: added from Zhong
-
-generic_num_ne := a_-_num_le & 
+; DVM 2017-02-21: changed "a_-_num_le" to "a_-_num-pl_le" for numbers >=2
+generic_num_ne := a_-_num-pl_le & 
   [ SYNSEM.LKEYS.KEYREL.CARG #carg,
     STEM < "_generic_num_ne_" >,
     TOKENS.+LIST generic_token_list & < [ +POS.+TAGS null,
