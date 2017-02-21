@@ -623,10 +623,11 @@ head-spec-h-sem-phrase := basic-head-spec-phrase & head-final &
 
 
 ;;; Classifiers
-;; DVM 2015-05-09: from Zhong
+;; DVM 2017-02-21: added classifiers, based on Zhong
 
 classifier := +jd.
 
+#|
 basic-classifier-lex := norm-ltop-lex-item & single-rel-lex-item & 
                         intersective-mod-lex & no-icons-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD classifier & 
@@ -649,11 +650,40 @@ basic-classifier-lex := norm-ltop-lex-item & single-rel-lex-item &
 	     NON-LOCAL.SLASH 0-dlist,
 	     LKEYS.KEYREL [ PRED #sense,
 			    ARG1 #index ] ] ].
+|#
+
+basic-classifier-lex := norm-ltop-lex-item & single-rel-lex-item & 
+                        intersective-mod-lex & no-icons-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD classifier & [ KEYS.KEY #sense ],
+                           VAL [ COMPS < [ LOCAL [ CAT [ HEAD noun & [ KEYS.KEY #sense ],
+              	                                         VAL.SPR < [] > ],
+                                                   CONT.HOOK [ LTOP #lbl,
+                                                               INDEX #xarg ] ] ] >,
+                                 SPR < [ LOCAL [ CAT [ HEAD adj,
+                                                       VAL [ COMPS < >,
+                                                             SUBJ < > ] ],
+                                                 CONT.HOOK [ LTOP #lbl,
+                                                             XARG #xarg ] ] ] >,
+				 SUBJ < > ] ],
+		     CONT [ HOOK [ LTOP #lbl,
+                                   XARG #xarg ],
+			    RELS <! #rel !>,
+			    HCONS <! !> ] ],
+	     NON-LOCAL.SLASH 0-dlist,
+	     LKEYS.KEYREL #rel & [ LBL #lbl,
+				   ARG1 #xarg ] ] ].
 
 classifier-lex := basic-classifier-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT - ] > ].
 
-c_-_le := classifier-lex.
+cl-inanim-le := classifier-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY inanimate ].
+
+cl-nonhum-le := classifier-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY non-human ].
+
+cl-hum-le := classifier-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY human ].
 
 ;;; Others
 

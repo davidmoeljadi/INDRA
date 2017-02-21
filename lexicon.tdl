@@ -50457,12 +50457,21 @@ sembilan_ribu_sembilan_ratus_sembilan_puluh_sembilan := a_-_num-pl_le &
     SYNSEM.LKEYS.KEYREL.CARG "9999",
     TRAITS native_token_list ].
 
+;;; DVM 2017-02-21: added classifiers
 
-;;; DVM 2015-05-09: Classifiers added from zhong
-
-buah_cl := c_-_le &
+buah_cl := cl-inanim-le &
   [ STEM < "buah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_buah_x_rel",
+    TRAITS native_token_list ].
+
+ekor_cl := cl-nonhum-le &
+  [ STEM < "ekor" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ekor_x_rel",
+    TRAITS native_token_list ].
+
+orang_cl := cl-hum-le &
+  [ STEM < "orang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_orang_x_rel",
     TRAITS native_token_list ].
 
 ;;; Pronouns
