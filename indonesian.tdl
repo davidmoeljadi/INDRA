@@ -586,15 +586,18 @@ card-relation := arg1-relation & named-relation &
   [ PRED card_rel ].
 
 ;adj-head-int-phrase :+
-;  [ SYNSEM.LOCAL.CAT.HEAD.CARDIN + ].
+;  [ HEAD-DTR.SYNSEM.L-PERIPH - ].
 
 ; DVM 2017-02-10 VAL.SPR < > not cons, if cons, there will be two parses for "dua apel merah"
 ; [[dua apel] merah] and [dua [apel merah]]
 ; if < >, only [dua [apel merah]] is parsed
 ; DVM 2017-02-21 added XARG and #xarg
+; DVM 2017-03-03 added MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ] based on erg/lextypes.tdl
+; so that there will be no two parses for dua puluh dua buku: omit this [[dua puluh] [[dua] [buku]]]
+; get only this [[dua puluh dua] [buku]]
 a_-_num_le := single-rel-lex-item & basic-icons-lex-item & 
-  [ SYNSEM [ LOCAL [ CAT [ HEAD adj & [ CARDIN +,
-                                        MOD < [ LOCAL [ CAT [ HEAD noun & [ CARDIN - ],
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adj & [ MOD < [ MODIFIED notmod & [ PERIPH - ],
+                                                LOCAL [ CAT [ HEAD noun & [ CARDIN - ],
               	                                              VAL.SPR cons ],
                                                         CONT.HOOK.INDEX #xarg ] ] > ],
                            VAL [ COMPS < >,
@@ -615,17 +618,8 @@ a_-_num-sg_le := a_-_num_le &
 a_-_num-pl_le := a_-_num_le &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
 
-head-spec-h-sem-phrase := basic-head-spec-phrase & head-final &
-  [ SYNSEM.LOCAL.CAT.HEAD.MODIFIABLE +,
-    HEAD-DTR.SYNSEM.LOCAL [ CAT.HEAD +jrpd & [ MODIFIABLE + ],
-                            CONT.HOOK #hook ],
-    C-CONT.HOOK #hook ].
-
-
 ;;; Classifiers
 ;; DVM 2017-02-21: added classifiers, based on Zhong
-
-classifier := +jd.
 
 #|
 basic-classifier-lex := norm-ltop-lex-item & single-rel-lex-item & 
@@ -652,13 +646,17 @@ basic-classifier-lex := norm-ltop-lex-item & single-rel-lex-item &
 			    ARG1 #index ] ] ].
 |#
 
+classifier := +jd.
+
 basic-classifier-lex := norm-ltop-lex-item & single-rel-lex-item & 
                         intersective-mod-lex & no-icons-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD classifier & [ KEYS.KEY #sense ],
-                           VAL [ COMPS < [ LOCAL [ CAT [ HEAD noun & [ KEYS.KEY #sense ],
-              	                                         VAL.SPR < [] > ],
-                                                   CONT.HOOK [ LTOP #lbl,
-                                                               INDEX #xarg ] ] ] >,
+  [ SYNSEM [ LOCAL [ CAT [ HEAD classifier &
+                                [ KEYS.KEY #sense,
+				  MOD < [ LOCAL [ CONT.HOOK [ INDEX #index,
+							      LTOP #ltop ],
+						  CAT [ HEAD noun & [ KEYS.KEY #sense ],
+							VAL.SPR < [] > ] ] ] > ], 
+                           VAL [ COMPS < >,
                                  SPR < [ LOCAL [ CAT [ HEAD adj,
                                                        VAL [ COMPS < >,
                                                              SUBJ < > ] ],
@@ -677,13 +675,20 @@ classifier-lex := basic-classifier-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT - ] > ].
 
 cl-inanim-le := classifier-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY inanimate ].
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY inanimate ].
 
 cl-nonhum-le := classifier-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY non-human ].
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY non-human ].
 
 cl-hum-le := classifier-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY human ].
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY human ].
+
+; DVM 2017-02-21 from Zhong, also check rules.tdl
+head-spec-h-sem-phrase := basic-head-spec-phrase & head-final &
+  [ SYNSEM.LOCAL.CAT.HEAD.MODIFIABLE +,
+    HEAD-DTR.SYNSEM.LOCAL [ CAT.HEAD +jrpd & [ MODIFIABLE + ],
+                            CONT.HOOK #hook ],
+    C-CONT.HOOK #hook ].
 
 ;;; Others
 
@@ -1730,16 +1735,20 @@ adjective-color-lex := adjective-lex.
 ; bec it is a headed rule, we need #head
 ; In "I probably go", the syntactic head is "go", the semantic head is "probably"
 ; binary-headed-phrase
+; DVM 2017-03-03 : added MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ]
+; so that INDRA cannot parse [[[dua]ADJ [ekor]N]N [anjing]N]NNCompound
+; but instead [[dua]ADJ [[ekor]N [anjing]N]NNCompound]
 compound-noun-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < #spr >,
                             COMPS < > ] ,
                   CONT.HOOK #head ],
-   HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD noun,
+   HEAD-DTR.SYNSEM [ MODIFIED notmod & [ PERIPH - ],
+                     LOCAL [ CAT [ HEAD noun,
                                  VAL [ SPR < #spr > ,
                                        COMPS < > ]] ,
                            CONT [ HOOK #head &
                                        [INDEX #externalargument,
-                                        LTOP #lbl ]]],
+                                        LTOP #lbl ]]]],
    NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD noun,
                                      VAL [ SPR < [LOCAL.CAT.HEAD det] > ]],
                                CONT.HOOK.INDEX #internalargument ],
