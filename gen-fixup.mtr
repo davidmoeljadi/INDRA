@@ -1,0 +1,11 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; generation-fixup-rules path to an MTR file defining transfer rules
+;;; to massage MRSes before generation
+
+anjing_kucing := monotonic_omtr &
+[ INPUT.RELS <! [ PRED "_anjing_n_rel" ] !>,
+  OUTPUT.RELS <! +copy+ & [ PRED "_kucing_n_rel" ] !> ].
+
+menggonggong_menangis := monotonic_omtr &
+[ INPUT.RELS <! [ PRED "_menggonggong_v_rel" ] !>,
+  OUTPUT.RELS <! +copy+ & [ PRED "_menangis_v_rel" ] !> ].

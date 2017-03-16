@@ -135,3 +135,9 @@
 (if (eq (length *last-parses*) 1)
 (setf *last-parses* '("saya makan kue" "dia tidur" )))
 
+(mt:read-transfer-rules 
+(list
+ (lkb-pathname (parent-directory) "gen-fixup.mtr")
+ )
+"Paraphraser"
+ :filter nil :task :paraphrase)
