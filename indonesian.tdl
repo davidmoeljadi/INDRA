@@ -596,7 +596,7 @@ card-relation := arg1-relation & named-relation &
 ; so that there will be no two parses for dua puluh dua buku: omit this [[dua puluh] [[dua] [buku]]]
 ; get only this [[dua puluh dua] [buku]]
 a_-_num_le := single-rel-lex-item & basic-icons-lex-item & 
-  [ SYNSEM [ LOCAL [ CAT [ HEAD adj & [ MOD < [ MODIFIED notmod & [ PERIPH - ],
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adj & [ MOD < [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
                                                 LOCAL [ CAT [ HEAD noun & [ CARDIN - ],
               	                                              VAL.SPR cons ],
                                                         CONT.HOOK.INDEX #xarg ] ] > ],
@@ -652,9 +652,7 @@ basic-classifier-lex := norm-ltop-lex-item & single-rel-lex-item &
                         intersective-mod-lex & no-icons-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD classifier &
                                 [ KEYS.KEY #sense,
-				  MOD < [ LOCAL [ CONT.HOOK [ INDEX #index,
-							      LTOP #ltop ],
-						  CAT [ HEAD noun & [ KEYS.KEY #sense ],
+				  MOD < [ LOCAL [ CAT [ HEAD noun & [ KEYS.KEY #sense ],
 							VAL.SPR < [] > ] ] ] > ], 
                            VAL [ COMPS < >,
                                  SPR < [ LOCAL [ CAT [ HEAD adj,
@@ -792,13 +790,17 @@ ku-lex-rule := n-enclitic-lex-rule-super.
 
 mu-lex-rule := n-enclitic-lex-rule-super.
 
-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+active-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED.VOICE-FLAG +,
     DTR tr-verb-lex ].
 
-act-lex-rule := voice-lex-rule-super.
+passive-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED.VOICE-FLAG +,
+    DTR tr-verb-lex ].
 
-pas-lex-rule := voice-lex-rule-super.
+act-lex-rule := active-voice-lex-rule-super.
+
+pas-lex-rule := passive-voice-lex-rule-super.
 
 ;adj-superlative-lex-rule :=
 
@@ -1742,7 +1744,7 @@ compound-noun-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < #spr >,
                             COMPS < > ] ,
                   CONT.HOOK #head ],
-   HEAD-DTR.SYNSEM [ MODIFIED notmod & [ PERIPH - ],
+   HEAD-DTR.SYNSEM [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
                      LOCAL [ CAT [ HEAD noun,
                                  VAL [ SPR < #spr > ,
                                        COMPS < > ]] ,
