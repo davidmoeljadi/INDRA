@@ -796,7 +796,28 @@ active-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 passive-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED.VOICE-FLAG +,
-    DTR tr-verb-lex ].
+    DTR tr-verb-lex,
+    SYNSEM [ LOCAL [ CAT [ HEAD verb,
+                           VAL [ SUBJ < #subj >,
+                                 COMPS < #comp > ] ],
+             	     CONT [ HOOK [ LTOP #lbl,
+                    		   INDEX #event ],
+                    	    RELS <! #keyrel !> ] ],
+             LKEYS.KEYREL #keyrel &
+                  	 [ LBL #lbl,
+                	   ARG0 #event,
+                	   ARG1 #ind2,
+                           ARG2 #ind1 ] ],
+    ARG-ST < #subj &
+             [ LOCAL [ CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ],
+                       CONT.HOOK.INDEX #ind1 ] ],
+             #comp &
+             [ LOCAL [ CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ],
+                       CONT.HOOK.INDEX #ind2 ] ] > ].
 
 act-lex-rule := active-voice-lex-rule-super.
 
