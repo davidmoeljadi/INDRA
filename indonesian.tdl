@@ -181,6 +181,12 @@ commonnoun := noun.
 propername := noun.
 pronoun := noun.
 
+;; DVM 2017-03-23: separate 3rd person pronouns and non 3rd person pronouns for passive type 1 and 2
+pronoun-3person := pronoun.
+pronoun-non3person := pronoun.
+
+3person-noun := commonnoun & propername & pronoun-3person.
+
 prep_rel := predsort.
 compound_p_rel := prep_rel.
 
@@ -310,66 +316,76 @@ human-plural-noun-lex := human-noun-noun-lex &
 ;                   CAT.HEAD.HONORIFIC - ] ].
 
 pronoun-1st-sg-nohon-noun-lex := personal-pronoun-lex & speaker-lex-item & 
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
 
 ;pronoun-1st-sg-hon-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1sg,
 ;                   CAT.HEAD.HONORIFIC + ] ].
 
 pronoun-1st-sg-hon-noun-lex := personal-pronoun-lex & speaker-lex-item & 
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
 
 ;pronoun-1st-pl-incl-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ].
 
 pronoun-1st-pl-incl-noun-lex := personal-pronoun-lex & basic-icons-lex-item &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ].
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
 
 ;pronoun-1st-pl-excl-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ].
 
 pronoun-1st-pl-excl-noun-lex :=  personal-pronoun-lex & basic-icons-lex-item &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ].
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
 
 ;pronoun-2nd-sg-nohon-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2sg,
 ;                   CAT.HEAD.HONORIFIC - ] ].
 
 pronoun-2nd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item & 
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
 
 ;pronoun-2nd-sg-hon-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2sg,
 ;                   CAT.HEAD.HONORIFIC + ] ].
 
 pronoun-2nd-sg-hon-noun-lex := personal-pronoun-lex & honorific-hearer-lex-item &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
 
 ;pronoun-3rd-sg-nohon-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 3sg,
 ;                   CAT.HEAD.HONORIFIC - ] ].
 
 pronoun-3rd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ].
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
 
 ;pronoun-3rd-sg-hon-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 3sg,
 ;                   CAT.HEAD.HONORIFIC + ] ].
 
 pronoun-3rd-sg-hon-noun-lex := personal-pronoun-lex & honorific-hearer-lex-item &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ].
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
 
 ;pronoun-2nd-pl-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
 
 pronoun-2nd-pl-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item & 
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ].
 
 ;pronoun-3rd-pl-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
 
 pronoun-3rd-pl-noun-lex := personal-pronoun-lex & basic-icons-lex-item &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ].
 
 ;; DVM 2015-05-09: demonstratives
 ;; DVM 2015-05-09: pronoun-noun-lex is changed to no-spr-noun-lex
@@ -419,14 +435,33 @@ transitive-verb-lex := main-verb-lex & transitive-lex-item &
                                  COMPS < > ],
                            HEAD noun ] ] > ].
 
-;indonesian-passive-verb-lex :=
+; DVM 2017-03-23: for passive type 1
+passive-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD noun,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind1,
+			 	    ICONS-KEY.IARG1 #clause ] ] ],
+              #comps &
+	      [ LOCAL [ CAT [ HEAD 3person-noun,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind2,
+				  ICONS-KEY.IARG1 #clause ] ] ] >,
+     SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
+			     ARG2 #ind1 ],
+	      LOCAL [ CAT.VAL.COMPS < #comps >,
+                      CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
-;transitive-pass-verb-lex :=
+; DVM 2017-03-23: the old tr-verb-lex
+;tr-verb-lex := transitive-verb-lex &
+;  [ INFLECTED.VOICE-FLAG - ].
+
+; DVM 2017-03-23: the new tr-verb-lex
+tr-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
+  [ INFLECTED.VOICE-FLAG - ].
 
 intr-verb-lex := intransitive-verb-lex.
-
-tr-verb-lex := transitive-verb-lex &
-  [ INFLECTED.VOICE-FLAG - ].
 
 opt-tr-verb-lex := transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT + ].
@@ -790,34 +825,15 @@ ku-lex-rule := n-enclitic-lex-rule-super.
 
 mu-lex-rule := n-enclitic-lex-rule-super.
 
-active-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+; DVM 2017-03-23: added transitive-verb-lex for active voice
+active-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & transitive-verb-lex &
   [ INFLECTED.VOICE-FLAG +,
     DTR tr-verb-lex ].
 
-passive-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+; DVM 2017-03-23: for passive type 1
+passive-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & passive-verb-lex &
   [ INFLECTED.VOICE-FLAG +,
-    DTR tr-verb-lex,
-    SYNSEM [ LOCAL [ CAT [ HEAD verb,
-                           VAL [ SUBJ < #subj >,
-                                 COMPS < #comp > ] ],
-             	     CONT [ HOOK [ LTOP #lbl,
-                    		   INDEX #event ],
-                    	    RELS <! #keyrel !> ] ],
-             LKEYS.KEYREL #keyrel &
-                  	 [ LBL #lbl,
-                	   ARG0 #event,
-                	   ARG1 #ind2,
-                           ARG2 #ind1 ] ],
-    ARG-ST < #subj &
-             [ LOCAL [ CAT [ VAL [ SPR < >,
-                                   COMPS < > ],
-                             HEAD noun ],
-                       CONT.HOOK.INDEX #ind1 ] ],
-             #comp &
-             [ LOCAL [ CAT [ VAL [ SPR < >,
-                                   COMPS < > ],
-                             HEAD noun ],
-                       CONT.HOOK.INDEX #ind2 ] ] > ].
+    DTR tr-verb-lex ].
 
 act-lex-rule := active-voice-lex-rule-super.
 
@@ -1470,6 +1486,10 @@ adposition-nomod-lex := basic-nomod-adposition-lex & transitive-lex-item &
 
 adposition-lex := adposition-nomod-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+
+; DVM 2017-03-23 : for oleh in passive construction, semantically empty
+;adposition-particle-lex := adposition-nomod-lex &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
 adposition-mod-lex := intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD +nv,
