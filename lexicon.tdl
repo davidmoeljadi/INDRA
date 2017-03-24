@@ -51202,10 +51202,9 @@ kepada := adposition-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_kepada_p_rel",
     TRAITS native_token_list ].
 
-oleh := adposition-lex &
-  [ STEM < "oleh" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_oleh_p_rel",
-    TRAITS native_token_list ].
+;oleh := adposition-particle-lex &
+;  [ STEM < "oleh" >,
+;    TRAITS native_token_list ].
 
 pada := adposition-lex &
   [ STEM < "pada" >,

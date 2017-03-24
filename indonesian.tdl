@@ -185,7 +185,19 @@ pronoun := noun.
 pronoun-3person := pronoun.
 pronoun-non3person := pronoun.
 
+;; DVM 2017-03-23: the agent for passive type 1 is 3rd person nouns 
 3person-noun := commonnoun & propername & pronoun-3person.
+
+;;; Verb
+;; DVM 2017-03-24: make three groups for verb: active, passive type 1, and passive type 2
+activerb := verb.
+passiverbone := verb.
+passiverbtwo := verb.
+
+;;; Adposition
+;; DVM 2017-03-24: make a new group for semantically empty "oleh" (by)
+nonoleh-adp := adp.
+oleh-adp := adp.
 
 prep_rel := predsort.
 compound_p_rel := prep_rel.
@@ -428,15 +440,17 @@ intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
     ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
 
 transitive-verb-lex := main-verb-lex & transitive-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+  [ SYNSEM.LOCAL.CAT [ HEAD activerb,
+                       VAL.COMPS < #comps > ],
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
+                           POSTHEAD +,
                            HEAD noun ] ] > ].
 
-; DVM 2017-03-23: for passive type 1
-passive-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
+; DVM 2017-03-23: for passive type 1 without "oleh"
+passive-one-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
    [ ARG-ST < [ LOCAL [ CAT [ HEAD noun,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
@@ -447,10 +461,31 @@ passive-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-verb-le
                               VAL [ SPR < >,
                                     COMPS < > ] ],
                         CONT.HOOK [ INDEX ref-ind & #ind2,
-				  ICONS-KEY.IARG1 #clause ] ] ] >,
+				    ICONS-KEY.IARG1 #clause ] ] ] >,
      SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
 			     ARG2 #ind1 ],
-	      LOCAL [ CAT.VAL.COMPS < #comps >,
+	      LOCAL [ CAT [ HEAD passiverbone,
+                            VAL.COMPS < #comps > ],
+                      CONT.HOOK.CLAUSE-KEY #clause ] ] ].
+
+; DVM 2017-03-24: for passive type 2
+passive-two-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD noun,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind1,
+			 	    ICONS-KEY.IARG1 #clause ] ] ],
+              #comps &
+	      [ LOCAL [ CAT [ HEAD pronoun,
+                              POSTHEAD -,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind2,
+				    ICONS-KEY.IARG1 #clause ] ] ] >,
+     SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
+			     ARG2 #ind1 ],
+	      LOCAL [ CAT [ HEAD passiverbtwo,
+                            VAL.COMPS < #comps > ],
                       CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
 ; DVM 2017-03-23: the old tr-verb-lex
@@ -830,14 +865,16 @@ active-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & transiti
   [ INFLECTED.VOICE-FLAG +,
     DTR tr-verb-lex ].
 
-; DVM 2017-03-23: for passive type 1
-passive-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & passive-verb-lex &
+; DVM 2017-03-23: for passives
+passive-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED.VOICE-FLAG +,
     DTR tr-verb-lex ].
 
 act-lex-rule := active-voice-lex-rule-super.
 
-pas-lex-rule := passive-voice-lex-rule-super.
+pas-one-lex-rule := passive-voice-lex-rule-super & passive-one-verb-lex.
+
+pas-two-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex.
 
 ;adj-superlative-lex-rule :=
 
@@ -851,6 +888,9 @@ pas-lex-rule := passive-voice-lex-rule-super.
 ;basic-head-1st-comp-phrase :+ [ SYNSEM.L-PERIPH - ].
 
 head-comp-phrase := basic-head-1st-comp-phrase & head-initial.
+
+;; DVM 2017-03-24: for passive type 2
+comp-head-phrase := basic-head-1st-comp-phrase & head-final.
 
 ;head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
 ;  [ SYNSEM.LOCAL.CAT.HC-LIGHT - ].
@@ -904,7 +944,7 @@ cop-pp-lex := non-mod-lex-item & trans-first-arg-raising-lex-item-2 &
                              HEAD noun ] ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
-                           HEAD adp ] ] > ].
+                           HEAD nonoleh-adp ] ] > ].
 
 cop-adalah-pp-lex := cop-pp-lex.
 
@@ -1105,7 +1145,7 @@ locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 &
                        CONT.HOOK.INDEX #xarg ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
-                           HEAD adp ] ] > ].
+                           HEAD nonoleh-adp ] ] > ].
 
 trans-first-arg-raising-verb := main-verb-lex & trans-first-arg-raising-lex-item & no-hcons-lex-item &
   [ SYNSEM [ LKEYS.KEYREL arg1-relation & [ ARG1 #arg1 ],
@@ -1264,7 +1304,7 @@ v_pp*_dir_le := main-verb-lex & transitive-lex-item &
              #comps &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
-                           HEAD adp ] ] > ].
+                           HEAD nonoleh-adp ] ] > ].
 
 ; Temporary patch for e.g. 'take' which has an optional ARG3 role, which
 ; needs to be present so generator won't spuriously fill it.
@@ -1296,7 +1336,7 @@ ditransitive-verb-lex := main-verb-lex & ditransitive-lex-item &
              #comp2 &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
-                           HEAD adp ] ] > ].
+                           HEAD nonoleh-adp ] ] > ].
 
 ;; takes dir_state_modable_rel oblique complement.
 ;; put (takes variety of PP complements, so avoid chart dependency filter)
@@ -1469,10 +1509,11 @@ adverb-time-lex := basic-scopal-adverb-lex &
 
 ;; Question to Francis: how to change adp-nomod to adp-mod?
 adposition-nomod-lex := basic-nomod-adposition-lex & transitive-lex-item &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
-			     SPEC < >,
-			     SUBJ < #subj >,
-                             COMPS < #comps > ],
+  [ SYNSEM.LOCAL [ CAT [ HEAD nonoleh-adp, 
+                         VAL [ SPR < >,
+			       SPEC < >,
+			       SUBJ < #subj >,
+                               COMPS < #comps > ] ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST < #subj &
              [ LOCAL [ CAT [ HEAD noun,
@@ -1487,9 +1528,35 @@ adposition-nomod-lex := basic-nomod-adposition-lex & transitive-lex-item &
 adposition-lex := adposition-nomod-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
-; DVM 2017-03-23 : for oleh in passive construction, semantically empty
-;adposition-particle-lex := adposition-nomod-lex &
-;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+; DVM 2017-03-23 : for "oleh" in passive construction, semantically empty
+adposition-particle-lex := basic-nomod-adposition-lex &
+  [ SYNSEM.LOCAL.CAT [ HEAD oleh-adp,
+                       VAL.COMPS.FIRST.OPT - ] ].
+
+; DVM 2017-03-24: for passive type 1 with "oleh"
+passive-oleh-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD noun,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind1,
+			 	    ICONS-KEY.IARG1 #clause ] ] ],
+              #comps &
+	      [ LOCAL [ CAT [ HEAD oleh-adp,
+                              VAL [ SPR < >,
+                                    COMPS < [ OPT -,
+                                              LOCAL [ CAT [ HEAD 3person-noun,
+                                                            VAL [ SPR < >,
+                                                                  COMPS < > ] ],
+                                                      CONT.HOOK [ INDEX ref-ind & #ind2,
+				                                  ICONS-KEY.IARG1 #clause ] ] ] > ] ] ] ] >,
+     SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
+			     ARG2 #ind1 ],
+	      LOCAL [ CAT [ HEAD passiverbone,
+                            VAL.COMPS < #comps > ],
+                      CONT.HOOK.CLAUSE-KEY #clause ] ] ].
+
+
+
 
 adposition-mod-lex := intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD +nv,
@@ -1643,7 +1710,7 @@ zero-cop-pp-rule := unary-phrase &
 						     VAL [ SPR < >,
                                      			   COMPS < > ] ],
                            		       CONT.HOOK.INDEX #x1 ] ] > ] ] ] ,
-   ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD adp &
+   ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD nonoleh-adp &
 				      [ EMPTY - ],
                            	 VAL [ SPR < >,
                                        COMPS < > ] ],

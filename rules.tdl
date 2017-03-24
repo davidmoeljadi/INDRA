@@ -15,10 +15,14 @@ head-adj-scop := head-adj-scop-phrase.
 
 head-comp := head-comp-phrase.
 
+;; DVM 2017-03-24: for passive type 2
+;; DVM 2017-03-24: question to Francis how to constrain this rule to lexical (passive) head only
+comp-head := comp-head-phrase.
+
 subj-head := subj-head-phrase.
 
-;DVM 2017-02-21: deactivate this so that INDRA won't parse [ada dua buku] merah.
-;head-spec := head-spec-phrase.
+;DVM 2017-02-21: deactivate this so that INDRA won't parse [[ada dua buku] merah].
+head-spec := head-spec-phrase.
 
 bare-np := bare-np-phrase.
 

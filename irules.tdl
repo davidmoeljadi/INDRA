@@ -113,10 +113,20 @@ act-prefix :=
 act-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
-pas-prefix :=
+pas-one-prefix :=
 %prefix (* di)
-pas-lex-rule &
+pas-one-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT + ].
+
+pas-two-prefix :=
+%prefix (* )
+pas-two-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+
+;pas-oleh-prefix :=
+;%prefix (* di)
+;pas-oleh-lex-rule &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
 ;adj-superlative-prefix :=
 ;%prefix (* ter)
