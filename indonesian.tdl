@@ -141,10 +141,10 @@ pl := pernum.
 1pl_excl := 1pl.
 2pl := 2nd & pl.
 3pl := 3rd & pl.
-indet := pernum.
-1indet := 1st & indet.
-2indet := 2nd & indet.
-3indet := 3rd & indet.
+;indet := pernum.
+;1indet := 1st & indet.
+;2indet := 2nd & indet.
+;3indet := 3rd & indet.
 
 ;;; Animacy
 
@@ -201,6 +201,9 @@ oleh-adp := adp.
 
 prep_rel := predsort.
 compound_p_rel := prep_rel.
+
+;; DVM 2017-05-09: add new serial verb construction (svc) predicate relation
+svc_p_rel := prep_rel.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -442,7 +445,7 @@ intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
 transitive-verb-lex := main-verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT [ HEAD activerb,
                        VAL.COMPS < #comps > ],
-    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+    ARG-ST < [ LOCAL.CAT [ HEAD noun ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
@@ -458,6 +461,7 @@ passive-one-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-ver
 			 	    ICONS-KEY.IARG1 #clause ] ] ],
               #comps &
 	      [ LOCAL [ CAT [ HEAD 3person-noun,
+                              POSTHEAD +,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
                         CONT.HOOK [ INDEX ref-ind & #ind2,
@@ -509,10 +513,10 @@ obj-drop-verb-lex := transitive-verb-lex.
 ;;; Auxiliaries
 
 subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
-                             SPEC < >,
-                             COMPS < #comps >,
-                             SUBJ < #subj > ],
+  [ SYNSEM.LOCAL [ CAT [ VAL [ SPR < >,
+                               SPEC < >,
+                               COMPS < #comps >,
+                               SUBJ < #subj > ] ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST < #subj &
              [ LOCAL [ CAT [ HEAD noun,
@@ -526,14 +530,16 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
                                  COMPS < >,
                                  SPR 0-1-list,
                                  SPEC < > ],
+                           POSTHEAD +,
                            HEAD +vjp ] ] > ].
 
 subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
 
 subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item & no-icons-lex-item & 
-  [ ARG-ST < [ ], [ LOCAL.CAT.HEAD.AUX - ] > ].
+  [ ARG-ST < [ ], [ LOCAL.CAT [ HEAD.AUX -,
+                                POSTHEAD + ] ] > ].
 
-aspect_perf-aux-lex := subj-raise-aux-no-pred & 
+aspect_perf-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
 		       VAL [ SPR < >,
 			     COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf,
@@ -1867,6 +1873,39 @@ compound-noun-phrase := head-initial &
                    LBL #lbl,
                    ARG1 #externalargument,
                    ARG2 #internalargument] !>, HCONS <! !> ] ].
+
+;; DVM 2017-05-09 : added compound-verb-phrase for serial verb constructions
+compound-verb-phrase := head-initial &
+ [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
+                            COMPS < > ] ,
+                  CONT.HOOK #head ],
+   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb,
+                                 VAL [ SUBJ < #spr > ,
+                                       COMPS < > ]] ,
+                           CONT [ HOOK #head &
+                                       [INDEX #externalargument,
+                                        LTOP #lbl ]]]],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb,
+                                     VAL [ SUBJ < #spr >,
+                                           COMPS < > ]],
+                               CONT.HOOK.INDEX #internalargument ],
+   C-CONT [ RELS <! arg12-ev-relation & 
+                  [PRED svc_p_rel,
+                   LBL #lbl,
+                   ARG1 #externalargument,
+                   ARG2 #internalargument] !>, HCONS <! !> ] ].
+
+#|
+compound-coordinated-verb-phrase := basic-zero-arg & single-rel-lex-item & no-hcons-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD conj & [ MOD null ],
+                           VAL [ SPR < >,
+                                 COMPS < >,
+                                 SUBJ < > ]],
+                     CONT [ HOOK [ LTOP #ltop,
+                                   INDEX #index ],
+                            RELS.LIST.FIRST #keyrel ]],
+             LKEYS.KEYREL #keyrel & subord-or-coord-relation & [ LBL #ltop ]]].
+|#
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the

@@ -17,7 +17,7 @@ head-comp := head-comp-phrase.
 
 ;; DVM 2017-03-24: for passive type 2
 ;; DVM 2017-03-24: question to Francis how to constrain this rule to lexical (passive) head only
-comp-head := comp-head-phrase.
+;comp-head := comp-head-phrase.
 
 subj-head := subj-head-phrase.
 
@@ -65,6 +65,10 @@ zero-cop := zero-cop-rule.
 
 ;; this is the rule for noun noun compound
 n-n-compound := compound-noun-phrase.
+
+;; DVM 2017-05-09: this is the rule for serial verb construction (verb verb compound)
+v-v-compound := compound-verb-phrase.
+;v-v-coord-compound := compound-coordinated-verb-phrase.
 
 ;; Also need to add to rules.tdl:
 ;xp-xp-bridge-c := bridge-binary-phrase.

@@ -118,10 +118,10 @@ pas-one-prefix :=
 pas-one-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT + ].
 
-pas-two-prefix :=
-%prefix (* )
-pas-two-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+;pas-two-prefix :=
+;%prefix (* )
+;pas-two-lex-rule &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
 ;pas-oleh-prefix :=
 ;%prefix (* di)

@@ -2378,8 +2378,6 @@ two-icons-lex-item := lex-item & [ SYNSEM.LOCAL.CONT.ICONS <! [ ], [ ] !> ].
 ; messages). HCONS should now (in most cases) be constrained
 ; by the linking types.
 
-
-
 norm-sem-lex-item := norm-hook-lex-item & single-rel-lex-item.
 
 hcons-lex-item := norm-hook-lex-item & single-rel-lex-item.
@@ -2583,7 +2581,6 @@ basic-three-arg-no-hcons := basic-three-arg & no-hcons-lex-item.
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; For verbs, adjectives and nouns that don't require specifiers
-
 
 ; Kim is tired, Kim sleeps, Kim is in the park, Kim is a student.
 ; Kim ga nemui, Kim ga neru.
