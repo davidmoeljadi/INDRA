@@ -5,6 +5,7 @@ variable-property-mapping := "../semi.vpm".
 preprocessor              := "../repp/vanilla.rpp".
 ;generation-ignore-signs   := "generation.ignore".
 generation-trigger-rules  := "../trigger.mtr".
+generation-fixup-rules    := "../gen-fixup.mtr".
 version                   := "../Version.lsp".
 parse-node-labels         := "../labels.tdl".
 
@@ -19,8 +20,8 @@ lex-pred-path             := SYNSEM LKEYS KEYREL PRED.
 rule-rels-path            := C-CONT RELS.
 label-path                := LABEL-NAME.
 
-parsing-roots             := root.
-generation-roots          := root.
+parsing-roots             := root frag.
+generation-roots          := root frag.
 
 semarg-type               := semarg.
 handle-type               := h.
@@ -53,7 +54,6 @@ icons-right := IARG2.
 ;; Also need to add root-bridge to parsing-roots in ace/config.tdl ()
 ; e.g. 
 ;parsing-roots             := root root-bridge.
-parsing-roots             := root.
 
 ;;;Token Mapping
 ;; token settings
