@@ -1876,6 +1876,7 @@ compound-noun-phrase := head-initial &
                    ARG2 #internalargument] !>, HCONS <! !> ] ].
 
 ;; DVM 2017-05-09 : added compound-verb-phrase for serial verb constructions (V1 = intransitive, V2 = (in)transitive)
+;; added EMPTY - to avoid zero-copula
 compound-verb-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
                             COMPS < > ] ,
@@ -1886,7 +1887,8 @@ compound-verb-phrase := head-initial &
                              CONT [ HOOK #head &
                                        [INDEX #externalargument,
                                         LTOP #lbl ] ] ] ],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -,
+                                                  EMPTY -],
                                      VAL [ SUBJ < #spr >,
                                            COMPS < > ]],
                                CONT.HOOK.INDEX #internalargument ],
@@ -1897,6 +1899,7 @@ compound-verb-phrase := head-initial &
                    ARG2 #internalargument] !>, HCONS <! !> ] ].
 
 ;; DVM 2017-05-11 : added compound-coordinated-verb-phrase for serial verb constructions (V1 and V2 = transitive verbs)
+;; added EMPTY - to avoid zero-copula
 compound-coordinated-verb-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
                             COMPS < #cmp > ] ,
@@ -1905,7 +1908,8 @@ compound-coordinated-verb-phrase := head-initial &
                                  VAL [ SUBJ < #spr > ,
                                        COMPS < #cmp & [OPT -] > ]] ,
                              CONT [ HOOK.INDEX #externalargument ]]],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -,
+                                                  EMPTY -],
                                      VAL [ SUBJ < #spr >,
                                            COMPS < #cmp & [OPT -] > ]],
                                CONT.HOOK.INDEX #internalargument ],
@@ -1920,6 +1924,7 @@ compound-coordinated-verb-phrase := head-initial &
 
 ;; DVM 2017-05-11 : added compound-verb-phrase for serial verb constructions (V1 = transitive, V2 = intransitive)
 ;; V2 is the result of V1
+;; added EMPTY - to avoid zero-copula
 compound-result-verb-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
                             COMPS < #cps > ] ,
@@ -1930,7 +1935,8 @@ compound-result-verb-phrase := head-initial &
                              CONT [ HOOK #head &
                                        [INDEX #externalargument,
                                         LTOP #lbl ]]]],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -,
+                                                  EMPTY -],
                                      VAL [ SUBJ < #cps >,
                                            COMPS null ]],
                                CONT.HOOK.INDEX #internalargument ],
@@ -1939,29 +1945,6 @@ compound-result-verb-phrase := head-initial &
                    LBL #lbl,
                    ARG1 #externalargument,
                    ARG2 #internalargument] !>, HCONS <! !> ] ].
-
-#|
-compound-coordinated-verb-phrase := non-headed-phrase &
- [ SYNSEM.LOCAL [ CAT [ HEAD verb,
-                        VAL [ SUBJ < #spr & [SYNSEM.LOCAL.CAT.HEAD noun] >,
-                              COMPS < #cmp & [SYNSEM.LOCAL.CAT.HEAD noun] > ] ] ],
-   NON-HEAD-DTR < [SYNSEM.LOCAL [ CAT [ HEAD verb,
-                                        VAL [ SUBJ < #spr >,
-                                              COMPS < #cmp > ]],
-                                  CONT.HOOK.INDEX #arg1 ] ],
-                  [SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
-                                        VAL [ SUBJ < #spr >,
-                                              COMPS < #cmp > ]],
-                                  CONT.HOOK.INDEX #arg2 ] ] >,
-   C-CONT [ HOOK [ INDEX #index,
-                   LTOP #lbl ],
-            RELS <! arg12-ev-relation & 
-                  [PRED svc_p_rel,
-                   LBL #lbl,
-                   ARG0 #index,
-                   ARG1 #arg1,
-                   ARG2 #arg2] !>, HCONS <! !> ] ].
-|#
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the
