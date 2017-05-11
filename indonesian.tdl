@@ -1169,8 +1169,7 @@ trans-first-arg-raising-verb := main-verb-lex & trans-first-arg-raising-lex-item
                       CONT.HOOK.INDEX #xarg ] ],
             #comps &
             [ LOCAL [ CONT.HOOK.INDEX #arg1,
-			CAT [ HEAD verb &
-                                [ AUX - ],
+			CAT [ HEAD verb,
                           VAL [ COMPS < >,
                                 SPR < >,
                                 SPEC < >,
