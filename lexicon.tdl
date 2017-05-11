@@ -50949,6 +50949,11 @@ tampak := trans-first-arg-raising-verb &
     SYNSEM.LKEYS.KEYREL.PRED "_tampak_v_rel",
     TRAITS native_token_list ].
 
+terasa := trans-first-arg-raising-verb &
+  [ STEM < "terasa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_terasa_v_rel",
+    TRAITS native_token_list ].
+
 ;;; Ditransitive Raising
 
 mengharapkan_1 := ditrans-second-arg-raising-verb &
