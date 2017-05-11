@@ -50709,6 +50709,11 @@ kemas := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_kemas_v_rel",
     TRAITS native_token_list ].
 
+keroyok := tr-verb-lex &
+  [ STEM < "keroyok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keroyok_v_rel",
+    TRAITS native_token_list ].
+
 khususkan := tr-verb-lex &
   [ STEM < "khususkan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_khususkan_v_rel",
@@ -50842,6 +50847,11 @@ temukan := tr-verb-lex &
 tes := tr-verb-lex &
   [ STEM < "tes" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tes_v_rel",
+    TRAITS native_token_list ].
+
+tuju := tr-verb-lex &
+  [ STEM < "tuju" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tuju_v_rel",
     TRAITS native_token_list ].
 
 usir := tr-verb-lex &
@@ -72477,6 +72487,11 @@ ganggu := tr-verb-lex &
 gapai := tr-verb-lex &
   [ STEM < "gapai" >,
     SYNSEM.LKEYS.KEYREL.PRED "_gapai_v_rel",
+    TRAITS native_token_list ].
+
+gapai-gapai := tr-verb-lex &
+  [ STEM < "gapai²" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_gapai-gapai_v_rel",
     TRAITS native_token_list ].
 
 garuk := tr-verb-lex &

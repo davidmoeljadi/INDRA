@@ -204,6 +204,7 @@ compound_p_rel := prep_rel.
 
 ;; DVM 2017-05-09: add new serial verb construction (svc) predicate relation
 svc_p_rel := prep_rel.
+svc_p_coord_rel := prep_rel.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -1874,6 +1875,27 @@ compound-noun-phrase := head-initial &
                    ARG2 #internalargument] !>, HCONS <! !> ] ].
 
 ;; DVM 2017-05-09 : added compound-verb-phrase for serial verb constructions
+compound-coordinated-verb-phrase := head-initial &
+ [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
+                            COMPS < #cmp > ] ,
+                  CONT.HOOK #head ],
+   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb,
+                                 VAL [ SUBJ < #spr > ,
+                                       COMPS < #cmp > ]] ,
+                             CONT [ HOOK.INDEX #externalargument ]]],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
+                                     VAL [ SUBJ < #spr >,
+                                           COMPS < #cmp > ]],
+                               CONT.HOOK.INDEX #internalargument ],
+   C-CONT [ HOOK #head & [ INDEX #index,
+                           LTOP #lbl],
+            RELS <! arg12-ev-relation & 
+                  [PRED svc_p_coord_rel,
+                   LBL #lbl,
+                   ARG0 #index,
+                   ARG1 #externalargument,
+                   ARG2 #internalargument] !>, HCONS <! !> ] ].
+
 compound-verb-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
                             COMPS < > ] ,
@@ -1881,7 +1903,7 @@ compound-verb-phrase := head-initial &
    HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb,
                                  VAL [ SUBJ < #spr > ,
                                        COMPS < > ]] ,
-                           CONT [ HOOK #head &
+                             CONT [ HOOK #head &
                                        [INDEX #externalargument,
                                         LTOP #lbl ]]]],
    NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
@@ -1895,15 +1917,26 @@ compound-verb-phrase := head-initial &
                    ARG2 #internalargument] !>, HCONS <! !> ] ].
 
 #|
-compound-coordinated-verb-phrase := basic-zero-arg & single-rel-lex-item & no-hcons-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD conj & [ MOD null ],
-                           VAL [ SPR < >,
-                                 COMPS < >,
-                                 SUBJ < > ]],
-                     CONT [ HOOK [ LTOP #ltop,
-                                   INDEX #index ],
-                            RELS.LIST.FIRST #keyrel ]],
-             LKEYS.KEYREL #keyrel & subord-or-coord-relation & [ LBL #ltop ]]].
+compound-coordinated-verb-phrase := non-headed-phrase &
+ [ SYNSEM.LOCAL [ CAT [ HEAD verb,
+                        VAL [ SUBJ < #spr & [SYNSEM.LOCAL.CAT.HEAD noun] >,
+                              COMPS < #cmp & [SYNSEM.LOCAL.CAT.HEAD noun] > ] ] ],
+   NON-HEAD-DTR < [SYNSEM.LOCAL [ CAT [ HEAD verb,
+                                        VAL [ SUBJ < #spr >,
+                                              COMPS < #cmp > ]],
+                                  CONT.HOOK.INDEX #arg1 ] ],
+                  [SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
+                                        VAL [ SUBJ < #spr >,
+                                              COMPS < #cmp > ]],
+                                  CONT.HOOK.INDEX #arg2 ] ] >,
+   C-CONT [ HOOK [ INDEX #index,
+                   LTOP #lbl ],
+            RELS <! arg12-ev-relation & 
+                  [PRED svc_p_rel,
+                   LBL #lbl,
+                   ARG0 #index,
+                   ARG1 #arg1,
+                   ARG2 #arg2] !>, HCONS <! !> ] ].
 |#
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
