@@ -204,7 +204,8 @@ compound_p_rel := prep_rel.
 
 ;; DVM 2017-05-09: add new serial verb construction (svc) predicate relation
 svc_p_rel := prep_rel.
-svc_p_coord_rel := prep_rel.
+svc_coord_p_rel := prep_rel.
+svc_result_p_rel := prep_rel.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -1874,44 +1875,67 @@ compound-noun-phrase := head-initial &
                    ARG1 #externalargument,
                    ARG2 #internalargument] !>, HCONS <! !> ] ].
 
-;; DVM 2017-05-09 : added compound-verb-phrase for serial verb constructions
-compound-coordinated-verb-phrase := head-initial &
- [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
-                            COMPS < #cmp > ] ,
-                  CONT.HOOK #head ],
-   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb,
-                                 VAL [ SUBJ < #spr > ,
-                                       COMPS < #cmp > ]] ,
-                             CONT [ HOOK.INDEX #externalargument ]]],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
-                                     VAL [ SUBJ < #spr >,
-                                           COMPS < #cmp > ]],
-                               CONT.HOOK.INDEX #internalargument ],
-   C-CONT [ HOOK #head & [ INDEX #index,
-                           LTOP #lbl],
-            RELS <! arg12-ev-relation & 
-                  [PRED svc_p_coord_rel,
-                   LBL #lbl,
-                   ARG0 #index,
-                   ARG1 #externalargument,
-                   ARG2 #internalargument] !>, HCONS <! !> ] ].
-
+;; DVM 2017-05-09 : added compound-verb-phrase for serial verb constructions (V1 = intransitive, V2 = (in)transitive)
 compound-verb-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
                             COMPS < > ] ,
                   CONT.HOOK #head ],
    HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb,
                                  VAL [ SUBJ < #spr > ,
-                                       COMPS < > ]] ,
+                                       COMPS null ]] ,
                              CONT [ HOOK #head &
                                        [INDEX #externalargument,
-                                        LTOP #lbl ]]]],
+                                        LTOP #lbl ] ] ] ],
    NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
                                      VAL [ SUBJ < #spr >,
                                            COMPS < > ]],
                                CONT.HOOK.INDEX #internalargument ],
    C-CONT [ RELS <! arg12-ev-relation & 
                   [PRED svc_p_rel,
+                   LBL #lbl,
+                   ARG1 #externalargument,
+                   ARG2 #internalargument] !>, HCONS <! !> ] ].
+
+;; DVM 2017-05-11 : added compound-coordinated-verb-phrase for serial verb constructions (V1 and V2 = transitive verbs)
+compound-coordinated-verb-phrase := head-initial &
+ [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
+                            COMPS < #cmp > ] ,
+                  CONT.HOOK #head ],
+   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb,
+                                 VAL [ SUBJ < #spr > ,
+                                       COMPS < #cmp & [OPT -] > ]] ,
+                             CONT [ HOOK.INDEX #externalargument ]]],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
+                                     VAL [ SUBJ < #spr >,
+                                           COMPS < #cmp & [OPT -] > ]],
+                               CONT.HOOK.INDEX #internalargument ],
+   C-CONT [ HOOK #head & [ INDEX #index,
+                           LTOP #lbl],
+            RELS <! arg12-ev-relation & 
+                  [PRED svc_coord_p_rel,
+                   LBL #lbl,
+                   ARG0 #index,
+                   ARG1 #externalargument,
+                   ARG2 #internalargument] !>, HCONS <! !> ] ].
+
+;; DVM 2017-05-11 : added compound-verb-phrase for serial verb constructions (V1 = transitive, V2 = intransitive)
+;; V2 is the result of V1
+compound-result-verb-phrase := head-initial &
+ [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
+                            COMPS < #cps > ] ,
+                  CONT.HOOK #head ],
+   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb,
+                                 VAL [ SUBJ < #spr > ,
+                                       COMPS < #cps > ]] ,
+                             CONT [ HOOK #head &
+                                       [INDEX #externalargument,
+                                        LTOP #lbl ]]]],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
+                                     VAL [ SUBJ < #cps >,
+                                           COMPS null ]],
+                               CONT.HOOK.INDEX #internalargument ],
+   C-CONT [ RELS <! arg12-ev-relation & 
+                  [PRED svc_result_p_rel,
                    LBL #lbl,
                    ARG1 #externalargument,
                    ARG2 #internalargument] !>, HCONS <! !> ] ].

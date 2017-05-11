@@ -69,6 +69,7 @@ n-n-compound := compound-noun-phrase.
 ;; DVM 2017-05-09: this is the rule for serial verb construction (verb verb compound)
 v-v-compound := compound-verb-phrase.
 v-v-coord-compound := compound-coordinated-verb-phrase.
+v-v-result-compound := compound-result-verb-phrase.
 
 ;; Also need to add to rules.tdl:
 ;xp-xp-bridge-c := bridge-binary-phrase.
