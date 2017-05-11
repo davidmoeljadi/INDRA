@@ -22,7 +22,8 @@
 email_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM
              ^<?[[:alnum:]._-]+@[[:alnum:]_-]+(\.[[:alnum:]_-]+)+>?$ ] >,
-  +OUTPUT < [ +CLASS email_ne ] > ].
+  +OUTPUT < [ +CLASS email_ne ] >,
+  +CONTEXT < > ].
 
 ;;;
 ;;; uniform resource locators (URLs)
@@ -33,21 +34,24 @@ email_ne_tmr := ne_tmt &
 ;;
 url_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^<?http://[[:alnum:]_-]+(\.[[:alnum:]_-]+)+(/.*)?>?$ ] >,
-  +OUTPUT < [ +CLASS url_ne ] > ].
+  +OUTPUT < [ +CLASS url_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; any valid DNS string, prefixed by `www', with optional angle brackets
 ;;
 url_ne_2_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^<?www(\.[[:alnum:]_-]+)+(/.*)?>?$ ] >,
-  +OUTPUT < [ +CLASS url_ne ] > ].
+  +OUTPUT < [ +CLASS url_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; any valid DNS string, with obligatory angle brackets
 ;;
 url_ne_3_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^<[[:alnum:]_-]+(\.[[:alnum:]_-]+)+(/.*)?>$ ] >,
-  +OUTPUT < [ +CLASS url_ne ] > ].
+  +OUTPUT < [ +CLASS url_ne ] >,
+  +CONTEXT < > ].
 
 ;;;
 ;;; file names
@@ -64,7 +68,8 @@ url_ne_3_tmr := ne_tmt &
 ;;
 file_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^(/[[:alnum:]._-]+){2,}/?$ ] >,
-  +OUTPUT < [ +CLASS file_ne ] > ].
+  +OUTPUT < [ +CLASS file_ne ] >,
+  +CONTEXT < > ].
 
 
 ;;;
@@ -91,11 +96,13 @@ file_ne_tmr := ne_tmt &
 ;;                       
 time_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^(0?[0-9]|1[0-2])([:.][0-5][0-9])?([aApP][mM])$ ] >,
-  +OUTPUT  < [ +CLASS time_ne ] > ].
+  +OUTPUT  < [ +CLASS time_ne ] >,
+  +CONTEXT < > ].
 
 time_ne_2_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^(0?[0-9]|1[0-9]|2[0-4]):[0-5][0-9]$ ] >,
-  +OUTPUT  < [ +CLASS meas_or_time_ne ] > ].
+  +OUTPUT  < [ +CLASS meas_or_time_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; to also match |10.30| as a candiate time, there is an underspecification of
@@ -104,26 +111,31 @@ time_ne_2_tmr := ne_tmt &
 ;;
 time_ne_3_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^(0?[0-9]|1[0-9]|2[0-4])\.[0-5][0-9]$ ] >,
-  +OUTPUT  < [ +CLASS card_or_time_ne ] > ].
+  +OUTPUT  < [ +CLASS card_or_time_ne ] >,
+  +CONTEXT < > ].
 
 
 ;; ZZF 2016-12-05 time patterns for Chinese
 ;; limitation: no space is allowed in the pattern (must be one token)
 time_ne_4_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^([零〇一二三四五六七八九十]|十[一二])点[一二三]刻$ ] >,
-  +OUTPUT  < [ +CLASS time_ne ] > ].
+  +OUTPUT  < [ +CLASS time_ne ] >,
+  +CONTEXT < > ].
 
 time_ne_5_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^([零〇一二三四五六七八九十]|十[一二])点半$ ] >,
-  +OUTPUT  < [ +CLASS time_ne ] > ].
+  +OUTPUT  < [ +CLASS time_ne ] >,
+  +CONTEXT < > ].
 
 time_ne_6_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^(十?[一二三四五六七八九]|二十[一二三]|[十零〇])点(([一二三四五]十|[零〇])?[一二三四五六七八九]|[一二三四五]十)分$ ] >,
-  +OUTPUT  < [ +CLASS time_ne ] > ].
+  +OUTPUT  < [ +CLASS time_ne ] >,
+  +CONTEXT < > ].
 
 time_ne_7_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^([一两三四五六七八九十]|十[一二])点钟$ ] >,
-  +OUTPUT  < [ +CLASS time_ne ] > ].
+  +OUTPUT  < [ +CLASS time_ne ] >,
+  +CONTEXT < > ].
 
 ;;;
 ;;; dates
@@ -147,11 +159,13 @@ time_ne_7_tmr := ne_tmt &
 ;;
 date_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^([0-9]{1,2}[-/]){2}[0-9]{2,4}$ ] >,
-  +OUTPUT < [ +CLASS date_ne ] > ].   
+  +OUTPUT < [ +CLASS date_ne ] >,
+  +CONTEXT < > ].   
 
 date_ne_2_tmr := add_ne_tmt &
 [ +CONTEXT < [ +FORM ^([01]?[0-9][-/])[0-9]{1,2}$ ] >,
-  +OUTPUT < [ +CLASS date_ne ] > ].   
+  +OUTPUT < [ +CLASS date_ne ] >,
+  +INPUT < > ].   
 
 
 ;;;
@@ -164,11 +178,13 @@ date_ne_2_tmr := add_ne_tmt &
 ;;
 ratio_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[1-9][0-9]{0,2}:[1-9][0-9]*$ ] >,
-  +OUTPUT < [ +CLASS meas_ne ] > ].   
+  +OUTPUT < [ +CLASS meas_ne ] >,
+  +CONTEXT < > ].   
 
 ratio_ne_2_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[1-9][0-9]{0,2}:[1-9][0-9]{0,2}(,[0-9]{3})*$ ] >,
-  +OUTPUT < [ +CLASS meas_ne ] > ].   
+  +OUTPUT < [ +CLASS meas_ne ] >,
+  +CONTEXT < > ].   
 
 
 ;;;
@@ -176,7 +192,8 @@ ratio_ne_2_tmr := ne_tmt &
 ;;;
 fraction_ne_tmr := add_ne_tmt &
 [ +CONTEXT < [ +FORM ^[0-9]+(\.[0-9]*)?/[1-9][0-9]*(th)?$ ] >,
-  +OUTPUT < [ +CLASS frct_ne ] > ].   
+  +OUTPUT < [ +CLASS frct_ne ] >,
+  +INPUT < > ].   
 
 
 ;;;
@@ -195,7 +212,8 @@ fraction_ne_tmr := add_ne_tmt &
 measure_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM 
           ^[-+±~]?[0-9]+([,.][0-9]*)?([kKmMgGµ"']+|[ckmn]m|σ|Å|[º°][CF]?)$ ] >,
-  +OUTPUT < [ +CLASS card_or_meas_ne ] > ].
+  +OUTPUT < [ +CLASS card_or_meas_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; |1:1000m|
@@ -203,7 +221,8 @@ measure_ne_tmr := ne_tmt &
 ratio_measure_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM 
              ^[1-9][0-9]{0,2}:[1-9][0-9]*([kKmMgG"']+|[ckmn]m|σ|[º°][CF]?)$ ]>,
-  +OUTPUT < [ +CLASS meas_ne ] > ].   
+  +OUTPUT < [ +CLASS meas_ne ] >,
+  +CONTEXT < > ].   
 
 ;;
 ;; |US$20| and the like: break into two tokens, to get a bracketing compatible
@@ -240,7 +259,8 @@ ratio_measure_ne_tmr := ne_tmt &
 ;;;
 decade_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^(?:1[0-9])?[0-9]0[sS]$ ] >,
-  +OUTPUT < [ +CLASS plur_ne ] > ].
+  +OUTPUT < [ +CLASS plur_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; _fix_me_
@@ -278,14 +298,16 @@ decade_ne_1_tmr := ne_tmt &
 ;;
 alphanumeric_identifier_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[0-9]*[[:alpha:]]+[0-9]+[[:alnum:]]*$ ] >,
-  +OUTPUT < [ +CLASS proper_ne ] > ].
+  +OUTPUT < [ +CLASS proper_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; a special case: a number, a hyphen, followed by a single letter: |22-b|
 ;;
 alphanumeric_identifier_ne_2_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[0-9]+-[[:alpha:]]$ ] >,
-  +OUTPUT < [ +CLASS proper_ne ] > ].
+  +OUTPUT < [ +CLASS proper_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; in a similar spirit, a number followed by letters in parentheses: |22(B)|;
@@ -307,14 +329,16 @@ alphanumeric_identifier_ne_2_tmr := ne_tmt &
 ;;
 alphanumeric_identifier_ne_4_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[0-9]+[[:alpha:]]$ ] >,
-  +OUTPUT < [ +CLASS proper_ne ] > ].
+  +OUTPUT < [ +CLASS proper_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; the following are maybe taken from chemistry: |B.25| |IL-10| |IL/10|
 ;;
 chemistry_identifier_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[0-9]*[[:upper:]]+[-./][[:upper:]]*[0-9]+$ ] >,
-  +OUTPUT < [ +CLASS proper_ne ] > ].
+  +OUTPUT < [ +CLASS proper_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; strongly alphanumeric strings (i.e. including digits), with at least two
@@ -328,18 +352,21 @@ chemistry_identifier_ne_tmr := ne_tmt &
 ;;                                                              (3-jun-09; oe)
 hyphenated_identifier_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[[:alpha:]]*[0-9]+[[:alpha:]0-9]*(-[[:alnum:]]+){2,}$ ] >,
-  +OUTPUT < [ +CLASS proper_ne ] > ].
+  +OUTPUT < [ +CLASS proper_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; section numbers (and the like): two or more decimal points
 ;;
 section_number_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[0-9]+\.[0-9]+(\.[0-9]+)+$ ] >,
-  +OUTPUT < [ +CLASS proper_ne ] > ].
+  +OUTPUT < [ +CLASS proper_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; phone numbers: (6231)222333 
 ;;
 phone_number_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^\([0-9]+\)[0-9]+$ ] >,
-  +OUTPUT < [ +CLASS proper_ne ] > ].
+  +OUTPUT < [ +CLASS proper_ne ] >,
+  +CONTEXT < > ].

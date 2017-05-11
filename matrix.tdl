@@ -3155,9 +3155,9 @@ basic-subord-conjunction-lex := basic-one-arg &
 ; null-coord-rel: used when a conjunction contributes *no* relation.
 
 implicit-coord-rel := coordination-relation &
-  [ PRED 'implicit_coord_rel ].
+  [ PRED "coord_c_implicit_rel" ].
 null-coord-rel := coordination-relation &
-  [ PRED 'null_coord_rel ].
+  [ PRED "coord_c_null_rel" ].
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Conjunction parts of speech

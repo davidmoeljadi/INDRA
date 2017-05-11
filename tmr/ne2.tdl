@@ -26,14 +26,16 @@
 ;;
 card_or_dom_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^([2-9]|[1-2][0-9]|3[01])$ ] >,
-  +OUTPUT < [ +CLASS card_or_dom_ne ] > ].
+  +OUTPUT < [ +CLASS card_or_dom_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; (candidate) years: |950|, |1805|, |1957|, |2005|, et al.
 ;;
 card_or_year_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[12]?[0-9]{3}$ ] >,
-  +OUTPUT < [ +CLASS card_or_year_ne ] > ].
+  +OUTPUT < [ +CLASS card_or_year_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; any sequence of digits, with optional sign and optional decimal point.  to
@@ -44,7 +46,8 @@ card_or_year_ne_tmr := ne_tmt &
 ;DVM 2017-02-21: changed [1-9] to [2-9]
 card_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[-+±~]?([2-9]|[1-9][0-9][0-9]*)(\.|-)?$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] > ].
+  +OUTPUT < [ +CLASS card_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; floating point numbers, with optional sign and at least one decimal.  again
@@ -52,33 +55,39 @@ card_ne_1_tmr := ne_tmt &
 ;;
 card_ne_2_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[-+±~]?[0-9]*\.[0-9]+$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] > ].
+  +OUTPUT < [ +CLASS card_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; US-style or German separators, optional sign and decimals: e.g. |23,000.-|
 ;;
 card_ne_3_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[-+±]?[1-9][0-9]{0,2}([,.][0-9]{3})+([,.]([0-9]*|-))?$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] > ].
+  +OUTPUT < [ +CLASS card_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; SSH 2015-04-10 Chinese Digit
 ;;
 card_ne_4_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[１-９][０-９][，,]?[０-９][０-９][０-９]+$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] > ].
+  +OUTPUT < [ +CLASS card_ne ] >,
+  +CONTEXT < > ].
 
 card_ne_5_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[１-９][，,][０-９][０-９][０-９]$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] > ].
+  +OUTPUT < [ +CLASS card_ne ] >,
+  +CONTEXT < > ].
 
 card_ne_6_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[零〇０一壹二贰三叁四五六七八九十百千万亿兆][零〇０一壹二贰三叁四五六七八九十百千万亿兆，]+$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] > ].
+  +OUTPUT < [ +CLASS card_ne ] >,
+  +CONTEXT < > ].
 
 card_ne_7_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[０-９]+[．\.][０-９]+$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] > ].
+  +OUTPUT < [ +CLASS card_ne ] >,
+  +CONTEXT < > ].
 
 ;;DVM 2017-02-08: added Indonesian numbers
 ;card_ne_8_tmr := ne_tmt &
@@ -88,43 +97,53 @@ card_ne_7_tmr := ne_tmt &
 ;;for numeral phrases (number+cls), which can be noun itself
 num_ne_8_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[零〇０一壹二贰三叁四五六七八九十百千万亿兆][零〇０一壹二贰三叁四五六七八九十百千万亿兆]*号$ ] >,
-  +OUTPUT < [ +CLASS meas_ne ] > ].
+  +OUTPUT < [ +CLASS meas_ne ] >,
+  +CONTEXT < > ].
 
 percent_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[０-９]+．[０-９]+％$ ] >,
-  +OUTPUT < [ +CLASS percent_ne ] > ].
+  +OUTPUT < [ +CLASS percent_ne ] >,
+  +CONTEXT < > ].
 
 percent_ne_2_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[0-9]+\.[0-9]+％$ ] >,
-  +OUTPUT < [ +CLASS percent_ne ] > ].
+  +OUTPUT < [ +CLASS percent_ne ] >,
+  +CONTEXT < > ].
 
 year_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[１-９][０-９]+年$ ] >,
-  +OUTPUT < [ +CLASS year_ne ] > ].
+  +OUTPUT < [ +CLASS year_ne ] >,
+  +CONTEXT < > ].
 
 year_ne_2_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[一壹二贰三叁四五六七八九十百千][零〇０一壹二贰三叁四五六七八九十百千]+年$ ] >,
-  +OUTPUT < [ +CLASS year_ne ] > ].
+  +OUTPUT < [ +CLASS year_ne ] >,
+  +CONTEXT < > ].
 
 date_ne_3_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^(十[一壹二贰]|[一壹二贰三叁四五六七八九十])月([二三]?十|(([二三]?十)?[一二三四五六七八九]))日$ ] >,
-  +OUTPUT < [ +CLASS date_ne ] > ].
+  +OUTPUT < [ +CLASS date_ne ] >,
+  +CONTEXT < > ].
 
 month_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^(１[０-２]|[１-９])月$ ] >,
-  +OUTPUT < [ +CLASS month_ne ] > ].
+  +OUTPUT < [ +CLASS month_ne ] >,
+  +CONTEXT < > ].
 
 month_ne_2_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^(十[一壹二贰]|[一壹二贰三叁四五六七八九十])月$ ] >,
-  +OUTPUT < [ +CLASS month_ne ] > ].
+  +OUTPUT < [ +CLASS month_ne ] >,
+  +CONTEXT < > ].
 
 day_ne_1_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[１-９][０-９]+日$ ] >,
-  +OUTPUT < [ +CLASS day_ne ] > ].
+  +OUTPUT < [ +CLASS day_ne ] >,
+  +CONTEXT < > ].
 
 day_ne_2_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[一壹二贰三叁四五六七八九十百千][零〇０一壹二贰三叁四五六七八九十百千]*日$ ] >,
-  +OUTPUT < [ +CLASS day_ne ] > ].
+  +OUTPUT < [ +CLASS day_ne ] >,
+  +CONTEXT < > ].
 
 
 ;;
@@ -132,11 +151,13 @@ day_ne_2_tmr := ne_tmt &
 ;;
 ord_or_dom_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^([23]?(1st|2nd|3rd)|(2?[1-9]|1[04-9]|20|30|31)th)$ ] >,
-  +OUTPUT < [ +CLASS ord_or_dom_ne ] > ].
+  +OUTPUT < [ +CLASS ord_or_dom_ne ] >,
+  +CONTEXT < > ].
 
 ord_ne_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^[0-9]*((^|[^1])(1st|2nd|3rd)|(11|12|13|[04-9])th)$ ] >,
-  +OUTPUT < [ +CLASS ord_ne ] > ].
+  +OUTPUT < [ +CLASS ord_ne ] >,
+  +CONTEXT < > ].
 
 ;;
 ;; _fix_me_
@@ -146,7 +167,8 @@ ord_ne_tmr := ne_tmt &
 ;;
 decade_ne_3_tmr := ne_tmt &
 [ +INPUT < [ +FORM ^(?:1[0-9])?[0-9]0[sS]$ ] >,
-  +OUTPUT < [ +CLASS plur_ne ] > ].
+  +OUTPUT < [ +CLASS plur_ne ] >,
+  +CONTEXT < > ].
 
 ; decade_ne_4_tmr := two_one_tmt &
 ; [ +INPUT < [ +FORM ^((1[0-9])?[0-9]0)$, 
