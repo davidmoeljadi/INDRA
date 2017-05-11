@@ -1155,11 +1155,11 @@ locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 &
 
 trans-first-arg-raising-verb := main-verb-lex & trans-first-arg-raising-lex-item & no-hcons-lex-item &
   [ SYNSEM [ LKEYS.KEYREL arg1-relation & [ ARG1 #arg1 ],
-		LOCAL [ CAT.VAL [ SPR < >,
-                            SPEC < >,
-                            COMPS < #comps >,
-                            SUBJ < #subj > ],
-                  CONT.HOOK.XARG #xarg ] ],
+	     LOCAL [ CAT [ VAL [ SPR < >,
+                                 SPEC < >,
+                                 COMPS < #comps >,
+                                 SUBJ < #subj > ] ],
+                     CONT.HOOK.XARG #xarg ] ],
     ARG-ST < #subj &
             [ LOCAL [ CAT [ HEAD noun,
                             VAL [ SUBJ < >,

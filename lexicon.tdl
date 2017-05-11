@@ -419,9 +419,29 @@ Budi := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Budi",
     TRAITS native_token_list ].
 
+David := proper-name-lex &
+  [ STEM < "David" >,
+    SYNSEM.LKEYS.KEYREL.CARG "David",
+    TRAITS native_token_list ].
+
+Holmes := proper-name-lex &
+  [ STEM < "Holmes" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Holmes",
+    TRAITS native_token_list ].
+
 Indonesia := proper-name-lex &
   [ STEM < "Indonesia" >,
     SYNSEM.LKEYS.KEYREL.CARG "Indonesia",
+    TRAITS native_token_list ].
+
+INDRA := proper-name-lex &
+  [ STEM < "INDRA" >,
+    SYNSEM.LKEYS.KEYREL.CARG "INDRA",
+    TRAITS native_token_list ].
+
+Indra := proper-name-lex &
+  [ STEM < "Indra" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Indra",
     TRAITS native_token_list ].
 
 Inggris := proper-name-lex &
@@ -50712,6 +50732,11 @@ klasifikasikan := tr-verb-lex &
 lakukan := tr-verb-lex &
   [ STEM < "lakukan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lakukan_v_rel",
+    TRAITS native_token_list ].
+
+lalui := tr-verb-lex &
+  [ STEM < "lalui" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lalui_v_rel",
     TRAITS native_token_list ].
 
 lempar := tr-verb-lex &
