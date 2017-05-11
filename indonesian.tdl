@@ -1884,7 +1884,7 @@ compound-verb-phrase := head-initial &
                            CONT [ HOOK #head &
                                        [INDEX #externalargument,
                                         LTOP #lbl ]]]],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb,
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -],
                                      VAL [ SUBJ < #spr >,
                                            COMPS < > ]],
                                CONT.HOOK.INDEX #internalargument ],
