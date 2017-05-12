@@ -1907,20 +1907,19 @@ compound-coordinated-verb-phrase := head-initial &
    HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb,
                                  VAL [ SUBJ < #spr > ,
                                        COMPS < #cmp & [OPT -] > ]] ,
-                             CONT [ HOOK.INDEX #externalargument ]]],
+                             CONT [ HOOK #head & [ INDEX #index,
+                           LTOP #lbl] ]]],
    NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -,
                                                   EMPTY -],
                                      VAL [ SUBJ < #spr >,
                                            COMPS < #cmp & [OPT -] > ]],
-                               CONT.HOOK.INDEX #internalargument ],
-   C-CONT [ HOOK #head & [ INDEX #index,
-                           LTOP #lbl],
-            RELS <! arg12-ev-relation & 
+                               CONT [ HOOK #head & [ INDEX #index,
+                           LTOP #lbl] ] ],
+   C-CONT [ RELS <! arg12-ev-relation & 
                   [PRED svc_coord_p_rel,
                    LBL #lbl,
-                   ARG0 #index,
-                   ARG1 #externalargument,
-                   ARG2 #internalargument] !>, HCONS <! !> ] ].
+                   ARG1 #index,
+                   ARG2 #index] !>, HCONS <! !> ] ].
 
 ;; DVM 2017-05-11 : added compound-verb-phrase for serial verb constructions (V1 = transitive, V2 = intransitive)
 ;; V2 is the result of V1
