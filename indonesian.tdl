@@ -1900,26 +1900,30 @@ compound-verb-phrase := head-initial &
 
 ;; DVM 2017-05-11 : added compound-coordinated-verb-phrase for serial verb constructions (V1 and V2 = transitive verbs)
 ;; added EMPTY - to avoid zero-copula
-compound-coordinated-verb-phrase := head-initial &
+compound-coordinated-verb-phrase := head-final &
  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
                             COMPS < #cmp > ] ,
-                  CONT.HOOK #head ],
-   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb,
+                  CONT.HOOK [ LTOP #harg,
+                              INDEX #ind ] ],
+   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb & [AUX -,
+                                                EMPTY -],
                                  VAL [ SUBJ < #spr > ,
                                        COMPS < #cmp & [OPT -] > ]] ,
-                             CONT [ HOOK #head & [ INDEX #index,
-                           LTOP #lbl] ]]],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -,
-                                                  EMPTY -],
+                             CONT [ HOOK [ LTOP #kanan,
+                                           INDEX #right] ]]],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb,
                                      VAL [ SUBJ < #spr >,
                                            COMPS < #cmp & [OPT -] > ]],
-                               CONT [ HOOK #head & [ INDEX #index,
-                           LTOP #lbl] ] ],
-   C-CONT [ RELS <! arg12-ev-relation & 
+                               CONT [ HOOK [ LTOP #kiri,
+                                             INDEX #left] ] ],
+   C-CONT [ RELS <! coordination-relation & 
                   [PRED svc_coord_p_rel,
-                   LBL #lbl,
-                   ARG1 #index,
-                   ARG2 #index] !>, HCONS <! !> ] ].
+                   LBL #harg,
+		   C-ARG #ind,
+		   L-HNDL #kiri,
+		   R-HNDL #kanan,
+                   L-INDEX #left,
+                   R-INDEX #right] !>, HCONS <! !> ] ].
 
 ;; DVM 2017-05-11 : added compound-verb-phrase for serial verb constructions (V1 = transitive, V2 = intransitive)
 ;; V2 is the result of V1
