@@ -1855,6 +1855,11 @@ adjective-color-lex := adjective-lex.
 ; DVM 2017-03-03 : added MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ]
 ; so that INDRA cannot parse [[[dua]ADJ [ekor]N]N [anjing]N]NNCompound
 ; but instead [[dua]ADJ [[ekor]N [anjing]N]NNCompound]
+; DVM 2017-06-05: edited
+;    NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD noun,
+;                                     VAL [ SPR < [LOCAL.CAT.HEAD det] > ]],
+;                               CONT.HOOK.INDEX #internalargument ],
+; so that [[makanan khas] Indonesia] can be parsed
 compound-noun-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < #spr >,
                             COMPS < > ] ,
@@ -1866,8 +1871,7 @@ compound-noun-phrase := head-initial &
                            CONT [ HOOK #head &
                                        [INDEX #externalargument,
                                         LTOP #lbl ]]]],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD noun,
-                                     VAL [ SPR < [LOCAL.CAT.HEAD det] > ]],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD noun],
                                CONT.HOOK.INDEX #internalargument ],
    C-CONT [ RELS <! arg12-ev-relation & 
                   [PRED compound_p_rel,
@@ -1948,6 +1952,58 @@ compound-result-verb-phrase := head-initial &
                    LBL #lbl,
                    ARG1 #externalargument,
                    ARG2 #internalargument] !>, HCONS <! !> ] ].
+
+;; DVM 2017-06-05 : relative clause with "yang"
+;; From Zhong
+
+rel-yang-lex := yang-comp-lex & zero-arg-nonque.
+
+yang-comp-lex := yang-super-lex & raise-sem-lex-item & no-icons-lex-item & norm-zero-arg &
+"The modified noun is the missing argument in the relative clause.
+<ex>saya makan buah yang merah
+<ex>saya makan buah yang merah itu
+<ex>saya membaca buku yang ditulis Budi
+"
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adp &
+                                [  MOD < [ LOCAL.CONT.HOOK [ INDEX #slash,
+                                                             LTOP #ltop ] ] > ] ,
+                           VAL [ COMPS < [ LOCAL [ CAT [ HEAD +vjp,
+                                                         VAL [ SUBJ < > ] ] ],
+                                           NON-LOCAL.SLASH 1-dlist & <!
+                                               [ CAT [ HEAD noun,
+                                                       VAL.SPR < > ],
+                                                 CONT.HOOK [ INDEX #slash,
+                                                             LTOP #ltop ] ]
+                                               !> ] >,
+                                 SUBJ < > ] ] ],
+              NON-LOCAL [ SLASH <! !>,
+                          REL <! !>,
+                          QUE <! !> ] ] ].
+
+yang-super-lex := lex-item & basic-one-arg &
+"YANG takes a COMP and modifies a noun. Its position is after its modified noun.
+POSTCOMP is a feature to be used on head to indicate the COMP's position is after the head.
+POSTHEAD + means as a modifier, it always appear after the head noun.
+"
+  [ SYNSEM [ LOCAL.CAT [ POSTHEAD +,
+                         HEAD adp &
+	                      [ MOD < [ LOCAL intersective-mod &
+                                              [ CAT [ HEAD noun,
+                                                      VAL.COMPS < > ] ] ] > ],
+			    VAL [ SPR < >,
+                                  SPEC < >,
+			          COMPS < synsem  & [ LOCAL.CAT.MC + ] > ] ] ] ].
+
+;; DVM 2017-06-05 : added EMPTY - to avoid zero-copula
+extracted-subj-phrase := basic-extracted-subj-phrase & 
+  [ SYNSEM [ MODIFIED #modified,
+	     LOCAL.CAT [ MC +,
+			 VAL.SPEC < [] > ] ], 
+    HEAD-DTR.SYNSEM [ MODIFIED #modified,
+		      LOCAL [ CAT [ HEAD +vjp & [EMPTY -],
+                                    VAL [ COMPS < > ] ],
+			      CONT.HOOK #hook ] ],
+    C-CONT [ HOOK #hook, RELS <! !>, HCONS <! !>, ICONS <! !> ] ].
 
 ;; DPF 2014-08-01 - Added unary and binary bridging rules to accommodate robust
 ;; full-forest treebanking.  The strategy is to pump each normal edge in the

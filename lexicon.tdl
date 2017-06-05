@@ -51287,6 +51287,13 @@ bahwa := propcomp-lex-item &
   [ STEM < "bahwa" >,
     TRAITS native_token_list ].
 
+;;; Relativizer
+;; DVM 2017-06-05: from Zhong
+
+yang := rel-yang-lex & 
+  [ STEM < "yang" >,
+    TRAITS native_token_list ].
+
 ;;; Adjectives
 ;; DVM 2015-05-09: changed from adjective-lex to adjective-lex
 ;; DVM 2015-05-09: adjective-lex provides ungrammatical sentence such as saya bagus "good I"

@@ -232,6 +232,26 @@ nump-label := label &
 					SPR < > ]],
 	       LABEL-NAME "NUMP" ].
 
+yang-comp-label := label & 
+	    [ SYNSEM.LOCAL [ CAT [ HEAD adp,
+				 VAL.COMPS < > ] ],
+	      LABEL-NAME "yang/" ].
+
+s-slash-np-label := label &
+           [ SYNSEM [ LOCAL [ CAT [ HEAD +vj,
+				    POSTHEAD +,
+				    VAL [ COMPS < >,
+					  SUBJ < > ] ],
+			      COORD-STRAT "" ],
+		      NON-LOCAL.SLASH 1-dlist ],
+             LABEL-NAME "S/NP"].
+
+slash := meta &
+  [ SYNSEM.NON-LOCAL.SLASH 1-dlist &
+			   [ LIST < local > ],
+    META-PREFIX "/",
+    META-SUFFIX "" ].
+
 ;; Also add node labels for parse tree display
 bridge-unary := label &
   [ SYNSEM.LOCAL.CAT.HEAD bridge-head & [ BRIDGED - ],

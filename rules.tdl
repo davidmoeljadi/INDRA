@@ -75,6 +75,9 @@ v-v-result-compound := compound-result-verb-phrase.
 ;xp-xp-bridge-c := bridge-binary-phrase.
 ;xp-bridge-c := bridge-unary-phrase.
 
+;;; DVM 2017-06-05: relativizer yang
+extracted-subj := extracted-subj-phrase.
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;; DVM 2017-01-09: Fragments
