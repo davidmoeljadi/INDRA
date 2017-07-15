@@ -1563,9 +1563,23 @@ passive-oleh-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-ve
                       CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
 
+adposition-mod-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+			    ARG1 #xarg,
+			    ARG2 #ind ],
+	     LOCAL [ CONT.HOOK [ XARG #xarg,
+				 INDEX #arg0 ],
+		     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD verb,
+						      VAL.SUBJ cons ],
+						CONT.HOOK.INDEX #xarg ]] >,
+			   VAL [ SPR < >,
+			     COMPS < [ OPT -,
+				       LOCAL [ CAT [ HEAD noun,
+						     VAL.SPR < > ],
+					       CONT.HOOK.INDEX #ind ]] >,
+				 SUBJ < > ]]]]].
 
-
-adposition-mod-lex := intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
+adp-mod-lex := intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD +nv,
                                                     VAL.SPR cons ]]>,
 			   POSTHEAD + ]]]].
@@ -1956,7 +1970,8 @@ compound-result-verb-phrase := head-initial &
 ;; DVM 2017-06-05 : relative clause with "yang"
 ;; From Zhong
 
-rel-yang-lex := yang-comp-lex & zero-arg-nonque.
+rel-yang-lex := yang-comp-lex.
+;; & zero-arg-nonque.
 
 yang-comp-lex := yang-super-lex & raise-sem-lex-item & no-icons-lex-item & norm-zero-arg &
 "The modified noun is the missing argument in the relative clause.
@@ -1980,8 +1995,8 @@ yang-comp-lex := yang-super-lex & raise-sem-lex-item & no-icons-lex-item & norm-
                           REL <! !>,
                           QUE <! !> ] ] ].
 
-yang-super-lex := lex-item & basic-one-arg &
-"YANG takes a COMP and modifies a noun. Its position is after its modified noun.
+yang-super-lex := basic-one-arg &
+"lex-item & YANG takes a COMP and modifies a noun. Its position is after its modified noun.
 POSTCOMP is a feature to be used on head to indicate the COMP's position is after the head.
 POSTHEAD + means as a modifier, it always appear after the head noun.
 "

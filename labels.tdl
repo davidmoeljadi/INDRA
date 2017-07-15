@@ -141,6 +141,15 @@ s-label := label &
                             COORD-STRAT "" ],
              LABEL-NAME "S"].
 
+;; DVM 2017-07-05: label for frag-np
+frg-label := label &
+           [ SYNSEM.LOCAL [ CAT [ HEAD fragment_head &
+					[ MOD < > ],
+                                  VAL [ COMPS < >,
+                                        SUBJ < > ] ],
+                            COORD-STRAT "" ],
+             LABEL-NAME "FRG"].
+
 s-top-label := label &
 	   [ SYNSEM.LOCAL.CAT [ HEAD verb,
 				VAL [ COMPS < >,
