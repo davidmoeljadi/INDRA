@@ -43,7 +43,7 @@ batu := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_batu_n_rel",
     TRAITS native_token_list ].
 
-bau := inanimate-noun-noun-lex &
+bau_inanim := inanimate-noun-noun-lex &
   [ STEM < "bau" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bau_n_rel",
     TRAITS native_token_list ].
@@ -50749,7 +50749,7 @@ isi_tr := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_isi_v_rel",
     TRAITS native_token_list ].
 
-jadikan := tr-verb-lex &
+jadikan_v_tr := tr-verb-lex &
   [ STEM < "jadikan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jadikan_v_rel",
     TRAITS native_token_list ].
@@ -51662,7 +51662,7 @@ batuk := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_batuk_v_rel",
     TRAITS native_token_list ].
 
-bau := intr-verb-lex &
+bau_v_intr := intr-verb-lex &
   [ STEM < "bau" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bau_v_rel",
     TRAITS native_token_list ].
@@ -56624,11 +56624,6 @@ konservasi := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_konservasi_n_rel",
     TRAITS native_token_list ].
 
-iklim := inanimate-noun-noun-lex &
-  [ STEM < "iklim" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_iklim_n_rel",
-    TRAITS native_token_list ].
-
 tren := inanimate-noun-noun-lex &
   [ STEM < "tren" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tren_n_rel",
@@ -58104,11 +58099,6 @@ Kashmir := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Kashmir",
     TRAITS native_token_list ].
 
-Sulawesi := proper-name-lex &
-  [ STEM < "Sulawesi" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Sulawesi",
-    TRAITS native_token_list ].
-
 Sumbawa := proper-name-lex &
   [ STEM < "Sumbawa" >,
     SYNSEM.LKEYS.KEYREL.CARG "Sumbawa",
@@ -58167,11 +58157,6 @@ Slovenia := proper-name-lex &
 Han := proper-name-lex &
   [ STEM < "Han" >,
     SYNSEM.LKEYS.KEYREL.CARG "Han",
-    TRAITS native_token_list ].
-
-Filipina := proper-name-lex &
-  [ STEM < "Filipina" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Filipina",
     TRAITS native_token_list ].
 
 Sakya := proper-name-lex &
@@ -58242,11 +58227,6 @@ Thailand := proper-name-lex &
 Makau := proper-name-lex &
   [ STEM < "Makau" >,
     SYNSEM.LKEYS.KEYREL.CARG "Makau",
-    TRAITS native_token_list ].
-
-Italia := proper-name-lex &
-  [ STEM < "Italia" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Italia",
     TRAITS native_token_list ].
 
 Thendayuthapani := proper-name-lex &
@@ -58881,7 +58861,7 @@ kuliah := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_kuliah_n_rel",
     TRAITS native_token_list ].
 
-hawa := inanimate-noun-noun-lex &
+hawa_inanim := inanimate-noun-noun-lex &
   [ STEM < "hawa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hawa_n_rel",
     TRAITS native_token_list ].
@@ -59286,7 +59266,7 @@ bandara := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_bandara_n_rel",
     TRAITS native_token_list ].
 
-iris := inanimate-noun-noun-lex &
+iris_inanim := inanimate-noun-noun-lex &
   [ STEM < "iris" >,
     SYNSEM.LKEYS.KEYREL.PRED "_iris_n_rel",
     TRAITS native_token_list ].
@@ -60571,7 +60551,7 @@ sosial-budaya := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_sosial-budaya_n_rel",
     TRAITS native_token_list ].
 
-asam := inanimate-noun-noun-lex &
+asam_inanim := inanimate-noun-noun-lex &
   [ STEM < "asam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_asam_n_rel",
     TRAITS native_token_list ].
@@ -61016,11 +60996,6 @@ Rusia := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Rusia",
     TRAITS native_token_list ].
 
-Sangihe := proper-name-lex &
-  [ STEM < "Sangihe" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Sangihe",
-    TRAITS native_token_list ].
-
 Sangir := proper-name-lex &
   [ STEM < "Sangir" >,
     SYNSEM.LKEYS.KEYREL.CARG "Sangir",
@@ -61069,11 +61044,6 @@ Lee := proper-name-lex &
 Holmes := proper-name-lex &
   [ STEM < "Holmes" >,
     SYNSEM.LKEYS.KEYREL.CARG "Holmes",
-    TRAITS native_token_list ].
-
-Amerika := proper-name-lex &
-  [ STEM < "Amerika" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Amerika",
     TRAITS native_token_list ].
 
 Houston := proper-name-lex &
@@ -61169,11 +61139,6 @@ Indiana := proper-name-lex &
 Ahmedabad := proper-name-lex &
   [ STEM < "Ahmedabad" >,
     SYNSEM.LKEYS.KEYREL.CARG "Ahmedabad",
-    TRAITS native_token_list ].
-
-India := proper-name-lex &
-  [ STEM < "India" >,
-    SYNSEM.LKEYS.KEYREL.CARG "India",
     TRAITS native_token_list ].
 
 Zen := proper-name-lex &
@@ -61336,11 +61301,6 @@ Fujian := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Fujian",
     TRAITS native_token_list ].
 
-Champagne := proper-name-lex &
-  [ STEM < "Champagne" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Champagne",
-    TRAITS native_token_list ].
-
 Changi := proper-name-lex &
   [ STEM < "Changi" >,
     SYNSEM.LKEYS.KEYREL.CARG "Changi",
@@ -61351,19 +61311,9 @@ Cirebon := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Cirebon",
     TRAITS native_token_list ].
 
-Gayo := proper-name-lex &
-  [ STEM < "Gayo" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Gayo",
-    TRAITS native_token_list ].
-
 Ilex+paraguagensis := proper-name-lex &
   [ STEM < "Ilex", "paraguagensis" >,
     SYNSEM.LKEYS.KEYREL.CARG "Ilex+paraguagensis",
-    TRAITS native_token_list ].
-
-Jakarta := proper-name-lex &
-  [ STEM < "Jakarta" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Jakarta",
     TRAITS native_token_list ].
 
 Massenrempulu := proper-name-lex &
@@ -62653,11 +62603,6 @@ agama := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_agama_n_rel",
     TRAITS native_token_list ].
 
-lapis := inanimate-noun-noun-lex &
-  [ STEM < "lapis" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_lapis_n_rel",
-    TRAITS native_token_list ].
-
 dayung_inanim := inanimate-noun-noun-lex &
   [ STEM < "dayung" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dayung_n_rel",
@@ -63211,11 +63156,6 @@ Tokyo := proper-name-lex &
 Zurich := proper-name-lex &
   [ STEM < "Zurich" >,
     SYNSEM.LKEYS.KEYREL.CARG "Zurich",
-    TRAITS native_token_list ].
-
-Minang := proper-name-lex &
-  [ STEM < "Minang" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Minang",
     TRAITS native_token_list ].
 
 California := proper-name-lex &
@@ -65623,7 +65563,7 @@ pemasaran := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_pemasaran_n_rel",
     TRAITS native_token_list ].
 
-bentuk := inanimate-noun-noun-lex &
+bentuk_inanim := inanimate-noun-noun-lex &
   [ STEM < "bentuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bentuk_n_rel",
     TRAITS native_token_list ].
@@ -67433,7 +67373,7 @@ nostalgia := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_nostalgia_n_rel",
     TRAITS native_token_list ].
 
-proses := inanimate-noun-noun-lex &
+proses_inanim := inanimate-noun-noun-lex &
   [ STEM < "proses" >,
     SYNSEM.LKEYS.KEYREL.PRED "_proses_n_rel",
     TRAITS native_token_list ].
@@ -68778,7 +68718,7 @@ jenang := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_jenang_v_rel",
     TRAITS native_token_list ].
 
-proses := tr-verb-lex &
+proses_v_tr := tr-verb-lex &
   [ STEM < "proses" >,
     SYNSEM.LKEYS.KEYREL.PRED "_proses_v_rel",
     TRAITS native_token_list ].
@@ -68961,11 +68901,6 @@ berguna := adjective-lex &
 berharga := adjective-lex &
   [ STEM < "berharga" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berharga_a_rel",
-    TRAITS native_token_list ].
-
-berkilauan := adjective-lex &
-  [ STEM < "berkilauan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_berkilauan_a_rel",
     TRAITS native_token_list ].
 
 berkualitas := adjective-lex &
@@ -71743,11 +71678,6 @@ lemparkan := v_np-pp_prop_le &
     SYNSEM.LKEYS.KEYREL.PRED "_lemparkan_v_rel",
     TRAITS native_token_list ].
 
-lepaskan := v_np-pp_prop_le &
-  [ STEM < "lepaskan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_lepaskan_v_rel",
-    TRAITS native_token_list ].
-
 perkenalkan := v_np-pp_prop_le &
   [ STEM < "perkenalkan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_perkenalkan_v_rel",
@@ -72916,11 +72846,6 @@ hindari := tr-verb-lex &
 hormati := tr-verb-lex &
   [ STEM < "hormati" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hormati_v_rel",
-    TRAITS native_token_list ].
-
-huni := tr-verb-lex &
-  [ STEM < "huni" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_huni_v_rel",
     TRAITS native_token_list ].
 
 imbangi := tr-verb-lex &
@@ -74143,7 +74068,7 @@ seperti := adposition-mod-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_seperti_p_rel",
     TRAITS native_token_list ].
 
-asam := adjective-lex &
+asam_adj := adjective-lex &
   [ STEM < "asam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_asam_a_rel",
     TRAITS native_token_list ].
@@ -74948,7 +74873,7 @@ sebelumnya := adverb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_sebelumnya_a_rel",
     TRAITS native_token_list ].
 
-sebenarnya := adverb-lex &
+sebenarnya_adv := adverb-lex &
   [ STEM < "sebenarnya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sebenarnya_a_rel",
     TRAITS native_token_list ].
@@ -76146,7 +76071,7 @@ lonjong := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-iris := tr-verb-lex &
+iris_v_tr := tr-verb-lex &
     [ STEM < "iris" >,
     SYNSEM.LKEYS.KEYREL.PRED "_iris_v_rel",
     TRAITS native_token_list ].
@@ -76230,33 +76155,9 @@ asamkan := tr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-silinder := inanimate-noun-noun-lex &
-    [ STEM < "silinder" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_silinder_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
 abetesi := human-noun-noun-lex &
     [ STEM < "abetesi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_abetesi_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-Sasak := proper-name-lex &
-  [ STEM < "Sasak" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Sasak",
-    TRAITS native_token_list ].
-
-;;; auto generated
-kalsium := inanimate-noun-noun-lex &
-    [ STEM < "kalsium" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_kalsium_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-Sangihe := proper-name-lex &
-  [ STEM < "Sangihe" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Sangihe",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -76266,33 +76167,9 @@ gulung := tr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-Firdaus := proper-name-lex &
-  [ STEM < "Firdaus" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Firdaus",
-    TRAITS native_token_list ].
-
-;;; auto generated
-pemintal := inanimate-noun-noun-lex &
-    [ STEM < "pemintal" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pemintal_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-pemintal := human-noun-noun-lex &
-    [ STEM < "pemintal" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pemintal_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
 sarat := adjective-lex &
     [ STEM < "sarat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sarat_a_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-selingan := inanimate-noun-noun-lex &
-    [ STEM < "selingan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_selingan_n_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -76302,21 +76179,9 @@ petai := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-pindang := inanimate-noun-noun-lex &
-    [ STEM < "pindang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pindang_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
 majemuk := adjective-lex &
     [ STEM < "majemuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_majemuk_a_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-bubuhi := v_np-pp_prop_le &
-    [ STEM < "bubuhi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_bubuhi_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -76326,39 +76191,15 @@ cair := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-gowok := inanimate-noun-noun-lex &
-    [ STEM < "gowok" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_gowok_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
 oles := v_np-pp_prop_le &
     [ STEM < "oles" >,
     SYNSEM.LKEYS.KEYREL.PRED "_oles_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-cendol := inanimate-noun-noun-lex &
-    [ STEM < "cendol" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cendol_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
 setup := tr-verb-lex &
     [ STEM < "setup" >,
     SYNSEM.LKEYS.KEYREL.PRED "_setup_v_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-nyata := adjective-lex &
-    [ STEM < "nyata" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_nyata_a_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-asamkan := tr-verb-lex &
-    [ STEM < "asamkan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_asamkan_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -76368,33 +76209,9 @@ silinder := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-abetesi := human-noun-noun-lex &
-    [ STEM < "abetesi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_abetesi_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-Sasak := proper-name-lex &
-  [ STEM < "Sasak" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Sasak",
-    TRAITS native_token_list ].
-
-;;; auto generated
 kalsium := inanimate-noun-noun-lex &
     [ STEM < "kalsium" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kalsium_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-Sangihe := proper-name-lex &
-  [ STEM < "Sangihe" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Sangihe",
-    TRAITS native_token_list ].
-
-;;; auto generated
-gulung := tr-verb-lex &
-    [ STEM < "gulung" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_gulung_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -76404,21 +76221,15 @@ Firdaus := proper-name-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-pemintal := inanimate-noun-noun-lex &
+pemintal_inanim := inanimate-noun-noun-lex &
     [ STEM < "pemintal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pemintal_n_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-pemintal := human-noun-noun-lex &
+pemintal_hum := human-noun-noun-lex &
     [ STEM < "pemintal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pemintal_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-sarat := adjective-lex &
-    [ STEM < "sarat" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sarat_a_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -76428,21 +76239,9 @@ selingan := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-petai := inanimate-noun-noun-lex &
-    [ STEM < "petai" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_petai_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
 pindang := inanimate-noun-noun-lex &
     [ STEM < "pindang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pindang_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-majemuk := adjective-lex &
-    [ STEM < "majemuk" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_majemuk_a_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -76452,33 +76251,15 @@ bubuhi := v_np-pp_prop_le &
     TRAITS native_token_list ].
 
 ;;; auto generated
-cair := adjective-lex &
-    [ STEM < "cair" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cair_a_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
 gowok := inanimate-noun-noun-lex &
     [ STEM < "gowok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_gowok_n_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-oles := v_np-pp_prop_le &
-    [ STEM < "oles" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_oles_v_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
 cendol := inanimate-noun-noun-lex &
     [ STEM < "cendol" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cendol_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-setup := tr-verb-lex &
-    [ STEM < "setup" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_setup_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -76566,7 +76347,7 @@ kadar := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-bentuk := tr-verb-lex &
+bentuk_v_tr := tr-verb-lex &
     [ STEM < "bentuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bentuk_v_rel",
     TRAITS native_token_list ].
@@ -76650,7 +76431,7 @@ murnikan := tr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-sebenarnya := adjective-lex &
+sebenarnya_adj := adjective-lex &
     [ STEM < "sebenarnya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sebenarnya_a_rel",
     TRAITS native_token_list ].
@@ -77295,7 +77076,7 @@ tombak := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-jadikan := v_np-pp_prop_le &
+jadikan_v_prop := v_np-pp_prop_le &
     [ STEM < "jadikan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jadikan_v_rel",
     TRAITS native_token_list ].
@@ -77331,7 +77112,7 @@ ambing := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-Lombok := proper-name-lex &
+Lombok_prop := proper-name-lex &
   [ STEM < "Lombok" >,
     SYNSEM.LKEYS.KEYREL.CARG "Lombok",
     TRAITS native_token_list ].
@@ -77974,7 +77755,7 @@ Granala := proper-name-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-Hawa := proper-name-lex &
+Hawa_prop := proper-name-lex &
   [ STEM < "Hawa" >,
     SYNSEM.LKEYS.KEYREL.CARG "Hawa",
     TRAITS native_token_list ].
@@ -78326,7 +78107,7 @@ balok := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-balut := tr-verb-lex &
+balut_v_tr := tr-verb-lex &
     [ STEM < "balut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_balut_v_rel",
     TRAITS native_token_list ].
@@ -78482,7 +78263,7 @@ beraturan := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-balut := inanimate-noun-noun-lex &
+balut_inanim := inanimate-noun-noun-lex &
     [ STEM < "balut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_balut_n_rel",
     TRAITS native_token_list ].
@@ -78491,12 +78272,6 @@ balut := inanimate-noun-noun-lex &
 betakaroten := inanimate-noun-noun-lex &
     [ STEM < "betakaroten" >,
     SYNSEM.LKEYS.KEYREL.PRED "_betakaroten_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-butir := inanimate-noun-noun-lex &
-    [ STEM < "butir" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_butir_n_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -79070,12 +78845,6 @@ dangkal := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-Dayak := proper-name-lex &
-  [ STEM < "Dayak" >,
-    SYNSEM.LKEYS.KEYREL.CARG "Dayak",
-    TRAITS native_token_list ].
-
-;;; auto generated
 degan := inanimate-noun-noun-lex &
     [ STEM < "degan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_degan_n_rel",
@@ -79535,4 +79304,1114 @@ hulu := inanimate-noun-noun-lex &
 ijuk := inanimate-noun-noun-lex &
     [ STEM < "ijuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ijuk_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+sistem+imun := inanimate-noun-noun-lex &
+    [ STEM < "sistem", "imun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sistem+imun_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+induk := nonhuman-noun-noun-lex &
+    [ STEM < "induk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_induk_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+infeksi := inanimate-noun-noun-lex &
+    [ STEM < "infeksi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_infeksi_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+iris-irisan := inanimate-noun-noun-lex &
+    [ STEM < "iris²an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_iris-irisan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+isian := inanimate-noun-noun-lex &
+    [ STEM < "isian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_isian_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+itik := nonhuman-noun-noun-lex &
+    [ STEM < "itik" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_itik_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jaha := inanimate-noun-noun-lex &
+    [ STEM < "jaha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jaha_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+ubi+jalar := inanimate-noun-noun-lex &
+    [ STEM < "ubi", "jalar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ubi+jalar_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jangkrik := nonhuman-noun-noun-lex &
+    [ STEM < "jangkrik" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jangkrik_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+cabai+jawa := inanimate-noun-noun-lex &
+    [ STEM < "cabai", "jawa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cabai+jawa_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+gula+jawa := inanimate-noun-noun-lex &
+    [ STEM < "gula", "jawa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_gula+jawa_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+asam+jawa := inanimate-noun-noun-lex &
+    [ STEM < "asam", "jawa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_asam+jawa_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+cuka+jawa := inanimate-noun-noun-lex &
+    [ STEM < "cuka", "jawa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cuka+jawa_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jelai := inanimate-noun-noun-lex &
+    [ STEM < "jelai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jelai_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jengger := inanimate-noun-noun-lex &
+    [ STEM < "jengger" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jengger_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jengkol := inanimate-noun-noun-lex &
+    [ STEM < "jengkol" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jengkol_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jepit := tr-verb-lex &
+    [ STEM < "jepit" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jepit_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jerang := tr-verb-lex &
+    [ STEM < "jerang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jerang_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jeroan := inanimate-noun-noun-lex &
+    [ STEM < "jeroan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jeroan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jintan := inanimate-noun-noun-lex &
+    [ STEM < "jintan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jintan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+juadah := inanimate-noun-noun-lex &
+    [ STEM < "juadah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_juadah_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kafein := inanimate-noun-noun-lex &
+    [ STEM < "kafein" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kafein_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kafeina := inanimate-noun-noun-lex &
+    [ STEM < "kafeina" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kafeina_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kakao := inanimate-noun-noun-lex &
+    [ STEM < "kakao" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kakao_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kakap := nonhuman-noun-noun-lex &
+    [ STEM < "kakap" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kakap_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kalengkan := tr-verb-lex &
+    [ STEM < "kalengkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kalengkan_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kalium := inanimate-noun-noun-lex &
+    [ STEM < "kalium" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kalium_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+bunga+kamboja := inanimate-noun-noun-lex &
+    [ STEM < "bunga", "kamboja" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bunga+kamboja_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kanang := inanimate-noun-noun-lex &
+    [ STEM < "kanang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kanang_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kancil := nonhuman-noun-noun-lex &
+    [ STEM < "kancil" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kancil_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kancing := inanimate-noun-noun-lex &
+    [ STEM < "kancing" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kancing_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kandangkan := tr-verb-lex &
+    [ STEM < "kandangkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kandangkan_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kanji := inanimate-noun-noun-lex &
+    [ STEM < "kanji" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kanji_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kanker := inanimate-noun-noun-lex &
+    [ STEM < "kanker" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kanker_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kantong := inanimate-noun-noun-lex &
+    [ STEM < "kantong" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kantong_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kapak := inanimate-noun-noun-lex &
+    [ STEM < "kapak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kapak_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kapindang := nonhuman-noun-noun-lex &
+    [ STEM < "kapindang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kapindang_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kapri := inanimate-noun-noun-lex &
+    [ STEM < "kapri" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kapri_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kapulaga := inanimate-noun-noun-lex &
+    [ STEM < "kapulaga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kapulaga_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kapur := inanimate-noun-noun-lex &
+    [ STEM < "kapur" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kapur_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kara := inanimate-noun-noun-lex &
+    [ STEM < "kara" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kara_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kara+benguk := inanimate-noun-noun-lex &
+    [ STEM < "kara", "benguk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kara+benguk_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+karakteristik := inanimate-noun-noun-lex &
+    [ STEM < "karakteristik" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_karakteristik_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+karbon := inanimate-noun-noun-lex &
+    [ STEM < "karbon" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_karbon_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kardiovaskular := adjective-lex &
+    [ STEM < "kardiovaskular" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kardiovaskular_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jeruk+kates := inanimate-noun-noun-lex &
+    [ STEM < "jeruk", "kates" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jeruk+kates_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kawat := inanimate-noun-noun-lex &
+    [ STEM < "kawat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kawat_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+maskawin := inanimate-noun-noun-lex &
+    [ STEM < "maskawin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_maskawin_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kebiru-biruan := adjective-color-lex &
+    [ STEM < "kebiru²an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kebiru-biruan_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kecalingan := inanimate-noun-noun-lex &
+    [ STEM < "kecalingan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kecalingan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kecambah := inanimate-noun-noun-lex &
+    [ STEM < "kecambah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kecambah_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kecapi := inanimate-noun-noun-lex &
+    [ STEM < "kecapi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kecapi_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kecokelat-cokelatan := adjective-color-lex &
+    [ STEM < "kecokelat²an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kecokelat-cokelatan_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kecokelatan := adjective-color-lex &
+    [ STEM < "kecokelatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kecokelatan_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kecubung := inanimate-noun-noun-lex &
+    [ STEM < "kecubung" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kecubung_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kedap+udara := adjective-lex &
+    [ STEM < "kedap", "udara" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kedap+udara_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kedekai := inanimate-noun-noun-lex &
+    [ STEM < "kedekai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kedekai_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kedondong := inanimate-noun-noun-lex &
+    [ STEM < "kedondong" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kedondong_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keduduk := inanimate-noun-noun-lex &
+    [ STEM < "keduduk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keduduk_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kehijau-hijauan := adjective-color-lex &
+    [ STEM < "kehijau²an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kehijau-hijauan_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kehitam-hitaman := adjective-color-lex &
+    [ STEM < "kehitam²an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kehitam-hitaman_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kehitaman := adjective-color-lex &
+    [ STEM < "kehitaman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kehitaman_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keik := inanimate-noun-noun-lex &
+    [ STEM < "keik" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keik_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kekuning-kuningan := adjective-color-lex &
+    [ STEM < "kekuning²an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kekuning-kuningan_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kekuningan := adjective-color-lex &
+    [ STEM < "kekuningan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kekuningan_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kelabat := inanimate-noun-noun-lex &
+    [ STEM < "kelabat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelabat_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keladi := inanimate-noun-noun-lex &
+    [ STEM < "keladi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keladi_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kelam := adjective-lex &
+    [ STEM < "kelam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelam_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kelereng := inanimate-noun-noun-lex &
+    [ STEM < "kelereng" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelereng_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kelikih := inanimate-noun-noun-lex &
+    [ STEM < "kelikih" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelikih_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kelingking := inanimate-noun-noun-lex &
+    [ STEM < "kelingking" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelingking_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kelor := inanimate-noun-noun-lex &
+    [ STEM < "kelor" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelor_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keluih := inanimate-noun-noun-lex &
+    [ STEM < "keluih" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keluih_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keluna := inanimate-noun-noun-lex &
+    [ STEM < "keluna" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keluna_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kemang := inanimate-noun-noun-lex &
+    [ STEM < "kemang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemang_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kembung := nonhuman-noun-noun-lex &
+    [ STEM < "kembung" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kembung_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+berkilauan := adjective-lex &
+    [ STEM < "berkilauan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_berkilauan_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kemlandingan := inanimate-noun-noun-lex &
+    [ STEM < "kemlandingan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemlandingan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kemukus := inanimate-noun-noun-lex &
+    [ STEM < "kemukus" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemukus_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kendal := inanimate-noun-noun-lex &
+    [ STEM < "kendal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kendal_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kepah := nonhuman-noun-noun-lex &
+    [ STEM < "kepah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepah_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kepal := tr-verb-lex &
+    [ STEM < "kepal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepal_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kepalan := inanimate-noun-noun-lex &
+    [ STEM < "kepalan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepalan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kepayang := inanimate-noun-noun-lex &
+    [ STEM < "kepayang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepayang_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keperak-perakan := adjective-color-lex &
+    [ STEM < "keperak²an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keperak-perakan_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kepercayaan := inanimate-noun-noun-lex &
+    [ STEM < "kepercayaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepercayaan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keping := inanimate-noun-noun-lex &
+    [ STEM < "keping" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keping_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+pisang+kepok := inanimate-noun-noun-lex &
+    [ STEM < "pisang", "kepok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pisang+kepok_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jeruk+keprok := inanimate-noun-noun-lex &
+    [ STEM < "jeruk", "keprok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jeruk+keprok_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kepundung := inanimate-noun-noun-lex &
+    [ STEM < "kepundung" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepundung_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kerak := inanimate-noun-noun-lex &
+    [ STEM < "kerak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kerak_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keranji := inanimate-noun-noun-lex &
+    [ STEM < "keranji" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keranji_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keraskan := tr-verb-lex &
+    [ STEM < "keraskan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keraskan_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keriting := adjective-lex &
+    [ STEM < "keriting" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keriting_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kerucut := inanimate-noun-noun-lex &
+    [ STEM < "kerucut" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kerucut_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keruh := adjective-lex &
+    [ STEM < "keruh" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keruh_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+keruk := tr-verb-lex &
+    [ STEM < "keruk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keruk_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kesemek := inanimate-noun-noun-lex &
+    [ STEM < "kesemek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesemek_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+ketela := inanimate-noun-noun-lex &
+    [ STEM < "ketela" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketela_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+ketiak := inanimate-noun-noun-lex &
+    [ STEM < "ketiak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketiak_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+ketola := inanimate-noun-noun-lex &
+    [ STEM < "ketola" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketola_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kikil := inanimate-noun-noun-lex &
+    [ STEM < "kikil" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kikil_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kinca := inanimate-noun-noun-lex &
+    [ STEM < "kinca" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kinca_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jeruk+kingkit := inanimate-noun-noun-lex &
+    [ STEM < "jeruk", "kingkit" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jeruk+kingkit_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kismis := inanimate-noun-noun-lex &
+    [ STEM < "kismis" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kismis_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+telur+kobis := inanimate-noun-noun-lex &
+    [ STEM < "telur", "kobis" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_telur+kobis_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kokopandan := inanimate-noun-noun-lex &
+    [ STEM < "kokopandan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kokopandan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kol := inanimate-noun-noun-lex &
+    [ STEM < "kol" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kol_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kolak := inanimate-noun-noun-lex &
+    [ STEM < "kolak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kolak_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kolesterol := inanimate-noun-noun-lex &
+    [ STEM < "kolesterol" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kolesterol_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kelapa+kopyor := inanimate-noun-noun-lex &
+    [ STEM < "kelapa", "kopyor" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelapa+kopyor_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+koteka := inanimate-noun-noun-lex &
+    [ STEM < "koteka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_koteka_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kotoran := inanimate-noun-noun-lex &
+    [ STEM < "kotoran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kotoran_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+krem := adjective-color-lex &
+    [ STEM < "krem" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_krem_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+rokok+kretek := inanimate-noun-noun-lex &
+    [ STEM < "rokok", "kretek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rokok+kretek_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jamur+krikit := inanimate-noun-noun-lex &
+    [ STEM < "jamur", "krikit" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jamur+krikit_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kristalkan := tr-verb-lex &
+    [ STEM < "kristalkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kristalkan_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kroket := inanimate-noun-noun-lex &
+    [ STEM < "kroket" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kroket_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kromium+pikolinat := inanimate-noun-noun-lex &
+    [ STEM < "kromium", "pikolinat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kromium+pikolinat_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kuaci := inanimate-noun-noun-lex &
+    [ STEM < "kuaci" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kuaci_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kubus := inanimate-noun-noun-lex &
+    [ STEM < "kubus" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kubus_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kucuran := inanimate-noun-noun-lex &
+    [ STEM < "kucuran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kucuran_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kukis := inanimate-noun-noun-lex &
+    [ STEM < "kukis" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kukis_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kukur := tr-verb-lex &
+    [ STEM < "kukur" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kukur_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kulim := inanimate-noun-noun-lex &
+    [ STEM < "kulim" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kulim_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kulin := inanimate-noun-noun-lex &
+    [ STEM < "kulin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kulin_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kultivar := inanimate-noun-noun-lex &
+    [ STEM < "kultivar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kultivar_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kuncup := inanimate-noun-noun-lex &
+    [ STEM < "kuncup" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kuncup_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kupang := nonhuman-noun-noun-lex &
+    [ STEM < "kupang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kupang_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kupas := tr-verb-lex &
+    [ STEM < "kupas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kupas_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kuping := inanimate-noun-noun-lex &
+    [ STEM < "kuping" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kuping_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+jamur+kuping := inanimate-noun-noun-lex &
+    [ STEM < "jamur", "kuping" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jamur+kuping_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kuweni := inanimate-noun-noun-lex &
+    [ STEM < "kuweni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kuweni_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+labu := inanimate-noun-noun-lex &
+    [ STEM < "labu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_labu_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lahirkan := tr-verb-lex &
+    [ STEM < "lahirkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lahirkan_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lahung := inanimate-noun-noun-lex &
+    [ STEM < "lahung" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lahung_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lalap := inanimate-noun-noun-lex &
+    [ STEM < "lalap" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lalap_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lalapan := inanimate-noun-noun-lex &
+    [ STEM < "lalapan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lalapan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lambung := inanimate-noun-noun-lex &
+    [ STEM < "lambung" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lambung_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lampeni := inanimate-noun-noun-lex &
+    [ STEM < "lampeni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lampeni_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lancip := adjective-lex &
+    [ STEM < "lancip" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lancip_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+langsat := inanimate-noun-noun-lex &
+    [ STEM < "langsat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_langsat_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+langsing := adjective-lex &
+    [ STEM < "langsing" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_langsing_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lanset := inanimate-noun-noun-lex &
+    [ STEM < "lanset" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lanset_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lapisi := v_np-pp_prop_le &
+    [ STEM < "lapisi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lapisi_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lapuk := adjective-lex &
+    [ STEM < "lapuk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lapuk_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+larangan := inanimate-noun-noun-lex &
+    [ STEM < "larangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_larangan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+larva := nonhuman-noun-noun-lex &
+    [ STEM < "larva" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_larva_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lauk-pauk := inanimate-plural-noun-lex &
+    [ STEM < "lauk-pauk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lauk-pauk_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lebah := nonhuman-noun-noun-lex &
+    [ STEM < "lebah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lebah_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lekang := adjective-lex &
+    [ STEM < "lekang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lekang_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+rambutan+lekang := inanimate-noun-noun-lex &
+    [ STEM < "rambutan", "lekang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rambutan+lekang_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lekuk := inanimate-noun-noun-lex &
+    [ STEM < "lekuk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lekuk_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lekukan := inanimate-noun-noun-lex &
+    [ STEM < "lekukan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lekukan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lele := nonhuman-noun-noun-lex &
+    [ STEM < "lele" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lele_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lemari := inanimate-noun-noun-lex &
+    [ STEM < "lemari" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lemari_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lembab := adjective-lex &
+    [ STEM < "lembab" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lembab_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lembu := nonhuman-noun-noun-lex &
+    [ STEM < "lembu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lembu_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lembutkan := tr-verb-lex &
+    [ STEM < "lembutkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lembutkan_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lemo := inanimate-noun-noun-lex &
+    [ STEM < "lemo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lemo_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lempaung := inanimate-noun-noun-lex &
+    [ STEM < "lempaung" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lempaung_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lempeng := inanimate-noun-noun-lex &
+    [ STEM < "lempeng" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lempeng_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lempuk := inanimate-noun-noun-lex &
+    [ STEM < "lempuk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lempuk_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lempuyang := inanimate-noun-noun-lex &
+    [ STEM < "lempuyang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lempuyang_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lengkeng := inanimate-noun-noun-lex &
+    [ STEM < "lengkeng" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lengkeng_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lengkuas := inanimate-noun-noun-lex &
+    [ STEM < "lengkuas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lengkuas_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lepat := inanimate-noun-noun-lex &
+    [ STEM < "lepat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lepat_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lerak := inanimate-noun-noun-lex &
+    [ STEM < "lerak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lerak_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lesung := inanimate-noun-noun-lex &
+    [ STEM < "lesung" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lesung_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lewat := adposition-mod-lex &
+    [ STEM < "lewat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lewat_p_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lici := inanimate-noun-noun-lex &
+    [ STEM < "lici" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lici_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+licin := adjective-lex &
+    [ STEM < "licin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_licin_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lidi := inanimate-noun-noun-lex &
+    [ STEM < "lidi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lidi_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+limbah := inanimate-noun-noun-lex &
+    [ STEM < "limbah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_limbah_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+limbat := nonhuman-noun-noun-lex &
+    [ STEM < "limbat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_limbat_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+tanin := inanimate-noun-noun-lex &
+    [ STEM < "tanin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tanin_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+limpa := inanimate-noun-noun-lex &
+    [ STEM < "limpa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_limpa_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lokan := nonhuman-noun-noun-lex &
+    [ STEM < "lokan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lokan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lombok_inanim := inanimate-noun-noun-lex &
+    [ STEM < "lombok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lombok_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lopis := inanimate-noun-noun-lex &
+    [ STEM < "lopis" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lopis_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+loyang := inanimate-noun-noun-lex &
+    [ STEM < "loyang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_loyang_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lubangi := tr-verb-lex &
+    [ STEM < "lubangi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lubangi_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lumat := adjective-lex &
+    [ STEM < "lumat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lumat_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lumatan := inanimate-noun-noun-lex &
+    [ STEM < "lumatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lumatan_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+lumuri := v_np-pp_prop_le &
+    [ STEM < "lumuri" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lumuri_v_rel",
     TRAITS native_token_list ].
