@@ -24,6 +24,9 @@ subj-head := subj-head-phrase.
 ;DVM 2017-02-21: deactivate this so that INDRA won't parse [[ada dua buku] merah].
 head-spec := head-spec-phrase.
 
+;DVM 2017-08-19: for quantifiers e.g. semua buku
+head-spec-q := head-spec-q-phrase.
+
 bare-np := bare-np-phrase.
 
 n1-top-coord := n1-top-coord-rule.

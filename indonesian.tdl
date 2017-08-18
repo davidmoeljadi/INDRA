@@ -207,6 +207,9 @@ svc_p_rel := prep_rel.
 svc_coord_p_rel := prep_rel.
 svc_result_p_rel := prep_rel.
 
+;; DVM 2017-08-19: for quantifiers
+detq := det.
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
 ;;;;;;;;;;;;;;;;;;;
@@ -233,6 +236,12 @@ no-spr-noun-lex := noun-lex &
 
 head-spec-phrase := basic-head-spec-phrase & head-initial &
   [ NON-HEAD-DTR.SYNSEM.OPT - ].
+
+; DVM 2017-08-19: for quantifiers e.g. semua buku, HEAD is detq and the phrase is head final
+; cf. buku itu which is head-initial (see above)
+head-spec-q-phrase := basic-head-spec-phrase & head-final &
+  [ NON-HEAD-DTR.SYNSEM [ OPT -,
+                          LOCAL.CAT.HEAD detq ] ].
 
 common-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
@@ -781,6 +790,17 @@ determiner-determiner-lex := determiner-lex & no-icons-lex-item &
 
 determiner-pl-determiner-lex := determiner-lex & no-icons-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
+
+determiner-sg-determiner-lex := determiner-lex & no-icons-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ].
+
+; DVM 2017-08-19: for plural quantifiers e.g. semua buku
+determiner-pl-quantifier-lex := determiner-pl-determiner-lex & head-final &
+  [ SYNSEM.LOCAL.CAT.HEAD detq ].
+
+; DVM 2017-08-19: for singular quantifiers e.g. suatu buku
+determiner-sg-quantifier-lex := determiner-sg-determiner-lex & head-final &
+  [ SYNSEM.LOCAL.CAT.HEAD detq ].
 
 ; Type for negative adverbs.
 ; 
