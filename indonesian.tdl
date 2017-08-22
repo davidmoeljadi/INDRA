@@ -191,6 +191,7 @@ pronoun-non3person := pronoun.
 ;;; Verb
 ;; DVM 2017-03-24: make three groups for verb: active, passive type 1, and passive type 2
 activerb := verb.
+nonactiverb := verb.
 passiverbone := verb.
 passiverbtwo := verb.
 
@@ -207,8 +208,13 @@ svc_p_rel := prep_rel.
 svc_coord_p_rel := prep_rel.
 svc_result_p_rel := prep_rel.
 
+;; DVM 2017-08-22: add adj+adj compound 
+adj_coord_p_rel := prep_rel.
+
 ;; DVM 2017-08-19: for quantifiers
 detq := det.
+
+phr-conj := conj.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -520,6 +526,18 @@ no-obj-drop-verb-lex := transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
 obj-drop-verb-lex := transitive-verb-lex.
+
+;; DVM 2017-08-22 : for verbs taking two arguments but cannot be passivized such as "terdiri dari"
+
+trans-verb-lex := main-verb-lex & transitive-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD nonactiverb,
+                       VAL.COMPS < #comps & [ OPT - ] > ],
+    ARG-ST < [ LOCAL.CAT [ HEAD noun ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           POSTHEAD +,
+                           HEAD noun ] ] > ].
 
 ;;; Auxiliaries
 
@@ -1514,6 +1532,7 @@ adverb-scop-lex:= basic-scopal-adverb-lex &
 				 SUBJ < >,
 				 COMPS < >,
 				 SPEC < > ] ]]]].
+
 adverb-post-lex := adverb-lex &
   [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
 
@@ -1527,6 +1546,21 @@ adverb-time-lex := basic-scopal-adverb-lex &
 				 SUBJ < >,
 				 COMPS < >,
 				 SPEC < > ] ]]]].
+
+;;; DVM 2017-08-22 : Adverbs modifying adjectives
+
+adverb-adj-lex := basic-int-adv-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD adj,
+                                                    VAL.SPR cons ] ]>,
+			   VAL [ SPR < >,
+				 COMPS < >,
+				 SUBJ < > ]]]]].
+
+adverb-pre-adj-lex := adverb-adj-lex &
+  [ SYNSEM.LOCAL.CAT.POSTHEAD - ].
+
+adverb-post-adj-lex := adverb-adj-lex &
+  [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
 
 ;;; Adpositions
 ;; DVM 2016-07-09 : add information in SUBJ, connect ARG1 #xarg to INDEX in SUBJ, add ARG-ST.FIRST #subj
@@ -1868,6 +1902,40 @@ n_-_measure-lex := inanimate-noun-noun-lex.
 ;; for colors
 adjective-color-lex := adjective-lex.
 
+
+
+#|
+;======================
+conj-et := conj.
+
+subord-or-coord-relation-et := relation &
+  [ L-HNDL handle ].
+
+coordination-relation-et := subord-or-coord-relation-et &
+  [ C-ARG coord-index,
+    L-INDEX individual ].
+
+implicit-coord-rel-et := coordination-relation-et &
+  [ PRED "coord_c_implicit-et_rel" ].
+null-coord-rel-et := coordination-relation-et &
+  [ PRED "coord_c_null-et_rel" ].
+
+;basic-conj-lex := basic-zero-arg & no-hcons-lex-item &
+;  [ CFORM string ].
+
+conj-lex-et := basic-conj-lex & single-rel-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD conj-et & [ MOD null ],
+                           VAL [ SPR < >,
+                                 COMPS < >,
+                                 SUBJ < > ]],
+                     CONT [ HOOK [ LTOP #ltop,
+                                   INDEX #index ],
+                            RELS.LIST.FIRST #keyrel ]],
+             LKEYS.KEYREL #keyrel & coordination-relation-et & [ LBL #ltop,
+                                                              C-ARG #index ]]].
+;======================
+|#
+
 ;; compound noun rule type
 ; #spr for "anjing kucing ini", "ini" modifies the head daughter "anjing"
 ; the specifier of NP is det for noun-head-daughter (see basic noun lex)
@@ -1963,6 +2031,30 @@ compound-coordinated-verb-phrase := head-final &
                    L-INDEX #left,
                    R-INDEX #right] !>, HCONS <! !> ] ].
 
+;; DVM 2017-08-22 : added compound-coordinated-adj-phrase
+;; added EMPTY - to avoid zero-copula
+compound-coordinated-adj-phrase := head-final &
+ [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
+                            COMPS < #cmp > ] ,
+                  CONT.HOOK [ LTOP #harg,
+                              INDEX #ind ] ],
+   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD adj,
+                                 VAL [ SUBJ < #spr > ]] ,
+                             CONT [ HOOK [ LTOP #kanan,
+                                           INDEX #right] ]]],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD adj,
+                                     VAL [ SUBJ < #spr > ]],
+                               CONT [ HOOK [ LTOP #kiri,
+                                             INDEX #left] ] ],
+   C-CONT [ RELS <! coordination-relation & 
+                  [PRED adj_coord_p_rel,
+                   LBL #harg,
+		   C-ARG #ind,
+		   L-HNDL #kiri,
+		   R-HNDL #kanan,
+                   L-INDEX #left,
+                   R-INDEX #right] !>, HCONS <! !> ] ].
+
 ;; DVM 2017-05-11 : added compound-verb-phrase for serial verb constructions (V1 = transitive, V2 = intransitive)
 ;; V2 is the result of V1
 ;; added EMPTY - to avoid zero-copula
@@ -2028,6 +2120,26 @@ POSTHEAD + means as a modifier, it always appear after the head noun.
 			    VAL [ SPR < >,
                                   SPEC < >,
 			          COMPS < synsem  & [ LOCAL.CAT.MC + ] > ] ] ] ].
+
+;; DVM 2017-08-22 : for subordinate conjunctions such as "jika"
+
+subord-conj-lex := basic-subord-conjunction-lex & basic-icons-lex-item &
+  [ ARG-ST < #comps >,
+    SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < >,
+                                 COMPS < #comps &
+                                        [ LOCAL.CAT [ HEAD +vjp,
+                                                      VAL [ SUBJ < [ OPT + ]  >,
+                                                            COMPS < > ],
+                                                      MC - ],
+                                          OPT - ] >,
+                                 SPR < >,
+                                 SPEC < > ],
+                           HEAD adv &
+                                [ MOD < [ LOCAL scopal-mod &
+                                                [ CAT [ HEAD +vjp,
+                                                        VAL [ COMPS < > ] ] ] ] > ] ],
+                     CONT.RELS <! #rel !> ],              
+              LKEYS.KEYREL #rel ] ].
 
 ;; DVM 2017-06-05 : added EMPTY - to avoid zero-copula
 extracted-subj-phrase := basic-extracted-subj-phrase & 

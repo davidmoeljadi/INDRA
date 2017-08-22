@@ -51310,6 +51310,11 @@ sesuatu := n+det-lex &
 
 ;;; Prepositions
 
+misalnya := adposition-mod-lex &
+  [ STEM < "misalnya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_misalnya_p_rel",
+    TRAITS native_token_list ].
+
 bersama := adposition-mod-lex &
   [ STEM < "bersama" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bersama_p_rel",
@@ -75751,7 +75756,7 @@ terlontar := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_terlontar_v_rel",
     TRAITS native_token_list ].
 
-termasuk := intr-verb-lex &
+termasuk_v_intr := intr-verb-lex &
   [ STEM < "termasuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_termasuk_v_rel",
     TRAITS native_token_list ].
@@ -77263,7 +77268,7 @@ penuaan := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-sangat := adverb-lex &
+sangat := adverb-pre-adj-lex &
     [ STEM < "sangat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sangat_a_rel",
     TRAITS native_token_list ].
@@ -77419,10 +77424,9 @@ kusam := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-jika := conj-lex &
+jika := subord-conj-lex &
   [ STEM < "jika" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jika_coord_rel",
-    CFORM "1",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -78020,9 +78024,27 @@ adon := tr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-agak := adverb-lex &
-    [ STEM < "agak" >,
+agak := adverb-pre-adj-lex &
+  [ STEM < "agak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_agak_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+begitu := adverb-pre-adj-lex &
+  [ STEM < "begitu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_begitu_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+setengah := adverb-pre-adj-lex &
+  [ STEM < "setengah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_setengah_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+sekali := adverb-post-adj-lex &
+  [ STEM < "sekali" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sekali_a_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -78082,7 +78104,7 @@ anyam := tr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-apabila := conj-lex &
+apabila := subord-conj-lex &
   [ STEM < "apabila" >,
     SYNSEM.LKEYS.KEYREL.PRED "_apabila_coord_rel",
     CFORM "1",
@@ -78591,7 +78613,7 @@ bijian := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-bila := conj-lex &
+bila := subord-conj-lex &
   [ STEM < "bila" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bila_coord_rel",
     CFORM "1",
@@ -82054,12 +82076,6 @@ sekadarnya := adverb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-sekali := adverb-lex &
-    [ STEM < "sekali" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sekali_a_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
 sekejap := adverb-lex &
     [ STEM < "sekejap" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sekejap_a_rel",
@@ -82565,7 +82581,7 @@ terbelah := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-terlalu := adverb-lex &
+terlalu := adverb-pre-adj-lex &
     [ STEM < "terlalu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_terlalu_a_rel",
     TRAITS native_token_list ].
@@ -82928,4 +82944,34 @@ woku := inanimate-noun-noun-lex &
 belimbing+wuluh := inanimate-noun-noun-lex &
     [ STEM < "belimbing", "wuluh" >,
     SYNSEM.LKEYS.KEYREL.PRED "_belimbing+wuluh_n_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+terdiri+dari := trans-verb-lex &
+    [ STEM < "terdiri", "dari" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_terdiri+dari_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+terdiri+atas := trans-verb-lex &
+    [ STEM < "terdiri", "atas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_terdiri+atas_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+tersusun+dari := trans-verb-lex &
+    [ STEM < "tersusun", "dari" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tersusun+dari_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+tergolong := trans-verb-lex &
+    [ STEM < "tergolong" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tergolong_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+termasuk_v_trans := trans-verb-lex &
+    [ STEM < "termasuk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_termasuk_v_rel",
     TRAITS native_token_list ].
