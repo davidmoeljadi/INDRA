@@ -253,7 +253,7 @@ rumah := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_rumah_n_rel",
     TRAITS native_token_list ].
 
-saat := inanimate-noun-noun-lex &
+saat_inanim := inanimate-noun-noun-lex &
   [ STEM < "saat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_saat_n_rel",
     TRAITS native_token_list ].
@@ -51411,6 +51411,104 @@ lalu := conj-lex &
     CFORM "1",
     TRAITS native_token_list ].
 
+dsb := conj-lex &
+  [ STEM < "dsb" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dsb_coord_rel",
+    CFORM "1",
+    TRAITS native_token_list ].
+
+;;; Subordinative conjunctions
+
+;;; auto generated
+jika := subord-conj-lex &
+  [ STEM < "jika" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jika_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+kalau := subord-conj-lex &
+  [ STEM < "kalau" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kalau_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+bila := subord-conj-lex &
+  [ STEM < "bila" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bila_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+apabila := subord-conj-lex &
+  [ STEM < "apabila" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_apabila_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+sehingga := subord-conj-lex &
+  [ STEM < "sehingga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sehingga_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+sebelum := subord-conj-lex &
+  [ STEM < "sebelum" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sebelum_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+sesudah := subord-conj-lex &
+  [ STEM < "sesudah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sesudah_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+supaya := subord-conj-lex &
+  [ STEM < "supaya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_supaya_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+agar := subord-conj-lex &
+  [ STEM < "agar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_agar_coord_rel",
+    TRAITS native_token_list ].
+
+v;;; auto generated
+karena := subord-conj-lex &
+  [ STEM < "karena" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_karena_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+saat_conj := subord-conj-lex &
+  [ STEM < "saat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_saat_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+ketika := subord-conj-lex &
+  [ STEM < "ketika" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketika_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+walaupun := subord-conj-lex &
+  [ STEM < "walaupun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_walaupun_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+meskipun := subord-conj-lex &
+  [ STEM < "meskipun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_meskipun_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+dengan+cara := subord-conj-lex &
+  [ STEM < "dengan", "cara" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dengan+cara_coord_rel",
+    TRAITS native_token_list ].
+
 ;;; Complementizers
 
 bahwa := propcomp-lex-item &
@@ -51420,7 +51518,11 @@ bahwa := propcomp-lex-item &
 ;;; Relativizer
 ;; DVM 2017-06-05: from Zhong
 
-yang := rel-yang-lex & 
+yang_rel := rel-yang-lex & 
+  [ STEM < "yang" >,
+    TRAITS native_token_list ].
+
+yang_nya_rel := rel-yang-nya-lex & 
   [ STEM < "yang" >,
     TRAITS native_token_list ].
 
@@ -72286,7 +72388,7 @@ miring := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_miring_a_rel",
     TRAITS native_token_list ].
 
-mirip := adjective-lex &
+mirip_adj := adjective-lex &
   [ STEM < "mirip" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mirip_a_rel",
     TRAITS native_token_list ].
@@ -76816,13 +76918,6 @@ maja := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-ketika := conj-lex &
-  [ STEM < "ketika" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ketika_coord_rel",
-    CFORM "1",
-    TRAITS native_token_list ].
-
-;;; auto generated
 berumpun := adjective-lex &
     [ STEM < "berumpun" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berumpun_a_rel",
@@ -77421,12 +77516,6 @@ hibrida := inanimate-noun-noun-lex &
 kusam := adjective-lex &
     [ STEM < "kusam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kusam_a_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-jika := subord-conj-lex &
-  [ STEM < "jika" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_jika_coord_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -78048,13 +78137,6 @@ sekali := adverb-post-adj-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-agar := conj-lex &
-  [ STEM < "agar" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_agar_coord_rel",
-    CFORM "1",
-    TRAITS native_token_list ].
-
-;;; auto generated
 alamiah := adjective-lex &
     [ STEM < "alamiah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_alamiah_a_rel",
@@ -78101,13 +78183,6 @@ anugerahkan := v_np-pp_prop_le &
 anyam := tr-verb-lex &
     [ STEM < "anyam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_anyam_v_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-apabila := subord-conj-lex &
-  [ STEM < "apabila" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_apabila_coord_rel",
-    CFORM "1",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -78610,13 +78685,6 @@ biji-bijian := inanimate-plural-noun-lex &
 bijian := inanimate-noun-noun-lex &
     [ STEM < "bijian" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bijian_n_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-bila := subord-conj-lex &
-  [ STEM < "bila" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_bila_coord_rel",
-    CFORM "1",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -82974,4 +83042,10 @@ tergolong := trans-verb-lex &
 termasuk_v_trans := trans-verb-lex &
     [ STEM < "termasuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_termasuk_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+mirip_v_trans := trans-verb-lex &
+    [ STEM < "mirip" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mirip_v_rel",
     TRAITS native_token_list ].

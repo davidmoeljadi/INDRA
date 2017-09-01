@@ -181,6 +181,9 @@ commonnoun := noun.
 propername := noun.
 pronoun := noun.
 
+nounnya := commonnoun.
+nounnonya := commonnoun.
+
 ;; DVM 2017-03-23: separate 3rd person pronouns and non 3rd person pronouns for passive type 1 and 2
 pronoun-3person := pronoun.
 pronoun-non3person := pronoun.
@@ -194,6 +197,8 @@ activerb := verb.
 nonactiverb := verb.
 passiverbone := verb.
 passiverbtwo := verb.
+
+adjcontrol := adj.
 
 ;;; Adposition
 ;; DVM 2017-03-24: make a new group for semantically empty "oleh" (by)
@@ -906,6 +911,8 @@ ku-lex-rule := n-enclitic-lex-rule-super.
 
 mu-lex-rule := n-enclitic-lex-rule-super.
 
+ber-lex-rule := n-enclitic-lex-rule-super.
+
 ; DVM 2017-03-23: added transitive-verb-lex for active voice
 active-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & transitive-verb-lex &
   [ INFLECTED.VOICE-FLAG +,
@@ -1128,6 +1135,35 @@ np1-mid-coord-rule := basic-np-mid-coord-rule & monopoly-mid-coord-rule &
 np1-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
+#|
+np1-etc-coord-rule := binary-bottom-coord-rule & np-bottom-coord-phrase &
+  [ CONJ-DTR #cdtr,
+    NONCONJ-DTR #ncdtr,
+    ARGS < #ncdtr, #cdtr >,
+    SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+
+conj-etc-lex := word &
+  [ INFLECTED infl-satisfied,
+;    ORTH [ CLASS #class, FROM #from, TO #to, FORM #form ],
+    TOKENS tokens &
+           [ +LIST #tl & < [ +CLASS #class, +FROM #from, +FORM #form ], ... >,
+             +LAST.+TO #to ],
+    SYNSEM synsem &
+     [ LOCAL [ CAT [ HEAD conj ],
+               COORD-REL #keyrel,
+               CONT [ HOOK [ LTOP #chand,
+                             INDEX #cind ],
+                      RELS <! relation & #keyrel &
+                             [ LBL #chand,
+                               ARG0 #cind ] !>,
+                      HCONS <! !> ] ],
+       NON-LOCAL non-local-none,
+       LKEYS.KEYREL #keyrel & 
+	     [ CFROM #from,
+	       CTO #to ] ] ].
+|#
+
 ;;; Coordination Strategy 1
 ;; FCB, DVM & LMC 2016-05-06: added EMPTY - so that verbs cannot combine with zero-cop-rule
 
@@ -1319,6 +1355,43 @@ ditrans-second-arg-raising-verb := main-verb-lex & ditrans-second-arg-raising-le
                                 SPR < >,
                                 SPEC < >,
                                 SUBJ < [ ] > ] ] ] ] > ].
+
+;; DVM 2017-08-23 : control adjectives with passive verbs e.g. enak dimakan
+
+#|
+adj-control-pred-lex := basic-two-arg-no-hcons &
+  [ SYNSEM.LOCAL [ CAT [ VAL [ SUBJ < #subj & 
+				    [ LOCAL [ CONT.HOOK.INDEX #x1,
+                                              CAT [ VAL [ SPR < >,
+                                                          COMPS < > ],
+                                                    HEAD noun ] ] ] > ],
+                         HEAD adjcontrol ],
+                   CONT.HOOK.XARG #x1 ],
+    ARG-ST.FIRST #subj ].
+
+adjective-control-lex := adj-control-pred-lex & basic-nomod-adj-lex.
+
+trans-first-arg-control-adj := basic-two-arg & basic-nomod-adj-lex & trans-first-arg-control-lex-item & 
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adjcontrol,
+                           VAL [ COMPS < #comps >,
+                                 SUBJ < #subj > ] ],
+                     CONT.HOOK.XARG #x1 ] ],
+    ARG-ST < #subj &
+            [ LOCAL [ CAT [ HEAD noun,
+                            VAL [ SUBJ < >,
+                                  SPR < >,
+                                  SPEC < >,
+                                  COMPS < > ] ],
+                      CONT.HOOK.INDEX #x1 ] ],
+            #comps &
+            [ LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf-and-prog,
+			CAT [ HEAD passiverbone &
+                                [ AUX - ],
+                          VAL [ COMPS < >,
+                                SPR < >,
+                                SPEC < >,
+                                SUBJ < [ ] > ] ] ] ] > ].
+|#
 
 ;; verb types added from ERG
 ;; need to be modified
@@ -2085,7 +2158,7 @@ compound-result-verb-phrase := head-initial &
 rel-yang-lex := yang-comp-lex.
 ;; & zero-arg-nonque.
 
-yang-comp-lex := yang-super-lex & raise-sem-lex-item & no-icons-lex-item & norm-zero-arg &
+yang-comp-lex := basic-one-arg & yang-super-lex & raise-sem-lex-item & no-icons-lex-item & norm-zero-arg &
 "The modified noun is the missing argument in the relative clause.
 <ex>saya makan buah yang merah
 <ex>saya makan buah yang merah itu
@@ -2107,7 +2180,7 @@ yang-comp-lex := yang-super-lex & raise-sem-lex-item & no-icons-lex-item & norm-
                           REL <! !>,
                           QUE <! !> ] ] ].
 
-yang-super-lex := basic-one-arg &
+yang-super-lex := lex-item &
 "lex-item & YANG takes a COMP and modifies a noun. Its position is after its modified noun.
 POSTCOMP is a feature to be used on head to indicate the COMP's position is after the head.
 POSTHEAD + means as a modifier, it always appear after the head noun.
@@ -2119,7 +2192,41 @@ POSTHEAD + means as a modifier, it always appear after the head noun.
                                                       VAL.COMPS < > ] ] ] > ],
 			    VAL [ SPR < >,
                                   SPEC < >,
-			          COMPS < synsem  & [ LOCAL.CAT.MC + ] > ] ] ] ].
+			          COMPS < synsem  & [ LOCAL.CAT.MC + ], ... > ] ] ] ].
+
+;; DVM 2017-08-23 : NP yang NP=nya "NP whose NP"
+
+rel-yang-nya-lex := yang-nya-comp-lex.
+;; & zero-arg-nonque.
+
+yang-nya-comp-lex := basic-two-arg & yang-super-lex & no-icons-lex-item & norm-zero-arg &
+" MC
+OPT
+The modified noun is the missing possessor in the relative clause.
+<ex>gajah yang hidungnya panjang itu tidur
+"
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adp &
+                                [  MOD < [ LOCAL [ CAT.VAL.SPR < canonical-synsem >,
+                                                   CONT.HOOK.INDEX #internalargument ] ] > ] ,
+                           MC -,
+                           VAL [ SUBJ < >,
+                                 COMPS < #subj & [ LOCAL [ CAT [ HEAD nounnya ,
+                                                         VAL [ SPR < > ,
+                                                               COMPS < > ]] ,
+                                                   CONT [ HOOK #head &
+                                                               [INDEX #externalargument,
+                                                                LTOP #lbl ]]]],
+                                         [ LOCAL [ CAT [ HEAD adj,
+                                                         VAL [ SUBJ < #subj > ] ] ],
+                                           OPT - ]>] ],
+                     CONT [ RELS <! arg12-ev-relation & 
+                  [PRED compound_p_rel,
+                   LBL #lbl,
+                   ARG1 #externalargument,
+                   ARG2 #internalargument] !>, HCONS <! !> ]],
+              NON-LOCAL [ SLASH <! !>,
+                          REL <! !>,
+                          QUE <! !> ] ] ].
 
 ;; DVM 2017-08-22 : for subordinate conjunctions such as "jika"
 
@@ -2136,7 +2243,7 @@ subord-conj-lex := basic-subord-conjunction-lex & basic-icons-lex-item &
                                  SPEC < > ],
                            HEAD adv &
                                 [ MOD < [ LOCAL scopal-mod &
-                                                [ CAT [ HEAD +vjp,
+                                                [ CAT [ HEAD +nvjp,
                                                         VAL [ COMPS < > ] ] ] ] > ] ],
                      CONT.RELS <! #rel !> ],              
               LKEYS.KEYREL #rel ] ].
