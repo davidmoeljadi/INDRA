@@ -18,7 +18,7 @@
 nya-suffix-1 :=
 %suffix (* nya)
 nya-lex-rule & 
- [ DTR.SYNSEM.LOCAL [ CAT.HEAD nounnya,
+ [ DTR.SYNSEM.LOCAL [ CAT.HEAD nounnyadef,
                       CONT.HOOK [ INDEX #index,
 				  LTOP #larg ] ],
    C-CONT [ HOOK [ INDEX #index ],
@@ -31,7 +31,7 @@ nya-lex-rule &
 nya-suffix-2 :=
 %suffix (* nya)
 nya-lex-rule & 
- [ DTR.SYNSEM.LOCAL [ CAT.HEAD nounnonya,
+ [ DTR.SYNSEM.LOCAL [ CAT.HEAD nounnyapos,
                       CONT.HOOK [ INDEX #index,
 				  LTOP #larg ] ],
    C-CONT [ HOOK [ INDEX #index ],

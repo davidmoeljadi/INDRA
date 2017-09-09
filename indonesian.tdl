@@ -181,8 +181,8 @@ commonnoun := noun.
 propername := noun.
 pronoun := noun.
 
-nounnya := commonnoun.
-nounnonya := commonnoun.
+nounnyadef := commonnoun.
+nounnyapos := commonnoun.
 
 ;; DVM 2017-03-23: separate 3rd person pronouns and non 3rd person pronouns for passive type 1 and 2
 pronoun-3person := pronoun.
@@ -543,6 +543,19 @@ trans-verb-lex := main-verb-lex & transitive-lex-item &
                                  COMPS < > ],
                            POSTHEAD +,
                            HEAD noun ] ] > ].
+
+;; DVM 2017-09-07 : for relational verbs such as "berkerabat (dg)", "bersahabat (dg)"
+
+relational-verb-lex := main-verb-lex & transitive-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD nonactiverb,
+                       VAL.COMPS < #comps & [ OPT + ] > ],
+    ARG-ST < [ LOCAL.CAT [ HEAD noun ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           POSTHEAD +,
+                           HEAD adp ] ] > ].
+
 
 ;;; Auxiliaries
 
@@ -911,7 +924,24 @@ ku-lex-rule := n-enclitic-lex-rule-super.
 
 mu-lex-rule := n-enclitic-lex-rule-super.
 
-ber-lex-rule := n-enclitic-lex-rule-super.
+;Question for ber-: [N](possessor) ber-+[N](possessee) [N](complement) 
+#|
+n-enclitic-lex-rule-poss := infl-lex-rule & 
+  [ SYNSEM.LOCAL [ CAT [ HEAD verb,
+                         VAL [ SPR < >,
+                               SPEC < >,
+                               SUBJ < [ LOCAL [ CAT.VAL [ SPR < >,
+                                                          COMPS < > ],
+                                                CONT.HOOK.INDEX #xarg ] ] > ] ] ],
+    C-CONT [ ICONS <! !>,
+             RELS <! arg12-relation & [ PRED "_possess_v_rel",
+				        LBL #larg,
+                                        ARG1 #xarg,
+				        ARG2 #index ] !> ],
+    DTR common-noun-lex & [ SYNSEM.LOCAL [ CONT.HOOK [ INDEX #index ] ] ] ].
+
+ber-lex-rule := n-enclitic-lex-rule-poss.
+|#
 
 ; DVM 2017-03-23: added transitive-verb-lex for active voice
 active-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & transitive-verb-lex &
@@ -1591,7 +1621,7 @@ basic-int-adv-lex := basic-adv-lex & intersective-mod-lex & norm-hook-lex-item &
 adverb-lex := basic-int-adv-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < [ ], ... >,
 							  COMPS < > ],
-						    HEAD verb ] ]>,
+						    HEAD +vjp ] ]>,
 			   VAL [ SPR < >,
 				 SUBJ < >,
 				 COMPS < >,
@@ -1600,7 +1630,8 @@ adverb-lex := basic-int-adv-lex &
 adverb-scop-lex:= basic-scopal-adverb-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < [ ], ... >,
 							  COMPS < > ],
-						    HEAD verb ] ]>,
+						    HEAD +vjp ] ]>,
+                           POSTHEAD -,
 			   VAL [ SPR < >,
 				 SUBJ < >,
 				 COMPS < >,
@@ -1614,11 +1645,29 @@ adverb-pre-lex := adverb-lex &
 
 adverb-time-lex := basic-scopal-adverb-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ COMPS < > ],
-						    HEAD verb ] ]>,
+						    HEAD +vjp ] ]>,
 			   VAL [ SPR < >,
 				 SUBJ < >,
 				 COMPS < >,
 				 SPEC < > ] ]]]].
+
+#|
+;; DVM 2016-02-16 : added information of ASPECT nonaspect and TENSE nonfuture
+;; so that *Budi sudah/sedang/akan guru cannot be parsed.
+;; FCB, DVM & LMC 2016-05-06 : add COORD - so that "nasi" in "Adi makan nasi" cannot have "zero copula"
+adj-adv-rule := unary-phrase & basic-int-adv-lex &
+ [ SYNSEM.LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < [ ], ... >,
+							     COMPS < > ],
+						       HEAD verb ] ]>,
+                        VAL [ COMPS < >,
+                              SPR < >,
+                              SPEC < >,
+                              SUBJ < > ] ] ] ,
+   ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD adj,
+                                 VAL [ SPR < >,
+                                       COMPS < > ] ] ] ] > ].
+|#
+
 
 ;;; DVM 2017-08-22 : Adverbs modifying adjectives
 
@@ -2046,7 +2095,7 @@ compound-noun-phrase := head-initial &
                            CONT [ HOOK #head &
                                        [INDEX #externalargument,
                                         LTOP #lbl ]]]],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD noun],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD noun ],
                                CONT.HOOK.INDEX #internalargument ],
    C-CONT [ RELS <! arg12-ev-relation & 
                   [PRED compound_p_rel,
@@ -2200,8 +2249,8 @@ rel-yang-nya-lex := yang-nya-comp-lex.
 ;; & zero-arg-nonque.
 
 yang-nya-comp-lex := basic-two-arg & yang-super-lex & no-icons-lex-item & norm-zero-arg &
-" MC
-OPT
+" MC - means that N N=nya V/A/P is not a main clause
+OPT - is needed to constrain the number of trees, also neither the N=nya nor the V/A/P is optional
 The modified noun is the missing possessor in the relative clause.
 <ex>gajah yang hidungnya panjang itu tidur
 "
@@ -2210,15 +2259,16 @@ The modified noun is the missing possessor in the relative clause.
                                                    CONT.HOOK.INDEX #internalargument ] ] > ] ,
                            MC -,
                            VAL [ SUBJ < >,
-                                 COMPS < #subj & [ LOCAL [ CAT [ HEAD nounnya ,
+                                 COMPS < #subj & [ LOCAL [ CAT [ HEAD nounnyadef ,
                                                          VAL [ SPR < > ,
                                                                COMPS < > ]] ,
                                                    CONT [ HOOK #head &
                                                                [INDEX #externalargument,
-                                                                LTOP #lbl ]]]],
-                                         [ LOCAL [ CAT [ HEAD adj,
+                                                                LTOP #lbl ]]],
+                                                   OPT - ],
+                                         [ LOCAL [ CAT [ HEAD +vjp,
                                                          VAL [ SUBJ < #subj > ] ] ],
-                                           OPT - ]>] ],
+                                           OPT - ] > ] ],
                      CONT [ RELS <! arg12-ev-relation & 
                   [PRED compound_p_rel,
                    LBL #lbl,

@@ -1,3 +1,8 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 
+;; DVM 2017-08-23 : ber- "possess"
 
+;ber-prefix :=
+;%prefix (* ber) (r ber)
+;ber-lex-rule &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT + ].
