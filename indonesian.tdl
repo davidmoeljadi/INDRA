@@ -678,13 +678,13 @@ adjective-quant-lex := basic-nomod-adj-lex & intransitive-lex-item &
                    CONT.HOOK.XARG #x1 ],
     ARG-ST.FIRST #subj ].
 
+;; DVM 2017-09-12: no information about POSTHEAD because "banyak" can appear before or after N
 adj-mod-quant-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
-                                                    VAL.COMPS cons ]]>,
+                                                    VAL.SPR cons ]]>,
 			   VAL [ SUBJ < >,
 			         COMPS < >,
-			         SPEC < > ],
-			   POSTHEAD - ]]]].
+			         SPEC < > ] ]]]].
 
 adj-to-attr-quant-rule := const-lex-rule &
 		    same-cont-lex-rule & 
@@ -1771,7 +1771,6 @@ passive-oleh-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-ve
                             VAL.COMPS < #comps > ],
                       CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
-
 adposition-mod-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
   [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
 			    ARG1 #xarg,
@@ -1782,22 +1781,67 @@ adposition-mod-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-le
 						      VAL.SUBJ cons ],
 						CONT.HOOK.INDEX #xarg ]] >,
 			   VAL [ SPR < >,
-			     COMPS < [ OPT -,
-				       LOCAL [ CAT [ HEAD noun,
-						     VAL.SPR < > ],
-					       CONT.HOOK.INDEX #ind ]] >,
+			         COMPS < [ OPT -,
+				           LOCAL [ CAT [ HEAD noun,
+						         VAL.SPR < > ],
+					           CONT.HOOK.INDEX #ind ]] >,
 				 SUBJ < > ]]]]].
 
-adp-mod-lex := intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD +nv,
-                                                    VAL.SPR cons ]]>,
+adp-attr-lex := intersective-mod-lex & norm-ltop-lex-item & transitive-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+                            ARG1 #xarg,
+                            ARG2 #ind ],
+             LOCAL [ CONT.HOOK [ XARG #xarg,
+                                 INDEX #arg0 ],
+                     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD noun,
+                                                      VAL [ SPR cons ]],
+                                                CONT.HOOK.INDEX #xarg ]] >,
+                           VAL [ SUBJ < >,
+                                 SPR < >,
+                                 COMPS < [ OPT -,
+                                           LOCAL [ CAT [ HEAD noun,
+                                                         VAL.SPR < > ],
+                                                   CONT.HOOK.INDEX #ind ]] >,
+                                 SPEC < > ],
 			   POSTHEAD + ]]]].
 
-adp-to-attr-rule := const-lex-rule &
+adp-mod-lex := basic-adposition-lex & adp-attr-lex.
+
+adp-to-attr-n-rule := const-lex-rule &
 		    same-cont-lex-rule & 
 		    same-ctxt-lex-rule &
 		    same-agr-lex-rule &
-		    adposition-mod-lex &
+		    adp-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ],
+    DTR adposition-lex &
+    [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ] ] ] ].
+
+adp-attr-v-lex := intersective-mod-lex & norm-ltop-lex-item & transitive-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+                            ARG1 #xarg,
+                            ARG2 #ind ],
+             LOCAL [ CONT.HOOK [ LTOP #top,
+                                 XARG #xarg,
+                                 INDEX #arg0 ],
+                     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD verb,
+                                                      VAL [ SUBJ cons ]],
+                                                CONT.HOOK [ INDEX #xarg,
+                                                            LTOP #top ]]] >,
+                           VAL [ SUBJ < >,
+                                 SPR < >,
+                                 COMPS < [ OPT -,
+                                           LOCAL [ CAT [ HEAD noun,
+                                                         VAL.SPR < > ],
+                                                   CONT.HOOK.INDEX #ind ]] >,
+                                 SPEC < > ]]]]].
+
+adp-mod-v-lex := basic-adposition-lex & adp-attr-v-lex.
+
+adp-to-attr-v-rule := const-lex-rule &
+		    same-cont-lex-rule & 
+		    same-ctxt-lex-rule &
+		    same-agr-lex-rule &
+		    adp-mod-v-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ],
     DTR adposition-lex &
     [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ] ] ] ].

@@ -74666,7 +74666,7 @@ sedih := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_sedih_a_rel",
     TRAITS native_token_list ].
 
-sedikit := adjective-lex &
+sedikit := adjective-quant-lex &
   [ STEM < "sedikit" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sedikit_a_rel",
     TRAITS native_token_list ].

@@ -157,3 +157,15 @@ redup-adj-lex-rule.
 ;; FCB & DVM 2016-02-10: rule for attributive adjective
 adjective-attr-rule :=
 adj-to-attr-rule.
+
+;; DVM 2017-09-11: rule for attributive quantifier to N
+adjective-attr-q-rule :=
+adj-to-attr-quant-rule.
+
+;; DVM 2017-09-11: rule for attributive adposition to N
+adposition-attr-n-rule :=
+adp-to-attr-n-rule.
+
+;; DVM 2017-09-11: rule for attributive adposition to V
+adposition-attr-v-rule :=
+adp-to-attr-v-rule.
