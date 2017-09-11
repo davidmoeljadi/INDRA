@@ -1165,6 +1165,30 @@ np1-mid-coord-rule := basic-np-mid-coord-rule & monopoly-mid-coord-rule &
 np1-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
+;;; DVM 2017-09-11: added coordination strategy for adjectives
+;;; Coordination Strategy 1
+
+adj1-top-coord-rule := basic-adj-top-coord-rule & monopoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+adj1-mid-coord-rule := basic-adj-mid-coord-rule & monopoly-mid-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+adj1-bottom-coord-rule := conj-first-bottom-coord-rule & adj-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+;;; DVM 2017-09-11: added coordination strategy for adverbs
+;;; Coordination Strategy 1
+
+adv1-top-coord-rule := basic-adv-top-coord-rule & monopoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+adv1-mid-coord-rule := basic-adv-mid-coord-rule & monopoly-mid-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+adv1-bottom-coord-rule := conj-first-bottom-coord-rule & adv-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
 #|
 np1-etc-coord-rule := binary-bottom-coord-rule & np-bottom-coord-phrase &
   [ CONJ-DTR #cdtr,
@@ -1655,19 +1679,28 @@ adverb-time-lex := basic-scopal-adverb-lex &
 ;; DVM 2016-02-16 : added information of ASPECT nonaspect and TENSE nonfuture
 ;; so that *Budi sudah/sedang/akan guru cannot be parsed.
 ;; FCB, DVM & LMC 2016-05-06 : add COORD - so that "nasi" in "Adi makan nasi" cannot have "zero copula"
-adj-adv-rule := unary-phrase & basic-int-adv-lex &
- [ SYNSEM.LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < [ ], ... >,
-							     COMPS < > ],
-						       HEAD verb ] ]>,
+adj-adv-rule := unary-phrase &
+ [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0,
+                                LTOP #vl,
+                                XARG #x1 ] ],
+                  CAT [ HEAD adv & [ MOD < [ LOCAL [ CAT [ VAL [ SUBJ < [ ], ... >,
+							       COMPS < > ],
+						          HEAD verb ],
+                                                     CONT.HOOK.INDEX #x1 ] ] > ],
                         VAL [ COMPS < >,
                               SPR < >,
                               SPEC < >,
                               SUBJ < > ] ] ] ,
    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD adj,
                                  VAL [ SPR < >,
-                                       COMPS < > ] ] ] ] > ].
+                                       COMPS < > ] ],
+                           CONT.HOOK.INDEX #x2 ] ] > ,
+   C-CONT [ RELS <! [ LBL #vl,
+                      PRED cop_v_zero_rel,
+                      ARG0 #v0,
+                      ARG1 #x1,
+                      ARG2 #x2 ] !> ] ].
 |#
-
 
 ;;; DVM 2017-08-22 : Adverbs modifying adjectives
 

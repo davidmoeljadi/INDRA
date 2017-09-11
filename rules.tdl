@@ -41,6 +41,18 @@ np1-mid-coord := np1-mid-coord-rule.
 
 np1-bottom-coord := np1-bottom-coord-rule.
 
+adj1-top-coord := adj1-top-coord-rule.
+
+adj1-mid-coord := adj1-mid-coord-rule.
+
+adj1-bottom-coord := adj1-bottom-coord-rule.
+
+adv1-top-coord := adv1-top-coord-rule.
+
+adv1-mid-coord := adv1-mid-coord-rule.
+
+adv1-bottom-coord := adv1-bottom-coord-rule.
+
 vp1-top-coord := vp1-top-coord-rule.
 
 vp1-mid-coord := vp1-mid-coord-rule.
