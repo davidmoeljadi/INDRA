@@ -554,7 +554,7 @@ relational-verb-lex := main-verb-lex & transitive-lex-item &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
                            POSTHEAD +,
-                           HEAD adp ] ] > ].
+                           HEAD nonoleh-adp ] ] > ].
 
 
 ;;; Auxiliaries
@@ -959,7 +959,157 @@ pas-one-lex-rule := passive-voice-lex-rule-super & passive-one-verb-lex.
 
 pas-two-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex.
 
-;adj-superlative-lex-rule :=
+
+
+
+
+
+
+; DVM 2017-09-13: active voice for ditransitives V NP NP
+; Temporary patch for e.g. 'take' which has an optional ARG3 role, which
+; needs to be present so generator won't spuriously fill it.
+; <type val="v_np_noarg3_le">
+; <description>Cmps NP(obl), only two args      
+; <ex>B took the book.
+; <nex>
+; <todo>
+; </type>
+v_np_noarg3_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
+  [ INFLECTED.VOICE-FLAG - ].
+
+ditransitive-n-n-verb-lex := main-verb-lex & ditransitive-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD activerb,
+                       VAL.COMPS < #comp1, #comp2 > ],
+    ARG-ST < [ LOCAL.CAT [ HEAD noun ] ],
+             #comp1 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           POSTHEAD +,
+                           HEAD noun ] ],
+             #comp2 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun ] ] > ].
+
+active-voice-lex-rule-ditrans-n-n := add-only-no-ccont-rule & infl-lex-rule & ditransitive-n-n-verb-lex &
+  [ INFLECTED.VOICE-FLAG +,
+    DTR v_np_noarg3_le ].
+
+act-ditrans-n-n-lex-rule := active-voice-lex-rule-ditrans-n-n.
+
+pas-one-ditrans-n-n-lex-rule := passive-voice-lex-rule-ditrans-n-n & passive-one-ditrans-n-n-verb-lex.
+
+passive-voice-lex-rule-ditrans-n-n := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED.VOICE-FLAG +,
+    DTR v_np_noarg3_le ].
+
+; without "oleh"
+; <ex> Budi dibuatkan Adi pizza
+passive-one-ditrans-n-n-verb-lex := basic-three-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD noun,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind1,
+			 	    ICONS-KEY.IARG1 #clause ] ] ],
+              #comp1 &
+	      [ LOCAL [ CAT [ HEAD 3person-noun,
+                              POSTHEAD +,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind2,
+				    ICONS-KEY.IARG1 #clause ] ] ],
+              #comp2 &
+	      [ LOCAL [ CAT [ HEAD noun,
+                              POSTHEAD +,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind3,
+				    ICONS-KEY.IARG1 #clause ] ] ] >,
+     SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
+			     ARG2 #ind1,
+                             ARG3 #ind3 ],
+	      LOCAL [ CAT [ HEAD passiverbone,
+                            VAL.COMPS < #comp1, #comp2 > ],
+                      CONT.HOOK.CLAUSE-KEY #clause ] ] ].
+
+
+
+
+
+
+; DVM 2017-09-13: active voice for ditransitives V NP PP
+;; takes dir_state_modable_rel oblique complement.
+;; put (takes variety of PP complements, so avoid chart dependency filter)
+; <type val="v_np-pp_prop_le">
+; <description>Cmps NP(obl),PP(obl), state rslt 
+; <ex>B put C on D.
+; <nex>
+; <todo>
+; </type>
+v_np-pp_prop_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
+  [ INFLECTED.VOICE-FLAG - ].
+
+ditransitive-n-p-verb-lex := main-verb-lex & ditransitive-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD activerb,
+                       VAL.COMPS < #comp1, #comp2 > ],
+    ARG-ST < [ LOCAL.CAT [ HEAD noun ] ],
+             #comp1 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           POSTHEAD +,
+                           HEAD noun ] ],
+             #comp2 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           POSTHEAD +,
+                           HEAD nonoleh-adp ] ] > ].
+
+active-voice-lex-rule-ditrans-n-p := add-only-no-ccont-rule & infl-lex-rule & ditransitive-n-p-verb-lex &
+  [ INFLECTED.VOICE-FLAG +,
+    DTR v_np-pp_prop_le ].
+
+act-ditrans-n-p-lex-rule := active-voice-lex-rule-ditrans-n-p.
+
+; <type val="v_np-pp_e_le">
+; <description>Cmps NP(obl),PP(sel.obl)         
+; <ex>B compared C with D.
+; <nex>
+; <todo>
+; </type>
+v_np-pp_e_le := v_np-pp_prop_le. 
+
+
+
+#|
+v_np_noarg3_le := main-verb-lex & ditransitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comp1, #comp2 >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #comp1 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun ] ],
+             #comp2 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun ] ] > ].
+
+ditransitive-verb-lex := main-verb-lex & ditransitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comp1, #comp2 >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #comp1 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun ] ],
+             #comp2 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD nonoleh-adp ] ] > ].
+
+v_np-pp_e_le := ditransitive-verb-lex & 
+  [ SYNSEM [ LOCAL.CAT [ VAL.COMPS < [ OPT - ], [ OPT - ] > ] ] ].
+|#
+
+
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
@@ -1478,57 +1628,6 @@ v_pp*_dir_le := main-verb-lex & transitive-lex-item &
                                  COMPS < > ],
                            HEAD nonoleh-adp ] ] > ].
 
-; Temporary patch for e.g. 'take' which has an optional ARG3 role, which
-; needs to be present so generator won't spuriously fill it.
-; <type val="v_np_noarg3_le">
-; <description>Cmps NP(obl), only two args      
-; <ex>B took the book.
-; <nex>
-; <todo>
-; </type>
-v_np_noarg3_le := main-verb-lex & ditransitive-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comp1, #comp2 >,
-    ARG-ST < [ LOCAL.CAT.HEAD noun ],
-             #comp1 &
-             [ LOCAL.CAT [ VAL [ SPR < >,
-                                 COMPS < > ],
-                           HEAD noun ] ],
-             #comp2 &
-             [ LOCAL.CAT [ VAL [ SPR < >,
-                                 COMPS < > ],
-                           HEAD noun ] ] > ].
-
-ditransitive-verb-lex := main-verb-lex & ditransitive-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comp1, #comp2 >,
-    ARG-ST < [ LOCAL.CAT.HEAD noun ],
-             #comp1 &
-             [ LOCAL.CAT [ VAL [ SPR < >,
-                                 COMPS < > ],
-                           HEAD noun ] ],
-             #comp2 &
-             [ LOCAL.CAT [ VAL [ SPR < >,
-                                 COMPS < > ],
-                           HEAD nonoleh-adp ] ] > ].
-
-;; takes dir_state_modable_rel oblique complement.
-;; put (takes variety of PP complements, so avoid chart dependency filter)
-; <type val="v_np-pp_prop_le">
-; <description>Cmps NP(obl),PP(obl), state rslt 
-; <ex>B put C on D.
-; <nex>
-; <todo>
-; </type>
-v_np-pp_prop_le := ditransitive-verb-lex.
-
-; <type val="v_np-pp_e_le">
-; <description>Cmps NP(obl),PP(sel.obl)         
-; <ex>B compared C with D.
-; <nex>
-; <todo>
-; </type>
-v_np-pp_e_le := ditransitive-verb-lex & 
-  [ SYNSEM [ LOCAL.CAT [ VAL.COMPS < [ OPT - ], [ OPT - ] > ] ] ].
-
 ; <type val="v_cp_prop_le">
 ; <description>Cmps S (fin/inf, -Q, opt cmplzr) 
 ; <ex>B hoped (that) C won. 
@@ -1777,9 +1876,9 @@ adposition-mod-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-le
 			    ARG2 #ind ],
 	     LOCAL [ CONT.HOOK [ XARG #xarg,
 				 INDEX #arg0 ],
-		     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD verb,
-						      VAL.SUBJ cons ],
-						CONT.HOOK.INDEX #xarg ]] >,
+		     CAT [ HEAD nonoleh-adp & [ MOD < [ LOCAL [ CAT [ HEAD verb,
+						                      VAL.SUBJ cons ],
+						                CONT.HOOK.INDEX #xarg ]] > ],
 			   VAL [ SPR < >,
 			         COMPS < [ OPT -,
 				           LOCAL [ CAT [ HEAD noun,
