@@ -6,13 +6,15 @@
 ; symbols, but they all need to be listed as the value of
 ; `*start-symbol' (see `lkb/user-fns.lsp').
 
+;;; DVM 2017-09-18: NON-LOCAL.SLASH 0-dlist is added so that INDRA won't be able to parse "makan" without subj
 root := phrase &
-  [ SYNSEM.LOCAL [ COORD -,
-                   CAT [ VAL [ SUBJ < >,
-                               COMPS < > ],
-                         MC +,
-                         HEAD +vjpc &
-                              [ FORM finite ] ] ] ].
+  [ SYNSEM [ LOCAL [ COORD -,
+                     CAT [ VAL [ SUBJ < >,
+                                 COMPS < > ],
+                           MC +,
+                           HEAD +vjpc &
+                                [ FORM finite ] ] ],
+             NON-LOCAL.SLASH 0-dlist ] ].
 
 ; This start symbol allows you to parse single words as stand-alone
 ; utterances.  This can be useful for grammar debugging purposes.
@@ -24,12 +26,14 @@ frag := phrase  &
 			    VAL super-saturated ] ],
 	      NON-LOCAL.SLASH 0-dlist ] ].
 
+;;; DVM 2017-09-18: NON-LOCAL.SLASH 0-dlist is added
 frag-v := phrase &
-  [ SYNSEM.LOCAL [ COORD -,
-                   CAT [ VAL valence,
-                         MC +,
-                         HEAD +vj &
-                              [ FORM finite ] ] ] ].
+  [ SYNSEM [ LOCAL [ COORD -,
+                     CAT [ VAL valence,
+                           MC +,
+                           HEAD +vj &
+                                [ FORM finite ] ] ],
+             NON-LOCAL.SLASH 0-dlist ] ].
 
 ; Also need to add root constraint for bridged phrases
 root-bridge := phrase &

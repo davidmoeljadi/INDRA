@@ -27,8 +27,9 @@
 
 :begin :instance :status token-mapping-rule.
 :include "tmr/prelude".
-:include "tmr/pos".
-:include "tmr/pos-ipa".
+;:include "tmr/pos".
+;:include "tmr/pos-ipa".
+:include "tmr/split".
 :include "tmr/finis".
 :include "tmr/ne1".
 :include "tmr/ne2".

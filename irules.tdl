@@ -147,6 +147,11 @@ pas-one-ditrans-n-n-prefix :=
 pas-one-ditrans-n-n-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT -] > ].
 
+pas-one-ditrans-n-p-prefix :=
+%prefix (* di)
+pas-one-ditrans-n-p-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT -] > ].
+
 ;pas-two-prefix :=
 ;%prefix (* )
 ;pas-two-lex-rule &

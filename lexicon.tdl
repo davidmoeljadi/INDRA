@@ -50591,6 +50591,10 @@ ia := pronoun-3rd-sg-nohon-noun-lex &
   [ STEM < "ia" >,
     TRAITS native_token_list ].
 
+;nya := pronoun-3rd-sg-nohon-noun-lex &
+;  [ STEM < "nya" >,
+;    TRAITS native_token_list ].
+
 beliau := pronoun-3rd-sg-hon-noun-lex &
   [ STEM < "beliau" >,
     TRAITS native_token_list ].
@@ -50608,13 +50612,13 @@ mereka := pronoun-3rd-pl-noun-lex &
 ;; DVM 2015-05-09: pumping rules applied for ini: benda/hal+ini = ini
 ;; DVM 2015-05-09: pumping rules applied for itu: benda/hal+itu = itu
 
-ini_1 := n+det-lex &
+ini_1 := n+dem-lex &
   [ STEM < "ini" >,
     SYNSEM.LKEYS [KEYREL.PRED "entity_n_rel",
 		  ALTKEYREL.PRED "proximal_q_rel" ],
     TRAITS native_token_list].
 
-itu_1 := n+det-lex &
+itu_1 := n+dem-lex &
   [ STEM < "itu" >,
     SYNSEM.LKEYS [KEYREL.PRED "entity_n_rel",
 		  ALTKEYREL.PRED "distal_q_rel" ],
@@ -51404,7 +51408,7 @@ pada := adposition-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_pada_p_rel",
     TRAITS native_token_list ].
 
-untuk := adposition-mod-lex &
+untuk_adp := adposition-mod-lex &
   [ STEM < "untuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_untuk_p_rel",
     TRAITS native_token_list ].
@@ -51456,12 +51460,6 @@ lalu := conj-lex &
     CFORM "1",
     TRAITS native_token_list ].
 
-dsb := conj-lex &
-  [ STEM < "dsb" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_dsb_coord_rel",
-    CFORM "1",
-    TRAITS native_token_list ].
-
 ;;; Subordinative conjunctions
 
 ;;; auto generated
@@ -51492,6 +51490,12 @@ apabila := subord-conj-lex &
 sehingga := subord-conj-lex &
   [ STEM < "sehingga" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sehingga_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+untuk_subord := subord-conj-lex &
+  [ STEM < "untuk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_untuk_coord_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -51807,19 +51811,47 @@ sini := n+det-lex &
   [ STEM < "sini" >,
     SYNSEM.LKEYS [KEYREL.PRED "place_n_rel",
 		  ALTKEYREL.PRED "proximal_q_rel" ],
-    TRAITS native_token_list].
+    TRAITS native_token_list ].
 
 situ := n+det-lex &
   [ STEM < "situ" >,
     SYNSEM.LKEYS [KEYREL.PRED "place_n_rel",
 		  ALTKEYREL.PRED "medial_q_rel" ],
-    TRAITS native_token_list].
+    TRAITS native_token_list ].
 
 sana := n+det-lex &
   [ STEM < "sana" >,
     SYNSEM.LKEYS [KEYREL.PRED "place_n_rel",
 		  ALTKEYREL.PRED "remote_q_rel" ],
-    TRAITS native_token_list].
+    TRAITS native_token_list ].
+
+;;; DVM 2017-09-19: et cetera (etc.)
+
+dsb_n := conj+n-lex &
+  [ STEM < "dsb" >,
+    TRAITS native_token_list ].
+
+dll_n := conj+n-lex &
+  [ STEM < "dll" >,
+    TRAITS native_token_list ].
+
+dsb_v := conj+v-lex &
+  [ STEM < "dsb" >,
+    TRAITS native_token_list ].
+
+dll_v := conj+v-lex &
+  [ STEM < "dll" >,
+    TRAITS native_token_list ].
+
+lain-lain_n := inanimate-plural-noun-lex &
+  [ STEM < "lain²" >,
+    SYNSEM.LKEYS.KEYREL.PRED "others_n_rel",
+    TRAITS native_token_list ].
+
+lain-lain_v := intr-verb-lex &
+  [ STEM < "lain²" >,
+    SYNSEM.LKEYS.KEYREL.PRED "others_v_rel",
+    TRAITS native_token_list ].
 
 ;;;; Other adverbs
 
