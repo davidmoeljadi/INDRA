@@ -1,0 +1,71 @@
+;;; -*- Mode: tdl; Coding: utf-8; -*-
+
+;;;
+;;; Copyright (c) 2012 Francis Bond (bond@ieee.org); 
+;;; see `LICENSE' for conditions.
+;;;
+
+;;; reduplication: 
+; 她 高 高 -> 她 高々
+; 她 高高   *Not currently matched* (many existing lexicon entries -n/v/a)
+; FCB ! ([^. …]+) \1 
+
+
+; bukunya
+redup_sp := token_mapping_rule  &
+[ +CONTEXT < [ +ID [ LIST #front , LAST #back ] , +FORM #form & ^(.+)nya$, +FROM #from , +TO #to ] >,
+  +INPUT < [ +ID [ LIST #front , LAST #back ] , +FORM #form & ^(.+)nya$, +FROM #from , +TO #to ] >,
+  +OUTPUT  < [ +ID [ LIST #front , LAST #middle ] , +FORM "${C1:+FORM:1}",
+	       +TRAIT native_trait,
+	       +FROM #from , +TO #to ],
+             [ +ID [ LIST #middle , LAST #back ] , +FORM "nya",
+	       +TRAIT native_trait,
+	       +FROM #from , +TO #to ] >,
+  +POSITION "O1<O2, O1@C1, O2@C1" ].
+
+;O1@C1, O2@C1 and C1@O1, C2@O1
+
+#|
+; buku nya
+redupp_sp := token_mapping_rule  &
+[ +INPUT < [ +ID #id , +FORM #form & ^(.+)nya$, +FROM #from , +TO #to ] >,
+  +CONTEXT < >,
+  +OUTPUT  < [ +ID #id , +FORM "${I1:+FORM:1}",
+	       +TRAIT native_trait,
+	       +FROM #from , +TO #to ],
+             [ +ID #id , +FORM "nya",
+	       +TRAIT native_trait,
+	       +FROM #from , +TO #to ] >,
+  +POSITION "O1<O2, I1@O1, I1@O2" ].
+
+
+redup_sp := token_mapping_rule  &
+[ +INPUT < [ +ID #id , +FORM #form & ^(.+)nya$, +FROM #from , +TO #to ] >,
+  +CONTEXT < >,
+  +OUTPUT  < [ +ID #id , +FORM "${I1:+FORM:1}",
+	       +TRAIT native_trait,
+	       +FROM #from , +TO #to ],
+             [ +ID #id , +FORM "nya",
+	       +TRAIT native_trait,
+	       +FROM #from , +TO #to ] >,
+  +POSITION "O1<O2, I1@O1, I1@O2" ].
+
+redup_sp := token_mapping_rule  &
+[ +CONTEXT < [ +ID [ LIST #front , LAST #back ] , +FORM #form & ^(.+)nya$, +FROM #from , +TO #to ] >,
+  +INPUT < >,
+  +OUTPUT  < [ +ID [ LIST #front , LAST #middle ] , +FORM "${C1:+FORM:1}",
+	       +TRAIT native_trait,
+	       +FROM #from , +TO #to ],
+             [ +ID [ LIST #middle , LAST #back ] , +FORM "nya",
+	       +TRAIT native_trait,
+	       +FROM #from , +TO #to ] >,
+  +POSITION "O1<O2, C1@O1, C1@O2" ].
+
+redup_sp := token_mapping_rule  &
+[ +CONTEXT < [ +FORM ^(.+)nya$, +FROM #from , +TO #to ] >,
+  +INPUT < >,
+  +OUTPUT  < [ +FORM "${C1:+FORM:1}",
+	       +TRAIT native_trait,
+	       +FROM #from , +TO #to ] >,
+  +POSITION "O1@C1" ].
+|#
