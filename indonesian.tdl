@@ -1098,11 +1098,11 @@ passive-one-ditrans-n-p-verb-lex := basic-three-arg-no-hcons & basic-icons-lex-i
                         CONT.HOOK [ INDEX ref-ind & #ind2,
 				    ICONS-KEY.IARG1 #clause ] ] ],
               #comp2 &
-	      [ LOCAL [ CAT [ HEAD noun,
+	      [ LOCAL [ CAT [ HEAD nonoleh-adp,
                               POSTHEAD +,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
-                        CONT.HOOK [ INDEX ref-ind & #ind3,
+                        CONT.HOOK [ INDEX #ind3,
 				    ICONS-KEY.IARG1 #clause ] ] ] >,
      SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
 			     ARG2 #ind1,

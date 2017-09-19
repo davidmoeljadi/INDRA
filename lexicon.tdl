@@ -50753,7 +50753,7 @@ fasilitasi := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_fasilitasi_v_rel",
     TRAITS native_token_list ].
 
-gulai := tr-verb-lex &
+gulai_v_tr := tr-verb-lex &
   [ STEM < "gulai" >,
     SYNSEM.LKEYS.KEYREL.PRED "_gulai_v_rel",
     TRAITS native_token_list ].
@@ -51369,6 +51369,11 @@ bersama := adposition-mod-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_bersama_p_rel",
     TRAITS native_token_list ].
 
+bersama+dengan := adposition-mod-lex &
+  [ STEM < "bersama", "dengan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bersama+dengan_p_rel",
+    TRAITS native_token_list ].
+
 beserta := adposition-lex &
   [ STEM < "beserta" >,
     SYNSEM.LKEYS.KEYREL.PRED "_beserta_p_rel",
@@ -51377,6 +51382,11 @@ beserta := adposition-lex &
 dari := adposition-mod-lex &
   [ STEM < "dari" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dari_p_rel",
+    TRAITS native_token_list ].
+
+sampai_adp := adposition-mod-lex &
+  [ STEM < "sampai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sampai_p_rel",
     TRAITS native_token_list ].
 
 dengan := adposition-mod-lex &
@@ -51541,7 +51551,7 @@ agar := subord-conj-lex &
     TRAITS native_token_list ].
 
 v;;; auto generated
-karena := subord-conj-lex &
+karena_subord := subord-conj-lex &
   [ STEM < "karena" >,
     SYNSEM.LKEYS.KEYREL.PRED "_karena_coord_rel",
     TRAITS native_token_list ].
@@ -65893,6 +65903,21 @@ sayur := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_sayur_n_rel",
     TRAITS native_token_list ].
 
+gulai_inanim := inanimate-noun-noun-lex &
+  [ STEM < "gulai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_gulai_n_rel",
+    TRAITS native_token_list ].
+
+air+minum := inanimate-noun-noun-lex &
+  [ STEM < "air", "minum" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_air+minum_n_rel",
+    TRAITS native_token_list ].
+
+air+susu+ibu := inanimate-noun-noun-lex &
+  [ STEM < "air", "susu", "ibu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_air+susu+ibu_n_rel",
+    TRAITS native_token_list ].
+
 sayuran := inanimate-noun-noun-lex &
   [ STEM < "sayuran" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sayuran_n_rel",
@@ -76779,7 +76804,7 @@ bekel := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-karena := conj-lex &
+karena_coord := conj-lex &
   [ STEM < "karena" >,
     SYNSEM.LKEYS.KEYREL.PRED "_karena_coord_rel",
     CFORM "1",
@@ -80223,6 +80248,12 @@ labu := inanimate-noun-noun-lex &
 lahirkan := tr-verb-lex &
     [ STEM < "lahirkan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lahirkan_v_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+melahirkan := opt-tr-verb-lex &
+    [ STEM < "melahirkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_melahirkan_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
