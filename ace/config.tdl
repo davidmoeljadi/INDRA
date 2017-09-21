@@ -9,7 +9,9 @@ generation-fixup-rules    := "../gen-fixup.mtr".
 version                   := "../Version.lsp".
 parse-node-labels         := "../labels.tdl".
 
-quickcheck-code           := qc.tdl.
+quickcheck-code           := "../ace/ace-qc.txt".
+
+
 
 ;;; grammar internal properties
 orth-path                 := STEM.

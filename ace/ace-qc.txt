@@ -1,0 +1,17 @@
+QC_SIZE(15)
+/* GQC: using 15 paths, 98.0% of failures, 27 extraction hops, expected cost 0.083497 */
+ REC(2)
+ PUSH(SYNSEM) PUSH(LOCAL) PUSH(CONT) PUSH(HOOK) PUSH(INDEX) REC(3) POP
+                 PUSH(XARG) REC(9) POP POP POP
+         PUSH(COORD) REC(5) POP
+         PUSH(CAT) PUSH(HEAD) REC(0)
+                 PUSH(MOD) REC(1)
+                     PUSH(FIRST) PUSH(LOCAL) REC(11) POP POP POP
+                 PUSH(EMPTY) REC(8) POP POP
+             PUSH(VAL) PUSH(SUBJ) REC(7)
+                     PUSH(FIRST) PUSH(LOCAL) PUSH(CONT) PUSH(HOOK) PUSH(INDEX) REC(10) POP POP POP
+                             PUSH(CAT) PUSH(HEAD) REC(12) POP POP POP POP POP
+                 PUSH(SPR) REC(6) POP
+                 PUSH(COMPS) REC(4)
+                     PUSH(FIRST) PUSH(OPT) REC(13) POP POP POP
+                 PUSH(SPEC) REC(14)
