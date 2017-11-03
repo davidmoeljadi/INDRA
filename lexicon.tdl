@@ -51004,6 +51004,11 @@ bertanya-tanya := ques-comp-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_bertanya-tanya_v_rel",
     TRAITS native_token_list ].
 
+bertanya := ques-comp-verb-lex &
+  [ STEM < "bertanya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bertanya_v_rel",
+    TRAITS native_token_list ].
+
 tahu_2 := ques-comp-verb-lex &
   [ STEM < "tahu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel",

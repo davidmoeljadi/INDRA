@@ -111,7 +111,7 @@ mu-lex-rule &
 ; <todo>
 ; </type>
 act-prefix :=
-%prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt) (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem) (f memf) (v memv) (w mew) (t men) (tr mentr) (ts ments) (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) (sp mensp) (sm mensm) (sn mensn) (sk mensk) (sy mensy) (syairkan menyairkan) (sw mensw) (st menst) (z menz) (l mel) (c menc) (j menj) (ny meny) (y mey) (k meng) (kh mengkh) (kl mengkl) (kr mengkr) (g mengg) (ng meng) (q mengq) (h mengh) (a menga) (i mengi) (u mengu) (e menge) (o mengo) (poskan mengeposkan) (sahkan mengesahkan)
+%prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt) (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem) (f memf) (v memv) (w mew) (t men) (tr mentr) (ts ments) (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) (sp mensp) (sm mensm) (sn mensn) (sk mensk) (sy mensy) (syairkan menyairkan) (sw mensw) (st menst) (z menz) (l mel) (c menc) (j menj) (ny meny) (y mey) (k meng) (kh mengkh) (kl mengkl) (kr mengkr) (g mengg) (ng meng) (q mengq) (h mengh) (a menga) (i mengi) (u mengu) (e menge) (o mengo)
 act-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 

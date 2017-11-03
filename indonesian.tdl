@@ -238,8 +238,8 @@ noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-ite
                            SPEC < > ],
     ARG-ST < #spr > ].
 
-no-spr-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
+;no-spr-noun-lex := noun-lex &
+;  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
 
 ; Nouns which cannot take specifiers mark their SPR requirement
 ; as OPT +.  Making the non-head daughter OPT - in this rule
@@ -251,14 +251,17 @@ no-spr-noun-lex := noun-lex &
 head-spec-phrase := basic-head-spec-phrase & head-initial &
   [ NON-HEAD-DTR.SYNSEM.OPT - ].
 
+; DVM 2017-11-01: semua is better to be analyzed as ADJ, similar to numbers
 ; DVM 2017-08-19: for quantifiers e.g. semua buku, HEAD is detq and the phrase is head final
 ; cf. buku itu which is head-initial (see above)
 head-spec-q-phrase := basic-head-spec-phrase & head-final &
   [ NON-HEAD-DTR.SYNSEM [ OPT -,
                           LOCAL.CAT.HEAD detq ] ].
 
+; DVM 2017-11-03: add HEAD commonnoun
 common-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
+  [ SYNSEM.LOCAL [ CAT.HEAD commonnoun,
+                   CONT.HOOK.INDEX.PNG.PERNUM 3rd ] ].
 
 ;; DVM 2016-02-13: change the HEAD from "noun" to "propername"
 ;; DVM 2016-02-16: added the information of PERNUM sg
@@ -355,73 +358,73 @@ human-plural-noun-lex := human-noun-noun-lex &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1sg,
 ;                   CAT.HEAD.HONORIFIC - ] ].
 
-pronoun-1st-sg-nohon-noun-lex := personal-pronoun-lex & speaker-lex-item & 
-  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
-                   CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
-
 ;pronoun-1st-sg-hon-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1sg,
 ;                   CAT.HEAD.HONORIFIC + ] ].
 
-pronoun-1st-sg-hon-noun-lex := personal-pronoun-lex & speaker-lex-item & 
-  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
-                   CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
-
 ;pronoun-1st-pl-incl-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ].
 
-pronoun-1st-pl-incl-noun-lex := personal-pronoun-lex & basic-icons-lex-item &
-  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
-                   CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
-
 ;pronoun-1st-pl-excl-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ].
-
-pronoun-1st-pl-excl-noun-lex :=  personal-pronoun-lex & basic-icons-lex-item &
-  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
-                   CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
 
 ;pronoun-2nd-sg-nohon-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2sg,
 ;                   CAT.HEAD.HONORIFIC - ] ].
 
-pronoun-2nd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item & 
-  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
-                   CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
-
 ;pronoun-2nd-sg-hon-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2sg,
 ;                   CAT.HEAD.HONORIFIC + ] ].
-
-pronoun-2nd-sg-hon-noun-lex := personal-pronoun-lex & honorific-hearer-lex-item &
-  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
-                   CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
 
 ;pronoun-3rd-sg-nohon-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 3sg,
 ;                   CAT.HEAD.HONORIFIC - ] ].
 
-pronoun-3rd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item &
-  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-3person,
-                   CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
-
 ;pronoun-3rd-sg-hon-noun-lex := pronoun-lex &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 3sg,
 ;                   CAT.HEAD.HONORIFIC + ] ].
+
+;pronoun-2nd-pl-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
+
+;pronoun-3rd-pl-noun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
+
+pronoun-1st-sg-nohon-noun-lex := personal-pronoun-lex & speaker-lex-item & 
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
+
+pronoun-1st-sg-hon-noun-lex := personal-pronoun-lex & speaker-lex-item & 
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
+
+pronoun-1st-pl-incl-noun-lex := personal-pronoun-lex & basic-icons-lex-item &
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
+
+pronoun-1st-pl-excl-noun-lex :=  personal-pronoun-lex & basic-icons-lex-item &
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
+
+pronoun-2nd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item & 
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
+
+pronoun-2nd-sg-hon-noun-lex := personal-pronoun-lex & honorific-hearer-lex-item &
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
+
+pronoun-3rd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item &
+  [ SYNSEM.LOCAL [ CAT.HEAD pronoun-3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
 
 pronoun-3rd-sg-hon-noun-lex := personal-pronoun-lex & honorific-hearer-lex-item &
   [ SYNSEM.LOCAL [ CAT.HEAD pronoun-3person,
                    CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
 
-;pronoun-2nd-pl-noun-lex := pronoun-lex &
-;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
-
 pronoun-2nd-pl-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item & 
   [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
                    CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ].
-
-;pronoun-3rd-pl-noun-lex := pronoun-lex &
-;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
 
 pronoun-3rd-pl-noun-lex := personal-pronoun-lex & basic-icons-lex-item &
   [ SYNSEM.LOCAL [ CAT.HEAD pronoun-3person,
@@ -432,10 +435,10 @@ pronoun-3rd-pl-noun-lex := personal-pronoun-lex & basic-icons-lex-item &
 ;; demonstratives cannot be modified by adjectives
 ;; ini tua "old this" is considered not grammatical
 
-demonstrative-pronoun-noun-lex := no-spr-noun-lex.
+;demonstrative-pronoun-noun-lex := no-spr-noun-lex.
 
-demonstrative-pronoun-pl-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
+;demonstrative-pronoun-pl-noun-lex := no-spr-noun-lex &
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
 
 ;;; Verbs
 
@@ -530,10 +533,10 @@ intr-verb-lex := intransitive-verb-lex.
 opt-tr-verb-lex := transitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT + ].
 
-no-obj-drop-verb-lex := transitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+;no-obj-drop-verb-lex := transitive-verb-lex &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
-obj-drop-verb-lex := transitive-verb-lex.
+;obj-drop-verb-lex := transitive-verb-lex.
 
 ;; DVM 2017-08-22 : for verbs taking two arguments but cannot be passivized such as "terdiri dari"
 
@@ -1475,11 +1478,12 @@ locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
                            HEAD nonoleh-adp ] ] > ].
 
+;; 2017-11-02: added [OPT -] for COMPS so that "dia nampaknya" cannot be parsed
 trans-first-arg-raising-verb := main-verb-lex & trans-first-arg-raising-lex-item & no-hcons-lex-item &
   [ SYNSEM [ LKEYS.KEYREL arg1-relation & [ ARG1 #arg1 ],
 	     LOCAL [ CAT [ VAL [ SPR < >,
                                  SPEC < >,
-                                 COMPS < #comps >,
+                                 COMPS < #comps & [OPT -] >,
                                  SUBJ < #subj > ] ],
                      CONT.HOOK.XARG #xarg ] ],
     ARG-ST < #subj &
@@ -1643,6 +1647,7 @@ trans-first-arg-control-adj := basic-two-arg & basic-nomod-adj-lex & trans-first
 ;; verb types added from ERG
 ;; need to be modified
 
+;; TODO: merge with trans-verb-lex
 ; <type val="v_np_ntr_le">
 ; <description>Cmps NP(obl), no psv             
 ; <ex>B remains C.
@@ -1701,13 +1706,15 @@ propcomp-lex-item := complementizer-lex-item &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.SF ques,
 ;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
 
+; DVM 2017-11-03: add PERNUM 3rd
 noun+det-lex-item := norm-hook-lex-item & non-mod-lex-item &
  [ SYNSEM [LOCAL [ CAT [ HEAD [ EMPTY + ],
 			 VAL [ SPR < >,
 			       COMPS < >,
 			       SUBJ < >,
 			       SPEC < > ]],
-		   CONT [RELS <! relation &
+		   CONT [HOOK.INDEX.PNG.PERNUM 3rd,
+                         RELS <! relation &
 			       [LBL #nh,
 				ARG0 #s ],
 			       quant-relation & #det &
@@ -2315,8 +2322,14 @@ noun-noun-compound-phrase := head-initial &
 				    IARG2 #nhind ] !> ] ].
 
 ;; month names, need to be further constrained
-n_-_month-lex := proper-name-lex.
-n_-_day-lex := proper-name-lex.
+;; DVM 2017-11-03: add PERNUM 3sg and ANIMACY inanimate for months and days
+n_-_month-lex := proper-name-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PERNUM 3sg,
+                                       ANIMACY inanimate ] ].
+
+n_-_day-lex := proper-name-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PERNUM 3sg,
+                                       ANIMACY inanimate ] ].
 
 ;; for morning, night, hour, day, year
 n_-_temp-lex := inanimate-noun-noun-lex.
