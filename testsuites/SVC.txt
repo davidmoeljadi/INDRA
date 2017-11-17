@@ -1,0 +1,306 @@
+Language: Indonesian
+Language code: ind
+Lines: orth translit gloss translat
+Author: David Moeljadi
+Date: 2017
+Source: NTU-MC, modified
+
+Id: 1
+Source: 10001
+Vetted: t
+Judgment: g
+Phenom: svc
+aku jadi tahu cara kerja temanku.
+aku jadi tahu cara kerja teman=ku
+1SG become know way work friend=1SG
+I lernt to know the way my friend works
+
+Id: 2
+Source: 10004
+Vetted: t
+Judgment: g
+Phenom: svc
+dia menolak menangani kasus yang biasa saja.
+dia meN-tolak meN-tangani kasus yang biasa saja
+3SG AV-reject AV-handle case REL common only
+He rejects to handle mere common cases.
+
+Id: 3
+Source: 10022
+Vetted: t
+Judgment: g
+Phenom: svc
+ada sesuatu yang amat mendesak yang ingin disampaikan dia kepada kita.
+ada sesuatu yang amat mendesak yang ingin di-sampaikan dia kepada kita
+exist something REL very urgent REL want PASS-tell 3SG to 1PL.INCL
+There is something very urgent which he wants to tell to us.
+
+Id: 4
+Source: 10023
+Vetted: t
+Judgment: g
+Phenom: svc
+aku yakin bahwa kau mau ikut serta.
+aku yakin bahwa kau mau ikut serta
+1SG believe that 2SG want join together
+I believe that you want to join.
+
+Id: 5
+Source: 10063
+Vetted: t
+Judgment: g
+Phenom: svc
+Saya memang belum mampu membayar servis Anda.
+saya memang belum mampu meN-bayar servis Anda
+1SG indeed not.yet able AV-pay service 2SG
+I am indeed not yet able to pay your service.
+
+Id: 6
+Source: 10089
+Vetted: t
+Judgment: g
+Phenom: svc
+Dia berhasil mendapat dukungan dana dari saudaranya untuk biaya kuliahnya sampai dia menjadi dokter.
+dia berhasil meN-dapat dukungan dana dari saudara=nya untuk biaya kuliah=nya sampai dia meN-jadi dokter
+3SG succeed AV-get support funding from sibling=3SG for fee tuition=3SG until 3SG AV-become doctor
+He succeeded in getting funding support from his brother for his tuition fee until he became a doctor.
+
+Id: 7
+Source: 10107
+Vetted: t
+Judgment: g
+Phenom: svc
+Dia tidak mau berteman dengan orang-orang.
+dia tidak mau berteman dengan orang-orang
+3SG NEG want befriend with people
+He does not want to befriend with people.
+
+Id: 8
+Source: 10107
+Vetted: t
+Judgment: g
+Phenom: svc
+ada anggota keluarga Roylott yang kembali menghuni Stoke Moran.
+ada anggota keluarga Roylott yang kembali meN-huni Stoke Moran
+exist member family Roylott REL back AV-dwell Stoke Moran
+There is some Roylott family member who is coming back and stay at Stoke Moran.
+
+Id: 9
+Source: 10115
+Vetted: t
+Judgment: g
+Phenom: svc
+Dia juga bersedia menerima undangan mereka.
+dia juga bersedia meN-terima undangan mereka
+3SG also willing AV-receive invitation 3PL
+He is also willing to receive their invitation.
+
+Id: 10
+Source: 10155
+Vetted: t
+Judgment: g
+Phenom: svc
+aku ingin tahu apakah kau juga mendengar dia.
+aku ingin tahu apakah kau juga meN-dengar dia
+1SG want know whether 2SG also AV-hear 3SG
+I want to know whether you heard him too.
+
+Id: 11
+Source: 10183
+Vetted: t
+Judgment: g
+Phenom: svc
+tangannya menggapai-gapai mencari pertolongan.
+tangan=nya meN-gapai-gapai meN-cari pertolongan
+hand=3SG AV-reach-RED AV-search help
+His hands are reaching out and looking for help.
+
+Id: 12
+Source: 10193
+Vetted: t
+Judgment: g
+Phenom: svc
+Saya segera berlari menuju kamar ayah tiri kami.
+saya segera berlari meN-tuju kamar ayak tiri kami
+1SG soon run AV-head room father step 1PL.EXCL
+I soon run heading towards our step-father's room.
+
+Id: 13
+Source: 10193
+Vetted: t
+Judgment: g
+Phenom: svc
+saya berteriak memanggil dia.
+saya berteriak meN-panggil dia
+1SG shout AV-call 3SG
+I shouted calling him.
+
+Id: 14
+Source: 10209
+Vetted: t
+Judgment: g
+Phenom: svc
+dia tak berhasil menemukan penyebab kematian saudara kembar saya.
+dia tak berhasil meN-temukan penyebab kematian saudara kembar saya
+3SG NEG succeed AV-find cause death sibling twin 1SG
+He did not succeed in finding my twin sister's death cause.
+
+Id: 15
+Source: 10260
+Vetted: t
+Judgment: g
+Phenom: svc
+Apakah kau mau ikut?
+apakah kau mau ikut
+whether 2SG want join
+Do you want to join?
+
+Id: 16
+Source: 10310
+Vetted: t
+Judgment: g
+Phenom: svc
+Anda tak bersedia menjawab.
+anda tak bersedia meN-jawab
+2SG NEG willing AV-answer
+You are not willing to answer.
+
+Id: 17
+Source: 10310
+Vetted: t
+Judgment: g
+Phenom: svc
+tamu kami melangkah maju dan mengguncangkan cemeti yang ada di tangannya.
+tamu kami meN-langkah maju dan meN-guncangkan cemeti yang ada di tangan=nya
+guest 1PL.EXCL AV-step forward and AV-shake whip REL exist at hand=3SG
+Our guest stepped forward and shook the whip at his hand.
+
+Id: 18
+Source: 10320
+Vetted: t
+Judgment: g
+Phenom: svc
+Anda mau pulang.
+anda mau pulang
+2SG want go.home
+You want to go home.
+
+Id: 19
+Source: 10320
+Vetted: t
+Judgment: g
+Phenom: svc
+Anda lupa menutup pintu itu.
+anda lupa meN-tutup pintu itu
+2SG forget AV-close door that
+You forgot to close that door.
+
+Id: 20
+Source: 10336
+Vetted: t
+Judgment: g
+Phenom: svc
+aku mau pergi ke Lembaga Kedokteran untuk mencari data yang berguna bagi kita dalam menyelidiki kasus ini.
+aku mau pergi ke lembaga kedokteran untuk meN-cari data yang berguna bagi kita dalam meN-selidiki kasus ini
+1SG want go to institution medical to AV-search data REL important for 1PL.INCL in AV-investigate case this
+I want to go to the medical institution to look for important data for us in investigating this case.
+
+Id: 21
+Source: 10345
+Vetted: t
+Judgment: g
+Phenom: svc
+orang tua itu tahu bahwa kita bermaksud menyelidiki kasusnya.
+orang tua itu tahu bahwa kita bermaksud meN-selidiki kasus=nya
+person old that know that 1PL.INCL intend AV-investigate case=3SG
+That old person knows that we intend to investigate his case.
+
+Id: 22
+Source: 10368
+Vetted: t
+Judgment: g
+Phenom: svc
+Anda ingin masuk ke rumah itu.
+anda ingin masuk ke rumah itu
+2SG want enter to house that
+You wanted to enter that house.
+
+Id: 23
+Source: 10417
+Vetted: t
+Judgment: g
+Phenom: svc
+Holmes mencoba membuka palang itu.
+Holmes meN-coba meN-buka palang itu
+Holmes AV-try AV-open shutter that
+Holmes tries to open that shutter.
+
+Id: 24
+Source: 10442
+Vetted: t
+Judgment: g
+Phenom: svc
+Saudara kembar Anda minta dipasangi itu.
+saudara kembar anda minta di-pasangi itu
+sibling twin 2SG request PASS-install that
+Your twin sister requested that to be installed.
+
+Id: 25
+Source: 10500
+Vetted: t
+Judgment: g
+Phenom: svc
+saya pulang melalui halaman yang berumput itu.
+saya pulang meN-lalui halaman yang berumput itu
+1SG go.home AV-pass.through yard grassy that
+I go home by passing through that grassy yard.
+
+Id: 26
+Source: 10503
+Vetted: t
+Judgment: g
+Phenom: svc
+kami tak ingin mengganggu pikirannya yang sedang bekerja.
+kami tak ingin meN-ganggu pikiran=nya yang sedang bekerja
+1PL.EXCL NEG want AV-disturb thought=3SG REL PROG work
+We did not want to disturb his mind which is working.
+
+Id: 27
+Source: 10504
+Vetted: t
+Judgment: g
+Phenom: svc
+Anda betul-betul bersedia mengikuti nasihat saya.
+anda betul-betul bersedia meN-ikuti nasihat saya
+2SG really willing AV-follow advice 1SG
+You are really willing to follow my advice.
+
+Id: 28
+Source: 10585
+Vetted: t
+Judgment: g
+Phenom: svc
+Waktu terasa berlalu.
+waktu terasa berlalu
+time feel pass
+It seems that time passes.
+
+Id: 29
+Source: 10587
+Vetted: t
+Judgment: g
+Phenom: svc
+Holmes bersiap pergi.
+Holmes bersiap pergi
+Holmes prepare go
+Holmes was prepared to go.
+
+Id: 30
+Source: 10647
+Vetted: t
+Judgment: g
+Phenom: svc
+lolongan kesakitan, ketakutan, dan kemarahan bercampur menjadi satu kesatuan.
+lolongan kesakitan ketakutan dan kemarahan bercampur meN-jadi satu kesatuan
+howl pain fear and anger mix AV-become one unity
+Howls of pain, fear, and anger mixed into one unity.
