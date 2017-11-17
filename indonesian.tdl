@@ -2430,7 +2430,7 @@ compound-verb-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
                             COMPS < > ] ,
                   CONT.HOOK #head ],
-   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb,
+   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb & [EMPTY -],
                                  VAL [ SUBJ < #spr > ,
                                        COMPS null ]] ,
                              CONT [ HOOK #head &
@@ -2460,7 +2460,7 @@ compound-coordinated-verb-phrase := head-final &
                                        COMPS < #cmp & [OPT -] > ]] ,
                              CONT [ HOOK [ LTOP #kanan,
                                            INDEX #right] ]]],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb,
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [EMPTY -],
                                      VAL [ SUBJ < #spr >,
                                            COMPS < #cmp & [OPT -] > ]],
                                CONT [ HOOK [ LTOP #kiri,
@@ -2505,7 +2505,7 @@ compound-result-verb-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
                             COMPS < #cps > ] ,
                   CONT.HOOK #head ],
-   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb,
+   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb & [EMPTY -],
                                  VAL [ SUBJ < #spr > ,
                                        COMPS < #cps > ]] ,
                              CONT [ HOOK #head &
