@@ -30,9 +30,9 @@ hook :+
    HEARER-KEY ref-ind ].
 
 quant_rel := predsort.
-pron_rel := predsort.
+pronoun_n_rel := predsort.
 def_q_rel := quant_rel.
-the_q_rel := def_q_rel.
+;the_q_rel := def_q_rel.
 exist_q_rel := quant_rel.
 poss_rel := quant_rel.
 pronoun_q_rel := quant_rel.
@@ -113,7 +113,7 @@ inflected :+ [ VOICE-FLAG luk ].
 infl-satisfied :+ [ VOICE-FLAG na-or-+ ].
 
 png :+ [ PERNUM pernum,
-         ANIMACY animacy ].
+         ANIMCOUNT animcount ].
 
 basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
                             HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
@@ -146,11 +146,13 @@ pl := pernum.
 ;2indet := 2nd & indet.
 ;3indet := 3rd & indet.
 
-;;; Animacy
-
-animacy := *top*.
-animate := animacy.
-inanimate := animacy.
+;;; Animacy/Countability
+;;; DVM 2017-12-19: change animacy to animcount
+animcount := *top*.
+countable := animcount.
+uncountable := animcount.
+animate := countable.
+inanimate := countable.
 human := animate.
 non-human := animate.
 
@@ -178,21 +180,43 @@ nonaspect := aspect.
 ;; DVM 2016-02-13: separate proper names and pronouns from other nouns for copula verb "merupakan"
 ;; DVM 2017-09-19: separate noun into dem(onstratives) and nondem(onstratives) so that "buku ini" only has one parse tree
 
-commonnoun := nondemnoun.
-propername := nondemnoun.
-pronoun := nondemnoun.
-demnoun := noun.
-nondemnoun := noun.
+;commonnoun := nondemnoun.
+;propername := nondemnoun.
+;pronoun := nondemnoun.
+;demnoun := noun.
+;nondemnoun := noun.
+;nounpro := commonnoun & pronoun.
+
+;; DVM 2017-03-23: the agent for passive type 1 is 3rd person nouns 
+;3person-noun := commonnoun & propername & pronoun-3person.
+
+;; DVM 2017-12-17: the new noun type hierarchy
+comp-noun := noun.
+pass1agent := noun.
+pass2agent := noun.
+;noun-poss := noun.
+;possessor := noun-poss.
+possessor := noun.
+subj-noun := comp-noun.
+enclitic := possessor & comp-noun.
+proclitic := pass2agent.
+enclitic-3person := enclitic & pass1agent.
+enclitic-non3person := enclitic.
+pronoun-super := subj-noun & pass2agent & possessor.
+demnoun := subj-noun.
+dependent-noun := subj-noun & pass1agent.
+pronoun-substitute := dependent-noun & pronoun-super.
+pronoun := pronoun-super.
+;commonnoun := dependent-noun & noun-poss.
+commonnoun := dependent-noun.
+propername := pronoun-substitute.
+
+;; DVM 2017-03-23: separate 3rd person pronouns and non 3rd person pronouns for passive type 1 and 2
+pronoun-3person := pronoun & pass1agent.
+pronoun-non3person := pronoun.
 
 nounnyadef := commonnoun.
 nounnyapos := commonnoun.
-
-;; DVM 2017-03-23: separate 3rd person pronouns and non 3rd person pronouns for passive type 1 and 2
-pronoun-3person := pronoun.
-pronoun-non3person := pronoun.
-
-;; DVM 2017-03-23: the agent for passive type 1 is 3rd person nouns 
-3person-noun := commonnoun & propername & pronoun-3person.
 
 ;;; Verb
 ;; DVM 2017-03-24: make three groups for verb: active, passive type 1, and passive type 2
@@ -202,6 +226,7 @@ passiverbone := verb.
 passiverbtwo := verb.
 
 adjcontrol := adj.
+adj-number := adj.
 
 ;;; Adposition
 ;; DVM 2017-03-24: make a new group for semantically empty "oleh" (by)
@@ -220,7 +245,9 @@ svc_result_p_rel := prep_rel.
 adj_coord_p_rel := prep_rel.
 
 ;; DVM 2017-08-19: for quantifiers
-detq := det.
+det-quant := det.
+det-nonquant := det.
+det-nya := det.
 
 phr-conj := conj.
 
@@ -252,11 +279,11 @@ head-spec-phrase := basic-head-spec-phrase & head-initial &
   [ NON-HEAD-DTR.SYNSEM.OPT - ].
 
 ; DVM 2017-11-01: semua is better to be analyzed as ADJ, similar to numbers
-; DVM 2017-08-19: for quantifiers e.g. semua buku, HEAD is detq and the phrase is head final
+; DVM 2017-08-19: for quantifiers e.g. semua buku, HEAD is det-quant and the phrase is head final
 ; cf. buku itu which is head-initial (see above)
 head-spec-q-phrase := basic-head-spec-phrase & head-final &
   [ NON-HEAD-DTR.SYNSEM [ OPT -,
-                          LOCAL.CAT.HEAD detq ] ].
+                          LOCAL.CAT.HEAD det-quant ] ].
 
 ; DVM 2017-11-03: add HEAD commonnoun
 common-noun-lex := noun-lex &
@@ -289,24 +316,33 @@ proper-name-lex := basic-one-arg & basic-icons-lex-item &
 ;  [ SYNSEM.LOCAL.CAT.HEAD.HON + ].
 
 basic-pronoun-lex :=  basic-one-arg & norm-hook-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD pronoun & [ MOD <> ],
+  [ SYNSEM [ LOCAL [ CAT [ HEAD [ MOD <> ],
                            VAL [ COMPS < >,
                                  SUBJ < >,
                                  SPR < > ] ],
                      CONT [ RELS.LIST.FIRST #rel ] ],
              LKEYS.KEYREL noun-relation & #rel & [ PRED "pronoun_n_rel" ] ] ].
 
-pronoun-lex := basic-pronoun-lex & no-hcons-lex-item & 
-               basic-icons-lex-item &
-  [ SYNSEM.LOCAL.CONT.RELS <! relation !> ].
+;pronoun-lex := basic-pronoun-lex & no-hcons-lex-item & 
+;               basic-icons-lex-item &
+;  [ SYNSEM.LOCAL.CONT.RELS <! relation !> ].
 
 ;; DVM 2015-08-18: added from zhong-lextypes.tdl
 ;; from here
-personal-pronoun-lex := basic-pronoun-lex &
+pronoun-lex := basic-pronoun-lex &
   [ SYNSEM.LOCAL.CONT [ RELS <! relation & [ARG0 #x, LBL #h], 
 			    [ PRED pronoun_q_rel,
 				ARG0 #x, RSTR #h2 ] !> ,
                         HCONS <! qeq & [ LARG #h, HARG #h2 ] !>  ] ].
+
+personal-pronoun-lex := pronoun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD pronoun ].
+
+proclitic-pronoun-lex := pronoun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD proclitic ].
+
+enclitic-pronoun-lex := pronoun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD enclitic ].
 
 speaker-lex-item := basic-icons-lex-item &
   [ SYNSEM.LOCAL.CONT.HOOK [ INDEX #index,
@@ -326,23 +362,26 @@ honorific-hearer-lex-item := lex-item &
 
 ;pronoun-noun-lex := noun-lex.
 
+uncountable-noun-lex := common-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT uncountable ].
+
 inanimate-noun-noun-lex := common-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY inanimate ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT inanimate ].
 
 inanimate-plural-noun-lex := inanimate-noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
 
 animate-noun-noun-lex := common-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY animate ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT animate ].
 
 nonhuman-noun-noun-lex := animate-noun-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY non-human ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT non-human ].
 
 nonhuman-plural-noun-lex := nonhuman-noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
 
 human-noun-noun-lex := animate-noun-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY human ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT human ].
 
 human-plural-noun-lex := human-noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
@@ -394,6 +433,13 @@ pronoun-1st-sg-nohon-noun-lex := personal-pronoun-lex & speaker-lex-item &
   [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
                    CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
 
+proclitic-pronoun-1st-sg-nohon-noun-lex := proclitic-pronoun-lex & speaker-lex-item & 
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
+
+enclitic-pronoun-1st-sg-nohon-noun-lex := enclitic-pronoun-lex & speaker-lex-item & 
+  [ SYNSEM.LOCAL [ CAT.HEAD enclitic-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
+
 pronoun-1st-sg-hon-noun-lex := personal-pronoun-lex & speaker-lex-item & 
   [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
                    CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
@@ -410,12 +456,22 @@ pronoun-2nd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex
   [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
                    CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
 
+proclitic-pronoun-2nd-sg-nohon-noun-lex := proclitic-pronoun-lex & non-honorific-hearer-lex-item & 
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
+
+enclitic-pronoun-2nd-sg-nohon-noun-lex := enclitic-pronoun-lex & non-honorific-hearer-lex-item & 
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
+
 pronoun-2nd-sg-hon-noun-lex := personal-pronoun-lex & honorific-hearer-lex-item &
   [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
                    CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
 
 pronoun-3rd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex-item &
   [ SYNSEM.LOCAL [ CAT.HEAD pronoun-3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
+
+enclitic-pronoun-3rd-sg-nohon-noun-lex := enclitic-pronoun-lex & non-honorific-hearer-lex-item &
+  [ SYNSEM.LOCAL [ CAT.HEAD enclitic-3person,
                    CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
 
 pronoun-3rd-sg-hon-noun-lex := personal-pronoun-lex & honorific-hearer-lex-item &
@@ -467,28 +523,29 @@ aux-lex := verb-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.AUX + ].
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
-    ARG-ST.FIRST.LOCAL.CAT.HEAD noun ].
+  [ SYNSEM.LOCAL.CAT [ HEAD nonactiverb,
+                       VAL.COMPS < > ],
+    ARG-ST.FIRST.LOCAL.CAT.HEAD subj-noun ].
 
 transitive-verb-lex := main-verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT [ HEAD activerb,
                        VAL.COMPS < #comps > ],
-    ARG-ST < [ LOCAL.CAT [ HEAD noun ] ],
+    ARG-ST < [ LOCAL.CAT [ HEAD subj-noun ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
                            POSTHEAD +,
-                           HEAD noun ] ] > ].
+                           HEAD comp-noun ] ] > ].
 
 ; DVM 2017-03-23: for passive type 1 without "oleh"
 passive-one-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
-   [ ARG-ST < [ LOCAL [ CAT [ HEAD noun,
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
                         CONT.HOOK [ INDEX ref-ind & #ind1,
 			 	    ICONS-KEY.IARG1 #clause ] ] ],
               #comps &
-	      [ LOCAL [ CAT [ HEAD 3person-noun,
+	      [ LOCAL [ CAT [ HEAD pass1agent,
                               POSTHEAD +,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
@@ -502,13 +559,13 @@ passive-one-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-ver
 
 ; DVM 2017-03-24: for passive type 2
 passive-two-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
-   [ ARG-ST < [ LOCAL [ CAT [ HEAD noun,
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
                         CONT.HOOK [ INDEX ref-ind & #ind1,
 			 	    ICONS-KEY.IARG1 #clause ] ] ],
               #comps &
-	      [ LOCAL [ CAT [ HEAD pronoun,
+	      [ LOCAL [ CAT [ HEAD pass2agent,
                               POSTHEAD -,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
@@ -543,19 +600,19 @@ opt-tr-verb-lex := transitive-verb-lex &
 trans-verb-lex := main-verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT [ HEAD nonactiverb,
                        VAL.COMPS < #comps & [ OPT - ] > ],
-    ARG-ST < [ LOCAL.CAT [ HEAD noun ] ],
+    ARG-ST < [ LOCAL.CAT [ HEAD subj-noun ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
                            POSTHEAD +,
-                           HEAD noun ] ] > ].
+                           HEAD comp-noun ] ] > ].
 
 ;; DVM 2017-09-07 : for relational verbs such as "berkerabat (dg)", "bersahabat (dg)"
 
 relational-verb-lex := main-verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT [ HEAD nonactiverb,
                        VAL.COMPS < #comps & [ OPT + ] > ],
-    ARG-ST < [ LOCAL.CAT [ HEAD noun ] ],
+    ARG-ST < [ LOCAL.CAT [ HEAD subj-noun ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
@@ -572,7 +629,7 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
                                SUBJ < #subj > ] ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST < #subj &
-             [ LOCAL [ CAT [ HEAD noun,
+             [ LOCAL [ CAT [ HEAD subj-noun,
                              VAL [ SUBJ < >,
                                    SPR < >,
                                    SPEC < >,
@@ -652,7 +709,7 @@ adjective-lex := adj-adp-pred-lex & basic-nomod-adj-lex.
 ;; DVM 2015-05-09: from the previous version of INDRA
 ;; FCB & DVM 2016-02-10 : adjective-lex was changed to adj-mod-lex
 mod-attr-lex := intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD commonnoun,
                                                     VAL.SPR cons ]]>,
 			   VAL [ SUBJ < >,
 			         COMPS < >,
@@ -679,14 +736,14 @@ adjective-quant-lex := basic-nomod-adj-lex & intransitive-lex-item &
 				    [ LOCAL [ CONT.HOOK.INDEX #x1,
                                               CAT [ VAL [ SPR < >,
                                                           COMPS < > ],
-                                                    HEAD noun ] ] ] >,
+                                                    HEAD commonnoun ] ] ] >,
 			      COMPS < > ],
                    CONT.HOOK.XARG #x1 ],
     ARG-ST.FIRST #subj ].
 
 ;; DVM 2017-09-12: no information about POSTHEAD because "banyak" can appear before or after N
 adj-mod-quant-lex := basic-adjective-lex & intersective-mod-lex & norm-ltop-lex-item & intransitive-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ HEAD commonnoun,
                                                     VAL.SPR cons ]]>,
 			   VAL [ SUBJ < >,
 			         COMPS < >,
@@ -725,8 +782,8 @@ card-relation := arg1-relation & named-relation &
 ; so that there will be no two parses for dua puluh dua buku: omit this [[dua puluh] [[dua] [buku]]]
 ; get only this [[dua puluh dua] [buku]]
 a_-_num_le := single-rel-lex-item & basic-icons-lex-item & 
-  [ SYNSEM [ LOCAL [ CAT [ HEAD adj & [ MOD < [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
-                                                LOCAL [ CAT [ HEAD noun & [ CARDIN - ],
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adj-number & [ MOD < [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
+                                                LOCAL [ CAT [ HEAD commonnoun & [ CARDIN - ],
               	                                              VAL.SPR cons ],
                                                         CONT.HOOK.INDEX #xarg ] ] > ],
                            VAL [ COMPS < >,
@@ -781,10 +838,10 @@ basic-classifier-lex := norm-ltop-lex-item & single-rel-lex-item &
                         intersective-mod-lex & no-icons-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD classifier &
                                 [ KEYS.KEY #sense,
-				  MOD < [ LOCAL [ CAT [ HEAD noun & [ KEYS.KEY #sense ],
+				  MOD < [ LOCAL [ CAT [ HEAD commonnoun & [ KEYS.KEY #sense ],
 							VAL.SPR < [] > ] ] ] > ], 
                            VAL [ COMPS < >,
-                                 SPR < [ LOCAL [ CAT [ HEAD adj,
+                                 SPR < [ LOCAL [ CAT [ HEAD adj-number,
                                                        VAL [ COMPS < >,
                                                              SUBJ < > ] ],
                                                  CONT.HOOK [ LTOP #lbl,
@@ -802,14 +859,40 @@ classifier-lex := basic-classifier-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT - ] > ].
 
 cl-inanim-le := classifier-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY inanimate ].
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT inanimate ].
 
 cl-nonhum-le := classifier-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY non-human ].
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT non-human ].
 
 cl-hum-le := classifier-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMACY human ].
-
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT human ].
+#|
+;;unary rule for num+cl -> n
+;;e.g. saya mau tiga ekor (binatang).
+;;DVM 2017-12-19: this rule is similar to bare-np-rule but introduce generic_n_rel
+number-classifier-phrase := head-only &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+		  	     SUBJ < >,
+			     COMPS < >,
+			     SPEC < > ],
+                   COORD - ],
+    HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD classifier & [ MOD < [ LOCAL.CONT.RELS <! #noun !> ] > ],
+				  VAL [ SPR < >,
+					SUBJ < >,
+					COMPS < > ] ],
+			    CONT[RELS [ LBL #label,
+					ARG1 #index ] ]],
+    C-CONT [ RELS <! noun-relation & #noun &
+		   [ PRED generic_n_rel,
+                     LBL #label,
+		     ARG0 #index ] !>,
+	     HCONS <! qeq & 
+		    [ HARG #ltop,
+		      LARG #label ] !>,
+	     ICONS <! !>,
+	     HOOK [ INDEX #index,
+		    LTOP #ltop ] ] ].
+|#
 ; DVM 2017-02-21 from Zhong, also check rules.tdl
 head-spec-h-sem-phrase := basic-head-spec-phrase & head-final &
   [ SYNSEM.LOCAL.CAT.HEAD.MODIFIABLE +,
@@ -827,8 +910,12 @@ determiner-lex := basic-determiner-lex & basic-zero-arg & non-mod-lex-item &
                            COMPS < >,
                            SUBJ < > ] ].
 
-determiner-determiner-lex := determiner-lex & no-icons-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
+determiner-determiner-lex := determiner-lex & no-icons-lex-item & head-initial &
+  [ SYNSEM.LOCAL.CAT [ HEAD det-nonquant,
+                       VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ] ].
+
+determiner-nya-lex := determiner-lex & no-icons-lex-item &
+  [ SYNSEM.LOCAL.CAT.HEAD det-nya ].
 
 determiner-pl-determiner-lex := determiner-lex & no-icons-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
@@ -838,11 +925,11 @@ determiner-sg-determiner-lex := determiner-lex & no-icons-lex-item &
 
 ; DVM 2017-08-19: for plural quantifiers e.g. semua buku
 determiner-pl-quantifier-lex := determiner-pl-determiner-lex & head-final &
-  [ SYNSEM.LOCAL.CAT.HEAD detq ].
+  [ SYNSEM.LOCAL.CAT.HEAD det-quant ].
 
 ; DVM 2017-08-19: for singular quantifiers e.g. suatu buku
 determiner-sg-quantifier-lex := determiner-sg-determiner-lex & head-final &
-  [ SYNSEM.LOCAL.CAT.HEAD detq ].
+  [ SYNSEM.LOCAL.CAT.HEAD det-quant ].
 
 ; Type for negative adverbs.
 ; 
@@ -917,10 +1004,10 @@ n-enclitic-lex-rule-super := same-non-local-lex-rule &
 			     same-posthead-lex-rule &
 			     same-mc-lex-rule &
 			     infl-lex-rule & 
-  [ SYNSEM.LOCAL.CAT.VAL [ SPR <>,
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < >,
 			   SUBJ <>,
-			   COMPS <>,
-			   SPEC <> ],
+			   COMPS < >,
+			   SPEC < > ],
     C-CONT.ICONS <! !>,
     DTR common-noun-lex ].
 
@@ -965,7 +1052,7 @@ pas-one-lex-rule := passive-voice-lex-rule-super & passive-one-verb-lex.
 
 pas-two-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex.
 
-
+pas-oleh-lex-rule := passive-voice-lex-rule-super & passive-oleh-verb-lex.
 
 
 
@@ -986,16 +1073,16 @@ v_np_noarg3_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-l
 ditransitive-n-n-verb-lex := main-verb-lex & ditransitive-lex-item &
   [ SYNSEM.LOCAL.CAT [ HEAD activerb,
                        VAL.COMPS < #comp1, #comp2 > ],
-    ARG-ST < [ LOCAL.CAT [ HEAD noun ] ],
+    ARG-ST < [ LOCAL.CAT [ HEAD subj-noun ] ],
              #comp1 &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
                            POSTHEAD +,
-                           HEAD noun ] ],
+                           HEAD comp-noun ] ],
              #comp2 &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
-                           HEAD noun ] ] > ].
+                           HEAD subj-noun ] ] > ].
 
 active-voice-lex-rule-ditrans-n-n := add-only-no-ccont-rule & infl-lex-rule & ditransitive-n-n-verb-lex &
   [ INFLECTED.VOICE-FLAG +,
@@ -1012,20 +1099,20 @@ passive-voice-lex-rule-ditrans-n-n := add-only-no-ccont-rule & infl-lex-rule &
 ; without "oleh"
 ; <ex> Budi dibuatkan Adi pizza
 passive-one-ditrans-n-n-verb-lex := basic-three-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
-   [ ARG-ST < [ LOCAL [ CAT [ HEAD noun,
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
                         CONT.HOOK [ INDEX ref-ind & #ind1,
 			 	    ICONS-KEY.IARG1 #clause ] ] ],
               #comp1 &
-	      [ LOCAL [ CAT [ HEAD 3person-noun,
+	      [ LOCAL [ CAT [ HEAD pass1agent,
                               POSTHEAD +,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
                         CONT.HOOK [ INDEX ref-ind & #ind2,
 				    ICONS-KEY.IARG1 #clause ] ] ],
               #comp2 &
-	      [ LOCAL [ CAT [ HEAD noun,
+	      [ LOCAL [ CAT [ HEAD subj-noun,
                               POSTHEAD +,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
@@ -1053,12 +1140,12 @@ v_np-pp_prop_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-
 ditransitive-n-p-verb-lex := main-verb-lex & ditransitive-lex-item &
   [ SYNSEM.LOCAL.CAT [ HEAD activerb,
                        VAL.COMPS < #comp1, #comp2 > ],
-    ARG-ST < [ LOCAL.CAT [ HEAD noun ] ],
+    ARG-ST < [ LOCAL.CAT [ HEAD subj-noun ] ],
              #comp1 &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
                            POSTHEAD +,
-                           HEAD noun ] ],
+                           HEAD comp-noun ] ],
              #comp2 &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
@@ -1088,13 +1175,13 @@ passive-voice-lex-rule-ditrans-n-p := add-only-no-ccont-rule & infl-lex-rule &
 ; without "oleh"
 ; <ex> Budi dimasukkan Adi ke sekolah
 passive-one-ditrans-n-p-verb-lex := basic-three-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
-   [ ARG-ST < [ LOCAL [ CAT [ HEAD noun,
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
                         CONT.HOOK [ INDEX ref-ind & #ind1,
 			 	    ICONS-KEY.IARG1 #clause ] ] ],
               #comp1 &
-	      [ LOCAL [ CAT [ HEAD 3person-noun,
+	      [ LOCAL [ CAT [ HEAD pass1agent,
                               POSTHEAD +,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
@@ -1158,7 +1245,8 @@ v_np-pp_e_le := ditransitive-verb-lex &
 head-comp-phrase := basic-head-1st-comp-phrase & head-initial.
 
 ;; DVM 2017-03-24: for passive type 2
-comp-head-phrase := basic-head-1st-comp-phrase & head-final.
+comp-head-phrase := basic-head-1st-comp-phrase & head-final &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD passiverbtwo ] ].
 
 ;head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
 ;  [ SYNSEM.LOCAL.CAT.HC-LIGHT - ].
@@ -1209,7 +1297,7 @@ cop-pp-lex := non-mod-lex-item & trans-first-arg-raising-lex-item-2 &
              [ LOCAL [ CONT.HOOK.INDEX #xarg,
                	       CAT [ VAL [ SPR < >,
                                    COMPS < > ],
-                             HEAD noun ] ] ],
+                             HEAD subj-noun ] ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ COMPS < > ],
                            HEAD nonoleh-adp ] ] > ].
@@ -1233,7 +1321,7 @@ cop-adj-lex := non-mod-lex-item & trans-first-arg-raising-lex-item-2 &
              [ LOCAL [ CONT.HOOK.INDEX #xarg,
                	       CAT [ VAL [ SPR < >,
                                    COMPS < > ],
-                             HEAD noun ] ] ],
+                             HEAD subj-noun ] ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ SUBJ < #subj >,
 				 COMPS < > ],
@@ -1245,7 +1333,8 @@ cop-ada-adj-lex := cop-adj-lex.
 
 ;; FCB & DVM 2015-10-28: copula verbs with NP complement, inherit from transitive verbs
 cop-verb-lex :=  transitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT - ] > ].
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT -,
+                                   LOCAL.CAT.HEAD subj-noun ] > ].
 
 ;; "menjadi"
 v_np_cop_le := cop-verb-lex.
@@ -1319,6 +1408,7 @@ v_np_cop_3_le := v_np_cop_noasp_le &
 ;; FCB, DVM & LMC 2016-05-06 : add COORD - so that bare-np-phrase cannot combine with zero-cop-rule
 bare-np-phrase := basic-bare-np-phrase &
   [ SYNSEM.LOCAL.COORD -,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD commonnoun,
     C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
 
 ;bare-np-phrase := basic-bare-np-phrase &
@@ -1330,6 +1420,11 @@ bare-np-phrase := basic-bare-np-phrase &
 
 ;;; Coordination Strategy 1
 
+n-coord-phrase := coord-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD subj-noun,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD subj-noun,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD subj-noun ].
+
 n1-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
@@ -1340,6 +1435,11 @@ n1-bottom-coord-rule := conj-first-bottom-coord-rule & n-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 ;;; Coordination Strategy 1
+
+np-coord-phrase := coord-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD subj-noun,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD subj-noun,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD subj-noun ].
 
 np1-top-coord-rule := basic-np-top-coord-rule & monopoly-top-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
@@ -1470,7 +1570,7 @@ locative-verb-lex := verb-lex & trans-first-arg-raising-lex-item-2 &
                              SPEC < > ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST < #subj &
-             [ LOCAL [ CAT [ HEAD noun,
+             [ LOCAL [ CAT [ HEAD subj-noun,
                              VAL [ SPR < >,
                                    COMPS < > ] ],
                        CONT.HOOK.INDEX #xarg ] ],
@@ -1487,7 +1587,7 @@ trans-first-arg-raising-verb := main-verb-lex & trans-first-arg-raising-lex-item
                                  SUBJ < #subj > ] ],
                      CONT.HOOK.XARG #xarg ] ],
     ARG-ST < #subj &
-            [ LOCAL [ CAT [ HEAD noun,
+            [ LOCAL [ CAT [ HEAD subj-noun,
                             VAL [ SUBJ < >,
                                   SPR < >,
                                   SPEC < >,
@@ -1507,13 +1607,12 @@ trans-first-arg-raising-verb := main-verb-lex & trans-first-arg-raising-lex-item
 ;; control verbs need the ASPECT to be perf-and-prog
 ;; so copulas "adalah", "ialah" cannot be the complement of any control verbs
 trans-first-arg-control-verb := main-verb-lex & trans-first-arg-control-lex-item & 
-  [ SYNSEM [ 
-		LOCAL [ CAT.VAL [ SPR < >,
-                            SPEC < >,
-                            COMPS < #comps >,
-                            SUBJ < #subj > ] ] ],
+  [ SYNSEM [ LOCAL [ CAT.VAL [ SPR < >,
+                               SPEC < >,
+                               COMPS < #comps >,
+                               SUBJ < #subj > ] ] ],
     ARG-ST < #subj &
-            [ LOCAL [ CAT [ HEAD noun,
+            [ LOCAL [ CAT [ HEAD subj-noun,
                             VAL [ SUBJ < >,
                                   SPR < >,
                                   SPEC < >,
@@ -1542,7 +1641,7 @@ ditrans-first-arg-control-verb := main-verb-lex & basic-three-arg & basic-icons-
             [ LOCAL [ CONT.HOOK [ INDEX ref-ind & #ind1,
 				  ICONS-KEY.IARG1 #clause,
 				  CLAUSE-KEY #clause ],
-		      CAT [ HEAD noun,
+		      CAT [ HEAD subj-noun,
                             VAL [ SUBJ < >,
                                   SPR < >,
                                   SPEC < >,
@@ -1569,7 +1668,7 @@ ditrans-second-arg-control-verb := main-verb-lex & ditrans-second-arg-control-le
                             COMPS < #comp1, #comp2 >,
                             SUBJ < #subj > ] ] ],
     ARG-ST < #subj &
-            [ LOCAL [ CAT [ HEAD noun,
+            [ LOCAL [ CAT [ HEAD subj-noun,
                             VAL [ SUBJ < >,
                                   SPR < >,
                                   SPEC < >,
@@ -1591,7 +1690,7 @@ ditrans-second-arg-raising-verb := main-verb-lex & ditrans-second-arg-raising-le
                             COMPS < #comp1, #comp2 >,
                             SUBJ < #subj > ] ] ],
     ARG-ST < #subj &
-            [ LOCAL [ CAT [ HEAD noun,
+            [ LOCAL [ CAT [ HEAD subj-noun,
                             VAL [ SUBJ < >,
                                   SPR < >,
                                   SPEC < >,
@@ -1614,7 +1713,7 @@ adj-control-pred-lex := basic-two-arg-no-hcons &
 				    [ LOCAL [ CONT.HOOK.INDEX #x1,
                                               CAT [ VAL [ SPR < >,
                                                           COMPS < > ],
-                                                    HEAD noun ] ] ] > ],
+                                                    HEAD subj-noun ] ] ] > ],
                          HEAD adjcontrol ],
                    CONT.HOOK.XARG #x1 ],
     ARG-ST.FIRST #subj ].
@@ -1656,11 +1755,11 @@ trans-first-arg-control-adj := basic-two-arg & basic-nomod-adj-lex & trans-first
 ; </type>
 v_np_ntr_le := main-verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps & [ OPT - ] >,
-    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+    ARG-ST < [ LOCAL.CAT.HEAD subj-noun ],
              #comps &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
-                           HEAD noun ] ] > ].
+                           HEAD subj-noun ] ] > ].
 
 ; <type val="v_pp*_dir_le">
 ; <description>Cmps PP(opt,dir)                 
@@ -1670,7 +1769,7 @@ v_np_ntr_le := main-verb-lex & transitive-lex-item &
 ; </type>
 v_pp*_dir_le := main-verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
-    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+    ARG-ST < [ LOCAL.CAT.HEAD subj-noun ],
              #comps &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
@@ -1764,42 +1863,60 @@ neg+cop-lex-item := verb-lex &
 	   LKEYS [ KEYREL #cop,
 		   ALTKEYREL #neg ]],
    ARG-ST < #subj &
-	    [ LOCAL [ CAT [ HEAD noun ,
+	    [ LOCAL [ CAT [ HEAD subj-noun ,
 			    VAL [ SPR < >,
 				  COMPS < > ] ],
 		      CONT.HOOK.INDEX #xarg ] ],
 	    #comp &
-	    [ LOCAL [ CAT [ HEAD +np ,
-			    VAL [ SPR < >,
+	    [ LOCAL [ CAT [ VAL [ SPR < >,
 				  COMPS < > ] ],
 		      CONT.HOOK.INDEX #compindex ] ] > ].
 
-n+cop-lex := neg+cop-lex-item.
+n+cop+n-lex := neg+cop-lex-item &
+ [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL.CAT.HEAD subj-noun ] > ].
+
+n+cop+p-lex := neg+cop-lex-item &
+ [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL.CAT.HEAD adp ] > ].
 
 ;; DVM 2017-09-19: et cetera (etc.) or dan lain-lain (dll.) dan sebagainya (dsb.)
 ;; is treated as and (dan) and others (lain-lain)
-conj+noun-lex-item := n1-bottom-coord-rule &
+#|
+conj+noun-lex-item := lex-item &
  [ SYNSEM [LOCAL [ CAT [ HEAD noun,
                          VAL [ COMPS < >,
 			       SUBJ < >,
 			       SPEC < >,
-                               SPR < [ ] > ]],
-                   COORD +,
-		   CONT [RELS <! coordination-relation &
+                               SPR < > ] ],
+		   CONT [RELS <! coordination-relation & #r &
                                  [ PRED "_and_coord_rel" ],
-			         noun-relation &
+			         noun-relation & #n &
 			         [ PRED "others_n_rel",
-                                   ARG0 #s ] !>,
-                         HOOK.INDEX #s]],
-	   LKEYS [ KEYREL coordination-relation,
-		   ALTKEYREL noun-relation ]],
-   CONJ-DTR conj-lex,
-   NONCONJ-DTR inanimate-plural-noun-lex,
-   INFLECTED infl-satisfied,
-   TOKENS tokens &
-           [ +LIST #tl & < [ +CLASS #class, +FROM #from, +FORM #form ], ... >,
-             +LAST.+TO #to ] ].
+                                   LBL #l,
+                                   ARG0 #s ],
+                                 quant-relation &
+                                 [ PRED "exist_q_rel",
+                                   LBL #b,
+                                   ARG0 #s,
+                                   RSTR #t ] !>,
+                         HOOK.INDEX #s,
+                         HCONS <! qeq &
+                                  [ HARG #t,
+                                    LARG #l ] !> ] ]],
+   INFLECTED infl-satisfied ].
+|#
 
+;   STEM [ orthog & [ CLASS #class, FROM #from, TO #to, FORM #form ] ],
+;   TOKENS tokens &
+;           [ +LIST #tl & < [ +CLASS #class, +FROM #from, +FORM #form ], ... >,
+;             +LAST.+TO #to ] ].
+
+;  TRAITS #traits,
+;  STEM [ FROM #from, TO #to ],
+;  TOKENS tokens &
+;	 [ +LIST #traits & [ FIRST.+FROM #from ], 
+;	   +LAST.+TO #to ] ].
+
+#|
 conj+n-lex := conj+noun-lex-item.
 
 conj+verb-lex-item := vp1-bottom-coord-rule &
@@ -1819,12 +1936,21 @@ conj+verb-lex-item := vp1-bottom-coord-rule &
 		   ALTKEYREL event-relation ]],
    CONJ-DTR conj-lex,
    NONCONJ-DTR intr-verb-lex,
-   INFLECTED infl-satisfied,
-   TOKENS tokens &
-           [ +LIST #tl & < [ +CLASS #class, +FROM #from, +FORM #form ], ... >,
-             +LAST.+TO #to ] ].
+   INFLECTED infl-satisfied].
+;   TOKENS tokens &
+;           [ +LIST < [ +CLASS, +FROM, +FORM ], ... >,
+;             +LAST.+TO ] ].
+;           [ +LIST #tl & < [ +CLASS #class, +FROM #from, +FORM #form ], ... >,
+;             +LAST.+TO #to ] ].
+
+;  TRAITS #traits,
+;  STEM [ FROM #from, TO #to ],
+;  TOKENS tokens &
+;	 [ +LIST #traits & [ FIRST.+FROM #from ], 
+;	   +LAST.+TO #to ] ].
 
 conj+v-lex := conj+verb-lex-item.
+|#
 
 #|
 conj-etc-lex := word &
@@ -1960,6 +2086,7 @@ adverb-post-adj-lex := adverb-adj-lex &
 ;; DVM 2016-07-09 : in roots.tdl, add +p to the HEAD of root, meaning that preposition can be the head of a clause
 
 ;; Question to Francis: how to change adp-nomod to adp-mod?
+;; todo: need to constraint the HEAD comp-noun or HEAD nonoleh-adp, *di-nya, *ke-ku, OK dari-mu
 adposition-nomod-lex := basic-nomod-adposition-lex & transitive-lex-item &
   [ SYNSEM.LOCAL [ CAT [ HEAD nonoleh-adp, 
                          VAL [ SPR < >,
@@ -1968,26 +2095,45 @@ adposition-nomod-lex := basic-nomod-adposition-lex & transitive-lex-item &
                                COMPS < #comps > ] ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST < #subj &
-             [ LOCAL [ CAT [ HEAD noun,
+             [ LOCAL [ CAT [ HEAD subj-noun,
                              VAL [ SPR < >,
                                    COMPS < > ] ],
                        CONT.HOOK.INDEX #xarg ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ SPR < >,
 				 COMPS < > ],
-                           HEAD noun ] ] > ].
+                           HEAD comp-noun ] ] > ].
 
 adposition-lex := adposition-nomod-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
 ; DVM 2017-03-23 : for "oleh" in passive construction, semantically empty
-adposition-particle-lex := basic-nomod-adposition-lex &
-  [ SYNSEM.LOCAL.CAT [ HEAD oleh-adp,
-                       VAL.COMPS.FIRST.OPT - ] ].
+;adposition-oleh-lex := basic-nomod-adposition-lex &
+;  [ SYNSEM.LOCAL.CAT [ HEAD oleh-adp,
+;                       VAL.COMPS.FIRST.OPT - ] ].
+
+; DVM 2017-12-19: "oleh" in passive 1
+adposition-oleh-lex := single-rel-lex-item & basic-icons-lex-item & intersective-mod-lex & norm-ltop-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG1 #xarg,
+			    ARG2 #ind1 ],
+	     LOCAL [ CONT.HOOK [ XARG #xarg ],
+		     CAT [ HEAD oleh-adp & [ MOD < [ LOCAL [ CAT [ HEAD passiverbone,
+						                   VAL.SUBJ cons ],
+						             CONT [ HOOK.INDEX #xarg,
+                                                                    RELS <! arg12-ev-relation & [ ARG1 #ind2,
+                                                                                                  ARG2 #ind1 ] !> ]]] > ],
+			   VAL [ SPR < >,
+			         COMPS < [ OPT -,
+				           LOCAL [ CAT [ HEAD comp-noun,
+						         VAL.SPR < > ],
+                                                   CONT [ HOOK.INDEX #ind2,
+                                                          RELS <! noun-relation & [ ARG0 #ind2 ] !> ] ]] >,
+				 SUBJ < > ]]]]].
+
 
 ; DVM 2017-03-24: for passive type 1 with "oleh"
 passive-oleh-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
-   [ ARG-ST < [ LOCAL [ CAT [ HEAD noun,
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun,
                               VAL [ SPR < >,
                                     COMPS < > ] ],
                         CONT.HOOK [ INDEX ref-ind & #ind1,
@@ -1996,11 +2142,9 @@ passive-oleh-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-ve
 	      [ LOCAL [ CAT [ HEAD oleh-adp,
                               VAL [ SPR < >,
                                     COMPS < [ OPT -,
-                                              LOCAL [ CAT [ HEAD 3person-noun,
-                                                            VAL [ SPR < >,
-                                                                  COMPS < > ] ],
-                                                      CONT.HOOK [ INDEX ref-ind & #ind2,
-				                                  ICONS-KEY.IARG1 #clause ] ] ] > ] ] ] ] >,
+                                              LOCAL.CONT [ HOOK [ INDEX #ind2,
+							          ICONS-KEY.IARG1 #clause ],
+                                                           RELS <! noun-relation & [ ARG0 #ind2 ] !> ] ] > ] ] ] ] >,
      SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
 			     ARG2 #ind1 ],
 	      LOCAL [ CAT [ HEAD passiverbone,
@@ -2018,7 +2162,7 @@ adposition-mod-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-le
 						                CONT.HOOK.INDEX #xarg ]] > ],
 			   VAL [ SPR < >,
 			         COMPS < [ OPT -,
-				           LOCAL [ CAT [ HEAD noun,
+				           LOCAL [ CAT [ HEAD comp-noun,
 						         VAL.SPR < > ],
 					           CONT.HOOK.INDEX #ind ]] >,
 				 SUBJ < > ]]]]].
@@ -2029,13 +2173,13 @@ adp-attr-lex := intersective-mod-lex & norm-ltop-lex-item & transitive-lex-item 
                             ARG2 #ind ],
              LOCAL [ CONT.HOOK [ XARG #xarg,
                                  INDEX #arg0 ],
-                     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD noun,
+                     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD subj-noun,
                                                       VAL [ SPR cons ]],
                                                 CONT.HOOK.INDEX #xarg ]] >,
                            VAL [ SUBJ < >,
                                  SPR < >,
                                  COMPS < [ OPT -,
-                                           LOCAL [ CAT [ HEAD noun,
+                                           LOCAL [ CAT [ HEAD comp-noun,
                                                          VAL.SPR < > ],
                                                    CONT.HOOK.INDEX #ind ]] >,
                                  SPEC < > ],
@@ -2066,7 +2210,7 @@ adp-attr-v-lex := intersective-mod-lex & norm-ltop-lex-item & transitive-lex-ite
                            VAL [ SUBJ < >,
                                  SPR < >,
                                  COMPS < [ OPT -,
-                                           LOCAL [ CAT [ HEAD noun,
+                                           LOCAL [ CAT [ HEAD comp-noun,
                                                          VAL.SPR < > ],
                                                    CONT.HOOK.INDEX #ind ]] >,
                                  SPEC < > ]]]]].
@@ -2094,7 +2238,7 @@ can-aux := basic-verb-lex & trans-first-arg-raising-lex-item-1 & non-mod-lex-ite
     ARG-ST < #subj &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
-                           HEAD noun ] ],
+                           HEAD subj-noun ] ],
              #comps &
              [ LOCAL.CAT [ VAL [ SUBJ < [  ] >,
                                  COMPS < > ],
@@ -2105,20 +2249,20 @@ can-aux := basic-verb-lex & trans-first-arg-raising-lex-item-1 & non-mod-lex-ite
 ;; DVM 2015-09-23: deleted things which are not relevant in INDRA, added common-noun-lex to make reduplicated nouns compatible with enclitics =nya etc.
 ;; DVM 2017-02-21: added [ CARDIN + ] so that "ada dua buku-buku" cannot be parsed
 redup-noun-lex-rule :=  same-non-local-lex-rule & common-noun-lex &
-		   same-modified-lex-rule &
-		   same-light-lex-rule &
-		   same-ctxt-lex-rule &
-		   same-cont-lex-rule &
-		   same-agr-lex-rule & 
-                   infl-lex-rule & 
+	 	        same-modified-lex-rule &
+		        same-light-lex-rule &
+		        same-ctxt-lex-rule &
+		        same-cont-lex-rule &
+		        same-agr-lex-rule & 
+                        infl-lex-rule & 
  [ SYNSEM [ LOCAL [ CAT [ MC luk,
 			  HEAD #head & [ CARDIN + ], 
 			  VAL #val, 
 			  POSTHEAD #posthead ],
 		    CONT.HOOK.INDEX.PNG.PERNUM pl ] ],
-   DTR word-or-lexrule & [ SYNSEM [ LOCAL [ CAT [ HEAD #head, 
-					        VAL #val,
-					        POSTHEAD #posthead ] ] ] ],
+   DTR common-noun-lex & [ SYNSEM [ LOCAL [ CAT [ HEAD #head, 
+					          VAL #val,
+					          POSTHEAD #posthead ] ] ] ],
    C-CONT [ HCONS <! !>, 
             ICONS <! !>,
             RELS <! !> ] ].
@@ -2186,11 +2330,11 @@ zero-cop-rule := unary-phrase &
                         VAL [ COMPS < >,
                               SPR < >,
                               SPEC < >,
-                              SUBJ < [ LOCAL [ CAT [ HEAD noun,
+                              SUBJ < [ LOCAL [ CAT [ HEAD subj-noun,
 						     VAL [ SPR < >,
                                      			   COMPS < > ] ],
                            		       CONT.HOOK.INDEX #x1 ] ] > ] ] ] ,
-   ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun &
+   ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD subj-noun &
 				      [ EMPTY - ],
                                  VAL [ SPR < >,
                                        COMPS < > ] ],
@@ -2252,7 +2396,7 @@ v_exist-lex := basic-one-arg-no-hcons & verb-lex & basic-verb-lex &
     ARG-ST #comps &
          < [ LOCAL [ CAT [ VAL [ SPR < >,
                    		 COMPS < > ],
-                     	   HEAD noun ],
+                     	   HEAD subj-noun ],
                	     CONT.HOOK.INDEX #arg1 ],
 	     OPT - ] > ].
 
@@ -2294,6 +2438,7 @@ neg-adv-imp-lex := imperative-aux-lex.
 ;; DVM 2016-05-17: added noun-noun compound from zhong
 ;; should add [CLASSIFIED na-or--] to prevent [satu ekor kucing] as in zhong
 ;; from being analyzed as a compound
+#|
 noun-noun-compound-phrase := head-initial &
   [ SYNSEM [ LOCAL.CAT #cat,
              NON-LOCAL #nonloc ],
@@ -2320,16 +2465,17 @@ noun-noun-compound-phrase := head-initial &
                               LARG #larg ] !>,
              ICONS <! noun-noun & [ IARG1 #hind, 
 				    IARG2 #nhind ] !> ] ].
+|#
 
 ;; month names, need to be further constrained
-;; DVM 2017-11-03: add PERNUM 3sg and ANIMACY inanimate for months and days
+;; DVM 2017-11-03: add PERNUM 3sg and ANIMCOUNT inanimate for months and days
 n_-_month-lex := proper-name-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PERNUM 3sg,
-                                       ANIMACY inanimate ] ].
+                                       ANIMCOUNT inanimate ] ].
 
 n_-_day-lex := proper-name-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PERNUM 3sg,
-                                       ANIMACY inanimate ] ].
+                                       ANIMCOUNT inanimate ] ].
 
 ;; for morning, night, hour, day, year
 n_-_temp-lex := inanimate-noun-noun-lex.
@@ -2410,19 +2556,68 @@ compound-noun-phrase := head-initial &
                             COMPS < > ] ,
                   CONT.HOOK #head ],
    HEAD-DTR.SYNSEM [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
-                     LOCAL [ CAT [ HEAD noun,
+                     LOCAL [ CAT [ HEAD commonnoun,
                                  VAL [ SPR < #spr > ,
                                        COMPS < > ]] ,
                            CONT [ HOOK #head &
                                        [INDEX #externalargument,
                                         LTOP #lbl ]]]],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD nondemnoun ],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD dependent-noun,
+                                     VAL [ SPR < >,
+                                           COMPS < > ] ],
                                CONT.HOOK.INDEX #internalargument ],
    C-CONT [ RELS <! arg12-ev-relation & 
                   [PRED compound_p_rel,
                    LBL #lbl,
                    ARG1 #externalargument,
                    ARG2 #internalargument] !>, HCONS <! !> ] ].
+
+;;DVM 2017-12-17: for noun-posssessor e.g. buku saya
+compound-noun-pronoun-phrase := head-initial & 
+ [ SYNSEM [ LOCAL [ CAT [ VAL [ SPR < #spr >,
+                                COMPS < > ] ],
+                    CONT.HOOK #head ] ],
+   HEAD-DTR.SYNSEM [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
+                     LOCAL [ CAT [ HEAD commonnoun,
+                                   VAL [ SPR < #spr >,
+                                         COMPS < > ]] ,
+                             CONT [ HOOK #head &
+                                        [INDEX #externalargument,
+                                         LTOP #lbl ] ] ] ],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD possessor,
+                                     VAL [ SPR < >,
+                                           COMPS < > ] ],
+                               CONT.HOOK.INDEX #internalargument],
+   C-CONT [ RELS <! arg12-relation & [ PRED poss_rel,
+                                       LBL #lbl,
+                                       ARG1 #externalargument,
+                                       ARG2 #internalargument] !>,
+            HCONS <! !> ] ].
+
+;;DVM 2017-12-17: this rule is similar to bare-np-rule but introduce def_q_rel for noun-possessor e.g. buku saya
+possessor-np-phrase := head-only &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+		  	     SUBJ < >,
+			     COMPS < >,
+			     SPEC < > ],
+                   COORD - ],
+    HEAD-DTR.SYNSEM.LOCAL [ CAT [ VAL [ SPR < [ LOCAL.CAT.HEAD det,
+						OPT + ] >,
+					SUBJ < >,
+					COMPS < > ] ],
+			    CONT[HOOK [ INDEX #index,
+					LTOP #larg ] ]],
+    C-CONT [ RELS <! quant-relation &
+		   [ PRED def_q_rel,
+                     LBL #ltop,
+		     ARG0 #index,
+		     RSTR #harg ] !>,
+	     HCONS <! qeq & 
+		    [ HARG #harg,
+		      LARG #larg ] !>,
+	     ICONS <! !>,
+	     HOOK [ INDEX #index,
+		    LTOP #ltop ] ] ].
 
 ;; DVM 2017-05-09 : added compound-verb-phrase for serial verb constructions (V1 = intransitive, V2 = (in)transitive)
 ;; added EMPTY - to avoid zero-copula
@@ -2475,20 +2670,22 @@ compound-coordinated-verb-phrase := head-final &
                    R-INDEX #right] !>, HCONS <! !> ] ].
 
 ;; DVM 2017-08-22 : added compound-coordinated-adj-phrase
-;; added EMPTY - to avoid zero-copula
-compound-coordinated-adj-phrase := head-final &
+compound-coordinated-adj-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
-                            COMPS < #cmp > ] ,
+                            SPR < #adv >,
+                            COMPS null ] ,
                   CONT.HOOK [ LTOP #harg,
                               INDEX #ind ] ],
    HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD adj,
-                                 VAL [ SUBJ < #spr > ]] ,
-                             CONT [ HOOK [ LTOP #kanan,
-                                           INDEX #right] ]]],
+                                   VAL [ SUBJ < #spr >,
+                                         SPR < #adv > ]] ,
+                             CONT [ HOOK [ LTOP #kiri,
+                                           INDEX #left] ]]],
    NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD adj,
-                                     VAL [ SUBJ < #spr > ]],
-                               CONT [ HOOK [ LTOP #kiri,
-                                             INDEX #left] ] ],
+                                     VAL [ SUBJ < #spr >,
+                                           SPR < #adv > ]],
+                               CONT [ HOOK [ LTOP #kanan,
+                                             INDEX #right] ] ],
    C-CONT [ RELS <! coordination-relation & 
                   [PRED adj_coord_p_rel,
                    LBL #harg,
@@ -2497,6 +2694,8 @@ compound-coordinated-adj-phrase := head-final &
 		   R-HNDL #kanan,
                    L-INDEX #left,
                    R-INDEX #right] !>, HCONS <! !> ] ].
+
+
 
 ;; DVM 2017-05-11 : added compound-verb-phrase for serial verb constructions (V1 = transitive, V2 = intransitive)
 ;; V2 is the result of V1
@@ -2528,18 +2727,20 @@ compound-result-verb-phrase := head-initial &
 rel-yang-lex := yang-comp-lex.
 ;; & zero-arg-nonque.
 
+yang := +pc.
+
 yang-comp-lex := basic-one-arg & yang-super-lex & raise-sem-lex-item & no-icons-lex-item & norm-zero-arg &
 "The modified noun is the missing argument in the relative clause.
 <ex>saya makan buah yang merah
 <ex>saya makan buah yang merah itu
 <ex>saya membaca buku yang ditulis Budi
 "
-  [ SYNSEM [ LOCAL [ CAT [ HEAD adp &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD yang &
                                 [ MOD < [ LOCAL.CONT.HOOK [ INDEX #slash,
                                                             LTOP #ltop ] ] > ] ,
                            VAL [ COMPS < [ LOCAL [ CAT [ HEAD +vjp,
                                                          VAL [ SUBJ < > ] ] ],
-                                           NON-LOCAL.SLASH 1-dlist & <! [ CAT [ HEAD noun,
+                                           NON-LOCAL.SLASH 1-dlist & <! [ CAT [ HEAD subj-noun,
                                                                                 VAL.SPR < > ],
                                                                           CONT.HOOK [ INDEX #slash,
                                                                                       LTOP #ltop ] ] !> ] >,
@@ -2554,9 +2755,9 @@ POSTCOMP is a feature to be used on head to indicate the COMP's position is afte
 POSTHEAD + means as a modifier, it always appear after the head noun.
 "
   [ SYNSEM [ LOCAL.CAT [ POSTHEAD +,
-                         HEAD adp &
+                         HEAD yang &
 	                      [ MOD < [ LOCAL intersective-mod &
-                                              [ CAT [ HEAD noun,
+                                              [ CAT [ HEAD subj-noun,
                                                       VAL.COMPS < > ] ] ] > ],
 			    VAL [ SPR < >,
                                   SPEC < >,
@@ -2573,7 +2774,7 @@ OPT - is needed to constrain the number of trees, also neither the N=nya nor the
 The modified noun is the missing possessor in the relative clause.
 <ex>gajah yang hidungnya panjang itu tidur
 "
-  [ SYNSEM [ LOCAL [ CAT [ HEAD adp &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD yang &
                                 [  MOD < [ LOCAL [ CAT.VAL.SPR < canonical-synsem >,
                                                    CONT.HOOK.INDEX #internalargument ] ] > ] ,
                            MC -,
@@ -2581,8 +2782,7 @@ The modified noun is the missing possessor in the relative clause.
                                  COMPS < #subj & [ LOCAL [ CAT [ HEAD nounnyadef ,
                                                          VAL [ SPR < > ,
                                                                COMPS < > ]] ,
-                                                   CONT [ HOOK #head &
-                                                               [INDEX #externalargument,
+                                                   CONT [ HOOK [INDEX #externalargument,
                                                                 LTOP #lbl ]]],
                                                    OPT - ],
                                          [ LOCAL [ CAT [ HEAD +vjp,

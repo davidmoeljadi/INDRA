@@ -23,6 +23,8 @@ rule-rels-path            := C-CONT RELS.
 label-path                := LABEL-NAME.
 
 parsing-roots             := root frag.
+;parsing-roots             := frag-n root.
+;parsing-roots             := frag-n.
 generation-roots          := root frag.
 
 semarg-type               := semarg.

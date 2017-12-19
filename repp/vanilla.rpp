@@ -13,3 +13,22 @@
 
 ;; DVM 2015-09-23: input is A-Aan, output is A²an
 !(.+)-\1an								\1²an								 
+
+!(\w+)(N|n)ya								\1 -nya
+!(agak|akhir|berikut|berta|biasa|ha|kelihatan|misal|nampak|no|nyo|pu|rupa|satu²|sebaik|sebelum|sebenar|sebetul|secukup|seharus|sekadar|selanjut|seluruh|semua|sepenuh|sesungguh|ta|tadi|tampak|tentu) -nya							\1nya
+
+!(\w+)(K|k)u								\1 -ku
+!(a|antarsu|berla|ba|be|beng|bu|du|ka|ku|la|Malu|membe|pa|sa|su|terpa|tung|wo) -ku							\1ku
+
+!(\w+)(M|m)u								\1 -mu
+!(berte|il|ja|ka|pene|sa|se|ta|terja) -mu							\1mu
+
+!seekor									se- ekor
+!sebuah									se- buah
+!seorang								se- orang
+
+;; DVM 2017-12-18: todo: regex does not work with prefixes?
+;!(K|k)u(\w+)								ku- \1
+;!ku- (aci|ah|ali|alitas|asa|asai|at|atkan|bah|bangan|bis|bu|buran|bus|cing|curan|da|dus|e|eh|il|kis|ku|kur|kus|li|liah|lim|lin|liner|lit|ltivar|mis|mpulkan|nci|ncup|ndang|ndangan|ning|ningan|njungan|njungi|no|nyah|nyit|pang|pas|ping|pon|pu²|pui|ra²|rang|rangi|rma|rsi|rsus|rung|rus|sam|sir|tai|weni)							ku\1
+;!(K|k)au(\w+)								kau- \1
+;!kau- (l|m|s)							kau\1

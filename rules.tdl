@@ -3,8 +3,9 @@
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.
 
-;DVM 2017-02-10: deactivate this for numbers+noun
-;adj-head-scop := adj-head-scop-phrase.
+;DVM 2017-02-10: deactivate this for numbers+noun, to avoid getting two parse trees and MRSs
+;DVM 2017-11-27: activate this, so that "tidak tidur" can be parsed
+adj-head-scop := adj-head-scop-phrase.
 
 ; Rule instances for head-modifier structures. Corresponding types
 ; are defined in matrix.tdl.  The matrix customization script did
@@ -17,7 +18,7 @@ head-comp := head-comp-phrase.
 
 ;; DVM 2017-03-24: for passive type 2
 ;; DVM 2017-03-24: question to Francis how to constrain this rule to lexical (passive) head only
-;comp-head := comp-head-phrase.
+comp-head := comp-head-phrase.
 
 subj-head := subj-head-phrase.
 
@@ -28,6 +29,9 @@ head-spec := head-spec-phrase.
 head-spec-q := head-spec-q-phrase.
 
 bare-np := bare-np-phrase.
+
+;DVM 2017-12-17: for noun-pronoun (possessor) e.g. buku saya
+poss-np := possessor-np-phrase.
 
 n1-top-coord := n1-top-coord-rule.
 
@@ -74,12 +78,16 @@ head-spec-cl := head-spec-h-sem-phrase &
   [ HEAD-DTR.SYNSEM [ LOCAL [ CAT.HEAD classifier,
 			      CONT.HOOK.INDEX.COG-ST cog-st ] ] ].
 
+;DVM 2017-12-19: rule for num+cl e.g. saya mau "tiga buah".
+;num-cl := number-classifier-phrase.
+
 ;; this is the rule for zero copula, e.g. Saya orang.
 zero-cop := zero-cop-rule.
 ;zero-cop-pp := zero-cop-pp-rule.
 
 ;; this is the rule for noun noun compound
 n-n-compound := compound-noun-phrase.
+n-pron-compound := compound-noun-pronoun-phrase.
 
 ;; DVM 2017-05-09: this is the rule for serial verb construction (verb verb compound)
 v-v-compound := compound-verb-phrase.

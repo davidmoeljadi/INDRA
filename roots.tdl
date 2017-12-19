@@ -35,6 +35,14 @@ frag-v := phrase &
                                 [ FORM finite ] ] ],
              NON-LOCAL.SLASH 0-dlist ] ].
 
+;;; DVM 2017-12-14: add this to show NP parse tree
+frag-n := phrase &
+  [ SYNSEM [ LOCAL [ COORD -,
+                     CAT [ VAL saturated,
+                           MC +,
+                           HEAD noun ] ],
+             NON-LOCAL.SLASH 0-dlist ] ].
+
 ; Also need to add root constraint for bridged phrases
 root-bridge := phrase &
   [ SYNSEM.LOCAL.CAT.HEAD bridge-head & [ BRIDGED + ] ].
