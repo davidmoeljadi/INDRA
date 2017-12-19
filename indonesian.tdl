@@ -215,8 +215,10 @@ propername := pronoun-substitute.
 pronoun-3person := pronoun & pass1agent.
 pronoun-non3person := pronoun.
 
+nounbare := commonnoun.
+nounpos := commonnoun.
 nounnyadef := commonnoun.
-nounnyapos := commonnoun.
+nounnyapos := nounpos.
 
 ;;; Verb
 ;; DVM 2017-03-24: make three groups for verb: active, passive type 1, and passive type 2
@@ -1408,7 +1410,7 @@ v_np_cop_3_le := v_np_cop_noasp_le &
 ;; FCB, DVM & LMC 2016-05-06 : add COORD - so that bare-np-phrase cannot combine with zero-cop-rule
 bare-np-phrase := basic-bare-np-phrase &
   [ SYNSEM.LOCAL.COORD -,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD commonnoun,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD nounbare,
     C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
 
 ;bare-np-phrase := basic-bare-np-phrase &
@@ -2556,7 +2558,7 @@ compound-noun-phrase := head-initial &
                             COMPS < > ] ,
                   CONT.HOOK #head ],
    HEAD-DTR.SYNSEM [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
-                     LOCAL [ CAT [ HEAD commonnoun,
+                     LOCAL [ CAT [ HEAD nounbare,
                                  VAL [ SPR < #spr > ,
                                        COMPS < > ]] ,
                            CONT [ HOOK #head &
@@ -2574,11 +2576,12 @@ compound-noun-phrase := head-initial &
 
 ;;DVM 2017-12-17: for noun-posssessor e.g. buku saya
 compound-noun-pronoun-phrase := head-initial & 
- [ SYNSEM [ LOCAL [ CAT [ VAL [ SPR < #spr >,
+ [ SYNSEM [ LOCAL [ CAT [ HEAD nounnyapos,
+                          VAL [ SPR < #spr >,
                                 COMPS < > ] ],
                     CONT.HOOK #head ] ],
    HEAD-DTR.SYNSEM [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
-                     LOCAL [ CAT [ HEAD commonnoun,
+                     LOCAL [ CAT [ HEAD nounpos,
                                    VAL [ SPR < #spr >,
                                          COMPS < > ]] ,
                              CONT [ HOOK #head &
@@ -2601,7 +2604,8 @@ possessor-np-phrase := head-only &
 			     COMPS < >,
 			     SPEC < > ],
                    COORD - ],
-    HEAD-DTR.SYNSEM.LOCAL [ CAT [ VAL [ SPR < [ LOCAL.CAT.HEAD det,
+    HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD nounnyapos,
+                                  VAL [ SPR < [ LOCAL.CAT.HEAD det,
 						OPT + ] >,
 					SUBJ < >,
 					COMPS < > ] ],
