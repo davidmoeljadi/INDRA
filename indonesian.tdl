@@ -589,8 +589,10 @@ tr-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
 
 intr-verb-lex := intransitive-verb-lex.
 
+; DVM 2017-12-20: HEAD is subj-noun to prevent *saya makannya from parsing
 opt-tr-verb-lex := transitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT + ].
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST [ OPT +,
+                                       LOCAL.CAT.HEAD subj-noun ] ].
 
 ;no-obj-drop-verb-lex := transitive-verb-lex &
 ;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
@@ -701,7 +703,7 @@ adj-adp-pred-lex := intransitive-lex-item &
 				    [ LOCAL [ CONT.HOOK.INDEX #x1,
                                               CAT [ VAL [ SPR < >,
                                                           COMPS < > ],
-                                                    HEAD noun ] ] ] >,
+                                                    HEAD subj-noun ] ] ] >,
 			      COMPS < > ],
                    CONT.HOOK.XARG #x1 ],
     ARG-ST.FIRST #subj ].
@@ -1709,7 +1711,7 @@ ditrans-second-arg-raising-verb := main-verb-lex & ditrans-second-arg-raising-le
 
 ;; DVM 2017-08-23 : control adjectives with passive verbs e.g. enak dimakan
 
-
+#|
 adj-control-pred-lex := basic-two-arg-no-hcons &
   [ SYNSEM.LOCAL [ CAT [ VAL [ SUBJ < #subj & 
 				    [ LOCAL [ CONT.HOOK.INDEX #x1,
@@ -1721,7 +1723,46 @@ adj-control-pred-lex := basic-two-arg-no-hcons &
     ARG-ST.FIRST #subj ].
 
 adjective-control-lex := adj-control-pred-lex & basic-nomod-adj-lex.
+|#
 
+#|
+adj-control-pred-lex := basic-two-arg &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD adj,
+                         VAL [ SUBJ < #subj & 
+				    [ LOCAL [ CONT.HOOK.INDEX #x1,
+                                              CAT [ VAL [ SPR < >,
+                                                          COMPS < > ],
+                                                    HEAD subj-noun ] ] ] >,
+                               COMPS < #comps & [ LOCAL [ CAT.HEAD passiverbone,
+                                                          CONT.RELS.LBL #larg ] ] > ]],
+                   CONT [ HOOK.XARG #x1,
+                          HCONS <! qeq & [ HARG #harg,
+                                           LARG #larg ] !> ] ],
+             LKEYS.KEYREL.ARG2 #harg ],
+    ARG-ST < #subj , #comps > ].
+
+adjective-control-lex := adj-control-pred-lex & basic-nomod-adj-lex.
+
+trans-first-arg-control-adj := adjective-control-lex & trans-first-arg-control-lex-item & 
+  [ SYNSEM [ LOCAL [ CAT.VAL [ SPR < [ ] >,
+                               SPEC < >,
+                               COMPS < #comps >,
+                               SUBJ < #subj > ] ] ],
+    ARG-ST < #subj &
+            [ LOCAL [ CAT [ HEAD subj-noun,
+                            VAL [ SUBJ < >,
+                                  SPR < >,
+                                  SPEC < >,
+                                  COMPS < > ] ] ] ],
+            #comps &
+            [ LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf-and-prog,
+			CAT [ HEAD passiverbone &
+                                [ AUX - ],
+                          VAL [ COMPS < >,
+                                SPR < >,
+                                SPEC < >,
+                                SUBJ < [ ] > ] ] ] ] > ].
+|#
 #|
 trans-first-arg-control-adj := basic-two-arg & basic-nomod-adj-lex & trans-first-arg-control-lex-item & 
   [ SYNSEM [ LOCAL [ CAT [ HEAD adjcontrol,
@@ -2834,10 +2875,10 @@ subord-conj-lex := basic-subord-conjunction-lex & basic-icons-lex-item &
   [ ARG-ST < #comps >,
     SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < >,
                                  COMPS < #comps &
-                                        [ LOCAL.CAT [ HEAD +vjp,
-                                                      VAL [ SUBJ < [ OPT + ]  >,
+                                        [ LOCAL.CAT [ HEAD +vjp & [ FORM finite ],
+                                                      VAL [ SUBJ < >,
                                                             COMPS < > ],
-                                                      MC - ],
+                                                      MC + ],
                                           OPT - ] >,
                                  SPR < >,
                                  SPEC < > ],
