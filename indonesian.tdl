@@ -222,10 +222,10 @@ nounnyapos := nounpos.
 
 ;;; Verb
 ;; DVM 2017-03-24: make three groups for verb: active, passive type 1, and passive type 2
-activerb := verb.
-nonactiverb := verb.
-passiverbone := verb.
-passiverbtwo := verb.
+active := verb.
+nonactive := verb.
+passive-one := verb.
+passive-two := verb.
 
 adjcontrol := adj.
 adj-number := adj.
@@ -525,12 +525,12 @@ aux-lex := verb-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.AUX + ].
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
-  [ SYNSEM.LOCAL.CAT [ HEAD nonactiverb,
+  [ SYNSEM.LOCAL.CAT [ HEAD nonactive,
                        VAL.COMPS < > ],
     ARG-ST.FIRST.LOCAL.CAT.HEAD subj-noun ].
 
 transitive-verb-lex := main-verb-lex & transitive-lex-item &
-  [ SYNSEM.LOCAL.CAT [ HEAD activerb,
+  [ SYNSEM.LOCAL.CAT [ HEAD active,
                        VAL.COMPS < #comps > ],
     ARG-ST < [ LOCAL.CAT [ HEAD subj-noun ] ],
              #comps &
@@ -555,7 +555,7 @@ passive-one-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-ver
 				    ICONS-KEY.IARG1 #clause ] ] ] >,
      SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
 			     ARG2 #ind1 ],
-	      LOCAL [ CAT [ HEAD passiverbone,
+	      LOCAL [ CAT [ HEAD passive-one,
                             VAL.COMPS < #comps > ],
                       CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
@@ -575,7 +575,7 @@ passive-two-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-ver
 				    ICONS-KEY.IARG1 #clause ] ] ] >,
      SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
 			     ARG2 #ind1 ],
-	      LOCAL [ CAT [ HEAD passiverbtwo,
+	      LOCAL [ CAT [ HEAD passive-two,
                             VAL.COMPS < #comps > ],
                       CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
@@ -602,7 +602,7 @@ opt-tr-verb-lex := transitive-verb-lex &
 ;; DVM 2017-08-22 : for verbs taking two arguments but cannot be passivized such as "terdiri dari"
 
 trans-verb-lex := main-verb-lex & transitive-lex-item &
-  [ SYNSEM.LOCAL.CAT [ HEAD nonactiverb,
+  [ SYNSEM.LOCAL.CAT [ HEAD nonactive,
                        VAL.COMPS < #comps & [ OPT - ] > ],
     ARG-ST < [ LOCAL.CAT [ HEAD subj-noun ] ],
              #comps &
@@ -614,7 +614,7 @@ trans-verb-lex := main-verb-lex & transitive-lex-item &
 ;; DVM 2017-09-07 : for relational verbs such as "berkerabat (dg)", "bersahabat (dg)"
 
 relational-verb-lex := main-verb-lex & transitive-lex-item &
-  [ SYNSEM.LOCAL.CAT [ HEAD nonactiverb,
+  [ SYNSEM.LOCAL.CAT [ HEAD nonactive,
                        VAL.COMPS < #comps & [ OPT + ] > ],
     ARG-ST < [ LOCAL.CAT [ HEAD subj-noun ] ],
              #comps &
@@ -1075,7 +1075,7 @@ v_np_noarg3_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-l
   [ INFLECTED.VOICE-FLAG - ].
 
 ditransitive-n-n-verb-lex := main-verb-lex & ditransitive-lex-item &
-  [ SYNSEM.LOCAL.CAT [ HEAD activerb,
+  [ SYNSEM.LOCAL.CAT [ HEAD active,
                        VAL.COMPS < #comp1, #comp2 > ],
     ARG-ST < [ LOCAL.CAT [ HEAD subj-noun ] ],
              #comp1 &
@@ -1125,7 +1125,7 @@ passive-one-ditrans-n-n-verb-lex := basic-three-arg-no-hcons & basic-icons-lex-i
      SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
 			     ARG2 #ind1,
                              ARG3 #ind3 ],
-	      LOCAL [ CAT [ HEAD passiverbone,
+	      LOCAL [ CAT [ HEAD passive-one,
                             VAL.COMPS < #comp1, #comp2 > ],
                       CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
@@ -1142,7 +1142,7 @@ v_np-pp_prop_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-
   [ INFLECTED.VOICE-FLAG - ].
 
 ditransitive-n-p-verb-lex := main-verb-lex & ditransitive-lex-item &
-  [ SYNSEM.LOCAL.CAT [ HEAD activerb,
+  [ SYNSEM.LOCAL.CAT [ HEAD active,
                        VAL.COMPS < #comp1, #comp2 > ],
     ARG-ST < [ LOCAL.CAT [ HEAD subj-noun ] ],
              #comp1 &
@@ -1201,7 +1201,7 @@ passive-one-ditrans-n-p-verb-lex := basic-three-arg-no-hcons & basic-icons-lex-i
      SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
 			     ARG2 #ind1,
                              ARG3 #ind3 ],
-	      LOCAL [ CAT [ HEAD passiverbone,
+	      LOCAL [ CAT [ HEAD passive-one,
                             VAL.COMPS < #comp1, #comp2 > ],
                       CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
@@ -1250,7 +1250,7 @@ head-comp-phrase := basic-head-1st-comp-phrase & head-initial.
 
 ;; DVM 2017-03-24: for passive type 2
 comp-head-phrase := basic-head-1st-comp-phrase & head-final &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD passiverbtwo ] ].
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD passive-two ] ].
 
 ;head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
 ;  [ SYNSEM.LOCAL.CAT.HC-LIGHT - ].
@@ -1733,7 +1733,7 @@ adj-control-pred-lex := basic-two-arg &
                                               CAT [ VAL [ SPR < >,
                                                           COMPS < > ],
                                                     HEAD subj-noun ] ] ] >,
-                               COMPS < #comps & [ LOCAL [ CAT.HEAD passiverbone,
+                               COMPS < #comps & [ LOCAL [ CAT.HEAD passive-one,
                                                           CONT.RELS.LBL #larg ] ] > ]],
                    CONT [ HOOK.XARG #x1,
                           HCONS <! qeq & [ HARG #harg,
@@ -1756,7 +1756,7 @@ trans-first-arg-control-adj := adjective-control-lex & trans-first-arg-control-l
                                   COMPS < > ] ] ] ],
             #comps &
             [ LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf-and-prog,
-			CAT [ HEAD passiverbone &
+			CAT [ HEAD passive-one &
                                 [ AUX - ],
                           VAL [ COMPS < >,
                                 SPR < >,
@@ -1778,7 +1778,7 @@ trans-first-arg-control-adj := basic-two-arg & basic-nomod-adj-lex & trans-first
                       CONT.HOOK.INDEX #x1 ] ],
             #comps &
             [ LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf-and-prog,
-			CAT [ HEAD passiverbone &
+			CAT [ HEAD passive-one &
                                 [ AUX - ],
                           VAL [ COMPS < >,
                                 SPR < >,
@@ -2160,7 +2160,7 @@ adposition-oleh-lex := single-rel-lex-item & basic-icons-lex-item & intersective
   [ SYNSEM [ LKEYS.KEYREL [ ARG1 #xarg,
 			    ARG2 #ind1 ],
 	     LOCAL [ CONT.HOOK [ XARG #xarg ],
-		     CAT [ HEAD oleh-adp & [ MOD < [ LOCAL [ CAT [ HEAD passiverbone,
+		     CAT [ HEAD oleh-adp & [ MOD < [ LOCAL [ CAT [ HEAD passive-one,
 						                   VAL.SUBJ cons ],
 						             CONT [ HOOK.INDEX #xarg,
                                                                     RELS <! arg12-ev-relation & [ ARG1 #ind2,
@@ -2190,7 +2190,7 @@ passive-oleh-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-ve
                                                            RELS <! noun-relation & [ ARG0 #ind2 ] !> ] ] > ] ] ] ] >,
      SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
 			     ARG2 #ind1 ],
-	      LOCAL [ CAT [ HEAD passiverbone,
+	      LOCAL [ CAT [ HEAD passive-one,
                             VAL.COMPS < #comps > ],
                       CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
