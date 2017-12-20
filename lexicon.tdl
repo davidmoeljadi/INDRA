@@ -51333,6 +51333,11 @@ tersebut_det := determiner-determiner-lex &
     SYNSEM.LKEYS.KEYREL.PRED "distal_q_rel",
     TRAITS native_token_list ].
 
+tersebut_abbr_det := determiner-determiner-lex &
+  [ STEM < "tsb" >,
+    SYNSEM.LKEYS.KEYREL.PRED "distal_q_rel",
+    TRAITS native_token_list ].
+
 suatu := determiner-sg-quantifier-lex &
   [ STEM < "suatu" >,
     SYNSEM.LKEYS.KEYREL.PRED "a_q_rel",
@@ -51436,53 +51441,143 @@ seseorang := n+det-lex &
 
 ;;; Prepositions
 
-misalnya := adposition-mod-lex &
+misalnya_adp_mod := adposition-mod-lex &
   [ STEM < "misalnya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_misalnya_p_rel",
     TRAITS native_token_list ].
 
-bersama := adposition-mod-lex &
+misalnya_abbr_adp_mod := adposition-mod-lex &
+  [ STEM < "msl" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_misalnya_p_rel",
+    TRAITS native_token_list ].
+
+bersama_adp := adposition-lex &
   [ STEM < "bersama" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bersama_p_rel",
     TRAITS native_token_list ].
 
-bersama+dengan := adposition-mod-lex &
+bersama_adp_mod := adposition-mod-lex &
+  [ STEM < "bersama" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bersama_p_rel",
+    TRAITS native_token_list ].
+
+bersama+dengan_adp := adposition-lex &
   [ STEM < "bersama", "dengan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bersama+dengan_p_rel",
     TRAITS native_token_list ].
 
-beserta := adposition-lex &
+bersama+dengan_adp_mod := adposition-mod-lex &
+  [ STEM < "bersama", "dengan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bersama+dengan_p_rel",
+    TRAITS native_token_list ].
+
+beserta_adp := adposition-lex &
   [ STEM < "beserta" >,
     SYNSEM.LKEYS.KEYREL.PRED "_beserta_p_rel",
     TRAITS native_token_list ].
 
-dari := adposition-mod-lex &
+beserta_adp_mod := adposition-mod-lex &
+  [ STEM < "beserta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_beserta_p_rel",
+    TRAITS native_token_list ].
+
+dari_adp := adposition-lex &
   [ STEM < "dari" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dari_p_rel",
     TRAITS native_token_list ].
 
-sampai_adp := adposition-mod-lex &
+dari_adp_mod := adposition-mod-lex &
+  [ STEM < "dari" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dari_p_rel",
+    TRAITS native_token_list ].
+
+dari_abbr_adp := adposition-lex &
+  [ STEM < "dr" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dari_p_rel",
+    TRAITS native_token_list ].
+
+dari_abbr_adp_mod := adposition-mod-lex &
+  [ STEM < "dr" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dari_p_rel",
+    TRAITS native_token_list ].
+
+sampai_adp := adposition-lex &
   [ STEM < "sampai" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sampai_p_rel",
     TRAITS native_token_list ].
 
-dengan := adposition-mod-lex &
+sampai_adp_mod := adposition-mod-lex &
+  [ STEM < "sampai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sampai_p_rel",
+    TRAITS native_token_list ].
+
+dengan_adp := adposition-lex &
   [ STEM < "dengan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dengan_p_rel",
     TRAITS native_token_list ].
 
-di := adposition-mod-lex &
+dengan_adp_mod := adposition-mod-lex &
+  [ STEM < "dengan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dengan_p_rel",
+    TRAITS native_token_list ].
+
+dengan_abbr_1_adp := adposition-lex &
+  [ STEM < "dng" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dengan_p_rel",
+    TRAITS native_token_list ].
+
+dengan_abbr_1_adp_mod := adposition-mod-lex &
+  [ STEM < "dng" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dengan_p_rel",
+    TRAITS native_token_list ].
+
+dengan_abbr_2_adp := adposition-lex &
+  [ STEM < "dg" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dengan_p_rel",
+    TRAITS native_token_list ].
+
+dengan_abbr_2_adp_mod := adposition-mod-lex &
+  [ STEM < "dg" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dengan_p_rel",
+    TRAITS native_token_list ].
+
+di_adp := adposition-lex &
   [ STEM < "di" >,
     SYNSEM.LKEYS.KEYREL.PRED "_di_p_rel",
     TRAITS native_token_list ].
 
-ke := adposition-mod-lex &
+di_adp_mod := adposition-mod-lex &
+  [ STEM < "di" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_di_p_rel",
+    TRAITS native_token_list ].
+
+ke_adp := adposition-lex &
   [ STEM < "ke" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ke_p_rel",
     TRAITS native_token_list ].
 
-kepada := adposition-mod-lex &
+ke_adp_mod := adposition-mod-lex &
+  [ STEM < "ke" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ke_p_rel",
+    TRAITS native_token_list ].
+
+kepada_adp := adposition-lex &
   [ STEM < "kepada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepada_p_rel",
+    TRAITS native_token_list ].
+
+kepada_adp_mod := adposition-mod-lex &
+  [ STEM < "kepada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepada_p_rel",
+    TRAITS native_token_list ].
+
+kepada_abbr_adp := adposition-lex &
+  [ STEM < "kpd" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepada_p_rel",
+    TRAITS native_token_list ].
+
+kepada_abbr_adp_mod := adposition-mod-lex &
+  [ STEM < "kpd" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kepada_p_rel",
     TRAITS native_token_list ].
 
@@ -51491,28 +51586,83 @@ oleh := adposition-oleh-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_oleh_p_rel",
     TRAITS native_token_list ].
 
-pada := adposition-lex &
+pada_adp := adposition-lex &
   [ STEM < "pada" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pada_p_rel",
     TRAITS native_token_list ].
 
-untuk_adp := adposition-mod-lex &
+pada_adp_mod := adposition-mod-lex &
+  [ STEM < "pada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pada_p_rel",
+    TRAITS native_token_list ].
+
+pada_abbr_adp := adposition-lex &
+  [ STEM < "pd" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pada_p_rel",
+    TRAITS native_token_list ].
+
+pada_abbr_adp_mod := adposition-mod-lex &
+  [ STEM < "pd" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pada_p_rel",
+    TRAITS native_token_list ].
+
+untuk_adp := adposition-lex &
   [ STEM < "untuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_untuk_p_rel",
     TRAITS native_token_list ].
 
-mengenai := adposition-lex &
+untuk_adp_mod := adposition-mod-lex &
+  [ STEM < "untuk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_untuk_p_rel",
+    TRAITS native_token_list ].
+
+mengenai_adp := adposition-lex &
   [ STEM < "mengenai" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mengenai_p_rel",
     TRAITS native_token_list ].
 
-tanpa := adposition-mod-lex &
+mengenai_adp_mod := adposition-mod-lex &
+  [ STEM < "mengenai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mengenai_p_rel",
+    TRAITS native_token_list ].
+
+tanpa_adp := adposition-lex &
   [ STEM < "tanpa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tanpa_p_rel",
     TRAITS native_token_list ].
 
-tentang := adposition-mod-lex &
+tanpa_adp_mod := adposition-mod-lex &
+  [ STEM < "tanpa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tanpa_p_rel",
+    TRAITS native_token_list ].
+
+tentang_adp := adposition-lex &
   [ STEM < "tentang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tentang_p_rel",
+    TRAITS native_token_list ].
+
+tentang_adp_mod := adposition-mod-lex &
+  [ STEM < "tentang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tentang_p_rel",
+    TRAITS native_token_list ].
+
+tentang_abbr_1_adp := adposition-lex &
+  [ STEM < "tt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tentang_p_rel",
+    TRAITS native_token_list ].
+
+tentang_abbr_1_adp_mod := adposition-mod-lex &
+  [ STEM < "tt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tentang_p_rel",
+    TRAITS native_token_list ].
+
+tentang_abbr_2_adp := adposition-lex &
+  [ STEM < "ttg" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tentang_p_rel",
+    TRAITS native_token_list ].
+
+tentang_abbr_2_adp_mod := adposition-mod-lex &
+  [ STEM < "ttg" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tentang_p_rel",
     TRAITS native_token_list ].
 
@@ -51611,6 +51761,12 @@ sehabis := subord-conj-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
+selepas := subord-conj-lex &
+  [ STEM < "selepas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_selepas_coord_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
 sambil := subord-conj-lex &
   [ STEM < "sambil" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sambil_coord_rel",
@@ -51631,6 +51787,11 @@ agar := subord-conj-lex &
 ;;; auto generated
 karena_subord := subord-conj-lex &
   [ STEM < "karena" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_karena_coord_rel",
+    TRAITS native_token_list ].
+
+karena_abbr_subord := subord-conj-lex &
+  [ STEM < "krn" >,
     SYNSEM.LKEYS.KEYREL.PRED "_karena_coord_rel",
     TRAITS native_token_list ].
 
@@ -51679,6 +51840,14 @@ yang_rel := rel-yang-lex &
 
 yang_nya_rel := rel-yang-nya-lex & 
   [ STEM < "yang" >,
+    TRAITS native_token_list ].
+
+yang_abbr_rel := rel-yang-lex & 
+  [ STEM < "yg" >,
+    TRAITS native_token_list ].
+
+yang_nya_abbr_rel := rel-yang-nya-lex & 
+  [ STEM < "yg" >,
     TRAITS native_token_list ].
 
 ;;; Adjectives
@@ -68617,6 +68786,16 @@ dalam_n_rel := relational-n-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_dalam_n_rel",
     TRAITS native_token_list ].
 
+dalam_abbr_1_n_rel := relational-n-lex &
+  [ STEM < "dl" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dalam_n_rel",
+    TRAITS native_token_list ].
+
+dalam_abbr_2_n_rel := relational-n-lex &
+  [ STEM < "dlm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dalam_n_rel",
+    TRAITS native_token_list ].
+
 luar := relational-n-lex &
   [ STEM < "luar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_luar_n_rel",
@@ -68937,22 +69116,32 @@ dim := inanimate-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_dim_n_rel",
     TRAITS native_token_list ].
 
-ala := adposition-lex &
+ala_adp := adposition-lex &
   [ STEM < "ala" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ala_p_rel",
     TRAITS native_token_list ].
 
-sama+dengan := adposition-lex &
-  [ STEM < "sama", "dengan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sama+dengan_p_rel",
+ala_adp_mod := adposition-mod-lex &
+  [ STEM < "ala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ala_p_rel",
     TRAITS native_token_list ].
 
-bagai := adposition-lex &
+bagai_adp := adposition-lex &
   [ STEM < "bagai" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bagai_p_rel",
     TRAITS native_token_list ].
 
-bagaikan := adposition-lex &
+bagai_adp_mod := adposition-mod-lex &
+  [ STEM < "bagai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bagai_p_rel",
+    TRAITS native_token_list ].
+
+bagaikan_adp := adposition-lex &
+  [ STEM < "bagaikan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bagaikan_p_rel",
+    TRAITS native_token_list ].
+
+bagaikan_adp_mod := adposition-mod-lex &
   [ STEM < "bagaikan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bagaikan_p_rel",
     TRAITS native_token_list ].
@@ -68962,13 +69151,33 @@ bagi_adp := adposition-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_bagi_p_rel",
     TRAITS native_token_list ].
 
-berdasarkan := adposition-lex &
+bagi_adp_mod := adposition-mod-lex &
+  [ STEM < "bagi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bagi_p_rel",
+    TRAITS native_token_list ].
+
+berdasarkan_adp := adposition-lex &
   [ STEM < "berdasarkan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berdasarkan_p_rel",
     TRAITS native_token_list ].
 
-daripada := adposition-mod-lex &
+berdasarkan_adp_mod := adposition-mod-lex &
+  [ STEM < "berdasarkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_berdasarkan_p_rel",
+    TRAITS native_token_list ].
+
+daripada_adp_mod := adposition-mod-lex &
   [ STEM < "daripada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_daripada_p_rel",
+    TRAITS native_token_list ].
+
+daripada_abbr_1_adp_mod := adposition-mod-lex &
+  [ STEM < "dp" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_daripada_p_rel",
+    TRAITS native_token_list ].
+
+daripada_abbr_2_adp_mod := adposition-mod-lex &
+  [ STEM < "drpd" >,
     SYNSEM.LKEYS.KEYREL.PRED "_daripada_p_rel",
     TRAITS native_token_list ].
 
@@ -68977,17 +69186,52 @@ dalam_adp := adposition-mod-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_dalam_p_rel",
     TRAITS native_token_list ].
 
-demi := adposition-lex &
+dalam_abbr_1_adp := adposition-mod-lex &
+  [ STEM < "dl" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dalam_p_rel",
+    TRAITS native_token_list ].
+
+dalam_abbr_2_adp := adposition-mod-lex &
+  [ STEM < "dlm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dalam_p_rel",
+    TRAITS native_token_list ].
+
+demi_adp := adposition-lex &
   [ STEM < "demi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_demi_p_rel",
     TRAITS native_token_list ].
 
-terhadap := adposition-lex &
+demi_adp_mod := adposition-mod-lex &
+  [ STEM < "demi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_demi_p_rel",
+    TRAITS native_token_list ].
+
+terhadap_adp := adposition-lex &
   [ STEM < "terhadap" >,
     SYNSEM.LKEYS.KEYREL.PRED "_terhadap_p_rel",
     TRAITS native_token_list ].
 
-via := adposition-lex &
+terhadap_adp_mod := adposition-mod-lex &
+  [ STEM < "terhadap" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_terhadap_p_rel",
+    TRAITS native_token_list ].
+
+terhadap_abbr_adp := adposition-lex &
+  [ STEM < "thd" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_terhadap_p_rel",
+    TRAITS native_token_list ].
+
+terhadap_abbr_adp_mod := adposition-mod-lex &
+  [ STEM < "thd" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_terhadap_p_rel",
+    TRAITS native_token_list ].
+
+via_adp := adposition-lex &
+  [ STEM < "via" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_via_p_rel",
+    TRAITS native_token_list ].
+
+via_adp_mod := adposition-mod-lex &
   [ STEM < "via" >,
     SYNSEM.LKEYS.KEYREL.PRED "_via_p_rel",
     TRAITS native_token_list ].
@@ -69867,7 +70111,7 @@ betul := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_betul_a_rel",
     TRAITS native_token_list ].
 
-biasa := adjective-lex &
+biasa_adj := adjective-lex &
   [ STEM < "biasa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_biasa_a_rel",
     TRAITS native_token_list ].
@@ -70035,6 +70279,11 @@ betul-betul := adverb-lex &
 biasanya := adverb-lex &
   [ STEM < "biasanya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_biasanya_a_rel",
+    TRAITS native_token_list ].
+
+biasa_adv := adverb-lex &
+  [ STEM < "biasa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_biasa_a_rel",
     TRAITS native_token_list ].
 
 cepat-cepat := adverb-lex &
@@ -70602,17 +70851,32 @@ musuh := human-noun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_musuh_n_rel",
     TRAITS native_token_list ].
 
-hingga := adposition-lex &
+hingga_adp := adposition-lex &
   [ STEM < "hingga" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hingga_p_rel",
     TRAITS native_token_list ].
 
-kecuali := adposition-lex &
+hingga_adp_mod := adposition-mod-lex &
+  [ STEM < "hingga" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hingga_p_rel",
+    TRAITS native_token_list ].
+
+kecuali_adp := adposition-lex &
+  [ STEM < "kecuali" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kecuali_p_rel",
+    TRAITS native_token_list ].
+
+kecuali_adp_mod := adposition-mod-lex &
   [ STEM < "kecuali" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kecuali_p_rel",
     TRAITS native_token_list ].
 
 lewat_adp := adposition-lex &
+  [ STEM < "lewat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lewat_p_rel",
+    TRAITS native_token_list ].
+
+lewat_adp_mod := adposition-mod-lex &
   [ STEM < "lewat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lewat_p_rel",
     TRAITS native_token_list ].
@@ -70707,10 +70971,15 @@ empuk := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_empuk_a_rel",
     TRAITS native_token_list ].
 
-enak := adjective-lex &
+enak_adj := adjective-lex &
   [ STEM < "enak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_enak_a_rel",
     TRAITS native_token_list ].
+
+;enak_control := trans-first-arg-control-adj &
+;  [ STEM < "enak" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_enak_a_rel",
+;    TRAITS native_token_list ].
 
 encer := adjective-lex &
   [ STEM < "encer" >,
@@ -74402,18 +74671,58 @@ per_adp := adposition-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_per_p_rel",
     TRAITS native_token_list ].
 
-sebagai := adposition-mod-lex &
+per_adp_mod := adposition-mod-lex &
+  [ STEM < "per" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_per_p_rel",
+    TRAITS native_token_list ].
+
+sebagai_adp := adposition-lex &
   [ STEM < "sebagai" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sebagai_p_rel",
     TRAITS native_token_list ].
 
-secara := adposition-mod-lex &
+sebagai_adp_mod := adposition-mod-lex &
+  [ STEM < "sebagai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sebagai_p_rel",
+    TRAITS native_token_list ].
+
+sebagai_abbr_adp := adposition-lex &
+  [ STEM < "sbg" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sebagai_p_rel",
+    TRAITS native_token_list ].
+
+sebagai_abbr_adp_mod := adposition-mod-lex &
+  [ STEM < "sbg" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sebagai_p_rel",
+    TRAITS native_token_list ].
+
+secara_adp := adposition-lex &
   [ STEM < "secara" >,
     SYNSEM.LKEYS.KEYREL.PRED "_secara_p_rel",
     TRAITS native_token_list ].
 
-seperti := adposition-mod-lex &
+secara_adp_mod := adposition-mod-lex &
+  [ STEM < "secara" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_secara_p_rel",
+    TRAITS native_token_list ].
+
+seperti_adp := adposition-lex &
   [ STEM < "seperti" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_seperti_p_rel",
+    TRAITS native_token_list ].
+
+seperti_adp_mod := adposition-mod-lex &
+  [ STEM < "seperti" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_seperti_p_rel",
+    TRAITS native_token_list ].
+
+seperti_abbr_adp := adposition-lex &
+  [ STEM < "spt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_seperti_p_rel",
+    TRAITS native_token_list ].
+
+seperti_abbr_adp_mod := adposition-mod-lex &
+  [ STEM < "spt" >,
     SYNSEM.LKEYS.KEYREL.PRED "_seperti_p_rel",
     TRAITS native_token_list ].
 
@@ -76793,7 +77102,12 @@ perangsang := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-menurut := adposition-mod-lex &
+menurut_adp := adposition-lex &
+    [ STEM < "menurut" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_menurut_p_rel",
+    TRAITS native_token_list ].
+
+menurut_adp_mod := adposition-mod-lex &
     [ STEM < "menurut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_menurut_p_rel",
     TRAITS native_token_list ].
@@ -76973,10 +77287,14 @@ bekel := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-karena_coord := conj-lex &
-  [ STEM < "karena" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_karena_coord_rel",
-    CFORM "1",
+karena_adp := adposition-lex &
+    [ STEM < "karena" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_karena_p_rel",
+    TRAITS native_token_list ].
+
+karena_abbr_adp := adposition-lex &
+    [ STEM < "krn" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_karena_p_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -76992,7 +77310,12 @@ peria := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-melalui := adposition-mod-lex &
+melalui_adp := adposition-lex &
+    [ STEM < "melalui" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_melalui_p_rel",
+    TRAITS native_token_list ].
+
+melalui_adp_mod := adposition-mod-lex &
     [ STEM < "melalui" >,
     SYNSEM.LKEYS.KEYREL.PRED "_melalui_p_rel",
     TRAITS native_token_list ].
@@ -78407,12 +78730,6 @@ awet := adjective-lex &
 bacem := tr-verb-lex &
     [ STEM < "bacem" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bacem_v_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
-bagi := adposition-mod-lex &
-    [ STEM < "bagi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_bagi_p_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -80647,12 +80964,6 @@ lesung := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-lewat := adposition-mod-lex &
-    [ STEM < "lewat" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_lewat_p_rel",
-    TRAITS native_token_list ].
-
-;;; auto generated
 lici := inanimate-noun-noun-lex &
     [ STEM < "lici" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lici_n_rel",
@@ -82301,13 +82612,23 @@ sejahtera := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-sejak := adposition-mod-lex &
+sejak_adp := adposition-lex &
+    [ STEM < "sejak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sejak_p_rel",
+    TRAITS native_token_list ].
+
+sejak_adp_mod := adposition-mod-lex &
     [ STEM < "sejak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sejak_p_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-selama := adposition-mod-lex &
+selama_adp := adposition-lex &
+    [ STEM < "selama" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_selama_p_rel",
+    TRAITS native_token_list ].
+
+selama_adp_mod := adposition-mod-lex &
     [ STEM < "selama" >,
     SYNSEM.LKEYS.KEYREL.PRED "_selama_p_rel",
     TRAITS native_token_list ].
@@ -82331,7 +82652,12 @@ sel := inanimate-noun-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-selain := adposition-mod-lex &
+selain_adp := adposition-lex &
+    [ STEM < "selain" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_selain_p_rel",
+    TRAITS native_token_list ].
+
+selain_adp_mod := adposition-mod-lex &
     [ STEM < "selain" >,
     SYNSEM.LKEYS.KEYREL.PRED "_selain_p_rel",
     TRAITS native_token_list ].
@@ -82827,6 +83153,12 @@ terbelah := intr-verb-lex &
 terlalu := adverb-pre-adj-lex &
     [ STEM < "terlalu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_terlalu_a_rel",
+    TRAITS native_token_list ].
+
+;;; auto generated
+terlampau := adverb-pre-adj-lex &
+    [ STEM < "terlampau" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_terlampau_a_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -83581,7 +83913,7 @@ berbutir := opt-tr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-bercampur_adp := adposition-mod-lex &
+bercampur_adp_mod := adposition-mod-lex &
     [ STEM < "bercampur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bercampur_p_rel",
     TRAITS native_token_list ].
