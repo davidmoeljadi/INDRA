@@ -48,8 +48,9 @@ remote_q_rel  := dist_q_rel.
 generic_n_rel := predsort.
 entity_n_rel := generic_n_rel.
 person_n_rel := entity_n_rel.
-benda_n_rel := entity_n_rel.
-hal_n_rel := entity_n_rel.
+benda+hal_n_rel := entity_n_rel.
+benda_n_rel := benda+hal_n_rel.
+hal_n_rel := benda+hal_n_rel.
 time_n_rel  := generic_n_rel.
 ; where
 place_n_rel  := generic_n_rel.

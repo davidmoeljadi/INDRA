@@ -51417,7 +51417,7 @@ sebagian+kecil := determiner-pl-quantifier-lex &
 
 sesuatu := n+det-lex &
   [ STEM < "sesuatu" >,
-    SYNSEM.LKEYS [KEYREL.PRED "entity_n_rel",
+    SYNSEM.LKEYS [KEYREL.PRED "benda+hal_n_rel",
 		  ALTKEYREL.PRED "indef_q_rel" ],
     TRAITS native_token_list].
 
