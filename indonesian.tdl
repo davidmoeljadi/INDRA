@@ -36,6 +36,7 @@ def_q_rel := quant_rel.
 exist_q_rel := quant_rel.
 poss_rel := quant_rel.
 pronoun_q_rel := quant_rel.
+indef_q_rel := quant_rel.
 
 ;; DVM 2015-05-09: added decomposed words
 demon_q_rel := quant_rel.
@@ -130,15 +131,16 @@ basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
 pernum := *top*.
 sg := pernum.
 pl := pernum.
+incl := pernum.
+excl := pernum.
 1st := pernum.
 2nd := pernum.
 3rd := pernum.
 1sg := 1st & sg.
 2sg := 2nd & sg.
 3sg := 3rd & sg.
-1pl := 1st & pl.
-1pl_incl := 1pl.
-1pl_excl := 1pl.
+1pl_incl := 1st & pl & incl.
+1pl_excl := 1st & pl & excl.
 2pl := 2nd & pl.
 3pl := 3rd & pl.
 ;indet := pernum.
@@ -226,6 +228,8 @@ active := verb.
 nonactive := verb.
 passive-one := verb.
 passive-two := verb.
+passive-ku := verb.
+passive-kau := verb.
 
 adjcontrol := adj.
 adj-number := adj.
@@ -340,8 +344,8 @@ pronoun-lex := basic-pronoun-lex &
 personal-pronoun-lex := pronoun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD pronoun ].
 
-proclitic-pronoun-lex := pronoun-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD proclitic ].
+;proclitic-pronoun-lex := pronoun-lex &
+;  [ SYNSEM.LOCAL.CAT.HEAD proclitic ].
 
 enclitic-pronoun-lex := pronoun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD enclitic ].
@@ -367,25 +371,28 @@ honorific-hearer-lex-item := lex-item &
 uncountable-noun-lex := common-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT uncountable ].
 
-inanimate-noun-noun-lex := common-noun-lex &
+countable-noun-lex := common-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT countable ].
+
+inanimate-noun-lex := countable-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT inanimate ].
 
-inanimate-plural-noun-lex := inanimate-noun-noun-lex &
+inanimate-plural-noun-lex := inanimate-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
 
-animate-noun-noun-lex := common-noun-lex &
+animate-noun-lex := countable-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT animate ].
 
-nonhuman-noun-noun-lex := animate-noun-noun-lex &
+nonhuman-noun-lex := animate-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT non-human ].
 
-nonhuman-plural-noun-lex := nonhuman-noun-noun-lex &
+nonhuman-plural-noun-lex := nonhuman-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
 
-human-noun-noun-lex := animate-noun-noun-lex &
+human-noun-lex := animate-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT human ].
 
-human-plural-noun-lex := human-noun-noun-lex &
+human-plural-noun-lex := human-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
 
 ;proper-noun-lex := noun-lex &
@@ -435,8 +442,8 @@ pronoun-1st-sg-nohon-noun-lex := personal-pronoun-lex & speaker-lex-item &
   [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
                    CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
 
-proclitic-pronoun-1st-sg-nohon-noun-lex := proclitic-pronoun-lex & speaker-lex-item & 
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
+;proclitic-pronoun-1st-sg-nohon-noun-lex := proclitic-pronoun-lex & speaker-lex-item & 
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
 
 enclitic-pronoun-1st-sg-nohon-noun-lex := enclitic-pronoun-lex & speaker-lex-item & 
   [ SYNSEM.LOCAL [ CAT.HEAD enclitic-non3person,
@@ -458,8 +465,8 @@ pronoun-2nd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex
   [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
                    CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
 
-proclitic-pronoun-2nd-sg-nohon-noun-lex := proclitic-pronoun-lex & non-honorific-hearer-lex-item & 
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
+;proclitic-pronoun-2nd-sg-nohon-noun-lex := proclitic-pronoun-lex & non-honorific-hearer-lex-item & 
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
 
 enclitic-pronoun-2nd-sg-nohon-noun-lex := enclitic-pronoun-lex & non-honorific-hearer-lex-item & 
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
@@ -575,8 +582,7 @@ passive-two-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-ver
 				    ICONS-KEY.IARG1 #clause ] ] ] >,
      SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
 			     ARG2 #ind1 ],
-	      LOCAL [ CAT [ HEAD passive-two,
-                            VAL.COMPS < #comps > ],
+	      LOCAL [ CAT [ VAL.COMPS < #comps > ],
                       CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
 ; DVM 2017-03-23: the old tr-verb-lex
@@ -1054,13 +1060,82 @@ act-lex-rule := active-voice-lex-rule-super.
 
 pas-one-lex-rule := passive-voice-lex-rule-super & passive-one-verb-lex.
 
-pas-two-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex.
+pas-two-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex &
+   [ SYNSEM.LOCAL.CAT.HEAD passive-two ].
+
+pas-two-prefix-ku-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex &
+   [ SYNSEM.LOCAL.CAT.HEAD passive-ku ].
+
+pas-two-prefix-kau-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex &
+   [ SYNSEM.LOCAL.CAT.HEAD passive-kau ].
 
 pas-oleh-lex-rule := passive-voice-lex-rule-super & passive-oleh-verb-lex.
 
+; DVM 2017-12-26: for passive type 2 with ku-
+passive-two-prefix-ku-rule := unary-phrase &
+ [ SYNSEM.LOCAL [ CONT [ HOOK [ LTOP #harg,
+                                XARG #ind1 ] ],
+		  COORD -,
+                  CAT [ HEAD nonactive &
+			     [ EMPTY + ],
+                        VAL [ COMPS < >,
+                              SPR < >,
+                              SPEC < >,
+                              SUBJ < [ LOCAL [ CAT [ HEAD subj-noun,
+						     VAL [ SPR < >,
+                                     			   COMPS < > ] ],
+                           		       CONT.HOOK [ INDEX ref-ind & #ind1,
+			 	                           ICONS-KEY.IARG1 #clause ] ] ] > ] ] ] ,
+   ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD passive-ku,
+                                   VAL.COMPS < #comps > ],
+                             COORD -,
+                             CONT.HOOK [ INDEX #index,
+                                         LTOP #larg ] ],
+                     LKEYS.KEYREL [ ARG1 #ind2,
+                                    ARG2 #ind1 ] ] ] > ,
+   C-CONT [ HOOK [ LTOP #larg,
+                   INDEX #index ],
+            RELS <! quant-relation & [ PRED pronoun_q_rel,
+				       ARG0 #ind2,
+				       RSTR #harg2 ],
+  		    arg0-relation & [ PRED pronoun_n_rel,
+				      LBL #larg2,
+				      ARG0 #ind2 & [ PNG.PERNUM 1sg ] ] !>,
+            HCONS <! qeq & [ HARG #harg2,
+			     LARG #larg2 ] !> ] ].
 
-
-
+; DVM 2017-12-26: for passive type 2 with kau-
+passive-two-prefix-kau-rule := unary-phrase &
+ [ SYNSEM.LOCAL [ CONT [ HOOK [ LTOP #harg,
+                                XARG #ind1 ] ],
+		  COORD -,
+                  CAT [ HEAD nonactive &
+			     [ EMPTY + ],
+                        VAL [ COMPS < >,
+                              SPR < >,
+                              SPEC < >,
+                              SUBJ < [ LOCAL [ CAT [ HEAD subj-noun,
+						     VAL [ SPR < >,
+                                     			   COMPS < > ] ],
+                           		       CONT.HOOK [ INDEX ref-ind & #ind1,
+			 	                           ICONS-KEY.IARG1 #clause ] ] ] > ] ] ] ,
+   ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD passive-kau,
+                                   VAL.COMPS < #comps > ],
+                             COORD -,
+                             CONT.HOOK [ INDEX #index,
+                                         LTOP #larg ] ],
+                     LKEYS.KEYREL [ ARG1 #ind2,
+                                    ARG2 #ind1 ] ] ] > ,
+   C-CONT [ HOOK [ LTOP #larg,
+                   INDEX #index ],
+            RELS <! quant-relation & [ PRED pronoun_q_rel,
+				       ARG0 #ind2,
+				       RSTR #harg2 ],
+  		    arg0-relation & [ PRED pronoun_n_rel,
+				      LBL #larg2,
+				      ARG0 #ind2 & [ PNG.PERNUM 2sg ] ] !>,
+            HCONS <! qeq & [ HARG #harg2,
+			     LARG #larg2 ] !> ] ].
 
 ; DVM 2017-09-13: active voice for ditransitives V NP NP
 ; Temporary patch for e.g. 'take' which has an optional ARG3 role, which
@@ -1094,6 +1169,7 @@ active-voice-lex-rule-ditrans-n-n := add-only-no-ccont-rule & infl-lex-rule & di
 
 act-ditrans-n-n-lex-rule := active-voice-lex-rule-ditrans-n-n.
 
+;;;passive one ditrans n-n
 pas-one-ditrans-n-n-lex-rule := passive-voice-lex-rule-ditrans-n-n & passive-one-ditrans-n-n-verb-lex.
 
 passive-voice-lex-rule-ditrans-n-n := add-only-no-ccont-rule & infl-lex-rule &
@@ -1128,6 +1204,39 @@ passive-one-ditrans-n-n-verb-lex := basic-three-arg-no-hcons & basic-icons-lex-i
 	      LOCAL [ CAT [ HEAD passive-one,
                             VAL.COMPS < #comp1, #comp2 > ],
                       CONT.HOOK.CLAUSE-KEY #clause ] ] ].
+
+;;;passive two ditrans n-n
+pas-two-ditrans-n-n-lex-rule := passive-voice-lex-rule-ditrans-n-n & passive-two-ditrans-n-n-verb-lex.
+
+; without "oleh"
+; <ex> Budi saya buatkan pizza
+passive-two-ditrans-n-n-verb-lex := basic-three-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind1,
+			 	    ICONS-KEY.IARG1 #clause ] ] ],
+              #comp1 &
+	      [ LOCAL [ CAT [ HEAD pass2agent,
+                              POSTHEAD -,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind2,
+				    ICONS-KEY.IARG1 #clause ] ] ],
+              #comp2 &
+	      [ LOCAL [ CAT [ HEAD subj-noun,
+                              POSTHEAD +,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind3,
+				    ICONS-KEY.IARG1 #clause ] ] ] >,
+     SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
+			     ARG2 #ind1,
+                             ARG3 #ind3 ],
+	      LOCAL [ CAT [ HEAD passive-two,
+                            VAL.COMPS < #comp1, #comp2 > ],
+                      CONT.HOOK.CLAUSE-KEY #clause ] ] ].
+
 
 ; DVM 2017-09-13: active voice for ditransitives V NP PP
 ;; takes dir_state_modable_rel oblique complement.
@@ -1170,6 +1279,7 @@ act-ditrans-n-p-lex-rule := active-voice-lex-rule-ditrans-n-p.
 ; </type>
 v_np-pp_e_le := v_np-pp_prop_le. 
 
+;;;passive one ditrans n-p
 pas-one-ditrans-n-p-lex-rule := passive-voice-lex-rule-ditrans-n-p & passive-one-ditrans-n-p-verb-lex.
 
 passive-voice-lex-rule-ditrans-n-p := add-only-no-ccont-rule & infl-lex-rule &
@@ -1202,6 +1312,38 @@ passive-one-ditrans-n-p-verb-lex := basic-three-arg-no-hcons & basic-icons-lex-i
 			     ARG2 #ind1,
                              ARG3 #ind3 ],
 	      LOCAL [ CAT [ HEAD passive-one,
+                            VAL.COMPS < #comp1, #comp2 > ],
+                      CONT.HOOK.CLAUSE-KEY #clause ] ] ].
+
+;;;passive two ditrans n-p
+pas-two-ditrans-n-p-lex-rule := passive-voice-lex-rule-ditrans-n-p & passive-two-ditrans-n-p-verb-lex.
+
+; without "oleh"
+; <ex> Budi saya masukkan ke sekolah
+passive-two-ditrans-n-p-verb-lex := basic-three-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind1,
+			 	    ICONS-KEY.IARG1 #clause ] ] ],
+              #comp1 &
+	      [ LOCAL [ CAT [ HEAD pass2agent,
+                              POSTHEAD -,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind2,
+				    ICONS-KEY.IARG1 #clause ] ] ],
+              #comp2 &
+	      [ LOCAL [ CAT [ HEAD nonoleh-adp,
+                              POSTHEAD +,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX #ind3,
+				    ICONS-KEY.IARG1 #clause ] ] ] >,
+     SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
+			     ARG2 #ind1,
+                             ARG3 #ind3 ],
+	      LOCAL [ CAT [ HEAD passive-two,
                             VAL.COMPS < #comp1, #comp2 > ],
                       CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
@@ -1535,7 +1677,12 @@ vp1-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
 ;;; Coordination Strategy 1
 
 ;; DVM 2017-09-19: the daughter cannot have extracted subject
-s-bottom-coord-phrase :+ [ NONCONJ-DTR.SYNSEM.NON-LOCAL.SLASH 0-dlist ].
+s-coord-phrase :+  [ LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY bool,
+    		     RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY - ].
+
+s-bottom-coord-phrase :+  [ CONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY -,
+    		   	    NONCONJ-DTR.SYNSEM [ LOCAL.CAT.HEAD.EMPTY -,
+                                                 NON-LOCAL.SLASH 0-dlist ] ].
 
 s1-top-coord-rule := basic-s-top-coord-rule & monopoly-top-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
@@ -2303,7 +2450,7 @@ redup-noun-lex-rule :=  same-non-local-lex-rule & common-noun-lex &
 			  VAL #val, 
 			  POSTHEAD #posthead ],
 		    CONT.HOOK.INDEX.PNG.PERNUM pl ] ],
-   DTR common-noun-lex & [ SYNSEM [ LOCAL [ CAT [ HEAD #head, 
+   DTR countable-noun-lex & [ SYNSEM [ LOCAL [ CAT [ HEAD #head, 
 					          VAL #val,
 					          POSTHEAD #posthead ] ] ] ],
    C-CONT [ HCONS <! !>, 
@@ -2521,13 +2668,13 @@ n_-_day-lex := proper-name-lex &
                                        ANIMCOUNT inanimate ] ].
 
 ;; for morning, night, hour, day, year
-n_-_temp-lex := inanimate-noun-noun-lex.
+n_-_temp-lex := inanimate-noun-lex.
 
 ;; for depan, belakang, etc.
-relational-n-lex := inanimate-noun-noun-lex.
+relational-n-lex := inanimate-noun-lex.
 
 ;; for cm, ha, m, kg, etc.
-n_-_measure-lex := inanimate-noun-noun-lex.
+n_-_measure-lex := inanimate-noun-lex.
 
 ;; for colors
 adjective-color-lex := adjective-lex.

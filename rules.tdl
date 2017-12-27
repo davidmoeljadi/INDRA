@@ -85,6 +85,10 @@ head-spec-cl := head-spec-h-sem-phrase &
 zero-cop := zero-cop-rule.
 ;zero-cop-pp := zero-cop-pp-rule.
 
+;; the rule for passive two with prefix ku- and kau-, e.g. nasi ini kumakan.
+passive-two-prefix-ku := passive-two-prefix-ku-rule.
+passive-two-prefix-kau := passive-two-prefix-kau-rule.
+
 ;; this is the rule for noun noun compound
 n-n-compound := compound-noun-phrase.
 n-pron-compound := compound-noun-pronoun-phrase.
