@@ -69996,7 +69996,7 @@ bungkus_v_tr := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_bungkus_v_rel",
     TRAITS native_token_list ].
 
-baca := opt-tr-verb-lex &
+baca := tr-verb-lex &
   [ STEM < "baca" >,
     SYNSEM.LKEYS.KEYREL.PRED "_baca_v_rel",
     TRAITS native_token_list ].

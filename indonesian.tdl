@@ -34,8 +34,9 @@ pronoun_n_rel := predsort.
 def_q_rel := quant_rel.
 ;the_q_rel := def_q_rel.
 exist_q_rel := quant_rel.
-poss_rel := quant_rel.
+;poss_rel := quant_rel.
 pronoun_q_rel := quant_rel.
+proper_q_rel := quant_rel.
 indef_q_rel := quant_rel.
 
 ;; DVM 2015-05-09: added decomposed words
@@ -242,6 +243,7 @@ oleh-adp := adp.
 
 prep_rel := predsort.
 compound_p_rel := prep_rel.
+poss_rel := prep_rel.
 
 ;; DVM 2017-05-09: add new serial verb construction (svc) predicate relation
 svc_p_rel := prep_rel.
@@ -252,8 +254,9 @@ svc_result_p_rel := prep_rel.
 adj_coord_p_rel := prep_rel.
 
 ;; DVM 2017-08-19: for quantifiers
-det-quant := det.
-det-nonquant := det.
+det-non-nya := det.
+det-quant := det-non-nya.
+det-nonquant := det-non-nya.
 det-nya := det.
 
 phr-conj := conj.
@@ -470,7 +473,8 @@ pronoun-2nd-sg-nohon-noun-lex := personal-pronoun-lex & non-honorific-hearer-lex
 ;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
 
 enclitic-pronoun-2nd-sg-nohon-noun-lex := enclitic-pronoun-lex & non-honorific-hearer-lex-item & 
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
+  [ SYNSEM.LOCAL [ CAT.HEAD enclitic-non3person,
+                   CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
 
 pronoun-2nd-sg-hon-noun-lex := personal-pronoun-lex & honorific-hearer-lex-item &
   [ SYNSEM.LOCAL [ CAT.HEAD pronoun-non3person,
@@ -925,22 +929,24 @@ determiner-determiner-lex := determiner-lex & no-icons-lex-item & head-initial &
   [ SYNSEM.LOCAL.CAT [ HEAD det-nonquant,
                        VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ] ].
 
-determiner-nya-lex := determiner-lex & no-icons-lex-item &
+determiner-nya-lex := determiner-lex & no-icons-lex-item & head-initial &
   [ SYNSEM.LOCAL.CAT.HEAD det-nya ].
 
-determiner-pl-determiner-lex := determiner-lex & no-icons-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
+;determiner-pl-determiner-lex := determiner-lex & no-icons-lex-item &
+;  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
 
-determiner-sg-determiner-lex := determiner-lex & no-icons-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ].
+;determiner-sg-determiner-lex := determiner-lex & no-icons-lex-item &
+;  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ].
 
 ; DVM 2017-08-19: for plural quantifiers e.g. semua buku
-determiner-pl-quantifier-lex := determiner-pl-determiner-lex & head-final &
-  [ SYNSEM.LOCAL.CAT.HEAD det-quant ].
+determiner-pl-quantifier-lex := determiner-lex & no-icons-lex-item & head-final &
+  [ SYNSEM.LOCAL.CAT [ VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                       HEAD det-quant ]].
 
 ; DVM 2017-08-19: for singular quantifiers e.g. suatu buku
-determiner-sg-quantifier-lex := determiner-sg-determiner-lex & head-final &
-  [ SYNSEM.LOCAL.CAT.HEAD det-quant ].
+determiner-sg-quantifier-lex := determiner-lex & no-icons-lex-item & head-final &
+  [ SYNSEM.LOCAL.CAT [ VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                       HEAD det-quant ]].
 
 ; Type for negative adverbs.
 ; 
@@ -2771,7 +2777,7 @@ compound-noun-pronoun-phrase := head-initial &
                     CONT.HOOK #head ] ],
    HEAD-DTR.SYNSEM [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
                      LOCAL [ CAT [ HEAD nounpos,
-                                   VAL [ SPR < #spr >,
+                                   VAL [ SPR < #spr & [ LOCAL.CAT.HEAD det-non-nya ] >,
                                          COMPS < > ]] ,
                              CONT [ HOOK #head &
                                         [INDEX #externalargument,
@@ -2794,7 +2800,7 @@ possessor-np-phrase := head-only &
 			     SPEC < > ],
                    COORD - ],
     HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD nounnyapos,
-                                  VAL [ SPR < [ LOCAL.CAT.HEAD det,
+                                  VAL [ SPR < [ LOCAL.CAT.HEAD det-non-nya,
 						OPT + ] >,
 					SUBJ < >,
 					COMPS < > ] ],
