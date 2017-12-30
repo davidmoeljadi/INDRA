@@ -798,9 +798,9 @@ card-relation := arg1-relation & named-relation &
 ; get only this [[dua puluh dua] [buku]]
 a_-_num_le := single-rel-lex-item & basic-icons-lex-item & 
   [ SYNSEM [ LOCAL [ CAT [ HEAD adj-number & [ MOD < [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
-                                                LOCAL [ CAT [ HEAD commonnoun & [ CARDIN - ],
-              	                                              VAL.SPR cons ],
-                                                        CONT.HOOK.INDEX #xarg ] ] > ],
+                                                       LOCAL [ CAT [ HEAD commonnoun & [ CARDIN - ],
+              	                                                     VAL.SPR cons ],
+                                                               CONT.HOOK.INDEX #xarg & [ PNG.ANIMCOUNT countable ] ] ] > ],
                            VAL [ COMPS < >,
                                  SPR < >,
 				 SUBJ < > ],
@@ -1079,9 +1079,10 @@ pas-two-prefix-kau-lex-rule := passive-voice-lex-rule-super & passive-two-verb-l
 pas-oleh-lex-rule := passive-voice-lex-rule-super & passive-oleh-verb-lex.
 
 ; DVM 2017-12-26: for passive type 2 with ku-
+; DVM 2017-12-30: delete LTOP #harg in SYNSEM.LOCAL.CONT.HOOK.LTOP #harg
 passive-two-prefix-ku-rule := unary-phrase &
- [ SYNSEM.LOCAL [ CONT [ HOOK [ LTOP #harg,
-                                XARG #ind1 ] ],
+ [ SYNSEM.LOCAL [ CONT [ HOOK [ XARG #ind1,
+                                CLAUSE-KEY #clause ] ],
 		  COORD -,
                   CAT [ HEAD nonactive &
 			     [ EMPTY + ],
@@ -1094,7 +1095,7 @@ passive-two-prefix-ku-rule := unary-phrase &
                            		       CONT.HOOK [ INDEX ref-ind & #ind1,
 			 	                           ICONS-KEY.IARG1 #clause ] ] ] > ] ] ] ,
    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD passive-ku,
-                                   VAL.COMPS < #comps > ],
+                                   VAL.COMPS < [ ] > ],
                              COORD -,
                              CONT.HOOK [ INDEX #index,
                                          LTOP #larg ] ],
@@ -1113,8 +1114,8 @@ passive-two-prefix-ku-rule := unary-phrase &
 
 ; DVM 2017-12-26: for passive type 2 with kau-
 passive-two-prefix-kau-rule := unary-phrase &
- [ SYNSEM.LOCAL [ CONT [ HOOK [ LTOP #harg,
-                                XARG #ind1 ] ],
+ [ SYNSEM.LOCAL [ CONT [ HOOK [ XARG #ind1,
+                                CLAUSE-KEY #clause ] ],
 		  COORD -,
                   CAT [ HEAD nonactive &
 			     [ EMPTY + ],
@@ -1127,7 +1128,7 @@ passive-two-prefix-kau-rule := unary-phrase &
                            		       CONT.HOOK [ INDEX ref-ind & #ind1,
 			 	                           ICONS-KEY.IARG1 #clause ] ] ] > ] ] ] ,
    ARGS < [ SYNSEM [ LOCAL [ CAT [ HEAD passive-kau,
-                                   VAL.COMPS < #comps > ],
+                                   VAL.COMPS < [ ] > ],
                              COORD -,
                              CONT.HOOK [ INDEX #index,
                                          LTOP #larg ] ],
@@ -2545,19 +2546,16 @@ zero-cop-rule := unary-phrase &
 
 ;; SSH & DVM 2016-02-17 : a new rule for zero copula with pp locative complement
 ;; DVM 2016-05-06: add COORD - based on zero-cop-rule for noun
-
-#|
+;; DVM 2017-12-30: delete SYNSEM.LOCAL.CONT.HOOK.INDEX #v0 and LTOP #vl
 zero-cop-pp-rule := unary-phrase &
- [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0,
-                                LTOP #vl,
-                                XARG #x1 ] ],
+ [ SYNSEM.LOCAL [ CONT [ HOOK [ XARG #x1 ] ],
 		  COORD -,
                   CAT [ HEAD verb &
 			     [ EMPTY + ],
                         VAL [ COMPS < >,
                               SPR < >,
                               SPEC < >,
-                              SUBJ < [ LOCAL [ CAT [ HEAD noun,
+                              SUBJ < [ LOCAL [ CAT [ HEAD subj-noun,
 						     VAL [ SPR < >,
                                      			   COMPS < > ] ],
                            		       CONT.HOOK.INDEX #x1 ] ] > ] ] ] ,
@@ -2571,7 +2569,6 @@ zero-cop-pp-rule := unary-phrase &
 	    RELS <! !>, 
 	    HCONS <! !>, 
 	    ICONS <! !> ] ].
-|#
 
 ;; Existential ada
 ;; DVM 2016-05-16 : add a rule for existential verb "ada" based on the one in Zhong
@@ -2786,10 +2783,10 @@ compound-noun-pronoun-phrase := head-initial &
                                      VAL [ SPR < >,
                                            COMPS < > ] ],
                                CONT.HOOK.INDEX #internalargument],
-   C-CONT [ RELS <! arg12-relation & [ PRED poss_rel,
-                                       LBL #lbl,
-                                       ARG1 #externalargument,
-                                       ARG2 #internalargument] !>,
+   C-CONT [ RELS <! arg12-ev-relation & [ PRED poss_rel,
+                                          LBL #lbl,
+                                          ARG1 #externalargument,
+                                          ARG2 #internalargument] !>,
             HCONS <! !> ] ].
 
 ;;DVM 2017-12-17: this rule is similar to bare-np-rule but introduce def_q_rel for noun-possessor e.g. buku saya
@@ -2958,9 +2955,9 @@ POSTHEAD + means as a modifier, it always appear after the head noun.
 	                      [ MOD < [ LOCAL intersective-mod &
                                               [ CAT [ HEAD subj-noun,
                                                       VAL.COMPS < > ] ] ] > ],
-			    VAL [ SPR < >,
-                                  SPEC < >,
-			          COMPS < synsem  & [ LOCAL.CAT.MC + ], ... > ] ] ] ].
+		         VAL [ SPR < >,
+                               SPEC < >,
+			       COMPS < synsem & [ LOCAL.CAT.MC + ], ... > ] ] ] ].
 
 ;; DVM 2017-08-23 : NP yang NP=nya "NP whose NP"
 
@@ -2988,10 +2985,11 @@ The modified noun is the missing possessor in the relative clause.
                                                          VAL [ SUBJ < #subj > ] ] ],
                                            OPT - ] > ] ],
                      CONT [ RELS <! arg12-ev-relation & 
-                  [PRED compound_p_rel,
-                   LBL #lbl,
-                   ARG1 #externalargument,
-                   ARG2 #internalargument] !>, HCONS <! !> ]],
+                                   [PRED poss_rel,
+                                    LBL #lbl,
+                                    ARG1 #externalargument,
+                                    ARG2 #internalargument] !>, 
+                            HCONS <! !> ]],
               NON-LOCAL [ SLASH <! !>,
                           REL <! !>,
                           QUE <! !> ] ] ].

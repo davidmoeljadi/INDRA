@@ -51501,6 +51501,16 @@ dari_abbr_adp_mod := adposition-mod-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_dari_p_rel",
     TRAITS native_token_list ].
 
+dekat_adp := adposition-lex &
+  [ STEM < "dekat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dekat_p_rel",
+    TRAITS native_token_list ].
+
+dekat_adp_mod := adposition-mod-lex &
+  [ STEM < "dekat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dekat_p_rel",
+    TRAITS native_token_list ].
+
 sampai_adp := adposition-lex &
   [ STEM < "sampai" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sampai_p_rel",
@@ -70231,7 +70241,7 @@ dekaden := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_dekaden_a_rel",
     TRAITS native_token_list ].
 
-dekat := adjective-lex &
+dekat_adj := adjective-lex &
   [ STEM < "dekat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dekat_a_rel",
     TRAITS native_token_list ].
