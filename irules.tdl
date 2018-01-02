@@ -163,15 +163,15 @@ pas-oleh-lex-rule &
 
 ;;;passive voice type two
 ;; DVM 2017-12-20: maybe add pas-two-1agent-prefix and pas-two-2agent-prefix
-pas-two-prefix :=
+pas-two-no-prefix :=
 pas-two-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
-pas-two-ditrans-n-n-prefix :=
+pas-two-ditrans-n-n-no-prefix :=
 pas-two-ditrans-n-n-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT -], [OPT -] > ].
 
-pas-two-ditrans-n-p-prefix :=
+pas-two-ditrans-n-p-no-prefix :=
 pas-two-ditrans-n-p-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT -], [OPT -] > ].
 
