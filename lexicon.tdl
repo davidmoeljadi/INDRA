@@ -54840,6 +54840,11 @@ beri_v_noarg3 := v_np_noarg3_le &
     SYNSEM.LKEYS.KEYREL.PRED "_beri_v_rel",
     TRAITS native_token_list ].
 
+belikan := v_np_noarg3_le &
+  [ STEM < "belikan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_belikan_v_rel",
+    TRAITS native_token_list ].
+
 berikan := v_np-pp_prop_le &
   [ STEM < "berikan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berikan_v_rel",
@@ -56315,7 +56320,7 @@ pergi := v_pp*_dir_le &
     SYNSEM.LKEYS.KEYREL.PRED "_pergi_v_rel",
     TRAITS native_token_list ].
 
-perlu := v_np_ntr_le &
+perlu := modal-aux-lex &
   [ STEM < "perlu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_perlu_v_rel",
     TRAITS native_token_list ].

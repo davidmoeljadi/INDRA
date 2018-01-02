@@ -173,12 +173,12 @@ future := tense.
 nonfuture := tense.
 
 ;;; Aspect
-;; FCB & DVM 2015-10-28: added nonaspect for copula constructions
+;; FCB & DVM 2015-10-28: added non-perf-and-prog for copula constructions
 
-perf := aspect.
-prog := aspect.
-perf-and-prog := perf & prog.
-nonaspect := aspect.
+perf-and-prog := aspect.
+non-perf-and-prog := aspect.
+perf := perf-and-prog.
+prog := perf-and-prog.
 
 ;;; Noun
 ;; DVM 2016-02-13: separate proper names and pronouns from other nouns for copula verb "merupakan"
@@ -226,12 +226,15 @@ nounnyapos := nounpos.
 
 ;;; Verb
 ;; DVM 2017-03-24: make three groups for verb: active, passive type 1, and passive type 2
-active := verb.
-nonactive := verb.
-passive-one := verb.
-passive-two := verb.
-passive-ku := verb.
-passive-kau := verb.
+aux := verb.
+pass2 := verb.
+non-aux-pass2 := verb.
+active := non-aux-pass2.
+nonactive := non-aux-pass2.
+passive-one := non-aux-pass2.
+passive-two := pass2.
+passive-ku := pass2.
+passive-kau := pass2.
 
 adjcontrol := adj.
 adj-number := adj.
@@ -534,7 +537,7 @@ indonesian-verb-lex := verb-lex &
 main-verb-lex := indonesian-verb-lex & basic-verb-lex.
 
 aux-lex := verb-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.AUX + ].
+  [ SYNSEM.LOCAL.CAT.HEAD aux & [ AUX + ] ].
 
 intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT [ HEAD nonactive,
@@ -660,9 +663,10 @@ subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
 
 subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg-raising-lex-item-1.
 
+;;DVM 2018-01-02: delete this line [ ARG-ST < [ ], [ LOCAL.CAT [ HEAD.AUX -,
+;;so that INDRA can parse "akan harus"
 subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item & no-icons-lex-item & 
-  [ ARG-ST < [ ], [ LOCAL.CAT [ HEAD.AUX -,
-                                POSTHEAD + ] ] > ].
+  [ ARG-ST < [ ], [ LOCAL.CAT [ POSTHEAD + ] ] > ].
 
 aspect_perf-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
@@ -675,10 +679,12 @@ aspect_prog-aux-lex := subj-raise-aux-no-pred &
 		       VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prog,
 					       CAT.HEAD.FORM form ] ] ].
 
+
+;;DVM 2018-01-02: delete this line [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
+;;so that "akan sudah", "akan harus" can be parsed.
 modal_fut-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
-		       VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.TENSE future,
-					       CAT.HEAD.FORM form ] ] ].
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.TENSE future,
+					     CAT.HEAD.FORM form ] ].
 
 ;; DVM 2015-05-09: subj-raise-aux-with-pred is commented out
 ;; DVM 2015-05-09: saya sedang "I am in the process of" is considered ungrammatical
@@ -955,7 +961,7 @@ determiner-sg-quantifier-lex := determiner-lex & no-icons-lex-item & head-final 
 
 ;; DVM 2015-09-23: added CONT.HOOK.XARG #xarg to connect the ARG1 of the verb with ARG0 of the subj
 ;; DVM & FCB 2016-05-17: add INDEX.E.ASPECT perf-and-prog so that "tidak adalah" cannot be parsed
-;; because "adalah" and "ialah" have ASPECT nonaspect.
+;; because "adalah" and "ialah" have ASPECT non-perf-and-prog.
 ;; DVM 2016-09-30: HEAD.MOD < LOCAL.CAT.HEAD is changed from verb to +vjp so that "tidak" can negate AdjP and PP
 neg-adv-lex := basic-scopal-adverb-lex &
   [ SYNSEM.LOCAL [ CONT.HOOK.XARG #xarg,
@@ -1500,7 +1506,7 @@ v_np_cop_common_le := cop-verb-lex &
 
 ;; FCB & DVM 2015-10-28: "adalah" and "ialah" cannot take aspect markers and cannot be in future tense
 v_np_cop_noasp_le := cop-verb-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E [ ASPECT nonaspect ,
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E [ ASPECT non-perf-and-prog ,
 				     TENSE nonfuture ] ].
 
 ;; FCB & DVM 2015-10-28: "ialah" can only appear with 3rd person subject
@@ -1762,7 +1768,7 @@ trans-first-arg-raising-verb := main-verb-lex & trans-first-arg-raising-lex-item
 
 ;; DVM 2016-05-17: add ASPECT perf-and-prog so that the control verb cannot take copulas as the complement
 ;; such as "saya mau adalah ..." cannot be parsed
-;; copulas "adalah" and "ialah" have ASPECT nonaspect
+;; copulas "adalah" and "ialah" have ASPECT non-perf-and-prog
 ;; control verbs need the ASPECT to be perf-and-prog
 ;; so copulas "adalah", "ialah" cannot be the complement of any control verbs
 trans-first-arg-control-verb := main-verb-lex & trans-first-arg-control-lex-item & 
@@ -1966,7 +1972,8 @@ v_np_ntr_le := main-verb-lex & transitive-lex-item &
 ; <todo>
 ; </type>
 v_pp*_dir_le := main-verb-lex & transitive-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+  [ SYNSEM.LOCAL.CAT [ HEAD nonactive,
+                       VAL.COMPS < #comps > ],
     ARG-ST < [ LOCAL.CAT.HEAD subj-noun ],
              #comps &
              [ LOCAL.CAT [ VAL [ SPR < >,
@@ -2236,7 +2243,7 @@ adverb-time-lex := basic-scopal-adverb-lex &
 				 SPEC < > ] ]]]].
 
 #|
-;; DVM 2016-02-16 : added information of ASPECT nonaspect and TENSE nonfuture
+;; DVM 2016-02-16 : added information of ASPECT non-perf-and-prog and TENSE nonfuture
 ;; so that *Budi sudah/sedang/akan guru cannot be parsed.
 ;; FCB, DVM & LMC 2016-05-06 : add COORD - so that "nasi" in "Adi makan nasi" cannot have "zero copula"
 adj-adv-rule := unary-phrase &
@@ -2513,12 +2520,12 @@ redup-adv-lex-rule := same-non-local-lex-rule & adverb-post-lex &
 		   same-head-lex-rule.
 |#
 
-;; DVM 2016-02-16 : added information of ASPECT nonaspect and TENSE nonfuture
+;; DVM 2016-02-16 : added information of ASPECT non-perf-and-prog and TENSE nonfuture
 ;; so that *Budi sudah/sedang/akan guru cannot be parsed.
 ;; FCB, DVM & LMC 2016-05-06 : add COORD - so that "nasi" in "Adi makan nasi" cannot have "zero copula"
 zero-cop-rule := unary-phrase &
  [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0 &
-				      [ E [ ASPECT nonaspect ,
+				      [ E [ ASPECT non-perf-and-prog ,
 					    TENSE nonfuture ] ],
                                 LTOP #vl,
                                 XARG #x1 ] ],
@@ -2821,13 +2828,13 @@ compound-verb-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
                             COMPS < > ] ,
                   CONT.HOOK #head ],
-   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb & [EMPTY -],
+   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD non-aux-pass2 & [EMPTY -],
                                  VAL [ SUBJ < #spr > ,
                                        COMPS null ]] ,
                              CONT [ HOOK #head &
                                        [INDEX #externalargument,
                                         LTOP #lbl ] ] ] ],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -,
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD non-aux-pass2 & [AUX -,
                                                   EMPTY -],
                                      VAL [ SUBJ < #spr >,
                                            COMPS < > ]],
@@ -2845,13 +2852,13 @@ compound-coordinated-verb-phrase := head-final &
                             COMPS < #cmp > ] ,
                   CONT.HOOK [ LTOP #harg,
                               INDEX #ind ] ],
-   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb & [AUX -,
+   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD non-aux-pass2 & [AUX -,
                                                 EMPTY -],
                                  VAL [ SUBJ < #spr > ,
                                        COMPS < #cmp & [OPT -] > ]] ,
                              CONT [ HOOK [ LTOP #kanan,
                                            INDEX #right] ]]],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [EMPTY -],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD non-aux-pass2 & [EMPTY -],
                                      VAL [ SUBJ < #spr >,
                                            COMPS < #cmp & [OPT -] > ]],
                                CONT [ HOOK [ LTOP #kiri,
@@ -2900,13 +2907,13 @@ compound-result-verb-phrase := head-initial &
  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #spr >,
                             COMPS < #cps > ] ,
                   CONT.HOOK #head ],
-   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD verb & [EMPTY -],
+   HEAD-DTR.SYNSEM [ LOCAL [ CAT [ HEAD non-aux-pass2 & [EMPTY -],
                                  VAL [ SUBJ < #spr > ,
                                        COMPS < #cps > ]] ,
                              CONT [ HOOK #head &
                                        [INDEX #externalargument,
                                         LTOP #lbl ]]]],
-   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD verb & [AUX -,
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD non-aux-pass2 & [AUX -,
                                                   EMPTY -],
                                      VAL [ SUBJ < #cps >,
                                            COMPS null ]],
