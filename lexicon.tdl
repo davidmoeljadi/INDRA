@@ -52033,22 +52033,22 @@ pelan_2 := adverb-post-lex &
 
 ;;;; Adverbs of time
 
-esok := adverb-lex &
+esok := adverb-time-future-lex &
   [ STEM < "esok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_esok_a_rel",
     TRAITS native_token_list ].
 
-besok := adverb-time-lex &
+besok := adverb-time-future-lex &
   [ STEM < "besok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_besok_a_rel",
     TRAITS native_token_list ].
 
-dahulu := adverb-lex &
+dahulu := adverb-time-past-lex &
   [ STEM < "dahulu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dahulu_a_rel",
     TRAITS native_token_list ].
 
-kemarin := adverb-lex &
+kemarin := adverb-time-past-lex &
   [ STEM < "kemarin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kemarin_a_rel",
     TRAITS native_token_list ].
@@ -52064,7 +52064,7 @@ segera := adverb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_segera_a_rel",
     TRAITS native_token_list ].
 
-sekarang := adverb-lex &
+sekarang := adverb-time-lex &
   [ STEM < "sekarang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sekarang_a_rel",
     TRAITS native_token_list ].

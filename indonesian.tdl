@@ -168,9 +168,14 @@ finite := form.
 
 ;;; Tense
 ;; FCB & DVM 2015-10-28: added nonfuture for copula constructions
+;; DVM 2018-01-03: change nonfuture to no-tensed
 
-future := tense.
-nonfuture := tense.
+no-tensed := tense.
+tensed := tense.
+future := tensed.
+past := tensed.
+present := tensed.
+
 
 ;;; Aspect
 ;; FCB & DVM 2015-10-28: added non-perf-and-prog for copula constructions
@@ -1507,7 +1512,7 @@ v_np_cop_common_le := cop-verb-lex &
 ;; FCB & DVM 2015-10-28: "adalah" and "ialah" cannot take aspect markers and cannot be in future tense
 v_np_cop_noasp_le := cop-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E [ ASPECT non-perf-and-prog ,
-				     TENSE nonfuture ] ].
+				     TENSE no-tensed ] ].
 
 ;; FCB & DVM 2015-10-28: "ialah" can only appear with 3rd person subject
 v_np_cop_3_le := v_np_cop_noasp_le &
@@ -1989,8 +1994,8 @@ v_pp*_dir_le := main-verb-lex & transitive-lex-item &
 v_cp_prop_le := prop-comp-verb-lex.
 
 ; verb with preposition
-v_pp_le := transitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT [ VAL.COMPS < [ OPT - ] > ] ].
+;v_pp_le := transitive-verb-lex &
+;  [ SYNSEM.LOCAL.CAT [ VAL.COMPS < [ OPT - ] > ] ].
 
 ;;; Complementizers
 
@@ -2234,7 +2239,8 @@ adverb-post-lex := adverb-lex &
 adverb-pre-lex := adverb-lex &
   [ SYNSEM.LOCAL.CAT.POSTHEAD - ].
 
-adverb-time-lex := basic-scopal-adverb-lex &
+;; DVM 2018-01-03: change basic-scopal-adverb-lex to basic-int-adv-lex
+adverb-time-lex := basic-int-adv-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ COMPS < > ],
 						    HEAD +vjp ] ]>,
 			   VAL [ SPR < >,
@@ -2242,8 +2248,17 @@ adverb-time-lex := basic-scopal-adverb-lex &
 				 COMPS < >,
 				 SPEC < > ] ]]]].
 
+adverb-time-future-lex := adverb-time-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX.E.TENSE future ] > ].
+
+adverb-time-past-lex := adverb-time-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX.E.TENSE past ] > ].
+
+adverb-time-present-lex := adverb-time-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX.E.TENSE present ] > ].
+
 #|
-;; DVM 2016-02-16 : added information of ASPECT non-perf-and-prog and TENSE nonfuture
+;; DVM 2016-02-16 : added information of ASPECT non-perf-and-prog and TENSE no-tensed
 ;; so that *Budi sudah/sedang/akan guru cannot be parsed.
 ;; FCB, DVM & LMC 2016-05-06 : add COORD - so that "nasi" in "Adi makan nasi" cannot have "zero copula"
 adj-adv-rule := unary-phrase &
@@ -2520,13 +2535,13 @@ redup-adv-lex-rule := same-non-local-lex-rule & adverb-post-lex &
 		   same-head-lex-rule.
 |#
 
-;; DVM 2016-02-16 : added information of ASPECT non-perf-and-prog and TENSE nonfuture
+;; DVM 2016-02-16 : added information of ASPECT non-perf-and-prog and TENSE no-tensed
 ;; so that *Budi sudah/sedang/akan guru cannot be parsed.
 ;; FCB, DVM & LMC 2016-05-06 : add COORD - so that "nasi" in "Adi makan nasi" cannot have "zero copula"
 zero-cop-rule := unary-phrase &
  [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0 &
 				      [ E [ ASPECT non-perf-and-prog ,
-					    TENSE nonfuture ] ],
+					    TENSE no-tensed ] ],
                                 LTOP #vl,
                                 XARG #x1 ] ],
 		  COORD -,
@@ -2914,7 +2929,7 @@ compound-result-verb-phrase := head-initial &
                                        [INDEX #externalargument,
                                         LTOP #lbl ]]]],
    NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD non-aux-pass2 & [AUX -,
-                                                  EMPTY -],
+                                                           EMPTY -],
                                      VAL [ SUBJ < #cps >,
                                            COMPS null ]],
                                CONT.HOOK.INDEX #internalargument ],
@@ -3160,11 +3175,11 @@ basic-frag-rule := super-frag-rule  &
 unary-frag-rule := basic-frag-rule & unary-phrase.
 
 frag-np-rule := unary-frag-rule &
- [ ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD  noun & 
-				       [EMPTY -],
+ [ ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & 
+				     [EMPTY -],
 				 VAL saturated],
 			   CONT.HOOK.INDEX #ind]] >,
-C-CONT.RELS.LIST.FIRST.ARG #ind ].
+   C-CONT.RELS.LIST.FIRST.ARG #ind ].
 
 ; "stand alone intersective adverb or pp"
 frag-vmod-rule := unary-frag-rule &
