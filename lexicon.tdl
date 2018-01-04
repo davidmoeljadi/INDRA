@@ -51000,42 +51000,42 @@ ziarahi := tr-verb-lex &
 
 ;;; Semitransitive verbs
 
-belajar_1 := opt-tr-verb-lex &
+belajar_1 := opt-tr-np-comp-verb-lex &
   [ STEM < "belajar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_belajar_v_rel",
     TRAITS native_token_list ].
 
-berbicara := opt-tr-verb-lex &
+berbicara := opt-tr-np-comp-verb-lex &
   [ STEM < "berbicara" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbicara_v_rel",
     TRAITS native_token_list ].
 
-makan_2 := opt-tr-verb-lex &
+makan_2 := opt-tr-np-comp-verb-lex &
   [ STEM < "makan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_makan_v_rel",
     TRAITS native_token_list ].
 
-menjawab_v_opt := opt-tr-verb-lex &
+menjawab_v_opt := opt-tr-np-comp-verb-lex &
   [ STEM < "menjawab" >,
     SYNSEM.LKEYS.KEYREL.PRED "_menjawab_v_rel",
     TRAITS native_token_list ].
 
-mandi := opt-tr-verb-lex &
+mandi := opt-tr-np-comp-verb-lex &
   [ STEM < "mandi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mandi_v_rel",
     TRAITS native_token_list ].
 
-mencoba_1 := opt-tr-verb-lex &
+mencoba_1 := opt-tr-np-comp-verb-lex &
   [ STEM < "mencoba" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mencoba_v_rel",
     TRAITS native_token_list ].
 
-minum_2 := opt-tr-verb-lex &
+minum_2 := opt-tr-np-comp-verb-lex &
   [ STEM < "minum" >,
     SYNSEM.LKEYS.KEYREL.PRED "_minum_v_rel",
     TRAITS native_token_list ].
 
-tahu_1 := opt-tr-verb-lex &
+tahu_1 := opt-tr-np-comp-verb-lex &
   [ STEM < "tahu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel",
     TRAITS native_token_list ].
@@ -51232,7 +51232,7 @@ punya := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_possess_v_rel",
     TRAITS native_token_list ].
 
-ada_poss := trans-verb-lex &
+ada_poss := non-opt-tr-verb-lex &
   [ STEM < "ada" >,
     SYNSEM.LKEYS.KEYREL.PRED "_possess_v_rel",
     TRAITS native_token_list ].
@@ -52880,7 +52880,7 @@ berinduk_1 := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_berinduk_v_rel",
     TRAITS native_token_list ].
 
-berinduk_2 := v_np_ntr_le &
+berinduk_2 := non-opt-tr-verb-lex &
   [ STEM < "berinduk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berinduk_v_rel",
     TRAITS native_token_list ].
@@ -52960,7 +52960,7 @@ berjumbai := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_berjumbai_v_rel",
     TRAITS native_token_list ].
 
-berjumlah := v_np_ntr_le &
+berjumlah := non-opt-tr-verb-lex &
   [ STEM < "berjumlah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berjumlah_v_rel",
     TRAITS native_token_list ].
@@ -53385,7 +53385,7 @@ bernyanyi := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_bernyanyi_v_rel",
     TRAITS native_token_list ].
 
-beroleh := v_np_ntr_le &
+beroleh := non-opt-tr-verb-lex &
   [ STEM < "beroleh" >,
     SYNSEM.LKEYS.KEYREL.PRED "_beroleh_v_rel",
     TRAITS native_token_list ].
@@ -53720,7 +53720,7 @@ bertambah_1 := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_bertambah_v_rel",
     TRAITS native_token_list ].
 
-bertambah_2 := v_np_ntr_le &
+bertambah_2 := non-opt-tr-verb-lex &
   [ STEM < "bertambah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bertambah_v_rel",
     TRAITS native_token_list ].
@@ -53810,7 +53810,7 @@ bertualang := v_pp*_dir_le &
     SYNSEM.LKEYS.KEYREL.PRED "_bertualang_v_rel",
     TRAITS native_token_list ].
 
-bertukar+dengan := trans-verb-lex &
+bertukar+dengan := non-opt-tr-verb-lex &
   [ STEM < "bertukar", "dengan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bertukar+dengan_v_rel",
     TRAITS native_token_list ].
@@ -53885,7 +53885,7 @@ buka_intr := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_buka_v_rel",
     TRAITS native_token_list ].
 
-butuh := v_np_ntr_le &
+butuh := non-opt-tr-verb-lex &
   [ STEM < "butuh" >,
     SYNSEM.LKEYS.KEYREL.PRED "_butuh_v_rel",
     TRAITS native_token_list ].
@@ -54070,7 +54070,7 @@ ingat := trans-first-arg-control-verb &
     SYNSEM.LKEYS.KEYREL.PRED "_ingat_v_rel",
     TRAITS native_token_list ].
 
-ingin_1 := v_np_ntr_le &
+ingin_1 := non-opt-tr-verb-lex &
   [ STEM < "ingin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ingin_v_rel",
     TRAITS native_token_list ].
@@ -54080,7 +54080,7 @@ jadi_1 := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_jadi_v_rel",
     TRAITS native_token_list ].
 
-jadi_2 := v_np_ntr_le &
+jadi_2 := non-opt-tr-verb-lex &
   [ STEM < "jadi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jadi_v_rel",
     TRAITS native_token_list ].
@@ -54255,7 +54255,7 @@ mati_lemas := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_mati+lemas_v_rel",
     TRAITS native_token_list ].
 
-mau_1 := v_np_ntr_le &
+mau_1 := non-opt-tr-verb-lex &
   [ STEM < "mau" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mau_v_rel",
     TRAITS native_token_list ].
@@ -56265,7 +56265,7 @@ musnah := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_musnah_v_rel",
     TRAITS native_token_list ].
 
-naik_1 := v_np_ntr_le &
+naik_1 := non-opt-tr-verb-lex &
   [ STEM < "naik" >,
     SYNSEM.LKEYS.KEYREL.PRED "_naik_v_rel",
     TRAITS native_token_list ].
@@ -56545,7 +56545,7 @@ terkelupas := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_terkelupas_v_rel",
     TRAITS native_token_list ].
 
-terkena := v_np_ntr_le &
+terkena := non-opt-tr-verb-lex &
   [ STEM < "terkena" >,
     SYNSEM.LKEYS.KEYREL.PRED "_terkena_v_rel",
     TRAITS native_token_list ].
@@ -56655,7 +56655,7 @@ tumbang := intr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_tumbang_v_rel",
     TRAITS native_token_list ].
 
-tumbuh := v_np_ntr_le &
+tumbuh := non-opt-tr-verb-lex &
   [ STEM < "tumbuh" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tumbuh_v_rel",
     TRAITS native_token_list ].
@@ -70016,62 +70016,62 @@ baca := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_baca_v_rel",
     TRAITS native_token_list ].
 
-belanja := opt-tr-verb-lex &
+belanja := opt-tr-np-comp-verb-lex &
   [ STEM < "belanja" >,
     SYNSEM.LKEYS.KEYREL.PRED "_belanja_v_rel",
     TRAITS native_token_list ].
 
-berbahasa := opt-tr-verb-lex &
+berbahasa := opt-tr-np-comp-verb-lex &
   [ STEM < "berbahasa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbahasa_v_rel",
     TRAITS native_token_list ].
 
-berbelanja := opt-tr-verb-lex &
+berbelanja := opt-tr-np-comp-verb-lex &
   [ STEM < "berbelanja" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbelanja_v_rel",
     TRAITS native_token_list ].
 
-berburu := opt-tr-verb-lex &
+berburu := opt-tr-np-comp-verb-lex &
   [ STEM < "berburu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berburu_v_rel",
     TRAITS native_token_list ].
 
-berebut := opt-tr-verb-lex &
+berebut := opt-tr-np-comp-verb-lex &
   [ STEM < "berebut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berebut_v_rel",
     TRAITS native_token_list ].
 
-berkontribusi := opt-tr-verb-lex &
+berkontribusi := opt-tr-np-comp-verb-lex &
   [ STEM < "berkontribusi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berkontribusi_v_rel",
     TRAITS native_token_list ].
 
-berlainan := opt-tr-verb-lex &
+berlainan := opt-tr-np-comp-verb-lex &
   [ STEM < "berlainan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berlainan_v_rel",
     TRAITS native_token_list ].
 
-bermain := opt-tr-verb-lex &
+bermain := opt-tr-np-comp-verb-lex &
   [ STEM < "bermain" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bermain_v_rel",
     TRAITS native_token_list ].
 
-bersantap := opt-tr-verb-lex &
+bersantap := opt-tr-np-comp-verb-lex &
   [ STEM < "bersantap" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bersantap_v_rel",
     TRAITS native_token_list ].
 
-bertanding := opt-tr-verb-lex &
+bertanding := opt-tr-np-comp-verb-lex &
   [ STEM < "bertanding" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bertanding_v_rel",
     TRAITS native_token_list ].
 
-bertemu := opt-tr-verb-lex &
+bertemu := opt-tr-np-comp-verb-lex &
   [ STEM < "bertemu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bertemu_v_rel",
     TRAITS native_token_list ].
 
-berukir := opt-tr-verb-lex &
+berukir := opt-tr-np-comp-verb-lex &
   [ STEM < "berukir" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berukir_v_rel",
     TRAITS native_token_list ].
@@ -71911,12 +71911,12 @@ ikut_v_tr := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_ikut_v_rel",
     TRAITS native_token_list ].
 
-ikut_v_opt-tr := opt-tr-verb-lex &
+ikut_v_opt-tr := opt-tr-np-comp-verb-lex &
   [ STEM < "ikut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ikut_v_rel",
     TRAITS native_token_list ].
 
-ikut+serta_v_opt-tr := opt-tr-verb-lex &
+ikut+serta_v_opt-tr := opt-tr-np-comp-verb-lex &
   [ STEM < "ikut", "serta" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ikut+serta_v_rel",
     TRAITS native_token_list ].
@@ -72261,27 +72261,27 @@ usung := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_usung_v_rel",
     TRAITS native_token_list ].
 
-kebagian := opt-tr-verb-lex &
+kebagian := opt-tr-np-comp-verb-lex &
   [ STEM < "kebagian" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kebagian_v_rel",
     TRAITS native_token_list ].
 
-kehilangan := opt-tr-verb-lex &
+kehilangan := opt-tr-np-comp-verb-lex &
   [ STEM < "kehilangan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kehilangan_v_rel",
     TRAITS native_token_list ].
 
-kena := opt-tr-verb-lex &
+kena := opt-tr-np-comp-verb-lex &
   [ STEM < "kena" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kena_v_rel",
     TRAITS native_token_list ].
 
-ketinggalan := opt-tr-verb-lex &
+ketinggalan := opt-tr-np-comp-verb-lex &
   [ STEM < "ketinggalan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ketinggalan_v_rel",
     TRAITS native_token_list ].
 
-lewat_optr := opt-tr-verb-lex &
+lewat_optr := opt-tr-np-comp-verb-lex &
   [ STEM < "lewat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lewat_v_rel",
     TRAITS native_token_list ].
@@ -73341,7 +73341,7 @@ dengarkan := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_dengarkan_v_rel",
     TRAITS native_token_list ].
 
-derita_optr := opt-tr-verb-lex &
+derita_optr := opt-tr-np-comp-verb-lex &
   [ STEM < "derita" >,
     SYNSEM.LKEYS.KEYREL.PRED "_derita_v_rel",
     TRAITS native_token_list ].
@@ -74421,42 +74421,42 @@ wujudkan := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_wujudkan_v_rel",
     TRAITS native_token_list ].
 
-main := opt-tr-verb-lex &
+main := opt-tr-np-comp-verb-lex &
   [ STEM < "main" >,
     SYNSEM.LKEYS.KEYREL.PRED "_main_v_rel",
     TRAITS native_token_list ].
 
-memilukan := opt-tr-verb-lex &
+memilukan := opt-tr-np-comp-verb-lex &
   [ STEM < "memilukan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_memilukan_v_rel",
     TRAITS native_token_list ].
 
-menari := opt-tr-verb-lex &
+menari := opt-tr-np-comp-verb-lex &
   [ STEM < "menari" >,
     SYNSEM.LKEYS.KEYREL.PRED "_menari_v_rel",
     TRAITS native_token_list ].
 
-mencakup := opt-tr-verb-lex &
+mencakup := opt-tr-np-comp-verb-lex &
   [ STEM < "mencakup" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mencakup_v_rel",
     TRAITS native_token_list ].
 
-mendaftar := opt-tr-verb-lex &
+mendaftar := opt-tr-np-comp-verb-lex &
   [ STEM < "mendaftar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mendaftar_v_rel",
     TRAITS native_token_list ].
 
-menulis := opt-tr-verb-lex &
+menulis := opt-tr-np-comp-verb-lex &
   [ STEM < "menulis" >,
     SYNSEM.LKEYS.KEYREL.PRED "_menulis_v_rel",
     TRAITS native_token_list ].
 
-menyanyi := opt-tr-verb-lex &
+menyanyi := opt-tr-np-comp-verb-lex &
   [ STEM < "menyanyi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_menyanyi_v_rel",
     TRAITS native_token_list ].
 
-obral := opt-tr-verb-lex &
+obral := opt-tr-np-comp-verb-lex &
   [ STEM < "obral" >,
     SYNSEM.LKEYS.KEYREL.PRED "_obral_v_rel",
     TRAITS native_token_list ].
@@ -76621,7 +76621,7 @@ warisi := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_warisi_v_rel",
     TRAITS native_token_list ].
 
-terlibat := opt-tr-verb-lex &
+terlibat := opt-tr-np-comp-verb-lex &
   [ STEM < "terlibat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_terlibat_v_rel",
     TRAITS native_token_list ].
@@ -77170,7 +77170,7 @@ Musa := proper-name-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-merangsang := opt-tr-verb-lex &
+merangsang := opt-tr-np-comp-verb-lex &
     [ STEM < "merangsang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_merangsang_v_rel",
     TRAITS native_token_list ].
@@ -77242,7 +77242,7 @@ jambu := inanimate-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berasa := opt-tr-verb-lex &
+berasa := opt-tr-np-comp-verb-lex &
     [ STEM < "berasa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berasa_v_rel",
     TRAITS native_token_list ].
@@ -79001,7 +79001,7 @@ kumis := inanimate-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berlangganan := opt-tr-verb-lex &
+berlangganan := opt-tr-np-comp-verb-lex &
     [ STEM < "berlangganan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berlangganan_v_rel",
     TRAITS native_token_list ].
@@ -79049,7 +79049,7 @@ bernyala-nyala := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berolahraga := opt-tr-verb-lex &
+berolahraga := opt-tr-np-comp-verb-lex &
     [ STEM < "berolahraga" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berolahraga_v_rel",
     TRAITS native_token_list ].
@@ -79103,7 +79103,7 @@ bersalin := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-bersalut := opt-tr-verb-lex &
+bersalut := opt-tr-np-comp-verb-lex &
     [ STEM < "bersalut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bersalut_v_rel",
     TRAITS native_token_list ].
@@ -80769,7 +80769,7 @@ lahirkan := tr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-melahirkan := opt-tr-verb-lex &
+melahirkan := opt-tr-np-comp-verb-lex &
     [ STEM < "melahirkan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_melahirkan_v_rel",
     TRAITS native_token_list ].
@@ -81214,7 +81214,7 @@ melon := inanimate-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-memabukkan := opt-tr-verb-lex &
+memabukkan := opt-tr-np-comp-verb-lex &
     [ STEM < "memabukkan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_memabukkan_v_rel",
     TRAITS native_token_list ].
@@ -81232,7 +81232,7 @@ membatu := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-membius := opt-tr-verb-lex &
+membius := opt-tr-np-comp-verb-lex &
     [ STEM < "membius" >,
     SYNSEM.LKEYS.KEYREL.PRED "_membius_a_rel",
     TRAITS native_token_list ].
@@ -81348,7 +81348,7 @@ mengendap := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-menggatalkan := opt-tr-verb-lex &
+menggatalkan := opt-tr-np-comp-verb-lex &
     [ STEM < "menggatalkan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_menggatalkan_v_rel",
     TRAITS native_token_list ].
@@ -81360,7 +81360,7 @@ menggembung := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-menggenggam := opt-tr-verb-lex &
+menggenggam := opt-tr-np-comp-verb-lex &
     [ STEM < "menggenggam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_menggenggam_v_rel",
     TRAITS native_token_list ].
@@ -81414,7 +81414,7 @@ menguap := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-mengunyah := opt-tr-verb-lex &
+mengunyah := opt-tr-np-comp-verb-lex &
     [ STEM < "mengunyah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mengunyah_v_rel",
     TRAITS native_token_list ].
@@ -81468,7 +81468,7 @@ kacang+mentik := inanimate-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-menumbuk := opt-tr-verb-lex &
+menumbuk := opt-tr-np-comp-verb-lex &
     [ STEM < "menumbuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_menumbuk_v_rel",
     TRAITS native_token_list ].
@@ -81486,7 +81486,7 @@ sedapkan := tr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-menyerupai := trans-verb-lex &
+menyerupai := non-opt-tr-verb-lex &
     [ STEM < "menyerupai" >,
     SYNSEM.LKEYS.KEYREL.PRED "_menyerupai_v_rel",
     TRAITS native_token_list ].
@@ -83537,37 +83537,37 @@ belimbing+wuluh := inanimate-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-terdiri+dari := trans-verb-lex &
+terdiri+dari := non-opt-tr-verb-lex &
     [ STEM < "terdiri", "dari" >,
     SYNSEM.LKEYS.KEYREL.PRED "_terdiri+dari_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-terdiri+atas := trans-verb-lex &
+terdiri+atas := non-opt-tr-verb-lex &
     [ STEM < "terdiri", "atas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_terdiri+atas_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-tersusun+dari := trans-verb-lex &
+tersusun+dari := non-opt-tr-verb-lex &
     [ STEM < "tersusun", "dari" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tersusun+dari_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-tergolong := trans-verb-lex &
+tergolong := non-opt-tr-verb-lex &
     [ STEM < "tergolong" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tergolong_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-termasuk_v_trans := trans-verb-lex &
+termasuk_v_trans := non-opt-tr-verb-lex &
     [ STEM < "termasuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_termasuk_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-mirip_v_trans := trans-verb-lex &
+mirip_v_trans := non-opt-tr-verb-lex &
     [ STEM < "mirip" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mirip_v_rel",
     TRAITS native_token_list ].
@@ -83778,13 +83778,13 @@ ketupat+bengkulu := inanimate-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berakibat := trans-verb-lex &
+berakibat := non-opt-tr-verb-lex &
     [ STEM < "berakibat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berakibat_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-beralur := opt-tr-verb-lex &
+beralur := opt-tr-np-comp-verb-lex &
     [ STEM < "beralur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_beralur_v_rel",
     TRAITS native_token_list ].
@@ -83796,25 +83796,25 @@ beralur-alur := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-beraneka+ragam := opt-tr-verb-lex &
+beraneka+ragam := opt-tr-np-comp-verb-lex &
     [ STEM < "beraneka", "ragam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_beraneka+ragam_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-beraroma := opt-tr-verb-lex &
+beraroma := opt-tr-np-comp-verb-lex &
     [ STEM < "beraroma" >,
     SYNSEM.LKEYS.KEYREL.PRED "_beraroma_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-beratom := opt-tr-verb-lex &
+beratom := opt-tr-np-comp-verb-lex &
     [ STEM < "beratom" >,
     SYNSEM.LKEYS.KEYREL.PRED "_beratom_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbadan := opt-tr-verb-lex &
+berbadan := opt-tr-np-comp-verb-lex &
     [ STEM < "berbadan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbadan_v_rel",
     TRAITS native_token_list ].
@@ -83832,31 +83832,31 @@ berbagai-bagai := a_-_num-pl_le &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbahan := opt-tr-verb-lex &
+berbahan := opt-tr-np-comp-verb-lex &
     [ STEM < "berbahan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbahan_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbahan+dasar := opt-tr-verb-lex &
+berbahan+dasar := opt-tr-np-comp-verb-lex &
     [ STEM < "berbahan", "dasar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbahan+dasar_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbahan+baku := opt-tr-verb-lex &
+berbahan+baku := opt-tr-np-comp-verb-lex &
     [ STEM < "berbahan", "baku" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbahan+baku_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbalut := opt-tr-verb-lex &
+berbalut := opt-tr-np-comp-verb-lex &
     [ STEM < "berbalut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbalut_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbatang := opt-tr-verb-lex &
+berbatang := opt-tr-np-comp-verb-lex &
     [ STEM < "berbatang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbatang_v_rel",
     TRAITS native_token_list ].
@@ -83868,7 +83868,7 @@ berbatu := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbentuk := opt-tr-verb-lex &
+berbentuk := opt-tr-np-comp-verb-lex &
     [ STEM < "berbentuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbentuk_v_rel",
     TRAITS native_token_list ].
@@ -83880,7 +83880,7 @@ berbetakaroten := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbiji := opt-tr-verb-lex &
+berbiji := opt-tr-np-comp-verb-lex &
     [ STEM < "berbiji" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbiji_v_rel",
     TRAITS native_token_list ].
@@ -83892,13 +83892,13 @@ berbiji-biji := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbonggol := opt-tr-verb-lex &
+berbonggol := opt-tr-np-comp-verb-lex &
     [ STEM < "berbonggol" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbonggol_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbuka := opt-tr-verb-lex &
+berbuka := opt-tr-np-comp-verb-lex &
     [ STEM < "berbuka" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbuka_v_rel",
     TRAITS native_token_list ].
@@ -83910,7 +83910,7 @@ berbulan-bulan := n_-_temp-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbumbu := opt-tr-verb-lex &
+berbumbu := opt-tr-np-comp-verb-lex &
     [ STEM < "berbumbu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbumbu_v_rel",
     TRAITS native_token_list ].
@@ -83922,7 +83922,7 @@ berbungkal-bungkal := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berbutir := opt-tr-verb-lex &
+berbutir := opt-tr-np-comp-verb-lex &
     [ STEM < "berbutir" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berbutir_v_rel",
     TRAITS native_token_list ].
@@ -83952,7 +83952,7 @@ bercendawan := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-bercita+rasa := opt-tr-verb-lex &
+bercita+rasa := opt-tr-np-comp-verb-lex &
     [ STEM < "bercita", "rasa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bercita+rasa_v_rel",
     TRAITS native_token_list ].
@@ -83964,31 +83964,31 @@ bercuka := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-bercuping := opt-tr-verb-lex &
+bercuping := opt-tr-np-comp-verb-lex &
     [ STEM < "bercuping" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bercuping_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berdaging := opt-tr-verb-lex &
+berdaging := opt-tr-np-comp-verb-lex &
     [ STEM < "berdaging" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berdaging_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berdaun := opt-tr-verb-lex &
+berdaun := opt-tr-np-comp-verb-lex &
     [ STEM < "berdaun" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berdaun_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berdiameter := opt-tr-verb-lex &
+berdiameter := opt-tr-np-comp-verb-lex &
     [ STEM < "berdiameter" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berdiameter_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berduri := opt-tr-verb-lex &
+berduri := opt-tr-np-comp-verb-lex &
     [ STEM < "berduri" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berduri_v_rel",
     TRAITS native_token_list ].
@@ -84006,13 +84006,13 @@ bergaris-garis := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-bergerigi := opt-tr-verb-lex &
+bergerigi := opt-tr-np-comp-verb-lex &
     [ STEM < "bergerigi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bergerigi_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-bergetah := opt-tr-verb-lex &
+bergetah := opt-tr-np-comp-verb-lex &
     [ STEM < "bergetah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bergetah_v_rel",
     TRAITS native_token_list ].
@@ -84054,19 +84054,19 @@ berimpang := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berkadar := opt-tr-verb-lex &
+berkadar := opt-tr-np-comp-verb-lex &
     [ STEM < "berkadar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berkadar_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berkaki := opt-tr-verb-lex &
+berkaki := opt-tr-np-comp-verb-lex &
     [ STEM < "berkaki" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berkaki_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berkaldu := opt-tr-verb-lex &
+berkaldu := opt-tr-np-comp-verb-lex &
     [ STEM < "berkaldu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berkaldu_v_rel",
     TRAITS native_token_list ].
@@ -84119,7 +84119,7 @@ berkhasiat := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berkuah_v_opt-tr := opt-tr-verb-lex &
+berkuah_v_opt-tr := opt-tr-np-comp-verb-lex &
     [ STEM < "berkuah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berkuah_v_rel",
     TRAITS native_token_list ].
@@ -84131,7 +84131,7 @@ berkuah_adj := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berkulit := opt-tr-verb-lex &
+berkulit := opt-tr-np-comp-verb-lex &
     [ STEM < "berkulit" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berkulit_v_rel",
     TRAITS native_token_list ].
@@ -84191,7 +84191,7 @@ bermanfaat := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-bermarga := opt-tr-verb-lex &
+bermarga := opt-tr-np-comp-verb-lex &
     [ STEM < "bermarga" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bermarga_v_rel",
     TRAITS native_token_list ].
@@ -84215,7 +84215,7 @@ bernanah := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-bernilai+gizi := opt-tr-verb-lex &
+bernilai+gizi := opt-tr-np-comp-verb-lex &
     [ STEM < "bernilai", "gizi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bernilai+gizi_v_rel",
     TRAITS native_token_list ].
@@ -84239,13 +84239,13 @@ berongga_adj := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berotot := opt-tr-verb-lex &
+berotot := opt-tr-np-comp-verb-lex &
     [ STEM < "berotot" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berotot_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berpasir := opt-tr-verb-lex &
+berpasir := opt-tr-np-comp-verb-lex &
     [ STEM < "berpasir" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berpasir_v_rel",
     TRAITS native_token_list ].
@@ -84299,25 +84299,25 @@ bersayap := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-bersemangat := opt-tr-verb-lex &
+bersemangat := opt-tr-np-comp-verb-lex &
     [ STEM < "bersemangat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bersemangat_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berserat := opt-tr-verb-lex &
+berserat := opt-tr-np-comp-verb-lex &
     [ STEM < "berserat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berserat_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-bersifat := opt-tr-verb-lex &
+bersifat := opt-tr-np-comp-verb-lex &
     [ STEM < "bersifat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bersifat_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-bersirip := opt-tr-verb-lex &
+bersirip := opt-tr-np-comp-verb-lex &
     [ STEM < "bersirip" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bersirip_v_rel",
     TRAITS native_token_list ].
@@ -84335,31 +84335,31 @@ bersiung := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-bertanah := opt-tr-verb-lex &
+bertanah := opt-tr-np-comp-verb-lex &
     [ STEM < "bertanah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bertanah_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-bertangkai := opt-tr-verb-lex &
+bertangkai := opt-tr-np-comp-verb-lex &
     [ STEM < "bertangkai" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bertangkai_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-bertekstur := opt-tr-verb-lex &
+bertekstur := opt-tr-np-comp-verb-lex &
     [ STEM < "bertekstur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bertekstur_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-bertubuh := opt-tr-verb-lex &
+bertubuh := opt-tr-np-comp-verb-lex &
     [ STEM < "bertubuh" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bertubuh_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-bertudung := opt-tr-verb-lex &
+bertudung := opt-tr-np-comp-verb-lex &
     [ STEM < "bertudung" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bertudung_v_rel",
     TRAITS native_token_list ].
@@ -84383,7 +84383,7 @@ bertutup := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-beruangan := opt-tr-verb-lex &
+beruangan := opt-tr-np-comp-verb-lex &
     [ STEM < "beruangan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_beruangan_v_rel",
     TRAITS native_token_list ].
@@ -84395,13 +84395,13 @@ berudara+panas := adjective-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berujung := opt-tr-verb-lex &
+berujung := opt-tr-np-comp-verb-lex &
     [ STEM < "berujung" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berujung_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berukuran := opt-tr-verb-lex &
+berukuran := opt-tr-np-comp-verb-lex &
     [ STEM < "berukuran" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berukuran_v_rel",
     TRAITS native_token_list ].
@@ -84425,13 +84425,13 @@ berumbi_v_intr := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berumur := opt-tr-verb-lex &
+berumur := opt-tr-np-comp-verb-lex &
     [ STEM < "berumur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berumur_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
-berupa := opt-tr-verb-lex &
+berupa := opt-tr-np-comp-verb-lex &
     [ STEM < "berupa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berupa_v_rel",
     TRAITS native_token_list ].
@@ -84443,7 +84443,7 @@ berurat := intr-verb-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-berwarna := opt-tr-verb-lex &
+berwarna := opt-tr-np-comp-verb-lex &
     [ STEM < "berwarna" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berwarna_v_rel",
     TRAITS native_token_list ].
