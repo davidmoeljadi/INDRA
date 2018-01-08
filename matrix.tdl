@@ -79,7 +79,12 @@ no-alts := alts-min.
 
 word := word-or-lexrule & nocoord.
 
-lex-item := word-or-lexrule & nocoord.
+;; DVM & DF 2018-01-08: changed "lex-item := word-or-lexrule & nocoord."
+;; to "basic-lex-item := word-or-lexrule." and "lex-item := basic-lex-item & nocoord."
+;; also changed "lex-item" in tmt.tdl to "basic-lex-item".
+basic-lex-item := word-or-lexrule.
+
+lex-item := basic-lex-item & nocoord.
 
 ;; Not all phrases have SYNSEM phr-synsem, since we need to allow the
 ;; head-comp rules to build signs which are still [ SYNSEM lex-synsem

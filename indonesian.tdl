@@ -180,10 +180,14 @@ present := tensed.
 ;;; Aspect
 ;; FCB & DVM 2015-10-28: added non-perf-and-prog for copula constructions
 
-perf-and-prog := aspect.
+;perf-and-prog := aspect.
 non-perf-and-prog := aspect.
-perf := perf-and-prog.
-prog := perf-and-prog.
+;perf := perf-and-prog.
+;prog := perf-and-prog.
+perf := aspect.
+prog := aspect.
+perf-and-prog := perf & prog.
+prog-non-perf-and-prog := prog & non-perf-and-prog.
 
 ;;; Noun
 ;; DVM 2016-02-13: separate proper names and pronouns from other nouns for copula verb "merupakan"
@@ -564,7 +568,7 @@ intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
 transitive-verb-lex := main-verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT [ HEAD transitive,
                        VAL.COMPS < #comps > ],
-    ARG-ST < [ LOCAL.CAT [ HEAD subj-noun ] ],
+    ARG-ST < [ ],
              #comps &
              [ LOCAL.CAT [ VAL [ SPR < >,
                                  COMPS < > ],
@@ -582,7 +586,7 @@ passive-transitive-lex-item := basic-two-arg-no-hcons & basic-icons-lex-item &
 
 ; DVM 2017-03-23: for passive type 1 without "oleh"
 passive-one-verb-lex := passive-transitive-lex-item & main-verb-lex &
-   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun ] ] ],
+   [ ARG-ST < [ ],
               #comps &
 	      [ LOCAL [ CAT [ HEAD pass1agent,
                               POSTHEAD +,
@@ -593,7 +597,7 @@ passive-one-verb-lex := passive-transitive-lex-item & main-verb-lex &
 
 ; DVM 2017-03-24: for passive type 2
 passive-two-verb-lex := passive-transitive-lex-item & main-verb-lex &
-   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun ] ] ],
+   [ ARG-ST < [ ],
               #comps &
 	      [ LOCAL [ CAT [ HEAD pass2agent,
                               POSTHEAD -,
@@ -665,8 +669,7 @@ subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg
 
 ;;DVM 2018-01-02: delete this line [ ARG-ST < [ ], [ LOCAL.CAT [ HEAD.AUX -,
 ;;so that INDRA can parse "akan harus"
-subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item & no-icons-lex-item & 
-  [ ARG-ST < [ ], [ LOCAL.CAT [ POSTHEAD + ] ] > ].
+subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item & no-icons-lex-item.
 
 aspect_perf-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
@@ -785,7 +788,7 @@ adj-to-attr-quant-rule := const-lex-rule &
 ;; DVM 2015-05-09: from Zhong
 
 ;adj :+ [ CARDINAL bool ].
-head-min := avm & [ CARDIN bool ].
+head-min :+ avm & [ CARDIN bool ].
 
 card_rel := named_rel.
 
@@ -963,21 +966,25 @@ determiner-sg-quantifier-lex := determiner-lex & no-icons-lex-item & head-final 
 ;; DVM & FCB 2016-05-17: add INDEX.E.ASPECT perf-and-prog so that "tidak adalah" cannot be parsed
 ;; because "adalah" and "ialah" have ASPECT non-perf-and-prog.
 ;; DVM 2016-09-30: HEAD.MOD < LOCAL.CAT.HEAD is changed from verb to +vjp so that "tidak" can negate AdjP and PP
-neg-adv-lex := basic-scopal-adverb-lex &
+neg-adv-lex-super := basic-scopal-adverb-lex &
   [ SYNSEM.LOCAL [ CONT.HOOK.XARG #xarg,
 		   CAT [ VAL [ SPR < >,
                                COMPS < >,
                                SUBJ < > ],
                        POSTHEAD -,
-                       HEAD.MOD < [ LOCAL [ CONT.HOOK [ XARG #xarg,
-							INDEX.E.ASPECT perf-and-prog ],
+                       HEAD.MOD < [ LOCAL [ CONT.HOOK [ XARG #xarg ],
 					    CAT [ HEAD +vjp,
                                                   VAL [ SUBJ cons,
                                                         COMPS null ] ] ] ] > ] ] ].
 
 ;; DVM 2015-09-18: "belum" is the same as negative adverb "tidak" with perfect aspect "sudah"
-n+asp-lex := neg-adv-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT perf ].
+neg+perf-adv-lex := neg-adv-lex-super &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf,
+                   CAT.HEAD [ FORM finite,
+                              MOD < [ LOCAL.CAT.HEAD.FORM nonfinite ] > ] ] ].
+
+neg-adv-lex := neg-adv-lex-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT perf-and-prog ].
 
 ;; DVM 2015-05-09: added to negate adverb of manners
 ;; DVM 2015-05-09: e.g. mereka berjalan tidak cepat (lit. they walk not fast)
@@ -1208,7 +1215,9 @@ passive-ditransitive-lex-item := basic-three-arg-no-hcons & basic-icons-lex-item
 	      LOCAL.CONT.HOOK.CLAUSE-KEY #clause ] ].
 
 passive-one-ditransitive-lex-item := passive-ditransitive-lex-item &
-   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun ] ] ],
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ] ] ],
               #comp1 &
 	      [ LOCAL [ CAT [ HEAD pass1agent,
                               POSTHEAD +,
@@ -1515,7 +1524,7 @@ bare-np-phrase := basic-bare-np-phrase &
 
 ;;; Coordination Strategy 1
 
-n-coord-phrase := coord-phrase &
+n-coord-phrase :+
   [ SYNSEM.LOCAL.CAT.HEAD subj-noun,
     LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD subj-noun,
     RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD subj-noun ].
@@ -1531,7 +1540,7 @@ n1-bottom-coord-rule := conj-first-bottom-coord-rule & n-bottom-coord-phrase &
 
 ;;; Coordination Strategy 1
 
-np-coord-phrase := coord-phrase &
+np-coord-phrase :+
   [ SYNSEM.LOCAL.CAT.HEAD subj-noun,
     LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD subj-noun,
     RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD subj-noun ].
@@ -1546,6 +1555,9 @@ np1-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 ;;; DVM 2017-09-11: added coordination strategy for adjectives
+;;; DVM & DF 2018-01-08: added COORD-REL.R-HNDL #rltop ],
+;;; NONCONJ-DTR.SYNSEM.LOCAL.CONT.HOOK.LTOP #rltop ].
+;;; for adj, adv, v do that R-HNDL is connected to the right item
 ;;; Coordination Strategy 1
 
 adj1-top-coord-rule := basic-adj-top-coord-rule & monopoly-top-coord-rule &
@@ -1555,7 +1567,9 @@ adj1-mid-coord-rule := basic-adj-mid-coord-rule & monopoly-mid-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 adj1-bottom-coord-rule := conj-first-bottom-coord-rule & adj-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+  [ SYNSEM.LOCAL [ COORD-STRAT "1",
+                   COORD-REL.R-HNDL #rltop ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CONT.HOOK.LTOP #rltop ].
 
 ;;; DVM 2017-09-11: added coordination strategy for adverbs
 ;;; Coordination Strategy 1
@@ -1567,36 +1581,9 @@ adv1-mid-coord-rule := basic-adv-mid-coord-rule & monopoly-mid-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 adv1-bottom-coord-rule := conj-first-bottom-coord-rule & adv-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
-
-#|
-np1-etc-coord-rule := binary-bottom-coord-rule & np-bottom-coord-phrase &
-  [ CONJ-DTR #cdtr,
-    NONCONJ-DTR #ncdtr,
-    ARGS < #ncdtr, #cdtr >,
-    SYNSEM.LOCAL.COORD-STRAT "1" ].
-
-
-conj-etc-lex := word &
-  [ INFLECTED infl-satisfied,
-;    ORTH [ CLASS #class, FROM #from, TO #to, FORM #form ],
-    TOKENS tokens &
-           [ +LIST #tl & < [ +CLASS #class, +FROM #from, +FORM #form ], ... >,
-             +LAST.+TO #to ],
-    SYNSEM synsem &
-     [ LOCAL [ CAT [ HEAD conj ],
-               COORD-REL #keyrel,
-               CONT [ HOOK [ LTOP #chand,
-                             INDEX #cind ],
-                      RELS <! relation & #keyrel &
-                             [ LBL #chand,
-                               ARG0 #cind ] !>,
-                      HCONS <! !> ] ],
-       NON-LOCAL non-local-none,
-       LKEYS.KEYREL #keyrel & 
-	     [ CFROM #from,
-	       CTO #to ] ] ].
-|#
+  [ SYNSEM.LOCAL [ COORD-STRAT "1",
+                   COORD-REL.R-HNDL #rltop ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CONT.HOOK.LTOP #rltop ].
 
 ;;; Coordination Strategy 1
 ;; FCB, DVM & LMC 2016-05-06: added EMPTY - so that verbs cannot combine with zero-cop-rule
@@ -1621,7 +1608,9 @@ vp1-mid-coord-rule := basic-vp-mid-coord-rule & monopoly-mid-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 vp1-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+  [ SYNSEM.LOCAL [ COORD-STRAT "1",
+                   COORD-REL.R-HNDL #rltop ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CONT.HOOK.LTOP #rltop ].
 
 ;;; Coordination Strategy 1
 
@@ -1640,7 +1629,9 @@ s1-mid-coord-rule := basic-s-mid-coord-rule & monopoly-mid-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 s1-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+  [ SYNSEM.LOCAL [ COORD-STRAT "1",
+                   COORD-REL.R-HNDL #rltop ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CONT.HOOK.LTOP #rltop ].
 
 ;:begin :instance.
 ;:include "indonesian_add2".
@@ -2041,8 +2032,10 @@ conj+noun-lex-item := lex-item &
 
 #|
 conj+n-lex := conj+noun-lex-item.
+|#
 
-conj+verb-lex-item := vp1-bottom-coord-rule &
+;; DVM & DF 2018-01-08: made some changes in matrix.tdl and tmt.tdl for "lex-item"
+conj+verb-lex-item := basic-lex-item &
  [ SYNSEM [LOCAL [ CAT [ HEAD verb,
                          VAL [ COMPS < >,
 			       SUBJ < [ ] >,
@@ -2050,62 +2043,27 @@ conj+verb-lex-item := vp1-bottom-coord-rule &
                                SPR < > ]],
                    COORD +,
 		   CONT [RELS <! coordination-relation &
-                                 [ PRED "_and_coord_rel" ],
+                                 [ PRED "_and_coord_rel",
+                                   LBL #larg,
+                                   R-HNDL #rltop,
+                                   R-INDEX #s ],
 			         event-relation &
 			         [ PRED "others_v_rel",
-                                   ARG0 #s ] !>,
-                         HOOK.INDEX #s]],
+                                   LBL #rltop,
+                                   ARG0 #s,
+                                   ARG1 #xarg ] !>,
+                         HCONS <! qeq & [ HARG #harg,
+                                          LARG #larg ] !>,
+                         HOOK [ LTOP #harg,
+                                INDEX #s,
+                                XARG #xarg ]]],
 	   LKEYS [ KEYREL coordination-relation,
 		   ALTKEYREL event-relation ]],
-   CONJ-DTR conj-lex,
-   NONCONJ-DTR intr-verb-lex,
-   INFLECTED infl-satisfied].
-;   TOKENS tokens &
-;           [ +LIST < [ +CLASS, +FROM, +FORM ], ... >,
-;             +LAST.+TO ] ].
-;           [ +LIST #tl & < [ +CLASS #class, +FROM #from, +FORM #form ], ... >,
-;             +LAST.+TO #to ] ].
-
-;  TRAITS #traits,
-;  STEM [ FROM #from, TO #to ],
-;  TOKENS tokens &
-;	 [ +LIST #traits & [ FIRST.+FROM #from ], 
-;	   +LAST.+TO #to ] ].
+   INFLECTED infl-satisfied,
+   TOKENS tokens &
+           [ +LIST < [ ], ... > ] ].
 
 conj+v-lex := conj+verb-lex-item.
-|#
-
-#|
-conj-etc-lex := word &
-  [ INFLECTED infl-satisfied,
-;    ORTH [ CLASS #class, FROM #from, TO #to, FORM #form ],
-    TOKENS tokens &
-           [ +LIST #tl & < [ +CLASS #class, +FROM #from, +FORM #form ], ... >,
-             +LAST.+TO #to ],
-    SYNSEM synsem &
-     [ LOCAL [ CAT [ HEAD conj ],
-               COORD-REL #keyrel,
-               CONT [ HOOK [ LTOP #chand,
-                             INDEX #cind ],
-                      RELS <! relation & #keyrel &
-                             [ LBL #chand,
-                               ARG0 #cind ] !>,
-                      HCONS <! !> ] ],
-       NON-LOCAL non-local-none,
-       LKEYS.KEYREL #keyrel & 
-	     [ CFROM #from,
-	       CTO #to ] ] ].
-
-
-;  [ CONJ-DTR #cdtr,
-;    NONCONJ-DTR #ncdtr,
-;    ARGS < #cdtr, #ncdtr > ].
-
-;  [ SYNSEM.LOCAL.CAT [ HEAD noun,
-;                       VAL.SPR < [ ] > ],
-;    NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD noun,
-;                                   VAL.SPR < [ ] > ]].
-|#
 
 ;; DVM 2015-10-16: "kini" is decomposable to "saat ini" (this time)
 ; n+det-lex+adv := noun+det-lex-item & adverb-lex.
@@ -2525,7 +2483,7 @@ v_exist-lex := basic-one-arg-no-hcons & verb-lex & basic-verb-lex &
     ARG-ST #comps &
          < [ LOCAL [ CAT [ VAL [ SPR < >,
                    		 COMPS < > ],
-                     	   HEAD subj-noun ],
+                     	   HEAD nounbare ],
                	     CONT.HOOK.INDEX #arg1 ],
 	     OPT - ] > ].
 
@@ -2553,7 +2511,8 @@ proper-name-lex := basic-one-arg & basic-icons-lex-item &
 |#
 
 v_np_ada_lex := intr-verb-lex &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < > ]]]].
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < >,
+                           VAL.SUBJ.FIRST.LOCAL.CAT.HEAD nounpos ]]]].
 
 ;; negative imperative "jangan" from zhong
 imperative-aux-lex := subj-raise-aux-with-pred &
@@ -2725,19 +2684,20 @@ compound-noun-pronoun-phrase := head-initial &
             HCONS <! !> ] ].
 
 ;;DVM 2017-12-17: this rule is similar to bare-np-rule but introduce def_q_rel for noun-possessor e.g. buku saya
+;;DVM 2018-01-08: add "phr-synsem" to HEAD-DTR.SYNSEM so that "buku" can undergo "bare-np" rule only
 possessor-np-phrase := head-only &
   [ SYNSEM.LOCAL [ CAT [ VAL [ SPR < >,
 		  	       SUBJ < >,
 			       COMPS < >,
 			       SPEC < > ] ],
                    COORD - ],
-    HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD nounnyapos,
-                                  VAL [ SPR < [ LOCAL.CAT.HEAD det-non-nya,
-						OPT + ] >,
-					SUBJ < >,
-					COMPS < > ] ],
-			    CONT[HOOK [ INDEX #index,
-					LTOP #larg ] ]],
+    HEAD-DTR.SYNSEM phr-synsem & [LOCAL [ CAT [ HEAD nounnyapos,
+                                                VAL [ SPR < [ LOCAL.CAT.HEAD det-non-nya,
+						        OPT + ] >,
+					              SUBJ < >,
+					              COMPS < > ] ],
+			                  CONT[HOOK [ INDEX #index,
+					              LTOP #larg ] ]]],
     C-CONT [ RELS <! quant-relation &
 		   [ PRED def_q_rel,
                      LBL #ltop,

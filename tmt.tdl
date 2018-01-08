@@ -14,8 +14,10 @@ relation :+
   [ CFROM *top*,
     CTO *top*  ].
 
+;; DVM & DF 2018-01-08: changed "lex-item" to "basic-lex-item"
 ;word :+  
-lex-item :+  
+;lex-item :+
+basic-lex-item :+  
 [ TRAITS #traits,
   STEM [ FROM #from,
 	 TO #to ],

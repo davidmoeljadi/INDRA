@@ -51264,7 +51264,7 @@ lagi_1 := aspect_prog-aux-lex &
   [ STEM < "lagi" >,
     TRAITS native_token_list ].
 
-belum := n+asp-lex &
+belum := neg+perf-adv-lex &
   [ STEM < "belum" >,
     SYNSEM.LKEYS.KEYREL.PRED neg_rel,
     TRAITS native_token_list ].
@@ -52112,9 +52112,9 @@ sana := n+det-lex &
 ;  [ STEM < "dsb" >,
 ;    TRAITS native_token_list ].
 
-;dll_v := conj+v-lex &
-;  [ STEM < "dll" >,
-;    TRAITS native_token_list ].
+dll_v := conj+v-lex &
+  [ STEM < "dll" >,
+    TRAITS native_token_list ].
 
 lain-lain_n := uncountable-noun-lex &
   [ STEM < "lain²" >,
@@ -54843,6 +54843,11 @@ beri_v_noarg3 := v_np_noarg3_le &
 belikan := v_np_noarg3_le &
   [ STEM < "belikan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_belikan_v_rel",
+    TRAITS native_token_list ].
+
+kirimi := v_np_noarg3_le &
+  [ STEM < "kirimi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kirimi_v_rel",
     TRAITS native_token_list ].
 
 berikan := v_np-pp_prop_le &
