@@ -1348,6 +1348,9 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final &
 subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
+head-subj-phrase := decl-head-subj-phrase & head-initial &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+
 ;;; DVM 2015-05-09: from zhong
 ;;; NUM + CL is being joined by head-spec-hs
 ;;; CLphrase + N is being joined by adj-int
@@ -2044,7 +2047,7 @@ conj+verb-lex-item := basic-lex-item &
                    COORD +,
 		   CONT [RELS <! coordination-relation &
                                  [ PRED "_and_coord_rel",
-                                   LBL #larg,
+                                   LBL #harg,
                                    R-HNDL #rltop,
                                    R-INDEX #s ],
 			         event-relation &
@@ -2052,8 +2055,7 @@ conj+verb-lex-item := basic-lex-item &
                                    LBL #rltop,
                                    ARG0 #s,
                                    ARG1 #xarg ] !>,
-                         HCONS <! qeq & [ HARG #harg,
-                                          LARG #larg ] !>,
+                         HCONS <! !>,
                          HOOK [ LTOP #harg,
                                 INDEX #s,
                                 XARG #xarg ]]],
@@ -2471,8 +2473,8 @@ zero-cop-pp-rule := unary-phrase &
 ;; zero copula rule with HEAD EMPTY + cannot combine with HEAD EMPTY - -> for previous ARG2
 v_exist-lex := basic-one-arg-no-hcons & verb-lex & basic-verb-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD existential,
-			   VAL [ SUBJ < >,
-                     	         COMPS #comps ] ],
+			   VAL [ SUBJ #comps,
+                     	         COMPS < > ] ],
              	     CONT [ HOOK [ LTOP #lbl,
                     		   INDEX #event ],
                     	    RELS <! #keyrel !> ] ],
@@ -2483,7 +2485,8 @@ v_exist-lex := basic-one-arg-no-hcons & verb-lex & basic-verb-lex &
     ARG-ST #comps &
          < [ LOCAL [ CAT [ VAL [ SPR < >,
                    		 COMPS < > ],
-                     	   HEAD nounbare ],
+                     	   HEAD nounbare,
+                           POSTHEAD + ],
                	     CONT.HOOK.INDEX #arg1 ],
 	     OPT - ] > ].
 
@@ -2595,19 +2598,6 @@ implicit-coord-rel-et := coordination-relation-et &
 null-coord-rel-et := coordination-relation-et &
   [ PRED "coord_c_null-et_rel" ].
 
-;basic-conj-lex := basic-zero-arg & no-hcons-lex-item &
-;  [ CFORM string ].
-
-conj-lex-et := basic-conj-lex & single-rel-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD conj-et & [ MOD null ],
-                           VAL [ SPR < >,
-                                 COMPS < >,
-                                 SUBJ < > ]],
-                     CONT [ HOOK [ LTOP #ltop,
-                                   INDEX #index ],
-                            RELS.LIST.FIRST #keyrel ]],
-             LKEYS.KEYREL #keyrel & coordination-relation-et & [ LBL #ltop,
-                                                              C-ARG #index ]]].
 ;======================
 |#
 
@@ -3026,9 +3016,9 @@ super-frag-rule := c-cont-1 &
     SYNSEM [ LOCAL [ CAT [ HEAD fragment_head &
 				[ MOD < > ],
                            VAL super-saturated & 
-	     [SUBJ null,
-	      COMPS null,
-	      SPR null]] ],
+	                       [SUBJ null,
+	                        COMPS null,
+	                        SPR null]] ],
 	     NON-LOCAL [REL <! !>,
 			QUE <! !>,
 			SLASH  <! !>]],
