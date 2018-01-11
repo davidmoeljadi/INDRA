@@ -115,7 +115,8 @@ mu-lex-rule &
 act-prefix :=
 %prefix (p mem) (pl mempl) (pr mempr) (ps memps) (pt mempt) (pertinggi mempertinggi) (punyai mempunyai) (b memb) (m mem) (f memf) (v memv) (w mew) (t men) (tr mentr) (ts ments) (d mend) (n men) (r mer) (s meny) (sl mensl) (sr mensr) (sp mensp) (sm mensm) (sn mensn) (sk mensk) (sy mensy) (syairkan menyairkan) (sw mensw) (st menst) (z menz) (l mel) (c menc) (j menj) (ny meny) (y mey) (k meng) (kh mengkh) (kl mengkl) (kr mengkr) (g mengg) (ng meng) (q mengq) (h mengh) (a menga) (i mengi) (u mengu) (e menge) (o mengo)
 act-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT -,
+                                   LOCAL.CAT.HEAD comp-noun ] > ].
 
 ; <type val="act-prefix">
 ; <description>Active voice with |me-| prefix for ditransitives V NP NP

@@ -562,6 +562,11 @@ satu_prefix := a_-_num-sg_le &
     SYNSEM.LKEYS.KEYREL.CARG "1",
     TRAITS native_token_list ].
 
+beberapa := a_-_num-pl_le &
+  [ STEM < "beberapa" >,
+    SYNSEM.LKEYS.KEYREL.CARG "beberapa",
+    TRAITS native_token_list ].
+
 dua := a_-_num-pl_le &
   [ STEM < "dua" >,
     SYNSEM.LKEYS.KEYREL.CARG "2",
@@ -51227,7 +51232,7 @@ punyai := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_possess_v_rel",
     TRAITS native_token_list ].
 
-punya := tr-verb-lex &
+punya_v_tr := tr-verb-lex &
   [ STEM < "punya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_possess_v_rel",
     TRAITS native_token_list ].
@@ -51388,10 +51393,10 @@ seluruh := determiner-pl-quantifier-lex &
     SYNSEM.LKEYS.KEYREL.PRED "all_q_rel",
     TRAITS native_token_list ].
 
-beberapa := determiner-pl-quantifier-lex &
-  [ STEM < "beberapa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "some_q_rel",
-    TRAITS native_token_list ].
+;beberapa := determiner-pl-quantifier-lex &
+;  [ STEM < "beberapa" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "some_q_rel",
+;    TRAITS native_token_list ].
 
 sebangsa := determiner-pl-quantifier-lex &
   [ STEM < "sebangsa" >,
@@ -56717,6 +56722,11 @@ pencakar_inanim := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_pencakar_n_rel",
     TRAITS native_token_list ].
 
+punya_common := common-noun-lex &
+  [ STEM < "punya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_punya_n_rel",
+    TRAITS native_token_list ].
+
 mayat_inanim := inanimate-noun-lex &
   [ STEM < "mayat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mayat_n_rel",
@@ -56917,7 +56927,7 @@ wagyu := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_wagyu_n_rel",
     TRAITS native_token_list ].
 
-milik := inanimate-noun-lex &
+milik := common-noun-lex &
   [ STEM < "milik" >,
     SYNSEM.LKEYS.KEYREL.PRED "_milik_n_rel",
     TRAITS native_token_list ].
