@@ -1515,7 +1515,6 @@ v_np_cop_3_le := v_np_cop_noasp_le &
 ;; FCB, DVM & LMC 2016-05-06 : add COORD - so that bare-np-phrase cannot combine with zero-cop-rule
 bare-np-phrase := basic-bare-np-phrase &
   [ SYNSEM.LOCAL.COORD -,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD nounbare,
     C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
 
 ;bare-np-phrase := basic-bare-np-phrase &
