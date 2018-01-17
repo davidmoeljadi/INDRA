@@ -65,6 +65,25 @@
 ! [Ss]ebuah 									 se- buah 
 ! [Ss]eorang 								 se- orang 
 
+! berbentuk 									 ber- bentuk 
+! berwarna 									 ber- warna 
+! berukuran 									 ber- ukuran 
+! bergaris 									 ber- garis 
+! bertutul 									 ber- tutul 
+! berumbi 									 ber- umbi 
+! bersiung 									 ber- siung 
+! berdaun 									 ber- daun 
+! berbuah 									 ber- buah 
+! bercangkang 									 ber- cangkang 
+! berbetakaroten 								 ber- betakaroten 
+! berzat 									 ber- zat 
+! bernilai 									 ber- nilai 
+! bergizi 									 ber- gizi 
+! berbau 									 ber- bau 
+! berkuah 									 ber- kuah 
+! bertekstur 									 ber- tekstur 
+! berisi 									 ber- isi 
+
 ;; DVM 2017-12-18: proclitics are regarded as prefixes, see irules.tdl
 ;! (K|k)u(\w+) 								 ku- \1 
 ;! ku- (aci|ah|ali|alitas|asa|asai|at|atkan|bah|bangan|bis|bu|buran|bus|cing|curan|da|dus|e|eh|il|kis|ku|kur|kus|li|liah|lim|lin|liner|lit|ltivar|mis|mpulkan|nci|ncup|ndang|ndangan|ning|ningan|njungan|njungi|no|nyah|nyit|pang|pas|ping|pon|pu²|pui|ra²|rang|rangi|rma|rsi|rsus|rung|rus|sam|sir|tai|weni) 							 ku\1 
