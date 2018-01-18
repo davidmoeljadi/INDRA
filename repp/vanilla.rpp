@@ -83,6 +83,7 @@
 ! berkuah 									 ber- kuah 
 ! bertekstur 									 ber- tekstur 
 ! berisi 									 ber- isi 
+! berkualitas 									 ber- kualitas 
 
 ;; DVM 2017-12-18: proclitics are regarded as prefixes, see irules.tdl
 ;! (K|k)u(\w+) 								 ku- \1 

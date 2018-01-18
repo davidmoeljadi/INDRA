@@ -154,13 +154,18 @@ pas-one-ditrans-n-n-lex-rule &
 pas-one-ditrans-n-p-prefix :=
 %prefix (* di)
 pas-one-ditrans-n-p-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT -] > ].
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
 
 ;;;passive voice type one with oleh
 pas-oleh-prefix :=
 %prefix (* di)
 pas-oleh-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+
+pas-oleh-ditrans-n-p-prefix :=
+%prefix (* di)
+pas-oleh-ditrans-n-p-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT -], [OPT +] > ].
 
 ;;;passive voice type two
 ;; DVM 2017-12-20: maybe add pas-two-1agent-prefix and pas-two-2agent-prefix

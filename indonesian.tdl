@@ -1216,6 +1216,7 @@ passive-ditransitive-lex-item := basic-three-arg-no-hcons & basic-icons-lex-item
 
 passive-one-ditransitive-lex-item := passive-ditransitive-lex-item &
    [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun,
+                              POSTHEAD -,
                               VAL [ SPR < >,
                                     COMPS < > ] ] ] ],
               #comp1 &
@@ -1270,8 +1271,38 @@ v_np-pp_prop_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-
   [ INFLECTED.VOICE-FLAG - ].
 
 ;; TODO: ditransitive-n-p
+#|
+ditransitive-n-p-lex-item := basic-three-arg & basic-icons-lex-item &
+   [ ARG-ST < [ LOCAL.CONT.HOOK [ INDEX ref-ind & #ind1,
+				  ICONS-KEY.IARG1 #clause ] ],
+	      [ LOCAL.CONT.HOOK [ INDEX ref-ind & #ind2,
+				  ICONS-KEY.IARG1 #clause ] ],
+	      [ LOCAL.CONT.HOOK [ INDEX event & #ind3,
+                                  LTOP #larg,
+				  ICONS-KEY.IARG1 #clause ] ] >,
+     SYNSEM [ LKEYS.KEYREL [ ARG1 #ind1,
+			     ARG2 #ind2,
+			     ARG3 #harg ],
+	      LOCAL.CONT [ HOOK.CLAUSE-KEY #clause,
+                           HCONS <! qeq & [ HARG #harg,
+					    LARG #larg ] !> ] ] ].
+
+ditransitive-np-pp-verb-lex := main-verb-lex & ditransitive-n-p-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD transitive,
+                       VAL.COMPS < #comp1, #comp2 > ],
+    ARG-ST < [ LOCAL.CAT.HEAD subj-noun ],
+             #comp1 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           POSTHEAD +,
+                           HEAD comp-noun ] ],
+             #comp2 &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           POSTHEAD + ] ] > ].
+|#
 ditransitive-n-p-verb-lex := ditransitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT [ VAL.COMPS < [ ] , [ LOCAL.CAT.HEAD nonoleh-adp ] > ] ].
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ ] , [ LOCAL.CAT.HEAD nonoleh-adp ] > ].
 
 active-voice-lex-rule-ditrans-n-p := add-only-no-ccont-rule & infl-lex-rule & ditransitive-n-p-verb-lex &
   [ INFLECTED.VOICE-FLAG +,
@@ -1298,6 +1329,33 @@ passive-voice-lex-rule-ditrans-n-p := add-only-no-ccont-rule & infl-lex-rule &
 ; <ex> Budi dimasukkan Adi ke sekolah
 passive-one-ditrans-n-p-verb-lex := passive-one-ditransitive-lex-item & main-verb-lex &
    [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ ] , [ LOCAL.CAT.HEAD nonoleh-adp ] > ].
+
+;;;passive one ditrans n-p with oleh
+
+pas-oleh-ditrans-n-p-lex-rule := passive-voice-lex-rule-ditrans-n-p & passive-oleh-ditrans-n-p-verb-lex.
+
+passive-oleh-ditrans-n-p-verb-lex := passive-ditransitive-lex-item & main-verb-lex &
+   [ ARG-ST < [ LOCAL [ CAT [ HEAD subj-noun,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK [ INDEX ref-ind & #ind1,
+			 	    ICONS-KEY.IARG1 #clause ] ] ],
+              #comps1 &
+              [ LOCAL [ CAT [ HEAD subj-noun,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ],
+                        CONT.HOOK.INDEX #ind2 ] ],
+              #comps2 &
+	      [ LOCAL [ CAT [ HEAD oleh-adp,
+                              VAL [ SPR < >,
+                                    COMPS < > ] ] ],
+                LKEYS.KEYREL.ARG2 #ind3 ] >,
+     SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
+			     ARG2 #ind1,
+			     ARG3 #ind3 ],
+              LOCAL [ CAT [ HEAD pass1,
+                            VAL.COMPS < #comps1 , #comps2 > ],
+                      CONT.HOOK.CLAUSE-KEY #clause ] ] ].
 
 ;;;passive two ditrans n-p
 pas-two-ditrans-n-p-lex-rule := passive-voice-lex-rule-ditrans-n-p & passive-two-ditrans-n-p-verb-lex.
@@ -1349,7 +1407,8 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
 head-subj-phrase := decl-head-subj-phrase & head-initial &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD existential,
+                                VAL.COMPS < > ] ].
 
 ;;; DVM 2015-05-09: from zhong
 ;;; NUM + CL is being joined by head-spec-hs
@@ -1427,6 +1486,35 @@ cop-adj-lex := non-mod-lex-item & trans-first-arg-raising-lex-item-2 &
 cop-adalah-adj-lex := cop-adj-lex.
 
 cop-ada-adj-lex := cop-adj-lex.
+
+vp-adj-tr-lex-item := basic-two-arg & basic-icons-lex-item &
+   [ ARG-ST < [ LOCAL.CONT.HOOK [ INDEX ref-ind & #ind1,
+				  ICONS-KEY.IARG1 #clause ] ],
+	      [ LOCAL.CONT.HOOK [ INDEX event,
+                                  LTOP #larg,
+				  ICONS-KEY.IARG1 #clause ] ] >,
+     SYNSEM [ LKEYS.KEYREL [ ARG1 #ind1,
+			     ARG2 #harg ],
+	      LOCAL.CONT [ HOOK.CLAUSE-KEY #clause,
+                           HCONS <! qeq & [ HARG #harg,
+					    LARG #larg ] !> ] ] ].
+
+verb-adj-lex := non-mod-lex-item & main-verb-lex & vp-adj-tr-lex-item &
+  [ SYNSEM.LOCAL [ CAT [ HEAD copula-dynamic,
+                   	VAL [ SUBJ < #subj >,
+                   	      COMPS < #comps >,
+                   	      SPR < >,
+                   	      SPEC < > ] ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+               	       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD subj-noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SUBJ < #subj >,
+				 COMPS < > ],
+                           HEAD adj ] ] > ].
 
 ;; FCB & DVM 2015-10-28: copula verbs with NP complement, inherit from transitive verbs
 cop-verb-lex := main-verb-lex & transitive-lex-item &
@@ -2255,6 +2343,24 @@ adposition-mod-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-le
 					           CONT.HOOK.INDEX #ind ]] >,
 				 SUBJ < > ]]]]].
 
+adposition-means-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+			    ARG1 #xarg,
+			    ARG2 #ind ],
+	     LOCAL [ CONT.HOOK [ XARG #xarg,
+				 INDEX #arg0 ],
+		     CAT [ HEAD nonoleh-adp & [ MOD < [ LOCAL [ CAT [ HEAD verb,
+						                      VAL.SUBJ cons ],
+						                CONT.HOOK.INDEX #xarg ],
+                                                        LKEYS.KEYREL.ARG1 #arg1 ] > ],
+			   VAL [ SPR < >,
+			         COMPS < [ OPT -,
+				           LOCAL [ CAT [ HEAD verb,
+						         VAL.SUBJ cons ],
+					           CONT.HOOK.INDEX #ind ],
+                                           LKEYS.KEYREL.ARG1 #arg1 ] >,
+				 SUBJ < > ]]]]].
+
 adp-attr-lex := intersective-mod-lex & norm-ltop-lex-item & transitive-lex-item &
   [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
                             ARG1 #xarg,
@@ -2291,10 +2397,10 @@ adp-attr-v-lex := intersective-mod-lex & norm-ltop-lex-item & transitive-lex-ite
              LOCAL [ CONT.HOOK [ LTOP #top,
                                  XARG #xarg,
                                  INDEX #arg0 ],
-                     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD verb,
-                                                      VAL [ SUBJ cons ]],
-                                                CONT.HOOK [ INDEX #xarg,
-                                                            LTOP #top ]]] >,
+                     CAT [ HEAD nonoleh-adp & [ MOD < [ LOCAL [ CAT [ HEAD verb,
+                                                                    VAL [ SUBJ cons ]],
+                                                              CONT.HOOK [ INDEX #xarg,
+                                                                          LTOP #top ]]] > ],
                            VAL [ SUBJ < >,
                                  SPR < >,
                                  COMPS < [ OPT -,
