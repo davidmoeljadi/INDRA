@@ -52209,18 +52209,17 @@ sana := n+det-lex &
 
 ;;; DVM 2017-09-19: et cetera (etc.)
 
-;dsb_n := conj+n-lex &
-;  [ STEM < "dsb" >,
-;    TRAITS native_token_list ].
+dsb_n := conj+n-lex &
+  [ STEM < "dsb" >,
+    TRAITS native_token_list ].
 
-;dll_n := conj+n-lex &
-;  [ STEM < "etc" >,
-;    SYNSEM.LKEYS.KEYREL.PRED "and_others_n_rel",
-;    TRAITS native_token_list ].
+dll_n := conj+n-lex &
+  [ STEM < "dll" >,
+    TRAITS native_token_list ].
 
-;dsb_v := conj+v-lex &
-;  [ STEM < "dsb" >,
-;    TRAITS native_token_list ].
+dsb_v := conj+v-lex &
+  [ STEM < "dsb" >,
+    TRAITS native_token_list ].
 
 dll_v := conj+v-lex &
   [ STEM < "dll" >,
@@ -79468,11 +79467,6 @@ kumis := inanimate-noun-lex &
 berlangganan := opt-tr-np-comp-verb-lex &
     [ STEM < "berlangganan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_berlangganan_v_rel",
-    TRAITS native_token_list ].
-
-mengunyah := opt-tr-np-comp-verb-lex &
-    [ STEM < "mengunyah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_mengunyah_v_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated

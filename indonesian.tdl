@@ -2084,30 +2084,33 @@ n+cop+p-lex := neg+cop-lex-item &
 
 ;; DVM 2017-09-19: et cetera (etc.) or dan lain-lain (dll.) dan sebagainya (dsb.)
 ;; is treated as and (dan) and others (lain-lain)
-#|
-conj+noun-lex-item := lex-item &
+conj+noun-lex-item := basic-lex-item &
  [ SYNSEM [LOCAL [ CAT [ HEAD noun,
                          VAL [ COMPS < >,
 			       SUBJ < >,
 			       SPEC < >,
-                               SPR < > ] ],
-		   CONT [RELS <! coordination-relation & #r &
+                               SPR < > ]],
+                   COORD +,
+                   COORD-REL #coord,
+		   CONT [RELS <! coordination-relation & #coord &
                                  [ PRED "_and_coord_rel" ],
-			         noun-relation & #n &
+			         noun-relation &
 			         [ PRED "others_n_rel",
                                    LBL #l,
                                    ARG0 #s ],
                                  quant-relation &
                                  [ PRED "exist_q_rel",
-                                   LBL #b,
                                    ARG0 #s,
                                    RSTR #t ] !>,
-                         HOOK.INDEX #s,
                          HCONS <! qeq &
                                   [ HARG #t,
-                                    LARG #l ] !> ] ]],
-   INFLECTED infl-satisfied ].
-|#
+                                    LARG #l ] !>,
+                         HOOK [ INDEX #s ]]],
+	   LKEYS [ KEYREL coordination-relation & #coord,
+		   ALTKEYREL event-relation ]],
+   INFLECTED infl-satisfied,
+   TOKENS tokens &
+           [ +LIST < [ ], ... > ] ].
 
 ;   STEM [ orthog & [ CLASS #class, FROM #from, TO #to, FORM #form ] ],
 ;   TOKENS tokens &
@@ -2120,9 +2123,7 @@ conj+noun-lex-item := lex-item &
 ;	 [ +LIST #traits & [ FIRST.+FROM #from ], 
 ;	   +LAST.+TO #to ] ].
 
-#|
 conj+n-lex := conj+noun-lex-item.
-|#
 
 ;; DVM & DF 2018-01-08: made some changes in matrix.tdl and tmt.tdl for "lex-item"
 conj+verb-lex-item := basic-lex-item &
@@ -2134,9 +2135,11 @@ conj+verb-lex-item := basic-lex-item &
                    COORD +,
                    COORD-REL #coord,
 		   CONT [RELS <! coordination-relation & #coord &
-                                 [ PRED "_and_coord_rel" ],
+                                 [ PRED "_and_coord_rel",
+                                   R-HNDL #lbl  ],
 			         event-relation &
 			         [ PRED "others_v_rel",
+                                   LBL #lbl,
                                    ARG0 #s,
                                    ARG1 #xarg ] !>,
                          HCONS <! !>,
