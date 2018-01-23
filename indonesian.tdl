@@ -2359,7 +2359,8 @@ adposition-means-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-
 			   VAL [ SPR < >,
 			         COMPS < [ OPT -,
 				           LOCAL [ CAT [ HEAD verb,
-						         VAL.SUBJ cons ],
+						         VAL [ SUBJ cons,
+                                                               COMPS < > ] ],
 					           CONT.HOOK.INDEX #ind ],
                                            LKEYS.KEYREL.ARG1 #arg1 ] >,
 				 SUBJ < > ]]]]].

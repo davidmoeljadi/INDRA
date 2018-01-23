@@ -50,7 +50,7 @@
 ;; mobilnya -> mobil -nya
 ;; mobil-Nya -> mobil -nya
 ! ([a-zA-Z²]+)-?([Nn]ya)[;,\.?!\]})]? 								 \1 -nya 
-! (agak|akhir|berikut|berta|biasa|ha|kelihatan|misal|nampak|no|nyo|pu|rupa|satu²|sebaik|sebelum|sebenar|sebetul|secukup|seharus|sekadar|selanjut|seluruh|semua|sepenuh|sesungguh|ta|tadi|tampak|tentu) -nya 							 \1nya 
+! (agak|akhir|berikut|berta|biasa|ha|kelihatan|misal|nampak|no|nyo|pu|rupa|satu²|sebaik|sebelum|sebenar|sebetul|secukup|seharus|sekadar|selanjut|seluruh|semua|sepenuh|sesungguh|ta|tadi|tampak|tentu|umum) -nya 							 \1nya 
 
 ;; bu -ku -> buku
 ;; ku -ku -> kuku
@@ -66,6 +66,7 @@
 ! [Ss]eorang 								 se- orang 
 
 ! berbentuk 									 ber- bentuk 
+! berbumbu 									 ber- bumbu 
 ! berwarna 									 ber- warna 
 ! berukuran 									 ber- ukuran 
 ! bergaris 									 ber- garis 
@@ -84,6 +85,9 @@
 ! bertekstur 									 ber- tekstur 
 ! berisi 									 ber- isi 
 ! berkualitas 									 ber- kualitas 
+! bermutu 									 ber- mutu 
+! bersirip 									 ber- sirip 
+! berkalori 									 ber- kalori 
 
 ;; DVM 2017-12-18: proclitics are regarded as prefixes, see irules.tdl
 ;! (K|k)u(\w+) 								 ku- \1 
