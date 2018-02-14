@@ -575,14 +575,18 @@ transitive-verb-lex := main-verb-lex & transitive-lex-item &
                            POSTHEAD + ] ] > ].
 
 ;; DVM 2018-01-04: passive-one-transitive-lex-item based on transitive-lex-item in matrix.tdl 
-passive-transitive-lex-item := basic-two-arg-no-hcons & basic-icons-lex-item &
+passive-transitive-lex-item := basic-two-arg-no-hcons & two-icons-lex-item &
    [ ARG-ST < [ LOCAL.CONT.HOOK [ INDEX ref-ind & #ind1,
-				  ICONS-KEY.IARG1 #clause ] ],
+				  ICONS-KEY #icons1 ] ],
 	      [ LOCAL.CONT.HOOK [ INDEX ref-ind & #ind2,
-				  ICONS-KEY.IARG1 #clause ] ] >,
+				  ICONS-KEY #icons2 ] ] >,
      SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
 			     ARG2 #ind1 ],
-	      LOCAL.CONT.HOOK.CLAUSE-KEY #clause ] ].
+	      LOCAL.CONT [ HOOK.CLAUSE-KEY #clause,
+                           ICONS <! focus-or-topic & #icons1 & [ IARG1 #clause,
+                                                                 IARG2 #ind1 ], 
+		                    non-topic & #icons2 & [ IARG1 #clause,
+                                                            IARG2 #ind2 ] !> ] ] ].
 
 ; DVM 2017-03-23: for passive type 1 without "oleh"
 passive-one-verb-lex := passive-transitive-lex-item & main-verb-lex &
@@ -610,7 +614,8 @@ passive-two-verb-lex := passive-transitive-lex-item & main-verb-lex &
 ;  [ INFLECTED.VOICE-FLAG - ].
 
 ; DVM 2017-03-23: the new tr-verb-lex
-tr-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
+; tr-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
+tr-verb-lex := basic-two-arg-no-hcons & basic-verb-lex &
   [ INFLECTED.VOICE-FLAG - ].
 
 intr-verb-lex := intransitive-verb-lex.
@@ -788,7 +793,8 @@ adj-to-attr-quant-rule := const-lex-rule &
 ;; DVM 2015-05-09: from Zhong
 
 ;adj :+ [ CARDINAL bool ].
-head-min :+ avm & [ CARDIN bool ].
+;head-min :+ avm & [ CARDIN bool ].
+avm :+ [ CARDIN bool ].
 
 card_rel := named_rel.
 
@@ -1072,7 +1078,8 @@ active-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & transiti
     DTR tr-verb-lex ].
 
 ; DVM 2017-03-23: for passives
-passive-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+; passive-voice-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+passive-voice-lex-rule-super := add-only-rule & infl-lex-rule &
   [ INFLECTED.VOICE-FLAG +,
     DTR tr-verb-lex ].
 
@@ -1499,7 +1506,7 @@ vp-adj-tr-lex-item := basic-two-arg & basic-icons-lex-item &
                            HCONS <! qeq & [ HARG #harg,
 					    LARG #larg ] !> ] ] ].
 
-verb-adj-lex := non-mod-lex-item & main-verb-lex & vp-adj-tr-lex-item &
+verb-adj-lex := main-verb-lex & vp-adj-tr-lex-item &
   [ SYNSEM.LOCAL [ CAT [ HEAD copula-dynamic,
                    	VAL [ SUBJ < #subj >,
                    	      COMPS < #comps >,
