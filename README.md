@@ -1,6 +1,6 @@
 # Indonesian Resource Grammar (INDRA)
 
-Indonesian Grammar in [HPSG](http://hpsg.stanford.edu/) using the [DELPH-IN](http://delph-in.net) infrastructure. It is bootstrapped using the [LinGO Grammar Matrix](http://www.delph-in.net/matrix/).
+This is a medium-sized computational Indonesian grammar in [HPSG](http://hpsg.stanford.edu/) using the [DELPH-IN](http://delph-in.net) infrastructure. It is bootstrapped using the [LinGO Grammar Matrix](http://www.delph-in.net/matrix/).
 
 Compile with:
 
