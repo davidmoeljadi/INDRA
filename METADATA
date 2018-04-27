@@ -24,8 +24,8 @@
 
 ## Grammar maintainers and contributors
 
-MAINTAINER="DavidMoeljadi"
-CONTRIBUTORS="DavidMoeljadi; FrancisBond; Sanghoun Song; Michael Goodman; Dan Flickinger"
+MAINTAINER="David Moeljadi"
+CONTRIBUTORS="David Moeljadi; Francis Bond; Sanghoun Song; Dan Flickinger; Michael Goodman; Luis Morgado da Costa"
 CONTACT_EMAIL="davidmoeljadi@gmail.com"
 
 ## Grammar name and web presence
@@ -33,10 +33,10 @@ CONTACT_EMAIL="davidmoeljadi@gmail.com"
 
 GRAMMAR_NAME="Indonesian Resource Grammar"
 SHORT_GRAMMAR_NAME="INDRA"
-WEBSITE=""
-DEMO_WEBSITE=""
-DOCUMENTATION_URL=""
-ISSUE_TRACKER=""
+WEBSITE="http://moin.delph-in.net/IndraTop"
+DEMO_WEBSITE="http://chimpanzee.ling.washington.edu/demophin/indra/"
+DOCUMENTATION_URL="http://moin.delph-in.net/IndraTop"
+ISSUE_TRACKER="https://github.com/davidmoeljadi/INDRA"
 LICENSE="MIT"
 
 ## You may optionally specify a release date for the grammar. If unspecified,
@@ -48,22 +48,22 @@ LATEST_RELEASE=""
 ## If this is not provided, the text of citation.bib or canonical.bib
 ## will be used in the Grammar Catalogue
 BIB_URL=""
-PDF_URL=""
-CITE="Moeljadi, David 2014"
+PDF_URL="http://aclweb.org/anthology/W/W15/W15-3302.pdf"
+CITE="Moeljadi, Bond, and Song 2015"
 
 ## Version Control
 ## If this is not provided, it is automatically extracted from the
 ## local version control info. You only need to modify this if the
 ## version control URL you use locally is not the one you want published
-VCS=""
+VCS="https://github.com/davidmoeljadi/INDRA"
 
 ## Semi-colon separated list of required external resources 
 ## e.g.
 ## EXTERNAL_RESOURCES="TnT tagger; SPRouT named-entity tagger"
 
-EXTERNAL_RESOURCES=""
+EXTERNAL_RESOURCES="Indonesian POS Tagger"
 
-ASSOCIATED_RESOURCES=""
+ASSOCIATED_RESOURCES="bridging rules; transfer grammars for machine translation; unknown word handling with YY-mode"
 
 ## Grammar type:
 ##    Resource grammar: Broad coverage, used in one or more
@@ -83,8 +83,8 @@ ASSOCIATED_RESOURCES=""
 ## Uncomment one:
 #GRAMMAR_TYPE="Resource grammar"
 #GRAMMAR_TYPE="Treebank trained grammar"
-#GRAMMAR_TYPE="Medium-sized linguistic grammar"
-GRAMMAR_TYPE="Experimental grammar"
+GRAMMAR_TYPE="Medium-sized linguistic grammar"
+#GRAMMAR_TYPE="Experimental grammar"
 
 
 ## Language identification

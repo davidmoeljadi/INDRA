@@ -639,13 +639,10 @@ opt-tr-pp-comp-verb-lex := opt-tr-verb-lex &
 ;; DVM 2018-01-04 : relational-verb-lex and v_pp*_dir_le need to be constrained in the future.
 relational-verb-lex := opt-tr-pp-comp-verb-lex.
 
-; <type val="v_pp*_dir_le">
-; <description>Cmps PP(opt,dir)                 
-; <ex>B crept into the room.
-; <nex>
-; <todo>
-; </type>
-v_pp*_dir_le := opt-tr-pp-comp-verb-lex.
+v_pp*_dir_le := opt-tr-pp-comp-verb-lex
+"Cmps PP(opt,dir)
+<ex>B merangkak ke dalam kamar."
+.
 
 ;;; Auxiliaries
 
@@ -1170,13 +1167,9 @@ passive-two-prefix-kau-rule := unary-phrase &
 ; DVM 2017-09-13: active voice for ditransitives V NP NP
 ; Temporary patch for e.g. 'take' which has an optional ARG3 role, which
 ; needs to be present so generator won't spuriously fill it.
-; <type val="v_np_noarg3_le">
-; <description>Cmps NP(obl), only two args      
-; <ex>B took the book.
-; <nex>
-; <todo>
-; </type>
 v_np_noarg3_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
+"Cmps NP(obl), only two args
+<ex>Budi mengambil buku."
   [ INFLECTED.VOICE-FLAG - ].
 
 ditransitive-verb-lex := main-verb-lex & ditransitive-lex-item &
@@ -1253,7 +1246,7 @@ passive-two-ditransitive-lex-item := passive-ditransitive-lex-item &
                             VAL.COMPS < #comp1, #comp2 > ] ] ] ].
 
 ; without "oleh"
-; <ex> Budi dibuatkan Adi pizza
+; EEXX Budi dibuatkan Adi pizza
 passive-one-ditrans-n-n-verb-lex := passive-one-ditransitive-lex-item & main-verb-lex &
    [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ ] , [ LOCAL.CAT.HEAD subj-noun ] > ].
 
@@ -1261,20 +1254,16 @@ passive-one-ditrans-n-n-verb-lex := passive-one-ditransitive-lex-item & main-ver
 pas-two-ditrans-n-n-lex-rule := passive-voice-lex-rule-ditrans-n-n & passive-two-ditrans-n-n-verb-lex.
 
 ; without "oleh"
-; <ex> Budi saya buatkan pizza
+; EEXX Budi saya buatkan pizza
 passive-two-ditrans-n-n-verb-lex := passive-two-ditransitive-lex-item & main-verb-lex &
    [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ ] , [ LOCAL.CAT.HEAD subj-noun ] > ].
 
 ; DVM 2017-09-13: active voice for ditransitives V NP PP
 ;; takes dir_state_modable_rel oblique complement.
 ;; put (takes variety of PP complements, so avoid chart dependency filter)
-; <type val="v_np-pp_prop_le">
-; <description>Cmps NP(obl),PP(obl), state rslt 
-; <ex>B put C on D.
-; <nex>
-; <todo>
-; </type>
 v_np-pp_prop_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
+"Cmps NP(obl),PP(obl), state rslt
+<ex>Budi menaruh buku di meja."
   [ INFLECTED.VOICE-FLAG - ].
 
 ;; TODO: ditransitive-n-p
@@ -1317,13 +1306,10 @@ active-voice-lex-rule-ditrans-n-p := add-only-no-ccont-rule & infl-lex-rule & di
 
 act-ditrans-n-p-lex-rule := active-voice-lex-rule-ditrans-n-p.
 
-; <type val="v_np-pp_e_le">
-; <description>Cmps NP(obl),PP(sel.obl)         
-; <ex>B compared C with D.
-; <nex>
-; <todo>
-; </type>
-v_np-pp_e_le := v_np-pp_prop_le. 
+v_np-pp_e_le := v_np-pp_prop_le
+"Cmps NP(obl),PP(sel.obl)
+<ex>Budi membandingkan Adi dengan Susi."
+. 
 
 ;;;passive one ditrans n-p
 pas-one-ditrans-n-p-lex-rule := passive-voice-lex-rule-ditrans-n-p & passive-one-ditrans-n-p-verb-lex.
@@ -1333,7 +1319,7 @@ passive-voice-lex-rule-ditrans-n-p := add-only-no-ccont-rule & infl-lex-rule &
     DTR v_np-pp_prop_le ].
 
 ; without "oleh"
-; <ex> Budi dimasukkan Adi ke sekolah
+; EEXX Budi dimasukkan Adi ke sekolah
 passive-one-ditrans-n-p-verb-lex := passive-one-ditransitive-lex-item & main-verb-lex &
    [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ ] , [ LOCAL.CAT.HEAD nonoleh-adp ] > ].
 
@@ -1368,7 +1354,7 @@ passive-oleh-ditrans-n-p-verb-lex := passive-ditransitive-lex-item & main-verb-l
 pas-two-ditrans-n-p-lex-rule := passive-voice-lex-rule-ditrans-n-p & passive-two-ditrans-n-p-verb-lex.
 
 ; without "oleh"
-; <ex> Budi saya masukkan ke sekolah
+; EEXX Budi saya masukkan ke sekolah
 passive-two-ditrans-n-p-verb-lex := passive-two-ditransitive-lex-item & main-verb-lex &
    [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ ] , [ LOCAL.CAT.HEAD nonoleh-adp ] > ].
 
@@ -1976,21 +1962,24 @@ trans-first-arg-control-adj := basic-two-arg & basic-nomod-adj-lex & trans-first
 ;; need to be modified
 
 ;; TODO: merge with trans-verb-lex
-; <type val="v_np_ntr_le">
-; <description>Cmps NP(obl), no psv             
-; <ex>B remains C.
-; <nex>
-; <todo>
-; </type>
-v_np_ntr_le := non-opt-tr-verb-lex.
+v_np_ntr_le := non-opt-tr-verb-lex
+"Cmps NP(obl), no psv
+<ex>B masih murid."
+.
 
-; <type val="v_cp_prop_le">
-; <description>Cmps S (fin/inf, -Q, opt cmplzr) 
-; <ex>B hoped (that) C won. 
-; <nex>
-; <todo>
-; </type>
-v_cp_prop_le := prop-comp-verb-lex.
+v_cp_prop_le := prop-comp-verb-lex
+"Cmps S (fin/inf, -Q, opt cmplzr)
+<ex>B hoped (that) C won.
+
+Todo
+----
+
+* this
+* that
+* 'tother
+
+"
+.
 
 ; verb with preposition
 ;v_pp_le := transitive-verb-lex &
@@ -2927,9 +2916,9 @@ yang := +pc.
 
 yang-comp-lex := basic-one-arg & yang-super-lex & raise-sem-lex-item & no-icons-lex-item & norm-zero-arg &
 "The modified noun is the missing argument in the relative clause.
-<ex>saya makan buah yang merah
-<ex>saya makan buah yang merah itu
-<ex>saya membaca buku yang ditulis Budi
+EEXX saya makan buah yang merah
+EEXX saya makan buah yang merah itu
+EEXX saya membaca buku yang ditulis Budi
 "
   [ SYNSEM [ LOCAL [ CAT [ HEAD yang &
                                 [ MOD < [ LOCAL.CONT.HOOK [ INDEX #slash,
@@ -2968,7 +2957,7 @@ yang-nya-comp-lex := basic-two-arg & yang-super-lex & no-icons-lex-item & norm-z
 " MC - means that N N=nya V/A/P is not a main clause
 OPT - is needed to constrain the number of trees, also neither the N=nya nor the V/A/P is optional
 The modified noun is the missing possessor in the relative clause.
-<ex>gajah yang hidungnya panjang itu tidur
+EEXX gajah yang hidungnya panjang itu tidur
 "
   [ SYNSEM [ LOCAL [ CAT [ HEAD yang &
                                 [  MOD < [ LOCAL [ CAT.VAL.SPR < canonical-synsem >,
