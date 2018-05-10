@@ -182,15 +182,84 @@ pas-two-ditrans-n-p-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT -], [OPT -] > ].
 
 ;;;passive voice type two with prefix ku- and kau-
+;pas-two-prefix-ku :=
+;%prefix (* ku)
+;pas-two-prefix-ku-lex-rule &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+
+#|
 pas-two-prefix-ku :=
 %prefix (* ku)
-pas-two-prefix-ku-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+pas-two-ku-rule &
+ [ DTR.SYNSEM [ LOCAL [ CAT.HEAD passive-ku,
+                        CONT.HOOK [ INDEX #index,
+				    LTOP #larg ] ],
+                LKEYS.KEYREL.ARG1 #ind2 ],
+   C-CONT [ HOOK [ LTOP #larg,
+                   INDEX #index ],
+	    HCONS <! qeq & [ HARG #harg2,
+			     LARG #larg2 ] !>,
+	    RELS <! quant-relation & [ PRED pronoun_q_rel,
+				       ARG0 #ind2,
+				       RSTR #harg2 ],
+  		    arg0-relation & [ PRED pronoun_n_rel,
+				      LBL #larg2,
+				      ARG0 #ind2 & [ PNG.PERNUM 1sg ] ] !> ] ].
+|#
+
+pas-two-prefix-ku :=
+%prefix (* ku)
+pas-two-ku-rule &
+ [ DTR.SYNSEM [ LOCAL [ CAT [ HEAD passive-ku,
+                              VAL [ SUBJ < [ LOCAL [ CAT [ HEAD subj-noun,
+                                                           VAL [ SPR < >,
+                                                                 COMPS < > ] ],
+                                                     CONT.HOOK.INDEX ref-ind & #ind1 ] ] >,
+ 			            COMPS < > ] ],
+                        CONT.HOOK [ INDEX #index,
+				    LTOP #larg ] ],
+                LKEYS.KEYREL [ ARG1 #ind2,
+                               ARG2 #ind1 ] ],
+   C-CONT [ HOOK [ LTOP #larg,
+                   INDEX #index ],
+	    HCONS <! qeq & [ HARG #harg2,
+			     LARG #larg2 ] !>,
+	    RELS <! quant-relation & [ PRED pronoun_q_rel,
+				       ARG0 #ind2,
+				       RSTR #harg2 ],
+  		    arg0-relation & [ PRED pronoun_n_rel,
+				      LBL #larg2,
+				      ARG0 #ind2 & [ PNG.PERNUM 1sg ] ] !> ] ].
 
 pas-two-prefix-kau :=
 %prefix (* kau)
-pas-two-prefix-kau-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+pas-two-ku-rule &
+ [ DTR.SYNSEM [ LOCAL [ CAT [ HEAD passive-kau,
+                              VAL [ SUBJ < [ LOCAL [ CAT [ HEAD subj-noun,
+                                                           VAL [ SPR < >,
+                                                                 COMPS < > ] ],
+                                                     CONT.HOOK.INDEX ref-ind & #ind1 ] ] >,
+ 			            COMPS < > ] ],
+                        CONT.HOOK [ INDEX #index,
+				    LTOP #larg ] ],
+                LKEYS.KEYREL [ ARG1 #ind2,
+                               ARG2 #ind1 ] ],
+   C-CONT [ HOOK [ LTOP #larg,
+                   INDEX #index ],
+	    HCONS <! qeq & [ HARG #harg2,
+			     LARG #larg2 ] !>,
+	    RELS <! quant-relation & [ PRED pronoun_q_rel,
+				       ARG0 #ind2,
+				       RSTR #harg2 ],
+  		    arg0-relation & [ PRED pronoun_n_rel,
+				      LBL #larg2,
+				      ARG0 #ind2 & [ PNG.PERNUM 2sg ] ] !> ] ].
+
+
+;pas-two-prefix-kau :=
+;%prefix (* kau)
+;pas-two-prefix-kau-lex-rule &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
 
 ;pas-two-ditrans-n-n-prefix :=
 ;pas-two-ditrans-n-n-lex-rule &

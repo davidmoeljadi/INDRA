@@ -639,10 +639,14 @@ opt-tr-pp-comp-verb-lex := opt-tr-verb-lex &
 ;; DVM 2018-01-04 : relational-verb-lex and v_pp*_dir_le need to be constrained in the future.
 relational-verb-lex := opt-tr-pp-comp-verb-lex.
 
+#|
 v_pp*_dir_le := opt-tr-pp-comp-verb-lex
 "Cmps PP(opt,dir)
 <ex>B merangkak ke dalam kamar."
 .
+|#
+
+v_pp*_dir_le := opt-tr-pp-comp-verb-lex.
 
 ;;; Auxiliaries
 
@@ -1090,6 +1094,49 @@ pas-two-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex &
 pas-two-prefix-ku-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex &
    [ SYNSEM.LOCAL.CAT.HEAD passive-ku ].
 
+
+
+pas-two-ku-rule := same-non-local-lex-rule &
+		   same-modified-lex-rule &
+		   same-light-lex-rule &
+		   same-ctxt-lex-rule &
+		   same-cont-lex-rule &
+		   same-agr-lex-rule &
+		   same-head-lex-rule &
+		   same-hc-light-lex-rule &
+		   same-posthead-lex-rule &
+		   same-mc-lex-rule &
+		   infl-lex-rule & 
+  [ INFLECTED.VOICE-FLAG +,
+    SYNSEM [ LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CAT [ HEAD subj-noun,
+                                                    VAL [ SPR < >,
+                                                          COMPS < > ] ],
+                                              CONT.HOOK.INDEX #ind1 ] ] >,
+ 			     COMPS < > ],
+             LKEYS.KEYREL.ARG2 #ind1 ],
+    C-CONT.ICONS <! !>,
+    DTR tr-verb-lex ].
+
+
+#|
+passive-transitive-lex-item := basic-two-arg-no-hcons & two-icons-lex-item &
+   [ ARG-ST < [ LOCAL.CONT.HOOK [ INDEX ref-ind & #ind1,
+				  ICONS-KEY #icons1 ] ],
+	      [ LOCAL.CONT.HOOK [ INDEX ref-ind & #ind2,
+				  ICONS-KEY #icons2 ] ] >,
+     SYNSEM [ LKEYS.KEYREL [ ARG1 #ind2,
+			     ARG2 #ind1 ],
+	      LOCAL.CONT [ HOOK.CLAUSE-KEY #clause,
+                           ICONS <! focus-or-topic & #icons1 & [ IARG1 #clause,
+                                                                 IARG2 #ind1 ], 
+		                    non-topic & #icons2 & [ IARG1 #clause,
+                                                            IARG2 #ind2 ] !> ] ] ].
+
+passive-ku-lex := passive-transitive-lex-item & main-verb-lex &
+   [ SYNSEM [ LOCAL [ CAT [ VAL.COMPS < > ] ] ] ].
+|#
+
+
 pas-two-prefix-kau-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex &
    [ SYNSEM.LOCAL.CAT.HEAD passive-kau ].
 
@@ -1261,10 +1308,16 @@ passive-two-ditrans-n-n-verb-lex := passive-two-ditransitive-lex-item & main-ver
 ; DVM 2017-09-13: active voice for ditransitives V NP PP
 ;; takes dir_state_modable_rel oblique complement.
 ;; put (takes variety of PP complements, so avoid chart dependency filter)
+#|
 v_np-pp_prop_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
 "Cmps NP(obl),PP(obl), state rslt
 <ex>Budi menaruh buku di meja."
   [ INFLECTED.VOICE-FLAG - ].
+|#
+
+v_np-pp_prop_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
+  [ INFLECTED.VOICE-FLAG - ].
+
 
 ;; TODO: ditransitive-n-p
 #|
@@ -1306,10 +1359,14 @@ active-voice-lex-rule-ditrans-n-p := add-only-no-ccont-rule & infl-lex-rule & di
 
 act-ditrans-n-p-lex-rule := active-voice-lex-rule-ditrans-n-p.
 
+#|
 v_np-pp_e_le := v_np-pp_prop_le
 "Cmps NP(obl),PP(sel.obl)
 <ex>Budi membandingkan Adi dengan Susi."
 . 
+|#
+
+v_np-pp_e_le := v_np-pp_prop_le. 
 
 ;;;passive one ditrans n-p
 pas-one-ditrans-n-p-lex-rule := passive-voice-lex-rule-ditrans-n-p & passive-one-ditrans-n-p-verb-lex.
@@ -1962,11 +2019,16 @@ trans-first-arg-control-adj := basic-two-arg & basic-nomod-adj-lex & trans-first
 ;; need to be modified
 
 ;; TODO: merge with trans-verb-lex
+#|
 v_np_ntr_le := non-opt-tr-verb-lex
 "Cmps NP(obl), no psv
 <ex>B masih murid."
 .
+|#
 
+v_np_ntr_le := non-opt-tr-verb-lex.
+
+#|
 v_cp_prop_le := prop-comp-verb-lex
 "Cmps S (fin/inf, -Q, opt cmplzr)
 <ex>B hoped (that) C won.
@@ -1980,6 +2042,10 @@ Todo
 
 "
 .
+|#
+
+v_cp_prop_le := prop-comp-verb-lex.
+
 
 ; verb with preposition
 ;v_pp_le := transitive-verb-lex &
@@ -2288,6 +2354,7 @@ adposition-lex := adposition-nomod-lex &
 ;                       VAL.COMPS.FIRST.OPT - ] ].
 
 ; DVM 2017-12-19: "oleh" in passive 1
+#|
 adposition-oleh-lex := single-rel-lex-item & basic-icons-lex-item & intersective-mod-lex & norm-ltop-lex-item &
   [ SYNSEM [ LKEYS.KEYREL [ ARG1 #xarg,
 			    ARG2 #ind1 ],
@@ -2304,7 +2371,24 @@ adposition-oleh-lex := single-rel-lex-item & basic-icons-lex-item & intersective
                                                    CONT [ HOOK.INDEX #ind2,
                                                           RELS <! noun-relation & [ ARG0 #ind2 ] !> ] ]] >,
 				 SUBJ < > ]]]]].
+|#
 
+adposition-oleh-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+			    ARG1 #xarg,
+			    ARG2 #ind ],
+	     LOCAL [ CONT.HOOK [ XARG #xarg,
+				 INDEX #arg0 ],
+		     CAT [ HEAD oleh-adp & [ MOD < [ LOCAL [ CAT [ HEAD pass1,
+						                   VAL [ SUBJ cons,
+                                                                         COMPS < [ LOCAL.CONT.HOOK.INDEX #ind ] > ]],
+						             CONT.HOOK.INDEX #xarg ]] > ],
+			   VAL [ SPR < >,
+			         COMPS < [ OPT -,
+				           LOCAL [ CAT [ HEAD comp-noun,
+						         VAL.SPR < > ],
+					           CONT.HOOK.INDEX #ind ]] >,
+				 SUBJ < > ]]]]].
 
 ; DVM 2017-03-24: for passive type 1 with "oleh"
 passive-oleh-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & main-verb-lex &
