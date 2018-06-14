@@ -2373,7 +2373,8 @@ adposition-oleh-lex := single-rel-lex-item & basic-icons-lex-item & intersective
 				 SUBJ < > ]]]]].
 |#
 
-adposition-oleh-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
+;adposition-oleh-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
+adposition-oleh-lex := raise-sem-lex-item & intersective-mod-lex &
   [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
 			    ARG1 #xarg,
 			    ARG2 #ind ],
