@@ -54,7 +54,7 @@ PNG.PERNUM : PNG.PERNUM
   2sg <> 2sg
   1sg <> 1sg
 ;  3rd <> 3rd
-  3rd << 3rd
+;  3rd << 3rd
 ; FCB & DVM 2015-10-28: generate unspecified 3rd as 3sg
   3rd >> 3sg
   2nd <> 2nd
@@ -67,14 +67,20 @@ PNG.GEND : PNG.GEND
   * <> *
 
 E.TENSE : E.TENSE
-  future <> future
+;  future <> future
+  future >> future
+  tense >> no-tensed
   * <> *
 
 E.ASPECT : E.ASPECT
-  perf-and-prog <> perf-and-prog
-  perf <> perf
-  perf-and-prog <> perf-and-prog
-  prog <> prog
+;  perf-and-prog <> perf-and-prog
+;  perf <> perf
+;  perf-and-prog <> perf-and-prog
+;  prog <> prog
+  perf >> perf
+;  perf-and-prog >> perf-and-prog
+  prog >> prog
+  aspect >> non-perf-and-prog
   * <> *
 
 E.MOOD : E.MOOD
