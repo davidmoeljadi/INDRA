@@ -681,19 +681,22 @@ aspect_perf-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
 		       VAL [ SPR < >,
 			     COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.ASPECT perf,
-					         CAT.HEAD.FORM form ] ] ] ].
+					         CAT.HEAD [ AUX -,
+                                                            FORM form ] ] ] ] ].
 
 aspect_prog-aux-lex := subj-raise-aux-no-pred &
   [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
 		       VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.ASPECT prog,
-					       CAT.HEAD.FORM form ] ] ].
+					       CAT.HEAD [ AUX -,
+                                                          FORM form ] ] ] ].
 
 
 ;;DVM 2018-01-02: delete this line [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
 ;;so that "akan sudah", "akan harus" can be parsed.
 modal_fut-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.TENSE future,
-					     CAT.HEAD.FORM form ] ].
+  [ SYNSEM.LOCAL.CAT [ HEAD.FORM finite,
+                       VAL.COMPS.FIRST.LOCAL [ CONT.HOOK.INDEX.E.TENSE future,
+					       CAT.HEAD.FORM form ] ] ].
 
 ;; DVM 2015-05-09: subj-raise-aux-with-pred is commented out
 ;; DVM 2015-05-09: saya sedang "I am in the process of" is considered ungrammatical
@@ -795,7 +798,7 @@ adj-to-attr-quant-rule := const-lex-rule &
 
 ;adj :+ [ CARDINAL bool ].
 ;head-min :+ avm & [ CARDIN bool ].
-avm :+ [ CARDIN bool ].
+;avm :+ [ CARDIN bool ].
 
 card_rel := named_rel.
 
@@ -814,7 +817,8 @@ card-relation := arg1-relation & named-relation &
 ; get only this [[dua puluh dua] [buku]]
 a_-_num_le := single-rel-lex-item & basic-icons-lex-item & 
   [ SYNSEM [ LOCAL [ CAT [ HEAD adj-number & [ MOD < [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
-                                                       LOCAL [ CAT [ HEAD commonnoun & [ CARDIN - ],
+;                                                       LOCAL [ CAT [ HEAD commonnoun & [ CARDIN - ],
+                                                       LOCAL [ CAT [ HEAD commonnoun,
               	                                                     VAL.SPR cons ],
                                                                CONT.HOOK.INDEX #xarg & [ PNG.ANIMCOUNT countable ] ] ] > ],
                            VAL [ COMPS < >,
@@ -2535,7 +2539,8 @@ redup-noun-lex-rule :=  same-non-local-lex-rule & common-noun-lex &
 		        same-agr-lex-rule & 
                         infl-lex-rule & 
  [ SYNSEM [ LOCAL [ CAT [ MC luk,
-			  HEAD #head & [ CARDIN + ], 
+;			  HEAD #head & [ CARDIN + ], 
+			  HEAD #head, 
 			  VAL #val, 
 			  POSTHEAD #posthead ],
 		    CONT.HOOK.INDEX.PNG.PERNUM pl ] ],
