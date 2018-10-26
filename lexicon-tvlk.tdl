@@ -1,0 +1,1840 @@
+internet+banking := uncountable-noun-lex &
+  [ STEM < "internet", "banking" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_internet+banking_n_rel",
+    TRAITS native_token_list ].
+
+Mandiri_Bank := proper-name-lex &
+  [ STEM < "Mandiri" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Bank Mandiri",
+    TRAITS native_token_list ].
+
+Traveloka := proper-name-lex &
+  [ STEM < "Traveloka" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Traveloka",
+    TRAITS native_token_list ].
+
+penurunan := inanimate-noun-lex &
+  [ STEM < "penurunan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penurunan_n_rel",
+    TRAITS native_token_list ].
+
+pemesenan := inanimate-noun-lex &
+  [ STEM < "pemesenan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemesanan_n_rel",
+    TRAITS native_token_list ].
+
+perekrutan := inanimate-noun-lex &
+  [ STEM < "perekrutan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perekrutan_n_rel",
+    TRAITS native_token_list ].
+
+pengangkutan := uncountable-noun-lex &
+  [ STEM < "pengangkutan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengangkutan_n_rel",
+    TRAITS native_token_list ].
+
+pemasangan := inanimate-noun-lex &
+  [ STEM < "pemasangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemasangan_n_rel",
+    TRAITS native_token_list ].
+
+pengalihan := inanimate-noun-lex &
+  [ STEM < "pengalihan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengalihan_n_rel",
+    TRAITS native_token_list ].
+
+pemisahan := inanimate-noun-lex &
+  [ STEM < "pemisahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemisahan_n_rel",
+    TRAITS native_token_list ].
+
+pembohongan := inanimate-noun-lex &
+  [ STEM < "pembohongan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembohongan_n_rel",
+    TRAITS native_token_list ].
+
+pemanggilan := inanimate-noun-lex &
+  [ STEM < "pemanggilan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemanggilan_n_rel",
+    TRAITS native_token_list ].
+
+penginformasian := inanimate-noun-lex &
+  [ STEM < "penginformasian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penginformasian_n_rel",
+    TRAITS native_token_list ].
+
+penggalan := inanimate-noun-lex &
+  [ STEM < "penggalan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penggalan_n_rel",
+    TRAITS native_token_list ].
+
+pembelajaran := inanimate-noun-lex &
+  [ STEM < "pembelajaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembelajaran_n_rel",
+    TRAITS native_token_list ].
+
+penetapan := inanimate-noun-lex &
+  [ STEM < "penetapan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penetapan_n_rel",
+    TRAITS native_token_list ].
+
+penyapaan := inanimate-noun-lex &
+  [ STEM < "penyapaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyapaan_n_rel",
+    TRAITS native_token_list ].
+
+pembulatan := inanimate-noun-lex &
+  [ STEM < "pembulatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembulatan_n_rel",
+    TRAITS native_token_list ].
+
+perjlnan := inanimate-noun-lex &
+  [ STEM < "perjlnan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perjalanan_n_rel",
+    TRAITS native_token_list ].
+
+pendebetan := inanimate-noun-lex &
+  [ STEM < "pendebetan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pendebitan_n_rel",
+    TRAITS native_token_list ].
+
+Pecindilan := proper-name-lex &
+  [ STEM < "Pecindilan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pecindilan",
+    TRAITS native_token_list ].
+
+Penjernihan_prop := proper-name-lex &
+  [ STEM < "Penjernihan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Penjernihan",
+    TRAITS native_token_list ].
+
+pertanggungan := inanimate-noun-lex &
+  [ STEM < "pertanggungan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pertanggungan_n_rel",
+    TRAITS native_token_list ].
+
+pertukaran := inanimate-noun-lex &
+  [ STEM < "pertukaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pertukaran_n_rel",
+    TRAITS native_token_list ].
+
+penyamaan := inanimate-noun-lex &
+  [ STEM < "penyamaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyamaan_n_rel",
+    TRAITS native_token_list ].
+
+pengejaan := uncountable-noun-lex &
+  [ STEM < "pengejaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengejaan_n_rel",
+    TRAITS native_token_list ].
+
+penertiban := inanimate-noun-lex &
+  [ STEM < "penertiban" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penertiban_n_rel",
+    TRAITS native_token_list ].
+
+penguploadan := inanimate-noun-lex &
+  [ STEM < "penguploadan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penguploadan_n_rel",
+    TRAITS native_token_list ].
+
+pentransferan := inanimate-noun-lex &
+  [ STEM < "pentransferan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pentransferan_n_rel",
+    TRAITS native_token_list ].
+
+penyesuaian := inanimate-noun-lex &
+  [ STEM < "penyesuaian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyesuaian_n_rel",
+    TRAITS native_token_list ].
+
+pelunasan := inanimate-noun-lex &
+  [ STEM < "pelunasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pelunasan_n_rel",
+    TRAITS native_token_list ].
+
+pengadaan := inanimate-noun-lex &
+  [ STEM < "pengadaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengadaan_n_rel",
+    TRAITS native_token_list ].
+
+pemanfaatan := inanimate-noun-lex &
+  [ STEM < "pemanfaatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemanfaatan_n_rel",
+    TRAITS native_token_list ].
+
+penipuan := inanimate-noun-lex &
+  [ STEM < "penipuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penipuan_n_rel",
+    TRAITS native_token_list ].
+
+persamaan := inanimate-noun-lex &
+  [ STEM < "persamaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_persamaan_n_rel",
+    TRAITS native_token_list ].
+
+perhentian := inanimate-noun-lex &
+  [ STEM < "perhentian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perhentian_n_rel",
+    TRAITS native_token_list ].
+
+pengantaran := inanimate-noun-lex &
+  [ STEM < "pengantaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengantaran_n_rel",
+    TRAITS native_token_list ].
+
+permasalahan := inanimate-noun-lex &
+  [ STEM < "permasalahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_permasalahan_n_rel",
+    TRAITS native_token_list ].
+
+pembaruan := inanimate-noun-lex &
+  [ STEM < "pembaruan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembaruan_n_rel",
+    TRAITS native_token_list ].
+
+penyalahgunaan := inanimate-noun-lex &
+  [ STEM < "penyalahgunaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyalahgunaan_n_rel",
+    TRAITS native_token_list ].
+
+penonaktifan := inanimate-noun-lex &
+  [ STEM < "penonaktifan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penonaktifan_n_rel",
+    TRAITS native_token_list ].
+
+pencobaan := inanimate-noun-lex &
+  [ STEM < "pencobaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pencobaan_n_rel",
+    TRAITS native_token_list ].
+
+penilaian := inanimate-noun-lex &
+  [ STEM < "penilaian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penilaian_n_rel",
+    TRAITS native_token_list ].
+
+penagihan := inanimate-noun-lex &
+  [ STEM < "penagihan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penagihan_n_rel",
+    TRAITS native_token_list ].
+
+pesan := inanimate-noun-lex &
+  [ STEM < "pesan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pesan_n_rel",
+    TRAITS native_token_list ].
+
+pengunduhan := inanimate-noun-lex &
+  [ STEM < "pengunduhan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengunduhan_n_rel",
+    TRAITS native_token_list ].
+
+pemajuan := inanimate-noun-lex &
+  [ STEM < "pemajuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemajuan_n_rel",
+    TRAITS native_token_list ].
+
+perhitungan := inanimate-noun-lex &
+  [ STEM < "perhitungan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perhitungan_n_rel",
+    TRAITS native_token_list ].
+
+pemulangan := uncountable-noun-lex &
+  [ STEM < "pemulangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemulangan_n_rel",
+    TRAITS native_token_list ].
+
+pengkoreksian := inanimate-noun-lex &
+  [ STEM < "pengkoreksian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengoreksian_n_rel",
+    TRAITS native_token_list ].
+
+pemulihan := inanimate-noun-lex &
+  [ STEM < "pemulihan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemulihan_n_rel",
+    TRAITS native_token_list ].
+
+penundaan := inanimate-noun-lex &
+  [ STEM < "penundaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penundaan_n_rel",
+    TRAITS native_token_list ].
+
+Pegangsaan := proper-name-lex &
+  [ STEM < "Pegangsaan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pegangsaan",
+    TRAITS native_token_list ].
+
+pencairan := inanimate-noun-lex &
+  [ STEM < "pencairan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pencairan_n_rel",
+    TRAITS native_token_list ].
+
+pertanggungjawaban := inanimate-noun-lex &
+  [ STEM < "pertanggungjawaban" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pertanggungjawaban_n_rel",
+    TRAITS native_token_list ].
+
+penelusuran := inanimate-noun-lex &
+  [ STEM < "penelusuran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penelusuran_n_rel",
+    TRAITS native_token_list ].
+
+pendaratan := inanimate-noun-lex &
+  [ STEM < "pendaratan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pendaratan_n_rel",
+    TRAITS native_token_list ].
+
+penempatan := inanimate-noun-lex &
+  [ STEM < "penempatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penempatan_n_rel",
+    TRAITS native_token_list ].
+
+persiapan := inanimate-noun-lex &
+  [ STEM < "persiapan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_persiapan_n_rel",
+    TRAITS native_token_list ].
+
+penyetujuan := inanimate-noun-lex &
+  [ STEM < "penyetujuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyetujuan_n_rel",
+    TRAITS native_token_list ].
+
+pendampingan := inanimate-noun-lex &
+  [ STEM < "pendampingan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pendampingan_n_rel",
+    TRAITS native_token_list ].
+
+pengaktifan := inanimate-noun-lex &
+  [ STEM < "pengaktifan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengaktifan_n_rel",
+    TRAITS native_token_list ].
+
+penugasan := inanimate-noun-lex &
+  [ STEM < "penugasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penugasan_n_rel",
+    TRAITS native_token_list ].
+
+penjernihan_inanim := inanimate-noun-lex &
+  [ STEM < "penjernihan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penjernihan_n_rel",
+    TRAITS native_token_list ].
+
+penyetelan := inanimate-noun-lex &
+  [ STEM < "penyetelan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyetelan_n_rel",
+    TRAITS native_token_list ].
+
+pengaman := inanimate-noun-lex &
+  [ STEM < "pengaman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengaman_n_rel",
+    TRAITS native_token_list ].
+
+pergeseran := inanimate-noun-lex &
+  [ STEM < "pergeseran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pergeseran_n_rel",
+    TRAITS native_token_list ].
+
+pencatatan := inanimate-noun-lex &
+  [ STEM < "pencatatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pencatatan_n_rel",
+    TRAITS native_token_list ].
+
+penyamaran := inanimate-noun-lex &
+  [ STEM < "penyamaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyamaran_n_rel",
+    TRAITS native_token_list ].
+
+perlakuan := inanimate-noun-lex &
+  [ STEM < "perlakuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perlakuan_n_rel",
+    TRAITS native_token_list ].
+
+penerangan := inanimate-noun-lex &
+  [ STEM < "penerangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penerangan_n_rel",
+    TRAITS native_token_list ].
+
+pembokingan := inanimate-noun-lex &
+  [ STEM < "pembokingan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembookingan_n_rel",
+    TRAITS native_token_list ].
+
+penyanggahan := inanimate-noun-lex &
+  [ STEM < "penyanggahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyanggahan_n_rel",
+    TRAITS native_token_list ].
+
+penjadwalan := inanimate-noun-lex &
+  [ STEM < "penjadwalan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penjadwalan_n_rel",
+    TRAITS native_token_list ].
+
+perbincangan := inanimate-noun-lex &
+  [ STEM < "perbincangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perbincangan_n_rel",
+    TRAITS native_token_list ].
+
+penginvestigasian := inanimate-noun-lex &
+  [ STEM < "penginvestigasian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penginvestigasian_n_rel",
+    TRAITS native_token_list ].
+
+pembobolan := inanimate-noun-lex &
+  [ STEM < "pembobolan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembobolan_n_rel",
+    TRAITS native_token_list ].
+
+pemberlakuan := inanimate-noun-lex &
+  [ STEM < "pemberlakuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemberlakuan_n_rel",
+    TRAITS native_token_list ].
+
+perseroan := inanimate-noun-lex &
+  [ STEM < "perseroan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perseroan_n_rel",
+    TRAITS native_token_list ].
+
+persediaan := inanimate-noun-lex &
+  [ STEM < "persediaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_persediaan_n_rel",
+    TRAITS native_token_list ].
+
+penginepan := inanimate-noun-lex &
+  [ STEM < "penginepan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penginapan_n_rel",
+    TRAITS native_token_list ].
+
+pengulangan := inanimate-noun-lex &
+  [ STEM < "pengulangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengulangan_n_rel",
+    TRAITS native_token_list ].
+
+perbaharuan := inanimate-noun-lex &
+  [ STEM < "perbaharuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perbaharuan_n_rel",
+    TRAITS native_token_list ].
+
+penukaran := inanimate-noun-lex &
+  [ STEM < "penukaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penukaran_n_rel",
+    TRAITS native_token_list ].
+
+pendeteksian := inanimate-noun-lex &
+  [ STEM < "pendeteksian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pendeteksian_n_rel",
+    TRAITS native_token_list ].
+
+penghambatan := inanimate-noun-lex &
+  [ STEM < "penghambatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penghambatan_n_rel",
+    TRAITS native_token_list ].
+
+penjemputan := inanimate-noun-lex &
+  [ STEM < "penjemputan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penjemputan_n_rel",
+    TRAITS native_token_list ].
+
+pembebasan := inanimate-noun-lex &
+  [ STEM < "pembebasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembebasan_n_rel",
+    TRAITS native_token_list ].
+
+peminjaman := inanimate-noun-lex &
+  [ STEM < "peminjaman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_peminjaman_n_rel",
+    TRAITS native_token_list ].
+
+pengunduran := inanimate-noun-lex &
+  [ STEM < "pengunduran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengunduran_n_rel",
+    TRAITS native_token_list ].
+
+pengelolaan := inanimate-noun-lex &
+  [ STEM < "pengelolaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengelolaan_n_rel",
+    TRAITS native_token_list ].
+
+Pecenongan := proper-name-lex &
+  [ STEM < "Pecenongan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pecenongan",
+    TRAITS native_token_list ].
+
+penyingkatan := inanimate-noun-lex &
+  [ STEM < "penyingkatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyingkatan_n_rel",
+    TRAITS native_token_list ].
+
+pedoman := inanimate-noun-lex &
+  [ STEM < "pedoman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pedoman_n_rel",
+    TRAITS native_token_list ].
+
+pengumpulan := inanimate-noun-lex &
+  [ STEM < "pengumpulan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengumpulan_n_rel",
+    TRAITS native_token_list ].
+
+pembetulan := inanimate-noun-lex &
+  [ STEM < "pembetulan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembetulan_n_rel",
+    TRAITS native_token_list ].
+
+pembahasan := inanimate-noun-lex &
+  [ STEM < "pembahasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembahasan_n_rel",
+    TRAITS native_token_list ].
+
+pendingan := inanimate-noun-lex &
+  [ STEM < "pendingan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pendingan_n_rel",
+    TRAITS native_token_list ].
+
+Petamburan := proper-name-lex &
+  [ STEM < "Petamburan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Petamburan",
+    TRAITS native_token_list ].
+
+pedalaman := inanimate-noun-lex &
+  [ STEM < "pedalaman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pedalaman_n_rel",
+    TRAITS native_token_list ].
+
+pembookingan := inanimate-noun-lex &
+  [ STEM < "pembookingan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembookingan_n_rel",
+    TRAITS native_token_list ].
+
+pemunduran := inanimate-noun-lex &
+  [ STEM < "pemunduran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemunduran_n_rel",
+    TRAITS native_token_list ].
+
+penumpangan := inanimate-noun-lex &
+  [ STEM < "penumpangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penumpangan_n_rel",
+    TRAITS native_token_list ].
+
+penanganan := inanimate-noun-lex &
+  [ STEM < "penanganan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penanganan_n_rel",
+    TRAITS native_token_list ].
+
+pendebitan := inanimate-noun-lex &
+  [ STEM < "pendebitan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pendebitan_n_rel",
+    TRAITS native_token_list ].
+
+perbaruan := inanimate-noun-lex &
+  [ STEM < "perbaruan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perbaruan_n_rel",
+    TRAITS native_token_list ].
+
+pengenaan := inanimate-noun-lex &
+  [ STEM < "pengenaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengenaan_n_rel",
+    TRAITS native_token_list ].
+
+pengarahan := inanimate-noun-lex &
+  [ STEM < "pengarahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengarahan_n_rel",
+    TRAITS native_token_list ].
+
+pemesan := human-noun-lex &
+  [ STEM < "pemesan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemesan_n_rel",
+    TRAITS native_token_list ].
+
+pengimputan := inanimate-noun-lex &
+  [ STEM < "pengimputan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penginputan_n_rel",
+    TRAITS native_token_list ].
+
+penghitungan := inanimate-noun-lex &
+  [ STEM < "penghitungan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penghitungan_n_rel",
+    TRAITS native_token_list ].
+
+pengambilan := inanimate-noun-lex &
+  [ STEM < "pengambilan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengambilan_n_rel",
+    TRAITS native_token_list ].
+
+perpindahan := inanimate-noun-lex &
+  [ STEM < "perpindahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perpindahan_n_rel",
+    TRAITS native_token_list ].
+
+perguruan := inanimate-noun-lex &
+  [ STEM < "perguruan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perguruan_n_rel",
+    TRAITS native_token_list ].
+
+penghapusan := inanimate-noun-lex &
+  [ STEM < "penghapusan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penghapusan_n_rel",
+    TRAITS native_token_list ].
+
+peninjauan := inanimate-noun-lex &
+  [ STEM < "peninjauan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_peninjauan_n_rel",
+    TRAITS native_token_list ].
+
+perwakilan := human-noun-lex &
+  [ STEM < "perwakilan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perwakilan_n_2_rel",
+    TRAITS native_token_list ].
+
+perwakilan := inanimate-noun-lex &
+  [ STEM < "perwakilan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perwakilan_n_1_rel",
+    TRAITS native_token_list ].
+
+pendataan := inanimate-noun-lex &
+  [ STEM < "pendataan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pendataan_n_rel",
+    TRAITS native_token_list ].
+
+perlindungan := inanimate-noun-lex &
+  [ STEM < "perlindungan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perlindungan_n_rel",
+    TRAITS native_token_list ].
+
+peringatan := inanimate-noun-lex &
+  [ STEM < "peringatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_peringatan_n_rel",
+    TRAITS native_token_list ].
+
+pembelian := inanimate-noun-lex &
+  [ STEM < "pembelian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembelian_n_rel",
+    TRAITS native_token_list ].
+
+pencantuman := inanimate-noun-lex &
+  [ STEM < "pencantuman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pencantuman_n_rel",
+    TRAITS native_token_list ].
+
+pendobelan := inanimate-noun-lex &
+  [ STEM < "pendobelan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pendobelan_n_rel",
+    TRAITS native_token_list ].
+
+pelafalan := inanimate-noun-lex &
+  [ STEM < "pelafalan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pelafalan_n_rel",
+    TRAITS native_token_list ].
+
+penyampaian := inanimate-noun-lex &
+  [ STEM < "penyampaian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyampaian_n_rel",
+    TRAITS native_token_list ].
+
+pembersihan := inanimate-noun-lex &
+  [ STEM < "pembersihan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembersihan_n_rel",
+    TRAITS native_token_list ].
+
+pendengaran := inanimate-noun-lex &
+  [ STEM < "pendengaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pendengaran_n_rel",
+    TRAITS native_token_list ].
+
+perpanjangan := inanimate-noun-lex &
+  [ STEM < "perpanjangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perpanjangan_n_rel",
+    TRAITS native_token_list ].
+
+pengesahan := inanimate-noun-lex &
+  [ STEM < "pengesahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengesahan_n_rel",
+    TRAITS native_token_list ].
+
+pembiayaan := inanimate-noun-lex &
+  [ STEM < "pembiayaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembiayaan_n_rel",
+    TRAITS native_token_list ].
+
+pengorderan := inanimate-noun-lex &
+  [ STEM < "pengorderan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengorderan_n_rel",
+    TRAITS native_token_list ].
+
+pengumuman := inanimate-noun-lex &
+  [ STEM < "pengumuman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengumuman_n_rel",
+    TRAITS native_token_list ].
+
+perencanaan := inanimate-noun-lex &
+  [ STEM < "perencanaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perencanaan_n_rel",
+    TRAITS native_token_list ].
+
+pertnyaan := inanimate-noun-lex &
+  [ STEM < "pertnyaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pertanyaan_n_rel",
+    TRAITS native_token_list ].
+
+pergantian := inanimate-noun-lex &
+  [ STEM < "pergantian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pergantian_n_rel",
+    TRAITS native_token_list ].
+
+pengeditan := inanimate-noun-lex &
+  [ STEM < "pengeditan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengeditan_n_rel",
+    TRAITS native_token_list ].
+
+pemutusan := inanimate-noun-lex &
+  [ STEM < "pemutusan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemutusan_n_rel",
+    TRAITS native_token_list ].
+
+pemungutan := inanimate-noun-lex &
+  [ STEM < "pemungutan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemungutan_n_rel",
+    TRAITS native_token_list ].
+
+pemindahan := inanimate-noun-lex &
+  [ STEM < "pemindahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemindahan_n_rel",
+    TRAITS native_token_list ].
+
+penyediaan := inanimate-noun-lex &
+  [ STEM < "penyediaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyediaan_n_rel",
+    TRAITS native_token_list ].
+
+pesanggrahan := inanimate-noun-lex &
+  [ STEM < "pesanggrahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pesanggrahan_n_rel",
+    TRAITS native_token_list ].
+
+penginputan := inanimate-noun-lex &
+  [ STEM < "penginputan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penginputan_n_rel",
+    TRAITS native_token_list ].
+
+pengaduan := inanimate-noun-lex &
+  [ STEM < "pengaduan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengaduan_n_rel",
+    TRAITS native_token_list ].
+
+pengkreditan := inanimate-noun-lex &
+  [ STEM < "pengkreditan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengkreditan_n_rel",
+    TRAITS native_token_list ].
+
+percepatan := inanimate-noun-lex &
+  [ STEM < "percepatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_percepatan_n_rel",
+    TRAITS native_token_list ].
+
+perjuangan := inanimate-noun-lex &
+  [ STEM < "perjuangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perjuangan_n_rel",
+    TRAITS native_token_list ].
+
+permslhan := inanimate-noun-lex &
+  [ STEM < "permslhan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_permasalahan_n_rel",
+    TRAITS native_token_list ].
+
+pemalsuan := inanimate-noun-lex &
+  [ STEM < "pemalsuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemalsuan_n_rel",
+    TRAITS native_token_list ].
+
+penjadualan := inanimate-noun-lex &
+  [ STEM < "penjadualan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penjadwalan_n_rel",
+    TRAITS native_token_list ].
+
+pemakaman := inanimate-noun-lex &
+  [ STEM < "pemakaman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemakaman_n_rel",
+    TRAITS native_token_list ].
+
+penyebrangan := inanimate-noun-lex &
+  [ STEM < "penyebrangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyeberangan_n_rel",
+    TRAITS native_token_list ].
+
+perolehan := inanimate-noun-lex &
+  [ STEM < "perolehan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perolehan_n_rel",
+    TRAITS native_token_list ].
+
+pengaturan := inanimate-noun-lex &
+  [ STEM < "pengaturan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengaturan_n_rel",
+    TRAITS native_token_list ].
+
+perbantuan := inanimate-noun-lex &
+  [ STEM < "perbantuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perbantuan_n_rel",
+    TRAITS native_token_list ].
+
+pemblokiran := inanimate-noun-lex &
+  [ STEM < "pemblokiran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemblokiran_n_rel",
+    TRAITS native_token_list ].
+
+penelitian := inanimate-noun-lex &
+  [ STEM < "penelitian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penelitian_n_rel",
+    TRAITS native_token_list ].
+
+pengawasan := inanimate-noun-lex &
+  [ STEM < "pengawasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengawasan_n_rel",
+    TRAITS native_token_list ].
+
+pengiriman := inanimate-noun-lex &
+  [ STEM < "pengiriman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengiriman_n_rel",
+    TRAITS native_token_list ].
+
+penjaminan := inanimate-noun-lex &
+  [ STEM < "penjaminan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penjaminan_n_rel",
+    TRAITS native_token_list ].
+
+pengecualian := inanimate-noun-lex &
+  [ STEM < "pengecualian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengecualian_n_rel",
+    TRAITS native_token_list ].
+
+pemberhentian := inanimate-noun-lex &
+  [ STEM < "pemberhentian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemberhentian_n_rel",
+    TRAITS native_token_list ].
+
+pengerjaan := inanimate-noun-lex &
+  [ STEM < "pengerjaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengerjaan_n_rel",
+    TRAITS native_token_list ].
+
+pertimbangan := inanimate-noun-lex &
+  [ STEM < "pertimbangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pertimbangan_n_rel",
+    TRAITS native_token_list ].
+
+pesenan := inanimate-noun-lex &
+  [ STEM < "pesenan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pesanan_n_rel",
+    TRAITS native_token_list ].
+
+perobahan := inanimate-noun-lex &
+  [ STEM < "perobahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perubahan_n_rel",
+    TRAITS native_token_list ].
+
+pemikiran := inanimate-noun-lex &
+  [ STEM < "pemikiran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemikiran_n_rel",
+    TRAITS native_token_list ].
+
+perbatasan := inanimate-noun-lex &
+  [ STEM < "perbatasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perbatasan_n_rel",
+    TRAITS native_token_list ].
+
+penerapan := inanimate-noun-lex &
+  [ STEM < "penerapan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penerapan_n_rel",
+    TRAITS native_token_list ].
+
+penyaringan := inanimate-noun-lex &
+  [ STEM < "penyaringan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyaringan_n_rel",
+    TRAITS native_token_list ].
+
+pengertian := inanimate-noun-lex &
+  [ STEM < "pengertian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengertian_n_rel",
+    TRAITS native_token_list ].
+
+perkataan := inanimate-noun-lex &
+  [ STEM < "perkataan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perkataan_n_rel",
+    TRAITS native_token_list ].
+
+pembenaran := inanimate-noun-lex &
+  [ STEM < "pembenaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembenaran_n_rel",
+    TRAITS native_token_list ].
+
+pembuktian := inanimate-noun-lex &
+  [ STEM < "pembuktian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembuktian_n_rel",
+    TRAITS native_token_list ].
+
+persoalan := inanimate-noun-lex &
+  [ STEM < "persoalan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_persoalan_n_rel",
+    TRAITS native_token_list ].
+
+pertambahan := inanimate-noun-lex &
+  [ STEM < "pertambahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pertambahan_n_rel",
+    TRAITS native_token_list ].
+
+penitipan := inanimate-noun-lex &
+  [ STEM < "penitipan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penitipan_n_rel",
+    TRAITS native_token_list ].
+
+pembenahan := inanimate-noun-lex &
+  [ STEM < "pembenahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembenahan_n_rel",
+    TRAITS native_token_list ].
+
+perekaman := inanimate-noun-lex &
+  [ STEM < "perekaman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perekaman_n_rel",
+    TRAITS native_token_list ].
+
+penggantian := inanimate-noun-lex &
+  [ STEM < "penggantian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penggantian_n_rel",
+    TRAITS native_token_list ].
+
+perhotelan := uncountable-noun-lex &
+  [ STEM < "perhotelan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perhotelan_n_rel",
+    TRAITS native_token_list ].
+
+pengcancelan := inanimate-noun-lex &
+  [ STEM < "pengcancelan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengcancelan_n_rel",
+    TRAITS native_token_list ].
+
+perorangan := uncountable-noun-lex &
+  [ STEM < "perorangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perorangan_n_rel",
+    TRAITS native_token_list ].
+
+perbualan := inanimate-noun-lex &
+  [ STEM < "perbualan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perbualan_n_rel",
+    TRAITS native_token_list ].
+
+penerbitan := inanimate-noun-lex &
+  [ STEM < "penerbitan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penerbitan_n_rel",
+    TRAITS native_token_list ].
+
+penutupan := inanimate-noun-lex &
+  [ STEM < "penutupan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penutupan_n_rel",
+    TRAITS native_token_list ].
+
+pengaplikasian := inanimate-noun-lex &
+  [ STEM < "pengaplikasian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengaplikasian_n_rel",
+    TRAITS native_token_list ].
+
+pengangkatan := inanimate-noun-lex &
+  [ STEM < "pengangkatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengangkatan_n_rel",
+    TRAITS native_token_list ].
+
+penjabaran := inanimate-noun-lex &
+  [ STEM < "penjabaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penjabaran_n_rel",
+    TRAITS native_token_list ].
+
+pembaharuan := inanimate-noun-lex &
+  [ STEM < "pembaharuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembaharuan_n_rel",
+    TRAITS native_token_list ].
+
+pembodohan := inanimate-noun-lex &
+  [ STEM < "pembodohan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembodohan_n_rel",
+    TRAITS native_token_list ].
+
+pengajuan := inanimate-noun-lex &
+  [ STEM < "pengajuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengajuan_n_rel",
+    TRAITS native_token_list ].
+
+pembuangan := inanimate-noun-lex &
+  [ STEM < "pembuangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembuangan_n_rel",
+    TRAITS native_token_list ].
+
+pembebanan := inanimate-noun-lex &
+  [ STEM < "pembebanan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembebanan_n_rel",
+    TRAITS native_token_list ].
+
+penerimaan := inanimate-noun-lex &
+  [ STEM < "penerimaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penerimaan_n_rel",
+    TRAITS native_token_list ].
+
+pengembalian := inanimate-noun-lex &
+  [ STEM < "pengembalian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengembalian_n_rel",
+    TRAITS native_token_list ].
+
+perhubungan := inanimate-noun-lex &
+  [ STEM < "perhubungan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perhubungan_n_rel",
+    TRAITS native_token_list ].
+
+penamaan := inanimate-noun-lex &
+  [ STEM < "penamaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penamaan_n_rel",
+    TRAITS native_token_list ].
+
+percobaan := inanimate-noun-lex &
+  [ STEM < "percobaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_percobaan_n_rel",
+    TRAITS native_token_list ].
+
+pemberitauan := inanimate-noun-lex &
+  [ STEM < "pemberitauan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemberitahuan_n_rel",
+    TRAITS native_token_list ].
+
+pembatalan := inanimate-noun-lex &
+  [ STEM < "pembatalan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembatalan_n_rel",
+    TRAITS native_token_list ].
+
+penggeseran := inanimate-noun-lex &
+  [ STEM < "penggeseran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penggeseran_n_rel",
+    TRAITS native_token_list ].
+
+penjaringan := inanimate-noun-lex &
+  [ STEM < "penjaringan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penjaringan_n_rel",
+    TRAITS native_token_list ].
+
+pemakaian := inanimate-noun-lex &
+  [ STEM < "pemakaian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemakaian_n_rel",
+    TRAITS native_token_list ].
+
+Pejompongan := proper-name-lex &
+  [ STEM < "Pejompongan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pejompongan",
+    TRAITS native_token_list ].
+
+pemberangkatan := inanimate-noun-lex &
+  [ STEM < "pemberangkatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemberangkatan_n_rel",
+    TRAITS native_token_list ].
+
+penataran := inanimate-noun-lex &
+  [ STEM < "penataran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penataran_n_rel",
+    TRAITS native_token_list ].
+
+pembukuan := inanimate-noun-lex &
+  [ STEM < "pembukuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembukuan_n_rel",
+    TRAITS native_token_list ].
+
+peralihan := inanimate-noun-lex &
+  [ STEM < "peralihan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_peralihan_n_rel",
+    TRAITS native_token_list ].
+
+pencurian := inanimate-noun-lex &
+  [ STEM < "pencurian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pencurian_n_rel",
+    TRAITS native_token_list ].
+
+penulisan := inanimate-noun-lex &
+  [ STEM < "penulisan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penulisan_n_rel",
+    TRAITS native_token_list ].
+
+pengembangan := inanimate-noun-lex &
+  [ STEM < "pengembangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengembangan_n_rel",
+    TRAITS native_token_list ].
+
+pengucapan := inanimate-noun-lex &
+  [ STEM < "pengucapan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengucapan_n_rel",
+    TRAITS native_token_list ].
+
+penentuan := inanimate-noun-lex &
+  [ STEM < "penentuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penentuan_n_rel",
+    TRAITS native_token_list ].
+
+pengurusan := inanimate-noun-lex &
+  [ STEM < "pengurusan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengurusan_n_rel",
+    TRAITS native_token_list ].
+
+penjumlahan := inanimate-noun-lex &
+  [ STEM < "penjumlahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penjumlahan_n_rel",
+    TRAITS native_token_list ].
+
+pendaftaran := inanimate-noun-lex &
+  [ STEM < "pendaftaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pendaftaran_n_rel",
+    TRAITS native_token_list ].
+
+Peterongan := proper-name-lex &
+  [ STEM < "Peterongan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Peterongan",
+    TRAITS native_token_list ].
+
+pembatasan := inanimate-noun-lex &
+  [ STEM < "pembatasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembatasan_n_rel",
+    TRAITS native_token_list ].
+
+perkenan := inanimate-noun-lex &
+  [ STEM < "perkenan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perkenan_n_rel",
+    TRAITS native_token_list ].
+
+pecahan := inanimate-noun-lex &
+  [ STEM < "pecahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pecahan_n_rel",
+    TRAITS native_token_list ].
+
+pengubahan := inanimate-noun-lex &
+  [ STEM < "pengubahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengubahan_n_rel",
+    TRAITS native_token_list ].
+
+pemecahan := inanimate-noun-lex &
+  [ STEM < "pemecahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemecahan_n_rel",
+    TRAITS native_token_list ].
+
+periklanan := inanimate-noun-lex &
+  [ STEM < "periklanan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_periklanan_n_rel",
+    TRAITS native_token_list ].
+
+penggabungan := inanimate-noun-lex &
+  [ STEM < "penggabungan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penggabungan_n_rel",
+    TRAITS native_token_list ].
+
+persenan := inanimate-noun-lex &
+  [ STEM < "persenan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_persenan_n_rel",
+    TRAITS native_token_list ].
+
+perseorangan := uncountable-noun-lex &
+  [ STEM < "perseorangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perseorangan_n_rel",
+    TRAITS native_token_list ].
+
+Pekalongan := proper-name-lex &
+  [ STEM < "Pekalongan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pekalongan",
+    TRAITS native_token_list ].
+
+pembalasan := inanimate-noun-lex &
+  [ STEM < "pembalasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembalasan_n_rel",
+    TRAITS native_token_list ].
+
+penyebutan := inanimate-noun-lex &
+  [ STEM < "penyebutan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyebutan_n_rel",
+    TRAITS native_token_list ].
+
+pengunggahan := inanimate-noun-lex &
+  [ STEM < "pengunggahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengunggahan_n_rel",
+    TRAITS native_token_list ].
+
+pembelanjaan := inanimate-noun-lex &
+  [ STEM < "pembelanjaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembelanjaan_n_rel",
+    TRAITS native_token_list ].
+
+penayangan := inanimate-noun-lex &
+  [ STEM < "penayangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penayangan_n_rel",
+    TRAITS native_token_list ].
+
+pemenuhan := inanimate-noun-lex &
+  [ STEM < "pemenuhan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemenuhan_n_rel",
+    TRAITS native_token_list ].
+
+pembedaan := inanimate-noun-lex &
+  [ STEM < "pembedaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembedaan_n_rel",
+    TRAITS native_token_list ].
+
+perizinan := inanimate-noun-lex &
+  [ STEM < "perizinan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perizinan_n_rel",
+    TRAITS native_token_list ].
+
+penyewaan := inanimate-noun-lex &
+  [ STEM < "penyewaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penyewaan_n_rel",
+    TRAITS native_token_list ].
+
+pengoreksian := inanimate-noun-lex &
+  [ STEM < "pengoreksian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengoreksian_n_rel",
+    TRAITS native_token_list ].
+
+pelaporan := inanimate-noun-lex &
+  [ STEM < "pelaporan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pelaporan_n_rel",
+    TRAITS native_token_list ].
+
+perempuan := human-noun-lex &
+  [ STEM < "perempuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perempuan_n_rel",
+    TRAITS native_token_list ].
+
+kepolisian := inanimate-noun-lex &
+  [ STEM < "kepolisian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepolisian_n_rel",
+    TRAITS native_token_list ].
+
+kembalian := inanimate-noun-lex &
+  [ STEM < "kembalian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kembalian_n_rel",
+    TRAITS native_token_list ].
+
+kelebihan := inanimate-noun-lex &
+  [ STEM < "kelebihan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelebihan_n_rel",
+    TRAITS native_token_list ].
+
+kementrian := inanimate-noun-lex &
+  [ STEM < "kementrian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kementerian_n_rel",
+    TRAITS native_token_list ].
+
+keberadaan := inanimate-noun-lex &
+  [ STEM < "keberadaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keberadaan_n_rel",
+    TRAITS native_token_list ].
+
+ketidaksetujuan := inanimate-noun-lex &
+  [ STEM < "ketidaksetujuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidaksetujuan_n_rel",
+    TRAITS native_token_list ].
+
+kemalangan := inanimate-noun-lex &
+  [ STEM < "kemalangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemalangan_n_rel",
+    TRAITS native_token_list ].
+
+kepengurusan := inanimate-noun-lex &
+  [ STEM < "kepengurusan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepengurusan_n_rel",
+    TRAITS native_token_list ].
+
+keimigrasian := uncountable-noun-lex &
+  [ STEM < "keimigrasian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keimigrasian_n_rel",
+    TRAITS native_token_list ].
+
+keamanan := inanimate-noun-lex &
+  [ STEM < "keamanan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keamanan_n_rel",
+    TRAITS native_token_list ].
+
+ketidaktersediaan := uncountable-noun-lex &
+  [ STEM < "ketidaktersediaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidaktersediaan_n_rel",
+    TRAITS native_token_list ].
+
+kesembuhan := inanimate-noun-lex &
+  [ STEM < "kesembuhan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesembuhan_n_rel",
+    TRAITS native_token_list ].
+
+ketidakstabilan := inanimate-noun-lex &
+  [ STEM < "ketidakstabilan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidakstabilan_n_rel",
+    TRAITS native_token_list ].
+
+kesejahteraan := inanimate-noun-lex &
+  [ STEM < "kesejahteraan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesejahteraan_n_rel",
+    TRAITS native_token_list ].
+
+ketertinggalan := inanimate-noun-lex &
+  [ STEM < "ketertinggalan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketertinggalan_n_rel",
+    TRAITS native_token_list ].
+
+ketidaknyamanan := inanimate-noun-lex &
+  [ STEM < "ketidaknyamanan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidaknyamanan_n_rel",
+    TRAITS native_token_list ].
+
+kepadatan := inanimate-noun-lex &
+  [ STEM < "kepadatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepadatan_n_rel",
+    TRAITS native_token_list ].
+
+ketidaktelitian := inanimate-noun-lex &
+  [ STEM < "ketidaktelitian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidaktelitian_n_rel",
+    TRAITS native_token_list ].
+
+keterbatasan := inanimate-noun-lex &
+  [ STEM < "keterbatasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keterbatasan_n_rel",
+    TRAITS native_token_list ].
+
+Kembangan := proper-name-lex &
+  [ STEM < "Kembangan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Kembangan",
+    TRAITS native_token_list ].
+
+Keihan := proper-name-lex &
+  [ STEM < "Keihan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Keihan",
+    TRAITS native_token_list ].
+
+kebocoran := inanimate-noun-lex &
+  [ STEM < "kebocoran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kebocoran_n_rel",
+    TRAITS native_token_list ].
+
+ketidaklengkapan := inanimate-noun-lex &
+  [ STEM < "ketidaklengkapan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidaklengkapan_n_rel",
+    TRAITS native_token_list ].
+
+keanggotaan := inanimate-noun-lex &
+  [ STEM < "keanggotaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keanggotaan_n_rel",
+    TRAITS native_token_list ].
+
+kelancaran := inanimate-noun-lex &
+  [ STEM < "kelancaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelancaran_n_rel",
+    TRAITS native_token_list ].
+
+Kebayoran := proper-name-lex &
+  [ STEM < "Kebayoran" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Kebayoran",
+    TRAITS native_token_list ].
+
+ketrangan := inanimate-noun-lex &
+  [ STEM < "ketrangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keterangan_n_rel",
+    TRAITS native_token_list ].
+
+kecamatan := inanimate-noun-lex &
+  [ STEM < "kecamatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kecamatan_n_rel",
+    TRAITS native_token_list ].
+
+ketidakpastian := inanimate-noun-lex &
+  [ STEM < "ketidakpastian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidakpastian_n_rel",
+    TRAITS native_token_list ].
+
+kesanggupan := inanimate-noun-lex &
+  [ STEM < "kesanggupan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesanggupan_n_rel",
+    TRAITS native_token_list ].
+
+keikutsertaan := inanimate-noun-lex &
+  [ STEM < "keikutsertaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keikutsertaan_n_rel",
+    TRAITS native_token_list ].
+
+keterlambatan := inanimate-noun-lex &
+  [ STEM < "keterlambatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keterlambatan_n_rel",
+    TRAITS native_token_list ].
+
+kesilapan := inanimate-noun-lex &
+  [ STEM < "kesilapan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesilapan_n_rel",
+    TRAITS native_token_list ].
+
+kewenangan := inanimate-noun-lex &
+  [ STEM < "kewenangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kewenangan_n_rel",
+    TRAITS native_token_list ].
+
+ketersediaan := inanimate-noun-lex &
+  [ STEM < "ketersediaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketersediaan_n_rel",
+    TRAITS native_token_list ].
+
+kemunduran := inanimate-noun-lex &
+  [ STEM < "kemunduran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemunduran_n_rel",
+    TRAITS native_token_list ].
+
+kegunaan := inanimate-noun-lex &
+  [ STEM < "kegunaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kegunaan_n_rel",
+    TRAITS native_token_list ].
+
+keluaran := uncountable-noun-lex &
+  [ STEM < "keluaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keluaran_n_rel",
+    TRAITS native_token_list ].
+
+Keenan := proper-name-lex &
+  [ STEM < "Keenan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Keenan",
+    TRAITS native_token_list ].
+
+ketidaksengajaan := inanimate-noun-lex &
+  [ STEM < "ketidaksengajaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidaksengajaan_n_rel",
+    TRAITS native_token_list ].
+
+kejelasan := inanimate-noun-lex &
+  [ STEM < "kejelasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kejelasan_n_rel",
+    TRAITS native_token_list ].
+
+keprluan := inanimate-noun-lex &
+  [ STEM < "keprluan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keperluan_n_rel",
+    TRAITS native_token_list ].
+
+kegagalan := inanimate-noun-lex &
+  [ STEM < "kegagalan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kegagalan_n_rel",
+    TRAITS native_token_list ].
+
+kecerahan := uncountable-noun-lex &
+  [ STEM < "kecerahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kecerahan_n_rel",
+    TRAITS native_token_list ].
+
+kemudahan := inanimate-noun-lex &
+  [ STEM < "kemudahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemudahan_n_rel",
+    TRAITS native_token_list ].
+
+ketibaan := uncountable-noun-lex &
+  [ STEM < "ketibaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketibaan_n_rel",
+    TRAITS native_token_list ].
+
+kejanggalan := inanimate-noun-lex &
+  [ STEM < "kejanggalan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kejanggalan_n_rel",
+    TRAITS native_token_list ].
+
+ketetapan := inanimate-noun-lex &
+  [ STEM < "ketetapan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketetapan_n_rel",
+    TRAITS native_token_list ].
+
+kepunyaan := inanimate-noun-lex &
+  [ STEM < "kepunyaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepunyaan_n_rel",
+    TRAITS native_token_list ].
+
+kekeliruan := inanimate-noun-lex &
+  [ STEM < "kekeliruan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kekeliruan_n_rel",
+    TRAITS native_token_list ].
+
+kesalahpahaman := inanimate-noun-lex &
+  [ STEM < "kesalahpahaman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesalahpahaman_n_rel",
+    TRAITS native_token_list ].
+
+kesediaan := inanimate-noun-lex &
+  [ STEM < "kesediaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesediaan_n_rel",
+    TRAITS native_token_list ].
+
+kepulangan := inanimate-noun-lex &
+  [ STEM < "kepulangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepulangan_n_rel",
+    TRAITS native_token_list ].
+
+kekhawatiran := inanimate-noun-lex &
+  [ STEM < "kekhawatiran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kekhawatiran_n_rel",
+    TRAITS native_token_list ].
+
+keberkahan := inanimate-noun-lex &
+  [ STEM < "keberkahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keberkahan_n_rel",
+    TRAITS native_token_list ].
+
+kesabaran := inanimate-noun-lex &
+  [ STEM < "kesabaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesabaran_n_rel",
+    TRAITS native_token_list ].
+
+ketidakpuasan := inanimate-noun-lex &
+  [ STEM < "ketidakpuasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidakpuasan_n_rel",
+    TRAITS native_token_list ].
+
+kelemahan := inanimate-noun-lex &
+  [ STEM < "kelemahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelemahan_n_rel",
+    TRAITS native_token_list ].
+
+Kejaksaan_prop := proper-name-lex &
+  [ STEM < "Kejaksaan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Kejaksaan",
+    TRAITS native_token_list ].
+
+kejaksaan_inanim := inanimate-noun-lex &
+  [ STEM < "kejaksaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kejaksaan_n_rel",
+    TRAITS native_token_list ].
+
+kedukaan := inanimate-noun-lex &
+  [ STEM < "kedukaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kedukaan_n_rel",
+    TRAITS native_token_list ].
+
+kemiripan := inanimate-noun-lex &
+  [ STEM < "kemiripan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemiripan_n_rel",
+    TRAITS native_token_list ].
+
+kebersamaan := inanimate-noun-lex &
+  [ STEM < "kebersamaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kebersamaan_n_rel",
+    TRAITS native_token_list ].
+
+kelipatan := inanimate-noun-lex &
+  [ STEM < "kelipatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelipatan_n_rel",
+    TRAITS native_token_list ].
+
+Ketanggungan := proper-name-lex &
+  [ STEM < "Ketanggungan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Ketanggungan",
+    TRAITS native_token_list ].
+
+kejujuran := inanimate-noun-lex &
+  [ STEM < "kejujuran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kejujuran_n_rel",
+    TRAITS native_token_list ].
+
+kemauan := inanimate-noun-lex &
+  [ STEM < "kemauan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemauan_n_rel",
+    TRAITS native_token_list ].
+
+keluhan := inanimate-noun-lex &
+  [ STEM < "keluhan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keluhan_n_rel",
+    TRAITS native_token_list ].
+
+kelainan := inanimate-noun-lex &
+  [ STEM < "kelainan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelainan_n_rel",
+    TRAITS native_token_list ].
+
+kelurahan := inanimate-noun-lex &
+  [ STEM < "kelurahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelurahan_n_rel",
+    TRAITS native_token_list ].
+
+kebrgktan := inanimate-noun-lex &
+  [ STEM < "kebrgktan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keberangkatan_n_rel",
+    TRAITS native_token_list ].
+
+kebrngktan := inanimate-noun-lex &
+  [ STEM < "kebrngktan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keberangkatan_n_rel",
+    TRAITS native_token_list ].
+
+kepulauan := inanimate-noun-lex &
+  [ STEM < "kepulauan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepulauan_n_rel",
+    TRAITS native_token_list ].
+
+keaktifan := inanimate-noun-lex &
+  [ STEM < "keaktifan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keaktifan_n_rel",
+    TRAITS native_token_list ].
+
+kepuasan := inanimate-noun-lex &
+  [ STEM < "kepuasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepuasan_n_rel",
+    TRAITS native_token_list ].
+
+keanehan := inanimate-noun-lex &
+  [ STEM < "keanehan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keanehan_n_rel",
+    TRAITS native_token_list ].
+
+kerahasiaan := inanimate-noun-lex &
+  [ STEM < "kerahasiaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kerahasiaan_n_rel",
+    TRAITS native_token_list ].
+
+kepanjangan := inanimate-noun-lex &
+  [ STEM < "kepanjangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepanjangan_n_rel",
+    TRAITS native_token_list ].
+
+keraguan := inanimate-noun-lex &
+  [ STEM < "keraguan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keraguan_n_rel",
+    TRAITS native_token_list ].
+
+kemunculan := inanimate-noun-lex &
+  [ STEM < "kemunculan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemunculan_n_rel",
+    TRAITS native_token_list ].
+
+kebeneran := inanimate-noun-lex &
+  [ STEM < "kebeneran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kebenaran_n_rel",
+    TRAITS native_token_list ].
+
+kebijaksanaan := inanimate-noun-lex &
+  [ STEM < "kebijaksanaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kebijaksanaan_n_rel",
+    TRAITS native_token_list ].
+
+kepastian := inanimate-noun-lex &
+  [ STEM < "kepastian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kepastian_n_rel",
+    TRAITS native_token_list ].
+
+Kemanggisan := proper-name-lex &
+  [ STEM < "Kemanggisan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Kemanggisan",
+    TRAITS native_token_list ].
+
+kebersihan := inanimate-noun-lex &
+  [ STEM < "kebersihan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kebersihan_n_rel",
+    TRAITS native_token_list ].
+
+kesesuaian := inanimate-noun-lex &
+  [ STEM < "kesesuaian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesesuaian_n_rel",
+    TRAITS native_token_list ].
+
+kesuksesan := inanimate-noun-lex &
+  [ STEM < "kesuksesan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesuksesan_n_rel",
+    TRAITS native_token_list ].
+
+kesengajaan := inanimate-noun-lex &
+  [ STEM < "kesengajaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesengajaan_n_rel",
+    TRAITS native_token_list ].
+
+kementerian := inanimate-noun-lex &
+  [ STEM < "kementerian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kementerian_n_rel",
+    TRAITS native_token_list ].
+
+keperluan := inanimate-noun-lex &
+  [ STEM < "keperluan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keperluan_n_rel",
+    TRAITS native_token_list ].
+
+kecurangan := inanimate-noun-lex &
+  [ STEM < "kecurangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kecurangan_n_rel",
+    TRAITS native_token_list ].
+
+kelanjutan := inanimate-noun-lex &
+  [ STEM < "kelanjutan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelanjutan_n_rel",
+    TRAITS native_token_list ].
+
+ketidaktahuan := inanimate-noun-lex &
+  [ STEM < "ketidaktahuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidaktahuan_n_rel",
+    TRAITS native_token_list ].
+
+kerusuhan := inanimate-noun-lex &
+  [ STEM < "kerusuhan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kerusuhan_n_rel",
+    TRAITS native_token_list ].
+
+ketelatan := inanimate-noun-lex &
+  [ STEM < "ketelatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keterlambatan_n_rel",
+    TRAITS native_token_list ].
+
+kedinasan := inanimate-noun-lex &
+  [ STEM < "kedinasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kedinasan_n_rel",
+    TRAITS native_token_list ].
+
+keteledoran := inanimate-noun-lex &
+  [ STEM < "keteledoran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keteledoran_n_rel",
+    TRAITS native_token_list ].
+
+keringanan := inanimate-noun-lex &
+  [ STEM < "keringanan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keringanan_n_rel",
+    TRAITS native_token_list ].
+
+kelonggaran := inanimate-noun-lex &
+  [ STEM < "kelonggaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kelonggaran_n_rel",
+    TRAITS native_token_list ].
+
+kesamaan := inanimate-noun-lex &
+  [ STEM < "kesamaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesamaan_n_rel",
+    TRAITS native_token_list ].
+
+ketepatan := inanimate-noun-lex &
+  [ STEM < "ketepatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketepatan_n_rel",
+    TRAITS native_token_list ].
+
+keagenan := inanimate-noun-lex &
+  [ STEM < "keagenan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keagenan_n_rel",
+    TRAITS native_token_list ].
+
+kestabilan := inanimate-noun-lex &
+  [ STEM < "kestabilan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kestabilan_n_rel",
+    TRAITS native_token_list ].
+
+kevalidan := inanimate-noun-lex &
+  [ STEM < "kevalidan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kevalidan_n_rel",
+    TRAITS native_token_list ].
+
+kemacetan := inanimate-noun-lex &
+  [ STEM < "kemacetan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemacetan_n_rel",
+    TRAITS native_token_list ].
+
+ketntuan := inanimate-noun-lex &
+  [ STEM < "ketntuan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketentuan_n_rel",
+    TRAITS native_token_list ].
+
+ketidakjelasan := inanimate-noun-lex &
+  [ STEM < "ketidakjelasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidakjelasan_n_rel",
+    TRAITS native_token_list ].
+
+keselamatan := inanimate-noun-lex &
+  [ STEM < "keselamatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keselamatan_n_rel",
+    TRAITS native_token_list ].
+
+kesusahan := inanimate-noun-lex &
+  [ STEM < "kesusahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesusahan_n_rel",
+    TRAITS native_token_list ].
+
+ketegasan := inanimate-noun-lex &
+  [ STEM < "ketegasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketegasan_n_rel",
+    TRAITS native_token_list ].
+
+kebohongan := inanimate-noun-lex &
+  [ STEM < "kebohongan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kebohongan_n_rel",
+    TRAITS native_token_list ].
+
+kewarganegaraan := inanimate-noun-lex &
+  [ STEM < "kewarganegaraan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kewarganegaraan_n_rel",
+    TRAITS native_token_list ].
+
+Kemayoran := proper-name-lex &
+  [ STEM < "Kemayoran" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Kemayoran",
+    TRAITS native_token_list ].
+
+kesalahfahaman := inanimate-noun-lex &
+  [ STEM < "kesalahfahaman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesalahpahaman_n_rel",
+    TRAITS native_token_list ].
+
+keabsahan := inanimate-noun-lex &
+  [ STEM < "keabsahan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keabsahan_n_rel",
+    TRAITS native_token_list ].
+
+kemitraan := inanimate-noun-lex &
+  [ STEM < "kemitraan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemitraan_n_rel",
+    TRAITS native_token_list ].
+
+ketidaksamaan := inanimate-noun-lex &
+  [ STEM < "ketidaksamaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ketidaksamaan_n_rel",
+    TRAITS native_token_list ].
+
+keslhan := inanimate-noun-lex &
+  [ STEM < "keslhan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kesalahan_n_rel",
+    TRAITS native_token_list ].
+
+kecerobohan := inanimate-noun-lex &
+  [ STEM < "kecerobohan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kecerobohan_n_rel",
+    TRAITS native_token_list ].
+
+kebangsaan := inanimate-noun-lex &
+  [ STEM < "kebangsaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kebangsaan_n_rel",
+    TRAITS native_token_list ].
+
+keterkaitan := inanimate-noun-lex &
+  [ STEM < "keterkaitan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keterkaitan_n_rel",
+    TRAITS native_token_list ].
+
+Kesawan := proper-name-lex &
+  [ STEM < "Kesawan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Kesawan",
+    TRAITS native_token_list ].
+
+kemanusiaan := inanimate-noun-lex &
+  [ STEM < "kemanusiaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemanusiaan_n_rel",
+    TRAITS native_token_list ].
+
+kenangan := inanimate-noun-lex &
+  [ STEM < "kenangan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kenangan_n_rel",s
+    TRAITS native_token_list ].
+
+Kebagusan := proper-name-lex &
+  [ STEM < "Kebagusan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Kebagusan",
+    TRAITS native_token_list ].
+
+kehamilan := inanimate-noun-lex &
+  [ STEM < "kehamilan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kehamilan_n_rel",
+    TRAITS native_token_list ].
+
+kerjaan := inanimate-noun-lex &a
+  [ STEM < "kerjaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kerjaan_n_rel",
+    TRAITS native_token_list ].
+
+keberangkatan := inanimate-noun-lex &
+  [ STEM < "keberangkatan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keberangkatan_n_rel",
+    TRAITS native_token_list ].
+

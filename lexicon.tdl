@@ -464,6 +464,11 @@ ibu := human-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_ibu_n_rel",
     TRAITS native_token_list ].
 
+bapak := human-noun-lex &
+  [ STEM < "bapak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bapak_n_rel",
+    TRAITS native_token_list ].
+
 insan := human-noun-lex &
   [ STEM < "insan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_insan_n_rel",
@@ -51104,6 +51109,11 @@ bertanya := ques-comp-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_bertanya_v_rel",
     TRAITS native_token_list ].
 
+menanyakan := ques-comp-verb-lex &
+  [ STEM < "menanyakan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_menanyakan_v_rel",
+    TRAITS native_token_list ].
+
 tahu_2 := ques-comp-verb-lex &
   [ STEM < "tahu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tahu_v_rel",
@@ -56871,6 +56881,11 @@ taraf := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_taraf_n_rel",
     TRAITS native_token_list ].
 
+metode := inanimate-noun-lex &
+  [ STEM < "metode" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_metode_n_rel",
+    TRAITS native_token_list ].
+
 reputasi := inanimate-noun-lex &
   [ STEM < "reputasi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_reputasi_n_rel",
@@ -62385,9 +62400,29 @@ angin := uncountable-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_angin_n_rel",
     TRAITS native_token_list ].
 
+rincian := uncountable-noun-lex &
+  [ STEM < "rincian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rincian_n_rel",
+    TRAITS native_token_list ].
+
+perincian := uncountable-noun-lex &
+  [ STEM < "perincian" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perincian_n_rel",
+    TRAITS native_token_list ].
+
+pengecekan := uncountable-noun-lex &
+  [ STEM < "pengecekan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pengecekan_n_rel",
+    TRAITS native_token_list ].
+
 frekuensi := inanimate-noun-lex &
   [ STEM < "frekuensi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_frekuensi_n_rel",
+    TRAITS native_token_list ].
+
+email := inanimate-noun-lex &
+  [ STEM < "email" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_email_n_rel",
     TRAITS native_token_list ].
 
 latihan := inanimate-noun-lex &
@@ -71323,6 +71358,11 @@ lewat_adp_mod := adposition-mod-lex &
 dramatis := adjective-lex &
   [ STEM < "dramatis" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dramatis_a_rel",
+    TRAITS native_token_list ].
+
+mandiri := adjective-lex &
+  [ STEM < "mandiri" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mandiri_a_rel",
     TRAITS native_token_list ].
 
 durhaka := adjective-lex &
