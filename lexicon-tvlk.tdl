@@ -7278,3 +7278,83 @@ Telkom := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Telkom",
     TRAITS native_token_list ].
 
+Teuku := proper-name-lex &
+  [ STEM < "Teuku" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Teuku",
+    TRAITS native_token_list ].
+
+Tengku := proper-name-lex &
+  [ STEM < "Tengku" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Tengku",
+    TRAITS native_token_list ].
+
+Paku := proper-name-lex &
+  [ STEM < "Paku" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Paku",
+    TRAITS native_token_list ].
+
+Cipaku := proper-name-lex &
+  [ STEM < "Cipaku" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Cipaku",
+    TRAITS native_token_list ].
+
+pelaku := human-noun-lex &
+  [ STEM < "pelaku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pelaku_n_rel",
+    TRAITS native_token_list ].
+
+tmn := human-noun-lex &
+  [ STEM < "tmn" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_teman_n_rel",
+    TRAITS native_token_list ].
+
+papa := human-noun-lex &
+  [ STEM < "papa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_papa_n_rel",
+    TRAITS native_token_list ].
+
+Shinjuku := proper-name-lex &
+  [ STEM < "Shinjuku" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Shinjuku",
+    TRAITS native_token_list ].
+
+boss := human-noun-lex &
+  [ STEM < "boss" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bos_n_rel",
+    TRAITS native_token_list ].
+
+bangku := inanimate-noun-lex &
+  [ STEM < "bangku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bangku_n_rel",
+    TRAITS native_token_list ].
+
+Akulaku := proper-name-lex &
+  [ STEM < "Akulaku" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Akulaku",
+    TRAITS native_token_list ].
+
+Maluku := proper-name-lex &
+  [ STEM < "Maluku" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Maluku",
+    TRAITS native_token_list ].
+
+suku := inanimate-noun-lex &
+  [ STEM < "suku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_suku_n_rel",
+    TRAITS native_token_list ].
+
+suku+kata := inanimate-noun-lex &
+  [ STEM < "suku", "kata" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_suku+kata_n_rel",
+    TRAITS native_token_list ].
+
+kuku := inanimate-noun-lex &
+  [ STEM < "kuku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kuku_n_rel",
+    TRAITS native_token_list ].
+
+adek := human-noun-lex &
+  [ STEM < "adek" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_adik_n_rel",
+    TRAITS native_token_list ].
+
