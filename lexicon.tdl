@@ -67435,7 +67435,7 @@ margasatwa := nonhuman-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_margasatwa_n_rel",
     TRAITS native_token_list ].
 
-manfaat := inanimate-noun-lex &
+manfaat_inanim := inanimate-noun-lex &
   [ STEM < "manfaat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_manfaat_n_rel",
     TRAITS native_token_list ].
@@ -71090,7 +71090,7 @@ ajarkan := v_np-pp_prop_le &
     SYNSEM.LKEYS.KEYREL.PRED "_ajarkan_v_rel",
     TRAITS native_token_list ].
 
-buang := v_np-pp_prop_le &
+buang := tr-verb-lex &
   [ STEM < "buang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_buang_v_rel",
     TRAITS native_token_list ].
@@ -78275,7 +78275,7 @@ tombak := inanimate-noun-lex &
     TRAITS native_token_list ].
 
 ;;; auto generated
-jadikan_v_prop := v_np-pp_prop_le &
+jadikan_v_prop := v_np_noarg3_le &
     [ STEM < "jadikan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jadikan_v_rel",
     TRAITS native_token_list ].
