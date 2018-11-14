@@ -54735,7 +54735,7 @@ melongo := intr-verb-lex &
     TRAITS native_token_list ].
 
 melonjak-lonjak := intr-verb-lex &
-  [ STEM < "melonjak-lonjak" >,
+  [ STEM < "melonjak²" >,
     SYNSEM.LKEYS.KEYREL.PRED "_melonjak-lonjak_v_rel",
     TRAITS native_token_list ].
 
@@ -79545,7 +79545,6 @@ berikutnya := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_berikutnya_a_rel",
     TRAITS native_token_list ].
 
-
 ;;; auto generated
 khasiat := inanimate-noun-lex &
     [ STEM < "khasiat" >,
@@ -81921,8 +81920,6 @@ acak := tr-verb-lex &
     [ STEM < "acak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_acak_v_rel",
     TRAITS native_token_list ].
-
-
 
 ;;; auto generated
 mengembang := intr-verb-lex &
