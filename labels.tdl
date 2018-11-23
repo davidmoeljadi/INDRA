@@ -42,6 +42,23 @@ number-label := label &
 	               NON-LOCAL.SLASH 0-dlist ],
               LABEL-NAME "NUM" ].
 
+pron-label := label & 
+     [ SYNSEM.LOCAL [ CAT [ HEAD pronoun,
+                            VAL.SPR < > ],
+                      COORD-STRAT "" ],
+       LABEL-NAME "PRON" ].
+
+clitic-label := label & 
+     [ SYNSEM.LOCAL [ CAT [ HEAD enclitic,
+                            VAL.SPR < > ],
+                      COORD-STRAT "" ],
+       LABEL-NAME "PRON" ].
+
+propn-label := label & 
+     [ SYNSEM.LOCAL [ CAT [ HEAD propername,
+                            VAL.SPR < > ],
+                      COORD-STRAT "" ],
+       LABEL-NAME "PROPN" ].
 
 n-mid-label := label &
             [ SYNSEM.LOCAL [ CAT [ HEAD noun,
@@ -58,9 +75,9 @@ n-bottom-label := label &
 
 n-label := label & 
 	   [ SYNSEM.LOCAL [ CAT [ HEAD noun,
-                                  VAL.SPR < [ ] > ],
-                            COORD-STRAT "" ],
-             LABEL-NAME "N" ].
+                            VAL.SPR < [ ] > ],
+                      COORD-STRAT "" ],
+       LABEL-NAME "NOUN" ].
 
 n-top-label := label &
             [ SYNSEM.LOCAL.CAT [ HEAD noun,
@@ -91,6 +108,17 @@ np-top-label := label &
 				 VAL.SPR < > ],
 	      LABEL-NAME "NP-T" ].
 
+v-label := label & 
+           [ SYNSEM.LOCAL [ CAT [ HEAD non-aux & [ AUX - ],
+                                  VAL.COMPS < [ ], ... > ],
+                            COORD-STRAT "" ],
+             LABEL-NAME "VERB" ].
+
+aux-label := label & 
+           [ SYNSEM.LOCAL [ CAT [ HEAD aux & [ AUX + ] ],
+                            COORD-STRAT "" ],
+             LABEL-NAME "AUX" ].
+
 v-mid-label := label &
 	   [ SYNSEM.LOCAL [ CAT [ HEAD verb,
                                   VAL.COMPS < [ ], ... > ],
@@ -103,12 +131,6 @@ v-bottom-label := label &
                                   VAL.COMPS < [ ], ... > ],
                             COORD + ],
              LABEL-NAME "V-B" ].
-
-v-label := label & 
-           [ SYNSEM.LOCAL [ CAT [ HEAD verb,
-                                  VAL.COMPS < [ ], ... > ],
-                            COORD-STRAT "" ],
-             LABEL-NAME "V" ].
 
 v-top-label := label & 
 	   [ SYNSEM.LOCAL.CAT [ HEAD verb,
@@ -188,7 +210,7 @@ s-top-label := label &
 p-label := label & 
 	   [ SYNSEM.LOCAL.CAT [ HEAD adp,
 				VAL.COMPS < [ ], ... > ],
-	     LABEL-NAME "P" ].
+	     LABEL-NAME "ADP" ].
 
 pp-label := label & 
 	    [ SYNSEM.LOCAL.CAT [ HEAD adp,
@@ -207,7 +229,7 @@ cp-label := label &
 
 det-label := label &
 	     [ SYNSEM.LOCAL.CAT.HEAD det,
-	       LABEL-NAME "D"].
+	       LABEL-NAME "DET"].
 
 adv-mid-label := label & 
 	   [ SYNSEM.LOCAL [ CAT.HEAD adv,
@@ -219,6 +241,12 @@ adv-bottom-label := label &
 	   [ SYNSEM.LOCAL [ CAT.HEAD adv,
                             COORD + ],
 	     LABEL-NAME "ADV-B" ].
+
+subord-conj-label := label &
+	     [ SYNSEM [ LOCAL [ CAT.HEAD adv,
+                                COORD-STRAT "" ],
+                        LKEYS.KEYREL subord-relation ],
+               LABEL-NAME "SCONJ" ].
 
 adv-label := label & 
 	     [ SYNSEM.LOCAL [ CAT.HEAD adv,
@@ -251,7 +279,7 @@ adj-top-label := label &
 
 conj-label := label & 
 	      [ SYNSEM.LOCAL.CAT.HEAD conj,
-		LABEL-NAME "CONJ" ].
+		LABEL-NAME "CCONJ" ].
 
 num-label := label & 
 	     [ SYNSEM.LOCAL.CAT [ HEAD num,
@@ -298,7 +326,6 @@ number-classifier-label := label &
 			                 SUBJ < > ] ],
 	               NON-LOCAL.SLASH 0-dlist ],
               LABEL-NAME "CL" ].
-
 
 ;; Also add node labels for parse tree display
 bridge-unary := label &
