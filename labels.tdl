@@ -16,16 +16,31 @@
 ;;; the more specific one must appear first in this list, or
 ;;; it will never get used.
 
+v-label := label & 
+           [ SYNSEM.LOCAL [ CAT [ HEAD non-aux & [ AUX - ],
+                                  VAL.COMPS < [ ], ... > ],
+                            COORD-STRAT "" ],
+             LABEL-NAME "VERB" ].
+
+s-label := label &
+           [ SYNSEM [ LOCAL [ CAT [ HEAD +vjp & [ MOD < > ],
+                                    VAL [ COMPS < >,
+                                          SUBJ < >,
+                                          SPEC < > ] ],
+                              COORD-STRAT "" ],
+                      NON-LOCAL.SLASH 0-1-dlist ],
+             LABEL-NAME "S"].
+
 s-slash-np-label := label &
            [ SYNSEM [ LIGHT -,
                       LOCAL [ CAT [ HEAD +vjp & [ EMPTY -],
                                     VAL [ COMPS < >,
                                           SPR < >,
                                           SPEC < *top* >,
-					  SUBJ < > ],
+					                                SUBJ < > ],
                                     MC + ],
-			      COORD-STRAT "" ],
-		      NON-LOCAL.SLASH 1-dlist ],
+			                        COORD-STRAT "" ],
+		                  NON-LOCAL.SLASH 1-dlist ],
              LABEL-NAME "S/N"].
 
 slash := meta &
@@ -108,14 +123,9 @@ np-top-label := label &
 				 VAL.SPR < > ],
 	      LABEL-NAME "NP-T" ].
 
-v-label := label & 
-           [ SYNSEM.LOCAL [ CAT [ HEAD non-aux & [ AUX - ],
-                                  VAL.COMPS < [ ], ... > ],
-                            COORD-STRAT "" ],
-             LABEL-NAME "VERB" ].
-
 aux-label := label & 
-           [ SYNSEM.LOCAL [ CAT [ HEAD aux & [ AUX + ] ],
+           [ SYNSEM.LOCAL [ CAT [ HEAD aux & [ AUX + ],
+                                  VAL.COMPS < [ ] > ],
                             COORD-STRAT "" ],
              LABEL-NAME "AUX" ].
 
@@ -183,19 +193,17 @@ s-bottom-label := label &
 ;; FCB & DVM 2016-02-10: the HEAD was changed from verb to +vj so that adjectives can be the head of S.
 ;; DVM 2016-07-09: added p to HEAD so that prepositions can be the head of S, as in "Budi di rumah".
 s-label := label &
-           [ SYNSEM[LOCAL [ CAT [ HEAD +vjp &
-					[ MOD < > ],
-                                  VAL [ COMPS < >,
-                                        SUBJ < >,
-                                        SPEC < > ] ],
-                            COORD-STRAT "" ],
-		      NON-LOCAL.SLASH 0-1-dlist ],
+           [ SYNSEM [ LOCAL [ CAT [ HEAD +vjp & [ MOD < > ],
+                                    VAL [ COMPS < >,
+                                          SUBJ < >,
+                                          SPEC < > ] ],
+                              COORD-STRAT "" ],
+		                  NON-LOCAL.SLASH 0-1-dlist ],
              LABEL-NAME "S"].
 
 ;; DVM 2017-07-05: label for frag-np
 frg-label := label &
-           [ SYNSEM.LOCAL [ CAT [ HEAD fragment_head &
-					[ MOD < > ],
+           [ SYNSEM.LOCAL [ CAT [ HEAD fragment_head & [ MOD < > ],
                                   VAL [ COMPS < >,
                                         SUBJ < > ] ],
                             COORD-STRAT "" ],
@@ -203,28 +211,28 @@ frg-label := label &
 
 s-top-label := label &
 	   [ SYNSEM.LOCAL.CAT [ HEAD verb,
-				VAL [ COMPS < >,
-				      SUBJ < > ] ],
+				                  VAL [ COMPS < >,
+				                        SUBJ < > ] ],
 	     LABEL-NAME "S-T"].
 
 p-label := label & 
 	   [ SYNSEM.LOCAL.CAT [ HEAD adp,
-				VAL.COMPS < [ ], ... > ],
+				                  VAL.COMPS < [ ], ... > ],
 	     LABEL-NAME "ADP" ].
 
 pp-label := label & 
 	    [ SYNSEM.LOCAL.CAT [ HEAD adp,
-				 VAL.COMPS < > ],
+				                   VAL.COMPS < > ],
 	      LABEL-NAME "PP" ].
 
 c-label := label &
 	   [ SYNSEM.LOCAL.CAT [ HEAD comp,
-				VAL.COMPS < [ ], ... > ],
+				                  VAL.COMPS < [ ], ... > ],
 	     LABEL-NAME "C" ].
 
 cp-label := label &
 	    [ SYNSEM.LOCAL.CAT [ HEAD comp,
-				 VAL.COMPS < > ],
+				                   VAL.COMPS < > ],
 	      LABEL-NAME "CP"].
 
 det-label := label &
