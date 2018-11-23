@@ -22,6 +22,11 @@ v-label := label &
                             COORD-STRAT "" ],
              LABEL-NAME "VERB" ].
 
+pp-label := label & 
+      [ SYNSEM.LOCAL.CAT [ HEAD adp,
+                           VAL.COMPS < > ],
+        LABEL-NAME "PP" ].
+
 s-label := label &
            [ SYNSEM [ LOCAL [ CAT [ HEAD +vjp & [ MOD < > ],
                                     VAL [ COMPS < >,
