@@ -51346,7 +51346,7 @@ akan := modal_fut-aux-lex &
   [ STEM < "akan" >,
     TRAITS native_token_list ].
 
-bisa := modal-aux-lex &
+bisa_aux := modal-aux-lex &
   [ STEM < "bisa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bisa_rel",
     TRAITS native_token_list ].
@@ -78868,6 +78868,11 @@ panas+matahari := uncountable-noun-lex &
 masuk+angin := uncountable-noun-lex &
     [ STEM < "masuk", "angin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_masuk+angin_n_rel",
+    TRAITS native_token_list ].
+
+bisa_uncount := uncountable-noun-lex &
+    [ STEM < "bisa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bisa_n_rel",
     TRAITS native_token_list ].
 
 sakit_uncount := uncountable-noun-lex &
