@@ -3171,6 +3171,7 @@ basic-conj-lex := basic-zero-arg & no-hcons-lex-item &
   [ CFORM string ].
 
 conj-lex := basic-conj-lex & single-rel-lex-item &
+"""konjungtor koordinatif, yaitu konjungtor yang menghubungkan dua unsur atau lebih yang sama pentingnya, di samping menghubungkan klausa juga dapat menghubungkan kata"""
   [ SYNSEM [ LOCAL [ CAT [ HEAD conj & [ MOD null ],
                            VAL [ SPR < >,
                                  COMPS < >,

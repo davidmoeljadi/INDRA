@@ -370,6 +370,12 @@ pronoun-lex := basic-pronoun-lex &
                         HCONS <! qeq & [ LARG #h, HARG #h2 ] !>  ] ].
 
 personal-pronoun-lex := pronoun-lex &
+"""
+<name lang='id'>pronomina persona atau pronomina takrif
+<ex>Adi
+<ex>Budi
+<nex>guru
+"""
   [ SYNSEM.LOCAL.CAT.HEAD pronoun ].
 
 ;proclitic-pronoun-lex := pronoun-lex &
@@ -397,27 +403,66 @@ honorific-hearer-lex-item := lex-item &
 ;pronoun-noun-lex := noun-lex.
 
 uncountable-noun-lex := common-noun-lex &
+"""
+<name lang='id'>nomina tak terbilang
+nomina yang tidak dapat didampingi oleh numeralia
+<ex>air
+<ex>udara
+<nex>rumah
+"""
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT uncountable ].
 
 countable-noun-lex := common-noun-lex &
+"""
+<name lang='id'>nomina terbilang
+nomina yang dapat dihitung, dapat didampingi oleh numeralia
+<ex>rumah
+<nex>air
+"""
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT countable ].
 
 inanimate-noun-lex := countable-noun-lex &
+"""
+<name lang='id'>nomina tak bernyawa
+nomina yang dapat didahului kata penggolong 'buah'
+<ex>apel
+<ex>rumah
+<nex>guru
+"""
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT inanimate ].
 
 inanimate-plural-noun-lex := inanimate-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
 
 animate-noun-lex := countable-noun-lex &
+"""
+<name lang='id'>nomina bernyawa
+kelompok nomina yang terdiri atas: nomina persona (insan) dan nomina non-persona
+<ex>guru
+<ex>semut
+<nex>rumah
+"""
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT animate ].
 
 nonhuman-noun-lex := animate-noun-lex &
+"""
+<name lang='id'>nomina non-persona
+nomina yang dapat didahului kata penggolong 'ekor'
+<ex>kucing
+<nex>guru
+"""
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT non-human ].
 
 nonhuman-plural-noun-lex := nonhuman-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
 
 human-noun-lex := animate-noun-lex &
+"""
+<name lang='id'>nomina persona (insan)
+nomina yang dapat didahului kata penggolong 'orang'
+<ex>guru
+<nex>semut
+"""
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT human ].
 
 human-plural-noun-lex := human-noun-lex &
@@ -616,20 +661,46 @@ passive-two-verb-lex := passive-transitive-lex-item & main-verb-lex &
 ; DVM 2017-03-23: the new tr-verb-lex
 ; tr-verb-lex := basic-two-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
 tr-verb-lex := basic-two-arg-no-hcons & basic-verb-lex &
+"""
+<name lang='id'>verba monotransitif atau verba ekatransitif
+verba yang memerlukan satu nomina sebagai objek dalam kalimat aktif dan objek tersebut dapat berfungsi sebagai subjek dalam kalimat pasif
+<ex>Saya mengejar Budi.
+<nex>Saya makan.
+<nex>Budi tidur.
+"""
   [ INFLECTED.VOICE-FLAG - ].
 
-intr-verb-lex := intransitive-verb-lex.
+intr-verb-lex := intransitive-verb-lex
+"""
+<name lang='id'>verba intransitif
+<ex>Budi tidur.
+<nex>Adi mengejar Budi.
+"""
+.
 
 ; DVM 2017-12-20: HEAD is subj-noun to prevent *saya makannya from parsing
 opt-tr-verb-lex := transitive-verb-lex &
+"""
+<name lang='id'>verba semitransitif
+verba yang objeknya boleh ada dan boleh juga tidak
+<ex>Saya makan.
+<ex>Saya makan nasi.
+<nex>Saya mengejar Budi.
+"""
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT + ].
 
 ;; DVM 2017-08-22 : for verbs taking two arguments but cannot be passivized such as "terdiri dari"
 non-opt-tr-verb-lex := transitive-verb-lex &
+"""
+verba taktransitif berpelengkap wajib
+"""
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT -,
                                    LOCAL.CAT.HEAD subj-noun ] > ].
 
 opt-tr-np-comp-verb-lex := opt-tr-verb-lex &
+"""
+verba taktransitif berpelengkap manasuka
+"""
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL.CAT.HEAD subj-noun ] > ].
 
 opt-tr-pp-comp-verb-lex := opt-tr-verb-lex &
@@ -641,8 +712,8 @@ relational-verb-lex := opt-tr-pp-comp-verb-lex.
 
 #|
 v_pp*_dir_le := opt-tr-pp-comp-verb-lex
-"Cmps PP(opt,dir)
-<ex>B merangkak ke dalam kamar."
+"""Cmps PP(opt,dir)
+<ex>B merangkak ke dalam kamar."""
 .
 |#
 
@@ -894,12 +965,24 @@ classifier-lex := basic-classifier-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT - ] > ].
 
 cl-inanim-le := classifier-lex &
+"""
+kata penggolong nomina tak bernyawa, untuk buah-buahan atau hal lain yang ada di luar golongan manusia dan binatang
+<ex>sebuah apel
+"""
   [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT inanimate ].
 
 cl-nonhum-le := classifier-lex &
+"""
+kata penggolong nomina non-persona, untuk binatang
+<ex>seekor kucing
+"""
   [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT non-human ].
 
 cl-hum-le := classifier-lex &
+"""
+kata penggolong nomina persona, untuk manusia
+<ex>seorang guru
+"""
   [ SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ANIMCOUNT human ].
 #|
 ;;unary rule for num+cl -> n
@@ -1219,8 +1302,10 @@ passive-two-prefix-kau-rule := unary-phrase &
 ; Temporary patch for e.g. 'take' which has an optional ARG3 role, which
 ; needs to be present so generator won't spuriously fill it.
 v_np_noarg3_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
-"Cmps NP(obl), only two args
-<ex>Budi mengambil buku."
+"""
+Cmps NP(obl), only two args
+<ex>Budi mengambil buku.
+"""
   [ INFLECTED.VOICE-FLAG - ].
 
 ditransitive-verb-lex := main-verb-lex & ditransitive-lex-item &
@@ -1314,8 +1399,8 @@ passive-two-ditrans-n-n-verb-lex := passive-two-ditransitive-lex-item & main-ver
 ;; put (takes variety of PP complements, so avoid chart dependency filter)
 #|
 v_np-pp_prop_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
-"Cmps NP(obl),PP(obl), state rslt
-<ex>Budi menaruh buku di meja."
+"""Cmps NP(obl),PP(obl), state rslt
+<ex>Budi menaruh buku di meja."""
   [ INFLECTED.VOICE-FLAG - ].
 |#
 
@@ -1365,8 +1450,8 @@ act-ditrans-n-p-lex-rule := active-voice-lex-rule-ditrans-n-p.
 
 #|
 v_np-pp_e_le := v_np-pp_prop_le
-"Cmps NP(obl),PP(sel.obl)
-<ex>Budi membandingkan Adi dengan Susi."
+"""Cmps NP(obl),PP(sel.obl)
+<ex>Budi membandingkan Adi dengan Susi."""
 . 
 |#
 
@@ -1594,12 +1679,22 @@ v_np_cop_common_le := cop-verb-lex &
 
 ;; FCB & DVM 2015-10-28: "adalah" and "ialah" cannot take aspect markers and cannot be in future tense
 v_np_cop_noasp_le := cop-verb-lex &
+"""
+verba kopulatif yang tidak dapat didahului oleh penanda aspek
+<ex>Ini adalah pekerjaannya.
+<nex>Ini sudah menjadi pekerjaannya.
+"""
   [ SYNSEM.LOCAL [ CAT.HEAD copula-stative,
                    CONT.HOOK.INDEX.E [ ASPECT non-perf-and-prog ,
 				       TENSE no-tensed ] ] ].
 
 ;; FCB & DVM 2015-10-28: "ialah" can only appear with 3rd person subject
 v_np_cop_3_le := v_np_cop_noasp_le &
+"""
+verba kopulatif yang tidak dapat didahului oleh penanda aspek dan subjeknya berupa orang ketiga
+<ex>Budi ialah seorang petani.
+<nex>Saya adalah seorang guru.
+"""
   [ SYNSEM.LOCAL.CONT.HOOK.XARG.PNG.PERNUM 3rd ].
 
 ; SSH 2014-09-26: Only phrases can be the subjects (phr-synsem)
@@ -2025,8 +2120,8 @@ trans-first-arg-control-adj := basic-two-arg & basic-nomod-adj-lex & trans-first
 ;; TODO: merge with trans-verb-lex
 #|
 v_np_ntr_le := non-opt-tr-verb-lex
-"Cmps NP(obl), no psv
-<ex>B masih murid."
+"""Cmps NP(obl), no psv
+<ex>B masih murid."""
 .
 |#
 
@@ -2034,7 +2129,7 @@ v_np_ntr_le := non-opt-tr-verb-lex.
 
 #|
 v_cp_prop_le := prop-comp-verb-lex
-"Cmps S (fin/inf, -Q, opt cmplzr)
+"""Cmps S (fin/inf, -Q, opt cmplzr)
 <ex>B hoped (that) C won.
 
 Todo
@@ -2044,7 +2139,7 @@ Todo
 * that
 * 'tother
 
-"
+"""
 .
 |#
 
@@ -3005,11 +3100,12 @@ rel-yang-lex := yang-comp-lex.
 yang := +pc.
 
 yang-comp-lex := basic-one-arg & yang-super-lex & raise-sem-lex-item & no-icons-lex-item & norm-zero-arg &
-"The modified noun is the missing argument in the relative clause.
-EEXX saya makan buah yang merah
-EEXX saya makan buah yang merah itu
-EEXX saya membaca buku yang ditulis Budi
-"
+"""
+The modified noun is the missing argument in the relative clause.
+<ex>Saya makan buah yang merah itu.
+<ex>Saya membaca buku yang ditulis Budi.
+<nex>Orang yang badannya besar itu ayah saya.
+"""
   [ SYNSEM [ LOCAL [ CAT [ HEAD yang &
                                 [ MOD < [ LOCAL.CONT.HOOK [ INDEX #slash,
                                                             LTOP #ltop ] ] > ] ,
@@ -3025,10 +3121,11 @@ EEXX saya membaca buku yang ditulis Budi
                           QUE <! !> ] ] ].
 
 yang-super-lex := lex-item &
-"lex-item & YANG takes a COMP and modifies a noun. Its position is after its modified noun.
+"""
+lex-item & YANG takes a COMP and modifies a noun. Its position is after its modified noun.
 POSTCOMP is a feature to be used on head to indicate the COMP's position is after the head.
 POSTHEAD + means as a modifier, it always appear after the head noun.
-"
+"""
   [ SYNSEM [ LOCAL.CAT [ POSTHEAD +,
                          HEAD yang &
 	                      [ MOD < [ LOCAL intersective-mod &
@@ -3044,11 +3141,14 @@ rel-yang-nya-lex := yang-nya-comp-lex.
 ;; & zero-arg-nonque.
 
 yang-nya-comp-lex := basic-two-arg & yang-super-lex & no-icons-lex-item & norm-zero-arg &
-" MC - means that N N=nya V/A/P is not a main clause
+"""
+MC - means that N N=nya V/A/P is not a main clause
 OPT - is needed to constrain the number of trees, also neither the N=nya nor the V/A/P is optional
 The modified noun is the missing possessor in the relative clause.
-EEXX gajah yang hidungnya panjang itu tidur
-"
+<ex>Gajah yang hidungnya panjang itu tidur.
+<ex>Orang yang badannya besar itu ayah saya.
+<nex>Saya makan buah yang merah itu.
+"""
   [ SYNSEM [ LOCAL [ CAT [ HEAD yang &
                                 [  MOD < [ LOCAL [ CAT.VAL.SPR < canonical-synsem >,
                                                    CONT.HOOK.INDEX #internalargument ] ] > ] ,
@@ -3098,11 +3198,73 @@ non-basic-head-subj-nmc-phrase := head-valence-phrase & basic-binary-headed-phra
     C-CONT [ RELS <! !>, HCONS <! !>, ICONS <! !> ] ].
 |#
 
+#|
+;; DVM 2018-11-28: for idioms like "selamat siang"
 
+utt-valid := head.
+
+sentence-valid := utt-valid.
+
+utterance-super :=  utt-valid &
+                  [MOD null].
+
+utterance_head := utterance-super.
+
+idiom_head :=  sentence-valid &
+              [MOD null,
+               MOD  < [LOCAL [CAT [HEAD sentence-valid & [FORM finite],
+                                   VAL saturated]]] >].
+
+utterance_rule-idiom := utt-idiom-type &
+ [SYNSEM.LOCAL.CONT.HOOK.INDEX.SF prop-or-ques].
+
+; type for idioms
+utt-idiom-type := utterance-type &
+ [ARGS.FIRST.SYNSEM.LOCAL.CAT.HEAD idiom_head].
+
+utterance-type := unary-phrase &  
+[SYNSEM synsem & 
+	[LOCAL [CAT [HEAD utterance_head & [EMPTY #empty],
+		     VAL super-saturated]]],
+ C-CONT [RELS <! !>,
+	 HCONS <! !>],
+ ARGS.FIRST [SYNSEM [LOCAL  [CAT [ VAL saturated]]]]].
+
+discourse-lex := lex-item & 
+ [SYNSEM [LOCAL [CAT [VAL super-saturated],
+		 CONT [HOOK.LTOP #top,
+		       RELS <! event-relation &
+			     [ LBL #top,
+			       PRED "discourse_x_rel",
+			       L-HNDL #hand ],
+			     #key & 
+			     [ LBL #hand, 
+			       ARG0 event] !>],
+		 ARG-S <>],
+	  LKEYS.KEYREL #key,
+	  NON-LOCAL [QUE <! !>],
+	  MODIFIED.PERIPH bool]].
+
+idiom-lex := discourse-lex & 
+ [SYNSEM [LOCAL [CAT [HEAD idiom_head & 
+			   [MOD < [LOCAL.CONT.HOOK [LTOP #rhand,
+						    INDEX #ind]] > ]], 
+		 CONT [HOOK.INDEX #ind,
+		       RELS <! [R-HNDL #rhand],
+			     arg0-relation !>]]]].
+
+greeting-lex := idiom-lex.
+|#
 
 ;; DVM 2017-08-22 : for subordinate conjunctions such as "jika"
 
 subord-conj-lex := basic-subord-conjunction-lex & basic-icons-lex-item &
+"""
+<name lang='id'>konjungtor subordinatif
+konjungtor yang menghubungkan dua klausa atau lebih, dan klausa itu tidak memiliki status sintaktis yang sama, salah satu dari klausa tersebut merupakan anak kalimat
+<ex>Saya akan tidur jika dia sudah tidur.
+<nex>Saya makan nasi dan ayam.
+"""
   [ ARG-ST < #comps >,
     SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < >,
                                  COMPS < #comps &
@@ -3240,7 +3402,9 @@ frag-np-rule := unary-frag-rule &
 
 ; "stand alone intersective adverb or pp"
 frag-vmod-rule := unary-frag-rule &
-"stand alone intersective adverb or pp"
+"""
+stand alone intersective adverb or pp
+"""
  [  ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD +rp &
 				       [MOD < synsem &
 					      [ LOCAL intersective-mod  ] >],
