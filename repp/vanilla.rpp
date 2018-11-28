@@ -41,6 +41,9 @@
 ;; also "buku-bukuku"
 !(.+)-\1								\1²
 
+;; DVM 2018-11-28: change number 2 to superscript2
+!(.+)2								\1²
+
 ;; DVM 2018-01-08: do not put any spaces here to enable INDRA to parse "mobil-mobilanku"
 ;; DVM 2015-09-23: input is A-Aan, output is A²an
 ! (.+)-\1an								 \1²an								
