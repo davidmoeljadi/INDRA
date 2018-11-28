@@ -41,6 +41,7 @@
 
 :begin :instance :status lex-entry.
 :include "lexicon".
+:include "lexicon-tvlk".
 :end :instance.
 
 :begin :instance :status generic-lex-entry.
