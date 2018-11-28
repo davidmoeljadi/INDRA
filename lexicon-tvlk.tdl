@@ -2563,6 +2563,26 @@ rejeki := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_rejeki_n_rel",
     TRAITS native_token_list ].
 
+jrg_adv := adverb-pre-lex &
+  [ STEM < "jrg" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jarang_a_rel",
+    TRAITS native_token_list ].
+
+kdg := adverb-pre-lex &
+  [ STEM < "kdg" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kadang_a_rel",
+    TRAITS native_token_list ].
+
+kdg-kdg := adverb-pre-lex &
+  [ STEM < "kdg²" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kadang-kadang_a_rel",
+    TRAITS native_token_list ].
+
+skrg := adverb-time-lex &
+  [ STEM < "skrg" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sekarang_a_rel",
+    TRAITS native_token_list ].
+
 bsk := n_-_temp-lex &
   [ STEM < "bsk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_besok_n_rel",
@@ -3026,6 +3046,18 @@ Indosat := proper-name-lex &
 Adithia := proper-name-lex &
   [ STEM < "Adithia" >,
     SYNSEM.LKEYS.KEYREL.CARG "Adithia",
+    TRAITS native_token_list ].
+
+bahkan := conj-lex &
+  [ STEM < "bahkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bahkan_coord_rel",
+    CFORM "1",
+    TRAITS native_token_list ].
+
+bhkan := conj-lex &
+  [ STEM < "bhkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bahkan_coord_rel",
+    CFORM "1",
     TRAITS native_token_list ].
 
 ttp_tetapi := conj-lex &
@@ -7634,6 +7666,16 @@ tdi := adverb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_tadi_a_rel",
     TRAITS native_token_list ].
 
+td := adverb-lex &
+  [ STEM < "td" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tadi_a_rel",
+    TRAITS native_token_list ].
+
+tnyata := adverb-lex &
+  [ STEM < "tnyata" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ternyata_a_rel",
+    TRAITS native_token_list ].
+
 Telkom := proper-name-lex &
   [ STEM < "Telkom" >,
     SYNSEM.LKEYS.KEYREL.CARG "Telkom",
@@ -8949,6 +8991,38 @@ wkt_subord := subord-conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_waktu_coord_rel",
     TRAITS native_token_list ].
 
+bkn_n := n+cop+n-lex &
+  [ STEM < "bkn" >,
+    SYNSEM.LKEYS [KEYREL.PRED copula_v_rel,
+      ALTKEYREL.PRED neg_rel ],
+    TRAITS native_token_list].
+
+bkn_p := n+cop+p-lex &
+  [ STEM < "bkn" >,
+    SYNSEM.LKEYS [KEYREL.PRED copula_v_rel,
+      ALTKEYREL.PRED neg_rel ],
+    TRAITS native_token_list].
+
+mjd_np := v_np_cop_le &
+  [ STEM < "mjd" >,
+    SYNSEM.LKEYS.KEYREL.PRED _cop_v_menjadi_rel,
+    TRAITS native_token_list ].
+
+mjd_adj := verb-adj-lex &
+  [ STEM < "mjd" > ,
+    SYNSEM.LKEYS.KEYREL.PRED _cop_v_menjadi_rel,
+    TRAITS native_token_list ].
+
+jd_np := v_np_cop_le &
+  [ STEM < "jd" >,
+    SYNSEM.LKEYS.KEYREL.PRED _cop_v_menjadi_rel,
+    TRAITS native_token_list ].
+
+jd_adj := verb-adj-lex &
+  [ STEM < "jd" > ,
+    SYNSEM.LKEYS.KEYREL.PRED _cop_v_menjadi_rel,
+    TRAITS native_token_list ].
+
 ndak_v := neg-adv-lex &
   [ STEM < "ndak" >,
     SYNSEM.LKEYS.KEYREL.PRED neg_rel,
@@ -8956,6 +9030,11 @@ ndak_v := neg-adv-lex &
 
 nda_v := neg-adv-lex &
   [ STEM < "nda" >,
+    SYNSEM.LKEYS.KEYREL.PRED neg_rel,
+    TRAITS native_token_list ].
+
+tdk_v := neg-adv-lex &
+  [ STEM < "tdk" >,
     SYNSEM.LKEYS.KEYREL.PRED neg_rel,
     TRAITS native_token_list ].
 
@@ -8976,6 +9055,16 @@ ngak_v := neg-adv-lex &
 
 gak_v := neg-adv-lex &
   [ STEM < "gak" >,
+    SYNSEM.LKEYS.KEYREL.PRED neg_rel,
+    TRAITS native_token_list ].
+
+kagak_v := neg-adv-lex &
+  [ STEM < "kagak" >,
+    SYNSEM.LKEYS.KEYREL.PRED neg_rel,
+    TRAITS native_token_list ].
+
+kgk_v := neg-adv-lex &
+  [ STEM < "kgk" >,
     SYNSEM.LKEYS.KEYREL.PRED neg_rel,
     TRAITS native_token_list ].
 
