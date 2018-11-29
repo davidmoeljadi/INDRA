@@ -670,6 +670,8 @@ verba yang memerlukan satu nomina sebagai objek dalam kalimat aktif dan objek te
 """
   [ INFLECTED.VOICE-FLAG - ].
 
+tr-verb-in-lex := tr-verb-lex.
+
 intr-verb-lex := intransitive-verb-lex
 """
 <name lang='id'>verba intransitif
@@ -1308,6 +1310,8 @@ Cmps NP(obl), only two args
 """
   [ INFLECTED.VOICE-FLAG - ].
 
+v_np_noarg3-in_le := v_np_noarg3_le.
+
 ditransitive-verb-lex := main-verb-lex & ditransitive-lex-item &
   [ SYNSEM.LOCAL.CAT [ HEAD transitive,
                        VAL.COMPS < #comp1, #comp2 > ],
@@ -1407,6 +1411,7 @@ v_np-pp_prop_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-
 v_np-pp_prop_le := basic-three-arg-no-hcons & basic-icons-lex-item & basic-verb-lex &
   [ INFLECTED.VOICE-FLAG - ].
 
+v_np-pp_prop-in_le := v_np-pp_prop_le.
 
 ;; TODO: ditransitive-n-p
 #|
