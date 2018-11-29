@@ -51473,9 +51473,14 @@ sebagian+besar := determiner-pl-quantifier-lex &
     SYNSEM.LKEYS.KEYREL.PRED "most_q_rel",
     TRAITS native_token_list ].
 
+kebanyakan := determiner-pl-quantifier-lex &
+  [ STEM < "kebanyakan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "most_q_rel",
+    TRAITS native_token_list ].
+
 sebagian+kecil := determiner-pl-quantifier-lex &
   [ STEM < "sebagian", "kecil" >,
-    SYNSEM.LKEYS.KEYREL.PRED "most_q_rel",
+    SYNSEM.LKEYS.KEYREL.PRED "small+portion_q_rel",
     TRAITS native_token_list ].
 
 ;; DVM 2017-08-19: pumping rules applied for sesuatu: suatu+benda/hal = sesuatu
@@ -51514,6 +51519,11 @@ misalnya_adp_mod := adposition-mod-lex &
 misalnya_abbr_adp_mod := adposition-mod-lex &
   [ STEM < "msl" >,
     SYNSEM.LKEYS.KEYREL.PRED "_misalnya_p_rel",
+    TRAITS native_token_list ].
+
+misalkan_adp := adposition-lex &
+  [ STEM < "misalkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_misalkan_p_rel",
     TRAITS native_token_list ].
 
 misalnya_adp := adposition-lex &
@@ -51807,6 +51817,26 @@ kalau := subord-conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_kalau_coord_rel",
     TRAITS native_token_list ].
 
+asalkan := subord-conj-lex &
+  [ STEM < "asalkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_asalkan_coord_rel",
+    TRAITS native_token_list ].
+
+andaikan := subord-conj-lex &
+  [ STEM < "andaikan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_andaikan_coord_rel",
+    TRAITS native_token_list ].
+
+seumpama := subord-conj-lex &
+  [ STEM < "seumpama" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_seumpama_coord_rel",
+    TRAITS native_token_list ].
+
+misalkan_subord := subord-conj-lex &
+  [ STEM < "misalkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_misalkan_coord_rel",
+    TRAITS native_token_list ].
+
 ;;; auto generated
 bila := subord-conj-lex &
   [ STEM < "bila" >,
@@ -51898,6 +51928,16 @@ karena_subord := subord-conj-lex &
 karena_abbr_subord := subord-conj-lex &
   [ STEM < "krn" >,
     SYNSEM.LKEYS.KEYREL.PRED "_karena_coord_rel",
+    TRAITS native_token_list ].
+
+sebab_subord := subord-conj-lex &
+  [ STEM < "sebab" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sebab_coord_rel",
+    TRAITS native_token_list ].
+
+sbb_subord := subord-conj-lex &
+  [ STEM < "sbb" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sebab_coord_rel",
     TRAITS native_token_list ].
 
 ;;; auto generated
@@ -55129,11 +55169,6 @@ perhubungkan := v_np-pp_e_le &
     SYNSEM.LKEYS.KEYREL.PRED "_perhubungkan_v_rel",
     TRAITS native_token_list ].
 
-perkenalkan_1 := v_np-pp_prop_le &
-  [ STEM < "perkenalkan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_perkenalkan_v_rel",
-    TRAITS native_token_list ].
-
 memperkirakan := v_cp_prop_le &
   [ STEM < "memperkirakan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_memperkirakan_v_rel",
@@ -56047,11 +56082,6 @@ sambung := v_np-pp_e_le &
 sambungkan := v_np-pp_e_le &
   [ STEM < "sambungkan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sambungkan_v_rel",
-    TRAITS native_token_list ].
-
-sampaikan_1 := v_np-pp_prop_le &
-  [ STEM < "sampaikan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sampaikan_v_rel",
     TRAITS native_token_list ].
 
 menyampaikan_2 := prop-comp-verb-lex &
@@ -68445,7 +68475,7 @@ tiruan := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_tiruan_n_rel",
     TRAITS native_token_list ].
 
-sebab := inanimate-noun-lex &
+sebab_inanim := inanimate-noun-lex &
   [ STEM < "sebab" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sebab_n_rel",
     TRAITS native_token_list ].
@@ -70325,11 +70355,6 @@ andalkan := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_andalkan_v_rel",
     TRAITS native_token_list ].
 
-apa-apakan := tr-verb-lex &
-  [ STEM < "apa-apakan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_apa-apakan_v_rel",
-    TRAITS native_token_list ].
-
 atasi := tr-verb-lex &
   [ STEM < "atasi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_atasi_v_rel",
@@ -71095,7 +71120,7 @@ dedikasikan := v_np-pp_prop_le &
     SYNSEM.LKEYS.KEYREL.PRED "_dedikasikan_v_rel",
     TRAITS native_token_list ].
 
-diskusi := inanimate-noun-lex &
+diskusi_inanim := inanimate-noun-lex &
   [ STEM < "diskusi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_diskusi_n_rel",
     TRAITS native_token_list ].
@@ -74010,7 +74035,7 @@ kenai := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_kenai_v_rel",
     TRAITS native_token_list ].
 
-kenakan := tr-verb-lex &
+kenakan_tr := tr-verb-lex &
   [ STEM < "kenakan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kenakan_v_rel",
     TRAITS native_token_list ].
@@ -77035,7 +77060,7 @@ topang := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_topang_v_rel",
     TRAITS native_token_list ].
 
-tukarkan := tr-verb-lex &
+tukarkan_tr := tr-verb-lex &
   [ STEM < "tukarkan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tukarkan_v_rel",
     TRAITS native_token_list ].
@@ -78112,6 +78137,18 @@ motorik := adjective-lex &
 tetapi := conj-lex &
   [ STEM < "tetapi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tetapi_coord_rel",
+    CFORM "1",
+    TRAITS native_token_list ].
+
+tapi := conj-lex &
+  [ STEM < "tapi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tetapi_coord_rel",
+    CFORM "1",
+    TRAITS native_token_list ].
+
+namun := conj-lex &
+  [ STEM < "namun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_namun_coord_rel",
     CFORM "1",
     TRAITS native_token_list ].
 
