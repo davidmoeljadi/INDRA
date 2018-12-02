@@ -303,6 +303,11 @@ sekolah := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_sekolah_n_rel",
     TRAITS native_token_list ].
 
+universitas := inanimate-noun-lex &
+  [ STEM < "universitas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_universitas_n_rel",
+    TRAITS native_token_list ].
+
 seni := inanimate-noun-lex &
   [ STEM < "seni" >,
     SYNSEM.LKEYS.KEYREL.PRED "_seni_n_rel",
@@ -51018,7 +51023,7 @@ temukan := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_temukan_v_rel",
     TRAITS native_token_list ].
 
-tes := tr-verb-lex &
+tes_tr := tr-verb-lex &
   [ STEM < "tes" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tes_v_rel",
     TRAITS native_token_list ].
@@ -55904,11 +55909,6 @@ kirimkan := v_np-pp_prop_le &
     SYNSEM.LKEYS.KEYREL.PRED "_kirimkan_v_rel",
     TRAITS native_token_list ].
 
-isi := tr-verb-lex &
-  [ STEM < "isi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_isi_v_rel",
-    TRAITS native_token_list ].
-
 mengombak := intr-verb-lex &
   [ STEM < "mengombak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mengombak_v_rel",
@@ -56889,6 +56889,11 @@ yakin := v_cp_prop_le &
 pencakar_inanim := inanimate-noun-lex &
   [ STEM < "pencakar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pencakar_n_rel",
+    TRAITS native_token_list ].
+
+tes_inanim := inanimate-noun-lex &
+  [ STEM < "tes" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tes_n_rel",
     TRAITS native_token_list ].
 
 punya_common := common-noun-lex &
@@ -62310,7 +62315,7 @@ bumbu := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_bumbu_n_rel",
     TRAITS native_token_list ].
 
-karang := inanimate-noun-lex &
+karang_inanim := inanimate-noun-lex &
   [ STEM < "karang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_karang_n_rel",
     TRAITS native_token_list ].
