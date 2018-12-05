@@ -62,6 +62,12 @@ number-label := label &
 	               NON-LOCAL.SLASH 0-dlist ],
               LABEL-NAME "NUM" ].
 
+idiom-label := label & 
+            [ SYNSEM.LOCAL [ CAT [ HEAD idiom,
+                                   VAL.SPR < > ],
+                             COORD-STRAT "" ],
+              LABEL-NAME "IDIOM" ].
+
 pron-label := label & 
      [ SYNSEM.LOCAL [ CAT [ HEAD pronoun,
                             VAL.SPR < > ],
