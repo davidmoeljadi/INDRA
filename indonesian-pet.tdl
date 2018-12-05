@@ -59,6 +59,7 @@
 :begin :instance :status lex-rule.
 :include "lrules".
 :include "irules".
+:include "irules-tvlk".
 :end :instance.
 
 ;;

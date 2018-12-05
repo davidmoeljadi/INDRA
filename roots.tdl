@@ -21,7 +21,7 @@ root := phrase &
 
 ;lex-root := word-or-lexrule.
 ;;; DVM 2017-01-09: added from Zhong, type for fragments
-frag := phrase  &
+frag := phrase &
    [ SYNSEM [ LOCAL [ CAT [ HEAD fragment_head,
 			    VAL super-saturated ] ],
 	      NON-LOCAL.SLASH 0-dlist ] ].

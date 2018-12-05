@@ -73,6 +73,46 @@
 ! ([a-zA-Z²]+)(x)[;,\.?!\]})]? 								 \1 -x 
 ! (agak|akhir|berikut|berta|biasa|ha|kelihatan|misal|nampak|no|nyo|pu|rupa|satu²|sebaik|sebelum|sebenar|sebetul|secukup|seharus|sekadar|selanjut|seluruh|semua|sepenuh|sesungguh|ta|tadi|tampak|tentu|umum|nyata) -x 							 \1nya 
 
+! gatau 								 ga tau 
+! gakbisa 								 gak bisa 
+! gabisa 								 ga bisa 
+! ngabisa 								 nga bisa 
+! nggabisa 								 ngga bisa 
+
+! disna 									 di sna 
+! distu 									 di stu 
+! disni 									 di sni 
+! disn 										 di sn 
+! dibawah 									 di bawah 
+! diatas 									 di atas 
+
+! kepemesan 								 ke pemesan 
+! kekanan 									 ke kanan 
+! kepesanan 								 ke pesanan 
+! kesalahanpenerbangan 						 kesalahan penerbangan 
+! kecicilan 								 ke cicilan 
+! kepesan 									 ke pesan 
+! kehalaman 								 ke halaman 
+! ketahapan 								 ke tahapan 
+! kemedan 									 ke medan 
+! kepengisian 								 ke pengisian 
+! kelaman 									 ke laman 
+! ketujuan 									 ke tujuan 
+! keteman 									 ke teman 
+! kepemesanan 								 ke pemesanan 
+! kebalikpapan 								 ke balikpapan 
+! keperusahaan 								 ke perusahaan 
+! kepembayaran 								 ke pembayaran 
+! kebawah 								 ke bawah 
+! keatas 								 ke atas 
+! kedepan 									 ke depan 
+! kehotel 								 ke hotel 
+! kemaskapai 								 ke maskapai 
+! kestasiun 								 ke stasiun 
+! kesana 								 ke sana 
+! kebandara 								 ke bandara 
+! kekantor 								 ke kantor 
+
 ! nye 										 -nya 
 ! nyo 										 -nya 
 ! nyh 										 -nya 
@@ -80,7 +120,6 @@
 ! nyaa 										 -nya 
 ! nyah 										 -nya 
 ! nyya 										 -nya 
-! gatau 									 ga tau 
 
 ;; bu -ku -> buku
 ;; ku -ku -> kuku
@@ -94,6 +133,16 @@
 ! [Ss]eekor 									 se- ekor 
 ! [Ss]ebuah 									 se- buah 
 ! [Ss]eorang 								 se- orang 
+
+;; DVM 2018-12-04: tvlk chat data
+! [Ss]buah 								 se- buah 
+! [Ss]edetik 								 se- detik 
+! [Ss]emenit 								 se- menit 
+! [Ss]ejam 								 se- jam 
+! [Ss]ehari 								 se- hari 
+! [Ss]eminggu 								 se- minggu 
+! [Ss]ebulan 								 se- bulan 
+! [Ss]etahun 								 se- tahun 
 
 ! berbentuk 									 ber- bentuk 
 ! berbumbu 									 ber- bumbu 

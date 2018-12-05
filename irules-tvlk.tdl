@@ -1,0 +1,198 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Inflecting Lexical Rule Instances
+
+;;;(no prefix)
+;;;m+
+;;;mN-
+;;;N-
+;;;nge+
+;;;ng+ ngprint, ngcek
+;;;d+
+
+;;; DVM 2018-12-03: tvlk chat data
+;;; active voice without prefix
+; <type val="act-no-prefix">
+; <description>"Active" voice with no prefix
+; <ex>tunggu,ambil,sapa,panggil
+; <nex>
+; <todo>
+; </type>
+act-no-prefix :=
+act-no-prefix-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT +,
+                                   LOCAL.CAT.HEAD comp-noun ] > ].
+
+; <type val="act-no-prefix">
+; <description>Active voice with no prefix for ditransitives V NP NP
+; <ex>kasih,ajarin
+; <nex>
+; <todo>
+; </type>
+act-no-prefix-ditrans-n-n-prefix :=
+act-no-prefix-ditrans-n-n-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
+
+; <type val="act-no-prefix">
+; <description>Active voice with no prefix for ditransitives V NP PP
+; <ex>masukkan
+; <nex>
+; <todo>
+; </type>
+act-no-prefix-ditrans-n-p-prefix :=
+act-no-prefix-ditrans-n-p-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; DVM 2018-12-03: tvlk chat data
+;;; active voice with m-+stem
+; <type val="act-m-prefix">
+; <description>"Active" voice with prefix m-
+; <ex>mgunakan, mbawa, mdapat
+; <nex>
+; <todo>
+; </type>
+act-m-prefix :=
+%prefix (p mm) (pl mpl) (pr mpr) (ps mps) (pt mpt) (b mb) (m mm) (f mf) (v mv) (w mw) (t mn) (tr mtr) (ts mts) (d md) (n mn) (r mr) (s mny) (sl msl) (sr msr) (sp msp) (sm msm) (sn msn) (sk msk) (sy msy) (sw msw) (st mst) (z mz) (l ml) (c mc) (j mj) (ny mny) (y my) (k mng) (kh mkh) (kl mkl) (kr mkr) (g mg) (ng mng) (q mq) (h mh)
+act-m-prefix-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT +,
+                                   LOCAL.CAT.HEAD comp-noun ] > ].
+
+; <type val="act-m-prefix">
+; <description>Active voice with prefix m- for ditransitives V NP NP
+; <ex>mberi
+; <nex>
+; <todo>
+; </type>
+act-m-prefix-ditrans-n-n-prefix :=
+%prefix (p mm) (pl mpl) (pr mpr) (ps mps) (pt mpt) (b mb) (m mm) (f mf) (v mv) (w mw) (t mn) (tr mtr) (ts mts) (d md) (n mn) (r mr) (s mny) (sl msl) (sr msr) (sp msp) (sm msm) (sn msn) (sk msk) (sy msy) (sw msw) (st mst) (z mz) (l ml) (c mc) (j mj) (ny mny) (y my) (k mng) (kh mkh) (kl mkl) (kr mkr) (g mg) (ng mng) (q mq) (h mh)
+act-m-prefix-ditrans-n-n-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
+
+; <type val="act-m-prefix">
+; <description>Active voice with prefix m- for ditransitives V NP PP
+; <ex>mletakkan, mmasukkan
+; <nex>
+; <todo>
+; </type>
+act-m-prefix-ditrans-n-p-prefix :=
+%prefix (p mm) (pl mpl) (pr mpr) (ps mps) (pt mpt) (b mb) (m mm) (f mf) (v mv) (w mw) (t mn) (tr mtr) (ts mts) (d md) (n mn) (r mr) (s mny) (sl msl) (sr msr) (sp msp) (sm msm) (sn msn) (sk msk) (sy msy) (sw msw) (st mst) (z mz) (l ml) (c mc) (j mj) (ny mny) (y my) (k mng) (kh mkh) (kl mkl) (kr mkr) (g mg) (ng mng) (q mq) (h mh)
+act-m-prefix-ditrans-n-p-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; DVM 2018-12-04: tvlk chat data
+;;; active voice with N-+stem
+; <type val="act-N-prefix">
+; <description>"Active" voice with prefix N-
+; <ex>nggunakan, mbawa, ndapat
+; <nex>
+; <todo>
+; </type>
+act-N-prefix :=
+%prefix (p m) (pl ml) (pr mr) (b mb) (t n) (tr nr) (d nd) (s ny) (sl nyl) (sr nyr) (sp nyp) (sm nym) (sn nyn) (sk nyk) (sy ny) (sw nyw) (st nyt) (c ny) (j nj) (k ng) (kh ng) (kl ngl) (kr ngr) (g ngg) (h ng) (a nga) (i ngi) (u ngu) (e nge) (o ngo)
+act-N-prefix-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT +,
+                                   LOCAL.CAT.HEAD comp-noun ] > ].
+
+; <type val="act-N-prefix">
+; <description>Active voice with prefix N- for ditransitives V NP NP
+; <ex>mberi
+; <nex>
+; <todo>
+; </type>
+act-N-prefix-ditrans-n-n-prefix :=
+%prefix (p m) (pl ml) (pr mr) (b mb) (t n) (tr nr) (d nd) (s ny) (sl nyl) (sr nyr) (sp nyp) (sm nym) (sn nyn) (sk nyk) (sy ny) (sw nyw) (st nyt) (c ny) (j nj) (k ng) (kh ng) (kl ngl) (kr ngr) (g ngg) (h ng) (a nga) (i ngi) (u ngu) (e nge) (o ngo)
+act-N-prefix-ditrans-n-n-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
+
+; <type val="act-N-prefix">
+; <description>Active voice with prefix N- for ditransitives V NP PP
+; <ex>ngasih
+; <nex>
+; <todo>
+; </type>
+act-N-prefix-ditrans-n-p-prefix :=
+%prefix (p m) (pl ml) (pr mr) (b mb) (t n) (tr nr) (d nd) (s ny) (sl nyl) (sr nyr) (sp nyp) (sm nym) (sn nyn) (sk nyk) (sy ny) (sw nyw) (st nyt) (c ny) (j nj) (k ng) (kh ng) (kl ngl) (kr ngr) (g ngg) (h ng) (a nga) (i ngi) (u ngu) (e nge) (o ngo)
+act-N-prefix-ditrans-n-p-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; DVM 2018-12-04: tvlk chat data
+;;; active voice with nge-+stem
+; <type val="act-nge-prefix">
+; <description>"Active" voice with prefix nge-
+; <ex>ngegunain, ngebawa, ngedapetin
+; <nex>
+; <todo>
+; </type>
+act-nge-prefix :=
+%prefix (pl ngepl) (pr ngepr) (ps ngeps) (pt ngept) (b ngeb) (f ngef) (v ngev) (w ngew) (tr ngetr) (ts ngets) (d nged) (n ngen) (r nger) (sl ngesl) (sr ngesr) (sp ngesp) (sm ngesm) (sn ngesn) (sk ngesk) (sy ngesy) (sw ngesw) (st ngest) (z ngez) (l ngel) (j ngej) (y ngey) (kh ngekh) (kl ngekl) (kr ngekr) (g ngeg) (q ngeq) (h ngeh)
+act-nge-prefix-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT +,
+                                   LOCAL.CAT.HEAD comp-noun ] > ].
+
+; <type val="act-nge-prefix">
+; <description>Active voice with prefix nge- for ditransitives V NP NP
+; <ex>ngebawain
+; <nex>
+; <todo>
+; </type>
+act-nge-prefix-ditrans-n-n-prefix :=
+%prefix (pl ngepl) (pr ngepr) (ps ngeps) (pt ngept) (b ngeb) (f ngef) (v ngev) (w ngew) (tr ngetr) (ts ngets) (d nged) (n ngen) (r nger) (sl ngesl) (sr ngesr) (sp ngesp) (sm ngesm) (sn ngesn) (sk ngesk) (sy ngesy) (sw ngesw) (st ngest) (z ngez) (l ngel) (j ngej) (y ngey) (kh ngekh) (kl ngekl) (kr ngekr) (g ngeg) (q ngeq) (h ngeh)
+act-nge-prefix-ditrans-n-n-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
+
+; <type val="act-nge-prefix">
+; <description>Active voice with prefix nge- for ditransitives V NP PP
+; <ex>ngejelasin
+; <nex>
+; <todo>
+; </type>
+act-nge-prefix-ditrans-n-p-prefix :=
+%prefix (pl ngepl) (pr ngepr) (ps ngeps) (pt ngept) (b ngeb) (f ngef) (v ngev) (w ngew) (tr ngetr) (ts ngets) (d nged) (n ngen) (r nger) (sl ngesl) (sr ngesr) (sp ngesp) (sm ngesm) (sn ngesn) (sk ngesk) (sy ngesy) (sw ngesw) (st ngest) (z ngez) (l ngel) (j ngej) (y ngey) (kh ngekh) (kl ngekl) (kr ngekr) (g ngeg) (q ngeq) (h ngeh)
+act-nge-prefix-ditrans-n-p-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;passive voice type one with prefix d-
+pas-one-d-prefix :=
+%prefix (* d)
+pas-one-d-prefix-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT + ].
+
+pas-one-d-prefix-ditrans-n-n-prefix :=
+%prefix (* d)
+pas-one-d-prefix-ditrans-n-n-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT -] > ].
+
+pas-one-d-prefix-ditrans-n-p-prefix :=
+%prefix (* d)
+pas-one-d-prefix-ditrans-n-p-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
+
+#|
+;;;passive voice type one with oleh
+pas-oleh-prefix :=
+%prefix (* di)
+pas-oleh-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+
+pas-oleh-ditrans-n-p-prefix :=
+%prefix (* di)
+pas-oleh-ditrans-n-p-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT -], [OPT +] > ].
+
+;;;passive voice type two
+;; DVM 2017-12-20: maybe add pas-two-1agent-prefix and pas-two-2agent-prefix
+pas-two-no-prefix :=
+pas-two-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.OPT - ].
+
+pas-two-ditrans-n-n-no-prefix :=
+pas-two-ditrans-n-n-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT -], [OPT -] > ].
+
+pas-two-ditrans-n-p-no-prefix :=
+pas-two-ditrans-n-p-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT -], [OPT -] > ].
+|#
