@@ -204,12 +204,15 @@ prog-non-perf-and-prog := prog & non-perf-and-prog.
 ;3person-noun := commonnoun & propername & pronoun-3person.
 
 ;; DVM 2017-12-17: the new noun type hierarchy
-comp-noun := noun.
-pass1agent := noun.
-pass2agent := noun.
-;noun-poss := noun.
+;; DVM 2018-12-05: add idiom
+idiom := noun.
+non-idiom := noun.
+comp-noun := non-idiom.
+pass1agent := non-idiom.
+pass2agent := non-idiom.
+;noun-poss := non-idiom.
 ;possessor := noun-poss.
-possessor := noun.
+possessor := non-idiom.
 subj-noun := comp-noun.
 enclitic := possessor & comp-noun.
 proclitic := pass2agent.
@@ -1175,7 +1178,17 @@ passive-voice-lex-rule-super := add-only-rule & infl-lex-rule &
 
 act-lex-rule := active-voice-lex-rule-super.
 
+;; DM 2018-12-03: tvlk chat data
+act-no-prefix-lex-rule := active-voice-lex-rule-super.
+
+act-m-prefix-lex-rule := active-voice-lex-rule-super.
+act-N-prefix-lex-rule := active-voice-lex-rule-super.
+act-nge-prefix-lex-rule := active-voice-lex-rule-super.
+
 pas-one-lex-rule := passive-voice-lex-rule-super & passive-one-verb-lex.
+
+;; DVM 2018-12-03: tvlk chat data
+pas-one-d-prefix-lex-rule := passive-voice-lex-rule-super & passive-one-verb-lex.
 
 pas-two-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex &
    [ SYNSEM.LOCAL.CAT.HEAD passive-two ].
@@ -1335,8 +1348,17 @@ active-voice-lex-rule-ditrans-n-n := add-only-no-ccont-rule & infl-lex-rule & di
 
 act-ditrans-n-n-lex-rule := active-voice-lex-rule-ditrans-n-n.
 
+;; DVM 2018-12-03: tvlk chat data
+act-no-prefix-ditrans-n-n-lex-rule := active-voice-lex-rule-ditrans-n-n.
+act-m-prefix-ditrans-n-n-lex-rule := active-voice-lex-rule-ditrans-n-n.
+act-N-prefix-ditrans-n-n-lex-rule := active-voice-lex-rule-ditrans-n-n.
+act-nge-prefix-ditrans-n-n-lex-rule := active-voice-lex-rule-ditrans-n-n.
+
 ;;;passive one ditrans n-n
 pas-one-ditrans-n-n-lex-rule := passive-voice-lex-rule-ditrans-n-n & passive-one-ditrans-n-n-verb-lex.
+
+;; DVM 2018-12-03: tvlk chat data
+pas-one-d-prefix-ditrans-n-n-lex-rule := passive-voice-lex-rule-ditrans-n-n & passive-one-ditrans-n-n-verb-lex.
 
 passive-voice-lex-rule-ditrans-n-n := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED.VOICE-FLAG +,
@@ -1453,6 +1475,12 @@ active-voice-lex-rule-ditrans-n-p := add-only-no-ccont-rule & infl-lex-rule & di
 
 act-ditrans-n-p-lex-rule := active-voice-lex-rule-ditrans-n-p.
 
+;; DVM 2018-12-03: tvlk chat data
+act-no-prefix-ditrans-n-p-lex-rule := active-voice-lex-rule-ditrans-n-p.
+act-m-prefix-ditrans-n-p-lex-rule := active-voice-lex-rule-ditrans-n-p.
+act-N-prefix-ditrans-n-p-lex-rule := active-voice-lex-rule-ditrans-n-p.
+act-nge-prefix-ditrans-n-p-lex-rule := active-voice-lex-rule-ditrans-n-p.
+
 #|
 v_np-pp_e_le := v_np-pp_prop_le
 """Cmps NP(obl),PP(sel.obl)
@@ -1464,6 +1492,9 @@ v_np-pp_e_le := v_np-pp_prop_le.
 
 ;;;passive one ditrans n-p
 pas-one-ditrans-n-p-lex-rule := passive-voice-lex-rule-ditrans-n-p & passive-one-ditrans-n-p-verb-lex.
+
+;; DVM 2018-12-03: tvlk chat data
+pas-one-d-prefix-ditrans-n-p-lex-rule := passive-voice-lex-rule-ditrans-n-p & passive-one-ditrans-n-p-verb-lex.
 
 passive-voice-lex-rule-ditrans-n-p := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED.VOICE-FLAG +,
@@ -3203,63 +3234,20 @@ non-basic-head-subj-nmc-phrase := head-valence-phrase & basic-binary-headed-phra
     C-CONT [ RELS <! !>, HCONS <! !>, ICONS <! !> ] ].
 |#
 
-#|
-;; DVM 2018-11-28: for idioms like "selamat siang"
-
-utt-valid := head.
-
-sentence-valid := utt-valid.
-
-utterance-super :=  utt-valid &
-                  [MOD null].
-
-utterance_head := utterance-super.
-
-idiom_head :=  sentence-valid &
-              [MOD null,
-               MOD  < [LOCAL [CAT [HEAD sentence-valid & [FORM finite],
-                                   VAL saturated]]] >].
-
-utterance_rule-idiom := utt-idiom-type &
- [SYNSEM.LOCAL.CONT.HOOK.INDEX.SF prop-or-ques].
-
-; type for idioms
-utt-idiom-type := utterance-type &
- [ARGS.FIRST.SYNSEM.LOCAL.CAT.HEAD idiom_head].
-
-utterance-type := unary-phrase &  
-[SYNSEM synsem & 
-	[LOCAL [CAT [HEAD utterance_head & [EMPTY #empty],
-		     VAL super-saturated]]],
- C-CONT [RELS <! !>,
-	 HCONS <! !>],
- ARGS.FIRST [SYNSEM [LOCAL  [CAT [ VAL saturated]]]]].
-
-discourse-lex := lex-item & 
- [SYNSEM [LOCAL [CAT [VAL super-saturated],
-		 CONT [HOOK.LTOP #top,
-		       RELS <! event-relation &
-			     [ LBL #top,
-			       PRED "discourse_x_rel",
-			       L-HNDL #hand ],
-			     #key & 
-			     [ LBL #hand, 
-			       ARG0 event] !>],
-		 ARG-S <>],
-	  LKEYS.KEYREL #key,
-	  NON-LOCAL [QUE <! !>],
-	  MODIFIED.PERIPH bool]].
-
-idiom-lex := discourse-lex & 
- [SYNSEM [LOCAL [CAT [HEAD idiom_head & 
-			   [MOD < [LOCAL.CONT.HOOK [LTOP #rhand,
-						    INDEX #ind]] > ]], 
-		 CONT [HOOK.INDEX #ind,
-		       RELS <! [R-HNDL #rhand],
-			     arg0-relation !>]]]].
-
-greeting-lex := idiom-lex.
-|#
+greeting-lex := basic-one-arg & basic-icons-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD idiom,
+			   VAL [ COMPS < >,
+				 SUBJ < >,
+				 SPR < > ] ],
+		     CONT [ HOOK.INDEX #index &
+					[ PNG.PERNUM 3sg ],
+			    RELS <! relation & #keyrel & 
+				  [ LBL #larg ],
+				  subord-or-coord-relation &
+				  [ PRED "discourse_x_rel",
+				    L-HNDL #larg ] !> ] ],
+	     NON-LOCAL.SLASH 0-dlist,
+	     LKEYS.KEYREL #keyrel & event-relation ] ].
 
 ;; DVM 2017-08-22 : for subordinate conjunctions such as "jika"
 
@@ -3399,7 +3387,40 @@ basic-frag-rule := super-frag-rule  &
 unary-frag-rule := basic-frag-rule & unary-phrase.
 
 frag-np-rule := unary-frag-rule &
- [ ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & 
+ [ ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD non-idiom & 
+				     [EMPTY -],
+				 VAL saturated],
+			   CONT.HOOK.INDEX #ind]] >,
+   C-CONT.RELS.LIST.FIRST.ARG #ind ].
+
+
+idiom-frag-rule := c-cont-1 &
+  [ INFLECTED infl-satisfied,
+    SYNSEM [ LOCAL [ CAT [ HEAD fragment_head &
+				[ MOD < > ],
+                           VAL super-saturated & 
+	                       [SUBJ null,
+	                        COMPS null,
+	                        SPR null]] ],
+	     NON-LOCAL [REL <! !>,
+			QUE <! !>,
+			SLASH  <! !>]],
+    ARGS.FIRST [INFLECTED infl-satisfied,
+		SYNSEM [NON-LOCAL [REL <! !>,
+				   QUE <! !>,
+				   SLASH  <! !>]]]].
+
+
+frag-idiom-rule := unary-phrase & idiom-frag-rule &
+ [ ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD idiom & 
+				     [EMPTY -],
+				 VAL saturated],
+			   CONT.HOOK.INDEX #ind]] >,
+   C-CONT.RELS.LIST.FIRST.ARG #ind ].
+
+;; DVM 2018-12-05
+frag-vp-rule := unary-frag-rule &
+ [ ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD verb & 
 				     [EMPTY -],
 				 VAL saturated],
 			   CONT.HOOK.INDEX #ind]] >,

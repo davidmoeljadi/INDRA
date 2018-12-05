@@ -117,4 +117,8 @@ extracted-subj := extracted-subj-phrase.
 
 frg-np := frag-np-rule.
 
+frg-idiom := frag-idiom-rule.
+
+frg-vp := frag-vp-rule.
+
 frag-vmod := frag-vmod-rule.
