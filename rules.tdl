@@ -93,6 +93,7 @@ passive-two-prefix-kau := passive-two-prefix-kau-rule.
 
 ;; this is the rule for noun noun compound
 n-n-compound := compound-noun-phrase.
+propn-compound := compound-propn-phrase.
 n-pron-compound := compound-noun-pronoun-phrase.
 
 ;; DVM 2017-05-09: this is the rule for serial verb construction (verb verb compound)
