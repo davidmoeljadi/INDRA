@@ -69,25 +69,25 @@ card_ne_3_tmr := ne_tmt &
 ;;
 ;; SSH 2015-04-10 Chinese Digit
 ;;
-card_ne_4_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[１-９][０-９][，,]?[０-９][０-９][０-９]+$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] >,
-  +CONTEXT < > ].
+;card_ne_4_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^[１-９][０-９][，,]?[０-９][０-９][０-９]+$ ] >,
+;  +OUTPUT < [ +CLASS card_ne ] >,
+;  +CONTEXT < > ].
 
-card_ne_5_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[１-９][，,][０-９][０-９][０-９]$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] >,
-  +CONTEXT < > ].
+;card_ne_5_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^[１-９][，,][０-９][０-９][０-９]$ ] >,
+;  +OUTPUT < [ +CLASS card_ne ] >,
+;  +CONTEXT < > ].
 
-card_ne_6_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[零〇０一壹二贰三叁四五六七八九十百千万亿兆][零〇０一壹二贰三叁四五六七八九十百千万亿兆，]+$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] >,
-  +CONTEXT < > ].
+;card_ne_6_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^[零〇０一壹二贰三叁四五六七八九十百千万亿兆][零〇０一壹二贰三叁四五六七八九十百千万亿兆，]+$ ] >,
+;  +OUTPUT < [ +CLASS card_ne ] >,
+;  +CONTEXT < > ].
 
-card_ne_7_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[０-９]+[．\.][０-９]+$ ] >,
-  +OUTPUT < [ +CLASS card_ne ] >,
-  +CONTEXT < > ].
+;card_ne_7_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^[０-９]+[．\.][０-９]+$ ] >,
+;  +OUTPUT < [ +CLASS card_ne ] >,
+;  +CONTEXT < > ].
 
 ;;DVM 2017-02-08: added Indonesian numbers
 ;card_ne_8_tmr := ne_tmt &
@@ -95,55 +95,70 @@ card_ne_7_tmr := ne_tmt &
 ;  +OUTPUT < [ +CLASS card_ne ] > ].
 
 ;;for numeral phrases (number+cls), which can be noun itself
-num_ne_8_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[零〇０一壹二贰三叁四五六七八九十百千万亿兆][零〇０一壹二贰三叁四五六七八九十百千万亿兆]*号$ ] >,
-  +OUTPUT < [ +CLASS meas_ne ] >,
-  +CONTEXT < > ].
+;num_ne_8_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^[零〇０一壹二贰三叁四五六七八九十百千万亿兆][零〇０一壹二贰三叁四五六七八九十百千万亿兆]*号$ ] >,
+;  +OUTPUT < [ +CLASS meas_ne ] >,
+;  +CONTEXT < > ].
 
-percent_ne_1_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[０-９]+．[０-９]+％$ ] >,
-  +OUTPUT < [ +CLASS percent_ne ] >,
-  +CONTEXT < > ].
+;percent_ne_1_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^[０-９]+．[０-９]+％$ ] >,
+;  +OUTPUT < [ +CLASS percent_ne ] >,
+;  +CONTEXT < > ].
 
 percent_ne_2_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[0-9]+\.[0-9]+％$ ] >,
+[ +INPUT < [ +FORM ^[0-9]+[,\.][0-9]+%$ ] >,
   +OUTPUT < [ +CLASS percent_ne ] >,
   +CONTEXT < > ].
 
-year_ne_1_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[１-９][０-９]+年$ ] >,
-  +OUTPUT < [ +CLASS year_ne ] >,
+percent_ne_3_tmr := ne_tmt &
+[ +INPUT < [ +FORM ^[0-9]+%$ ] >,
+  +OUTPUT < [ +CLASS percent_ne ] >,
   +CONTEXT < > ].
 
-year_ne_2_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[一壹二贰三叁四五六七八九十百千][零〇０一壹二贰三叁四五六七八九十百千]+年$ ] >,
-  +OUTPUT < [ +CLASS year_ne ] >,
+rupiah_ne_tmr := ne_tmt &
+[ +INPUT < [ +FORM ^[Rr][Pp]\.?([0-9]+([\.,][0-9]*)?)$ ] >,
+  +OUTPUT < [ +CLASS rupiah_ne ] >,
   +CONTEXT < > ].
 
-date_ne_3_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^(十[一壹二贰]|[一壹二贰三叁四五六七八九十])月([二三]?十|(([二三]?十)?[一二三四五六七八九]))日$ ] >,
+;year_ne_1_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^[１-９][０-９]+年$ ] >,
+;  +OUTPUT < [ +CLASS year_ne ] >,
+;  +CONTEXT < > ].
+
+;year_ne_2_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^[一壹二贰三叁四五六七八九十百千][零〇０一壹二贰三叁四五六七八九十百千]+年$ ] >,
+;  +OUTPUT < [ +CLASS year_ne ] >,
+;  +CONTEXT < > ].
+
+;date_ne_3_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^(十[一壹二贰]|[一壹二贰三叁四五六七八九十])月([二三]?十|(([二三]?十)?[一二三四五六七八九]))日$ ] >,
+;  +OUTPUT < [ +CLASS date_ne ] >,
+;  +CONTEXT < > ].
+
+date_ne_4_tmr := add_ne_tmt &
+[ +CONTEXT < [ +FORM ^[0-3][0-9][-/]([Jj]an|[Ff]eb|[Mm]ar|[Aa]pr|[Mm]ei|[Jj]un|[Jj]ul|[Aa]gt|[Ss]ep|[Oo]kt|[Nn]ov|[Dd]es)[-/][1-2][0-9][0-9][0-9]$ ] >,
   +OUTPUT < [ +CLASS date_ne ] >,
-  +CONTEXT < > ].
+  +INPUT < > ].   
 
-month_ne_1_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^(１[０-２]|[１-９])月$ ] >,
-  +OUTPUT < [ +CLASS month_ne ] >,
-  +CONTEXT < > ].
+;month_ne_1_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^(１[０-２]|[１-９])月$ ] >,
+;  +OUTPUT < [ +CLASS month_ne ] >,
+;  +CONTEXT < > ].
 
-month_ne_2_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^(十[一壹二贰]|[一壹二贰三叁四五六七八九十])月$ ] >,
-  +OUTPUT < [ +CLASS month_ne ] >,
-  +CONTEXT < > ].
+;month_ne_2_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^(十[一壹二贰]|[一壹二贰三叁四五六七八九十])月$ ] >,
+;  +OUTPUT < [ +CLASS month_ne ] >,
+;  +CONTEXT < > ].
 
-day_ne_1_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[１-９][０-９]+日$ ] >,
-  +OUTPUT < [ +CLASS day_ne ] >,
-  +CONTEXT < > ].
+;day_ne_1_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^[１-９][０-９]+日$ ] >,
+;  +OUTPUT < [ +CLASS day_ne ] >,
+;  +CONTEXT < > ].
 
-day_ne_2_tmr := ne_tmt &
-[ +INPUT < [ +FORM ^[一壹二贰三叁四五六七八九十百千][零〇０一壹二贰三叁四五六七八九十百千]*日$ ] >,
-  +OUTPUT < [ +CLASS day_ne ] >,
-  +CONTEXT < > ].
+;day_ne_2_tmr := ne_tmt &
+;[ +INPUT < [ +FORM ^[一壹二贰三叁四五六七八九十百千][零〇０一壹二贰三叁四五六七八九十百千]*日$ ] >,
+;  +OUTPUT < [ +CLASS day_ne ] >,
+;  +CONTEXT < > ].
 
 
 ;;

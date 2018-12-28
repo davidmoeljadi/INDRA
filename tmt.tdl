@@ -148,6 +148,9 @@ day_ne := date_ne.
 ;; SSH 2015-04-16 
 percent_ne := card_ne.
 
+;; DVM 2018-12-27
+rupiah_ne := card_ne.
+
 ;;
 ;; the following are modeled after POSIX character classes; most have obvious 
 ;; correspondences in terms of (more elaborate) UniCode character properties.
