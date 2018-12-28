@@ -39,6 +39,9 @@ pronoun_q_rel := quant_rel.
 proper_q_rel := quant_rel.
 indef_q_rel := quant_rel.
 
+;; DVM 2018-12-26: for "apa", "siapa" etc.
+which_q_rel := quant_rel.
+
 ;; DVM 2015-05-09: added decomposed words
 demon_q_rel := quant_rel.
 proximal_q_rel := demon_q_rel.
@@ -335,7 +338,8 @@ proper-name-lex := basic-one-arg & basic-icons-lex-item &
 				 SUBJ < >,
 				 SPR < > ] ],
 		     CONT [ HOOK.INDEX #index &
-					[ PNG.PERNUM sg ],
+					[ PNG [ PERNUM pernum,
+                  ANIMCOUNT countable ]],
 			    RELS <! relation & #keyrel & 
 				  [ LBL #larg,
 				    ARG0 #index ],
@@ -891,10 +895,11 @@ card-relation := arg1-relation & named-relation &
 ; DVM 2017-03-03 added MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ] based on erg/lextypes.tdl
 ; so that there will be no two parses for dua puluh dua buku: omit this [[dua puluh] [[dua] [buku]]]
 ; get only this [[dua puluh dua] [buku]]
+; DVM 2018-12-13 change HEAD commonnoun to HEAD dependent-noun so that "dua Budi" can be parsed
 a_-_num_le := single-rel-lex-item & basic-icons-lex-item & 
   [ SYNSEM [ LOCAL [ CAT [ HEAD adj-number & [ MOD < [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
-;                                                       LOCAL [ CAT [ HEAD commonnoun & [ CARDIN - ],
-                                                       LOCAL [ CAT [ HEAD commonnoun,
+;                                                       LOCAL [ CAT [ HEAD dependent-noun & [ CARDIN - ],
+                                                       LOCAL [ CAT [ HEAD dependent-noun,
               	                                                     VAL.SPR cons ],
                                                                CONT.HOOK.INDEX #xarg & [ PNG.ANIMCOUNT countable ] ] ] > ],
                            VAL [ COMPS < >,
@@ -2389,6 +2394,16 @@ adverb-scop-lex:= basic-scopal-adverb-lex &
 				 COMPS < >,
 				 SPEC < > ] ]]]].
 
+adverb-scop-pre-lex:= basic-scopal-adverb-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < >,
+                COMPS < > ],
+                HEAD +vjp ] ]>,
+                           POSTHEAD -,
+         VAL [ SPR < >,
+         SUBJ < >,
+         COMPS < >,
+         SPEC < > ] ]]]].
+
 adverb-post-lex := adverb-lex &
   [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
 
@@ -2966,6 +2981,28 @@ compound-noun-phrase := head-initial &
                                      VAL [ SPR < >,
                                            COMPS < > ] ],
                                CONT.HOOK.INDEX #internalargument ],
+   C-CONT [ RELS <! arg12-ev-relation & 
+                  [PRED compound_p_rel,
+                   LBL #lbl,
+                   ARG1 #externalargument,
+                   ARG2 #internalargument] !>, HCONS <! !> ] ].
+
+;; DVM 2018-12-13: propn-propn compound e.g. Joko Widodo, Susilo Bambang Yudhoyono
+compound-propn-phrase := head-final &
+ [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+                            COMPS < > ] ,
+                  CONT.HOOK #head ],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD propername,
+                                     VAL [ SPR < >,
+                                           COMPS < > ] ],
+                               CONT.HOOK.INDEX #internalargument ],
+   HEAD-DTR.SYNSEM [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
+                     LOCAL [ CAT [ HEAD propername,
+                                 VAL [ SPR < > ,
+                                       COMPS < > ]] ,
+                           CONT [ HOOK #head &
+                                       [INDEX #externalargument,
+                                        LTOP #lbl ]]]],
    C-CONT [ RELS <! arg12-ev-relation & 
                   [PRED compound_p_rel,
                    LBL #lbl,
