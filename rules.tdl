@@ -24,6 +24,9 @@ subj-head := subj-head-phrase.
 
 head-subj := head-subj-phrase.
 
+;; DVM 2019-01-16: for "belum masuk paketnya"
+head-subj-verb := head-subj-verb-phrase.
+
 ;DVM 2017-02-21: deactivate this so that INDRA won't parse [[ada dua buku] merah].
 head-spec := head-spec-phrase.
 
@@ -71,6 +74,26 @@ s1-mid-coord := s1-mid-coord-rule.
 
 s1-bottom-coord := s1-bottom-coord-rule.
 
+;;;;;;;;;;;;;;;;;;;;;;
+
+;n1-top-asyn-coord := n1-top-asyn-coord-rule.
+
+;n1-bottom-asyn-coord := n1-bottom-asyn-coord-rule.
+
+np1-top-asyn-coord := np1-top-asyn-coord-rule.
+
+np1-bottom-asyn-coord := np1-bottom-asyn-coord-rule.
+
+;vp1-top-asyn-coord := vp1-top-asyn-coord-rule.
+
+;vp1-bottom-asyn-coord := vp1-bottom-asyn-coord-rule.
+
+s1-top-asyn-coord := s1-top-asyn-coord-rule.
+
+s1-bottom-asyn-coord := s1-bottom-asyn-coord-rule.
+
+;;;;;;;;;;;;;;;;;;;;;;
+
 head-adj-int := head-adj-int-phrase.
 
 ;DVM 2017-02-10: activate this for numbers+noun
@@ -87,13 +110,17 @@ head-spec-cl := head-spec-h-sem-phrase &
 zero-cop := zero-cop-rule.
 ;zero-cop-pp := zero-cop-pp-rule.
 
+;; DVM 2019-01-02: the rule for imperatives with bare verb forms
+;imp := imp-rule.
+
 ;; the rule for passive two with prefix ku- and kau-, e.g. nasi ini kumakan.
-passive-two-prefix-ku := passive-two-prefix-ku-rule.
-passive-two-prefix-kau := passive-two-prefix-kau-rule.
+;passive-two-prefix-ku := passive-two-prefix-ku-rule.
+;passive-two-prefix-kau := passive-two-prefix-kau-rule.
 
 ;; this is the rule for noun noun compound
 n-n-compound := compound-noun-phrase.
 propn-compound := compound-propn-phrase.
+fromto-propn-compound := compound-fromto-propn-phrase.
 n-pron-compound := compound-noun-pronoun-phrase.
 
 ;; DVM 2017-05-09: this is the rule for serial verb construction (verb verb compound)
