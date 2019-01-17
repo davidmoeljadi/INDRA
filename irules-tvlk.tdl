@@ -20,7 +20,7 @@
 act-no-prefix :=
 act-no-prefix-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ OPT +,
-                                   LOCAL.CAT.HEAD comp-noun ] > ].
+                                   LOCAL.CAT.HEAD subj-noun ] > ].
 
 ; <type val="act-no-prefix">
 ; <description>Active voice with no prefix for ditransitives V NP NP
@@ -41,6 +41,53 @@ act-no-prefix-ditrans-n-n-lex-rule &
 act-no-prefix-ditrans-n-p-prefix :=
 act-no-prefix-ditrans-n-p-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; DVM 2019-01-16: tvlk chat data
+;;; active voice without prefix for imperatives
+; <description>"Active" voice imperatives with no prefix
+; <ex>tunggu,ambil,sapa,panggil
+; <nex>
+; <todo>
+; </type>
+act-imp-no-prefix :=
+act-imp-no-prefix-lex-rule &
+  [ DTR.SYNSEM [ LOCAL [ CONT.HOOK [ INDEX #index & [ SF comm ],
+                                     LTOP #larg ],
+                         CAT.VAL [ SUBJ < >,
+                                   COMPS < [ OPT +,
+                                             LOCAL [ CAT [ HEAD subj-noun,
+                                                           VAL [ SPR < >,
+                                                                 COMPS < > ] ],
+                                                     CONT.HOOK.INDEX ref-ind & #ind2 ] ] > ] ],
+                 LKEYS.KEYREL [ ARG1 #ind1,
+                                ARG2 #ind2 ] ],
+   C-CONT [ HOOK [ LTOP #larg,
+                   INDEX #index ],
+	    HCONS <! qeq & [ HARG #harg2,
+			     LARG #larg2 ] !>,
+	    RELS <! quant-relation & [ PRED pronoun_q_rel,
+				       ARG0 #ind1,
+				       RSTR #harg2 ],
+  		    arg0-relation & [ PRED pronoun_n_rel,
+				      LBL #larg2,
+				      ARG0 #ind1 & [ PNG.PERNUM 2nd ] ] !> ] ].
+
+; <ex>kasih,ajarin
+; <nex>
+; <todo>
+; </type>
+;act-imp-no-prefix-ditrans-n-n-prefix :=
+;act-imp-no-prefix-ditrans-n-n-lex-rule &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
+
+; <ex>masukkan
+; <nex>
+; <todo>
+; </type>
+;act-imp-no-prefix-ditrans-n-p-prefix :=
+;act-imp-no-prefix-ditrans-n-p-lex-rule &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; DVM 2018-12-03: tvlk chat data
@@ -170,6 +217,7 @@ pas-one-d-prefix-ditrans-n-p-prefix :=
 pas-one-d-prefix-ditrans-n-p-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [OPT +], [OPT +] > ].
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #|
 ;;;passive voice type one with oleh
 pas-oleh-prefix :=

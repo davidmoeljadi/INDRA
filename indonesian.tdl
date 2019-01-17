@@ -62,6 +62,8 @@ place_n_rel  := generic_n_rel.
 reason_n_rel := generic_n_rel.
 ; how
 manner_n_rel := generic_n_rel.
+; how many/much
+measure_n_rel := generic_n_rel.
 
 ;; FCB & DVM 2016-02-17 : semantic hierarchy for copulas
 copula_v_rel := predsort.
@@ -271,6 +273,7 @@ oleh-adp := adp.
 ;;; Adposition rel
 prep_rel := predsort.
 compound_p_rel := prep_rel.
+fromto_p_rel := prep_rel.
 poss_rel := prep_rel.
 
 ;; DVM 2017-05-09: add new serial verb construction (svc) predicate relation
@@ -872,7 +875,6 @@ adj-to-attr-quant-rule := const-lex-rule &
     [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #x1 ] > ] ] ] ] ] ].
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;;; Numbers
 ;; DVM 2015-05-09: from Zhong
 
@@ -1183,7 +1185,30 @@ passive-voice-lex-rule-super := add-only-rule & infl-lex-rule &
 
 act-lex-rule := active-voice-lex-rule-super.
 
-;; DM 2018-12-03: tvlk chat data
+;; DVM 2019-01-16: imperatives
+
+act-imp-no-prefix-lex-rule := same-non-local-lex-rule &
+		   same-modified-lex-rule &
+		   same-light-lex-rule &
+		   same-ctxt-lex-rule &
+		   same-cont-lex-rule &
+		   same-agr-lex-rule &
+		   same-head-lex-rule &
+		   same-hc-light-lex-rule &
+		   same-posthead-lex-rule &
+		   same-mc-lex-rule &
+		   infl-lex-rule & 
+  [ INFLECTED.VOICE-FLAG +,
+    SYNSEM [ LOCAL.CAT.VAL [ COMPS < [ LOCAL [ CAT [ HEAD subj-noun,
+                                                     VAL [ SPR < >,
+                                                           COMPS < > ] ],
+                                               CONT.HOOK.INDEX #ind2 ] ] >,
+ 			     SUBJ < > ],
+             LKEYS.KEYREL.ARG2 #ind2 ],
+    C-CONT.ICONS <! !>,
+    DTR tr-verb-lex ].
+
+;; DVM 2018-12-03: tvlk chat data
 act-no-prefix-lex-rule := active-voice-lex-rule-super.
 
 act-m-prefix-lex-rule := active-voice-lex-rule-super.
@@ -1200,8 +1225,6 @@ pas-two-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex &
 
 pas-two-prefix-ku-lex-rule := passive-voice-lex-rule-super & passive-two-verb-lex &
    [ SYNSEM.LOCAL.CAT.HEAD passive-ku ].
-
-
 
 pas-two-ku-rule := same-non-local-lex-rule &
 		   same-modified-lex-rule &
@@ -1223,7 +1246,6 @@ pas-two-ku-rule := same-non-local-lex-rule &
              LKEYS.KEYREL.ARG2 #ind1 ],
     C-CONT.ICONS <! !>,
     DTR tr-verb-lex ].
-
 
 #|
 passive-transitive-lex-item := basic-two-arg-no-hcons & two-icons-lex-item &
@@ -1590,6 +1612,10 @@ head-subj-phrase := decl-head-subj-phrase & head-initial &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD existential,
                                 VAL.COMPS < > ] ].
 
+head-subj-verb-phrase := decl-head-subj-phrase & head-initial &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD compound-verb,
+                                VAL.COMPS < > ] ].
+
 ;;; DVM 2015-05-09: from zhong
 ;;; NUM + CL is being joined by head-spec-hs
 ;;; CLphrase + N is being joined by adj-int
@@ -1899,7 +1925,9 @@ s-coord-phrase :+  [ LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY bool,
     		     RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY - ].
 
 s-bottom-coord-phrase :+  [ CONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY -,
-    		   	    NONCONJ-DTR.SYNSEM [ LOCAL.CAT.HEAD.EMPTY -,
+;s-bottom-coord-phrase :+  [ CONJ-DTR.SYNSEM.LOCAL.CAT.HEAD.EMPTY bool,
+;    		   	    NONCONJ-DTR.SYNSEM [ LOCAL.CAT.HEAD.EMPTY -,
+    		   	    NONCONJ-DTR.SYNSEM [ LOCAL.CAT.HEAD.EMPTY bool,
                                                  NON-LOCAL.SLASH 0-dlist ] ].
 
 s1-top-coord-rule := basic-s-top-coord-rule & monopoly-top-coord-rule &
@@ -1916,6 +1944,43 @@ s1-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
 ;:begin :instance.
 ;:include "indonesian_add2".
 ;:end :instance.
+
+
+;;; Coordination Strategy 2
+
+n1-top-asyn-coord-rule := basic-n-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+n1-bottom-asyn-coord-rule := unary-bottom-coord-rule & n-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "1",
+                   COORD-REL.PRED "_and_coord_rel" ] ].
+
+;;; Coordination Strategy 2
+
+np1-top-asyn-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+np1-bottom-asyn-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "1",
+                   COORD-REL.PRED "_and_coord_rel" ] ].
+
+;;; Coordination Strategy 2
+
+vp1-top-asyn-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+vp1-bottom-asyn-coord-rule := unary-bottom-coord-rule & vp-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "1",
+                   COORD-REL.PRED "_and_coord_rel" ] ].
+
+;;; Coordination Strategy 2
+
+s1-top-asyn-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+s1-bottom-asyn-coord-rule := unary-bottom-coord-rule & s-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "1",
+                   COORD-REL.PRED "_and_coord_rel" ] ].
 
 ;;; Verbs
 
@@ -2395,14 +2460,20 @@ adverb-scop-lex:= basic-scopal-adverb-lex &
 				 SPEC < > ] ]]]].
 
 adverb-scop-pre-lex:= basic-scopal-adverb-lex &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < >,
-                COMPS < > ],
-                HEAD +vjp ] ]>,
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL [ CAT [ VAL [ SUBJ < >,
+                                                          COMPS < > ],
+                                                      HEAD +vjp ] ] ] >,
                            POSTHEAD -,
-         VAL [ SPR < >,
-         SUBJ < >,
-         COMPS < >,
-         SPEC < > ] ]]]].
+                           VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < >,
+                                 SPEC < > ] ]]]].
+
+adverb-ques-scop-pre-lex:= adverb-scop-pre-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX.SF ques ] > ].
+
+adverb-imp-scop-pre-lex := adverb-scop-pre-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX.SF comm ] > ].
 
 adverb-post-lex := adverb-lex &
   [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
@@ -2745,6 +2816,36 @@ redup-adv-lex-rule := same-non-local-lex-rule & adverb-post-lex &
 		   same-head-lex-rule.
 |#
 
+;; DVM 2019-01-02: unary phrase rule for imperatives
+imp-rule := unary-phrase &
+ [ SYNSEM.LOCAL [ CONT [ HOOK [ INDEX #v0 &
+				      [ SF comm ],
+                                LTOP #vl,
+                                XARG #arg1 ] ],
+		  COORD -,
+                  CAT [ HEAD.EMPTY +,
+                        VAL [ COMPS < >,
+                              SUBJ < > ] ] ] ,
+   ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD control-raising-comp-verb &
+                                      [ EMPTY - ],
+                                 VAL [ SUBJ < [ ] >,
+                                       COMPS < > ] ],
+                           CONT [ HOOK.INDEX #v0,
+                                  RELS <! event-relation & #e !> ],
+			   COORD - ] ] > ,
+   C-CONT [ HCONS <! qeq & [ HARG #harg2,
+			     LARG #larg2 ] !>,
+            RELS <! event-relation & #e & [ LBL #vl,
+                                       PRED #pred,
+                                       ARG0 #v0,
+                                       ARG1 #arg1 ],
+		    quant-relation & [ PRED pronoun_q_rel,
+				       ARG0 #arg1,
+				       RSTR #harg2 ],
+  		    arg0-relation & [ PRED pronoun_n_rel,
+				      LBL #larg2,
+				      ARG0 #arg1 & [ PNG.PERNUM 2sg ] ] !> ] ].
+
 ;; DVM 2016-02-16 : added information of ASPECT non-perf-and-prog and TENSE no-tensed
 ;; so that *Budi sudah/sedang/akan guru cannot be parsed.
 ;; FCB, DVM & LMC 2016-05-06 : add COORD - so that "nasi" in "Adi makan nasi" cannot have "zero copula"
@@ -3005,6 +3106,29 @@ compound-propn-phrase := head-final &
                                         LTOP #lbl ]]]],
    C-CONT [ RELS <! arg12-ev-relation & 
                   [PRED compound_p_rel,
+                   LBL #lbl,
+                   ARG1 #externalargument,
+                   ARG2 #internalargument] !>, HCONS <! !> ] ].
+
+;; DVM 2019-01-09: propn-propn compound for place of origin and destination place
+;; e.g. Jakarta Surabaya, JKT SBY
+compound-fromto-propn-phrase := head-final &
+ [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+                            COMPS < > ] ,
+                  CONT.HOOK #head ],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD propername,
+                                     VAL [ SPR < >,
+                                           COMPS < > ] ],
+                               CONT.HOOK.INDEX #internalargument ],
+   HEAD-DTR.SYNSEM [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
+                     LOCAL [ CAT [ HEAD propername,
+                                 VAL [ SPR < > ,
+                                       COMPS < > ]] ,
+                           CONT [ HOOK #head &
+                                       [INDEX #externalargument,
+                                        LTOP #lbl ]]]],
+   C-CONT [ RELS <! arg12-ev-relation & 
+                  [PRED fromto_p_rel,
                    LBL #lbl,
                    ARG1 #externalargument,
                    ARG2 #internalargument] !>, HCONS <! !> ] ].
