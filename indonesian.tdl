@@ -2469,6 +2469,16 @@ adverb-scop-pre-lex:= basic-scopal-adverb-lex &
                                  COMPS < >,
                                  SPEC < > ] ]]]].
 
+adverb-scop-post-lex:= basic-scopal-adverb-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL [ CAT [ VAL [ SUBJ < >,
+                                                          COMPS < > ],
+                                                      HEAD +vjp ] ] ] >,
+                           POSTHEAD +,
+                           VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < >,
+                                 SPEC < > ] ]]]].
+
 adverb-ques-scop-pre-lex:= adverb-scop-pre-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX.SF ques ] > ].
 

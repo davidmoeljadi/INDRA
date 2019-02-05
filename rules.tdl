@@ -80,17 +80,17 @@ s1-bottom-coord := s1-bottom-coord-rule.
 
 ;n1-bottom-asyn-coord := n1-bottom-asyn-coord-rule.
 
-np1-top-asyn-coord := np1-top-asyn-coord-rule.
+;np1-top-asyn-coord := np1-top-asyn-coord-rule.
 
-np1-bottom-asyn-coord := np1-bottom-asyn-coord-rule.
+;np1-bottom-asyn-coord := np1-bottom-asyn-coord-rule.
 
 ;vp1-top-asyn-coord := vp1-top-asyn-coord-rule.
 
 ;vp1-bottom-asyn-coord := vp1-bottom-asyn-coord-rule.
 
-s1-top-asyn-coord := s1-top-asyn-coord-rule.
+;s1-top-asyn-coord := s1-top-asyn-coord-rule.
 
-s1-bottom-asyn-coord := s1-bottom-asyn-coord-rule.
+;s1-bottom-asyn-coord := s1-bottom-asyn-coord-rule.
 
 ;;;;;;;;;;;;;;;;;;;;;;
 

@@ -110,6 +110,8 @@
 ! bookingya 								 bookingnya 
 ! kodebya 								 kodenya 
 ! katay 				 katany 
+! \.\.\. 					 
+! \.\. 					 
 
 ! pembyaran 				 pembayaran 
 ! pembayran 				 pembayaran 
@@ -284,7 +286,7 @@
 ;; mobilnya -> mobil -nya
 ;; mobil-Nya -> mobil -nya
 ! ([a-zA-Z²-]+)-?([Nn]ya)[;,\.?!\]})]? 								 \1 -nya 
-! (agak|akhir|berikut|berta|biasa|ha|kelihatan|misal|nampak|no|nyo|pu|rupa|satu²|sebaik|sebelum|sebenar|sebetul|secukup|seharus|sekadar|selanjut|seluruh|semua|sepenuh|sesungguh|t|ta|tadi|tampak|tentu|umum|nyata|sucha|prad) -nya 							 \1nya 
+! (agak|akhir|berikut|berta|biasa|ha|kelihatan|misal|nampak|no|nyo|pu|rupa|satu²|sebaik|sebelum|sebenar|sebetul|secukup|seharus|sekadar|selanjut|seluruh|semua|sepenuh|sesungguh|sprti|t|ta|tadi|tampak|tentu|umum|nyata|sucha|prad) -nya 							 \1nya 
 
 ;; DVM 2018-11-28: 
 ;; mobil nya -> mobil -nya 
@@ -305,6 +307,7 @@
 ;; DVM 2018-11-28: do not forget to put spaces before and after each word or token!!
 ;; mobilx -> mobil -x
 ! ([a-zA-Z²-]+)(x)[;,\.?!\]})]? 								 \1 -x 
+! delu -x 											 delux 
 ! (agak|akhir|berikut|berta|biasa|ha|jd|kelihatan|misal|nampak|no|nyo|pu|rupa|satu²|sebaik|sebelum|sebenar|sebetul|secukup|seharus|sekadar|selanjut|seluruh|semua|sepenuh|sesungguh|ta|tadi|tampak|tentu|umum|nyata) -x 							 \1nya 
 
 !([0-9]) % 								\1% 
@@ -338,6 +341,8 @@
 ! biasa e 								 biasanya 
 ! citylinkno 								 citylink no 
 ! b isa 								 bisa 
+! Jakarta-jambi 							 Jakarta jambi 
+! Solo-Palangkaraya 							 Solo Palangkaraya 
 ! kokg 									 kok g 
 ! sayabblg 								 saya blg 
 ! gakeluar 								 ga keluar 
@@ -351,6 +356,7 @@
 ! sayasudah 								 saya sudah 
 ! jogdps 								 jog dps 
 ! drvatas 								 dr atas 
+! ditempat 								 di tempat 
 ! sagarno 								 sagar no 
 ! Iasaya 								 Ia , saya 
 ! bedatgl 								 beda tgl 
@@ -362,7 +368,9 @@
 ! kodeboking 								 kode boking 
 ! stasiunpasar 								 stasiun pasar 
 ! AjaSaya 								 Aja Saya 
+! SAYAMAU 								 SAYA MAU 
 ! u der 								 under 
+! dibali 								 di bali 
 ! tiketsaya 								 tiket saya 
 ! iSaat 								 di saat 
 ! sydi suruh 								 sy disuruh 
@@ -394,6 +402,7 @@
 ! tiketlewat 								 tiket lewat 
 ! penerbanganQIBZZ 							 penerbangan CODE 
 ! tu Juan 								 tujuan 
+! lumpur-bandung 							 lumpur bandung 
 ! sayavambil 								 saya ambil 
 ! perorg 								 per org 
 ! RamadhanSaya 								 Ramadhan Saya 
@@ -419,6 +428,7 @@
 ! bun-palangka 								 bun palangka 
 ! mrlakukan 								 melakukan 
 ! -bali 								 bali 
+! Pandan-Jakarta 							 Pandan Jakarta 
 
 ! gd 									 g ad 
 ! gad 									 g ad 
@@ -549,15 +559,18 @@
 ! bookingCODE 									 booking CODE 
 ! ataas 									 atas 
 
+! termurah 									 ter- murah 
+! terbaru 									 ter- baru 
+
 ;; bu -ku -> buku
 ;; ku -ku -> kuku
 ;; bukuku -> buku -ku
 ! ([a-zA-Z²-]+)-?([Kk]u)[;,\.?!\]})]? 							 \1 -ku 
-! (a|antarsu|berla|ba|be|beng|bu|du|ka|ku|la|Malu|membe|pa|sa|su|terpa|tung|wo|sebu) -ku 							 \1ku 
+! (a|antarsu|berla|ba|be|beng|bu|du|ka|ku|la|Malu|membe|p|pa|sa|su|terpa|tung|wo|sebu) -ku 							 \1ku 
 ! suamiq 								 suami -ku 
 
 ! ([a-zA-Z²-]+)-?([Mm]u)[;,\.?!\]})]? 								 \1 -mu 
-! (berte|il|ja|ka|pene|sa|se|ta|terja) -mu 							 \1mu 
+! (berte|il|ja|ka|kualana|pene|sa|se|Ta|ta|terja) -mu 							 \1mu 
 
 ! [Ss]eekor 									 se- ekor 
 ! [Ss]ebuah 									 se- buah 

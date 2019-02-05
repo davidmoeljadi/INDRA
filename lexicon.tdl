@@ -52425,7 +52425,7 @@ esok := adverb-time-future-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_esok_a_rel",
     TRAITS native_token_list ].
 
-besok := adverb-time-future-lex &
+besok_adv := adverb-time-future-lex &
   [ STEM < "besok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_besok_a_rel",
     TRAITS native_token_list ].
@@ -52435,7 +52435,7 @@ dahulu := adverb-time-past-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_dahulu_a_rel",
     TRAITS native_token_list ].
 
-kemarin := adverb-time-past-lex &
+kemarin_adv := adverb-time-past-lex &
   [ STEM < "kemarin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kemarin_a_rel",
     TRAITS native_token_list ].
@@ -69187,6 +69187,16 @@ Minggu_day := n_-_day-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Minggu",
     TRAITS native_token_list ].
 
+besok_n := n_-_temp-lex &
+  [ STEM < "besok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_besok_n_rel",
+    TRAITS native_token_list ].
+
+kemarin_n := n_-_temp-lex &
+  [ STEM < "kemarin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemarin_n_rel",
+    TRAITS native_token_list ].
+
 pagi := n_-_temp-lex &
   [ STEM < "pagi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pagi_n_rel",
@@ -75312,7 +75322,7 @@ pub := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_pub_n_rel",
     TRAITS native_token_list ].
 
-puncak := inanimate-noun-lex &
+puncak_inanim := inanimate-noun-lex &
   [ STEM < "puncak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_puncak_n_rel",
     TRAITS native_token_list ].
@@ -75947,7 +75957,7 @@ sentosa := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_sentosa_a_rel",
     TRAITS native_token_list ].
 
-sentral := adjective-lex &
+sentral_adj := adjective-lex &
   [ STEM < "sentral" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sentral_a_rel",
     TRAITS native_token_list ].
