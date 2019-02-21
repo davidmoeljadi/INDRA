@@ -898,6 +898,11 @@ perobahan := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_perubahan_n_rel",
     TRAITS native_token_list ].
 
+perubanhan := inanimate-noun-lex &
+  [ STEM < "perubanhan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perubahan_n_rel",
+    TRAITS native_token_list ].
+
 pemikiran := inanimate-noun-lex &
   [ STEM < "pemikiran" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pemikiran_n_rel",
@@ -1101,6 +1106,11 @@ Pejompongan := proper-name-lex &
 Derra := proper-name-lex &
   [ STEM < "Derra" >,
     SYNSEM.LKEYS.KEYREL.CARG "Derra",
+    TRAITS native_token_list ].
+
+An_propn := proper-name-lex &
+  [ STEM < "An" >,
+    SYNSEM.LKEYS.KEYREL.CARG "An",
     TRAITS native_token_list ].
 
 pemberangkatan := inanimate-noun-lex &
@@ -2013,7 +2023,7 @@ kronologis := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_kronologis_n_rel",
     TRAITS native_token_list ].
 
-masukan := inanimate-noun-lex &
+masukan_inanim := inanimate-noun-lex &
   [ STEM < "masukan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_masukan_n_rel",
     TRAITS native_token_list ].
@@ -2226,6 +2236,16 @@ hold := uncountable-noun-lex &
 pergi_n := uncountable-noun-lex &
   [ STEM < "pergi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pergi_n_rel",
+    TRAITS native_token_list ].
+
+berangkat_n := uncountable-noun-lex &
+  [ STEM < "berangkat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_berangkat_n_rel",
+    TRAITS native_token_list ].
+
+terbang_n := uncountable-noun-lex &
+  [ STEM < "terbang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_terbang_n_rel",
     TRAITS native_token_list ].
 
 pulang_n := uncountable-noun-lex &
@@ -2854,6 +2874,11 @@ konfirm_inanim := inanimate-noun-lex &
 
 reschedule_inanim := inanimate-noun-lex &
   [ STEM < "reschedule" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_reschedule_n_rel",
+    TRAITS native_token_list ].
+
+rescedule_inanim := inanimate-noun-lex &
+  [ STEM < "rescedule" >,
     SYNSEM.LKEYS.KEYREL.PRED "_reschedule_n_rel",
     TRAITS native_token_list ].
 
@@ -3544,6 +3569,11 @@ payment := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_pembayaran_n_rel",
     TRAITS native_token_list ].
 
+multipayment := inanimate-noun-lex &
+  [ STEM < "multipayment" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembayaran+multi_n_rel",
+    TRAITS native_token_list ].
+
 fotocopy := inanimate-noun-lex &
   [ STEM < "fotocopy" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fotokopi_n_rel",
@@ -4137,6 +4167,10 @@ apa_apakah := qpart-lex-item &
   [ STEM < "apa" >,
     TRAITS native_token_list ].
 
+ap+kah_apakah := qpart-lex-item &
+  [ STEM < "ap", "kah" >,
+    TRAITS native_token_list ].
+
 apakh_apakah := qpart-lex-item &
   [ STEM < "apakh" >,
     TRAITS native_token_list ].
@@ -4687,9 +4721,19 @@ hbs_sconj := subord-conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_habis_coord_rel",
     TRAITS native_token_list ].
 
+bilamana_sconj := subord-conj-lex &
+  [ STEM < "bilamana" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bilamana_coord_rel",
+    TRAITS native_token_list ].
+
 dgn_sconj := subord-conj-lex &
   [ STEM < "dgn" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dengan_coord_rel",
+    TRAITS native_token_list ].
+
+dengan+syarat_sconj := subord-conj-lex &
+  [ STEM < "dengan", "syarat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dengan+syarat_coord_rel",
     TRAITS native_token_list ].
 
 ssdh := subord-conj-lex &
@@ -4831,6 +4875,10 @@ anada_pron := pronoun-2nd-sg-hon-noun-lex &
 
 kite := pronoun-1st-pl-incl-noun-lex &
   [ STEM < "kite" >,
+    TRAITS native_token_list ].
+
+kt_pron := pronoun-1st-pl-incl-noun-lex &
+  [ STEM < "kt" >,
     TRAITS native_token_list ].
 
 qt := pronoun-1st-pl-incl-noun-lex &
@@ -5011,7 +5059,12 @@ lg_2 := adverb-post-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_lagi_a_rel",
     TRAITS native_token_list ].
 
-ulang_adv := adverb-post-lex &
+full_adv := adverb-post-lex &
+  [ STEM < "full" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penuh_a_rel",
+    TRAITS native_token_list ].
+
+ulang_adv := verb-adverb-post-lex &
   [ STEM < "ulang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ulang_a_rel",
     TRAITS native_token_list ].
@@ -5189,6 +5242,11 @@ k_adp := adposition-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_ke_p_rel",
     TRAITS native_token_list ].
 
+to_adp := adposition-lex &
+  [ STEM < "to" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ke_p_rel",
+    TRAITS native_token_list ].
+
 k_adp_mod := adposition-mod-lex &
   [ STEM < "k" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ke_p_rel",
@@ -5312,6 +5370,16 @@ pnr := inanimate-noun-lex &
 Husny := proper-name-lex &
   [ STEM < "Husny" >,
     SYNSEM.LKEYS.KEYREL.CARG "Husny",
+    TRAITS native_token_list ].
+
+Due := proper-name-lex &
+  [ STEM < "Due" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Due",
+    TRAITS native_token_list ].
+
+Aini := proper-name-lex &
+  [ STEM < "Aini" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Aini",
     TRAITS native_token_list ].
 
 Sari_propn := proper-name-lex &
@@ -5496,6 +5564,11 @@ Junny := proper-name-lex &
 
 pmbyaran := inanimate-noun-lex &
   [ STEM < "pmbyaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembayaran_n_rel",
+    TRAITS native_token_list ].
+
+pambayaran := inanimate-noun-lex &
+  [ STEM < "pambayaran" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pembayaran_n_rel",
     TRAITS native_token_list ].
 
@@ -5879,6 +5952,11 @@ trnsfer := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_transfer_n_rel",
     TRAITS native_token_list ].
 
+dobel+transfer := inanimate-noun-lex &
+  [ STEM < "dobel", "transfer" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_transfer+dobel_n_rel",
+    TRAITS native_token_list ].
+
 inet := uncountable-noun-lex &
   [ STEM < "inet" >,
     SYNSEM.LKEYS.KEYREL.PRED "_internet_n_rel",
@@ -5922,6 +6000,16 @@ livechat := inanimate-noun-lex &
 customer := human-noun-lex &
   [ STEM < "customer" >,
     SYNSEM.LKEYS.KEYREL.PRED "_customer_n_rel",
+    TRAITS native_token_list ].
+
+virtual+account := inanimate-noun-lex &
+  [ STEM < "virtual", "account" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_akun+virtual_n_rel",
+    TRAITS native_token_list ].
+
+virtual+acount := inanimate-noun-lex &
+  [ STEM < "virtual", "acount" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_akun+virtual_n_rel",
     TRAITS native_token_list ].
 
 account := inanimate-noun-lex &
@@ -5977,6 +6065,11 @@ eta := inanimate-noun-lex &
 pswt := inanimate-noun-lex &
   [ STEM < "pswt" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pesawat_n_rel",
+    TRAITS native_token_list ].
+
+pesawat+terbang := inanimate-noun-lex &
+  [ STEM < "pesawat", "terbang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pesawat+terbang_n_rel",
     TRAITS native_token_list ].
 
 prsawat := inanimate-noun-lex &
@@ -6179,9 +6272,29 @@ Scoot := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Scoot",
     TRAITS native_token_list ].
 
+Ning := proper-name-lex &
+  [ STEM < "Ning" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Ning",
+    TRAITS native_token_list ].
+
+Saepudin := proper-name-lex &
+  [ STEM < "Saepudin" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Saepudin",
+    TRAITS native_token_list ].
+
 infant := human-noun-lex &
   [ STEM < "infant" >,
     SYNSEM.LKEYS.KEYREL.PRED "_infant_n_rel",
+    TRAITS native_token_list ].
+
+Nusa_propn := proper-name-lex &
+  [ STEM < "Nusa" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Nusa",
+    TRAITS native_token_list ].
+
+Travel_propn := proper-name-lex &
+  [ STEM < "Travel" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Travel",
     TRAITS native_token_list ].
 
 Indo := proper-name-lex &
@@ -6797,6 +6910,16 @@ sms+bangkin := uncountable-noun-lex &
 mobile+banking := uncountable-noun-lex &
   [ STEM < "mobile", "banking" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mobile+banking_n_rel",
+    TRAITS native_token_list ].
+
+mobile+BCA := uncountable-noun-lex &
+  [ STEM < "mobile", "BCA" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mobile+BCA_n_rel",
+    TRAITS native_token_list ].
+
+BCA+mobile := uncountable-noun-lex &
+  [ STEM < "BCA", "mobile" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mobile+BCA_n_rel",
     TRAITS native_token_list ].
 
 mobile+bankin := uncountable-noun-lex &
@@ -7531,6 +7654,11 @@ pdf := inanimate-noun-lex &
 
 perubahn := inanimate-noun-lex &
   [ STEM < "perubahn" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perubahan_n_rel",
+    TRAITS native_token_list ].
+
+peruban := inanimate-noun-lex &
+  [ STEM < "peruban" >,
     SYNSEM.LKEYS.KEYREL.PRED "_perubahan_n_rel",
     TRAITS native_token_list ].
 
@@ -8349,6 +8477,16 @@ kmrn := adverb-time-past-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_kemarin_a_rel",
     TRAITS native_token_list ].
 
+kmarin := adverb-time-past-lex &
+  [ STEM < "kmarin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemarin_a_rel",
+    TRAITS native_token_list ].
+
+kmaren := adverb-time-past-lex &
+  [ STEM < "kmaren" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kemarin_a_rel",
+    TRAITS native_token_list ].
+
 kemarim := adverb-time-past-lex &
   [ STEM < "kemarim" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kemarin_a_rel",
@@ -8432,6 +8570,21 @@ Batik+Air := proper-name-lex &
 Batik_propn := proper-name-lex &
   [ STEM < "Batik" >,
     SYNSEM.LKEYS.KEYREL.CARG "Batik+Air",
+    TRAITS native_token_list ].
+
+Express_propn := proper-name-lex &
+  [ STEM < "Express" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Express",
+    TRAITS native_token_list ].
+
+Suriyamin := proper-name-lex &
+  [ STEM < "Suriyamin" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Suriyamin",
+    TRAITS native_token_list ].
+
+Dewi_propn := proper-name-lex &
+  [ STEM < "Dewi" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Dewi",
     TRAITS native_token_list ].
 
 tlpn := inanimate-noun-lex &
@@ -8877,6 +9030,11 @@ proposal := inanimate-noun-lex &
 eticket := inanimate-noun-lex &
   [ STEM < "eticket" >,
     SYNSEM.LKEYS.KEYREL.PRED "_e+tiket_n_rel",
+    TRAITS native_token_list ].
+
+return+ticket := inanimate-noun-lex &
+  [ STEM < "return", "ticket" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_return+ticket_n_rel",
     TRAITS native_token_list ].
 
 bayaran := inanimate-noun-lex &
@@ -9411,6 +9569,11 @@ setujui := tr-verb-lex &
 
 masukkn := v_np-pp_prop_le &
   [ STEM < "masukkn" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_masukkan_v_rel",
+    TRAITS native_token_list ].
+
+masukan_v := v_np-pp_prop_le &
+  [ STEM < "masukan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_masukkan_v_rel",
     TRAITS native_token_list ].
 
@@ -10194,9 +10357,24 @@ mll := adposition-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_melalui_p_rel",
     TRAITS native_token_list ].
 
+melslui := adposition-lex &
+  [ STEM < "melslui" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_melalui_p_rel",
+    TRAITS native_token_list ].
+
+mellui := adposition-lex &
+  [ STEM < "mellui" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_melalui_p_rel",
+    TRAITS native_token_list ].
+
 melaluin := adposition-lex &
   [ STEM < "melaluin" >,
     SYNSEM.LKEYS.KEYREL.PRED "_melalui_p_rel",
+    TRAITS native_token_list ].
+
+saat_adp := adposition-lex &
+  [ STEM < "saat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_saat_p_rel",
     TRAITS native_token_list ].
 
 saat_adp-mod := adposition-mod-lex &
@@ -10797,6 +10975,18 @@ vs_conj := conj-lex &
     CFORM "1",
     TRAITS native_token_list ].
 
+ampersand_conj := conj-lex &
+  [ STEM < "&" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "1",
+    TRAITS native_token_list ].
+
+da_conj := conj-lex &
+  [ STEM < "da" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "1",
+    TRAITS native_token_list ].
+
 sama_conj := conj-lex &
   [ STEM < "sama" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
@@ -11123,6 +11313,11 @@ utl_adp := adposition-lex &
 
 uuntuk_adp := adposition-lex &
   [ STEM < "uuntuk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_untuk_p_rel",
+    TRAITS native_token_list ].
+
+untuk_adp-top := adposition-mod-top-lex &
+  [ STEM < "untuk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_untuk_p_rel",
     TRAITS native_token_list ].
 
@@ -13122,9 +13317,29 @@ setor := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_setor_v_rel",
     TRAITS native_token_list ].
 
+lancar_adv := adverb-post-lex &
+  [ STEM < "lancar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lancar_a_rel",
+    TRAITS native_token_list ].
+
 Hotel_propn := proper-name-lex &
   [ STEM < "Hotel" >,
     SYNSEM.LKEYS.KEYREL.CARG "Hotel",
+    TRAITS native_token_list ].
+
+Pagar+Alam := proper-name-lex &
+  [ STEM < "Pagar", "Alam" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pagar+Alam",
+    TRAITS native_token_list ].
+
+Anggrek_propn := proper-name-lex &
+  [ STEM < "Anggrek" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Anggrek",
+    TRAITS native_token_list ].
+
+Holiday_propn := proper-name-lex &
+  [ STEM < "Holiday" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Holiday",
     TRAITS native_token_list ].
 
 JT_propn := proper-name-lex &
@@ -13195,6 +13410,11 @@ Meadows := proper-name-lex &
 merchant := inanimate-noun-lex &
   [ STEM < "merchant" >,
     SYNSEM.LKEYS.KEYREL.PRED "_merchant_n_rel",
+    TRAITS native_token_list ].
+
+print_inanim := inanimate-noun-lex &
+  [ STEM < "print" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_print_n_rel",
     TRAITS native_token_list ].
 
 Meilanny := proper-name-lex &
@@ -14087,6 +14307,11 @@ meskapai := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_maskapai_n_rel",
     TRAITS native_token_list ].
 
+masakapai := inanimate-noun-lex &
+  [ STEM < "masakapai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_maskapai_n_rel",
+    TRAITS native_token_list ].
+
 Melliza := proper-name-lex &
   [ STEM < "Melliza" >,
     SYNSEM.LKEYS.KEYREL.CARG "Melliza",
@@ -14144,6 +14369,11 @@ memo := inanimate-noun-lex &
 
 Singapore := proper-name-lex &
   [ STEM < "Singapore" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Singapura",
+    TRAITS native_token_list ].
+
+Singapura_abbr := proper-name-lex &
+  [ STEM < "SIN" >,
     SYNSEM.LKEYS.KEYREL.CARG "Singapura",
     TRAITS native_token_list ].
 
@@ -15295,6 +15525,11 @@ Megawati := proper-name-lex &
 Megawaty := proper-name-lex &
   [ STEM < "Megawaty" >,
     SYNSEM.LKEYS.KEYREL.CARG "Megawaty",
+    TRAITS native_token_list ].
+
+domestik := adjective-lex &
+  [ STEM < "domestik" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_domestik_a_rel",
     TRAITS native_token_list ].
 
 memalukan := adjective-lex &
@@ -18460,6 +18695,11 @@ transfer_inanim := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_transfer_n_rel",
     TRAITS native_token_list ].
 
+transper_inanim := inanimate-noun-lex &
+  [ STEM < "transper" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_transfer_n_rel",
+    TRAITS native_token_list ].
+
 maksut := inanimate-noun-lex &
   [ STEM < "maksut" >,
     SYNSEM.LKEYS.KEYREL.PRED "_maksud_n_rel",
@@ -19450,6 +19690,11 @@ Nyariana := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Nyariana",
     TRAITS native_token_list ].
 
+Bungkal_propn := proper-name-lex &
+  [ STEM < "Bungkal" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Bungkal",
+    TRAITS native_token_list ].
+
 Ngo_propn := proper-name-lex &
   [ STEM < "Ngo" >,
     SYNSEM.LKEYS.KEYREL.CARG "Ngo",
@@ -19587,6 +19832,11 @@ Ngrombo := proper-name-lex &
 
 Ngurahrai := proper-name-lex &
   [ STEM < "Ngurahrai" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Ngurah+Rai",
+    TRAITS native_token_list ].
+
+Ngurah+Rai := proper-name-lex &
+  [ STEM < "Ngurah", "Rai" >,
     SYNSEM.LKEYS.KEYREL.CARG "Ngurah+Rai",
     TRAITS native_token_list ].
 
@@ -20530,6 +20780,11 @@ mohin := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_mohon_v_rel",
     TRAITS native_token_list ].
 
+tergantung_adp := adposition-lex &
+    [ STEM < "tergantung" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tergantung_p_rel",
+    TRAITS native_token_list ].
+
 slain_adp := adposition-lex &
     [ STEM < "slain" >,
     SYNSEM.LKEYS.KEYREL.PRED "_selain_p_rel",
@@ -21015,9 +21270,19 @@ Husein := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Husein",
     TRAITS native_token_list ].
 
+Vio := proper-name-lex &
+  [ STEM < "Vio" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Vio",
+    TRAITS native_token_list ].
+
 Putra_propn := proper-name-lex &
   [ STEM < "Putra" >,
     SYNSEM.LKEYS.KEYREL.CARG "Putra",
+    TRAITS native_token_list ].
+
+Putri_propn := proper-name-lex &
+  [ STEM < "Putri" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Putri",
     TRAITS native_token_list ].
 
 Baharuddin := proper-name-lex &
@@ -21820,6 +22085,21 @@ Nok+Air := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Nok+Air",
     TRAITS native_token_list ].
 
+Anda_propn := proper-name-lex &
+  [ STEM < "Anda" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Anda",
+    TRAITS native_token_list ].
+
+Best_propn := proper-name-lex &
+  [ STEM < "Best" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Best",
+    TRAITS native_token_list ].
+
+Pemuda_propn := proper-name-lex &
+  [ STEM < "Pemuda" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pemuda",
+    TRAITS native_token_list ].
+
 Resort_propn := proper-name-lex &
   [ STEM < "Resort" >,
     SYNSEM.LKEYS.KEYREL.CARG "Resort",
@@ -22110,6 +22390,21 @@ Cindy := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Cindy",
     TRAITS native_token_list ].
 
+Royal_propn := proper-name-lex &
+  [ STEM < "Royal" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Royal",
+    TRAITS native_token_list ].
+
+Safari_propn := proper-name-lex &
+  [ STEM < "Safari" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Safari",
+    TRAITS native_token_list ].
+
+Garden_propn := proper-name-lex &
+  [ STEM < "Garden" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Garden",
+    TRAITS native_token_list ].
+
 Restu_propn := proper-name-lex &
   [ STEM < "Restu" >,
     SYNSEM.LKEYS.KEYREL.CARG "Restu",
@@ -22363,6 +22658,16 @@ justru := adverb-lex &
 Iwan := proper-name-lex &
   [ STEM < "Iwan" >,
     SYNSEM.LKEYS.KEYREL.CARG "Iwan",
+    TRAITS native_token_list ].
+
+Intan_propn := proper-name-lex &
+  [ STEM < "Intan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Intan",
+    TRAITS native_token_list ].
+
+Pop_propn := proper-name-lex &
+  [ STEM < "Pop" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pop",
     TRAITS native_token_list ].
 
 mnuju_adp := adposition-lex &
@@ -22715,6 +23020,11 @@ Grand := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Grand",
     TRAITS native_token_list ].
 
+Deluxe := proper-name-lex &
+  [ STEM < "Deluxe" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Deluxe",
+    TRAITS native_token_list ].
+
 Japan := proper-name-lex &
   [ STEM < "Japan" >,
     SYNSEM.LKEYS.KEYREL.CARG "Jepang",
@@ -22750,6 +23060,11 @@ Fadhli := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Fadhli",
     TRAITS native_token_list ].
 
+Tebu_propn := proper-name-lex &
+  [ STEM < "Tebu" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Tebu",
+    TRAITS native_token_list ].
+
 group := inanimate-noun-lex &
   [ STEM < "group" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grup_n_rel",
@@ -22757,6 +23072,11 @@ group := inanimate-noun-lex &
 
 Lion+Air := proper-name-lex &
   [ STEM < "Lion", "Air" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Lion+Air",
+    TRAITS native_token_list ].
+
+Lio+Air := proper-name-lex &
+  [ STEM < "Lio", "Air" >,
     SYNSEM.LKEYS.KEYREL.CARG "Lion+Air",
     TRAITS native_token_list ].
 
@@ -22892,6 +23212,26 @@ Ridho := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Ridho",
     TRAITS native_token_list ].
 
+Melaboh_propn := proper-name-lex &
+  [ STEM < "Melaboh" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Meulaboh",
+    TRAITS native_token_list ].
+
+Pekan_propn := proper-name-lex &
+  [ STEM < "Pekan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pekan",
+    TRAITS native_token_list ].
+
+Pasar+Turi := proper-name-lex &
+  [ STEM < "Pasar", "Turi" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pasar+Turi",
+    TRAITS native_token_list ].
+
+Halim_airport := proper-name-lex &
+  [ STEM < "Halim" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Halim+Perdanakusuma+Airport",
+    TRAITS native_token_list ].
+
 HLP := proper-name-lex &
   [ STEM < "HLP" >,
     SYNSEM.LKEYS.KEYREL.CARG "Halim+Perdanakusuma+Airport",
@@ -22922,9 +23262,19 @@ Devi := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Devi",
     TRAITS native_token_list ].
 
+Nursin := proper-name-lex &
+  [ STEM < "Nursin" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Nursin",
+    TRAITS native_token_list ].
+
 thumb+up := inanimate-noun-lex &
   [ STEM < "thumb", "up" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thumb+up_n_rel",
+    TRAITS native_token_list ].
+
+virtual+reality := inanimate-noun-lex &
+  [ STEM < "virtual", "reality" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_virtual+reality_n_rel",
     TRAITS native_token_list ].
 
 Yuni := proper-name-lex &
@@ -23897,6 +24247,11 @@ Intl := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "International",
     TRAITS native_token_list ].
 
+Internasional_propn := proper-name-lex &
+  [ STEM < "Internasional" >,
+    SYNSEM.LKEYS.KEYREL.CARG "International",
+    TRAITS native_token_list ].
+
 Same := proper-name-lex &
   [ STEM < "Same" >,
     SYNSEM.LKEYS.KEYREL.CARG "Same",
@@ -24462,8 +24817,18 @@ abwah := relational-n-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_abwah_n_rel",
     TRAITS native_token_list ].
 
+deket_rel-n := relational-n-lex &
+  [ STEM < "deket" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dekat_n_rel",
+    TRAITS native_token_list ].
+
 dkt := adposition-lex &
   [ STEM < "dkt" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dekat_p_rel",
+    TRAITS native_token_list ].
+
+deket_adp := adposition-lex &
+  [ STEM < "deket" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dekat_p_rel",
     TRAITS native_token_list ].
 
@@ -24479,6 +24844,11 @@ dmg := adposition-lex &
 
 ddngan := adposition-lex &
   [ STEM < "ddngan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dengan_p_rel",
+    TRAITS native_token_list ].
+
+dngan_adp := adposition-lex &
+  [ STEM < "dngan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dengan_p_rel",
     TRAITS native_token_list ].
 
@@ -24682,6 +25052,11 @@ Kusuma := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Kusuma",
     TRAITS native_token_list ].
 
+Mountain := proper-name-lex &
+  [ STEM < "Mountain" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Mountain",
+    TRAITS native_token_list ].
+
 Natalia := proper-name-lex &
   [ STEM < "Natalia" >,
     SYNSEM.LKEYS.KEYREL.CARG "Natalia",
@@ -24717,9 +25092,19 @@ mohon_adv := adverb-imp-scop-pre-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_mohon_x_rel",
     TRAITS native_token_list ].
 
+mhn_adv := adverb-imp-scop-pre-lex &
+  [ STEM < "mhn" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mohon_x_rel",
+    TRAITS native_token_list ].
+
 homon_adv := adverb-imp-scop-pre-lex &
   [ STEM < "homon" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mohon_x_rel",
+    TRAITS native_token_list ].
+
+selalu_2 := adverb-pre-subj-lex &
+  [ STEM < "selalu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_selalu_a_rel",
     TRAITS native_token_list ].
 
 kohon_tr := tr-verb-lex &
@@ -24929,11 +25314,6 @@ atad+nama := adposition-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_atas+nama_p_rel",
     TRAITS native_token_list ].
 
-atas+bama := adposition-lex &
-  [ STEM < "atas", "bama" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_atas+nama_p_rel",
-    TRAITS native_token_list ].
-
 atas+nama_adp := adposition-lex &
   [ STEM < "atas", "nama" >,
     SYNSEM.LKEYS.KEYREL.PRED "_atas+nama_p_rel",
@@ -24992,6 +25372,11 @@ trkait_mod := adposition-mod-lex &
 terkiat_mod := adposition-mod-lex &
   [ STEM < "terkiat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_terkait_p_rel",
+    TRAITS native_token_list ].
+
+oprasional := adjective-lex &
+  [ STEM < "oprasional" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_operasional_a_rel",
     TRAITS native_token_list ].
 
 terlambat := adjective-lex &
@@ -25054,6 +25439,16 @@ tera := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_tera_n_rel",
     TRAITS native_token_list ].
 
+bama_typo-nama_inanim := inanimate-noun-lex &
+  [ STEM < "bama" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_nama_n_rel",
+    TRAITS native_token_list ].
+
+penawran := inanimate-noun-lex &
+  [ STEM < "penawran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_penawaran_n_rel",
+    TRAITS native_token_list ].
+
 terbitan := inanimate-noun-lex &
   [ STEM < "terbitan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_terbitan_n_rel",
@@ -25069,9 +25464,24 @@ Terry := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Terry",
     TRAITS native_token_list ].
 
+Dino := proper-name-lex &
+  [ STEM < "Dino" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Dino",
+    TRAITS native_token_list ].
+
+Waru_propn := proper-name-lex &
+  [ STEM < "Waru" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Waru",
+    TRAITS native_token_list ].
+
 Precious_propn := proper-name-lex &
   [ STEM < "Precious" >,
     SYNSEM.LKEYS.KEYREL.CARG "Precious",
+    TRAITS native_token_list ].
+
+Keluarga_propn := proper-name-lex &
+  [ STEM < "Keluarga" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Keluarga",
     TRAITS native_token_list ].
 
 Surya_propn := proper-name-lex &
@@ -25297,6 +25707,11 @@ nongol := intr-verb-lex &
 terserah := opt-tr-np-comp-verb-lex &
   [ STEM < "terserah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_terserah_v_rel",
+    TRAITS native_token_list ].
+
+transaksi_opt-tr := opt-tr-np-comp-verb-lex &
+  [ STEM < "transaksi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_transaksi_v_rel",
     TRAITS native_token_list ].
 
 prefer := opt-tr-np-comp-verb-lex &
@@ -26266,6 +26681,11 @@ Tj := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Tj",
     TRAITS native_token_list ].
 
+Harapan_propn := proper-name-lex &
+  [ STEM < "Harapan" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Harapan",
+    TRAITS native_token_list ].
+
 PG := proper-name-lex &
   [ STEM < "PG" >,
     SYNSEM.LKEYS.KEYREL.CARG "PG",
@@ -26951,8 +27371,18 @@ Kuching := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Kuching",
     TRAITS native_token_list ].
 
+Sun_propn := proper-name-lex &
+  [ STEM < "Sun" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Sun",
+    TRAITS native_token_list ].
+
 horel := inanimate-noun-lex &
   [ STEM < "horel" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hotel_n_rel",
+    TRAITS native_token_list ].
+
+hitel := inanimate-noun-lex &
+  [ STEM < "hitel" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hotel_n_rel",
     TRAITS native_token_list ].
 
@@ -27054,6 +27484,21 @@ Desmatauri := proper-name-lex &
 Fia_propn := proper-name-lex &
   [ STEM < "Fia" >,
     SYNSEM.LKEYS.KEYREL.CARG "Fia",
+    TRAITS native_token_list ].
+
+Pondok_propn := proper-name-lex &
+  [ STEM < "Pondok" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pondok",
+    TRAITS native_token_list ].
+
+Alam_propn := proper-name-lex &
+  [ STEM < "Alam" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Alam",
+    TRAITS native_token_list ].
+
+Sumber_propn := proper-name-lex &
+  [ STEM < "Sumber" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Sumber",
     TRAITS native_token_list ].
 
 Ammal := proper-name-lex &
@@ -27736,6 +28181,11 @@ pmsnan := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_pemesanan_n_rel",
     TRAITS native_token_list ].
 
+pemesasan := inanimate-noun-lex &
+  [ STEM < "pemesasan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pemesanan_n_rel",
+    TRAITS native_token_list ].
+
 Aquarium := proper-name-lex &
   [ STEM < "Aquarium" >,
     SYNSEM.LKEYS.KEYREL.CARG "Aquarium",
@@ -27934,6 +28384,16 @@ Mahmud := proper-name-lex &
 Wheel := proper-name-lex &
   [ STEM < "Wheel" >,
     SYNSEM.LKEYS.KEYREL.CARG "Wheel",
+    TRAITS native_token_list ].
+
+Nangka_propn := proper-name-lex &
+  [ STEM < "Nangka" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Nangka",
+    TRAITS native_token_list ].
+
+Sariffudin := proper-name-lex &
+  [ STEM < "Sariffudin" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Sariffudin",
     TRAITS native_token_list ].
 
 kresit+card := inanimate-noun-lex &
@@ -28346,6 +28806,11 @@ pembayarann := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_pembayaran_n_rel",
     TRAITS native_token_list ].
 
+pembeyaran := inanimate-noun-lex &
+  [ STEM < "pembeyaran" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pembayaran_n_rel",
+    TRAITS native_token_list ].
+
 Binti := proper-name-lex &
   [ STEM < "Binti" >,
     SYNSEM.LKEYS.KEYREL.CARG "Binti",
@@ -28461,8 +28926,18 @@ Apriadi := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Apriadi",
     TRAITS native_token_list ].
 
+Tara_propn := proper-name-lex &
+  [ STEM < "Tara" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Tara",
+    TRAITS native_token_list ].
+
 trafer := inanimate-noun-lex &
   [ STEM < "trafer" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_transfer_n_rel",
+    TRAITS native_token_list ].
+
+transver_inanim := inanimate-noun-lex &
+  [ STEM < "transver" >,
     SYNSEM.LKEYS.KEYREL.PRED "_transfer_n_rel",
     TRAITS native_token_list ].
 
@@ -28624,6 +29099,11 @@ Syaifullah := proper-name-lex &
 Basri := proper-name-lex &
   [ STEM < "Basri" >,
     SYNSEM.LKEYS.KEYREL.CARG "Basri",
+    TRAITS native_token_list ].
+
+Sri := proper-name-lex &
+  [ STEM < "Sri" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Sri",
     TRAITS native_token_list ].
 
 Laksana := proper-name-lex &
@@ -28856,6 +29336,21 @@ Tjong := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Tjong",
     TRAITS native_token_list ].
 
+Visa_propn := proper-name-lex &
+  [ STEM < "Visa" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Visa",
+    TRAITS native_token_list ].
+
+Master_propn := proper-name-lex &
+  [ STEM < "Master" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Master",
+    TRAITS native_token_list ].
+
+masukin := v_np-pp_prop_le &
+  [ STEM < "masukin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_masukin_v_rel",
+    TRAITS native_token_list ].
+
 VISA+cad := inanimate-noun-lex &
   [ STEM < "VISA", "cad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kartu+VISA_n_rel",
@@ -28871,8 +29366,23 @@ utk_subord := subord-conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_untuk_coord_rel",
     TRAITS native_token_list ].
 
+buat_subord := subord-conj-lex &
+  [ STEM < "buat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_untuk_coord_rel",
+    TRAITS native_token_list ].
+
 darim_adp := adposition-lex &
   [ STEM < "darim" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dari_p_rel",
+    TRAITS native_token_list ].
+
+thp_adp := adposition-lex &
+  [ STEM < "thp" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_terhadap_p_rel",
+    TRAITS native_token_list ].
+
+dt_adp := adposition-lex &
+  [ STEM < "dt" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dari_p_rel",
     TRAITS native_token_list ].
 
@@ -29206,6 +29716,11 @@ ksong := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_kosong_a_rel",
     TRAITS native_token_list ].
 
+dobel := adjective-lex &
+  [ STEM < "dobel" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dobel_a_rel",
+    TRAITS native_token_list ].
+
 lamban := adjective-lex &
   [ STEM < "lamban" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lamban_a_rel",
@@ -29236,6 +29751,11 @@ selesaikn := tr-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_selesaikan_v_rel",
     TRAITS native_token_list ].
 
+perbolehkan := tr-verb-lex &
+  [ STEM < "perbolehkan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_perbolehkan_v_rel",
+    TRAITS native_token_list ].
+
 hbngi := tr-verb-lex &
   [ STEM < "hbngi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hubungi_v_rel",
@@ -29259,6 +29779,16 @@ trfer := opt-tr-np-comp-verb-lex &
 numpang := trans-first-arg-control-verb &
   [ STEM < "numpang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_numpang_v_rel",
+    TRAITS native_token_list ].
+
+salah_ctrl := trans-first-arg-control-verb &
+  [ STEM < "salah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_salah_v_rel",
+    TRAITS native_token_list ].
+
+sala_ctrl := trans-first-arg-control-verb &
+  [ STEM < "sala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_salah_v_rel",
     TRAITS native_token_list ].
 
 respos := tr-verb-lex &
@@ -29736,9 +30266,24 @@ Imas := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Imas",
     TRAITS native_token_list ].
 
+Indramayu := proper-name-lex &
+  [ STEM < "Indramayu" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Indramayu",
+    TRAITS native_token_list ].
+
 Kencana := proper-name-lex &
   [ STEM < "Kencana" >,
     SYNSEM.LKEYS.KEYREL.CARG "Kencana",
+    TRAITS native_token_list ].
+
+Taman_propn := proper-name-lex &
+  [ STEM < "Taman" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Taman",
+    TRAITS native_token_list ].
+
+Pool_propn := proper-name-lex &
+  [ STEM < "Pool" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Pool",
     TRAITS native_token_list ].
 
 Imam_propn := proper-name-lex &
@@ -29836,6 +30381,11 @@ tjuan := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_tujuan_n_rel",
     TRAITS native_token_list ].
 
+tujua := inanimate-noun-lex &
+  [ STEM < "tujua" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tujuan_n_rel",
+    TRAITS native_token_list ].
+
 Chusnul := proper-name-lex &
   [ STEM < "Chusnul" >,
     SYNSEM.LKEYS.KEYREL.CARG "Chusnul",
@@ -29914,6 +30464,16 @@ Ronia := proper-name-lex &
 Khoriroh := proper-name-lex &
   [ STEM < "Khoriroh" >,
     SYNSEM.LKEYS.KEYREL.CARG "Khoriroh",
+    TRAITS native_token_list ].
+
+San := proper-name-lex &
+  [ STEM < "San" >,
+    SYNSEM.LKEYS.KEYREL.CARG "San",
+    TRAITS native_token_list ].
+
+Duri_propn := proper-name-lex &
+  [ STEM < "Duri" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Duri",
     TRAITS native_token_list ].
 
 Bantal+Guling := proper-name-lex &
@@ -30456,11 +31016,6 @@ Sudarman := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Sudarman",
     TRAITS native_token_list ].
 
-Cgkpdg := proper-name-lex &
-  [ STEM < "Cgkpdg" >,
-    SYNSEM.LKEYS.KEYREL.CARG "CGK-PDG",
-    TRAITS native_token_list ].
-
 Town := proper-name-lex &
   [ STEM < "Town" >,
     SYNSEM.LKEYS.KEYREL.CARG "Town",
@@ -30891,6 +31446,11 @@ Air+Lines := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Air+Lines",
     TRAITS native_token_list ].
 
+Air+Line := proper-name-lex &
+  [ STEM < "Air", "Line" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Air+Lines",
+    TRAITS native_token_list ].
+
 skejul := inanimate-noun-lex &
   [ STEM < "skejul" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jadwal_n_rel",
@@ -30899,6 +31459,11 @@ skejul := inanimate-noun-lex &
 Villas := proper-name-lex &
   [ STEM < "Villas" >,
     SYNSEM.LKEYS.KEYREL.CARG "Villas",
+    TRAITS native_token_list ].
+
+Villa_propn := proper-name-lex &
+  [ STEM < "Villa" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Villa",
     TRAITS native_token_list ].
 
 bogking := inanimate-noun-lex &
@@ -30974,6 +31539,11 @@ Kupan := proper-name-lex &
 Kupang_propn := proper-name-lex &
   [ STEM < "Kupang" >,
     SYNSEM.LKEYS.KEYREL.CARG "Kupang",
+    TRAITS native_token_list ].
+
+Au_propn := proper-name-lex &
+  [ STEM < "Au" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Au",
     TRAITS native_token_list ].
 
 Hakimsyah := proper-name-lex &
@@ -32206,6 +32776,11 @@ sala := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_salah_a_rel",
     TRAITS native_token_list ].
 
+kadaluarsa := adjective-lex &
+  [ STEM < "kadaluarsa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kedaluwarsa_a_rel",
+    TRAITS native_token_list ].
+
 kada+luarrsa := adjective-lex &
   [ STEM < "kada", "luarrsa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kedaluwarsa_a_rel",
@@ -32219,6 +32794,11 @@ keubah := intr-verb-lex &
 neli := tr-verb-lex &
   [ STEM < "neli" >,
     SYNSEM.LKEYS.KEYREL.PRED "_beli_v_rel",
+    TRAITS native_token_list ].
+
+tanya_tr := tr-verb-lex &
+  [ STEM < "tanya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tanya_v_rel",
     TRAITS native_token_list ].
 
 Harimurti := proper-name-lex &
@@ -32244,6 +32824,11 @@ pmbytn := inanimate-noun-lex &
 Michelle := proper-name-lex &
   [ STEM < "Michelle" >,
     SYNSEM.LKEYS.KEYREL.CARG "Michelle",
+    TRAITS native_token_list ].
+
+Den+pasar := proper-name-lex &
+  [ STEM < "Den", "pasar" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Denpasar",
     TRAITS native_token_list ].
 
 Rosalia := proper-name-lex &
@@ -33386,6 +33971,26 @@ Karolina := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Karolina",
     TRAITS native_token_list ].
 
+Airline_propn := proper-name-lex &
+  [ STEM < "Airline" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Airline",
+    TRAITS native_token_list ].
+
+Elvin := proper-name-lex &
+  [ STEM < "Elvin" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Elvin",
+    TRAITS native_token_list ].
+
+Supriatin := proper-name-lex &
+  [ STEM < "Supriatin" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Supriatin",
+    TRAITS native_token_list ].
+
+Tintin := proper-name-lex &
+  [ STEM < "Tintin" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Tintin",
+    TRAITS native_token_list ].
+
 X+Living+Plaza := proper-name-lex &
   [ STEM < "X", "Living", "Plaza" >,
     SYNSEM.LKEYS.KEYREL.CARG "X+Living+Plaza",
@@ -33801,14 +34406,164 @@ Minarni := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Minarni",
     TRAITS native_token_list ].
 
+La := proper-name-lex &
+  [ STEM < "La" >,
+    SYNSEM.LKEYS.KEYREL.CARG "La",
+    TRAITS native_token_list ].
+
 Kdr := proper-name-lex &
   [ STEM < "Kdr" >,
     SYNSEM.LKEYS.KEYREL.CARG "Kediri",
     TRAITS native_token_list ].
 
+A_propn := proper-name-lex &
+  [ STEM < "A" >,
+    SYNSEM.LKEYS.KEYREL.CARG "A",
+    TRAITS native_token_list ].
+
+B_propn := proper-name-lex &
+  [ STEM < "B" >,
+    SYNSEM.LKEYS.KEYREL.CARG "B",
+    TRAITS native_token_list ].
+
+C_propn := proper-name-lex &
+  [ STEM < "C" >,
+    SYNSEM.LKEYS.KEYREL.CARG "C",
+    TRAITS native_token_list ].
+
+D_propn := proper-name-lex &
+  [ STEM < "D" >,
+    SYNSEM.LKEYS.KEYREL.CARG "D",
+    TRAITS native_token_list ].
+
+E_propn := proper-name-lex &
+  [ STEM < "E" >,
+    SYNSEM.LKEYS.KEYREL.CARG "E",
+    TRAITS native_token_list ].
+
+F_propn := proper-name-lex &
+  [ STEM < "F" >,
+    SYNSEM.LKEYS.KEYREL.CARG "F",
+    TRAITS native_token_list ].
+
+G_propn := proper-name-lex &
+  [ STEM < "G" >,
+    SYNSEM.LKEYS.KEYREL.CARG "G",
+    TRAITS native_token_list ].
+
+H_propn := proper-name-lex &
+  [ STEM < "H" >,
+    SYNSEM.LKEYS.KEYREL.CARG "H",
+    TRAITS native_token_list ].
+
+I_propn := proper-name-lex &
+  [ STEM < "I" >,
+    SYNSEM.LKEYS.KEYREL.CARG "I",
+    TRAITS native_token_list ].
+
+J_propn := proper-name-lex &
+  [ STEM < "J" >,
+    SYNSEM.LKEYS.KEYREL.CARG "J",
+    TRAITS native_token_list ].
+
+K_propn := proper-name-lex &
+  [ STEM < "K" >,
+    SYNSEM.LKEYS.KEYREL.CARG "K",
+    TRAITS native_token_list ].
+
+L_propn := proper-name-lex &
+  [ STEM < "L" >,
+    SYNSEM.LKEYS.KEYREL.CARG "L",
+    TRAITS native_token_list ].
+
+M_propn := proper-name-lex &
+  [ STEM < "M" >,
+    SYNSEM.LKEYS.KEYREL.CARG "M",
+    TRAITS native_token_list ].
+
+N_propn := proper-name-lex &
+  [ STEM < "N" >,
+    SYNSEM.LKEYS.KEYREL.CARG "N",
+    TRAITS native_token_list ].
+
+O_propn := proper-name-lex &
+  [ STEM < "O" >,
+    SYNSEM.LKEYS.KEYREL.CARG "O",
+    TRAITS native_token_list ].
+
+P_propn := proper-name-lex &
+  [ STEM < "P" >,
+    SYNSEM.LKEYS.KEYREL.CARG "P",
+    TRAITS native_token_list ].
+
+Q_propn := proper-name-lex &
+  [ STEM < "Q" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Q",
+    TRAITS native_token_list ].
+
+R_propn := proper-name-lex &
+  [ STEM < "R" >,
+    SYNSEM.LKEYS.KEYREL.CARG "R",
+    TRAITS native_token_list ].
+
+S_propn := proper-name-lex &
+  [ STEM < "S" >,
+    SYNSEM.LKEYS.KEYREL.CARG "S",
+    TRAITS native_token_list ].
+
+T_propn := proper-name-lex &
+  [ STEM < "T" >,
+    SYNSEM.LKEYS.KEYREL.CARG "T",
+    TRAITS native_token_list ].
+
+U_propn := proper-name-lex &
+  [ STEM < "U" >,
+    SYNSEM.LKEYS.KEYREL.CARG "U",
+    TRAITS native_token_list ].
+
+V_propn := proper-name-lex &
+  [ STEM < "V" >,
+    SYNSEM.LKEYS.KEYREL.CARG "V",
+    TRAITS native_token_list ].
+
+W_propn := proper-name-lex &
+  [ STEM < "W" >,
+    SYNSEM.LKEYS.KEYREL.CARG "W",
+    TRAITS native_token_list ].
+
+X_propn := proper-name-lex &
+  [ STEM < "X" >,
+    SYNSEM.LKEYS.KEYREL.CARG "X",
+    TRAITS native_token_list ].
+
+Y_propn := proper-name-lex &
+  [ STEM < "Y" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Y",
+    TRAITS native_token_list ].
+
+Z_propn := proper-name-lex &
+  [ STEM < "Z" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Z",
+    TRAITS native_token_list ].
+
+de := proper-name-lex &
+  [ STEM < "de" >,
+    SYNSEM.LKEYS.KEYREL.CARG "de",
+    TRAITS native_token_list ].
+
 Parahyangan := proper-name-lex &
   [ STEM < "Parahyangan" >,
     SYNSEM.LKEYS.KEYREL.CARG "Parahyangan",
+    TRAITS native_token_list ].
+
+Agung_propn := proper-name-lex &
+  [ STEM < "Agung" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Agung",
+    TRAITS native_token_list ].
+
+Argo_propn := proper-name-lex &
+  [ STEM < "Argo" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Argo",
     TRAITS native_token_list ].
 
 kotor := adjective-lex &
@@ -34246,6 +35001,11 @@ Pulogadung := proper-name-lex &
     SYNSEM.LKEYS.KEYREL.CARG "Pulogadung",
     TRAITS native_token_list ].
 
+Bangun_propn := proper-name-lex &
+  [ STEM < "Bangun" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Bangun",
+    TRAITS native_token_list ].
+
 Yogja := proper-name-lex &
   [ STEM < "Yogja" >,
     SYNSEM.LKEYS.KEYREL.CARG "Yogyakarta",
@@ -34253,6 +35013,11 @@ Yogja := proper-name-lex &
 
 Yogjakarta := proper-name-lex &
   [ STEM < "Yogjakarta" >,
+    SYNSEM.LKEYS.KEYREL.CARG "Yogyakarta",
+    TRAITS native_token_list ].
+
+Jogjakarta := proper-name-lex &
+  [ STEM < "Jogjakarta" >,
     SYNSEM.LKEYS.KEYREL.CARG "Yogyakarta",
     TRAITS native_token_list ].
 

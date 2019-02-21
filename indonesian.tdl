@@ -1208,6 +1208,58 @@ act-imp-no-prefix-lex-rule := same-non-local-lex-rule &
     C-CONT.ICONS <! !>,
     DTR tr-verb-lex ].
 
+;; DVM 2019-02-12: imperatives for ditransitives
+
+act-imp-no-prefix-ditrans-n-n-lex-rule := same-non-local-lex-rule &
+		   same-modified-lex-rule &
+		   same-light-lex-rule &
+		   same-ctxt-lex-rule &
+		   same-cont-lex-rule &
+		   same-agr-lex-rule &
+		   same-head-lex-rule &
+		   same-hc-light-lex-rule &
+		   same-posthead-lex-rule &
+		   same-mc-lex-rule &
+		   infl-lex-rule & 
+  [ INFLECTED.VOICE-FLAG +,
+    SYNSEM [ LOCAL.CAT.VAL [ COMPS < [ LOCAL [ CAT [ HEAD subj-noun,
+                                                     VAL [ SPR < >,
+                                                           COMPS < > ] ],
+                                               CONT.HOOK.INDEX #ind2 ] ] ,
+                                     [ LOCAL [ CAT [ HEAD subj-noun,
+                                                     VAL [ SPR < >,
+                                                           COMPS < > ] ],
+                                               CONT.HOOK.INDEX #ind3 ] ] >,
+ 			     SUBJ < > ],
+             LKEYS.KEYREL [ ARG2 #ind2 , ARG3 #ind3 ] ],
+    C-CONT.ICONS <! !>,
+    DTR v_np_noarg3_le ].
+
+act-imp-no-prefix-ditrans-n-p-lex-rule := same-non-local-lex-rule &
+		   same-modified-lex-rule &
+		   same-light-lex-rule &
+		   same-ctxt-lex-rule &
+		   same-cont-lex-rule &
+		   same-agr-lex-rule &
+		   same-head-lex-rule &
+		   same-hc-light-lex-rule &
+		   same-posthead-lex-rule &
+		   same-mc-lex-rule &
+		   infl-lex-rule & 
+  [ INFLECTED.VOICE-FLAG +,
+    SYNSEM [ LOCAL.CAT.VAL [ COMPS < [ LOCAL [ CAT [ HEAD subj-noun,
+                                                     VAL [ SPR < >,
+                                                           COMPS < > ] ],
+                                               CONT.HOOK.INDEX #ind2 ] ] ,
+                                     [ LOCAL [ CAT [ HEAD nonoleh-adp,
+                                                     VAL [ SPR < >,
+                                                           COMPS < > ] ],
+                                               CONT.HOOK.INDEX #ind3 ] ] >,
+ 			     SUBJ < > ],
+             LKEYS.KEYREL [ ARG2 #ind2 , ARG3 #ind3 ] ],
+    C-CONT.ICONS <! !>,
+    DTR v_np-pp_prop_le ].
+
 ;; DVM 2018-12-03: tvlk chat data
 act-no-prefix-lex-rule := active-voice-lex-rule-super.
 
@@ -2449,6 +2501,16 @@ adverb-lex := basic-int-adv-lex &
 				 COMPS < >,
 				 SPEC < > ] ]]]].
 
+;; DVM 2019-02-15: for "selalu dia tidur"
+adverb-pre-subj-lex := basic-int-adv-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < >,
+							  COMPS < > ],
+						    HEAD +vjp ] ]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ] ]]]].
+
 adverb-scop-lex:= basic-scopal-adverb-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < [ ], ... >,
 							  COMPS < > ],
@@ -2460,7 +2522,7 @@ adverb-scop-lex:= basic-scopal-adverb-lex &
 				 SPEC < > ] ]]]].
 
 adverb-scop-pre-lex:= basic-scopal-adverb-lex &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL [ CAT [ VAL [ SUBJ < >,
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL [ CAT [ VAL [ SUBJ < [ ], ... >,
                                                           COMPS < > ],
                                                       HEAD +vjp ] ] ] >,
                            POSTHEAD -,
@@ -2484,6 +2546,19 @@ adverb-ques-scop-pre-lex:= adverb-scop-pre-lex &
 
 adverb-imp-scop-pre-lex := adverb-scop-pre-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX.SF comm ] > ].
+
+;; DVM 2019-02-13: for "ulang" in "kirim ulang uang"
+verb-adverb-noun-lex := basic-int-adv-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ SUBJ < [ ], ... >,
+							  COMPS < [ ], ... > ],
+						    HEAD compound-verb ] ]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ] ]]]].
+
+verb-adverb-post-lex := verb-adverb-noun-lex &
+  [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
 
 adverb-post-lex := adverb-lex &
   [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
@@ -2650,6 +2725,23 @@ adposition-mod-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-le
 				 INDEX #arg0 ],
 		     CAT [ HEAD nonoleh-adp & [ MOD < [ LOCAL [ CAT [ HEAD verb,
 						                      VAL.SUBJ cons ],
+						                CONT.HOOK.INDEX #xarg ]] > ],
+			   VAL [ SPR < >,
+			         COMPS < [ OPT -,
+				           LOCAL [ CAT [ HEAD comp-noun,
+						         VAL.SPR < > ],
+					           CONT.HOOK.INDEX #ind ]] >,
+				 SUBJ < > ]]]]].
+
+;; DVM 2019-02-15: for "untuk ..., ..."
+adposition-mod-top-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+			    ARG1 #xarg,
+			    ARG2 #ind ],
+	     LOCAL [ CONT.HOOK [ XARG #xarg,
+				 INDEX #arg0 ],
+		     CAT [ HEAD nonoleh-adp & [ MOD < [ LOCAL [ CAT [ HEAD verb,
+						                      VAL.SUBJ < > ],
 						                CONT.HOOK.INDEX #xarg ]] > ],
 			   VAL [ SPR < >,
 			         COMPS < [ OPT -,
@@ -3092,6 +3184,28 @@ compound-noun-phrase := head-initial &
                                      VAL [ SPR < >,
                                            COMPS < > ] ],
                                CONT.HOOK.INDEX #internalargument ],
+   C-CONT [ RELS <! arg12-ev-relation & 
+                  [PRED compound_p_rel,
+                   LBL #lbl,
+                   ARG1 #externalargument,
+                   ARG2 #internalargument] !>, HCONS <! !> ] ].
+
+;; DVM 2019-02-11: propn-noun compound e.g. Traveloka booking id
+compound-propn-noun-phrase := head-final &
+ [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+                            COMPS < > ] ,
+                  CONT.HOOK #head ],
+   NON-HEAD-DTR.SYNSEM.LOCAL [ CAT [ HEAD propername,
+                                     VAL [ SPR < >,
+                                           COMPS < > ] ],
+                               CONT.HOOK.INDEX #internalargument ],
+   HEAD-DTR.SYNSEM [ MODIFIED notmod-or-rmod & [ PERIPH na-or-+ ],
+                     LOCAL [ CAT [ HEAD commonnoun,
+                                 VAL [ SPR < > ,
+                                       COMPS < > ]] ,
+                           CONT [ HOOK #head &
+                                       [INDEX #externalargument,
+                                        LTOP #lbl ]]]],
    C-CONT [ RELS <! arg12-ev-relation & 
                   [PRED compound_p_rel,
                    LBL #lbl,

@@ -52260,7 +52260,7 @@ penting := adjective-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_penting_a_rel",
     TRAITS native_token_list ].
 
-salah := adjective-lex &
+salah_adj := adjective-lex &
   [ STEM < "salah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_salah_a_rel",
     TRAITS native_token_list ].
@@ -76357,7 +76357,7 @@ sekilas := adverb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_sekilas_a_rel",
     TRAITS native_token_list ].
 
-selalu := adverb-lex &
+selalu_1 := adverb-lex &
   [ STEM < "selalu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_selalu_a_rel",
     TRAITS native_token_list ].
