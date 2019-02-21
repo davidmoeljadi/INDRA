@@ -167,6 +167,11 @@ date_ne_2_tmr := add_ne_tmt &
   +OUTPUT < [ +CLASS date_ne ] >,
   +INPUT < > ].   
 
+date_ne_3_tmr := add_ne_tmt &
+[ +CONTEXT < [ +FORM ^0[1-9]$ ] >,
+  +OUTPUT < [ +CLASS date_ne ] >,
+  +INPUT < > ].   
+
 
 ;;;
 ;;; ratios: |1:1000|, |1:100,000|, et al.
