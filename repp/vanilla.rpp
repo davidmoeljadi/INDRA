@@ -4,7 +4,7 @@
 ;;;
 ;;; 
 ;:[ \t!"#$%&'()\*\+,\./;<>?@\[\]\^_`{|}~\\]
-:[ \t!"#$&'()\*\+,;<>?\[\]\^_`{|}~\\]
+:[ \t!"#$'()\*\+,;<>?\[\]\^_`{|}~\\]
 !^(.+)$								 \1 
 !\. $								 
 !\t								 
@@ -265,6 +265,7 @@
 ! memesanan 				 memesan 
 ! mendowload 				 mendownload 
 ! men issued 				 mengissued 
+! tahap tahap 								 tahap-tahap 
 
 ;; DVM 2015-09-23: added regular expression for reduplication with Francis
 ;; DVM 2015-09-23: input is A-A, output is A²
@@ -286,7 +287,7 @@
 ;; mobilnya -> mobil -nya
 ;; mobil-Nya -> mobil -nya
 ! ([a-zA-Z²-]+)-?([Nn]ya)[;,\.?!\]})]? 								 \1 -nya 
-! (agak|akhir|berikut|berta|biasa|ha|kelihatan|misal|nampak|no|nyo|pu|rupa|satu²|sebaik|sebelum|sebenar|sebetul|secukup|seharus|sekadar|selanjut|seluruh|semua|sepenuh|sesungguh|sprti|t|ta|tadi|tampak|tentu|umum|nyata|sucha|prad) -nya 							 \1nya 
+! (agak|akhir|berikut|berta|biasa|ha|kelihatan|misal|nampak|na|no|nyo|pu|rupa|satu²|sebaik|sebelum|sebenar|sebetul|secukup|seharus|sekadar|selanjut|seluruh|semua|sepenuh|sesungguh|sprti|t|ta|tadi|tampak|tentu|umum|nyata|sucha|prad) -nya 							 \1nya 
 
 ;; DVM 2018-11-28: 
 ;; mobil nya -> mobil -nya 
@@ -342,6 +343,7 @@
 ! citylinkno 								 citylink no 
 ! b isa 								 bisa 
 ! Jakarta-jambi 							 Jakarta jambi 
+! Jakarta-Medan 							 Jakarta Medan 
 ! Solo-Palangkaraya 							 Solo Palangkaraya 
 ! kokg 									 kok g 
 ! sayabblg 								 saya blg 
@@ -362,6 +364,9 @@
 ! bedatgl 								 beda tgl 
 ! syavblm 								 sya blm 
 ! nsite 								 n site 
+! dihitel 								 di hitel 
+! 30sep 								 30 sep 
+! surabaya-jayapura 							 surabaya jayapura 
 ! bookingcode 								 booking code 
 ! sayasdh 								 saya sdh 
 ! Kalobtraveloka 							 Kalo traveloka 
@@ -369,14 +374,23 @@
 ! stasiunpasar 								 stasiun pasar 
 ! AjaSaya 								 Aja Saya 
 ! SAYAMAU 								 SAYA MAU 
+! Ternate-Jkt 								 Ternate Jkt 
+! - 									 
+! :$								 
+! :\)$									 
 ! u der 								 under 
+! Pekanbaru-Medan 							 Pekanbaru Medan 
+! Pekanbaru-Jakarta 							 Pekanbaru Jakarta 
+! harapan-tarakan 							 harapan tarakan 
 ! dibali 								 di bali 
 ! tiketsaya 								 tiket saya 
 ! iSaat 								 di saat 
 ! sydi suruh 								 sy disuruh 
 ! AdiningsihTiket 							 Adiningsih Tiket 
 ! Laaaaaaaaaah 								 Lah 
+! tgl.16 								 tgl 16 
 ! hotelnua 								 hotel -nya 
+! Pontianak-Balikpapan 							 Pontianak Balikpapan 
 ! malamargo 								 malam argo 
 ! kabarinjika 								 kabarin jika 
 ! tanyakalo 								 tanya kalo 
@@ -390,6 +404,7 @@
 ! kal omau 								 kalo mau 
 ! nvia 									 n via 
 ! cicilnkrn 								 ciciln krn 
+! kirim khan 								 kirimkan 
 ! citylinkbko 								 citylink bko 
 ! dapetvagasi 								 dapet vagasi 
 ! PataraiSaya 								 Patarai Saya
@@ -419,6 +434,7 @@
 ! sutejanama 								 suteja nama 
 ! diluar 								 di luar 
 ! bandung-ke 								 bandung ke 
+! Indramayu-Jakarta 							 Indramayu Jakarta 
 ! balcony-2guest 							 balcony 2 guest 
 ! jan-31jan2017 							 jan 31 jan 2017 
 ! no.hp.PHONE_NUMBER 							 no hp PHONE_NUMBER 
@@ -428,7 +444,10 @@
 ! bun-palangka 								 bun palangka 
 ! mrlakukan 								 melakukan 
 ! -bali 								 bali 
+! ditanda tangani 							 ditandatangani 
 ! Pandan-Jakarta 							 Pandan Jakarta 
+! CGKPDG 								 CGK PDG 
+! PDGCGK 								 PDG CGK 
 
 ! gd 									 g ad 
 ! gad 									 g ad 
@@ -561,12 +580,13 @@
 
 ! termurah 									 ter- murah 
 ! terbaru 									 ter- baru 
+! terdekat 									 ter- dekat 
 
 ;; bu -ku -> buku
 ;; ku -ku -> kuku
 ;; bukuku -> buku -ku
 ! ([a-zA-Z²-]+)-?([Kk]u)[;,\.?!\]})]? 							 \1 -ku 
-! (a|antarsu|berla|ba|be|beng|bu|du|ka|ku|la|Malu|membe|p|pa|sa|su|terpa|tung|wo|sebu) -ku 							 \1ku 
+! (a|antarsu|berla|ba|be|beng|bu|du|ka|ku|la|Malu|membe|P|p|pa|sa|su|terpa|tung|wo|sebu) -ku 							 \1ku 
 ! suamiq 								 suami -ku 
 
 ! ([a-zA-Z²-]+)-?([Mm]u)[;,\.?!\]})]? 								 \1 -mu 

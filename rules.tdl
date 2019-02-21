@@ -120,6 +120,7 @@ zero-cop := zero-cop-rule.
 ;; this is the rule for noun noun compound
 n-n-compound := compound-noun-phrase.
 propn-compound := compound-propn-phrase.
+propn-n-compound := compound-propn-noun-phrase.
 fromto-propn-compound := compound-fromto-propn-phrase.
 n-pron-compound := compound-noun-pronoun-phrase.
 
