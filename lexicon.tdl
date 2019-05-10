@@ -63667,7 +63667,7 @@ segi+lima := inanimate-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_segi+lima_n_rel",
     TRAITS native_token_list ].
 
-wisma := inanimate-noun-lex &
+wisma_inanim := inanimate-noun-lex &
   [ STEM < "wisma" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wisma_n_rel",
     TRAITS native_token_list ].

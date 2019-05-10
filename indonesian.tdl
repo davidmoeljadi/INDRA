@@ -2522,7 +2522,7 @@ adverb-scop-lex:= basic-scopal-adverb-lex &
 				 SPEC < > ] ]]]].
 
 adverb-scop-pre-lex:= basic-scopal-adverb-lex &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL [ CAT [ VAL [ SUBJ < [ ], ... >,
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL [ CAT [ VAL [ SUBJ < >,
                                                           COMPS < > ],
                                                       HEAD +vjp ] ] ] >,
                            POSTHEAD -,
@@ -2585,6 +2585,22 @@ adverb-time-present-lex := adverb-time-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.INDEX.E.TENSE present ] > ].
 
 #|
+;; DVM 2019-03-11: vocatives e.g. mbak, bu
+basic-voc-lex :=  single-rel-lex-item & basic-icons-lex-item &
+  [ SYNSEM [ LOCAL.CAT.HEAD noun,
+	     LKEYS.KEYREL individual ]].
+
+adverb-vocative-lex := basic-voc-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT [ VAL [ COMPS < > ],
+						          HEAD verb ] ] >,
+                           VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ]], 
+                     CONT.HOOK.XARG #ind ],
+	     ;NON-LOCAL.SLASH 0-dlist,
+             LKEYS.KEYREL.ARG1 #ind ]].
+
 ;; DVM 2016-02-16 : added information of ASPECT non-perf-and-prog and TENSE no-tensed
 ;; so that *Budi sudah/sedang/akan guru cannot be parsed.
 ;; FCB, DVM & LMC 2016-05-06 : add COORD - so that "nasi" in "Adi makan nasi" cannot have "zero copula"
