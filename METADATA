@@ -98,4 +98,4 @@ ISO_CODE="ind"
 
 LKB_SCRIPT_FILE=""
 CHEAP_GRM_FILE_NAME=""
-ACL_CONFIG_FILE="ace/config.tdl"
+ACE_CONFIG_FILE="ace/config.tdl"
